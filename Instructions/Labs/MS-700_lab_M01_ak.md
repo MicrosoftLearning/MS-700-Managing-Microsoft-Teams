@@ -1,8 +1,8 @@
 --- 
 lab: 
-	title: 'Lab: Manage roles and create teams '
-	type: 'Answer Key' 
-	module: 'Module 01: Microsoft Teams in Microsoft 365' 
+    title: 'Lab: Manage roles and create teams '
+    type: 'Answer Key' 
+    module: 'Module 01: Microsoft Teams in Microsoft 365' 
 ---
 
 # Lab 01: Manage roles and create teams
