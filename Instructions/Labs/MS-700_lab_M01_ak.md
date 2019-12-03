@@ -4,7 +4,6 @@ lab:
     type: 'Answer Key' 
     module: 'Module 01: Microsoft Teams in Microsoft 365' 
 ---
-test
 # Lab 01: Manage roles and create teams
 # Student lab answer key
 ## Microsoft 365 user interface 
