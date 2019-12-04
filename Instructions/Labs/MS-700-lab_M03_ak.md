@@ -42,11 +42,11 @@ Microsoft Teams provides users with chat, audio, video and content sharing exper
 In this exercise, you will calculate the network requirements for Microsoft teams, depending on your expected Teams usage business requirements. You must ensure enough bandwidth based on your organization network connectivity that is described in the following table:
 
  
-| **Location**       | **Total number of employees**    | **WAN link capacity / audio/video queue size (Mbps)** | **Office 365 connection**  | **Internet connection** |
-|--------------------|-------------------------------|--------------|-------------------------------------------------------|----------------------------|-------------------------|
+| **Location**| **Total number of employees**  | **WAN link capacity / audio/video queue size (Mbps)** | **Office 365 connection**  | **Internet connection** |
+|------|-------------|---------|-------------|----------------------------|
 | New York HQ | 1000| 1024/300/500 | ExpressRoute | Local Internet 1024 Mbps|
 | Los Angeles Office | 250 | 500/100/200  | Remote connection through HQ | Remote Internet through HQ | 
-| Houston Office     | 150 | 400/50/100   | Remote connection through HQ                          | Remote Internet through HQ |                         
+| Houston Office     | 150 | 400/50/100   | Remote connection through HQ | Remote Internet through HQ |                         
 
 Next, you will analyze your current bandwidth usage and test your network quality and connection to Microsoft Teams. You will also need to troubleshoot potential voice quality issues.
 
