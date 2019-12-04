@@ -380,9 +380,9 @@ According to your organization compliance requirements, you need to implement ba
 
 	- A checkbox is selected for **Detect when content that's being shared contains.** In the **instances of the same sensitive info** **type** box, type **1**.
 
-	- A checkbox is selected next to **Restrict access or encrypt the content** and **Block people from sharing and restrict access to shared content** radio button is selected**.** 
+	- A checkbox is selected next to **Restrict access or encrypt the content** and **Block people from sharing and restrict access to shared content** radio button is selected.
 
-12. On the **Customize access and override permissions** page**,** ensure that following settings are configured:
+12. On the **Customize access and override permissions** page, ensure that following settings are configured:
 
 	- Select **Only people outside your organization.**
 
