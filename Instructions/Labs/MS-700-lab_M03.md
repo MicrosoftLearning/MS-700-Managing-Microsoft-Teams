@@ -1,7 +1,6 @@
 --- 
 lab: 
     title: 'Lab: Environment preparation for Teams'
-    type: 'Answer Key' 
     module: 'Module 03: Prepare the environment for a Microsoft Teams deployment' 
 ---
 
