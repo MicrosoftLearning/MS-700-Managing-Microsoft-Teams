@@ -96,17 +96,17 @@ In this task you will create via the Teams PowerShell a new team based on the Of
 	Connect-MicrosoftTeams
 	```
 
-10. Create a new team with the following settings, using the New-Team cmdlet:
+10. Create a new team with the following settings, using the ```New-Team cmdlet```:
 
 	- Displayname: **CA-Office**
 	- MailNickName: **CA-Office**
 	- Visibility: **Public**
 
-11. Use the GroupId and add **Alex Wilbur** and **Allan Deyoung** as members to the team, using the Add-TeamUser cmdlet.
+11. Use the GroupId and add **Alex Wilbur** and **Allan Deyoung** as members to the team, using the ```Add-TeamUser``` cmdlet.
 
-12. Use the GroupId and and create the regular channels “Support” and “Recruiting”, using New-TeamChannel cmdlet.
+12. Use the GroupId and and create the regular channels “Support” and “Recruiting”, using ```New-TeamChannel``` cmdlet.
 
-13. Use the GroupId and and create the private channel “Administration”, using New-TeamChannel cmdlet.
+13. Use the GroupId and and create the private channel “Administration”, using ```New-TeamChannel``` cmdlet.
 
 14. Close the PowerShell window. 
 
