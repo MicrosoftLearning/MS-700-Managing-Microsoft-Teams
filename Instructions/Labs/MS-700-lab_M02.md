@@ -1,7 +1,6 @@
 --- 
 lab: 
     title: 'Lab: Configure Security and Compliance for teams and content '
-    type: 'Answer Key' 
     module: 'Module 02: Implement Microsoft Teams Governance, Security and Compliance' 
 ---
 
