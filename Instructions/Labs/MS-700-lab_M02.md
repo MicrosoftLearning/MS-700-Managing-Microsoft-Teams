@@ -312,7 +312,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 3. In the **Microsoft** **Security admin center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365).**
 
-4. A new browser tab with the **Office** **365** **Security &amp; compliance center** will open**,** where in **Threat management** > **Policy,** in **ATP s****afe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
+4. A new browser tab with the **Office** **365** **Security &amp; compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
 
 5. Close the Edge browser window.
 
@@ -359,7 +359,7 @@ According to your organization compliance requirements, you need to implement ba
 
 2. In Microsoft Edge, sign in to **Microsoft Compliance center**(https://compliance.microsoft.com)) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In **Microsoft** **Compliance Center**, on the left navigation pane, select **Data loss prevention****.**
+3. In **Microsoft** **Compliance Center**, on the left navigation pane, select **Data loss prevention**.
 
 4. On the **Data loss prevention** page, create a new DLP policy with the following configuration:
 

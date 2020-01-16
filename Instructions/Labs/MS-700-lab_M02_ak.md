@@ -311,7 +311,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 5. On the **Policies** page, scroll to the **Threat Protection** section and select **ATP safe attachments (Office 365).**
 
-6. A new browser tab with the **Office** **365** **Security & compliance center** will open**.**
+6. A new browser tab with the **Office 365 Security & compliance center** will open.
 
 7. On the left navigation pane, select **Threat management** > **Policy,** and on the **Policy** page, select the **ATP safe attachments** tile.
 
@@ -360,7 +360,7 @@ According to your organization compliance requirements, you need to implement ba
 
 3. You are still signed in as [**admin@YourTenant.onmicrosoft.com**](mailto:admin@yourtenant.onmicrosoft.com). When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
-4. In **Microsoft** **Compliance Center**, on the left navigation pane, select **Show all** and and select **Data loss prevention****.**
+4. In **Microsoft** **Compliance Center**, on the left navigation pane, select **Show all** and and select **Data loss prevention**.
 
 5. On the Data loss prevention page, select **+ Create a policy**
 
