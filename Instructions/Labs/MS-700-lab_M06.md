@@ -174,7 +174,7 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 	- **Add accounts:** **Contoso Call Queue.**
 
-	- **Greeting** Play an audio file **C:\Windows\Media\Alarm03.wav**.
+	- **Greeting** Play an audio file **C:\\Windows\\Media\\Alarm03.wav**.
 
 	- **Music on hold:** Play default music
 

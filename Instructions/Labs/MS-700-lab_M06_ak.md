@@ -53,7 +53,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 6. Select the **Global (Org-wide default)** policy to change the settings for all users.
 
-7. On the **Meetings policies\Global** page, review the available settings, and under **Audio &amp; Video** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
+7. On the **Meetings policies\\Global** page, review the available settings, and under **Audio &amp; Video** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
 
  
 You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time till the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
@@ -88,7 +88,7 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 4. Select **+** **Add** from the top pane, to create a new **Live event policy** with individual settings for assigned users.
 
-5. On **Live event policies\Add** page, enter the following information:
+5. On **Live event policies\\Add** page, enter the following information:
 
 	- **Add live events policy:** Management Live Events
 
@@ -129,7 +129,7 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 
 4. Select **Add** from the top pane to create a new emergency address.
 
-5. On the **Location\Add** page, enter the following information:
+5. On the **Location\\Add** page, enter the following information:
 
 	- **Put in a name for your location:** Contoso Emergency Address
 	- **Add a friendly description so you know why it was created:** Emergency Address for Contoso employees.
@@ -154,7 +154,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 4. Select the **Global (Org-wide default)** policy to edit the default settings.
 
-5. In **Calling policies\Global**, use the dropdown menu right to **Voicemail is available for routing inbound calls** and select **Disabled.** Then select **Save**.
+5. In **Calling policies\\Global**, use the dropdown menu right to **Voicemail is available for routing inbound calls** and select **Disabled.** Then select **Save**.
 
 6. Back on the **Calling policies** page, select **+** **Add** on the top pane, to create a new policy.
 
@@ -213,7 +213,7 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 	- **Greeting** Play an audio file and then select **Upload file**.
 
-	- In **Open** window, navigate to **C:\Windows\Media**, select **Alarm03.wav** and select **Open**.
+	- In **Open** window, navigate to **C:\\Windows\\Media**, select **Alarm03.wav** and select **Open**.
 
 	- **Music on hold:** Play default music
 

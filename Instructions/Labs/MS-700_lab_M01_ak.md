@@ -58,7 +58,7 @@ The labs in this course will use two virtual machines:
 
 **Important:** A local administrator account has been created on the client VMs. These will be the accounts that you use to sign in to each VM. All MS700 lab exercises will use the admin account for sign-in. 
 
-Since the MS700 lab scenario involves a cloud-only deployment, you will not be signing in into an on-premises domain, since no such domain exists. Following your sign-in, the desktop will indicate that you are signed in as either the local user **CLIENT01\Admin** or **CLIENT02\admin**, depending on which machine you are on.
+Since the MS700 lab scenario involves a cloud-only deployment, you will not be signing in into an on-premises domain, since no such domain exists. Following your sign-in, the desktop will indicate that you are signed in as either the local user **CLIENT01\\Admin** or **CLIENT02\\admin**, depending on which machine you are on.
 
 
 #### **2. Review installed applications**
