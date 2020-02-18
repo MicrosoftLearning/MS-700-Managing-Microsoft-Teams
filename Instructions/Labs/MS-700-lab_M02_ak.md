@@ -243,7 +243,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 12. On the **Groups - Naming policy** page, select **Group naming policy** section from the top pane.
 
-13. Under the **Group naming policy** section, select the checkbox next to **Add prefix** and from the drop-down menu, choose string, and in the empty box to the right, type **“****Group**“.
+13. Under the **Group naming policy** section, select the checkbox next to **Add prefix** and from the drop-down menu, choose string, and in the empty box to the right, type **Group**.
 
 14. Under the **Group naming policy** section, select the checkbox next to **Add suffix** and from the drop-down list, choose attribute, and from the drop-down list choose **CountryOrRegion**.
 
