@@ -44,7 +44,7 @@ In this exercise, you will calculate the network requirements for Microsoft team
  
 | **Location**| **Total number of employees**  | **WAN link capacity / audio/video queue size (Mbps)** | **Office 365 connection**  | **Internet connection** |
 |------|-------------|---------|-------------|----------------------------|
-| New York HQ | 1000| 1024/300/500 | ExpressRoute | Local Internet 1024 Mbps|
+| New York HQ | 1000| 1000/300/500 | ExpressRoute | Local Internet 1000 Mbps|
 | Los Angeles Office | 250 | 500/100/200  | Remote connection through HQ | Remote Internet through HQ | 
 | Houston Office     | 150 | 400/50/100   | Remote connection through HQ | Remote Internet through HQ |                         
 
@@ -82,7 +82,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- In the **Network settings** section, turn on the **Express Route** button.
 
-	- In the **Network settings** section, in the **Internet link capacity** box, type **1024**.
+	- In the **Network settings** section, in the **Internet link capacity** box, type **1000**.
 
 	- In the **Network settings** section, in the **PSTN egress** drop-down box, **choose VoIP only**, and then select **Save**.
 
