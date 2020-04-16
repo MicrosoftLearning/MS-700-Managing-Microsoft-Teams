@@ -19,10 +19,10 @@ In the labs of this course you will assume the role of Joni Sherman, a System Ad
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
-- Joni Sherman (JoniS@YourTenant.onmicrosoft.com) **Group coordinator / Teams admin**
-- Alex Wilber (AlexW@YourTenant.onmicrosoft.com) **Regular pilot user from Canada**
-- Lynne Robbins (LynneR@YourTenant.onmicrosoft.com) **Regular pilot user**
-- Allan Deyoung (AllanD@YourTenant.onmicrosoft.com) **Teams communication support engineer**
+- Joni Sherman (JoniS@YourTenant.OnMicrosoft.com) **Group coordinator / Teams admin**
+- Alex Wilber (AlexW@YourTenant.OnMicrosoft.com) **Regular pilot user from Canada**
+- Lynne Robbins (LynneR@YourTenant.OnMicrosoft.com) **Regular pilot user**
+- Allan Deyoung (AllanD@YourTenant.OnMicrosoft.com) **Teams communication support engineer**
 - Megan Bowen (MeganB@YourTenant.OnMicrosoft.com) **Regular employee**
 
 ## Objectives
