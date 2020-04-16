@@ -33,7 +33,7 @@ After you complete this lab, you will be able to:
 As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Office 365 Group, created in an earlier task of this lab, and add Teams features to it.
 
 
-1. Sign in to the Teams Desktop client using JoniS@yourtenant.onmicrosoft.com.
+1. Sign in to the Teams Desktop client using **JoniS@yourtenant.onmicrosoft.com**.
 
 2. Create a new team with the following settings:
 
@@ -56,47 +56,55 @@ In this task you will create via the Teams PowerShell a new team based on the Of
  
 1. Open an elevated PowerShell (Admin) window.
 
-2. Import the installed Teams PowerShell module: 
+2. Import the installed Teams PowerShell module:
+
 	```powershell
 	Import-Module MicrosoftTeams
 	```
 
-3. Check the module version: 
+3. Check the module version:
+
 	```powershell
 	Get-Module MicrosoftTeams
 	```
 
-4. If the version is below 1.0.18, uninstall the module: 
+4. If the version is below **1.0.18**, uninstall the module:
+
 	```powershell
 	Uninstall-Module MicrosoftTeams
 	```
 
-5. Add the official testing repository: 
+5. Add the official testing repository:
+
 	```powershell
 	Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted 
 	```
 
-6. Install the Teams PowerShell module from the testing repository: 
+6. Install the Teams PowerShell module from the testing repository:
+
 	```powershell
 	Install-Module MicrosoftTeams -Repository PSGalleryInt -Force
 	```
 
-7. Import the newly installed module: 
+7. Import the newly installed module:
+
 	```powershell
 	Import-Module MicrosoftTeams
 	```
 
-8. Check, if the version is equal 1.0.18 or above: 
+8. Check if the version is equal to **1.0.18** or above:
+
 	```powershell
 	Get-Module MicrosoftTeams
 	```
 
-9. Connect to Teams in your tenant: 
+9. Connect to Teams in your tenant:
+
 	```powershell
 	Connect-MicrosoftTeams
 	```
 
-10. Create a new team with the following settings, using the ```New-Team cmdlet```:
+10. Create a new team with the following settings, using the ```New-Team``` cmdlet:
 
 	- Displayname: **CA-Office**
 	- MailNickName: **CA-Office**
@@ -104,9 +112,9 @@ In this task you will create via the Teams PowerShell a new team based on the Of
 
 11. Use the GroupId and add **Alex Wilbur** and **Allan Deyoung** as members to the team, using the ```Add-TeamUser``` cmdlet.
 
-12. Use the GroupId and and create the regular channels “Support” and “Recruiting”, using ```New-TeamChannel``` cmdlet.
+12. Use the GroupId and and create the regular channels **“Support”** and **“Recruiting”**, using the ```New-TeamChannel``` cmdlet.
 
-13. Use the GroupId and and create the private channel “Administration”, using ```New-TeamChannel``` cmdlet.
+13. Use the GroupId and and create the private channel **“Administration”**, using the ```New-TeamChannel``` cmdlet.
 
 14. Close the PowerShell window. 
 
@@ -120,7 +128,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 2. Delete the **IT-Department** team.
 
-3. Sign in to the Azure Portal (https://portal.azure.com/) using JoniS@YourTenant.onmicrosoft.com.
+3. Sign in to the **Azure Portal** (https://portal.azure.com/) using JoniS@YourTenant.onmicrosoft.com.
 
 4. Navigate to **Azure Active Directory** and **Deleted groups**.
 
@@ -155,6 +163,8 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 6. Close the Azure Portal.
 
 You have successfully converted an Office 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation “Canada" is added automatically to the team. 
+
+
 
 ### Exercise 2: Manage sharing and access
 

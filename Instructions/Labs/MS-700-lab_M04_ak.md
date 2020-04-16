@@ -70,62 +70,92 @@ In this task you will create via the Teams PowerShell a new team based on the Of
 
 3. Confirm the **User Account Control** dialog with **Yes**.
 
-4. Import the MicrosoftTeams module and check if the correct version is installed, by using the following cmdlet:
+4. Import the MicrosoftTeams module and check if the correct version is installed, by using the following cmdlets:
 
-	- ```Import-Module MicrosoftTeams```
-	- ```Get-Module MicrosoftTeams```
+	```powershell
+	Import-Module MicrosoftTeams
+	Get-Module MicrosoftTeams
+	```
 
-5. If the Version is equals or above 1.0.18, continue with step 9. If no results are returned or an older version, uninstall the old PowerShell module first by running the following cmdlet (if required).
+5. If the Version equals **1.0.18** or above, continue with step 9. If no results are returned or an older version, uninstall the old PowerShell module first by running the following cmdlet (if required):
 
-	```Uninstall-Module MicrosoftTeams```
+	```powershell
+	Uninstall-Module MicrosoftTeams
+	```
 
 6. Now register the PSGalleryInt as trusted repository by using the following cmdlet. Confirm NuGet related install messages with **[Y] Yes**:
 
-	```Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted``` 
+	```powershell
+	Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted
+	``` 
 
 7. Now you can install the required MicrosoftTeams PowerShell module, by using the following cmdlet:
 
-	```Install-Module MicrosoftTeams -Repository PSGalleryInt -Force```
+	```powershell
+	Install-Module MicrosoftTeams -Repository PSGalleryInt -Force
+	```
 
-8. Check again, if the required module is installed now, by using the following cmdlet:
+8. Check again, if the required module is installed now, by using the following cmdlets:
 
-	- ```Import-Module MicrosoftTeams```
-	- ```Get-Module MicrosoftTeams```
+	```powershell
+	Import-Module MicrosoftTeams
+	Get-Module MicrosoftTeams
+	```
 
-9. If the correct version is displayed, type in the following cmdlet to connect to Microsoft Teams in your tenant.  
+9. If the correct version is displayed, type in the following cmdlet to connect to Microsoft Teams in your tenant:  
 
-	```Connect-MicrosoftTeams```
+	```powershell
+	Connect-MicrosoftTeams
+	```
 
 10. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@YourTenant.onmicrosoft.com**) and then select **Next.**  
 
 11. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in.** 
 
-12. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**. 
+12. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**: 
 
-	```New-Team -Displayname “CA-Office” -MailNickName “CA-Office” -Visibility Public``` 
+	```powershell
+	New-Team -Displayname “CA-Office” -MailNickName “CA-Office” -Visibility Public
+	``` 
 
 13. Write down the string displayed below **GroupId**, or copy them to your clipboard, because you will need it in the next steps (for example, **”d594c2da-4832-4b56-a3c0-f9252f8bb78a”**)
 
-14. To add the user **Alex Wilber** and **Allan Deyoung** to the team type the following commands. 
+14. To add the user **Alex Wilber** to the team type the following cmdlet: 
 
-	- Add-TeamUser -GroupId <GroupID> -User AlexW@YourTenant.onmicrosoft.com
-	- Add-TeamUser -GroupId <GroupID> -User AllanD@YourTenant.onmicrosoft.com
+	```powershell
+	Add-TeamUser -GroupId <GroupID> -User AlexW@YourTenant.onmicrosoft.com
+	```
 
-15. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
+15. To add the user **Allan Deyoung** to the team type the following cmdlet: 
 
-	```New-TeamChannel -GroupId <GroupID> -DisplayName "Support”``` 
+	```powershell
+	Add-TeamUser -GroupId <GroupID> -User AllanD@YourTenant.onmicrosoft.com
+	```
 
-16. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
+16. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
 
-	```New-TeamChannel -GroupId <GroupID> -DisplayName "Recruiting"``` 
+	```powershell
+	New-TeamChannel -GroupId <GroupID> -DisplayName "Support”
+	``` 
 
-17. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+17. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
 
-	```New-TeamChannel -GroupId <GroupID> -DisplayName "Administration" -MembershipType Private```
+	```powershell
+	New-TeamChannel -GroupId <GroupID> -DisplayName "Recruiting"
+	``` 
 
-18. You now switch into the Teams Client again and on the left side pane with all teams Joni is a member of, you should see the new **CA-Office** team.
+18. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+
+	```powershell
+	New-TeamChannel -GroupId <GroupID> -DisplayName "Administration" -MembershipType Private
+	```
+
+19. Close the PowerShell window.
+
+20. Switch into the Teams Client again and, on the left side pane with all teams Joni is a member of, you should see the new **CA-Office** team.
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
+
 
 #### Task 3 - Delete and recover teams 
 
@@ -173,7 +203,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
 
-3. When you see the **Pick an account** window, select the **MOD Administrator** **account** to get to the Sign in window. If the is no **MOD Administrator** **account**, select **Use another account** to get to the Sign in window.
+3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
 4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@m365xzzzzzz.onmicrosoft.com) and select **Next**.
 
@@ -228,7 +258,7 @@ In this task, you will configure the guest user access for Microsoft Teams in yo
  
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) to access the **Microsoft** **Teams** **admin center**. 
+2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
 3. On the **Pick an account** window, select admin@YourTenant.onmicrosoft.com and sign in.
 
@@ -242,13 +272,13 @@ You have now successfully activated guest user access in Teams for your tenant.
 
 In this task, you will configure the guest user access in the Microsoft Azure Portal. You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
-**Note**: You need to have a personal outlook.com account for this and the following tasks. If you don’t have an account like this, open your web browser, go to [https://outlook.com](https://outlook.com/) and create a new account.
+**Note**: You need to have a personal outlook.com account for this and the following tasks. If you don’t have an account like this, open your web browser, go to [**https://outlook.com**](https://outlook.com/) and create a new account.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
 
-3. When you see the **Pick an account** window, select the **MOD Administrator** **account** to get to the Sign in window. If the is no **MOD Administrator** **account**, select **Use another account** to get to the Sign in window.
+3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
 4. In the **Sign in** window, enter the UPN of **MOD Administrator** ( admin@YourTenant.onmicrosoft.com) and select **Next**.
 
@@ -313,7 +343,7 @@ As a part of your system administrator role, you need to review access to resour
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
 
-3. When you see the **Pick an account** window, select the **MOD Administrator** **account** to get to the Sign in window. If the is no **MOD Administrator** **account**, select **Use another account** to get to the Sign in window.
+3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
 4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@YourTenant.onmicrosoft.com) and select **Next**.
 
@@ -381,5 +411,6 @@ As a part of your system administrator role, you need to review access to resour
 31. Select **Deny** from the available options and select **Save**.
 
 32. In the overview, your outlook.com guest user has now **Denied** access.
+
 
 You have successfully created a new access review and blocked a guest user in your tenant. This is the end of lab 4. You can close all browser windows and proceed to the next lab.
