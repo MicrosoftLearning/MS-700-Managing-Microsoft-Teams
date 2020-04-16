@@ -57,7 +57,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 5. In **Network planner**, add a **persona** with name **New York office**, and add a description **New York office Teams users**. Under **Permissions** section, turn **On** all buttons.
 
-6. In **Network planner**, add a **persona** with name  **Los Angeles office**, and add a description **Los Angeles office Teams users**. Under **Permissions** section, turn **Off** **PSTN** button, and turn **On** all other buttons.
+6. In **Network planner**, add a **persona** with name  **Los Angeles office**, and add a description **Los Angeles office Teams users**. Under **Permissions** section, turn **Off PSTN** button, and turn **On** all other buttons.
 
 7. In **Contoso plan**, add a **Network site** with following configuration:
 
@@ -65,65 +65,65 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- **Description:** **New York HQ site network infrastructure**
 
-	- **Network users: 1000**.
+	- **Network users:** **1000**
 
 	- In the **Network settings** section, add following configuration:
 
-		- **Subnet: 172.16.0.0**, **Network range:** **16**.
+		- **Subnet:** **172.16.0.0**, **Network range:** **16**
 
-		- **Express Route: On**.
+		- **Express Route:** **On**
 
-		-  **Internet link capacity:** **1024**.
+		-  **Internet link capacity:** **1024**
 
-		-  **PSTN egress: VoIP only**.
+		-  **PSTN egress:** **VoIP only**
 
 8. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name**: **Los Angeles site**
+	- **Network site name:** **Los Angeles site**
 
 	- **Description:** **Los Angeles site network infrastructure**
 
-	- **Network users** field type **250**.
+	- **Network users** field type: **250**
 
 	- In the **Network settings** section, add following configuration:
 
-		- **Subnet:** **192.168.10.0, Network range: 24**.
+		- **Subnet:** **192.168.10.0**, **Network range:** **24**
 
-		- **ExpressRoute: Off**.
+		- **ExpressRoute:** **Off**
 
-		- **Connected to WAN: On**.
+		- **Connected to WAN:** **On**
 
-		-  **WAN link capacity:** **500**.
+		-  **WAN link capacity:** **500**
 
-		- **WAN audio queue size:** **100.**
+		- **WAN audio queue size:** **100**
 
-		-  **Video queue size:** **200**. 
+		-  **Video queue size:** **200**
 
-		- **PSTN egress: VoIP only**.
+		- **PSTN egress:** **VoIP only**
 
-9. In **Contoso plan**, add a **Network** **site** with following configuration:
+9. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name:** **Houston site.**
+	- **Network site name: Houston site.**
 
-	- **Description:** **Houston site network infrastructure**
+	- **Description: Houston site network infrastructure**
 
-	- **Network users: 150**.
+	- **Network users: 150**
 
-- In the **Network settings** section, add following configuration:
+    - In the **Network settings** section, add following configuration:
 
-	- **Subnet: 192.168.20.0**, **Network range:** **24**.
+	   - **Subnet:** **192.168.20.0**, **Network range:** **24**
 
-	- **ExpressRoute**: **Off**.
+	   - **ExpressRoute:** **Off**
 
-	-  **Connected to WAN: On**
+	   -  **Connected to WAN:** **On**
 
-	- **WAN link capacity:** **400**
+	   - **WAN link capacity:** **400**
 
-	- **WAN audio queue size:** **50**
+	   - **WAN audio queue size:** **50**
 
-	- **Video queue size:** **100**.
+	   - **Video queue size:** **100**
 
-	- **PSTN egress:** **VoIP only**.
+	   - **PSTN egress:** **VoIP only**
 
 10. Start a report for the **Contoso plan** with a name **Contoso report** and a description **Contoso network estimation report**.
 
@@ -145,11 +145,19 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Start **Windows PowerShell (Admin)** and confirm the User Account Control.
+2. Start **Windows PowerShell (Admin)** and confirm the User Account Control dialog.
 
-3. In the PowerShell window, run the following cmdlet: ```Install-Module -Name NetworkTestingCompanion```, and accept the question for **Untrusted repository**.
+3. In the PowerShell window, run the following cmdlet, and accept the question for **Untrusted repository**: 
 
-4. In the PowerShell wihdow, run the following cmdlet **Invoke-ToolCreateShortcuts** to get a desktop shortcut. 
+   ```powershell
+   Install-Module -Name NetworkTestingCompanion
+   ```  
+
+4. In the PowerShell wihdow, run the following cmdlet to get a desktop shortcut:
+
+   ```powershell
+   Invoke-ToolCreateShortcuts
+   ``` 
 
 5. Open **Network Testing Companion** and then install the Network Assessment Tool, accepting the **User Account Control** dialog.
 
@@ -192,7 +200,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 4. Under **General** section, configure following settings:
 
-	- **Device lock:** On.
+	- **Device lock:** On
 
 	- **Timeout** 30 seconds
 
@@ -206,11 +214,11 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- **Date format:** MM/DD/YYYY
 
-	- **Time** **format:** 12 Hours (AM/PM)
+	- **Time format:** 12 Hours (AM/PM)
 
 5. Under **Device settings** configure following settings:
 
-	- **Display screen saver**: On, Timeout 1 minute.
+	- **Display screen saver**: On, Timeout 1 minute
 
 	- **Display high contrast:** On
 
@@ -239,20 +247,26 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 1) Connect to the **Client 1 VM** with the credentials that have been provided to you.
 2) On Client 1 VM, run **Windows PowerShell**.
 3) In order to connect to Exchnage Online PowerShell, perform the following steps:
-	- Run the following cmdlet: 
-		```powershell
-		$UserCredential = Get-Credential
-		```
+	- Run the following cmdlet:
+
+		 ```powershell
+	    $UserCredential = Get-Credential
+	    ```
+
 	- In the **Windows PowerShell Credential Request** dialog box, enter the admin@yourtenant.onmicrosoft.com, including and the password provided to you.
 
 	- Run the following cmdlet to establish a connection to Exchange Online PowerShell:
-		```powershell
-		$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-		```
+
+		 ```powershell
+		 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+		 ```
+
 	- Import the established session with the following cmdlet:
-		```powershell
-		Import-PSSession $Session -DisableNameChecking
-		```powershell
+
+		 ```powershell
+		 Import-PSSession $Session -DisableNameChecking
+		 ```
+
 4) Create a new room mailbox named **NY-TeamsRoom1** by running the following cmdlet (remember to replace your tenant name):
 
 	```powershell
@@ -279,25 +293,30 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	Set-CalendarProcessing -Identity "NY-TeamsRoom1" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Teams Meeting room"
 	```
  
+6) Disconnect from Exchage Online and end the established session with the following cmdlet:
 
-6) Connect to **Azure AD PowerShell,** to configure Teams Room account settings by running the following cmdlet:
+	```powershell
+	Remove-PSSession $Session
+	```
+	
+7) Connect to **Azure AD PowerShell,** to configure Teams Room account settings by running the following cmdlet:
 
 	```powershell
 	Connect-AzureAD
 	```
 
-7) On the sign in window, enter **admin@YourTenant.onmicrosoft.com** and sign in with the password provided.
+8) On the sign in window, enter **admin@YourTenant.onmicrosoft.com** and sign in with the password provided.
 
-8) Disable the password expiration for the Teams Room account **NY-TeamsRoom1@YourTenant.onmicrosoft.com** by running the following cmdlet:
+9) Disable the password expiration for the Teams Room account **NY-TeamsRoom1@YourTenant.onmicrosoft.com** by running the following cmdlet:
 
 	```powershell
 	Set-AzureADUser -ObjectId NY-TeamsRoom1@YourTenant.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
 	```
 
-9) Close the PowerShell window.Open the Edge browser, navigate to the **Microsoft 365 admin center** page (**https://admin.microsoft.com**) and sign in as **admin@YourTenant.onmicrosoft.com**.
+10) Close the PowerShell window.Open the Edge browser, navigate to the **Microsoft 365 admin center** page (**https://admin.microsoft.com**) and sign in as **admin@YourTenant.onmicrosoft.com**.
 
-10) In **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
+11) In **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
 
-11) Add **Offie 365 E5** product license to **NY-TeamsRoom1@YourTenant.onmicrosoft.com** account, which is final step in preparing an account for your Microsoft Teams Room service in Office 365.
+12) Add **Offie 365 E5** product license to **NY-TeamsRoom1@YourTenant.onmicrosoft.com** account, which is final step in preparing an account for your Microsoft Teams Room service in Office 365.
 
 You have successfully created, configured and licensed a Microsoft Team Room service account, which is a prerequisite for deploying Microsoft Teams Room systems.
