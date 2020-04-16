@@ -42,16 +42,23 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 3. Confirm the User Account Control window with **Yes**. 
 
 4. In the PowerShell window, enter the following to install the Azure AD Preview module:
-```Install-Module AzureADPreview```
+
+   ```powershell
+   Install-Module AzureADPreview
+   ```
 
 5. When you are prompted to install from the Untrusted repository, also confirm by entering **Y** and pressing Enter.
 
 6. Type in the following cmdlet to connect to Azure AD in your tenant:
-```Connect-AzureAD```
+
+   ```powershell
+   Connect-AzureAD
+   ```
 
 7. A **Sign in** dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
 
 8. To add classification descriptions for unified groups on the directory level, load the unified group template into a variable and modify it in the next steps. To load the unifed group template, use the following cmdlet:
+
 	```powershell
 	$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
 	```
@@ -63,22 +70,29 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 	```
 
 10. Modify the “ClassificationList” setting from the setting object variable by using the following cmdlet:
+
 	```powershell
 	$Setting["ClassificationList"] = "Standard, Internal, Confidential"
 	```
+
 11. Assiciate meaningful descriptions to each classification, by using the following cmdlet:
+
 	```powershell
 	$Setting["ClassificationDescriptions"] = "Standard: General communication, Internal: Company internal data, Confidential: Data that has regulatory requirements"
 	```
+
 12. To verify the classifications and calssificationdescriptions values, run the following cmdlet:
+
 	```powershell
 	$Setting.Values 
 	```
+
 13. As soon as the “Setting” variable attributes contain the desired values, write back the settings object to your directory. Use the following cmdlet, to create a new “Group.Unified” Azure AD configuration with the custom settings:
 
 	```powershell
 	New-AzureADDirectorySetting -DirectorySetting $Setting
 	```
+
 	**Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
 
 	If there’s an existing directory settings object, you will need to use following cmdlet to update the directory setting in Azure Active Directory:
@@ -110,7 +124,7 @@ Once the classification label and descriptions are created, users can now assign
 
 7. In the new Classification dropdown menu, select **Confidential.** 
 
-8. Move the cursor and hover over the icon (**i)** right next to the **Classification** dropdown menu and note the classification descriptions.
+8. Move the cursor and hover over the icon **(i)** right next to the **Classification** dropdown menu and note the classification descriptions.
 ![Classification Descriptions](media/M02-ClassificationDescriptions.png)
 
 9. Select **Done** to save the changes.
@@ -142,7 +156,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 10. In the **Email contact for groups with no owners** field, type **JoniS@YourTenant.onmicrosoft.com**.
 
-11. In the Field **Enable expiration for the Office 365 groups**, select the **Selected** button, and then select  **+** **Add** button to open a right-side pane.
+11. In the Field **Enable expiration for the Office 365 groups**, select the **Selected** button, and then select  **+ Add** button to open a right-side pane.
 
 12. In the **Select groups** pane, type **Teams Rollout** into the textbox and selec the group.
 
@@ -163,41 +177,51 @@ You are an administrator for your Teams organization. You need to limit which us
 2. On the taskbar at the bottom of the page, right click the **Start** button and then select **Windows PowerShell**.
 
 3. Connect to the Azure AD in your tenant with the following cmdlet:
-```Connect-AzureAD```
+
+   ```powershell
+   Connect-AzureAD
+   ```
 
 4. A Sign in dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
 
 5. Create a new security group “GroupCreators” with the following cmdlet:
+
 	```powershell
 	New-AzureADGroup -DisplayName “GroupCreators” -SecurityEnabled:$true -MailEnabled:$false -MailNickName “GroupCreators”
 	```
 
 6. Replace **&lt;ObjectId&gt;** with the ObjectId from the output of the previous step and run following cmdlet to add **Lynne Robbins** to the new security group:
+
 	```powershell
 	Add-AzureADGroupMember -ObjectId **&lt;ObjectId&gt;** -RefObjectId (Get-AzureADUser -SearchString “Lynne Robbins”).ObjectId
 	```
 
 7. Run following cmdlet to fetch the unified group template again and load it into the “$template” variable:
+
 	```powershell
 	$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
 	```
 
 8. Run following cmdlet to check if a Azure AD setting is already existing and load it, if existing. If not, create a blank Azure AD setting object and populate the “$Setting” variable:
+
 	```powershell
 	if (!($Setting=Get-AzureADDirectorySetting|Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting}
 	```
 
 9. Run following cmdlet to modify the group creation setting for your tenant with the “EnableGroupCreation” attribute:
+
 	```powershell
 	$Setting["EnableGroupCreation"] = “False”
 	```
 
 10. Run following cmdlet to add the just created security group “GroupCreators” as permitted group to create groups, by their ObjectID:
+
 	```powershell
 	$Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString “GroupCreators”).objectid
 	```
 
 11. Write back the chaned settings object to your Azure AD tenant, by using the following cmdlet:
+
 	```powershell
 	Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
 	```
@@ -221,7 +245,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com).
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [**https://portal.azure.com**](https://portal.azure.com).
 
 3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
@@ -263,34 +287,48 @@ You can revert the Azure AD settings changes to defaults with following steps.
 
 3. Connect to the Azure AD in your tenant with the following cmdlet:
 
-```Connect-AzureAD```
+   ```powershell
+   Connect-AzureAD
+   ```
 
 4. A Sign in dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
 
 5. To load the unifed group template, use the following cmdlet:
+
 	```powershell
 	$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
 	```
+
 6. Create a blank Azure AD tenant settings object:
+
 	```powershell
 	$Setting = $Template.CreateDirectorySetting()
 	```
+
 7. Check the Azure AD tenant settings configured in the template:
+
 	```powershell
 	$Setting.Values
 	```
+
 8. Check the current configured Azure AD tenant settings and note the differences, to the values in the “$Setting” variable, that contains the default template settings:
+
 	```powershell
 	(Get-AzureADDirectorySetting).Values
 	```
+
 9. Apply the default settings, to revert all changes:
+
 	```powershell
 	Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
 	```
+
 10. Check your configured Azure AD tenant settings again, which are all on default again:
+
 	```powershell
 	(Get-AzureADDirectorySetting).Values 
 	```
+
 11. Close the PowerShell window.
 
 You have successfully reset all Azure AD tenant settings in your test tenant. This is the end of exercise 1.
@@ -303,11 +341,11 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft** **Security admin center**: [**https://security.microsoft.com**](https://security.microsoft.com). 
+2. Open Microsoft Edge, maximize the browser, and navigate to the **MicrofSecurity admin center**: [**https://security.microsoft.com**](https://security.microsoft.com). 
 
 3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
-4. In the **Microsoft** **Security admin center**, in the left navigation pane, select **Policies**.
+4. In the **Microsoft Security admin center**, in the left navigation pane, select **Policies**.
 
 5. On the **Policies** page, scroll to the **Threat Protection** section and select **ATP safe attachments (Office 365).**
 
@@ -330,7 +368,7 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
  
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Office** **365** **Security &amp; Compliance center**: [**https://protection.office.com**](https://protection.office.com)
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Office 365 Security &amp; Compliance center**: [**https://protection.office.com**](https://protection.office.com)
 
 3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
@@ -338,7 +376,7 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 5. On the **Retention** page, select **Create**, and then on the **Name your policy page, i**n the name box, type **Sales retention policy.** In the **Description** box**,** type **Retention policy for Sales department that will retain data for 7 years**, and then select **Next**.
 
-6. On the **Decide if you want to retain content, delete it, or both** pabe, select **Yes, I want to retain it, For this long…, 7 years**, and then choose **Retain the content based on** **when it was modified.** Under **Do you want us to delete it after this time?** select **No**, and then select, **Next**. 
+6. On the **Decide if you want to retain content, delete it, or both** pabe, select **Yes, I want to retain it, For this long…, 7 years**, and then choose **Retain the content based on when it was modified.** Under **Do you want us to delete it after this time?** select **No**, and then select, **Next**. 
 
 7. On the **Chose locations** page, scroll down and select **Teams channel messages**, then click **Choose teams**. 
 
@@ -356,17 +394,17 @@ According to your organization compliance requirements, you need to implement ba
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft** **C****ompliance center**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com)**.**
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft C****ompliance center**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com)**.**
 
 3. You are still signed in as [**admin@YourTenant.onmicrosoft.com**](mailto:admin@yourtenant.onmicrosoft.com). When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
-4. In **Microsoft** **Compliance Center**, on the left navigation pane, select **Show all** and and select **Data loss prevention**.
+4. In **Microsoft Compliance Center**, on the left navigation pane, select **Show all** and and select **Data loss prevention**.
 
 5. On the Data loss prevention page, select **+ Create a policy**
 
 6. On the **New DLP policy** page, select the searchbox and enter **GDPR.** Select the **General Data Protection Regulation (GDPR)** and select **Next**.
 
-7. On the **Name your policy** page, change the name to **GDPR DLP Policy,** in the Description box type **Data loss prevention policy for GDPR regulations** **in Teams** and then select **Next**.
+7. On the **Name your policy** page, change the name to **GDPR DLP Policy,** in the Description box type **Data loss prevention policy for GDPR regulations in Teams** and then select **Next**.
 
 8. On the **Choose locations** page, select **Let me choose specific locations** and select **Next**.
 
@@ -378,7 +416,7 @@ According to your organization compliance requirements, you need to implement ba
 
 	- A checkbox is selected for **Send incident reports in email.**
 
-	- A checkbox is selected for **Detect when content that's being shared contains.** In the **instances of the same sensitive info** **type** box, type **1**.
+	- A checkbox is selected for **Detect when content that's being shared contains.** In the **instances of the same sensitive info type** box, type **1**.
 
 	- A checkbox is selected next to **Restrict access or encrypt the content** and **Block people from sharing and restrict access to shared content** radio button is selected.
 

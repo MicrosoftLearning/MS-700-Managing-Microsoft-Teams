@@ -93,13 +93,13 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 	New-AzureADDirectorySetting -DirectorySetting $Setting
 	```
 
-**Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
+   **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
 
-If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
+   If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
 
-```powershell
-Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
-```
+   ```powershell
+   Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
+   ```
 
 In this task, you have created classifications and classification descriptions for the Office 365 Groups, that will be used as Microsoft Teams classifications.
  
@@ -120,7 +120,7 @@ Once the classification label and descriptions are created, users can now assign
 5. On the lower end of the **Edit "Sales" team** window, note the red message saying **Classification must be updated to save changes**, and then change the setting to classify the **Sales** team as **Confidential**. 
 ![Update Classification](media/M02-UpdateClassification.png)
 
-6. Move the cursor and hover over the icon (**i)** right next to the **Classification** dropdown menu and note the classification descriptions.
+6. Move the cursor and hover over the icon **(i)** right next to the **Classification** dropdown menu and note the classification descriptions.
 ![Classification Descriptions](media/M02-ClassificationDescriptions.png)
 
 7. Save the changes.
@@ -135,7 +135,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft** **Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@YourTenant.onmicrosoft.com**).
+2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@YourTenant.onmicrosoft.com**).
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, choose **Azure Active Directory**.
 
@@ -308,11 +308,11 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, sign in to **Microsoft** **Security admin center** (https://security.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
+2. Open Microsoft Edge, sign in to **Microsoft Security admin center** (https://security.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In the **Microsoft** **Security admin center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365).**
+3. In the **Microsoft Security admin center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365).**
 
-4. A new browser tab with the **Office** **365** **Security &amp; compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
+4. A new browser tab with the **Office 365 Security &amp; compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
 
 5. Close the Edge browser window.
 
@@ -330,7 +330,7 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Office 365 Security & Compliance center**(https://protection.office.com)) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Office 365 Security & Compliance center** (https://protection.office.com) as user **admin@YourTenant.onmicrosoft.com**.
 
 3. In **Office 365 Security & Compliance center**, on the left navigation pane, under **information governance** section, choose **Retention**.
 
@@ -339,7 +339,7 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 	-  Name your policy: **Sales retention policy.**
 	- Description: **Retention policy for Sales department that will retain data for 7 years**.
 	- Decide if you want to retain content, delete it, or both: **Yes, I want to retain it.**
-	- For this long: **7 years**, and then choose **Retain the content based on** **when it was modified.** 
+	- For this long: **7 years**, and then choose **Retain the content based on when it was modified.** 
 	-  Do you want us to delete it after this time: **No**.
 
 5. On the **Chose locations** page, select **Sales Teams channel messages.**
@@ -357,9 +357,9 @@ According to your organization compliance requirements, you need to implement ba
  
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Compliance center**(https://compliance.microsoft.com)) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft Compliance center** (https://compliance.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In **Microsoft** **Compliance Center**, on the left navigation pane, select **Data loss prevention**.
+3. In **Microsoft Compliance Center**, on the left navigation pane, select **Data loss prevention**.
 
 4. On the **Data loss prevention** page, create a new DLP policy with the following configuration:
 
@@ -367,7 +367,7 @@ According to your organization compliance requirements, you need to implement ba
 
 	- Name: **GDPR DLP Policy**
 
-	-  Description: **Data loss prevention policy for GDPR regulations** **in Teams.**
+	-  Description: **Data loss prevention policy for GDPR regulations in Teams.**
 
 	-  Let me choose specific locations: Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on.
 
