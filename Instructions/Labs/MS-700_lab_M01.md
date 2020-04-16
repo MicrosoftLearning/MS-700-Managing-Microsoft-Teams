@@ -58,8 +58,8 @@ The lab in this course have been prepared for a Microsoft Teams deployment at Co
 
 The labs in this course will use two virtual machines:
 
-	- Client 1 VM : a stand-alone Windows 10 client virtual machine.
-	- Client 2 VM : a stand-alone Windows 10 client virtual machine.
+- Client 1 VM : a stand-alone Windows 10 client virtual machine.
+- Client 2 VM : a stand-alone Windows 10 client virtual machine.
 
 **Note:** Lab virtual machine sign in instructions will be provided to you by your instructor. 
 
@@ -82,8 +82,7 @@ Beside two VMs, you will also be provided with a Microsoft 365 tenant with follo
 - 15 licenses in total with 5 available of 15(10 used). 
 - One Global Administrator (MOD Administrator) and 9 standard users have been pre-created. 
 
-
-**Note:** Microsoft 365 sign in instructions will be provided to you by your instructor. 
+     **Note:** Microsoft 365 sign in instructions will be provided to you by your instructor. 
 
 - The username of the Global Administrator (MOD Administrator) is **admin@YourTenant.onmicrosoft.com**. 
  
@@ -231,7 +230,9 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 
 7. Use the help cmdlet for more information about the available cmdlets: ```Get-Help <cmdlet>```
 
-8. Close the PowerShell window.
+8. Exit the remote PowerShell session: ```Remove-PSSession $Session```
+
+9. Close the PowerShell window.
 
 You have now successfully connected to your Teams tenant with the Skype for Business Online PowerShell module. Most settings can also be configured via the Microsoft Teams Admin center. However, working as an administrator also requires the automation of such processes. This can be done with the help of scripts to facilitate automation. Continue to the next exercise.
 

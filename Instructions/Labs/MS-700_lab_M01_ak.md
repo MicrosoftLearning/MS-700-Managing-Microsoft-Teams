@@ -64,6 +64,7 @@ Since the MS700 lab scenario involves a cloud-only deployment, you will not be s
 #### **2. Review installed applications**
 
 Once you signed in to the VM, observe the start menu, and verify following applications have been installed:
+
 - Microsoft Teams
 
 #### **3. Review Microsoft 365 tenant**
@@ -71,12 +72,11 @@ Once you signed in to the VM, observe the start menu, and verify following appli
 Beside two VMs, you will also be provided with a Microsoft 365 tenant with following highlights:
 
 - Office 365 E5 with Enterprise Mobility + Security E5.
-- 15 licenses in total with 5 available of 15(10 used). 
-- One Global Administrator (MOD Administrator) and 9 standard users have been pre-created. 
+- 15 licenses in total with 5 available of 15(10 used).
+- One Global Administrator (MOD Administrator) and 9 standard users have been pre-created.
 
-
-**Note:** Microsoft 365 sign in instructions will be provided to you by your instructor. 
-
+     **Note:** Microsoft 365 sign in instructions will be provided to you by your instructor.
+	  
 - The username of the Global Administrator (MOD Administrator) is **admin@YourTenant.onmicrosoft.com**. 
 
 - **@YourTenant.onmicrosoft.com -** This is the domain associated with the Office 365 tenant that was provided by the lab hosting provider. The first part of this domain name (YourTenant) is the unique tenant ID provided by the lab hosting provider. The YourTenant portion of the tenant ID, which is the tenant suffix ID, will be unique for each student. 
@@ -214,12 +214,18 @@ Before you can connect to Teams from your tenant and perform any actions, you ne
 3. Confirm the **User Account Control** window with **Yes**.
 
 4. In the PowerShell window, enter the following cmdlet and press **Enter**, to change the execution policy:
-```Set-ExecutionPolicy Unrestricted```
+
+    ```powershell
+    Set-ExecutionPolicy Unrestricted
+    ```
 
 5. Enter **Y** and press **Enter** to confirm the security dialog for **Executing Policy Change**.
 
 6. To install the Microsoft Teams module from the PsGallery repository, in the PowerShell window, enter the following cmdlet and press **Enter:**
-```Install-Module -Name MicrosoftTeams```
+
+    ```powershell
+    Install-Module -Name MicrosoftTeams
+    ```
 
 7. When you are prompted to install and import the NuGet provider, confirm by entering **Y** and pressing **Enter**.
 
@@ -239,23 +245,31 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
 
 3. To connect to Microsoft Teams in your tenant, enter the following cmdlet in the PowerShell window and press **Enter**:
 
-	```Connect-MicrosoftTeams```
+	```powershell
+	Connect-MicrosoftTeams
+	```
 
 4. A **Sign in** dialog box will open. Sign in as **JoniS@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
 
 5. To confirm the MicrosoftTeams module is loaded, enter the following cmdlet and press **Enter**:
 
-	```Get-Module```
+	```powershell
+	Get-Module
+	```
 
 	**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
 
 6. To get an overview of the available Teams PowerShell cmdlets from the MicrosoftTeams module for managing Teams, enter the following cmdlet and then press **Enter**:
 
-	```Get-Command -Module MicrosoftTeams```
+	```powershell
+	Get-Command -Module MicrosoftTeams
+	```
 
 7. The Get-Help cmdlet is used explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
 
-	```Get-Help New-Team```
+	```powershell
+	Get-Help New-Team
+	```
 
 8. When you are finished with exploring the Microsoft Teams PowerShell cmdlets, close the PowerShell window and continue to the next task.
 
@@ -294,11 +308,15 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 
 3. To load the Skype for Business Online PowerShell module that was just installed, enter the following cmdlet and press **Enter**:
 
-	```Import-Module SkypeOnlineConnector```
+	```powershell
+	Import-Module SkypeOnlineConnector
+	```
 
 4. To open a new Session with your tenant, enter in the following cmdlet in the PowerShell window and press **Enter**.
 
-	```$Session = New-CsOnlineSession```
+	```powershell
+	$Session = New-CsOnlineSession
+	```
 
 5. When prompted to enter the user principal name, enter **JoniS@YourTenant.onmicrosoft.com** and press **Enter**.
 
@@ -306,21 +324,33 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 
 7. To load and import the session just established, enter the following cmdlet and press **Enter**:
 
-	```Import-PSSession $Session```
+	```powershell
+	Import-PSSession $Session
+	```
 
 8. When all cmdlets and functions have been loaded, a list will be displayed. Write down the characters in **Name** column (for example, **tmp_f1kjmla4.h1v**) or copy them to your clipboard. You will need this information in the next step.
 
 9. To display all available cmdlets from the PowerShell module, enter the following cmdlet replacing <Name> with the text from the previous step and press **Enter**: 
 
-	```Get-Command -Module <Name>```
+	```powershell
+	Get-Command -Module <Name>
+	```
 
 	For example: **Get-Command -Module tmp_f1kjmla4.h1v**
 
 10. Several cmdlets available to configure your Teams settings and policies are displayed. Most cmdlets have names that imply their function. Use the Get-Help cmdlet to explore the available cmdlets. For example, to get more information about existing messaging policies in your tenant, enter the following cmdlet and press **Enter**.
 
-	```Get-Help Get-CsTeamsMessagingPolicy```
+	```powershell
+	Get-Help Get-CsTeamsMessagingPolicy
+	```
 
-11. Close the PowerShell window after you have explored all interesting settings. 
+11. After you have explored all interesting settings, close the remote PowerShell session by entering the following cmdlet and pressing **Enter**.
+
+	```powershell
+	Remove-PSSession $Session
+	```
+
+12. Close the PowerShell window. 
 
 You have now successfully connected to your Teams tenant with the Skype for Business Online PowerShell module. Most settings can also be configured via the Microsoft Teams Admin center. However, working as an administrator also requires the automation of such processes. This can be done with the help of scripts to facilitate automation. Continue to the next exercise.
 
