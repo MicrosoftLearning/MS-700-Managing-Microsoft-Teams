@@ -18,18 +18,13 @@ In the labs of this course you will assume the role of Joni Sherman, a System Ad
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
-- Joni Sherman ([](mailto:)[JoniS@YourTenant.onmicrosoft.com](mailto:JoniS@m365xzzzzzz.onmicrosoft.com)) **Group coordinator / Teams admin**
-
-- Alex Wilber ([AlexW@YourTenant.onmicrosoft.com](mailto:AlexW@m365xzzzzzz.onmicrosoft.com)) **Regular pilot user from Canada**
-
-- Lynne Robbins ([LynneR@YourTenant.onmicrosoft.com](mailto:LynneR@m365xzzzzzz.onmicrosoft.com)) **Regular pilot user**
-
-- Allan Deyoung ([AllanD@YourTenant.onmicrosoft.com](mailto:AllanD@m365xzzzzzz.onmicrosoft.com)) **Teams communication support engineer**
-
-- Megan Bowen ([MeganB@YourTenant.OnMicrosoft.com](mailto:MeganB@m365xzzzzzz.onmicrosoft.com)) **Regular employee**
+- Joni Sherman (JoniS@YourTenant.OnMicrosoft.com) **Group coordinator / Teams admin**
+- Alex Wilber (AlexW@YourTenant.OnMicrosoft.com) **Regular pilot user from Canada**
+- Lynne Robbins (LynneR@YourTenant.OnMicrosoft.com) **Regular pilot user**
+- Allan Deyoung (AllanD@YourTenant.OnMicrosoft.com) **Teams communication support engineer**
+- Megan Bowen (MeganB@YourTenant.OnMicrosoft.com) **Regular employee**
 
  
-
 ## Objectives
 
 After you complete this lab, you will be able to:
@@ -113,7 +108,7 @@ In the first exercise you will assign required administrative roles to users, ch
 In this task you will use the default global admin to login to the Microsoft 365 admin center and assign several teams admin roles to different users. This task is crucial for the following tasks and exercises, because you will perform most of the tasks in context of Joni Sherman’s account.
 
 
-1. Sign in to the M365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com/)) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the M365 admin center ([**https://admin.microsoft.com**](https://admin.microsoft.com/)) using admin@YourTenant.onmicrosoft.com.
 
 2. Assign the role of the **Teams admin** to **Joni Sherman**.
 
@@ -129,7 +124,7 @@ You have now successfully assigned the Teams admin role to Joni Sherman and the 
 
 In this task, you will check the license assignment of all users participating in the pilot. You will continue where you left off in the last task, logged in as the MOD Administrator on Client 01, with an open browser window in the Microsoft 365 admin center. At the end of the task you can confirm, that all pilot users are licensed correctly.
 
-1. Navigate to the M365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com/)).
+1. Navigate to the M365 admin center ([**https://admin.microsoft.com**](https://admin.microsoft.com/)).
 
 2. Change the **Usage Location** of **Alex Wilber** to **Canada**.
 
@@ -146,7 +141,7 @@ You need to access and review the available settings for administering Teams in 
 
  
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com) using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) using JoniS@YourTenant.onmicrosoft.com.
 
 2. Navigate to the teams management page.
 
@@ -170,9 +165,17 @@ Before you can connect to Teams from your tenant and perform any actions, you ne
  
 1. Open an elevated PowerShell (Admin) window.
 
-2. Change the current execution policy with cmdlet: ```Set-ExecutionPolicy Unrestricted```
+2. Change the current execution policy with cmdlet: 
 
-3. Install the mainstream Teams PowerShell module: ```Install-Module -Name MicrosoftTeams```
+   ```powershell
+   Set-ExecutionPolicy Unrestricted
+   ```
+
+3. Install the mainstream Teams PowerShell module:  
+
+   ```powershell
+   Install-Module -Name MicrosoftTeams
+   ```
 
 4. Close the elevated PowerShell (Admin) window.
 
@@ -187,27 +190,41 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
 
 1. Open a regular PowerShell window.
 
-2. Connect to Teams in your tenant using cmdlet: ```Connect-MicrosoftTeams```
+2. Connect to Teams in your tenant using cmdlet: 
 
-3. Check the installed modules using cmdlet: ```Get-Module```
+   ```powershell
+   Connect-MicrosoftTeams
+   ```
 
-4. Investigate the available cmdlets: ```Get-Command -Module MicrosoftTeams```
+3. Check the installed modules using cmdlet: 
 
-5. Use the help cmdlet for more information about the available cmdlets: ```Get-Help <cmdlet>```
+   ```powershell
+   Get-Module
+   ```
+
+4. Investigate the available cmdlets: 
+
+   ```powershell
+   Get-Command -Module MicrosoftTeams
+   ```
+
+5. Use the help cmdlet for more information about the available cmdlets: 
+
+   ```powershell
+   Get-Help <cmdlet>
+   ```
 
 6. Close the PowerShell window.
 
  
-
 When you are finished with exploring the Microsoft Teams PowerShell cmdlets, close the PowerShell window and continue to the next task.
 
  
-
 #### Task 3 – Install Skype for Business PowerShell cmdlet
 
 Since the integration of Skype for Business into Microsoft Teams is not yet completed, it is necessary to know that some configurations must be made in the Skype for Business PowerShell, such as configuring telephony features and policies. Because the Skype for Business Online PowerShell module is not available from an official repository, you need to download the executable and install it manually.
  
-1. Download the Skype for Business PowerShell module from the following link: [https://www.microsoft.com/en-us/download/details.aspx?id=39366](https://www.microsoft.com/en-us/download/details.aspx?id=39366).
+1. Download the Skype for Business PowerShell module from the following link: [**https://www.microsoft.com/en-us/download/details.aspx?id=39366**](https://www.microsoft.com/en-us/download/details.aspx?id=39366).
 
 2. Install the Skype for Business PowerShell module from the executable.
  
@@ -218,19 +235,47 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 
 1. Open a regular PowerShell window.
 
-2. Import the Skype for Business Online PowerShell module: ```Import-Module SkypeOnlineConnector```
+2. Import the Skype for Business Online PowerShell module: 
 
-3. Connect a new session to your tenant: ```$Session = New-CsOnlineSession```
+   ```powershell
+   Import-Module SkypeOnlineConnector
+   ```
 
-4. Import the newly created session: ```Import-PSSession $Session```
+3. Connect a new session to your tenant: 
 
-5. Check the available modules: ```Get-Module```
+   ```powershell
+   $Session = New-CsOnlineSession
+   ```
 
-6. Investigate the available cmdlets: ```Get-Command -Module <name>```
+4. Import the newly created session: 
 
-7. Use the help cmdlet for more information about the available cmdlets: ```Get-Help <cmdlet>```
+   ```powershell
+   Import-PSSession $Session
+   ```
 
-8. Exit the remote PowerShell session: ```Remove-PSSession $Session```
+5. Check the available modules: 
+
+   ```powershell
+   Get-Module
+   ```
+
+6. Investigate the available cmdlets: 
+
+   ```powershell
+   Get-Command -Module <name>
+   ```
+
+7. Use the help cmdlet for more information about the available cmdlets: 
+
+   ```powershell
+   Get-Help <cmdlet>
+   ```
+
+8. Exit the remote PowerShell session: 
+
+   ```powershell
+   Remove-PSSession $Session
+   ```
 
 9. Close the PowerShell window.
 
@@ -244,7 +289,7 @@ In this exercise you will create some resources required in later tasks. These i
 
 In your role as Joni Sherman, you do not have the necessary permissions to access the Microsoft 365 admin center and to create resources. Therefore you need to sign in as the MOD Administrator to create the Office 365 Group. You will create the Office 365 group named "IT-Department" and then add the pilot members serving as a basis for your future teams and licensing. 
 
-1. Sign in to the M365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com/)) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the M365 admin center ([**https://admin.microsoft.com**](https://admin.microsoft.com/)) using admin@YourTenant.onmicrosoft.com.
 
 2. Create a new Office 365 group with the following settings:
 

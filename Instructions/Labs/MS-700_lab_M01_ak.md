@@ -19,7 +19,7 @@ In the labs of this course you will assume the role of Joni Sherman, a System Ad
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
-- Joni Sherman (JoniS@YourTenant.onmicrosoft.com) **Group coordinator /** **Teams admin**
+- Joni Sherman (JoniS@YourTenant.onmicrosoft.com) **Group coordinator / Teams admin**
 - Alex Wilber (AlexW@YourTenant.onmicrosoft.com) **Regular pilot user from Canada**
 - Lynne Robbins (LynneR@YourTenant.onmicrosoft.com) **Regular pilot user**
 - Allan Deyoung (AllanD@YourTenant.onmicrosoft.com) **Teams communication support engineer**
@@ -100,7 +100,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open **Microsoft** **Edge**, maximize the window and navigate to [**https://portal.office.com/**](https://portal.office.com/). 
+2. Open **Microsoft Edge**, maximize the window and navigate to [**https://portal.office.com/**](https://portal.office.com/). 
 
 3. When the Sign in window is displayed, sign in as **admin@YourTenant.onmicrosoft.com** using the O365 credentials provided to you. 
 
@@ -280,7 +280,7 @@ Since the integration of Skype for Business into Microsoft Teams is not yet comp
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open **Microsoft** **Edge**, maximize the window and navigate to [**https://www.microsoft.com/en-us/download/details.aspx?id=39366**](https://www.microsoft.com/en-us/download/details.aspx?id=39366).
+2. Open **Microsoft Edge**, maximize the window and navigate to [**https://www.microsoft.com/en-us/download/details.aspx?id=39366**](https://www.microsoft.com/en-us/download/details.aspx?id=39366).
 
 3. In the Microsoft Download Center, scroll down below **Skype for Business Online, Windows PowerShell Module** and select **Download** in the grey box.
 
@@ -386,7 +386,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 10. In the Owners field type in the Name of **Joni Sherman** and select her from the **Users** list and select **Next**. Then select **Create group.**
 
-11. When the **New** **group created** information appears, select **Close**.
+11. When the **New group created** information appears, select **Close**.
 
 12. Wait a moment and select **Refresh** until the group is visible.
 
