@@ -37,7 +37,7 @@ In the past, some users of Contoso have used a lot of stickers, gif animations a
 **Note:** Please note that after creating a messaging policy it can take up to 24 hours for the settings to be applied to the users.
 
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com) using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) using **JoniS@YourTenant.onmicrosoft.com**.
 
 2. Create a new **New messaging policy** with the following settings:
 
@@ -59,7 +59,7 @@ In this task, you have successfully configured a new messaging policy and assign
 
 As your part as system administrator of Contoso, you will create a private channel "confidential" in the sales team that only allows some people to be able to access the information.
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) using **JoniS@YourTenant.onmicrosoft.com**.
 
 2. Create a new channel for the **Sales** team, using the following settings:
 
@@ -68,7 +68,7 @@ As your part as system administrator of Contoso, you will create a private chann
 	- **Type:** Private
 	- **Owner:** Lynne Robbins
 
-3. Sign in to the Teams web client (https://teams.microsoft.com/) using LynneR@YourTenant.onmicrosoft.com.
+3. Sign in to the Teams web client [**https://teams.microsoft.com/**](https://teams.microsoft.com/) using **LynneR@YourTenant.onmicrosoft.com**.
 
 4. Check the existence of the new channel.
 
@@ -85,7 +85,7 @@ In the past, users stored data at various location, including third-party storag
 **Note:** Please note that after disabling the third-party storage provider, it can take up to 24 hours for the settings to be applied to the teams.
 
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) using **JoniS@YourTenant.onmicrosoft.com**.
 
 2. Change the **Teams settings** to the following values:
 
@@ -103,12 +103,11 @@ In the past, users stored data at various location, including third-party storag
 In this task you have learned how to enable or disable third-party storage providers for your whole tenant.
 
  
-
 #### Task 2 - Edit default org-wide app policy
 
 In the pilot project, the company decided that Microsoft Planner is the default app for all (existing) teams. To do this, edit the default org-wide app policy
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com) using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com) using **JoniS@YourTenant.onmicrosoft.com**.
 
 2. Edit the **App setup policies** with the name **Global (Org-wide default)** to the following settings:
 
@@ -116,17 +115,18 @@ In the pilot project, the company decided that Microsoft Planner is the default 
 
 3. Make sure **Lynne Robbins** has the **App setup policies** with the name **Global (Org-wide default)** configured.
 
-4. Sign in to the Teams web client (https://teams.microsoft.com/) using LynneR@YourTenant.onmicrosoft.com.
+4. Sign in to the Teams web client [**https://teams.microsoft.com/**](https://teams.microsoft.com/) using **LynneR@YourTenant.onmicrosoft.com**.
 
 5. Check, that **Planner** is present as new pinned app.
 
 6. Close the Teams web client. 
 
+
 #### Task 3 - Edit default app permission policy
 
 In this task you will edit the default app permission policy and block the Google Analytics app for all tenants
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) using **JoniS@YourTenant.onmicrosoft.com**.
 
 2. Create a new **App permission policies** with the following settings:
 
@@ -142,14 +142,15 @@ In this task you will edit the default app permission policy and block the Googl
 
 In this task you have learned how to block the Google Analytics app for your tenant.
 
+
 #### Task 4 - Add a custom line of business app
 
-In this task, you will add a custom line of business app required for your company Contoso Ltd. for all users of your tenant. You find sample LOB app at: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp.
+In this task, you will add a custom line of business app required for your company Contoso Ltd. for all users of your tenant. You find sample LOB app at: **https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp**.
  
 
-1. Download the custom app from the following links: [Notification Bot](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/blob/master/Cross%20Vertical/NotificationBot/Manifest/Notification%20App.zip).
+1. Download the custom app from the following links: [**Notification Bot**](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/blob/master/Cross%20Vertical/NotificationBot/Manifest/Notification%20App.zip).
 
-2. Sign in to the Teams web client https://teams.microsoft.com using LynneR@YourTenant.onmicrosoft.com.
+2. Sign in to the Teams web client [**https://teams.microsoft.com**](https://teams.microsoft.com) using **LynneR@YourTenant.onmicrosoft.com**.
 
 3. Upload the custom app in **Apps**.
 
@@ -163,21 +164,23 @@ You have successfully added a custom app to your tenant with the account of Joni
 
 In this exercise, you will test the configured policy settings on a client with the affected user Lynne Robbins and compare the settings to the available client settings of Joni Sherman.
 
+
 #### Task 1 – Test the messaging policy and private channel access
 
 In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between affected user (Lynne Robbins) vs regular user(Joni Sherman).
 
-1. Sign in to the Teams web client https://teams.microsoft.com using LynneR@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams web client [**https://teams.microsoft.com**](https://teams.microsoft.com) using **LynneR@YourTenant.onmicrosoft.com**.
 
 2. Open a chat with **Joni Sherman** and check, if the **messaging policy** works as expected.
 
 3. Write a message to a channels conversation window.
 
+
 #### Task 2 – Test the app permission policy and storage providers
 
 In this task, you will test the **app permission policies** configured in exercise 2 and compare the difference between affected user (Lynne Robbins) vs regular user (Joni Sherman).
 
-1. Sign in to the Teams web client (https://teams.microsoft.com) using LynneR@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams web client [**https://teams.microsoft.com**](https://teams.microsoft.com) using **LynneR@YourTenant.onmicrosoft.com**.
 
 2. Try to add an additional **Google Analytics** connector to the **IT-Department** team. If this does not work, the **app permission policy** works as desired.
 

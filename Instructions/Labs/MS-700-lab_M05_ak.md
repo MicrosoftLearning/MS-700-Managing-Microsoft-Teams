@@ -31,6 +31,7 @@ After you complete this lab, you will be able to:
 
 In this exercise you will configure policies to manage the creation of new private channels and the available tools for users in chat.
 
+
 #### Task 1 - Create messaging policy for giphy, memes and stickers
 
 In the past, some users of Contoso have used a lot of stickers, gif animations and similar pictures in their conversations, even with externals using other chat solutions. The new corporate guideline shall prohibit the use of graphic elements in corporate communication via Teams, because users shall not use them in conversations external customers and clients. As a Teams service administrator, you must create a new message policy that prohibits its use and apply it to several users of your pilot project.
@@ -39,7 +40,7 @@ In the past, some users of Contoso have used a lot of stickers, gif animations a
 
 1. Connect to the Client 1 VM with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) to access the **Microsoft** **Teams** **admin center**. 
+2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
 3. On the **Pick an account** page, select JoniS@YourTenant.onmicrosoft.com and sign in. 
 
@@ -63,13 +64,14 @@ In the past, some users of Contoso have used a lot of stickers, gif animations a
 
 In this task, you have successfully configured a new messaging policy and assigned it to Lynne Robbins. It will now take some time for the policy to take effect. Continue with the next task.
 
+
 #### Task 2 - Manage private channels in a team
 
 As your part as system administrator of Contoso, you will create a private channel "confidential" in the sales team that only allows some people to be able to access the information.
 
 1. Connect to the Client 1 VM with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) to access the **Microsoft** **Teams** **admin center**. 
+2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
 3. On the Pick an account page, select JoniS@YourTenant.onmicrosoft.com and sign in. 
 
@@ -103,18 +105,19 @@ As your part as system administrator of Contoso, you will create a private chann
 
 In this task you learned how to create a private channel in the Microsoft Teams Admin center and how to configure and check the access.
 
+
+
 ### Exercise 2: Manage app settings for team
+
 #### Task 1 - Disable third party storage providers
 
 In the past, users stored data at various location, including third-party storage providers. Recently, the company deployed OneDrive for Business for all users and would like to guide the users to use OneDrive for Business as the primary data storage location. As the system admin, you are asked to deactivate all third-party storage providers in Microsoft Teams to align with the direction. 
 
 **Note:** Please note that after disabling the third-party storage provider, it can take up to 24 hours for the settings to be applied to the teams.
 
-
-
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) to access the **Microsoft** **Teams** **admin center**. 
+2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
 3. When you see the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
 
@@ -131,13 +134,14 @@ In the past, users stored data at various location, including third-party storag
 
 In this task you have learned how to enable or disable third-party storage providers for your whole tenant.
 
+
 #### Task 2 - Edit default org-wide app policy
 
 In the pilot project, the company decided that Microsoft Planner is the default app for all (existing) teams. To do this, edit the default org-wide app policy
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) to access the **Microsoft** **Teams** **admin center**. 
+2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
 3. When you see the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
 
@@ -172,7 +176,7 @@ In this task you will edit the default app permission policy and block the Googl
 
 1. Connect to the Client 1 VM with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) to access the **Microsoft** **Teams** **admin center**. 
+2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
 3. On the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
 
@@ -194,7 +198,6 @@ In this task you will edit the default app permission policy and block the Googl
 
 In this task you have learned how to block the Google Analytics app for your tenant.
 
- 
 
 #### Task 4 - Add a custom line of business app
 
@@ -205,8 +208,8 @@ In this task, you will add a custom line of business app required for your compa
 2. Select the **Edge Browser** icon from the taskbar. In your browser go to the following link and download the custom line of business app as zip package: 
 
 	- Go to the following link:
-[Notification Bot](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/blob/master/Cross%20Vertical/NotificationBot/Manifest/Notification%20App.zip).
-	- Select **download** and **Save**, to download the file to the **Downloads** folder.
+[**Notification Bot**](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/blob/master/Cross%20Vertical/NotificationBot/Manifest/Notification%20App.zip).
+	- Select **Download** and **Save**, to download the file to the **Downloads** folder.
 
 3. Navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
@@ -244,7 +247,7 @@ In this task, you will add a custom line of business app required for your compa
 
 20. Select **Add**, to test the custom app.
 
-21. On the **Welcome to Notification** **Bot** conversation, select the dropdown menu and select **Weather**.
+21. On the **Welcome to Notification Bot** conversation, select the dropdown menu and select **Weather**.
 
 22. The weather forecast for your location is being displayed.
 
@@ -256,6 +259,7 @@ You have successfully added a custom app to your tenant with the account of Joni
 
 In this exercise, you will test the configured policy settings on a client with the affected user Lynne Robbins and compare the settings to the available client settings of Joni Sherman.
 
+
 #### Task 1 – Test the messaging policy and private channel access
 
 In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between affected user (Lynne Robbins) vs regular user(Joni Sherman).
@@ -264,7 +268,7 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 2. Select the **Edge Browser** icon from the taskbar. In your browser go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-3. On the **Pick an account** window, select LynneR@YourTenant.onmicrosoft.com and sign in.
+3. On the **Pick an account** window, select **LynneR@YourTenant.onmicrosoft.com** and sign in.
 
 4. On the Microsoft Teams landing page click **Use the web app instead**
 
@@ -279,6 +283,7 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 9. In the left-hand navigation pane, select **Teams.**
 
 10. If you can see and select the **Confidential sales** channel of the **Sales** team and if you are able to write a comment, and confirm that you have access to the private channel.
+
 
 #### Task 2 – Test the app permission policy and storage providers
 
