@@ -46,7 +46,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user [**JoniS@YourTenant.onmicrosoft.com**](mailto:JoniS@yourtenant.onmicrosoft.com)**.**
+2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **JoniS@YourTenant.onmicrosoft.com**.
 
 3. In the **Teams admin center,** under **Meetings** section, choose **Meeting policies**.
 
@@ -61,9 +61,9 @@ Contoso Ltd. works with several external partners and users often schedule meeti
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as JoniS@YourTenant.onmicrosoft.com and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
 
-3. On the left navigation pane, under **Meetings** section**,** choose **Meetings settings**.
+3. On the left navigation pane, under **Meetings** section, choose **Meetings settings**.
 
 4. On the **Meetings settings** page, below participants, turn **Off** the option **Anonymous users can join a meeting**.
 
@@ -76,18 +76,23 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as JoniS@YourTenant.onmicrosoft.com and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Meetings** section, choose **Live event policies**.
 
 4. Create a new **Live event policy** with the following configuration:
 
-	- **Add live events policy:** Management Live Events
-	- **Description:** Recording Restriction for live events organized by managers.
-	- **Allow scheduling:** On
-	- **Allow transcription for attendees:** Off
-	- **Who can join scheduled live events:** Everyone in the organization
-	- **Who can record an event:** Organizer can record
+	- Add live events policy: **Management Live Events**
+
+	- Description: **Recording Restriction for live events organized by managers.**
+
+	- Allow scheduling: **On**
+
+	- Allow transcription for attendees: **Off**
+
+	- Who can join scheduled live events: **Everyone in the organization**
+	
+	- Who can record an event: **Organizer can record**
 
 5. Assign the new policy to a user **Megan Bowen**.
 
@@ -104,19 +109,19 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as JoniS@YourTenant.onmicrosoft.com and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane under **Locations** section, choose **Emergency addresses**.
 
 4. Create a new emergency address with the following configuration:
 
-	- **Put in a name for your location:** Contoso Emergency Address
+	- Put in a name for your location: **Contoso Emergency Address**
 
-	- **Add a friendly description so you know why it was created:** Emergency Address for Contoso employees.
+	- Add a friendly description so you know why it was created: **Emergency Address for Contoso employees.**
 
-	- **Country or region:** United States
+	- Country or region: **United States**
 
-	- **Address:** 1 Microsoft Way, Redmond, WA 98052
+	- Address: **1 Microsoft Way, Redmond, WA 98052**
 
 You have successfully created an emergency address that can be used for phone numbers.
 
@@ -126,7 +131,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as JoniS@YourTenant.onmicrosoft.com and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Voice** section, choose **Calling policies**.
 
@@ -134,11 +139,11 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 5. Create a new policy with the following configuration:
 
-	- **Add new calling policy:** Voicemail enabled pilot users
+	- Add new calling policy: **Voicemail enabled pilot users**
 
-	- **Description:** Calling policy that allows voicemail for selected pilot users.
+	- Description: **Calling policy that allows voicemail for selected pilot users.**
 
-	- **Voicemail is available for routing inbound calls:** Enabled
+	- Voicemail is available for routing inbound calls: **Enabled**
 
 6. Assign the new calling policy **Voicemail enabled pilot users** to users **Megan, Alex, Joni,** and **Lynne**.
  
@@ -158,92 +163,90 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as JoniS@YourTenant.onmicrosoft.com and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Org-wide settings** section, choose **Resource accounts**, and create a resource account with the following configuration:
 
-	- **Display name:** Contoso Call Queue Resource Account
+	- Display name: **Contoso Call Queue Resource Account**
 
-	- **Username:** pilot_callqueue1
+	- Username: **pilot_callqueue1**
 
-	- **Resource Account Type:** Call queue
+	- Resource Account Type: **Call queue**
 
 4. On the left navigation pane, under **Voice** section, choose **Call queues**, and create a call queue with the following configuration:
 
-	- **Call queue name:** Contoso Call Queue
+	- Call queue name: **Contoso Call Queue**
 
-	- **Add accounts:** **Contoso Call Queue.**
+	- Add accounts: **Contoso Call Queue**
 
-	- **Greeting** Play an audio file **C:\Windows\Media\Alarm03.wav**.
+	- Greeting: **Play an audio file C:\\Windows\\Media\\Alarm03.wav**
 
-	- **Music on hold:** Play default music
+	- Music on hold: **Play default music**
 
-	- **Call answering: Add groups:** **Sales.**
+	- Call answering: **Add groups: Sales**
 
-	- **Routing method:** Round robin
+	- Routing method: **Round robin**
 
-	- **Agents can opt out of taking calls:** On
+	- Agents can opt out of taking calls: **On**
 
-	- **Agent alert time:** 30 seconds
+	- Agent alert time: **30 seconds**
 
-	- **Maximum calls in the queue:** 50
+	- Maximum calls in the queue: **50**
 
-	- **When the maximum number of calls is reached:** Disconnect
+	- When the maximum number of calls is reached: **Disconnect**
 
-	- **Call time out handling** 5 minutes
+	- Call time out handling **5 minutes**
 
-	- **When call times out:** Disconnect
+	- When call times out: **Disconnect**
 
- 
-Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
+ Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
 
 **Note:** Because this call queue shall have a custom greeting, you need to upload some wav file for demonstration purposes. In real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
+
 
 #### Task 4 - Create an auto attendant with transcribed greeting message and out of office hours
 
 In your role as Teams admin, you were assigned a task to create an auto attendant with transcribed welcome message that will respond to customers outside of office hours. As some of your employees work in different time zones, the auto attendant informs a caller that the subscriber is currently on vacation and to call another person in the organization. Furthermore, the auto attendant informs callers about business hours.
 
- 
-
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as JoniS@YourTenant.onmicrosoft.com and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Org-wide settings**, choose **Resource accounts,** and create resource account with the following configuration:
 
-	- **Display name:** Contoso Auto Attendant
+	- Display name: **Contoso Auto Attendant**
 
-	- **Username:** pilot_autoattendant1
+	- Username: **pilot_autoattendant1**
 
-	- **Resource Account Type:** Auto attendant 
+	- Resource Account Type: **Auto attendant** 
 
-4. On the left navigation pane, under **Voice** section, choose **Auto attendants.**
+4. On the left navigation pane, under **Voice** section, choose **Auto attendants**.
 
 5. Create a new auto attendant with the following configuration:
 
-	- **Add a name for your auto attendant:** Contoso Auto attendant
+	- Add a name for your auto attendant: **Contoso Auto attendant**
 
-	- **Operator:** Voice app
+	- Operator: **Voice app**
 
-	- **Search by resource account:** Contoso Call Queue Resource Account
+	- Search by resource account: **Contoso Call Queue Resource Account**
 
-	- **Time zone:** (UTC-08:00) Pacific Time (US & Canada)
+	- Time zone: **(UTC-08:00) Pacific Time (US \& Canada)**
 
-	- **Language:** English (United States)
+	- Language: **English (United States)**
 
-	- **Enable voice inputs** Off
+	- Enable voice inputs **Off**
 
 6. On the **Call flow** page, configure the following:
 
-	- **First play a greeting message:** Type in the greeting message
+	- First play a greeting message: **Type in the greeting message**
 
-	- **Type in**: Welcome. The person you called is currently on vacation, your call will be redirected to an operator.
+	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
 
-	- **Then route the call:** Redirect call
+	- Then route the call: **Redirect call**
 
-	- **Redirect to:** Voice app
+	- Redirect to: **Voice app**
 
-	- **Search by resource account:** Contoso Call Queue Resource Account
+	- Search by resource account: **Contoso Call Queue Resource Account**
 
 7. On the **Set business hours** page, configure the following:
 
@@ -253,17 +256,17 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 	- Leave **Saturday** and **Sunday** blank.
 
-	- **First play a greeting message:** Type in a greeting message
+	- First play a greeting message: **Type in a greeting message**
 
-	- **Type in:** Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.
+	- Type in: **Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.**
 
-	- **Then route the call** Disconnect
+	- Then route the call **Disconnect**
 
 8. On the **Holiday call settings** page, accept the default settings.
 
 9. On the **Find people** page, accept the default settings.
 
-10. On the **Resource accounts** page, add the **Contoso auto attendant**, resource account.
+10. On the **Resource accounts** page, add the **Contoso Auto attendant**, resource account.
 
 You have successfully created a resource account for the auto attendant and afterwards an auto attendant configuration.
 
@@ -281,7 +284,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as MeganB@YourTenant.onmicrosoft.com.
+3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@YourTenant.onmicrosoft.com**.
 
 4. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
 
@@ -299,11 +302,11 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as MeganB@YourTenant.onmicrosoft.com.
+3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@YourTenant.onmicrosoft.com**.
 
 4. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **New meeting**.
 
-5. Create a new meeting with title **Contoso Web App Project**, and invite **Joni Sherman** and the outlook.com address, previously used in Lab 04, that is not from YourTenant.onmicrosoft.com.
+5. Create a new meeting with title **Contoso Web App Project**, and invite **Joni Sherman** and the Outlook.com address, previously used in Lab 04, that is not from YourTenant.onmicrosoft.com.
 
 6. On the **New meeting** page, choose a schedule as the current time.
 
@@ -311,7 +314,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 8. Open an window in your browser and go to the **Microsoft Teams** page: (https://teams.microsoft.com/)
 
-9. On the **Pick an account** page, select JoniS@yourtenant.onmicrosoft.com and sign in.
+9. On the **Pick an account** page, select **JoniS@yourtenant.onmicrosoft.com** and sign in.
 
 10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join.** Note that you can join the meeting as user **Joni Sherman**.
 
