@@ -341,17 +341,17 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **MicrofSecurity admin center**: [**https://security.microsoft.com**](https://security.microsoft.com). 
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft 365 Security center**: [**https://security.microsoft.com**](https://security.microsoft.com). 
 
 3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
-4. In the **Microsoft Security admin center**, in the left navigation pane, select **Policies**.
+4. In the **Microsoft 365 Security center**, in the left navigation pane, select **Policies**.
 
-5. On the **Policies** page, scroll to the **Threat Protection** section and select **ATP safe attachments (Office 365).**
+5. On the **Policies** page, scroll to the **Threat protection** section and select **ATP safe attachments (Office 365)**.
 
-6. A new browser tab with the **Office 365 Security & compliance center** will open.
+6. A new browser tab with the **Office 365 Security \& Compliance center** will open.
 
-7. On the left navigation pane, select **Threat management** > **Policy,** and on the **Policy** page, select the **ATP safe attachments** tile.
+7. On the left navigation pane, select **Threat management** > **Policy**, and on the **Policy** page, select the **ATP safe attachments** tile.
 
 8. On the **ATP safe attachments** page, select the check box next to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**, and then select the **Save** button.
 
