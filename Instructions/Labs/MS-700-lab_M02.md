@@ -28,9 +28,13 @@ After you complete this lab, you will be able to:
 - **Estimated Time:** 90 minutes.
 
 ## Instructions
+
+
+
 ### Exercise 1: Implement Governance and Lifecycle Management for Microsoft Teams
 
 Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Office 365 groups, you need to plan governance procedures for Office 365 groups, including creating and configuring Office 365 groups classification labels, creating Office 365 groups expiration policies, configuring Office 365 Group creation policy permissions ,and configuring Office 365 Groups naming policies.
+
 
 #### Task 1 - Create classification labels
 
@@ -127,6 +131,7 @@ Once the classification label and descriptions are created, users can now assign
 
 You have successfully applied a classification to an existing team. Continue with the next task.
 
+
 #### Task 3 - Create and assign expiration policy    
 
 Based on the organization requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the group expiration policy experience, you will configure an expiration policy, that will delete the **Teams Rollout** group after 90 days.
@@ -148,6 +153,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 7. Apply the expiration policy you just created to **Teams Rollout** group.
  
 You have successfully created a new expiration policy and configured the **Teams Rollout** team to expire after 90 days. If the team won’t have a owner after 90 days, Joni Sherman is notified about the expiration if the team.
+
 
 #### Task 4 - Configure group creation policy    
 
@@ -217,6 +223,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
 In this task, you have successfully created a security group and configured Azure AD settings to restrict the creation of new groups to members of this security group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
+
 #### Task 5 - Configure a new naming policy  
 
 As part of your Teams planning project, you will configure the naming policy where each new Office 365 Group or Team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: CEO, Payroll and HR. 
@@ -242,7 +249,6 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 10. Since you tested naming policy for evaluation, discard the group naming policy.
 
- 
 In this task, you have configured a naming policy that will block specific words to be used in an Office 365 Group name, as well as you have evaluated the options for prefix and suffix of the Office 365 Group name.
 
  
@@ -295,38 +301,40 @@ You can revert the Azure AD settings changes to defaults with following steps.
 10. Close the PowerShell window.
  
 You have successfully reset all Azure AD tenant settings in your test tenant. This is the end of exercise 1.
- 
+
+
+
 ### Exercise 2: Implementing security for Microsoft Teams
 
 In this exercise, you will increase the security level in your organization by configuring an ATP policy to ensures no malicious content is sent through documents shared in Teams by blocking attachments that contain malware. 
+
 
 #### Task 1 - Configure ATP for Microsoft Teams 
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring ATP policy that blocks documents that contain malware. 
 
- 
-
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, sign in to **Microsoft Security admin center** (https://security.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
+2. Open Microsoft Edge, sign in to **Microsoft 365 security center** (https://security.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In the **Microsoft Security admin center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365).**
+3. In the **Microsoft 365 security center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365).**
 
-4. A new browser tab with the **Office 365 Security &amp; compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
+4. A new browser tab with the **Office 365 Security &amp; Compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
 
 5. Close the Edge browser window.
 
 In this task, you have activated ATP safe attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks block documents that contain malware.
 
+
+
 ### Exercise 3: Implementing Compliance for Microsoft Teams
 
 Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Teams compliance features to meet organizations requirements. First, you will configure retention settings on data in Microsoft Teams. Next you will configure DLP policy that will search for all GDPR related data.
 
+
 #### Task 1 - Create a new retention policy for a single team  
 
 Before deploying Microsoft Teams in your organization, you will need to evaluate Microsoft Teams retention settings. You will create a new retention policy that retains the content of the "Sales" Team for 7 years after last modification. 
-
- 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -345,7 +353,6 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 5. On the **Chose locations** page, select **Sales Teams channel messages.**
 
 6. Leave the browser open for the next task.
-
  
 In this this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages of the **Sales** Team for **7 years after the last modification**. 
 
@@ -354,12 +361,11 @@ In this this task, you have successfully created a new retention policy named **
 
 According to your organization compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template "General Data Protection Regulation (GDPR)". The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send email to the Global Admin and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
- 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Compliance center** (https://compliance.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft 365 Compliance center** (https://compliance.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In **Microsoft Compliance Center**, on the left navigation pane, select **Data loss prevention**.
+3. In **Microsoft 365 Compliance Center**, on the left navigation pane, select **Data loss prevention**.
 
 4. On the **Data loss prevention** page, create a new DLP policy with the following configuration:
 
