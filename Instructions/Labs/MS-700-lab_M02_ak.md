@@ -112,7 +112,7 @@ Once the classification label and descriptions are created, users can now assign
 
 2. Open Microsoft Edge, maximize the window and navigate to the **Microsoft Teams** home page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-3. When you see the **Pick an account** window select [**lynner@YourTenant.onmicrosoft.com**](mailto:lynner@yourtenant.onmicrosoft.com) and sign in with the provided credentials.
+3. When you see the **Pick an account** window select **lynner@YourTenant.onmicrosoft.com** and sign in with the provided credentials.
 
 4. On the Microsoft Teams landing page click **Use the web app instead**
 
@@ -138,7 +138,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com/). 
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [**https://portal.azure.com**](https://portal.azure.com/). 
 
 3. Sign in with the global admin credential (**admin@YourTenant.onmicrosoft.com**).
 
@@ -193,7 +193,7 @@ You are an administrator for your Teams organization. You need to limit which us
 6. Replace **&lt;ObjectId&gt;** with the ObjectId from the output of the previous step and run following cmdlet to add **Lynne Robbins** to the new security group:
 
 	```powershell
-	Add-AzureADGroupMember -ObjectId **&lt;ObjectId&gt;** -RefObjectId (Get-AzureADUser -SearchString “Lynne Robbins”).ObjectId
+	Add-AzureADGroupMember -ObjectId <ObjectId> -RefObjectId (Get-AzureADUser -SearchString “Lynne Robbins”).ObjectId
 	```
 
 7. Run following cmdlet to fetch the unified group template again and load it into the “$template” variable:
@@ -349,7 +349,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 5. On the **Policies** page, scroll to the **Threat protection** section and select **ATP safe attachments (Office 365)**.
 
-6. A new browser tab with the **Office 365 Security \& Compliance center** will open.
+6. A new browser tab with the **Office 365 Security &amp; Compliance center** will open.
 
 7. On the left navigation pane, select **Threat management** > **Policy**, and on the **Policy** page, select the **ATP safe attachments** tile.
 
@@ -396,7 +396,7 @@ According to your organization compliance requirements, you need to implement ba
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft C****ompliance center**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com)**.**
 
-3. You are still signed in as [**admin@YourTenant.onmicrosoft.com**](mailto:admin@yourtenant.onmicrosoft.com). When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
+3. You are still signed in as **admin@YourTenant.onmicrosoft.com**. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
 4. In **Microsoft Compliance Center**, on the left navigation pane, select **Show all** and and select **Data loss prevention**.
 

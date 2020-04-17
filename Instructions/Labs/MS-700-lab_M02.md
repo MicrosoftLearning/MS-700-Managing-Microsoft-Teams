@@ -330,9 +330,9 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Office 365 Security & Compliance center** (https://protection.office.com) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Office 365 Security &amp; Compliance center** (https://protection.office.com) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In **Office 365 Security & Compliance center**, on the left navigation pane, under **information governance** section, choose **Retention**.
+3. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, under **information governance** section, choose **Retention**.
 
 4. On the **Retention** page, create a new retention policy with the following configuration:
 
