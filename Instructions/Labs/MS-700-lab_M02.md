@@ -1,6 +1,6 @@
 --- 
 lab: 
-    title: 'Lab: Configure Security and Compliance for teams and content '
+    title: 'Lab: Configure Security and Compliance for teams and content'
     module: 'Module 02: Implement Microsoft Teams Governance, Security and Compliance' 
 ---
 
@@ -136,19 +136,17 @@ You have successfully applied a classification to an existing team. Continue wit
 
 Based on the organization requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the group expiration policy experience, you will configure an expiration policy, that will delete the **Teams Rollout** group after 90 days.
 
- 
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+ 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
 2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@YourTenant.onmicrosoft.com**).
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, choose **Azure Active Directory**.
 
-4. In the **Azure Active Directory**, on the left navigation pane, select **Groups.**
+4. In the **Azure Active Directory**, on the left navigation pane, select **Groups**.
 
 5. On the **Groups** page, configure **Expiration** so that **Group lifetime (in days)** is **90**.
 
-6. In the **Email contact for groups with no owners** field, type **JoniS@YourTenant.onmicrosoft.com****.**
+6. In the **Email contact for groups with no owners** field, type **JoniS@YourTenant.onmicrosoft.com**.
 
 7. Apply the expiration policy you just created to **Teams Rollout** group.
  
@@ -234,7 +232,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, select **Azure Active Directory**.
 
-4. In the **Azure Active Directory**, on the left navigation pane, select **Groups**  and then select **Naming policy.**
+4. In the **Azure Active Directory**, on the left navigation pane, select **Groups**  and then select **Naming policy**.
 
 5. Download a blocked words sample file. Save the file and then open the file in **Notepad**.
 
@@ -317,7 +315,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 2. Open Microsoft Edge, sign in to **Microsoft 365 security center** (https://security.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In the **Microsoft 365 security center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365).**
+3. In the **Microsoft 365 security center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365)**.
 
 4. A new browser tab with the **Office 365 Security &amp; Compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
 
@@ -344,13 +342,13 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 4. On the **Retention** page, create a new retention policy with the following configuration:
 
-	-  Name your policy: **Sales retention policy.**
-	- Description: **Retention policy for Sales department that will retain data for 7 years**.
-	- Decide if you want to retain content, delete it, or both: **Yes, I want to retain it.**
-	- For this long: **7 years**, and then choose **Retain the content based on when it was modified.** 
-	-  Do you want us to delete it after this time: **No**.
+	- Name your policy: **Sales retention policy**
+	- Description: **Retention policy for Sales department that will retain data for 7 years**
+	- Decide if you want to retain content, delete it, or both: **Yes, I want to retain it**
+	- For this long: **7 years**, and then choose **Retain the content based on when it was modified**
+	- Do you want us to delete it after this time: **No**
 
-5. On the **Chose locations** page, select **Sales Teams channel messages.**
+5. On the **Chose locations** page, select **Sales Teams channel messages**.
 
 6. Leave the browser open for the next task.
  
@@ -369,41 +367,41 @@ According to your organization compliance requirements, you need to implement ba
 
 4. On the **Data loss prevention** page, create a new DLP policy with the following configuration:
 
-	- Template: **General Data Protection Regulation (GDPR)**.
+	- Template: **General Data Protection Regulation (GDPR)**
 
 	- Name: **GDPR DLP Policy**
 
-	-  Description: **Data loss prevention policy for GDPR regulations in Teams.**
+	-  Description: **Data loss prevention policy for GDPR regulations in Teams**
 
-	-  Let me choose specific locations: Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on.
+	-  Let me choose specific locations: Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on
 
-	-  Customize the type of content you want to protect: **Find content that contains:** leave the default settings.
+	-  Customize the type of content you want to protect: **Find content that contains:** leave the default settings
 
-	- Detect when this content is shared: **with people outside my organization**.
+	- Detect when this content is shared: **with people outside my organization**
 
 	- What do you want to do if we detect sensitive info?
 
-		- **Send incident reports in email.**
+		- **Send incident reports in email**
 
-		- **Detect when content that's being shared contains. Instances of the same sensitive info** type: **1**.
+		- **Detect when content that's being shared contains. Instances of the same sensitive info** type: **1**
 
 		- **Restrict access or encrypt the content**
 
-		- **Block people from sharing and restrict access to shared content.** 
+		- **Block people from sharing and restrict access to shared content** 
 
 		- **Customize access and override permissions:**
 
-		- **Only people outside your organization.**
+		- **Only people outside your organization**
 
-		- Turn **On** the setting for **Let people who see the tip override the policy**.
+		- Turn **On** the setting for **Let people who see the tip override the policy**
 
-		-  **Require a business justification to override**.
+		-  **Require a business justification to override**
 
 	- Do you want to turn on the policy or test things out first?
 
-		- **I'd like to test it out first.**
+		- **I'd like to test it out first**
 
-		- **Show policy tips while in test mode**.
+		- **Show policy tips while in test mode**
 
 5. Leave the browser open for the next task.
 

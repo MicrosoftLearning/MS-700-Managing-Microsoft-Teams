@@ -27,7 +27,12 @@ After you complete this lab, you will be able to:
 - **Estimated Time:** 90 minutes.
 
 ## Instructions
-### Exercise 1: Manage team resources  
+
+
+
+### Exercise 1: Manage team resources
+
+
 #### Task 1 - Create a Team from the Office 365 Group 
 
 As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Office 365 Group, created in an earlier task of this lab, and add Teams features to it.
@@ -60,13 +65,14 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
  
 You have successfully created a new team with the Teams Desktop client, by using an existing Office 365 Group. Leave the Teams client open and continue with the next task.
 
+
 #### Task 2 - Create a new team by using PowerShell
 
 In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell. 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Right click on the Windows symbol in the lower left corner (Start) and select **Windows PowerShell (Admin).**
+2. Right click on the Windows symbol in the lower left corner (Start) and select **Windows PowerShell (Admin)**.
 
 3. Confirm the **User Account Control** dialog with **Yes**.
 
@@ -108,9 +114,9 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Connect-MicrosoftTeams
 	```
 
-10. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@YourTenant.onmicrosoft.com**) and then select **Next.**  
+10. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@YourTenant.onmicrosoft.com**) and then select **Next**.  
 
-11. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in.** 
+11. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in**. 
 
 12. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**: 
 
@@ -169,7 +175,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 4. In the left-hand navigation pane of the Teams Desktop client, select the three dots (…) right to the IT-Department team and select **Delete the team** from the list.
 
-5. In the **Delete “IT-Department” team**, select **I understand that everything will be deleted.** and select **Delete team**.
+5. In the **Delete “IT-Department” team**, select **I understand that everything will be deleted**. and select **Delete team**.
 
 6. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
 
@@ -187,13 +193,14 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 13. Select the checkbox left from the **IT-Department** group and select **Restore group** from the top pane. **Confirm** the **Do you want to restore deleted groups dialog** with selecting **Yes**.
 
-14. Switch back to the **Teams Desktop client** browser and press **F5** to refresh**.** 
+14. Switch back to the **Teams Desktop client** browser and press **F5** to refresh.
 
 15.  The IT-Department team appears in the list of teams again. Select the three dots (…) right from the team name and select **Manage team**.
 
 16. You can see the owner and all members again in the **Members** tab.
 
 You have successfully deleted and restored a via the Teams Desktop client and Azure Admin Portal.
+
 
 #### Task 4 - Create team with dynamic membership
 
@@ -217,7 +224,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 9. In the **Group** settings, select **Properties** from the left-hand navigation pane.
 
-10. In the **Membership type**, change it from **Assigned** to **Dynamic User.** Select **Add dynamic query** below **Dynamic user members**.
+10. In the **Membership type**, change it from **Assigned** to **Dynamic User**. Select **Add dynamic query** below **Dynamic user members**.
 
 11. In the Dynamic membership rules window enter the following information to the fields:
 
@@ -239,7 +246,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 16. Select **Overview** in the left-hand navigation pane of the **CA-Office** group window.
 
-17. In the Overview window, locate **Membership processing status** field**.** Wait and refresh your browser, till the status says **Update complete**. It may take several minutes, till the change is processed. 
+17. In the Overview window, locate **Membership processing status** field. Wait and refresh your browser, till the status says **Update complete**. It may take several minutes, till the change is processed. 
 
 18. Then select **Members** in the left-hand navigation pane and verify in the middle of the page that, **Alex Wilber** is in there, but **Allan Deyoung** has been removed from the group. 
 
@@ -247,15 +254,17 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 You have successfully converted an Office 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation “Canada" is added automatically to the team. 
 
+
+
 ### Exercise 2: Manage sharing and access
 
 In this exercise, you will test the guest access features in Office 365. To do so, you will configure guest access in Azure AD, add a new external guest user and revoke the guest access by using access reviews.
+
 
 #### Task 1 - Configure guest access in Teams
 
 In this task, you will configure the guest user access for Microsoft Teams in your tenant. 
 
- 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
@@ -268,11 +277,12 @@ In this task, you will configure the guest user access for Microsoft Teams in yo
 
 You have now successfully activated guest user access in Teams for your tenant.
 
+
 #### Task 2 - Configure guest access in the Azure AD (optional)
 
 In this task, you will configure the guest user access in the Microsoft Azure Portal. You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
-**Note**: You need to have a personal outlook.com account for this and the following tasks. If you don’t have an account like this, open your web browser, go to [**https://outlook.com**](https://outlook.com/) and create a new account.
+**Note**: You need to have a personal Outlook.com account for this and the following tasks. If you don’t have an account like this, open your web browser, go to [**https://outlook.com**](https://outlook.com/) and create a new account.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -322,7 +332,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 21. In the **Enter password** dialog box, enter the password and select **Sign in**.
 
-22. After signing in, open your **Inbox** and open the invitation Email with the topic **You're invited to the Contoso organization.**
+22. After signing in, open your **Inbox** and open the invitation Email with the topic **You're invited to the Contoso organization**.
 
 23. When you select **Get Started** from the invitation Email, a new tab with a **Review permissions** message opens. Grant your consent to **Contoso** by selecting **Accept**.
 
@@ -331,13 +341,11 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 25. You can close the browser now.
 
 You have successfully changed the external collaboration settings, so guests can also invite new guests. Then you have added a personal outlook.com account as a guest to your tenant and as a member to the team “IT-Department”.
-
  
 
 #### Task 3 - Review access to a resource with access reviews
 
 As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams. 
-
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -382,7 +390,7 @@ As a part of your system administrator role, you need to review access to resour
 
 17. Select **Upon completion settings** to expand the menu and set **Auto apply results to resource** to **enabled**.
 
-18. Select **Start.** The system automatically creates an Email for the Access Reviewer.
+18. Select **Start**. The system automatically creates an Email for the Access Reviewer.
 
 19. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
 

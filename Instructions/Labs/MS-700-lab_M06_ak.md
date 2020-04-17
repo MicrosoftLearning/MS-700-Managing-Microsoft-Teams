@@ -1,6 +1,6 @@
 --- 
 lab: 
-    title: 'Lab: Manage communication in Microsoft Teams '
+    title: 'Lab: Manage communication in Microsoft Teams'
     type: 'Answer Key' 
     module: 'Module 06: Manage communication in Microsoft Teams' 
 ---
@@ -32,6 +32,8 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
+
+
 ### Exercise 1: Manage Live event and meetings experiences
 
 Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. First, Teams admin needs to configure meeting policies and schedule initial meetings. Furthermore, business managers want to test the Live meetings option in Microsoft Teams in order to broadcast audio and video to large audiences.
@@ -47,7 +49,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 3. In the **Pick an account** box, select **JoniS@YourTenant.onmicrosoft.com** and sign in with the provided credentials.
 
-4. If a **Stay signed in?** dialog box is displayed, select the **Don’t show this again** checkbox and **Yes.**
+4. If a **Stay signed in?** dialog box is displayed, select the **Don’t show this again** checkbox and **Yes**.
 
 5. In the **Teams admin center,** on the left navigation pane, select **Meetings,** and then choose **Meeting policies**.
 
@@ -92,7 +94,7 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 	- Add live events policy: **Management Live Events**
 
-	- Description: **Recording Restriction for live events organized by managers.**
+	- Description: **Recording Restriction for live events organized by managers**
 
 	- Allow scheduling: **On**
 
@@ -157,7 +159,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 4. Select the **Global (Org-wide default)** policy to edit the default settings.
 
-5. In **Calling policies\\Global**, use the dropdown menu right to **Voicemail is available for routing inbound calls** and select **Disabled.** Then select **Save**.
+5. In **Calling policies\\Global**, use the dropdown menu right to **Voicemail is available for routing inbound calls** and select **Disabled**. Then select **Save**.
 
 6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
 
@@ -165,7 +167,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 	- Add new calling policy: **Voicemail enabled pilot users**
 
-	- Description: **Calling policy that allows voicemail for selected pilot users.**
+	- Description: **Calling policy that allows voicemail for selected pilot users**.
 
 	- Voicemail is available for routing inbound calls: **Enabled**
 
@@ -216,7 +218,7 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 	- Call queue name: **Contoso Call Queue**
 
-	- You haven't added any resource accounts yet: Select **Add accounts.** On the right-side pane, search for **Contoso** and select **Add** for **Contoso Call Queue.**
+	- You haven't added any resource accounts yet: Select **Add accounts**. On the right-side pane, search for **Contoso** and select **Add** for **Contoso Call Queue**.
 
 	- Greeting: **Play an audio file**, and then select **Upload file**
 
@@ -269,7 +271,7 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 6. Select **Save**.
 
-7. On the left navigation pane, select **Voice** and **Auto attendants** below**.**
+7. On the left navigation pane, select **Voice** and **Auto attendants** below.
 
 8. Select **+ Add** from the top pane, to create a new auto attendant.
 
@@ -323,11 +325,13 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 16. On the **Find people** page, select **Next**.
 
-17. On the **Resource accounts** page, select **Add accounts**. In the right-side pane, type **Contoso auto attendant**, and then select **Add** twice**.**
+17. On the **Resource accounts** page, select **Add accounts**. In the right-side pane, type **Contoso auto attendant**, and then select **Add** twice.
 
 18. Select **Submit** to finish the creation of the auto attendant.
 
 You have successfully created a resource account for the auto attendant and afterwards an auto attendant configuration.
+
+
 
 ### Exercise 3: Test the configured meeting settings
 
@@ -375,7 +379,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 9. On the **Pick an account** page, select **JoniS@YourTenant.onmicrosoft.com** and sign in.
 
-10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join.** Note that you can join the meeting as user **Joni Sherman**.
+10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join**. Note that you can join the meeting as user **Joni Sherman**.
 
 11. Open a window in your browser and sign in to your email hosting provider, for example Outlook.com. Read the meeting invite email and select **Join Microsoft Teams** meeting link.
 

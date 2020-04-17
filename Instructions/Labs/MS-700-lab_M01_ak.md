@@ -107,7 +107,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
 3. When the Sign in window is displayed, sign in as **admin@YourTenant.onmicrosoft.com** using the O365 credentials provided to you. 
 
-4. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **Yes.**
+4. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 
 5. Close the password save dialog from the bottom with **Never**, not to save the default global admins credentials in your browser.
 
@@ -156,7 +156,7 @@ In this task, you will check the license assignment of all users participating i
 
 5. From the now visible tabs, select **Licenses and Apps**.
 
-6. Check if the dropdown menu below **Select location** is set to **United States.** Change it to **Canada**. Then select **Save changes** at the end of the window and continue with the next step.
+6. Check if the dropdown menu below **Select location** is set to **United States**. Change it to **Canada**. Then select **Save changes** at the end of the window and continue with the next step.
 
 7. Below **Licenses**, verify that **Enterprise Mobility + Security E5** and **Office 365 E5** are both selected with a checkmark.
 
@@ -190,7 +190,7 @@ You need to test access and review the available settings for administering Team
 
 5. The Microsoft Teams admin center **Dashboard** is displayed. If the icons from the left-side pane are minimized, hover over them to display the names of the different menus.
 
-6. Hover over the first symbol below the house in the left-side pane, which is named **Teams.** That opens another menu with Manage teams and Teams policies.
+6. Hover over the first symbol below the house in the left-side pane, which is named **Teams**. That opens another menu with Manage teams and Teams policies.
 
 7. Select **Manage Teams**. In the middle of the screen, the teams of your organization are displayed. Note that **No teams are available in this organization** is displayed because you have not created any teams. You can still select policies without an existing team. Select **Teams policies** in the left-side pane. 
 
@@ -249,7 +249,7 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. On the taskbar at the bottom of the page, right click the **Start** button and then select **Windows PowerShell.**
+2. On the taskbar at the bottom of the page, right click the **Start** button and then select **Windows PowerShell**.
 
 3. To connect to Microsoft Teams in your tenant, enter the following cmdlet in the PowerShell window and press **Enter**:
 
@@ -294,7 +294,7 @@ Since the integration of Skype for Business into Microsoft Teams is not yet comp
 
 4. Select **Run** in the download bar to download and start the installation of the executable immediately.
 
-5. The installation window may open in the background. Select it from the task bar, select the **I agree the license terms and conditions** checkbox and then select **Install.** 
+5. The installation window may open in the background. Select it from the task bar, select the **I agree the license terms and conditions** checkbox and then select **Install**. 
 
 6. Select **Yes** in the **User Account Control** dialog to confirm the installation process.
 
@@ -452,7 +452,7 @@ In this task, Lynne Robbins will continue testing the self-service capabilities 
 
 3. When the Sign in window is displayed, sign in as **LynneR@YourTenant.onmicrosoft.com** using the O365 credentials provided to you. 
 
-4. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **Yes.**
+4. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 
 5. A landing page **Download the Teams desktop app and stay better connected** message is displayed. Select **Use the web app instead** below this message.
 
@@ -472,7 +472,7 @@ In this task, Lynne Robbins will continue testing the self-service capabilities 
 
 13. After adding the members to the Sales team, verify that Megan Bowen has been added correctly as a **Member**.
 
-14. Select **Close.**
+14. Select **Close**.
 
 15. The newly created team is displayed in the list of your teams.
 

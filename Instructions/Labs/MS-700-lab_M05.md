@@ -27,15 +27,17 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
+
+
 ### Exercise 1: Configure channel and message policies
 In this exercise you will configure policies to manage the creation of new private channels and the available tools for users in chat.
+
 
 #### Task 1 - Create messaging policy for giphy, memes and stickers
 
 In the past, some users of Contoso have used a lot of stickers, gif animations and similar pictures in their conversations, even with externals using other chat solutions. The new corporate guideline shall prohibit the use of graphic elements in corporate communication via Teams, because users shall not use them in conversations external customers and clients. As a Teams service administrator, you must create a new message policy that prohibits its use and apply it to several users of your pilot project.
  
 **Note:** Please note that after creating a messaging policy it can take up to 24 hours for the settings to be applied to the users.
-
 
 1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) using **JoniS@YourTenant.onmicrosoft.com**.
 
@@ -51,9 +53,8 @@ In the past, some users of Contoso have used a lot of stickers, gif animations a
 
 4. Leave the Teams admin center open. 
 
- 
-
 In this task, you have successfully configured a new messaging policy and assigned it to Lynne Robbins. It will now take some time for the policy to take effect. Continue with the next task.
+
 
 #### Task 2 - Manage private channels in a team
 
@@ -77,13 +78,15 @@ As your part as system administrator of Contoso, you will create a private chann
 In this task you learned how to create a private channel in the Microsoft Teams Admin center and how to configure and check the access.
 
 
+
 ### Exercise 2: Manage app settings for team
+
+
 #### Task 1 - Disable third party storage providers
 
 In the past, users stored data at various location, including third-party storage providers. Recently, the company deployed OneDrive for Business for all users and would like to guide the users to use OneDrive for Business as the primary data storage location. As the system admin, you are asked to deactivate all third-party storage providers in Microsoft Teams to align with the direction. 
 
 **Note:** Please note that after disabling the third-party storage provider, it can take up to 24 hours for the settings to be applied to the teams.
-
 
 1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) using **JoniS@YourTenant.onmicrosoft.com**.
 
@@ -99,7 +102,6 @@ In the past, users stored data at various location, including third-party storag
 
 3. Leave the Teams admin center open. 
 
- 
 In this task you have learned how to enable or disable third-party storage providers for your whole tenant.
 
  
@@ -136,7 +138,7 @@ In this task you will edit the default app permission policy and block the Googl
 
 	- **Add third party apps**: Google Analytics
 
-3. Assign the **App permission policy** to **Lynne Robbins.**
+3. Assign the **App permission policy** to **Lynne Robbins**.
 
 4. Close the Teams admin center. 
 
@@ -159,6 +161,8 @@ In this task, you will add a custom line of business app required for your compa
 5. Close the Teams web client.
 
 You have successfully added a custom app to your tenant with the account of Joni Sherman, who is a Teams admin in your tenant. Afterwards, you have successfully tested the app availability with a regular user.
+
+
 
 ### Exercise 3: Test configured policy settings
 

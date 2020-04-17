@@ -1,6 +1,6 @@
 --- 
 lab: 
-    title: 'Lab: Configure Security and Compliance for teams and content '
+    title: 'Lab: Configure Security and Compliance for teams and content'
     type: 'Answer Key' 
     module: 'Module 02: Implement Microsoft Teams Governance, Security and Compliance' 
 ---
@@ -127,7 +127,7 @@ Once the classification label and descriptions are created, users can now assign
 6. On the lower end of the **Edit "Sales" team** window, note the red message saying **Classification must be updated to save changes**. Select **Change setting**. 
 ![Update Classification](media/M02-UpdateClassification.png)
 
-7. In the new Classification dropdown menu, select **Confidential.** 
+7. In the new Classification dropdown menu, select **Confidential**. 
 
 8. Move the cursor and hover over the icon **(i)** right next to the **Classification** dropdown menu and note the classification descriptions.
 ![Classification Descriptions](media/M02-ClassificationDescriptions.png)
@@ -148,13 +148,13 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 3. Sign in with the global admin credential (**admin@YourTenant.onmicrosoft.com**).
 
-4. If an Azure Advisor recommendations window is displayed, close it with the **X**.
+4. If the **Welcome to Microsoft Azure** dialog box appears, select **Maybe later**. If an Azure Advisor recommendations window is displayed, close it with the **X**.
 
-5. In the **Microsoft Azure portal**, below the **Azure services** section, select **Azure Active Directory** ( You might need to select **More services** to see the option).
+5. In the **Microsoft Azure portal**, below the **Azure services** section, select **Azure Active Directory** (You might need to select **More services** to see the option).
 
-6. In the **Azure Active Directory**, on the left navigation pane, select **Groups.**
+6. In the **Azure Active Directory**, on the left navigation pane, select **Groups**.
 
-7. On the **Groups - All groups** page**,** on the left navigation pane, select **Expiration.**
+7. On the **Groups - All groups** page, on the left navigation pane, select **Expiration**.
 
 8. In the **Groups - Expiration** page, use the **Group lifetime (in days)** drop-down box, and choose **Custom**.
 
@@ -235,7 +235,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
 12. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-13. Open a Edge browser window and navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)**.**
+13. Open a Edge browser window and navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/).
 
 14. On the Pick an account window, select **MeganB@YourTenant.OnMicrosoft.com** and sign in with her credentials.
 
@@ -257,9 +257,9 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 4. In the **Microsoft Azure portal**, under **Azure services** section, select **Azure Active Directory**.
 
-5. In the **Azure Active Directory**, on the left navigation pane, select **Groups.**
+5. In the **Azure Active Directory**, on the left navigation pane, select **Groups**.
 
-6. On the **Groups - All groups** page, on the left navigation pane, select **Naming policy.**
+6. On the **Groups - All groups** page, on the left navigation pane, select **Naming policy**.
 
 7. Select **Download** in the main window to download a blocked words sample file. **Save** the file and select **Open folder**.
 
@@ -267,7 +267,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 9. Type **CEO,Payroll,HR** into the Notepad window and save the file in place. Afterwards, close the Notepad file.
 
-10. Back to the **Groups - Naming policy** page, under **Blocked words** section, at **Step 3. Upload your .csv file**, select the **folder** icon, then browse for **BlockedWords.csv** file, which is located in your **Downloads** folder, and select **Open.** 
+10. Back to the **Groups - Naming policy** page, under **Blocked words** section, at **Step 3. Upload your .csv file**, select the **folder** icon, then browse for **BlockedWords.csv** file, which is located in your **Downloads** folder, and select **Open**. 
 
 11. On the **Group - Naming policy** page, select **Save**. After this step **BlockedWords.csv** file that contains blocked words be uploaded to the naming policy.
 
@@ -377,7 +377,6 @@ Before deploying Microsoft Teams in your organization, you need to evaluate Micr
 
 #### Task 1 - Create a new retention policy for a single team  
 Before deploying Microsoft Teams in your organization, you will need to evaluate Microsoft Teams retention settings. You will create a new retention policy that retains the content of the "Sales" Team for 7 years after last modification. 
-
  
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -385,17 +384,17 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
-4. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, select **information governance**, and then choose **Retention.**
+4. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, select **information governance**, and then choose **Retention**.
 
-5. On the **Retention** page, select **Create**, and then on the **Name your policy page, i**n the name box, type **Sales retention policy.** In the **Description** box**,** type **Retention policy for Sales department that will retain data for 7 years**, and then select **Next**.
+5. On the **Retention** page, select **Create**, and then on the **Name your policy page, i**n the name box, type **Sales retention policy**. In the **Description** box**,** type **Retention policy for Sales department that will retain data for 7 years**, and then select **Next**.
 
-6. On the **Decide if you want to retain content, delete it, or both** pabe, select **Yes, I want to retain it, For this long…, 7 years**, and then choose **Retain the content based on when it was modified.** Under **Do you want us to delete it after this time?** select **No**, and then select, **Next**. 
+6. On the **Decide if you want to retain content, delete it, or both** pabe, select **Yes, I want to retain it, For this long…, 7 years**, and then choose **Retain the content based on when it was modified**. Under **Do you want us to delete it after this time?** select **No**, and then select, **Next**. 
 
 7. On the **Chose locations** page, scroll down and select **Teams channel messages**, then click **Choose teams**. 
 
-8. On the **Edit locations** page, select **Choose teams**, **and then** select the Team **Sales**, select **Choose** and at the end select **Done.**
+8. On the **Edit locations** page, select **Choose teams**, **and then** select the Team **Sales**, select **Choose** and at the end select **Done**.
 
-9. On the **Choose locations page,** select **Next** and on **Review your settings** page, select **Create this policy.**
+9. On the **Choose locations page,** select **Next** and on **Review your settings** page, select **Create this policy**.
 
 10. Leave the browser open for the next task.
 
@@ -407,15 +406,15 @@ According to your organization compliance requirements, you need to implement ba
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft 365 Compliance center**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com)**.**
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft 365 Compliance center**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com).
 
 3. You are still signed in as **admin@YourTenant.onmicrosoft.com**. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
 4. In **Microsoft 365 Compliance Center**, on the left navigation pane, select **Show all** and and select **Data loss prevention**.
 
-5. On the Data loss prevention page, select **+ Create a policy**
+5. On the Data loss prevention page, select **+ Create a policy**.
 
-6. On the **New DLP policy** page, select the searchbox and enter **GDPR.** Select the **General Data Protection Regulation (GDPR)** and select **Next**.
+6. On the **New DLP policy** page, select the searchbox and enter **GDPR**. Select the **General Data Protection Regulation (GDPR)** and select **Next**.
 
 7. On the **Name your policy** page, change the name to **GDPR DLP Policy,** in the Description box type **Data loss prevention policy for GDPR regulations in Teams** and then select **Next**.
 
@@ -423,19 +422,19 @@ According to your organization compliance requirements, you need to implement ba
 
 9. Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on. Select **Next**.
 
-10. On the **Customize the type of content you want to protect** page, ensure that default option is selected **Find content that contains,** select the checkbox next to **Detect when this content is shared,** and from the drop-down menu, choose **with people outside my organization.** At the end, select **Next**.
+10. On the **Customize the type of content you want to protect** page, ensure that default option is selected **Find content that contains,** select the checkbox next to **Detect when this content is shared,** and from the drop-down menu, choose **with people outside my organization**. At the end, select **Next**.
 
 11. On the **What do you want to do if we detect sensitive info?** page, ensure that following settings are configured:
 
-	- A checkbox is selected for **Send incident reports in email.**
+	- A checkbox is selected for **Send incident reports in email**.
 
-	- A checkbox is selected for **Detect when content that's being shared contains.** In the **instances of the same sensitive info type** box, type **1**.
+	- A checkbox is selected for **Detect when content that's being shared contains**. In the **instances of the same sensitive info type** box, type **1**.
 
 	- A checkbox is selected next to **Restrict access or encrypt the content** and **Block people from sharing and restrict access to shared content** radio button is selected.
 
 12. On the **Customize access and override permissions** page, ensure that following settings are configured:
 
-	- Select **Only people outside your organization.**
+	- Select **Only people outside your organization**.
 
 	- Turn **On** the setting for **Let people who see the tip override the policy**.
 
@@ -443,7 +442,7 @@ According to your organization compliance requirements, you need to implement ba
 
 13. On the **Do you want to turn on the policy or test things out first?** page, select **I'd like to test it out first,** then select check box next to **Show policy tips while in test mode,** and at the end select **Next**.
 
-14. On the Review your settings page, select **Create.**
+14. On the Review your settings page, select **Create**.
 
 15. Leave the browser open for the next task.
 

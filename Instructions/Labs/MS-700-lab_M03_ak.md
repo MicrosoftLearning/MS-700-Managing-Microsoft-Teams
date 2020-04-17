@@ -32,6 +32,9 @@ After you complete this lab, you will be able to:
 - **Estimated Time:** 60 minutes.
 
 ## Instructions
+
+
+
 ### Exercise 1: Calculate networking capabilities 
 
 Microsoft Teams provides users with chat, audio, video and content sharing experience in different network conditions. It includes variable codecs, where media can be negotiated in limited bandwidth environments. However, as a Teams admin, you will need to carefully plan your network bandwidth, because there are other Office 365 services and third-party apps that also need reliable network connection. Therefore, it is very important that Teams admins have tools that could help to estimate the bandwidth consumption according to specific business requirements and existing network infrastructure, and provide best experience to business users.
@@ -41,7 +44,6 @@ Microsoft Teams provides users with chat, audio, video and content sharing exper
 
 In this exercise, you will calculate the network requirements for Microsoft teams, depending on your expected Teams usage business requirements. You must ensure enough bandwidth based on your organization network connectivity that is described in the following table:
 
- 
 | **Location**| **Total number of employees**  | **WAN link capacity / audio/video queue size (Mbps)** | **Office 365 connection**  | **Internet connection** |
 |------|-------------|---------|-------------|----------------------------|
 | New York HQ | 1000| 1024/300/500 | ExpressRoute | Local Internet 1024 Mbps|
@@ -138,6 +140,7 @@ Once you generate the report, you’ll see the recommendation of your bandwidth 
 
 In this lab, you have used Network Planner to estimate the Microsoft Teams impact on the bandwidth in your network infrastructure.
 
+
 #### Task 2 - Use network testing companion
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
@@ -162,7 +165,7 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 10. In the **Skype for Business and Microsoft Teams Network Testing Companion** window, review the information in the sections under **Windows operating system**, **Internet connection**, and **Network Assessment tool**, and verify that no errors appear.
 
-11. In the **Skype for Business and Microsoft Teams Network Testing Companion** window, select the green **Start** button in the **Network Connectivity and Quality Test** section**.**
+11. In the **Skype for Business and Microsoft Teams Network Testing Companion** window, select the green **Start** button in the **Network Connectivity and Quality Test** section.
 
 12. On the **Windows Security Alert** window, select **Allow access** and in the green **Start** button in the **Network Connectivity and Quality Test** section select **Start** again and wait until it completes.
 
@@ -172,15 +175,16 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 15. Discuss the results with the instructor.
  
-
 In this task, you have used Skype for Business and Microsoft Teams Network Testing Companion to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
- 
+
+
 
 ### Exercise 2: Deploy Teams device profiles 
 
 As a Teams administrator, you will create configuration profiles to manage settings and features for Teams devices in your organization. You can create or upload configuration profiles to include settings and features you want to enable or disable and then assign a profile to a device or groups of devices.
 
 Your organization could purchase Microsoft Teams Rooms that provide complete meeting experience with HD video, audio, and content sharing in conference rooms. You will need to prepare the deployment prerequisites by define Microsoft Teams Rooms service account in Office 365.
+
 
 #### Task 1 - Create configuration profiles 
 

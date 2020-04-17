@@ -27,11 +27,14 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
-### Exercise 1: Manage team resources  
+
+
+### Exercise 1: Manage team resources
+
+
 #### Task 1 - Create a Team from the Office 365 Group 
 
 As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Office 365 Group, created in an earlier task of this lab, and add Teams features to it.
-
 
 1. Sign in to the Teams Desktop client using **JoniS@yourtenant.onmicrosoft.com**.
 
@@ -49,10 +52,10 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 You have successfully created a new team with the Teams Desktop client, by using an existing Office 365 Group. Leave the Teams client open and continue with the next task.
 
+
 #### Task 2 - Create a new team by using PowerShell
 
 In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell. 
-
  
 1. Open an elevated PowerShell (Admin) window.
 
@@ -120,6 +123,7 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
+
 #### Task 3 - Delete and recover teams 
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
@@ -137,6 +141,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 6. Check the Teams Desktop client for the recovered group.
 
 You have successfully deleted and restored a via the Teams Desktop client and Azure Admin Portal. 
+
 
 #### Task 4 - Create team with dynamic membership
 
@@ -170,6 +175,7 @@ You have successfully converted an Office 365 group from static (assigned) to dy
 
 In this exercise, you will test the guest access features in Office 365. To do so, you will configure guest access in Azure AD, add a new external guest user and revoke the guest access by using access reviews.
 
+
 #### Task 1 - Configure guest access in Teams
 
 In this task, you will configure the guest user access for Microsoft Teams in your tenant. 
@@ -179,6 +185,7 @@ In this task, you will configure the guest user access for Microsoft Teams in yo
 3. Close the Teams admin center.
 
 You have now successfully activated guest user access in Teams for your tenant.
+
 
 #### Task 2 - Configure guest access in the Azure AD (optional)
 
@@ -207,6 +214,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 You have successfully changed the external collaboration settings, so guests can also invite new guests. Then you have added a personal outlook.com account as a guest to your tenant and as a member to the team “IT-Department”.
 
+
 #### Task 3 - Review access to a resource with access reviews
 
 As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams. 
@@ -231,7 +239,6 @@ As a part of your system administrator role, you need to review access to resour
 5. Review the access reviews mail and deny access for the guest user in the **IT-Department** team.
 
 6. Close the Outlook on the web window.
-
 
 You have successfully created a new access review and blocked a guest user in your tenant. This is the end of lab 4. You can close all browser windows and proceed to the next lab.
 

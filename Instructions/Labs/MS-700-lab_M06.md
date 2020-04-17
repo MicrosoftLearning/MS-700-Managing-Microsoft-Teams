@@ -35,14 +35,17 @@ After you complete this lab, you will be able to:
 - **Estimated Time:** 90 minutes.
  
 ## Instructions
+
+
+
 ### Exercise 1: Manage Live event and meetings experiences
 
 Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. First, Teams admin needs to configure meeting policies and schedule initial meetings. Furthermore, business managers want to test the Live meetings option in Microsoft Teams in order to broadcast audio and video to large audiences.
 
+
 #### Task 1 - Edit the default meeting policy and restrict all recording features for meetings.
 
 As part of your pilot project for setting up the events and meetings in your organization, you need to fulfil the requirement for all meetings in teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
-
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -98,6 +101,8 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 You have successfully created a custom Live event policy and assigned it to a user.
 
+
+
 ### Exercise 2: Manage phone system for Microsoft Teams
 
 Contoso organization is using legacy PBX system. With introduction of Microsoft Teams, Contoso will migrate their legacy telephony system to Microsoft Phone System. Teams admins are responsible for evaluating and testing Microsoft Teams voice functionalities.
@@ -124,6 +129,7 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 	- Address: **1 Microsoft Way, Redmond, WA 98052**
 
 You have successfully created an emergency address that can be used for phone numbers.
+
 
 #### Task 2 - Create a new calling policy for management users with voicemail activated. 
 
@@ -159,7 +165,6 @@ Contoso Ltd. has deployed Microsoft Teams voice functionalities throughout the o
 - Redirecting calls to call agents in mail-enabled distribution lists and security groups.
 
 As Teams admin, you are responsible to create the call queue and configure different parameters, such as such as queue maximum size, timeout, and call handling options.
-
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -250,7 +255,7 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 7. On the **Set business hours** page, configure the following:
 
-	- Select **Clear all hours.**
+	- Select **Clear all hours**
 
 	- Configure working hours **Monday** to **Friday** from **08:00 AM** to **04:00 PM**
 
@@ -270,15 +275,16 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 You have successfully created a resource account for the auto attendant and afterwards an auto attendant configuration.
 
+
+
 ### Exercise 3: Test the configured meeting settings
 
 In this exercise you will test the configuration from exercise 1, which required some time till the policies came into effect for the users.
 
+
 #### Task 1 – Test the meeting policy for restricting recording
 
 In this task you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
-
- 
 
 1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
 
@@ -293,6 +299,7 @@ In this task you need to sign in to the second client and create a meeting with 
 6. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (**…**) **(More actions)**.
 
 7. Note that **Start recording** option is visible but is dimmed, not available to be selected.
+
 
 #### Task 2 - Test meeting settings for restricting anonymous users
 
@@ -316,7 +323,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 9. On the **Pick an account** page, select **JoniS@yourtenant.onmicrosoft.com** and sign in.
 
-10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join.** Note that you can join the meeting as user **Joni Sherman**.
+10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join**. Note that you can join the meeting as user **Joni Sherman**.
 
 11. Open a window in your browser and sign in to your email hosting provider, for example Outlook.com. Read the meeting invite email and select **Join Microsoft Teams** meeting link.
 

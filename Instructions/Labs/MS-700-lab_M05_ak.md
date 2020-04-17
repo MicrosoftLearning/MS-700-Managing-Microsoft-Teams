@@ -27,6 +27,9 @@ After you complete this lab, you will be able to:
 - **Estimated Time:** 90 minutes.
 
 ## Instructions
+
+
+
 ### Exercise 1: Configure channel and message policies
 
 In this exercise you will configure policies to manage the creation of new private channels and the available tools for users in chat.
@@ -109,6 +112,7 @@ In this task you learned how to create a private channel in the Microsoft Teams 
 
 ### Exercise 2: Manage app settings for team
 
+
 #### Task 1 - Disable third party storage providers
 
 In the past, users stored data at various location, including third-party storage providers. Recently, the company deployed OneDrive for Business for all users and would like to guide the users to use OneDrive for Business as the primary data storage location. As the system admin, you are asked to deactivate all third-party storage providers in Microsoft Teams to align with the direction. 
@@ -121,7 +125,7 @@ In the past, users stored data at various location, including third-party storag
 
 3. When you see the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
 
-4. On the left-side navigation pane, select the **Org-wide settings** to open the menu, then select **Teams settings** below**.** 
+4. On the left-side navigation pane, select the **Org-wide settings** to open the menu, then select **Teams settings** below.
 
 5. In the Teams settings overview go to the **Files** section. Configure the following file sharing and cloud file storage options.
 
@@ -145,7 +149,7 @@ In the pilot project, the company decided that Microsoft Planner is the default 
 
 3. When you see the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
 
-4. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Setup policies.** 
+4. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Setup policies**. 
 
 5. In the **App setup policies** window select **Global (Org-wide default)** name to open the org-wide app policy.
 
@@ -157,7 +161,7 @@ In the pilot project, the company decided that Microsoft Planner is the default 
 
 9. In the **App setup policies** window select **Global (Org-wide default)** make sure there is a selected checkmark in the front of the name.
 
-10. Then select **Manage users** in the top navigation pane to open the **Mange users** dialog. Enter the name of **Lynne Robbins** and mouseover the presented name and select **Add**. Then select **Apply.**
+10. Then select **Manage users** in the top navigation pane to open the **Mange users** dialog. Enter the name of **Lynne Robbins** and mouseover the presented name and select **Add**. Then select **Apply**.
 
 11. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -180,7 +184,7 @@ In this task you will edit the default app permission policy and block the Googl
 
 3. On the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
 
-4. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Permission policies.** 
+4. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Permission policies**. 
 
 5. In the **App permission policies** window select **+ Add** to create a new policy.
 
@@ -188,7 +192,7 @@ In this task you will edit the default app permission policy and block the Googl
 
 7. Select **Block apps** below the Notification **Add apps that you want to block** to open the right-side menu.
 
-8. In the Add third party apps dialog, type in Google Analytics, mouseover the presented name and select **Add**. After this select **Block** to return to the **App permission policies** window. Select **Save.**
+8. In the Add third party apps dialog, type in Google Analytics, mouseover the presented name and select **Add**. After this select **Block** to return to the **App permission policies** window. Select **Save**.
 
 9. In the App permission policies overview, select the checkmark left to **Block Google Analytics**. Then select **Manage users** in the top navigation pane.
 
@@ -255,6 +259,8 @@ In this task, you will add a custom line of business app required for your compa
 
 You have successfully added a custom app to your tenant with the account of Joni Sherman, who is a Teams admin in your tenant. Afterwards, you have successfully tested the app availability with a regular user.
 
+
+
 ### Exercise 3: Test configured policy settings
 
 In this exercise, you will test the configured policy settings on a client with the affected user Lynne Robbins and compare the settings to the available client settings of Joni Sherman.
@@ -280,7 +286,7 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 8. **In the Contacts tab,** select **Joni Sherman. If the giphy, memes and stickers icons are missing below the conversation-bar, the messaging policy** takes effect.
 
-9. In the left-hand navigation pane, select **Teams.**
+9. In the left-hand navigation pane, select **Teams**.
 
 10. If you can see and select the **Confidential sales** channel of the **Sales** team and if you are able to write a comment, and confirm that you have access to the private channel.
 

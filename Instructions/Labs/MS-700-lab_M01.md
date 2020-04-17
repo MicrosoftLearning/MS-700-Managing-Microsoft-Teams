@@ -97,7 +97,8 @@ Throughout the lab exercises for this course, if you navigate to the Microsoft 3
 ‎  
 ‎**IMPORTANT:** The instructions that are provided in the lab exercises for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
 
- 
+
+
 ### Exercise 1: Prepare team roles and licenses
 
 In the first exercise you will assign required administrative roles to users, check license assignments for the Teams license and explore the Microsoft Teams admin center. To perform the tasks, you need the default tenant global admin and the account of Joni Sherman (JoniS@YourTenant.onmicrosoft.com).
@@ -115,7 +116,6 @@ In this task you will use the default global admin to login to the Microsoft 365
 3. Assign the role of the **Teams communication support engineer** to **Allan Deyoung**.
 
 4. Leave the client open at the Microsoft 365 admin center.
-
  
 You have now successfully assigned the Teams admin role to Joni Sherman and the Teams communications support engineer to Allan Deyoung. Proceed to the next task.
  
@@ -132,14 +132,12 @@ In this task, you will check the license assignment of all users participating i
 
 4. Close the Microsoft 365 admin center.
 
-
 You have successfully validated, that all users participating in the pilot own Teams licenses and they are ready to start working with Teams. You have also changed the location of Alex Wilber to Canada, as a preparation for a later task. Continue with the next task.
+
 
 #### Task 3 - Explore Teams Admin center  
 
 You need to access and review the available settings for administering Teams in the Teams admin center. As an administrator for teams, it's important to get to understand the different settings and policies available in the Microsoft Teams Admin Center. You will login with Joni Sherman’s account for this task, that you assigned the Teams Service Administrator role in the first task.
-
- 
 
 1. Sign in to the Teams admin center [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) using JoniS@YourTenant.onmicrosoft.com.
 
@@ -149,9 +147,9 @@ You need to access and review the available settings for administering Teams in 
 
 4. Close the Teams admin center.
 
-
 You have successfully explored several available menus from the Teams admin center, for managing teams and configuring policies in your tenant. You have finished the first exercise and you can continue to the next one.
  
+
 
 ### Exercise 2: Explore PowerShell cmdlets for teams
 
@@ -161,7 +159,6 @@ In this exercise you will install the Teams and Skype for Business Online PowerS
 #### Task 1 - Install Teams PowerShell module
 
 Before you can connect to Teams from your tenant and perform any actions, you need to install the Teams PowerShell module. You can install the Teams PowerShell module from the available repositories preconfigured in your Windows 10 operating system and don’t need to download any executables via the browser.
-
  
 1. Open an elevated PowerShell (Admin) window.
 
@@ -178,7 +175,6 @@ Before you can connect to Teams from your tenant and perform any actions, you ne
    ```
 
 4. Close the elevated PowerShell (Admin) window.
-
  
 You have now successfully installed the latest available Microsoft Teams PowerShell module from the PSGallery repository. Continue with the next task.
 
@@ -186,7 +182,6 @@ You have now successfully installed the latest available Microsoft Teams PowerSh
 #### Task 2 - Explore Teams PowerShell cmdlets  
 
 In this task, you will connect with the Teams PowerShell module to your tenant and explore the available cmdlets and functions to manage your tenant.
-
 
 1. Open a regular PowerShell window.
 
@@ -216,7 +211,6 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
 
 6. Close the PowerShell window.
 
- 
 When you are finished with exploring the Microsoft Teams PowerShell cmdlets, close the PowerShell window and continue to the next task.
 
  
@@ -281,9 +275,12 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 
 You have now successfully connected to your Teams tenant with the Skype for Business Online PowerShell module. Most settings can also be configured via the Microsoft Teams Admin center. However, working as an administrator also requires the automation of such processes. This can be done with the help of scripts to facilitate automation. Continue to the next exercise.
 
+
+
 ### Exercise 3: Create groups and teams
 
 In this exercise you will create some resources required in later tasks. These include an Office 365 group creating from Microsoft 365 admin center and two teams creating from Desktop client and web client. 
+
 
 #### Task 1 - Create Office 365 Groups  
 
@@ -309,6 +306,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 The new Office 365 Group with the names “IT-Department” was successfully created. Close the browser window and continue to the next task.
 
+
 #### Task 2 - Create a new team by using the desktop client 
 
 To test the self-service capabilities of Teams, in this task, Megan Bowen will sign in to the Teams Desktop client, create a new team with the name “Teams Rollout” and add all members participating in the Teams evaluation project.
@@ -331,11 +329,10 @@ To test the self-service capabilities of Teams, in this task, Megan Bowen will s
  
 You have successfully created a new team with the Teams Desktop client, added the project team members and you have made Joni Sherman a second owner of the team. Close the Teams client and continue with the next task.
 
+
 #### Task 3 - Create a new team by using the web client
 
 In this task, Lynne Robbins will continue testing the self-service capabilities of Teams by using the Teams web client to create another team with the name “Sales”, she will also add Megan Bowen as a member.
-
- 
 
 1. Sign in to the Teams web client ([**https://teams.microsoft.com**](https://teams.microsoft.com/)) using LynneR@YourTenant.onmicrosoft.com.
 
@@ -348,8 +345,6 @@ In this task, Lynne Robbins will continue testing the self-service capabilities 
 	- Members: **Megan Bowen**
 
 3. Close the Teams web client.
-
- 
 
 You have successfully created a new team with the Teams web client. This is the end of lab 1. You can close all browser windows and proceed to the next lab.
 
