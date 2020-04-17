@@ -58,7 +58,7 @@ The labs in this course will use two virtual machines:
 
 **Important:** A local administrator account has been created on the client VMs. These will be the accounts that you use to sign in to each VM. All MS700 lab exercises will use the admin account for sign-in. 
 
-Since the MS700 lab scenario involves a cloud-only deployment, you will not be signing in into an on-premises domain, since no such domain exists. Following your sign-in, the desktop will indicate that you are signed in as either the local user **CLIENT01\Admin** or **CLIENT02\admin**, depending on which machine you are on.
+Since the MS700 lab scenario involves a cloud-only deployment, you will not be signing in into an on-premises domain, since no such domain exists. Following your sign-in, the desktop will indicate that you are signed in as either the local user **CLIENT01\\Admin** or **CLIENT02\\admin**, depending on which machine you are on.
 
 
 #### **2. Review installed applications**
@@ -92,8 +92,11 @@ Throughout the lab exercises for this course, if you navigate to the Microsoft 3
 ‎  
 ‎**IMPORTANT:** The instructions that are provided in the lab exercises for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
 
+
+
 ### Exercise 1: Prepare team roles and licenses
-In the first exercise you will assign required administrative roles to users, check license assignments for the Teams license and then explore the Microsoft Teams admin center. To perform these tasks, you will use default tenant global admin and the Joni Sherman ([JoniS@YourTenant.onmicrosoft.com](mailto:JoniS@m365xzzzzzz.onmicrosoft.com)) account.
+In the first exercise you will assign required administrative roles to users, check license assignments for the Teams license and then explore the Microsoft Teams admin center. To perform these tasks, you will use default tenant global admin and the Joni Sherman (JoniS@YourTenant.onmicrosoft.com) account.
+
 
 #### **Task 1 - Assign a Teams Admin Role to a user**  
 In this task you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in context of Joni Sherman’s account.
@@ -169,6 +172,7 @@ In this task, you will check the license assignment of all users participating i
 
 You have successfully validated, that all users participating in the pilot own Teams licenses and they are ready to start working with Teams. You have also changed the location of Alex Wilber to Canada, as a preparation for a later task. Continue with the next task.
 
+
 #### **Task 3 - Explore Teams Admin center**  
 
 You need to test access and review the available settings for administering Teams in the Teams admin center. As an administrator for teams, it's important to get to understand the different settings and policies available in the Microsoft Teams Admin Center. You will sign in with Joni Sherman’s account for this task, that you assigned the Teams Service Administrator role in the first task.
@@ -198,10 +202,13 @@ You need to test access and review the available settings for administering Team
 
 You have successfully explored several available menus from the Teams admin center, for managing teams and configuring policies in your tenant. You have finished the first exercise and you can continue with the next one.
 
+
+
 ### Exercise 2: Explore PowerShell cmdlets for teams
 
 In this exercise you will install the Teams and Skype for Business Online PowerShell modules, required to manage teams, policy packages, telephony and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center also in the PowerShell with the two mentioned modules, you can script for automation and even access several settings not available in the GUI.
  
+
 #### **Task 1 - Install Teams PowerShell module**
 Before you can connect to Teams from your tenant and perform any actions, you need to install the Teams PowerShell module. You can install the Teams PowerShell module from the available repositories preconfigured in your Windows 10 operating system and don’t need to download any executables via the browser.
 
@@ -234,6 +241,7 @@ Before you can connect to Teams from your tenant and perform any actions, you ne
 9. Wait till the installation has completed and returned to the command line. Close the elevated PowerShell window and continue to the next task.
 
 You have now successfully installed the latest available Microsoft Teams PowerShell module from the PSGallery repository. Continue with the next task.
+
 
 #### **Task 2 - Explore Teams PowerShell cmdlets**  
 
@@ -330,13 +338,13 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 
 8. When all cmdlets and functions have been loaded, a list will be displayed. Write down the characters in **Name** column (for example, **tmp_f1kjmla4.h1v**) or copy them to your clipboard. You will need this information in the next step.
 
-9. To display all available cmdlets from the PowerShell module, enter the following cmdlet replacing <Name> with the text from the previous step and press **Enter**: 
+9. To display all available cmdlets from the PowerShell module, enter the following cmdlet replacing **\<Name\>** with the text from the previous step and press **Enter**: 
 
 	```powershell
 	Get-Command -Module <Name>
 	```
 
-	For example: **Get-Command -Module tmp_f1kjmla4.h1v**
+	For example: ```Get-Command -Module tmp_f1kjmla4.h1v```
 
 10. Several cmdlets available to configure your Teams settings and policies are displayed. Most cmdlets have names that imply their function. Use the Get-Help cmdlet to explore the available cmdlets. For example, to get more information about existing messaging policies in your tenant, enter the following cmdlet and press **Enter**.
 
@@ -355,9 +363,11 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 You have now successfully connected to your Teams tenant with the Skype for Business Online PowerShell module. Most settings can also be configured via the Microsoft Teams Admin center. However, working as an administrator also requires the automation of such processes. This can be done with the help of scripts to facilitate automation. Continue to the next exercise.
 
 
+
 ### Exercise 3: Create groups and teams
 
 In this exercise you will create some resources required in later tasks. These include an Office 365 group creating from Microsoft 365 admin center and two teams creating from Desktop client and web client. 
+
 
 #### **Task 1 - Create Office 365 Groups**  
 
@@ -365,9 +375,9 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [https://admin.microsoft.com](https://admin.microsoft.com/) to access the **Microsoft 365 admin center**. 
+2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.microsoft.com**](https://admin.microsoft.com/) to access the **Microsoft 365 admin center**. 
 
-3. When the **Pick an account** window appears, sign in with [admin@YourTenant.onmicrosoft.com](mailto:admin@m365xzzzzzz.onmicrosoft.com) using the O365 Credentials provided to you.
+3. When the **Pick an account** window appears, sign in with **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. In the Microsoft 365 admin center, select **Groups** from the left-side pane and select **Groups** below.
 
@@ -382,23 +392,26 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 8. Select **Next**
 
-9. As group email address type in IT-Department@YourTenant.onmicrosoft.com, set the privacy to **Private – Only members can see group content** and select **Next.**
+9. In the Owners field type in the Name of **Joni Sherman** and select her from the **Users** list and select **Next**.
 
-10. In the Owners field type in the Name of **Joni Sherman** and select her from the **Users** list and select **Next**. Then select **Create group.**
+10. As group email address type in IT-Department@YourTenant.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, verify that **Create a team for this group** is selected, and ten select **Next**. 
 
-11. When the **New group created** information appears, select **Close**.
+11. On the **Review** page, verify the settings and then select **Create group**.
 
-12. Wait a moment and select **Refresh** until the group is visible.
+12. When the **New group created** information appears, select **Close**.
 
-13. Select the **IT-Department** group to open the right-side pane.
+13. Wait a moment and select **Refresh** until the group is visible.
 
-14. On the **Members** tab, select **View all and manage members**. 
+14. Select the **IT-Department** group to open the right-side pane.
 
-15. In the new window, select **+ Add members** from the top and select the checkbox before the following users: **Alex Wilber, Allan Deyoung, Lynne Robbins** and **Megan Bowen**.
+15. On the **Members** tab, select **View all and manage members**. 
 
-16. Select **Save,** then **Close** two times and close the IT-Department pane with the **X**.
+16. In the new window, select **+ Add members** from the top and select the checkbox before the following users: **Alex Wilber**, **Allan Deyoung**, **Lynne Robbins**, and **Megan Bowen**.
 
-The new Office 365 Group with the names “IT-Department” was successfully created. Close the browser window and continue to the next task.
+17. Select **Save,** then **Close** two times and close the IT-Department pane with the **X**.
+
+The new Office 365 Group and Team with the name “IT-Department” was successfully created. Close the browser window and continue to the next task.
+
 
 #### **Task 2 - Create a new team by using the desktop client** 
 
@@ -421,11 +434,12 @@ To test the self-service capabilities of Teams, in this task, Megan Bowen will s
 
 8. Select **Add** to add them to the team.
 
-9. After adding the members to the Teams Rollout team, verify that all users have been added correctly and change the status of **Joni Sherman** from **Member** to **Owner** with the dropdown menu.
+9. Wait for all four users to be listed on the **Add members to Teams Rollout** dialog as Members, and then change the status of Joni Sherman from **Member** to **Owner** with the dropdown menu. 
 
-10. Select **Close.**
+10. Select **Close**.
 
 You have successfully created a new team with the Teams Desktop client, added the project team members and you have made Joni Sherman a second owner of the team. Close the Teams client and continue with the next task.
+
 
 #### **Task 3 - Create a new team by using the web client**
 
@@ -434,9 +448,9 @@ In this task, Lynne Robbins will continue testing the self-service capabilities 
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open **Microsoft Edge** from the task bar, maximize the window and navigate to [https://teams.microsoft.com](https://teams.microsoft.com/) to access the **Microsoft Teams web client**. 
+2. Open **Microsoft Edge** from the task bar, maximize the window and navigate to [**https://teams.microsoft.com**](https://teams.microsoft.com/) to access the **Microsoft Teams web client**. 
 
-3. When the Sign in window is displayed, sign in as LynneR@YourTenant.onmicrosoft.com using the O365 credentials provided to you. 
+3. When the Sign in window is displayed, sign in as **LynneR@YourTenant.onmicrosoft.com** using the O365 credentials provided to you. 
 
 4. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **Yes.**
 
@@ -446,21 +460,23 @@ In this task, Lynne Robbins will continue testing the self-service capabilities 
 
 7. Select **Teams** from the left-side pane if you are not already in the **Teams** overview.
 
-8. Select **Join or create a team** from the lower end of the teams list.
+8. Select **Join or create a team** from the lower end of the Teams list.
 
 9. Select **Create team** from the middle of the window.
 
 10. In the **Create your team** window, select **Build a team from scratch**, then select **Private**. Insert the team name **Sales** and select **Create**.
 
-11. In the Add members to Sales dialog, enter **Megan Bowen** to add her as a team member.
+11. In the **Add members to Sales** dialog, enter **Megan Bowen** to add her as a team member.
 
 12. Select **Add** to add her to the team.
 
-13. After adding the members to the Sales team, verify that Megan Bowen has been added correctly.
+13. After adding the members to the Sales team, verify that Megan Bowen has been added correctly as a **Member**.
 
 14. Select **Close.**
 
 15. The newly created team is displayed in the list of your teams.
+
+16. Close the Microsoft Edge window.
 
 
 You have successfully created a new team with the Teams web client. This is the end of lab 1. You can close all browser windows and proceed to the next lab.
