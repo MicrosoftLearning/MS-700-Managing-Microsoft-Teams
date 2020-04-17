@@ -409,7 +409,7 @@ To test the self-service capabilities of Teams, in this task, Megan Bowen will s
 
 2. Select the **Teams** icon on the task bar to start the Teams Desktop client.
 
-3. When prompted to **Enter your work, school or Microsoft account**. Sign in as MeganB@YourTenant.onmicrosoft.com using the O365 Credentials provided to you.
+3. When prompted to **Enter your work, school or Microsoft account**. Sign in as **MeganB@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. The Microsoft Teams Desktop client will start. If a **Bring your team together** window appears, or **Get the Teams mobile app**, or another message, close them with the **X** or **Try it now**.
 
@@ -417,7 +417,7 @@ To test the self-service capabilities of Teams, in this task, Megan Bowen will s
 
 6. In the **Create your team** window, select **Build a team from scratch**, then select **Public**. Enter the team name **Teams Rollout** and select **Create**.
 
-7. Enter the names of the desired team members: **Alex Wilber**, **Allan Deyoung, Joni Sherman** and **Lynne Robbins**.
+7. Enter the names of the desired team members: **Alex Wilber**, **Allan Deyoung**, **Joni Sherman**, and **Lynne Robbins**.
 
 8. Select **Add** to add them to the team.
 

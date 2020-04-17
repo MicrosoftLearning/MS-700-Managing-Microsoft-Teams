@@ -51,7 +51,7 @@ You have successfully created a new team with the Teams Desktop client, by using
 
 #### Task 2 - Create a new team by using PowerShell
 
-In this task you will create via the Teams PowerShell a new team based on the Office 365 group **"CA-Office"** which was created in Module 01. You will create the public channels Support and Recruiting. Additionally, you will create the private channel Administration via Teams PowerShell. 
+In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell. 
 
  
 1. Open an elevated PowerShell (Admin) window.
