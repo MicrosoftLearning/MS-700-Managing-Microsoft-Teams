@@ -91,7 +91,7 @@ For example, if your Tenant Email is **admin@contosolab.onmicrosoft.com**, the u
 
 - **RECOMMENDATION:** You should write down your unique tenant suffix, mentioned as YOURTENANT in this lab and provided by your training provider. After a while, you will have this name or number memorized as you move through the labs in this course.
  
-- **Use the new Microsoft 365 admin center**
+#### 4. Use the new Microsoft 365 admin center
 
 Throughout the lab exercises for this course, if you navigate to the Microsoft 365 admin center, make sure the slider in the upper right corner is set to **The new admin center**. If you can read **Try the new admin center**, select the slider and activate it.   
 ‎  
