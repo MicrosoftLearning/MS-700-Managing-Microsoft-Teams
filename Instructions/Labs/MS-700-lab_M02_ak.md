@@ -239,7 +239,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
 14. On the Pick an account window, select **MeganB@YourTenant.OnMicrosoft.com** and sign in with her credentials.
 
-15. Select **Join or create a team** from the lower end of the teams overview and you won’t see the option to **Create team**, resp. when you try to create a team, you will receive an error message.
+15. Select **Join or create a team** from the lower end of the teams overview and you won’t see the option to **Create team**.
 
 16. Close all open windows.
 
@@ -271,16 +271,16 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 11. On the **Group - Naming policy** page, select **Save**. After this step **BlockedWords.csv** file that contains blocked words be uploaded to the naming policy.
 
-12. On the **Groups - Naming policy** page, select **Group naming policy** section from the top pane.
+12. On the **Groups - Naming policy** page, select the **Group naming policy** tab.
 
-13. Under the **Group naming policy** section, select the checkbox next to **Add prefix** and from the drop-down menu, choose string, and in the empty box to the right, type **Group**.
+13. Under the **Group naming policy** section, select the checkbox next to **Add prefix** and from the drop-down menu, choose string, and in the empty box to the right, type: **Group**.
 
-14. Under the **Group naming policy** section, select the checkbox next to **Add suffix** and from the drop-down list, choose attribute, and from the drop-down list choose **CountryOrRegion**.
+14. Under the **Group naming policy** section, select the checkbox next to **Add suffix** and from the drop-down list, choose **Attribute**, and from the drop-down list choose **CountryOrRegion**.
 
 15. On the **Groups - Naming policy** page, under **Current policy** section, preview the group name format listed as **Group&lt;Group name&gt;&lt;CountryOrRegion&gt;**.
 ![GroupNaming Policy](media/M02-GroupNamingPolicy.png)
 
-16. Since you tested naming policy for evaluation, select on the **Groups - Naming policy** page, select **Discard** and confirm with **Yes**.
+16. Since you are only testing the naming policy for evaluation, select **Discard** and confirm with **Yes**.
 
 In this task, you have configured a naming policy that will block specific words to be used in an Office 365 Group name, as well as you have evaluated the options for prefix and suffix of the Office 365 Group name.
 
@@ -338,7 +338,7 @@ You can revert the Azure AD settings changes to defaults with following steps.
 
 11. Close the PowerShell window.
 
-You have successfully reset all Azure AD tenant settings in your test tenant. This is the end of exercise 1.
+You have successfully reset all Azure AD tenant settings in your test tenant. 
 
 
 
@@ -386,13 +386,24 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 4. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, select **information governance**, and then choose **Retention**.
 
-5. On the **Retention** page, select **Create**, and then on the **Name your policy page, i**n the name box, type **Sales retention policy**. In the **Description** box**,** type **Retention policy for Sales department that will retain data for 7 years**, and then select **Next**.
+5. On the **Retention** page, select **Create**, and then on the **Name your policy** page, in the **Name** box, type: **Sales retention policy**. In the **Description** box, type: **Retention policy for Sales department that will retain data for 7 years.**, and then select **Next**.
 
-6. On the **Decide if you want to retain content, delete it, or both** pabe, select **Yes, I want to retain it, For this long…, 7 years**, and then choose **Retain the content based on when it was modified**. Under **Do you want us to delete it after this time?** select **No**, and then select, **Next**. 
+6. On the **Decide if you want to retain content, delete it, or both** page, ensure that following settings are configured and then select **Next**:
 
-7. On the **Chose locations** page, scroll down and select **Teams channel messages**, then click **Choose teams**. 
+   - **Yes, I want to retain it**
+      - **For this long…**
+	  - **7**
+	  - **years**
 
-8. On the **Edit locations** page, select **Choose teams**, **and then** select the Team **Sales**, select **Choose** and at the end select **Done**.
+   - **Retain the content based on**
+      - **when it was last modified**
+
+   - **Do you want us to delete it after this time?**
+      - **No** 
+
+7. On the **Choose locations** page, scroll down and select **Teams channel messages**, then click **Choose teams**. 
+
+8. On the **Edit locations** page, select **Choose teams**, and then select the Team **Sales**, select **Choose** and at the end, select **Done**.
 
 9. On the **Choose locations page,** select **Next** and on **Review your settings** page, select **Create this policy**.
 
@@ -410,40 +421,70 @@ According to your organization compliance requirements, you need to implement ba
 
 3. You are still signed in as **admin@YourTenant.onmicrosoft.com**. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
 
-4. In **Microsoft 365 Compliance Center**, on the left navigation pane, select **Show all** and and select **Data loss prevention**.
+4. In **Microsoft 365 compliance center**, on the left navigation pane, select **Show all** and then select **Data loss prevention**.
 
-5. On the Data loss prevention page, select **+ Create a policy**.
+5. On the Data loss prevention page, select **+ Create policy**.
 
-6. On the **New DLP policy** page, select the searchbox and enter **GDPR**. Select the **General Data Protection Regulation (GDPR)** and select **Next**.
+6. On the **New DLP policy** page, select the searchbox and type: **GDPR**, select **General Data Protection Regulation (GDPR)**, and then select **Next**.
 
-7. On the **Name your policy** page, change the name to **GDPR DLP Policy,** in the Description box type **Data loss prevention policy for GDPR regulations in Teams** and then select **Next**.
+7. On the **Name your policy** page, type the following values, and then select **Next**:
 
-8. On the **Choose locations** page, select **Let me choose specific locations** and select **Next**.
+   - Name: **GDPR DLP Policy**
+   
+   - Description: **Data loss prevention policy for GDPR regulations in Teams.**
 
-9. Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on. Select **Next**.
+8. On the **Choose locations** page, select **Let me choose specific locations**, and then select **Next**.
 
-10. On the **Customize the type of content you want to protect** page, ensure that default option is selected **Find content that contains,** select the checkbox next to **Detect when this content is shared,** and from the drop-down menu, choose **with people outside my organization**. At the end, select **Next**.
+9. On the **Choose locations** page, change the "switches" to the following settings, and then select **Next**:
 
-11. On the **What do you want to do if we detect sensitive info?** page, ensure that following settings are configured:
+   - Exchange email: **Off**
 
-	- A checkbox is selected for **Send incident reports in email**.
+   - SharePoint sites: **Off**
 
-	- A checkbox is selected for **Detect when content that's being shared contains**. In the **instances of the same sensitive info type** box, type **1**.
+   - OneDrive accounts: **Off**
 
-	- A checkbox is selected next to **Restrict access or encrypt the content** and **Block people from sharing and restrict access to shared content** radio button is selected.
+   - Teams chat and channel messages: **On** 
 
-12. On the **Customize access and override permissions** page, ensure that following settings are configured:
+10. On the **Customize the type of content you want to protect** page, ensure that the default options are selected, and then select **Next**:
 
-	- Select **Only people outside your organization**.
+   - The radio button is selected for: **Find content that contains:**
+   
+      - A checkbox is selected for: **Detect when this content is shared:**
+   
+      - The drop-down menu shows: **with people outside my organization**
 
-	- Turn **On** the setting for **Let people who see the tip override the policy**.
+11. On the **What do you want to do if we detect sensitive info?** page, ensure that the following settings are configured, and then select **Next**:
 
-	- Select the check box next to **Require a business justification to override**, and then select **Next**.
+	- A checkbox is selected for: **Send incident reports in email**
 
-13. On the **Do you want to turn on the policy or test things out first?** page, select **I'd like to test it out first,** then select check box next to **Show policy tips while in test mode,** and at the end select **Next**.
+	- A checkbox is selected for: **Detect when content that's being shared contains**
+	
+	   - In the **At least __ instances of the same sensitive info type.** box, type: **1**
+	
+	- A checkbox is selected for: **Show policy tips to users and send them an email notification.**
+
+	- Select the checkbox for: **Restrict access or encrypt the content**
+	
+	   - The radio button is selected for: **Block people from sharing and restrict access to shared content**
+
+12. On the **Customize access and override permissions** page, ensure that following settings are configured, and then select **Next**:
+
+	- The radio button is selected for: **Only people outside your organization**
+
+	- The "switch" is **On** for: **Let people who see the tip override the policy**
+
+	- Select the check box for: **Require a business justification to override**
+	
+	- A checkbox is selected for: **Override the rule automatically if they report it as a false positive**
+
+13. On the **Do you want to turn on the policy or test things out first?** page, ensure that following settings are configured, and then select **Next**:
+
+	- The radio button is selected for: **I'd like to test it out first**
+	
+	   - Select check box for: **Show policy tips while in test mode**
 
 14. On the Review your settings page, select **Create**.
 
-15. Leave the browser open for the next task.
+15. Close all windows.
 
 After completing this task, you have created a DLP Policy from the template "General Data Protection Regulation (GDPR)" that detects if GDPR sensitive content is shared with people outside of your organization.

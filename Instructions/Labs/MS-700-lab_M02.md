@@ -215,7 +215,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
 12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@YourTenant.OnMicrosoft.com**.
 
-13. Select **Join or create a team** and you won’t see the option to **Create team**, resp. when you try to create a team, you will receive an error message.
+13. Select **Join or create a team** and you won’t see the option to **Create team**.
 
 14. Close all open windows.
 
@@ -236,16 +236,16 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 5. Download a blocked words sample file. Save the file and then open the file in **Notepad**.
 
-6. Type **CEO,Payroll,HR** into the Notepad window and save the file in place. Afterwards, close the Notepad file.
+6. Type **CEO,Payroll,HR** , inside the quotes in the Notepad window and save the file in place. Afterwards, close the Notepad file.
 
 7. Back to the **Groups - Naming policy** page, upload the **BlockedWords.csv** file you just created.
 
-8. On the **Groups - Naming policy** page, configure group name prefix to be **“Group**“ string, and group name suffix to be **“CountryOrRegion** attribute.
+8. On the **Groups - Naming policy** page, configure group name prefix to be the string: **Group**, and the group name suffix to be the **CountryOrRegion** attribute.
 
 9. On the **Groups - Naming policy** page, under **Current policy** section, preview the group name format listed as **Group&lt;Group name&gt;&lt;CountryOrRegion&gt;**.
 ![GroupNaming Policy](media/M02-GroupNamingPolicy.png)
 
-10. Since you tested naming policy for evaluation, discard the group naming policy.
+10. Since you are only testing the naming policy for evaluation, **Discard** the group naming policy.
 
 In this task, you have configured a naming policy that will block specific words to be used in an Office 365 Group name, as well as you have evaluated the options for prefix and suffix of the Office 365 Group name.
 
@@ -298,7 +298,7 @@ You can revert the Azure AD settings changes to defaults with following steps.
 	```
 10. Close the PowerShell window.
  
-You have successfully reset all Azure AD tenant settings in your test tenant. This is the end of exercise 1.
+You have successfully reset all Azure AD tenant settings in your test tenant.
 
 
 
@@ -343,12 +343,16 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 4. On the **Retention** page, create a new retention policy with the following configuration:
 
 	- Name your policy: **Sales retention policy**
-	- Description: **Retention policy for Sales department that will retain data for 7 years**
+
+	- Description: **Retention policy for Sales department that will retain data for 7 years.**
+
 	- Decide if you want to retain content, delete it, or both: **Yes, I want to retain it**
-	- For this long: **7 years**, and then choose **Retain the content based on when it was modified**
+
+	- **For this long...**, **7**, **years**, and then choose **Retain the content based on when it was last modified**
+
 	- Do you want us to delete it after this time: **No**
 
-5. On the **Chose locations** page, select **Sales Teams channel messages**.
+5. On the **Choose locations** page, select **Sales Teams channel messages**.
 
 6. Leave the browser open for the next task.
  
@@ -361,17 +365,17 @@ According to your organization compliance requirements, you need to implement ba
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft 365 Compliance center** (https://compliance.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft 365 compliance center** (https://compliance.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
 
-3. In **Microsoft 365 Compliance Center**, on the left navigation pane, select **Data loss prevention**.
+3. In **Microsoft 365 compliance center**, on the left navigation pane, select **Data loss prevention**.
 
-4. On the **Data loss prevention** page, create a new DLP policy with the following configuration:
+4. On the **New DLP policy** page, create a new DLP policy with the following configuration:
 
 	- Template: **General Data Protection Regulation (GDPR)**
 
 	- Name: **GDPR DLP Policy**
 
-	-  Description: **Data loss prevention policy for GDPR regulations in Teams**
+	-  Description: **Data loss prevention policy for GDPR regulations in Teams.**
 
 	-  Let me choose specific locations: Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on
 
@@ -403,6 +407,6 @@ According to your organization compliance requirements, you need to implement ba
 
 		- **Show policy tips while in test mode**
 
-5. Leave the browser open for the next task.
+5. Close all windows.
 
 After completing this task, you have created a DLP Policy from the template "General Data Protection Regulation (GDPR)" that detects if GDPR sensitive content is shared with people outside of your organization.
