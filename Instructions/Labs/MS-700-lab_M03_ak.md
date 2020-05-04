@@ -64,11 +64,11 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 6. On the **Network plan name** page, in the **Network plan name** box, type **Contoso plan**, and in the **Description** box type **Contoso Teams Network plan**, and then select **Apply**.
 
-7. On the Network planner page, select **Personas** tab, and then select **Add persona**.
+7. On the Network planner page, select **Personas** tab, and then select **Add**.
 
-8. On the **Add persona** page, in the **Persona name** box type **New York office**, in the **Description** box type **New York office Teams users**, and under **Permissions** section, turn **On** all buttons, and then select **Apply**.
+8. Select **Add** again, and on the **Add persona** page, in the **Persona name** box type **New York office**, in the **Description** box type **New York office Teams users**, under **Permissions** section, turn **On** all buttons, and then select **Apply**.
 
-9. On the **Add persona** page, in the **Persona name** box type **Los Angeles office**, in the **Description** box type **Los Angeles office Teams users**, and under **Permissions** section, turn **Off PSTN** button, and turn **On** all other buttons, and then select **Apply**.
+9. Select **Add** again, and on the **Add persona** page, in the **Persona name** box type **Los Angeles office**, in the **Description** box type **Los Angeles office Teams users**, under **Permissions** section, turn **Off PSTN** button, and turn **On** all other buttons, and then select **Apply**.
 
 10. Click on the **Networks plans** tab, then select **Contoso plan**, and under **Network sites** tab, select **Add a network site**.
 
