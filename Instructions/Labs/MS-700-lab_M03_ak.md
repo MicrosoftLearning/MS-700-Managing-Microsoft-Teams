@@ -218,8 +218,6 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- **Timezone**: (UTC-5:00) Eastern Time (US and Canada)
 
-	- **Timezone:** Auto
-
 	- **Date format:** MM/DD/YYYY
 
 	- **Time format:** 12 Hours (AM/PM)
