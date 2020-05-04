@@ -82,11 +82,11 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- In the **Network settings** section, in the **Subnet** box type **172.16.0.0**, and in the **Network range** box type **16**.
 
-	- In the **Network settings** section, turn on the **Express Route** button.
+	- In the **Network settings** section, turn **On** the **Express Route** button.
 
 	- In the **Network settings** section, in the **Internet link capacity** box, type **1024**.
 
-	- In the **Network settings** section, in the **PSTN egress** drop-down box, **choose VoIP only**, and then select **Save**.
+	- In the **Network settings** section, in the **PSTN egress** drop-down box, choose **Use VoIP only**, and then select **Save**.
 
 12. On the **Contoso plan** page, under **Network sites** tab, select **Add a network site**.
 

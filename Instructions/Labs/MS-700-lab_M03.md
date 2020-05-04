@@ -79,7 +79,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 		-  **Internet link capacity:** **1024**
 
-		-  **PSTN egress:** **VoIP only**
+		-  **PSTN egress:** **Use VoIP only**
 
 8. In **Contoso plan**, add a **Network site** with following configuration:
 
@@ -103,7 +103,9 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 		-  **Video queue size:** **200**
 
-		- **PSTN egress:** **VoIP only**
+	   - **Internet link capacity** **500**
+
+		- **PSTN egress:** **Use VoIP only**
 
 9. In **Contoso plan**, add a **Network site** with following configuration:
 
@@ -127,7 +129,9 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	   - **Video queue size:** **100**
 
-	   - **PSTN egress:** **VoIP only**
+	   - **Internet link capacity** **400**
+
+	   - **PSTN egress:** **Use VoIP only**
 
 10. Start a report for the **Contoso plan** with a name **Contoso report** and a description **Contoso network estimation report**.
 
