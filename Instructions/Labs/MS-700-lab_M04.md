@@ -203,12 +203,12 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 4. Create a new guest user with the following settings:
 
-	- **Name:** your full name
-	- **Email address:** your outlook.com email address 
-	- **First name:** your First name
-	- **Last name:** your last name
-	- **Personal Message:** Hello Guest, here is the agreed access to our Contoso test organization. Best regards, your organization admin
-	- **Groups**: IT-Department 
+	- **Name:** *your full name*
+	- **Email address:** *your Outlook.com email address*
+	- **First name:** *your First name*
+	- **Last name:** *your last name*
+	- **Personal Message:** Hello Guest, here is the link to access to our Contoso test organization. Best regards, Contoso admin.
+	- **Groups**: IT-Department
 
 5. Sign in to the **Outlook Web Portal** (https://outlook.live.com/owa/) using your personal account.
 

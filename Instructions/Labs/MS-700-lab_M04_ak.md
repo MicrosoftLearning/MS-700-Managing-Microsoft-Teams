@@ -248,9 +248,9 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 16. Select **Overview** in the left-hand navigation pane of the **CA-Office** group window.
 
-17. In the Overview window, locate **Membership processing status** field. Wait and refresh your browser, till the status says **Update complete**. It may take several minutes, till the change is processed. 
+17. In the Overview window, locate **Membership processing status** field. Wait and refresh your browser, until the status says **Update complete**. It may take several minutes for the change to be processed. 
 
-18. Then select **Members** in the left-hand navigation pane and verify in the middle of the page that, **Alex Wilber** is in there, but **Allan Deyoung** has been removed from the group. 
+18. Then select **Members** in the left-hand navigation pane and then select **Refresh**. Verify that **Alex Wilber** is in the list of members, but that **Allan Deyoung** has been removed from the group. 
 
 19. Select Owners from the left-hand navigation pane and verify, that Joni is still the Owner of the group, even if she does not match the dynamic group criteria.
 
@@ -292,7 +292,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** ( admin@_YourTenant_.onmicrosoft.com) and select **Next**.
+4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@_YourTenant_.onmicrosoft.com) and select **Next**.
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -314,19 +314,19 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 14. In the New user window select **Invite user** and enter the following information to the fields:
 
-	- **Name**: your full name
-	- **Email address**: your outlook.com email address 
-	- **First name**: your First name
-	- **Last name**: your last name
-	- **Personal Message**: Hello Guest, Here is the agreed access to our Contoso test organization. Best regards, your organization admin
+	- **Name**: *your full name*
+	- **Email address**: *your Outlook.com email address*
+	- **First name**: *your First name*
+	- **Last name**: *your last name*
+	- **Personal Message**: Hello Guest, Here is the link to access to our Contoso test organization. Best regards, Contoso admin.
 
 15. In the Groups and roles section, select **0 groups selected**. In the Groups window on the right side, select the **IT-Department** group, scroll down and return to the New user window by choosing **Select**.
 
 16. To finish the invitation process, select **Invite** from the lower left side of the window.
 
-17. You can now see a new user on the **Users – All users** page, which **User type** is set to **Guest**.
+17. You can now see a new user on the **Users – All users** page, note that the **User type** is set to **Guest**.
 
-18. Open an additional tab in your browser and go to the **Outlook Web Portal** page by entering the following URL in the address bar: [**https://outlook.live.com/owa/**](https://outlook.live.com/owa/)
+18. Open a **New InPrivate window** in your browser and go to the **Outlook Web Portal** page by entering the following URL in the address bar: [**https://outlook.live.com/owa/**](https://outlook.live.com/owa/)
 
 19. In the top right navigation pane, select **Sign In**. 
 
