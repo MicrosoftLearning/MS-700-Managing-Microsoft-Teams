@@ -14,7 +14,7 @@ In the labs of this course, you will assume the role of Joni Sherman, a System A
 
 After you complete this lab, you will be able to:
 
-- Create a Team from a O365 Group
+- Create a Team from an Office 365 Group
 - Create a Team by using PowerShell
 - Create a Team with dynamic membership
 - Delete and recover Teams
@@ -36,13 +36,13 @@ After you complete this lab, you will be able to:
 
 As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Office 365 Group, created in an earlier task of this lab, and add Teams features to it.
 
-1. Sign in to the Teams Desktop client using **JoniS@yourtenant.onmicrosoft.com**.
+1. Sign in to the Teams Desktop client using **JoniS@_YourTenant_.onmicrosoft.com**.
 
 2. Create a new team with the following settings:
 
 	- Name: **IT-Department**
 
-	- Type: **Create a new team from something you already own**
+	- Type: **Create from... An existing Office 365 group or team**
 
 	- Owners: **Joni Sherman**
 
@@ -76,6 +76,8 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	```powershell
 	Uninstall-Module MicrosoftTeams
 	```
+		
+     >**Note:** If the Uninstall-Module command fails, close the PowerShell window, open a new elevated PowerShell (Admin) window, and then repeat this step.
 
 5. Add the official testing repository:
 
@@ -128,11 +130,11 @@ You have successfully created a team named **CA-Office** with the members Alex W
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
 
-1. Sign in to the Teams Desktop client using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams Desktop client using JoniS@_YourTenant_.onmicrosoft.com.
 
 2. Delete the **IT-Department** team.
 
-3. Sign in to the **Azure Portal** (https://portal.azure.com/) using JoniS@YourTenant.onmicrosoft.com.
+3. Sign in to the **Azure Portal** (https://portal.azure.com/) using JoniS@_YourTenant_.onmicrosoft.com.
 
 4. Navigate to **Azure Active Directory** and **Deleted groups**.
 
@@ -147,7 +149,7 @@ You have successfully deleted and restored a via the Teams Desktop client and Az
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Sign in to the **Azure Portal** (https://portal.azure.com/) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the **Azure Portal** (https://portal.azure.com/) using admin@_YourTenant_.onmicrosoft.com.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -180,7 +182,7 @@ In this exercise, you will test the guest access features in Office 365. To do s
 
 In this task, you will configure the guest user access for Microsoft Teams in your tenant. 
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using admin@_YourTenant_.onmicrosoft.com.
 2. Change the **Org-wide settings** and allow **Allow guest access in Teams**.
 3. Close the Teams admin center.
 
@@ -219,7 +221,7 @@ You have successfully changed the external collaboration settings, so guests can
 
 As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams. 
 
-1. Sign in to the Azure Portal (https://portal.azure.com) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the Azure Portal (https://portal.azure.com) using admin@_YourTenant_.onmicrosoft.com.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -234,7 +236,7 @@ As a part of your system administrator role, you need to review access to resour
 	- **Group:** IT-Department
 	- **Reviewers:** Group owners 
 
-4. Navigate to **Outlook on the web** (https://outlook.office365.com/owa) using JoniS@YourTenant.onmicrosoft.com.
+4. Navigate to **Outlook on the web** (https://outlook.office365.com/owa) using JoniS@_YourTenant_.onmicrosoft.com.
 
 5. Review the access reviews mail and deny access for the guest user in the **IT-Department** team.
 

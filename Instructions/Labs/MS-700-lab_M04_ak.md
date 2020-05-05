@@ -15,7 +15,7 @@ In the labs of this course, you will assume the role of Joni Sherman, a System A
 
 After you complete this lab, you will be able to:
 
-- Create a Team from a O365 Group
+- Create a Team from an Office 365 Group
 - Create a Team by using PowerShell
 - Create a Team with dynamic membership
 - Delete and recover Teams
@@ -43,23 +43,23 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 3. If you are already signed with **Joni** in at the Teams Desktop client, you can continue with step 7. 
 
-4. If you are not signed in already, you will be asked to **Enter your work, school or Microsoft account**., which is the UPN of Joni (JoniS@YourTenant.OnMicrosoft.com). Enter it and select **Sign in**. 
+4. If you are not signed in already, you will be asked to **Enter your work, school or Microsoft account**., which is the UPN of Joni (JoniS@_YourTenant_.OnMicrosoft.com). Enter it and select **Sign in**. 
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
 6. The Microsoft Teams Desktop client will start. If a **Bring your team together** window appears, or **Get the Teams mobile app**, close both windows.
 
-7. In the left-hand navigation pane, select **Teams** and then select **create a team** from the middle of the window.
+7. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create a team** from the middle of the window.
 
 8. In the **Create your team** dialog Select **Create from…**, in the **Create a new team from something you already own** dialog select **Office 365 group**. 
 
-9. In the **Which office 365 group do you want to use** dialog select the group **“IT-Department”**, then select **create**. Wait, till the **Creating the team…** process is done.
+9. In the **Which office 365 group do you want to use?** dialog select the group **“IT-Department”**, then select **Create**. Wait until the **Creating the team…** process is done.
 
 10. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
 
 11. Check, if **Joni Sherman** is still listed below Owners
 
-12. Open the **Members and guests** dropdown menu and check if following members are listed: **Lynne Robbins**, **Megan Bowen**, **Allan Deyoung** and **Alex Wilber**.
+12. Expand the **Members and guests** heading and check that following members are still listed: **Lynne Robbins**, **Megan Bowen**, **Allan Deyoung** and **Alex Wilber**.
 
 13. Select the **General** channel below the **IT-Department** teams.
  
@@ -89,6 +89,8 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Uninstall-Module MicrosoftTeams
 	```
 
+	 >**Note:** If the Uninstall-Module command fails, close the PowerShell window, repeat steps 2 and 3 above to open a new Windows PowerShell (Admin) window, and then repeat this step.
+
 6. Now register the PSGalleryInt as trusted repository by using the following cmdlet. Confirm NuGet related install messages with **[Y] Yes**:
 
 	```powershell
@@ -114,7 +116,7 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Connect-MicrosoftTeams
 	```
 
-10. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@YourTenant.onmicrosoft.com**) and then select **Next**.  
+10. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@_YourTenant_.onmicrosoft.com**) and then select **Next**.  
 
 11. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in**. 
 
@@ -129,13 +131,13 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 14. To add the user **Alex Wilber** to the team type the following cmdlet: 
 
 	```powershell
-	Add-TeamUser -GroupId <GroupID> -User AlexW@YourTenant.onmicrosoft.com
+	Add-TeamUser -GroupId <GroupID> -User AlexW@_YourTenant_.onmicrosoft.com
 	```
 
 15. To add the user **Allan Deyoung** to the team type the following cmdlet: 
 
 	```powershell
-	Add-TeamUser -GroupId <GroupID> -User AllanD@YourTenant.onmicrosoft.com
+	Add-TeamUser -GroupId <GroupID> -User AllanD@_YourTenant_.onmicrosoft.com
 	```
 
 16. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
@@ -179,7 +181,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 6. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
 
-7. Sign in with the account of Joni Sherman by entering her UPN (JoniS@YourTenant.OnMicrosoft.com) and select **Sign in**. 
+7. Sign in with the account of Joni Sherman by entering her UPN (JoniS@_YourTenant_.OnMicrosoft.com) and select **Sign in**. 
 
 8. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -269,7 +271,7 @@ In this task, you will configure the guest user access for Microsoft Teams in yo
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. On the **Pick an account** window, select admin@YourTenant.onmicrosoft.com and sign in.
+3. On the **Pick an account** window, select admin@_YourTenant_.onmicrosoft.com and sign in.
 
 4. On the **Microsoft Teams admin center** page, select the cogwheel from the lower left side pane and open the **Org-wide settings** menu. Select **Guest access** from the list.
 
@@ -290,7 +292,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** ( admin@YourTenant.onmicrosoft.com) and select **Next**.
+4. In the **Sign in** window, enter the UPN of **MOD Administrator** ( admin@_YourTenant_.onmicrosoft.com) and select **Next**.
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -353,7 +355,7 @@ As a part of your system administrator role, you need to review access to resour
 
 3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@YourTenant.onmicrosoft.com) and select **Next**.
+4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@_YourTenant_.onmicrosoft.com) and select **Next**.
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -400,7 +402,7 @@ As a part of your system administrator role, you need to review access to resour
 
 22. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
 
-23. In the **Sign in** window, enter the UPN of **Joni Sherman** (JoniS@YourTenant.onmicrosoft.com) and select **Next**.
+23. In the **Sign in** window, enter the UPN of **Joni Sherman** (JoniS@_YourTenant_.onmicrosoft.com) and select **Next**.
 
 24. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
