@@ -366,7 +366,7 @@ You have now successfully connected to your Teams tenant with the Skype for Busi
 
 ### Exercise 3: Create groups and teams
 
-In this exercise you will create some resources required in later tasks. These include an Office 365 group creating from Microsoft 365 admin center and two teams creating from Desktop client and web client. 
+In this exercise you will create some resources required in later tasks. These include creating an Office 365 Group from the Microsoft 365 admin center and creating a team in the Desktop client and then the web client. 
 
 
 #### **Task 1 - Create Office 365 Groups**  
@@ -392,9 +392,9 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 8. Select **Next**
 
-9. In the Owners field type in the Name of **Joni Sherman** and select her from the **Users** list and select **Next**.
+9. In the Owners field type in the Name of **Joni Sherman**, select her from the **Users** list, and then select **Next**.
 
-10. As group email address type in IT-Department@YourTenant.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, verify that **Create a team for this group** is selected, and ten select **Next**. 
+10. As the group email address type in **IT-Department**@YourTenant.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, clear the **Create a team for this group** checkbox, and then select **Next**. 
 
 11. On the **Review** page, verify the settings and then select **Create group**.
 
