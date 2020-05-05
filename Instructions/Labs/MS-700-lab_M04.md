@@ -236,7 +236,7 @@ As a part of your system administrator role, you need to review access to resour
 	- **Group:** IT-Department
 	- **Reviewers:** Group owners 
 
-4. Navigate to **Outlook on the web** (https://outlook.office365.com/owa) using JoniS@_YourTenant_.onmicrosoft.com.
+4. Navigate to **Outlook on the web** (https://outlook.office365.com) using JoniS@_YourTenant_.onmicrosoft.com.
 
 5. Review the access reviews mail and deny access for the guest user in the **IT-Department** team.
 

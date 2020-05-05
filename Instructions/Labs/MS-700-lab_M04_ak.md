@@ -340,7 +340,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 24. Your personal outlook account has now been added to your test tenant of Contoso Ltd. and also to the “IT-Department” team.
 
-25. You can close the browser now.
+25. Close the InPrivate window.
 
 You have successfully changed the external collaboration settings, so guests can also invite new guests. Then you have added a personal outlook.com account as a guest to your tenant and as a member to the team “IT-Department”.
  
@@ -361,7 +361,7 @@ As a part of your system administrator role, you need to review access to resour
 
 6. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
 
-7. Select **Groups from** the left-hand navigation pane.
+7. Select **Groups** from the left-hand navigation pane.
 
 8. In the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane. 
 
@@ -398,7 +398,7 @@ As a part of your system administrator role, you need to review access to resour
 
 20. Close your browser window and open it again by selecting the Edge browser icon from the taskbar.
 
-21. In your browser, select the address bar and go to the **Outlook on the web** page by entering the following URL: [**https://outlook.office365.com/owa**](https://outlook.office365.com/owa)
+21. In your browser, select the address bar and go to the **Outlook on the web** page by entering the following URL: [**https://outlook.office365.com**](https://outlook.office365.com)
 
 22. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
 
@@ -414,11 +414,11 @@ As a part of your system administrator role, you need to review access to resour
 
 28. An additional browser tab will open.
 
-29. In the Access Review Window, you can see an overview with configured settings and the configured guest user with the personal outlook.com email address.
+29. In the Access Review Window, you can see an overview with configured settings and the configured guest user with your personal outlook.com email address.
 
-30. Select your outlook.com guest and review the guest statistics.
+30. Select your outlook.com guest and then select **Details** to review the guest statistics.
 
-31. Select **Deny** from the available options and select **Save**.
+31. Select **Deny** from the available options and select **Submit**.
 
 32. In the overview, your outlook.com guest user has now **Denied** access.
 
