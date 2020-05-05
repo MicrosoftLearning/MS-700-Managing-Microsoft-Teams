@@ -61,7 +61,7 @@ In the past, some users of Contoso have used a lot of stickers, gif animations a
 
 7. In the Messaging policies overview, select the checkmark left to **Regular users without fun stuff**. Then select **Manage users** in the top navigation pane.
 
-8. Type in **Lynne Robbins** and select **Add**>**Apply**.
+8. Type in **Lynne Robbins** and select **Add**, and then select **Apply**.
 
 9. Stay in the Teams admin center and continue with the next task.
 
@@ -76,13 +76,13 @@ As your part as system administrator of Contoso, you will create a private chann
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. On the Pick an account page, select JoniS@YourTenant.onmicrosoft.com and sign in. 
+3. On the Pick an account page, select **JoniS@YourTenant.onmicrosoft.com** and sign in. 
 
 4. In the left-hand navigation pane, select **Teams** to open the menu and **Manage teams** below.
 
 5. Select the **Sales** team in the **Manage teams** overview window.
 
-6. Select the **Channels** tab in the middle of the page. Select **+ Add channel** in the navigation pane below to get into the **Add channel** window.
+6. Select the **Channels** tab in the middle of the page. Select **+ Add** in the navigation pane below to get into the **Add channel** window.
 
 7. In the **Add channel** window enter the following information:
 
@@ -284,11 +284,11 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 7. If there is no contact for **Joni Sherman**, then select **…** and select **Add a contact to this group**. Type in the name **Joni Sherman** and select her by mouseover the presented name. After this select **Add** to return to the **Contacts tab**.
 
-8. **In the Contacts tab,** select **Joni Sherman. If the giphy, memes and stickers icons are missing below the conversation-bar, the messaging policy** takes effect.
+8. In the **Contacts** tab, select **Joni Sherman**. Note that if the **giphy**, **memes** and **stickers** icons are missing below the conversation-bar, the **messaging policy** has taken effect.
 
 9. In the left-hand navigation pane, select **Teams**.
 
-10. If you can see and select the **Confidential sales** channel of the **Sales** team and if you are able to write a comment, and confirm that you have access to the private channel.
+10. Select the **Confidential sales** channel of the **Sales** team and add a comment to confirm that you have access to the private channel.
 
 
 #### Task 2 – Test the app permission policy and storage providers
@@ -305,12 +305,14 @@ In this task, you will test the **app permission policies** configured in exerci
 
 5. Skip a potential welcome dialog by clicking on **x** in the right corner.
 
-6. In the left-hand navigation select **Teams** and select the **IT-Department** channel **General**. Mouseover the presented name and select **…** and select **Connectors**.
+6. In the left-hand navigation select **Teams** and select the **IT-Department** channel **General**. Mouseover the presented name **General**, select **…** and then select **Connectors**.
 
 7. In the **Connectors for "General"** window, enter **Google Analytics** into the search field. 
 
-8. **If you can't find Google Analytics as a search result and can't add the app to the channel, the app permission policy will work as desired.**
+8. If you can't find **Google Analytics** as a search result and can't add the app to the channel, the **app permission policy** has worked as desired.
 
 9. In the left-hand navigation pane, select **Teams**, then select the **IT-Department** team. Select the **files** Tab on the middle of the Teams web client. Then select **+ Add cloud storage** in the navigation pane below. 
 
-10. If only SharePoint is shown as selection, the deactivation of the 3rd party cloud storage provider worked as expected.
+10. If only SharePoint is shown as selection, the deactivation of the 3rd party cloud storage providers worked as expected.
+
+11. Sign out of Teams and close all open windows.
