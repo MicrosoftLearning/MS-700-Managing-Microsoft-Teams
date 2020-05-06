@@ -59,7 +59,7 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 11. Check, if **Joni Sherman** is still listed below Owners
 
-12. Expand the **Members and guests** heading and check that following members are still listed: **Lynne Robbins**, **Megan Bowen**, **Allan Deyoung** and **Alex Wilber**.
+12. Select **Members and guests** and check that following members are still listed: **Lynne Robbins**, **Megan Bowen**, **Allan Deyoung** and **Alex Wilber**.
 
 13. Select the **General** channel below the **IT-Department** teams.
  
