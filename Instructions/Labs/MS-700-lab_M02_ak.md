@@ -59,7 +59,7 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
    Connect-AzureAD
    ```
 
-7. A **Sign in** dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
+7. A **Sign in** dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 8. To add classification descriptions for unified groups on the directory level, load the unified group template into a variable and modify it in the next steps. To load the unifed group template, use the following cmdlet:
 
@@ -117,7 +117,7 @@ Once the classification label and descriptions are created, users can now assign
 
 2. Open Microsoft Edge, maximize the window and navigate to the **Microsoft Teams** home page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-3. When you see the **Pick an account** window select **lynner@YourTenant.onmicrosoft.com** and sign in with the provided credentials.
+3. When you see the **Pick an account** window select **lynner@_YourTenant_.onmicrosoft.com** and sign in with the provided credentials.
 
 4. On the Microsoft Teams landing page click **Use the web app instead**
 
@@ -146,7 +146,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [**https://portal.azure.com**](https://portal.azure.com/). 
 
-3. Sign in with the global admin credential (**admin@YourTenant.onmicrosoft.com**).
+3. Sign in with the global admin credential (**admin@_YourTenant_.onmicrosoft.com**).
 
 4. If the **Welcome to Microsoft Azure** dialog box appears, select **Maybe later**. If an Azure Advisor recommendations window is displayed, close it with the **X**.
 
@@ -160,7 +160,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 9. In the box right from **Custom,** type **90**.
 
-10. In the **Email contact for groups with no owners** field, type **JoniS@YourTenant.onmicrosoft.com**.
+10. In the **Email contact for groups with no owners** field, type **JoniS@_YourTenant_.onmicrosoft.com**.
 
 11. In the Field **Enable expiration for the Office 365 groups**, select the **Selected** button, and then select  **+ Add** button to open a right-side pane.
 
@@ -189,7 +189,7 @@ You are an administrator for your Teams organization. You need to limit which us
    Connect-AzureAD
    ```
 
-4. A Sign in dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
+4. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 5. Create a new security group “GroupCreators” with the following cmdlet:
 
@@ -237,7 +237,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
 13. Open a Edge browser window and navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/).
 
-14. On the Pick an account window, select **MeganB@YourTenant.OnMicrosoft.com** and sign in with her credentials.
+14. On the Pick an account window, select **MeganB@_YourTenant_.OnMicrosoft.com** and sign in with her credentials.
 
 15. Select **Join or create a team** from the lower end of the teams overview and you won’t see the option to **Create team**.
 
@@ -253,7 +253,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [**https://portal.azure.com**](https://portal.azure.com).
 
-3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
+3. When you see the **Pick an account** window, select **admin@_YourTenant_.onmicrosoft.com** and sign in.
 
 4. In the **Microsoft Azure portal**, under **Azure services** section, select **Azure Active Directory**.
 
@@ -298,7 +298,7 @@ You can revert the Azure AD settings changes to defaults with following steps.
    Connect-AzureAD
    ```
 
-4. A Sign in dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
+4. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 5. To load the unifed group template, use the following cmdlet:
 
@@ -353,7 +353,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft 365 Security center**: [**https://security.microsoft.com**](https://security.microsoft.com). 
 
-3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
+3. When you see the **Pick an account** window, select **admin@_YourTenant_.onmicrosoft.com** and sign in.
 
 4. In the **Microsoft 365 Security center**, in the left navigation pane, select **Policies**.
 
@@ -382,7 +382,7 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Office 365 Security &amp; Compliance center**: [**https://protection.office.com**](https://protection.office.com)
 
-3. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
+3. When you see the **Pick an account** window, select **admin@_YourTenant_.onmicrosoft.com** and sign in.
 
 4. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, select **information governance**, and then choose **Retention**.
 
@@ -419,7 +419,7 @@ According to your organization compliance requirements, you need to implement ba
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft 365 Compliance center**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com).
 
-3. You are still signed in as **admin@YourTenant.onmicrosoft.com**. When you see the **Pick an account** window, select **admin@YourTenant.onmicrosoft.com** and sign in.
+3. You are still signed in as **admin@_YourTenant_.onmicrosoft.com**. When you see the **Pick an account** window, select **admin@_YourTenant_.onmicrosoft.com** and sign in.
 
 4. In **Microsoft 365 compliance center**, on the left navigation pane, select **Show all** and then select **Data loss prevention**.
 

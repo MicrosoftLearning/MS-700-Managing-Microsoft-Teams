@@ -45,7 +45,7 @@ In the past, some users of Contoso have used a lot of stickers, gif animations a
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. On the **Pick an account** page, select JoniS@YourTenant.onmicrosoft.com and sign in. 
+3. On the **Pick an account** page, select JoniS@_YourTenant_.onmicrosoft.com and sign in. 
 
 4. In the left-hand navigation pane, select the **Messaging policies**, then click on the **+ Add** at the right side of the page, to create a new messaging policy.
 
@@ -76,7 +76,7 @@ As your part as system administrator of Contoso, you will create a private chann
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. On the Pick an account page, select **JoniS@YourTenant.onmicrosoft.com** and sign in. 
+3. On the Pick an account page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in. 
 
 4. In the left-hand navigation pane, select **Teams** to open the menu and **Manage teams** below.
 
@@ -100,7 +100,7 @@ As your part as system administrator of Contoso, you will create a private chann
 
 12. In your browser, select the address bar and go to the **Teams Web Client** page by entering the following URL: [**https://teams.microsoft.com**](https://teams.microsoft.com/)
 
-13. In the **Pick an account** window, select LynneR@YourTenant.onmicrosoft.com and sign in..
+13. In the **Pick an account** window, select LynneR@_YourTenant_.onmicrosoft.com and sign in..
 
 14. On the Microsoft Teams landing page click **Use the web app instead**
 
@@ -123,7 +123,7 @@ In the past, users stored data at various location, including third-party storag
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. When you see the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
+3. When you see the **Pick an account** window, select JoniS@_YourTenant_.onmicrosoft.com and sign in.
 
 4. On the left-side navigation pane, select the **Org-wide settings** to open the menu, then select **Teams settings** below.
 
@@ -147,7 +147,7 @@ In the pilot project, the company decided that Microsoft Planner is the default 
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. When you see the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
+3. When you see the **Pick an account** window, select JoniS@_YourTenant_.onmicrosoft.com and sign in.
 
 4. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Setup policies**. 
 
@@ -167,7 +167,7 @@ In the pilot project, the company decided that Microsoft Planner is the default 
 
 12. Open the Edge browser, select the address bar and go to the **Teams Web Client** page by entering the following URL: [**https://teams.microsoft.com**](https://teams.microsoft.com/)
 
-13. On the **Pick an account** window, select LynneR@YourTenant.onmicrosoft.com and sign in.
+13. On the **Pick an account** window, select LynneR@_YourTenant_.onmicrosoft.com and sign in.
 
 14. On the Microsoft Teams landing page click **Use the web app instead**
 
@@ -182,7 +182,7 @@ In this task you will edit the default app permission policy and block the Googl
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. On the **Pick an account** window, select JoniS@YourTenant.onmicrosoft.com and sign in.
+3. On the **Pick an account** window, select JoniS@_YourTenant_.onmicrosoft.com and sign in.
 
 4. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Permission policies**. 
 
@@ -217,7 +217,7 @@ In this task, you will add a custom line of business app required for your compa
 
 3. Navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-4. When you see the **Pick an account** window, select **JoniS@YourTenant.onmicrosoft.com** and enter the provided credentials.
+4. When you see the **Pick an account** window, select **JoniS@_YourTenant_.onmicrosoft.com** and enter the provided credentials.
 
 5. On the teams landing page, select **Use the web app instead**.
 
@@ -239,7 +239,7 @@ In this task, you will add a custom line of business app required for your compa
 
 14. Navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-15. On the Pick an account page, select LynneR@YourTenant.onmicrosoft.com and sign in with the credentials provided.
+15. On the Pick an account page, select LynneR@_YourTenant_.onmicrosoft.com and sign in with the credentials provided.
 
 16. On the teams landing page, select **Use the web app instead**.
 
@@ -274,7 +274,7 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 2. Select the **Edge Browser** icon from the taskbar. In your browser go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-3. On the **Pick an account** window, select **LynneR@YourTenant.onmicrosoft.com** and sign in.
+3. On the **Pick an account** window, select **LynneR@_YourTenant_.onmicrosoft.com** and sign in.
 
 4. On the Microsoft Teams landing page click **Use the web app instead**
 
@@ -299,7 +299,7 @@ In this task, you will test the **app permission policies** configured in exerci
 
 2. Select the **Edge Browser** icon from the taskbar. In your browser go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-3. On the **Pick an account** window, select LynneR@YourTenant.onmicrosoft.com and sign in.
+3. On the **Pick an account** window, select LynneR@_YourTenant_.onmicrosoft.com and sign in.
 
 4. On the Microsoft Teams landing page click **Use the web app instead**
 

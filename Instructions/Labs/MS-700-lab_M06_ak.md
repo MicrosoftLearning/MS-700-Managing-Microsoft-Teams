@@ -47,7 +47,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
 
-3. In the **Pick an account** box, select **JoniS@YourTenant.onmicrosoft.com** and sign in with the provided credentials.
+3. In the **Pick an account** box, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in with the provided credentials.
 
 4. If a **Stay signed in?** dialog box is displayed, select the **Don’t show this again** checkbox and **Yes**.
 
@@ -58,7 +58,7 @@ As part of your pilot project for setting up the events and meetings in your org
 7. On the **Meetings policies\\Global** page, review the available settings, and under **Audio &amp; Video** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
 
  
-You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time till the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
+You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
 
 #### Task 2 - Configure meeting settings and restrict anonymous users from joining meetings.
@@ -67,7 +67,7 @@ Contoso Ltd. works with several external partners and users often schedule meeti
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, select **Meetings,** and then choose **Meetings settings**.
 
@@ -75,7 +75,7 @@ Contoso Ltd. works with several external partners and users often schedule meeti
 
 5. Select **Save**.
 
-You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time till the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
+You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
 
 #### Task 3 - Create a new live event policy and restrict recording capabilities
@@ -84,7 +84,7 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, select **Meetings** and then select **Live event policies**.
 
@@ -126,13 +126,13 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane select **Locations** and below select **Emergency addresses**.
 
-4. Select **Add** from the top pane to create a new emergency address.
+4. Select **+ Add** from the top pane to create a new emergency address.
 
-5. On the **Location\\Add** page, enter the following information:
+5. On the **Location\\Add location** page, enter the following information:
 
 	- Put in a name for your location: **Contoso Emergency Address**
 
@@ -153,7 +153,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, select **Voice**, and then **Calling policies** below.
 
@@ -194,9 +194,9 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
 
-3. On the left navigation pane, select **Org-wide settings**, and then choose **Resource accounts,** to create resource account first.
+3. On the left navigation pane, select **Org-wide settings**, and then choose **Resource accounts,** to create a resource account.
 
 4. On the **Resource accounts** page, select **+ Add** from the top pane.
 
@@ -218,15 +218,15 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 	- Call queue name: **Contoso Call Queue**
 
-	- You haven't added any resource accounts yet: Select **Add accounts**. On the right-side pane, search for **Contoso** and select **Add** for **Contoso Call Queue**.
+	- You haven't added any resource accounts yet: Select **Add accounts**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
 
-	- Greeting: **Play an audio file**, and then select **Upload file**
+	- Greeting: select **Play an audio file**, and then select **Upload file**
 
 	- In **Open** window, navigate to **C:\\Windows\\Media**, select **Alarm03.wav** and select **Open**.
 
 	- Music on hold: **Play default music**
 
-	- Call answering: Select **Add groups** and on the right-side pane, search for **Sales** and select **Add** for **Sales**
+	- Call answering: Select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and select **Add** at the bottom of the **Add call agents** pane.
 
 	- Routing method: **Round robin**
 
@@ -255,7 +255,7 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@YourTenant.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, select **Org-wide settings**, and then choose **Resource accounts,** to create resource account first.
 
@@ -346,7 +346,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@YourTenant.onmicrosoft.com**.
+3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
 
 4. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
 
@@ -365,22 +365,24 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@YourTenant.onmicrosoft.com**.
+3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
 
-4. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **New meeting**.
+4. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **+ New meeting**.
 
-5. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**, and in the invite people, type **Joni Sherman** and the outlook.com address, previously used in Lab 04, that is not from YourTenant.onmicrosoft.com.
+5. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**, and in the invite people, type **Joni Sherman** and your outlook.com address, previously used in Lab 04, that is not from _YourTenant_.onmicrosoft.com.
 
-6. On the **New meeting** page, choose a schedule as the current time and then select **Schedule**.
+6. On the **New meeting** page, choose the current date and time and then select **Send**.
 
 7. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
 8. Open an window in your browser and go to the **Microsoft Teams** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-9. On the **Pick an account** page, select **JoniS@YourTenant.onmicrosoft.com** and sign in.
+9. On the **Pick an account** page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in.
 
 10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join**. Note that you can join the meeting as user **Joni Sherman**.
 
-11. Open a window in your browser and sign in to your email hosting provider, for example Outlook.com. Read the meeting invite email and select **Join Microsoft Teams** meeting link.
+11. Open a **New InPrivate window** in your browser and sign in to your *outlook.com email*. Read the meeting invite email and select the **Join Microsoft Teams Meeting** link.
 
 12. A message will appear that **Only people with access to this org can join its meetings**.
+
+13. Sign out and close all windows.
