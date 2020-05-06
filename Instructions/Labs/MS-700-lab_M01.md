@@ -294,7 +294,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 	- Description: **All staff of the IT-Department** 
 
-	- Group email address: **IT-Department**@__YourTenant__.onmicrosoft.com
+	- Group email address: **IT-Department**@_YourTenant_.onmicrosoft.com
 
 	- Privacy: **Private – Only members can see group content**
 

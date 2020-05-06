@@ -377,7 +377,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.microsoft.com**](https://admin.microsoft.com/) to access the **Microsoft 365 admin center**. 
 
-3. When the **Pick an account** window appears, sign in with **admin@__YourTenant__.onmicrosoft.com** using the O365 Credentials provided to you.
+3. When the **Pick an account** window appears, sign in with **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. In the Microsoft 365 admin center, select **Groups** from the left-side pane and select **Groups** below.
 
@@ -394,7 +394,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 9. In the Owners field type in the Name of **Joni Sherman**, select her from the **Users** list, and then select **Next**.
 
-10. As the group email address type in **IT-Department**@__YourTenant__.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, clear the **Create a team for this group** checkbox, and then select **Next**. 
+10. As the group email address type in **IT-Department**@_YourTenant_.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, clear the **Create a team for this group** checkbox, and then select **Next**. 
 
 11. On the **Review** page, verify the settings and then select **Create group**.
 
