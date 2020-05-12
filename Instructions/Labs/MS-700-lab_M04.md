@@ -53,6 +53,7 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 You have successfully created a new team with the Teams Desktop client, by using an existing Office 365 Group. Leave the Teams client open and continue with the next task.
 
 
+
 #### Task 2 - Create a new team by using PowerShell
 
 In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell. 

@@ -329,7 +329,6 @@ In this task, you have activated ATP safe attachments scanning for SharePoint, O
 
 Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Teams compliance features to meet organizations requirements. First, you will configure retention settings on data in Microsoft Teams. Next you will configure DLP policy that will search for all GDPR related data.
 
-
 #### Task 1 - Create a new retention policy for a single team  
 
 Before deploying Microsoft Teams in your organization, you will need to evaluate Microsoft Teams retention settings. You will create a new retention policy that retains the content of the "Sales" Team for 7 years after last modification. 
