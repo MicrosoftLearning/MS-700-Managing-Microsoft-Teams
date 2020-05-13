@@ -136,7 +136,7 @@ Once the classification label and descriptions are created, users can now assign
 
 10. Close the Edge Browser window.
 
-You have successfully applied a classification to an existing team. Continue wit the next task.
+You have successfully applied a classification to an existing team. Continue with the next task.
 
 
 #### Task 3 - Create and assign expiration policy    
@@ -227,7 +227,7 @@ You are an administrator for your Teams organization. You need to limit which us
 	$Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString “GroupCreators”).objectid
 	```
 
-11. Write back the chaned settings object to your Azure AD tenant, by using the following cmdlet:
+11. Write back the changed settings object to your Azure AD tenant, by using the following cmdlet:
 
 	```powershell
 	Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
@@ -343,7 +343,7 @@ You have successfully reset all Azure AD tenant settings in your test tenant.
 
 
 ### Exercise 2: Implementing security for Microsoft Teams
-In this exercise, you will increase the security level in your organization by configuring an ATP policy to ensures no malicious content is sent through documents shared in Teams by blocking attachments that contain malware. 
+In this exercise, you will increase the security level in your organization by configuring an ATP policy to ensure that no malicious content is sent through documents shared in Teams by blocking attachments that contain malware. 
 
 
 #### Task 1 - Configure ATP for Microsoft Teams 
