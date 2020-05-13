@@ -1,6 +1,6 @@
 --- 
 lab: 
-    title: 'Lab: Configure Security and Compliance for teams and content '
+    title: 'Lab: Configure Security and Compliance for teams and content'
     module: 'Module 02: Implement Microsoft Teams Governance, Security and Compliance' 
 ---
 
@@ -28,9 +28,13 @@ After you complete this lab, you will be able to:
 - **Estimated Time:** 90 minutes.
 
 ## Instructions
+
+
+
 ### Exercise 1: Implement Governance and Lifecycle Management for Microsoft Teams
 
 Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Office 365 groups, you need to plan governance procedures for Office 365 groups, including creating and configuring Office 365 groups classification labels, creating Office 365 groups expiration policies, configuring Office 365 Group creation policy permissions ,and configuring Office 365 Groups naming policies.
+
 
 #### Task 1 - Create classification labels
 
@@ -55,7 +59,7 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 	Connect-AzureAD
 	```
 
-6. A **Sign in** dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
+6. A **Sign in** dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 7. To add classification descriptions for unified groups on the directory level, load the unified group template into a variable and modify it in the next steps. To load the unifed group template, run the following cmdlet:
 
@@ -93,13 +97,13 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 	New-AzureADDirectorySetting -DirectorySetting $Setting
 	```
 
-**Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
+   **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
 
-If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
+   If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
 
-```powershell
-Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
-```
+   ```powershell
+   Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
+   ```
 
 In this task, you have created classifications and classification descriptions for the Office 365 Groups, that will be used as Microsoft Teams classifications.
  
@@ -110,7 +114,7 @@ Once the classification label and descriptions are created, users can now assign
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, and sign in to **Microsoft Teams** home page on following URL: https://teams.microsoft.com/ as user lynner@YourTenant.onmicrosoft.com with the provided credentials.
+2. Open Microsoft Edge, and sign in to **Microsoft Teams** home page on following URL: https://teams.microsoft.com/ as user lynner@_YourTenant_.onmicrosoft.com with the provided credentials.
 
 3. On the Microsoft Teams landing page choose the option to use the web app.
 
@@ -120,34 +124,34 @@ Once the classification label and descriptions are created, users can now assign
 5. On the lower end of the **Edit "Sales" team** window, note the red message saying **Classification must be updated to save changes**, and then change the setting to classify the **Sales** team as **Confidential**. 
 ![Update Classification](media/M02-UpdateClassification.png)
 
-6. Move the cursor and hover over the icon (**i)** right next to the **Classification** dropdown menu and note the classification descriptions.
+6. Move the cursor and hover over the icon **(i)** right next to the **Classification** dropdown menu and note the classification descriptions.
 ![Classification Descriptions](media/M02-ClassificationDescriptions.png)
 
 7. Save the changes.
 
 You have successfully applied a classification to an existing team. Continue with the next task.
 
+
 #### Task 3 - Create and assign expiration policy    
 
 Based on the organization requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the group expiration policy experience, you will configure an expiration policy, that will delete the **Teams Rollout** group after 90 days.
 
- 
+ 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. In Microsoft Edge, sign in to **Microsoft** **Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@YourTenant.onmicrosoft.com**).
+2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@_YourTenant_.onmicrosoft.com**).
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, choose **Azure Active Directory**.
 
-4. In the **Azure Active Directory**, on the left navigation pane, select **Groups.**
+4. In the **Azure Active Directory**, on the left navigation pane, select **Groups**.
 
 5. On the **Groups** page, configure **Expiration** so that **Group lifetime (in days)** is **90**.
 
-6. In the **Email contact for groups with no owners** field, type **JoniS@YourTenant.onmicrosoft.com****.**
+6. In the **Email contact for groups with no owners** field, type **JoniS@_YourTenant_.onmicrosoft.com**.
 
 7. Apply the expiration policy you just created to **Teams Rollout** group.
  
 You have successfully created a new expiration policy and configured the **Teams Rollout** team to expire after 90 days. If the team won’t have a owner after 90 days, Joni Sherman is notified about the expiration if the team.
+
 
 #### Task 4 - Configure group creation policy    
 
@@ -161,7 +165,7 @@ You are an administrator for your Teams organization. You need to limit which us
 	Connect-AzureAD
 	```
  
-3. A Sign in dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
+3. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. Create a new security group “GroupCreators” by running the following cmdlet:
 
@@ -201,7 +205,7 @@ You are an administrator for your Teams organization. You need to limit which us
 	```
  
 
-10. Write back the chaned settings object to your Azure AD tenant, by using the following cmdlet:
+10. Write back the changed settings object to your Azure AD tenant, by using the following cmdlet:
 
 	```powershell
 	Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
@@ -209,13 +213,14 @@ You are an administrator for your Teams organization. You need to limit which us
  
 11. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@YourTenant.OnMicrosoft.com**.
+12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@_YourTenant_.OnMicrosoft.com**.
 
-13. Select **Join or create a team** and you won’t see the option to **Create team**, resp. when you try to create a team, you will receive an error message.
+13. Select **Join or create a team** and you won’t see the option to **Create team**.
 
 14. Close all open windows.
 
 In this task, you have successfully created a security group and configured Azure AD settings to restrict the creation of new groups to members of this security group only. At the end of the task, you have successfully tested the new group creation restrictions.
+
 
 #### Task 5 - Configure a new naming policy  
 
@@ -223,26 +228,25 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge broswer, sign in to **Microsoft Azure Portal** (https://portal.azure.com) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge broswer, sign in to **Microsoft Azure Portal** (https://portal.azure.com) as user **admin@_YourTenant_.onmicrosoft.com**.
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, select **Azure Active Directory**.
 
-4. In the **Azure Active Directory**, on the left navigation pane, select **Groups**  and then select **Naming policy.**
+4. In the **Azure Active Directory**, on the left navigation pane, select **Groups**  and then select **Naming policy**.
 
 5. Download a blocked words sample file. Save the file and then open the file in **Notepad**.
 
-6. Type **CEO,Payroll,HR** into the Notepad window and save the file in place. Afterwards, close the Notepad file.
+6. Type **CEO,Payroll,HR** , replacing the empty quotes in the Notepad window and save the file in place. Afterwards, close the Notepad file.
 
 7. Back to the **Groups - Naming policy** page, upload the **BlockedWords.csv** file you just created.
 
-8. On the **Groups - Naming policy** page, configure group name prefix to be **“Group**“ string, and group name suffix to be **“CountryOrRegion** attribute.
+8. On the **Groups - Naming policy** page, configure group name prefix to be the string: **Group**, and the group name suffix to be the **CountryOrRegion** attribute.
 
 9. On the **Groups - Naming policy** page, under **Current policy** section, preview the group name format listed as **Group&lt;Group name&gt;&lt;CountryOrRegion&gt;**.
 ![GroupNaming Policy](media/M02-GroupNamingPolicy.png)
 
-10. Since you tested naming policy for evaluation, discard the group naming policy.
+10. Since you are only testing the naming policy for evaluation, **Discard** the group naming policy.
 
- 
 In this task, you have configured a naming policy that will block specific words to be used in an Office 365 Group name, as well as you have evaluated the options for prefix and suffix of the Office 365 Group name.
 
  
@@ -258,7 +262,7 @@ You can revert the Azure AD settings changes to defaults with following steps.
 	Connect-AzureAD
 	```
 
-3. A Sign in dialog box will open. Sign in as **admin@YourTenant.onmicrosoft.com** using the O365 Credentials provided to you.
+3. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. To load the unifed group template, use the following cmdlet:
 
@@ -294,29 +298,32 @@ You can revert the Azure AD settings changes to defaults with following steps.
 	```
 10. Close the PowerShell window.
  
-You have successfully reset all Azure AD tenant settings in your test tenant. This is the end of exercise 1.
- 
+You have successfully reset all Azure AD tenant settings in your test tenant.
+
+
+
 ### Exercise 2: Implementing security for Microsoft Teams
 
-In this exercise, you will increase the security level in your organization by configuring an ATP policy to ensures no malicious content is sent through documents shared in Teams by blocking attachments that contain malware. 
+In this exercise, you will increase the security level in your organization by configuring an ATP policy to ensure that no malicious content is sent through documents shared in Teams by blocking attachments that contain malware. 
+
 
 #### Task 1 - Configure ATP for Microsoft Teams 
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring ATP policy that blocks documents that contain malware. 
 
- 
-
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, sign in to **Microsoft** **Security admin center** (https://security.microsoft.com) as user **admin@YourTenant.onmicrosoft.com**.
+2. Open Microsoft Edge, sign in to **Microsoft 365 security center** (https://security.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
 
-3. In the **Microsoft** **Security admin center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365).**
+3. In the **Microsoft 365 security center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365)**.
 
-4. A new browser tab with the **Office** **365** **Security &amp; compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
+4. A new browser tab with the **Office 365 Security &amp; Compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
 
 5. Close the Edge browser window.
 
 In this task, you have activated ATP safe attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks block documents that contain malware.
+
+
 
 ### Exercise 3: Implementing Compliance for Microsoft Teams
 
@@ -326,26 +333,27 @@ Before deploying Microsoft Teams in your organization, you need to evaluate Micr
 
 Before deploying Microsoft Teams in your organization, you will need to evaluate Microsoft Teams retention settings. You will create a new retention policy that retains the content of the "Sales" Team for 7 years after last modification. 
 
- 
-
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Office 365 Security & Compliance center**(https://protection.office.com)) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Office 365 Security &amp; Compliance center** (https://protection.office.com) as user **admin@_YourTenant_.onmicrosoft.com**.
 
-3. In **Office 365 Security & Compliance center**, on the left navigation pane, under **information governance** section, choose **Retention**.
+3. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, under **information governance** section, choose **Retention**.
 
 4. On the **Retention** page, create a new retention policy with the following configuration:
 
-	-  Name your policy: **Sales retention policy.**
-	- Description: **Retention policy for Sales department that will retain data for 7 years**.
-	- Decide if you want to retain content, delete it, or both: **Yes, I want to retain it.**
-	- For this long: **7 years**, and then choose **Retain the content based on** **when it was modified.** 
-	-  Do you want us to delete it after this time: **No**.
+	- Name your policy: **Sales retention policy**
 
-5. On the **Chose locations** page, select **Sales Teams channel messages.**
+	- Description: **Retention policy for Sales department that will retain data for 7 years.**
+
+	- Decide if you want to retain content, delete it, or both: **Yes, I want to retain it**
+
+	- **For this long...**, **7**, **years**, and then choose **Retain the content based on when it was last modified**
+
+	- Do you want us to delete it after this time: **No**
+
+5. On the **Choose locations** page, select **Sales Teams channel messages**.
 
 6. Leave the browser open for the next task.
-
  
 In this this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages of the **Sales** Team for **7 years after the last modification**. 
 
@@ -354,51 +362,50 @@ In this this task, you have successfully created a new retention policy named **
 
 According to your organization compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template "General Data Protection Regulation (GDPR)". The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send email to the Global Admin and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
- 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Compliance center**(https://compliance.microsoft.com)) as user **admin@YourTenant.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft 365 compliance center** (https://compliance.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
 
-3. In **Microsoft** **Compliance Center**, on the left navigation pane, select **Data loss prevention**.
+3. In **Microsoft 365 compliance center**, on the left navigation pane, select **Data loss prevention**.
 
-4. On the **Data loss prevention** page, create a new DLP policy with the following configuration:
+4. On the **New DLP policy** page, create a new DLP policy with the following configuration:
 
-	- Template: **General Data Protection Regulation (GDPR)**.
+	- Template: **General Data Protection Regulation (GDPR)**
 
 	- Name: **GDPR DLP Policy**
 
-	-  Description: **Data loss prevention policy for GDPR regulations** **in Teams.**
+	-  Description: **Data loss prevention policy for GDPR regulations in Teams.**
 
-	-  Let me choose specific locations: Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on.
+	-  Let me choose specific locations: Uncheck **Exchange email**, **SharePoint sites** and **OneDrive accounts**. Leave **Teams chat and channel messages** turned on
 
-	-  Customize the type of content you want to protect: **Find content that contains:** leave the default settings.
+	-  Customize the type of content you want to protect: **Find content that contains:** leave the default settings
 
-	- Detect when this content is shared: **with people outside my organization**.
+	- Detect when this content is shared: **with people outside my organization**
 
 	- What do you want to do if we detect sensitive info?
 
-		- **Send incident reports in email.**
+		- **Send incident reports in email**
 
-		- **Detect when content that's being shared contains. Instances of the same sensitive info** type: **1**.
+		- **Detect when content that's being shared contains. Instances of the same sensitive info** type: **1**
 
 		- **Restrict access or encrypt the content**
 
-		- **Block people from sharing and restrict access to shared content.** 
+		- **Block people from sharing and restrict access to shared content** 
 
 		- **Customize access and override permissions:**
 
-		- **Only people outside your organization.**
+		- **Only people outside your organization**
 
-		- Turn **On** the setting for **Let people who see the tip override the policy**.
+		- Turn **On** the setting for **Let people who see the tip override the policy**
 
-		-  **Require a business justification to override**.
+		-  **Require a business justification to override**
 
 	- Do you want to turn on the policy or test things out first?
 
-		- **I'd like to test it out first.**
+		- **I'd like to test it out first**
 
-		- **Show policy tips while in test mode**.
+		- **Show policy tips while in test mode**
 
-5. Leave the browser open for the next task.
+5. Close all windows.
 
 After completing this task, you have created a DLP Policy from the template "General Data Protection Regulation (GDPR)" that detects if GDPR sensitive content is shared with people outside of your organization.

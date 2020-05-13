@@ -14,7 +14,7 @@ In the labs of this course, you will assume the role of Joni Sherman, a System A
 
 After you complete this lab, you will be able to:
 
-- Create a Team from a O365 Group
+- Create a Team from an Office 365 Group
 - Create a Team by using PowerShell
 - Create a Team with dynamic membership
 - Delete and recover Teams
@@ -27,19 +27,22 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
-### Exercise 1: Manage team resources  
+
+
+### Exercise 1: Manage team resources
+
+
 #### Task 1 - Create a Team from the Office 365 Group 
 
 As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Office 365 Group, created in an earlier task of this lab, and add Teams features to it.
 
-
-1. Sign in to the Teams Desktop client using JoniS@yourtenant.onmicrosoft.com.
+1. Sign in to the Teams Desktop client using **JoniS@_YourTenant_.onmicrosoft.com**.
 
 2. Create a new team with the following settings:
 
 	- Name: **IT-Department**
 
-	- Type: **Create a new team from something you already own**
+	- Type: **Create from... An existing Office 365 group or team**
 
 	- Owners: **Joni Sherman**
 
@@ -49,54 +52,65 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 You have successfully created a new team with the Teams Desktop client, by using an existing Office 365 Group. Leave the Teams client open and continue with the next task.
 
+
+
 #### Task 2 - Create a new team by using PowerShell
 
-In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels Support and Recruiting. Additionally, you will create the private channel Administration via Teams PowerShell. 
-
+In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell. 
  
 1. Open an elevated PowerShell (Admin) window.
 
-2. Import the installed Teams PowerShell module: 
+2. Import the installed Teams PowerShell module:
+
 	```powershell
 	Import-Module MicrosoftTeams
 	```
 
-3. Check the module version: 
+3. Check the module version:
+
 	```powershell
 	Get-Module MicrosoftTeams
 	```
 
-4. If the version is below 1.0.18, uninstall the module: 
+4. If the version is below **1.0.18**, uninstall the module:
+
 	```powershell
 	Uninstall-Module MicrosoftTeams
 	```
+		
+     >**Note:** If the Uninstall-Module command fails, close the PowerShell window, open a new elevated PowerShell (Admin) window, and then repeat this step.
 
-5. Add the official testing repository: 
+5. Add the official testing repository:
+
 	```powershell
 	Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted 
 	```
 
-6. Install the Teams PowerShell module from the testing repository: 
+6. Install the Teams PowerShell module from the testing repository:
+
 	```powershell
 	Install-Module MicrosoftTeams -Repository PSGalleryInt -Force
 	```
 
-7. Import the newly installed module: 
+7. Import the newly installed module:
+
 	```powershell
 	Import-Module MicrosoftTeams
 	```
 
-8. Check, if the version is equal 1.0.18 or above: 
+8. Check if the version is equal to **1.0.18** or above:
+
 	```powershell
 	Get-Module MicrosoftTeams
 	```
 
-9. Connect to Teams in your tenant: 
+9. Connect to Teams in your tenant:
+
 	```powershell
 	Connect-MicrosoftTeams
 	```
 
-10. Create a new team with the following settings, using the ```New-Team cmdlet```:
+10. Create a new team with the following settings, using the ```New-Team``` cmdlet:
 
 	- Displayname: **CA-Office**
 	- MailNickName: **CA-Office**
@@ -104,23 +118,24 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 
 11. Use the GroupId and add **Alex Wilbur** and **Allan Deyoung** as members to the team, using the ```Add-TeamUser``` cmdlet.
 
-12. Use the GroupId and and create the regular channels “Support” and “Recruiting”, using ```New-TeamChannel``` cmdlet.
+12. Use the GroupId and and create the regular channels **“Support”** and **“Recruiting”**, using the ```New-TeamChannel``` cmdlet.
 
-13. Use the GroupId and and create the private channel “Administration”, using ```New-TeamChannel``` cmdlet.
+13. Use the GroupId and and create the private channel **“Administration”**, using the ```New-TeamChannel``` cmdlet.
 
 14. Close the PowerShell window. 
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
+
 #### Task 3 - Delete and recover teams 
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
 
-1. Sign in to the Teams Desktop client using JoniS@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams Desktop client using JoniS@_YourTenant_.onmicrosoft.com.
 
 2. Delete the **IT-Department** team.
 
-3. Sign in to the Azure Portal (https://portal.azure.com/) using JoniS@YourTenant.onmicrosoft.com.
+3. Sign in to the **Azure Portal** (https://portal.azure.com/) using JoniS@_YourTenant_.onmicrosoft.com.
 
 4. Navigate to **Azure Active Directory** and **Deleted groups**.
 
@@ -130,11 +145,12 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 You have successfully deleted and restored a via the Teams Desktop client and Azure Admin Portal. 
 
+
 #### Task 4 - Create team with dynamic membership
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Sign in to the **Azure Portal** (https://portal.azure.com/) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the **Azure Portal** (https://portal.azure.com/) using admin@_YourTenant_.onmicrosoft.com.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -156,19 +172,23 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 You have successfully converted an Office 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation “Canada" is added automatically to the team. 
 
+
+
 ### Exercise 2: Manage sharing and access
 
 In this exercise, you will test the guest access features in Office 365. To do so, you will configure guest access in Azure AD, add a new external guest user and revoke the guest access by using access reviews.
+
 
 #### Task 1 - Configure guest access in Teams
 
 In this task, you will configure the guest user access for Microsoft Teams in your tenant. 
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using admin@_YourTenant_.onmicrosoft.com.
 2. Change the **Org-wide settings** and allow **Allow guest access in Teams**.
 3. Close the Teams admin center.
 
 You have now successfully activated guest user access in Teams for your tenant.
+
 
 #### Task 2 - Configure guest access in the Azure AD (optional)
 
@@ -184,12 +204,12 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 4. Create a new guest user with the following settings:
 
-	- **Name:** your full name
-	- **Email address:** your outlook.com email address 
-	- **First name:** your First name
-	- **Last name:** your last name
-	- **Personal Message:** Hello Guest, here is the agreed access to our Contoso test organization. Best regards, your organization admin
-	- **Groups**: IT-Department 
+	- **Name:** *your full name*
+	- **Email address:** *your Outlook.com email address*
+	- **First name:** *your First name*
+	- **Last name:** *your last name*
+	- **Personal Message:** Hello Guest, here is the link to access to our Contoso test organization. Best regards, Contoso admin.
+	- **Groups**: IT-Department
 
 5. Sign in to the **Outlook Web Portal** (https://outlook.live.com/owa/) using your personal account.
 
@@ -197,11 +217,12 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 You have successfully changed the external collaboration settings, so guests can also invite new guests. Then you have added a personal outlook.com account as a guest to your tenant and as a member to the team “IT-Department”.
 
+
 #### Task 3 - Review access to a resource with access reviews
 
 As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams. 
 
-1. Sign in to the Azure Portal (https://portal.azure.com) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the Azure Portal (https://portal.azure.com) using admin@_YourTenant_.onmicrosoft.com.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -216,12 +237,11 @@ As a part of your system administrator role, you need to review access to resour
 	- **Group:** IT-Department
 	- **Reviewers:** Group owners 
 
-4. Navigate to **Outlook on the web** (https://outlook.office365.com/owa) using JoniS@YourTenant.onmicrosoft.com.
+4. Navigate to **Outlook on the web** (https://outlook.office365.com) using JoniS@_YourTenant_.onmicrosoft.com.
 
 5. Review the access reviews mail and deny access for the guest user in the **IT-Department** team.
 
 6. Close the Outlook on the web window.
-
 
 You have successfully created a new access review and blocked a guest user in your tenant. This is the end of lab 4. You can close all browser windows and proceed to the next lab.
 
