@@ -76,11 +76,10 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 
 3. Confirm the **User Account Control** dialog with **Yes**.
 
-4. Import the MicrosoftTeams module and check if the correct version is installed, by using the following cmdlets:
+4. Check if the correct version of the MicrosoftTeams module is installed, by using the following cmdlet:
 
 	```powershell
-	Import-Module MicrosoftTeams
-	Get-Module MicrosoftTeams
+	Get-InstalledModule MicrosoftTeams
 	```
 
 5. If the Version equals **1.0.18** or above, continue with step 9. If no results are returned or an older version, uninstall the old PowerShell module first by running the following cmdlet (if required):
@@ -103,11 +102,10 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Install-Module MicrosoftTeams -Repository PSGalleryInt -Force
 	```
 
-8. Check again, if the required module is installed now, by using the following cmdlets:
+8. Check again, if the required module is installed now, by using the following cmdlet:
 
 	```powershell
-	Import-Module MicrosoftTeams
-	Get-Module MicrosoftTeams
+	Get-InstalledModule MicrosoftTeams
 	```
 
 9. If the correct version is displayed, type in the following cmdlet to connect to Microsoft Teams in your tenant:  

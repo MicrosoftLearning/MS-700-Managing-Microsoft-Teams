@@ -60,19 +60,13 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
  
 1. Open an elevated PowerShell (Admin) window.
 
-2. Import the installed Teams PowerShell module:
+2. Check the module version:
 
 	```powershell
-	Import-Module MicrosoftTeams
+	Get-InstalledModule MicrosoftTeams
 	```
 
-3. Check the module version:
-
-	```powershell
-	Get-Module MicrosoftTeams
-	```
-
-4. If the version is below **1.0.18**, uninstall the module:
+3. If the version is below **1.0.18**, uninstall the module:
 
 	```powershell
 	Uninstall-Module MicrosoftTeams
@@ -80,49 +74,43 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 		
      >**Note:** If the Uninstall-Module command fails, close the PowerShell window, open a new elevated PowerShell (Admin) window, and then repeat this step.
 
-5. Add the official testing repository:
+4. Add the official testing repository:
 
 	```powershell
 	Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted 
 	```
 
-6. Install the Teams PowerShell module from the testing repository:
+5. Install the Teams PowerShell module from the testing repository:
 
 	```powershell
 	Install-Module MicrosoftTeams -Repository PSGalleryInt -Force
 	```
 
-7. Import the newly installed module:
+6. Check if the version is equal to **1.0.18** or above:
 
 	```powershell
-	Import-Module MicrosoftTeams
+	Get-InstalledModule MicrosoftTeams
 	```
 
-8. Check if the version is equal to **1.0.18** or above:
-
-	```powershell
-	Get-Module MicrosoftTeams
-	```
-
-9. Connect to Teams in your tenant:
+7. Connect to Teams in your tenant:
 
 	```powershell
 	Connect-MicrosoftTeams
 	```
 
-10. Create a new team with the following settings, using the ```New-Team``` cmdlet:
+8. Create a new team with the following settings, using the ```New-Team``` cmdlet:
 
 	- Displayname: **CA-Office**
 	- MailNickName: **CA-Office**
 	- Visibility: **Public**
 
-11. Use the GroupId and add **Alex Wilbur** and **Allan Deyoung** as members to the team, using the ```Add-TeamUser``` cmdlet.
+9. Use the GroupId and add **Alex Wilbur** and **Allan Deyoung** as members to the team, using the ```Add-TeamUser``` cmdlet.
 
-12. Use the GroupId and and create the regular channels **“Support”** and **“Recruiting”**, using the ```New-TeamChannel``` cmdlet.
+10. Use the GroupId and and create the regular channels **“Support”** and **“Recruiting”**, using the ```New-TeamChannel``` cmdlet.
 
-13. Use the GroupId and and create the private channel **“Administration”**, using the ```New-TeamChannel``` cmdlet.
+11. Use the GroupId and and create the private channel **“Administration”**, using the ```New-TeamChannel``` cmdlet.
 
-14. Close the PowerShell window. 
+12. Close the PowerShell window. 
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
