@@ -66,7 +66,7 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Get-InstalledModule MicrosoftTeams
 	```
 
-3. If the version is below **1.0.18**, uninstall the module:
+3. If the Version equals 1.0.18 or above, continue with step 7. If no results are returned or an older version, uninstall the old PowerShell module first by running the following cmdlet (if required):
 
 	```powershell
 	Uninstall-Module MicrosoftTeams
