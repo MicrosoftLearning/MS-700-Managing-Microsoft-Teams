@@ -226,9 +226,11 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 	- Music on hold: **Play default music**
 
-	- Call answering: Select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and select **Add** at the bottom of the **Add call agents** pane.
+	- Call answering: Select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane.
 
 	- Routing method: **Round robin**
+	
+	- Presence-based routing: **Off**
 
 	- Agents can opt out of taking calls: **On**
 
@@ -257,7 +259,7 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
 
-3. On the left navigation pane, select **Org-wide settings**, and then choose **Resource accounts,** to create resource account first.
+3. On the left navigation pane, select **Org-wide settings**, and then choose **Resource accounts,** to create the resource account first.
 
 4. On the **Resource accounts** page, select **+ Add** from the top pane.
 
@@ -369,7 +371,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 4. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **+ New meeting**.
 
-5. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**, and in the invite people, type **Joni Sherman** and your outlook.com address, previously used in Lab 04, that is not from _YourTenant_.onmicrosoft.com.
+5. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**. In the **Add required attendees** box, type **Joni Sherman** and select Joni's contact card, type your ***outlook.com address***, previously used in Lab 04 (that is not from _YourTenant_.onmicrosoft.com) and click on your Guest contact card to add it to the list.
 
 6. On the **New meeting** page, choose the current date and time and then select **Send**.
 
@@ -379,10 +381,16 @@ In this task you need to sign in to the second client and create a meeting with 
 
 9. On the **Pick an account** page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in.
 
-10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join**. Note that you can join the meeting as user **Joni Sherman**.
+10. On the left navigation pane, select **Calendar,** select the **Contoso Web App Project** meeting, select **Join** and then select **Join now**. Verify that you can join the meeting as user **Joni Sherman**.
 
-11. Open a **New InPrivate window** in your browser and sign in to your *outlook.com email*. Read the meeting invite email and select the **Join Microsoft Teams Meeting** link.
+11. Open a **New InPrivate window** in your browser and sign in to your ***outlook.com email***. Read the meeting invitation email (from **Megan Bowen** with the subject: **Contoso Web App Project**) and select the **Join Microsoft Teams Meeting** link.
 
-12. A message will appear that **Only people with access to this org can join its meetings**.
+    >**NOTE**: The message may be in the ***Junk*** folder.)
 
-13. Sign out and close all windows.
+12. If you see the **Experience the best of Teams meetings with the desktop app** page, select **Join on the web instead**.
+
+13. On the **Meeting now** page, type your name and then select **Join now**.
+
+14. A message will appear that **Only people with access to this org can join its meetings**.
+
+15. Sign out and close all windows.
