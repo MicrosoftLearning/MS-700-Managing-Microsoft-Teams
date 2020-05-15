@@ -192,7 +192,7 @@ You need to test access and review the available settings for administering Team
 
 6. Hover over the first symbol below the house in the left-side pane, which is named **Teams**. That opens another menu with Manage teams and Teams policies.
 
-7. Select **Manage Teams**. In the middle of the screen, the teams of your organization are displayed. Note that there is a single Org-wide team named **Contoso** that is automatically created for organizations with less than 5000 that are new to Teams.
+7. Select **Manage Teams**. In the middle of the screen, the teams of your organization are displayed. Note that there is a single Org-wide team named **Contoso** that is automatically created for organizations with less than 5000 users that are new to Teams.
 
 8. Select **Teams policies** in the left-side pane. In the middle of the screen, the Teams policies are displayed. Note that there is a single policy named **Global (Org-wide default)**. Select the **Global (Org-wide default)** policy and review the configured default global settings. Do not make any changes and then select **Cancel**. 
 
