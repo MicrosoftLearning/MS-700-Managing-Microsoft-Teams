@@ -297,8 +297,8 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 	- Group email address: **IT-Department**@_YourTenant_.onmicrosoft.com
 
 	- Privacy: **Private – Only members can see group content**
-
-   - Create a team for this group: ***Clear the checkbox***
+	
+	- Create a team for this group: ***Clear the checkbox***
 
 	- Owners: **Joni Sherman**
 
