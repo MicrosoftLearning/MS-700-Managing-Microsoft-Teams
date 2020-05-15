@@ -233,11 +233,11 @@ In this task, you will add a custom line of business app required for your compa
 
 11. Note the **NotificationBot** app.
 
-12. Select **Joni Shermans** picture in the upper right corner and select **Sign out**.
+12. Select **Joni Shermans** picture in the upper right corner and select **Sign out**. Close the Edge browser.
 
-13. Close the browser and open a new Edge browser window.
+13. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-14. Navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
+14. Select the **Edge Browser** icon from the taskbar. In your browser go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
 15. On the Pick an account page, select LynneR@_YourTenant_.onmicrosoft.com and sign in with the credentials provided.
 
