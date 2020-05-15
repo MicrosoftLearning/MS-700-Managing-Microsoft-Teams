@@ -134,7 +134,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 20. On the report page, select the **Switch to chart view** at upper-right hand corner to display report results in different views. 
 
-21. Close the browser window.
+21. Click the circle with the admin's initials (**MA**) at the upper right and then select **Sign out**. Close the browser window.
 
 Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. 30% is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impact on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
 
@@ -241,6 +241,8 @@ During the planning phase of Teams Phones devices in your organization, you want
 	- **Device’s default admin password:** Pass@word1
 
 10. Once you complete with the configuration profile settings, select **Save**.
+
+11. Click the circle with Joni's picture at the upper right and then select **Sign out**. Close the Edge browser window.
 
 In this task, you have successfully created a configuration profiles that can be applied to Microsoft Teams devices.
  
