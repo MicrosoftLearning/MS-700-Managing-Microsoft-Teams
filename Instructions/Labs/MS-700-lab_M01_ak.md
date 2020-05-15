@@ -192,9 +192,9 @@ You need to test access and review the available settings for administering Team
 
 6. Hover over the first symbol below the house in the left-side pane, which is named **Teams**. That opens another menu with Manage teams and Teams policies.
 
-7. Select **Manage Teams**. In the middle of the screen, the teams of your organization are displayed. Note that **No teams are available in this organization** is displayed because you have not created any teams. You can still select policies without an existing team. Select **Teams policies** in the left-side pane. 
+7. Select **Manage Teams**. In the middle of the screen, the teams of your organization are displayed. Note that there is a single Org-wide team named **Contoso** that is automatically created for organizations with less than 5000 users that are new to Teams.
 
-8. The Teams policies dashboard and a single policy named Global (Org-wide default) is displayed. Select the **Global (Org-wide default)** policy and review the configured default global settings. Do not make any changes and select **Cancel**. 
+8. Select **Teams policies** in the left-side pane. In the middle of the screen, the Teams policies are displayed. Note that there is a single policy named **Global (Org-wide default)**. Select the **Global (Org-wide default)** policy and review the configured default global settings. Do not make any changes and then select **Cancel**. 
 
 9. Repeat the last steps for the other menus on the left-side pane as you wish and explore the different default policies and settings. Do not make any changes and just explore the UI to understand the structure and options the Teams admin center provides.
 
@@ -426,17 +426,19 @@ To test the self-service capabilities of Teams, in this task, Megan Bowen will s
 
 4. The Microsoft Teams Desktop client will start. If a **Bring your team together** window appears, or **Get the Teams mobile app**, or another message, close them with the **X** or **Try it now**.
 
-5. In the left-hand navigation pane, select **Teams** then select **Create team** in the middle of the window.
+5. In the left-hand navigation pane, select **Teams**, and then select **Join or create a team** from the lower end of the Teams list. 
 
-6. In the **Create your team** window, select **Build a team from scratch**, then select **Public**. Enter the team name **Teams Rollout** and select **Create**.
+6. Select **Create team** in the middle of the window.
 
-7. Enter the names of the desired team members: **Alex Wilber**, **Allan Deyoung**, **Joni Sherman**, and **Lynne Robbins**.
+7. In the **Create your team** window, select **Build a team from scratch**, then select **Public**. Enter the team name **Teams Rollout** and select **Create**.
 
-8. Select **Add** to add them to the team.
+8. Enter the names of the desired team members: **Alex Wilber**, **Allan Deyoung**, **Joni Sherman**, and **Lynne Robbins**.
 
-9. Wait for all four users to be listed on the **Add members to Teams Rollout** dialog as Members, and then change the status of Joni Sherman from **Member** to **Owner** with the dropdown menu. 
+9. Select **Add** to add them to the team.
 
-10. Select **Close**.
+10. Wait for all four users to be listed on the **Add members to Teams Rollout** dialog as Members, and then change the status of Joni Sherman from **Member** to **Owner** with the dropdown menu. 
+
+11. Select **Close**.
 
 You have successfully created a new team with the Teams Desktop client, added the project team members and you have made Joni Sherman a second owner of the team. Close the Teams client and continue with the next task.
 

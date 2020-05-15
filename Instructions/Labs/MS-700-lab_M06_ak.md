@@ -365,32 +365,30 @@ In this task you need to sign in to the second client and create a meeting with 
 
 1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
 
-2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
+2. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
+3. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **+ New meeting**.
 
-4. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **+ New meeting**.
+4. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**. In the **Add required attendees** box, type **Joni Sherman** and select Joni's contact card, type your ***outlook.com address***, previously used in Lab 04 (that is not from _YourTenant_.onmicrosoft.com) and click on your Guest contact card to add it to the list.
 
-5. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**. In the **Add required attendees** box, type **Joni Sherman** and select Joni's contact card, type your ***outlook.com address***, previously used in Lab 04 (that is not from _YourTenant_.onmicrosoft.com) and click on your Guest contact card to add it to the list.
+5. On the **New meeting** page, choose the current date and time and then select **Send**.
 
-6. On the **New meeting** page, choose the current date and time and then select **Send**.
+6. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-7. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+7. Open an window in your browser and go to the **Microsoft Teams** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-8. Open an window in your browser and go to the **Microsoft Teams** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
+8. On the **Pick an account** page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in.
 
-9. On the **Pick an account** page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in.
+9. On the left navigation pane, select **Calendar,** select the **Contoso Web App Project** meeting, select **Join** and then select **Join now**. Verify that you can join the meeting as user **Joni Sherman**.
 
-10. On the left navigation pane, select **Calendar,** select the **Contoso Web App Project** meeting, select **Join** and then select **Join now**. Verify that you can join the meeting as user **Joni Sherman**.
-
-11. Open a **New InPrivate window** in your browser and sign in to your ***outlook.com email***. Read the meeting invitation email (from **Megan Bowen** with the subject: **Contoso Web App Project**) and select the **Join Microsoft Teams Meeting** link.
+10. Open a **New InPrivate window** in your browser and sign in to your ***outlook.com email***. Read the meeting invitation email (from **Megan Bowen** with the subject: **Contoso Web App Project**) and select the **Join Microsoft Teams Meeting** link.
 
     >**NOTE**: The message may be in the ***Junk*** folder.)
 
-12. If you see the **Experience the best of Teams meetings with the desktop app** page, select **Join on the web instead**.
+11. If you see the **Experience the best of Teams meetings with the desktop app** page, select **Join on the web instead**.
 
-13. On the **Meeting now** page, type your name and then select **Join now**.
+12. On the **Meeting now** page, type your name and then select **Join now**.
 
-14. A message will appear that **Only people with access to this org can join its meetings**.
+13. A message will appear that **Only people with access to this org can join its meetings**.
 
-15. Sign out and close all windows.
+14. Sign out and close all windows.

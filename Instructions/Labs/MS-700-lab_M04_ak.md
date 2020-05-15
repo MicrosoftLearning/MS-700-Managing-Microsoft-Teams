@@ -420,5 +420,7 @@ As a part of your system administrator role, you need to review access to resour
 
 32. In the overview, your outlook.com guest user has now **Denied** access.
 
+33. Close all windows.
+
 
 You have successfully created a new access review and blocked a guest user in your tenant. This is the end of lab 4. You can close all browser windows and proceed to the next lab.

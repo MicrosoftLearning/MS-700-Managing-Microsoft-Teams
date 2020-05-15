@@ -129,12 +129,12 @@ Once the classification label and descriptions are created, users can now assign
 
 7. In the new Classification dropdown menu, select **Confidential**. 
 
-8. Move the cursor and hover over the icon **(i)** right next to the **Classification** dropdown menu and note the classification descriptions.
+8. Move the cursor and hover over the icon **(i)** right next to the **Classification** dropdown menu and note the classification descriptions. 
 ![Classification Descriptions](media/M02-ClassificationDescriptions.png)
 
 9. Select **Done** to save the changes.
 
-10. Close the Edge Browser window.
+10. Click the circle with Lynne's picture at the upper right and then select **Sign out**. Close the Edge Browser window.
 
 You have successfully applied a classification to an existing team. Continue with the next task.
 
@@ -241,7 +241,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
 15. Select **Join or create a team** from the lower end of the teams overview and you won’t see the option to **Create team**.
 
-16. Close all open windows.
+16. Click the circle with Megan's picture at the upper right and then select **Sign out**. Close all open windows.
 
 In this task, you have succerssfully created a security group and configured Azure AD settings to restrict the creation of new groups to members of this security group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
