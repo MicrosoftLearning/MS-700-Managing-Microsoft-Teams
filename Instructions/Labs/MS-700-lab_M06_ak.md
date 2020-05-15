@@ -363,26 +363,24 @@ In this task you need to sign in to the second client and create a meeting with 
 
 1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
 
-2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
+2. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
+3. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **+ New meeting**.
 
-4. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **+ New meeting**.
+4. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**, and in the invite people, type **Joni Sherman** and your outlook.com address, previously used in Lab 04, that is not from _YourTenant_.onmicrosoft.com.
 
-5. On the **New meeting** page, in the **Title** field, type **Contoso Web App Project**, and in the invite people, type **Joni Sherman** and your outlook.com address, previously used in Lab 04, that is not from _YourTenant_.onmicrosoft.com.
+5. On the **New meeting** page, choose the current date and time and then select **Send**.
 
-6. On the **New meeting** page, choose the current date and time and then select **Send**.
+6. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-7. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+7. Open an window in your browser and go to the **Microsoft Teams** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-8. Open an window in your browser and go to the **Microsoft Teams** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
+8. On the **Pick an account** page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in.
 
-9. On the **Pick an account** page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in.
+9. On the left navigation pane, select **Calendar,** select the meeting and then select **Join**. Note that you can join the meeting as user **Joni Sherman**.
 
-10. On the left navigation pane, select **Calendar,** select the meeting and then select **Join**. Note that you can join the meeting as user **Joni Sherman**.
+10. Open a **New InPrivate window** in your browser and sign in to your ***outlook.com email***. Read the meeting invite email and select the **Join Microsoft Teams Meeting** link.
 
-11. Open a **New InPrivate window** in your browser and sign in to your *outlook.com email*. Read the meeting invite email and select the **Join Microsoft Teams Meeting** link.
+11. A message will appear that **Only people with access to this org can join its meetings**.
 
-12. A message will appear that **Only people with access to this org can join its meetings**.
-
-13. Sign out and close all windows.
+12. Sign out and close all windows.
