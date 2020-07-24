@@ -36,7 +36,7 @@ After you complete this lab, you will be able to:
 
 As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Office 365 Group, created in an earlier task of this lab, and add Teams features to it.
 
-1. Sign in to the Teams Desktop client using **JoniS@_YourTenant_.onmicrosoft.com**.
+1. Sign in to the Teams Desktop client using **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 2. Create a new team with the following settings:
 
@@ -60,13 +60,15 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
  
 1. Open an elevated PowerShell (Admin) window.
 
-2. Check the module version:
+2. Check the Teams PowerShell module for the ability to create private channels:
 
 	```powershell
-	Get-InstalledModule MicrosoftTeams
+	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams private preview module."} else {"Continue with the current module."}
 	```
 
-3. If the Version equals 1.0.18 or above, continue with step 7. If no results are returned or an older version, uninstall the old PowerShell module first by running the following cmdlet (if required):
+    If the output of the command is "**_Continue with the current module_**", skip steps 3-6 and continue with step 7. If the output of the command is "**_Close PowerShell and install the Teams private preview module._**", close the PowerShell window and continue with step 3.
+
+3.  If you need to install the Teams private preview module, first open an elevated PowerShell (Admin) window and uninstall the current PowerShell module by running the following cmdlet:
 
 	```powershell
 	Uninstall-Module MicrosoftTeams
@@ -80,16 +82,16 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted 
 	```
 
-5. Install the Teams PowerShell module from the testing repository:
+5. Install the Teams PowerShell private preview module from the testing repository:
 
 	```powershell
-	Install-Module MicrosoftTeams -Repository PSGalleryInt -Force
+	Install-Module MicrosoftTeams -Repository PSGalleryInt -AllowClobber -Force
 	```
 
-6. Check if the version is equal to **1.0.18** or above:
+6. Verify that the Teams PowerShell module supports creating private channels:
 
 	```powershell
-	Get-InstalledModule MicrosoftTeams
+	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams private preview module."} else {"Continue with the current module."}
 	```
 
 7. Connect to Teams in your tenant:
@@ -119,11 +121,11 @@ You have successfully created a team named **CA-Office** with the members Alex W
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
 
-1. Sign in to the Teams Desktop client using JoniS@_YourTenant_.onmicrosoft.com.
+1. Sign in to the Teams Desktop client using JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com.
 
 2. Delete the **IT-Department** team.
 
-3. Sign in to the **Azure Portal** (https://portal.azure.com/) using JoniS@_YourTenant_.onmicrosoft.com.
+3. Sign in to the **Azure Portal** (https://portal.azure.com/) using JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com.
 
 4. Navigate to **Azure Active Directory** and **Deleted groups**.
 
@@ -138,7 +140,7 @@ You have successfully deleted and restored a via the Teams Desktop client and Az
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Sign in to the **Azure Portal** (https://portal.azure.com/) using admin@_YourTenant_.onmicrosoft.com.
+1. Sign in to the **Azure Portal** (https://portal.azure.com/) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -171,7 +173,7 @@ In this exercise, you will test the guest access features in Office 365. To do s
 
 In this task, you will configure the guest user access for Microsoft Teams in your tenant. 
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using admin@_YourTenant_.onmicrosoft.com.
+1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
 2. Change the **Org-wide settings** and allow **Allow guest access in Teams**.
 3. Close the Teams admin center.
 
@@ -184,7 +186,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 **Note**: You need to have a personal outlook.com account for this and the following tasks. If you don’t have an account like this, open your web browser, go to https://outlook.com and create a new account.
 
-1. Sign in to the **Azure Portal** (https://portal.azure.com) using admin@YourTenant.onmicrosoft.com.
+1. Sign in to the **Azure Portal** (https://portal.azure.com) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
 
 2. Navigate to **Azure Active Directory** and **Users**.
 
@@ -210,7 +212,7 @@ You have successfully changed the external collaboration settings, so guests can
 
 As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams. 
 
-1. Sign in to the Azure Portal (https://portal.azure.com) using admin@_YourTenant_.onmicrosoft.com.
+1. Sign in to the Azure Portal (https://portal.azure.com) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -225,7 +227,7 @@ As a part of your system administrator role, you need to review access to resour
 	- **Group:** IT-Department
 	- **Reviewers:** Group owners 
 
-4. Navigate to **Outlook on the web** (https://outlook.office365.com) using JoniS@_YourTenant_.onmicrosoft.com.
+4. Navigate to **Outlook on the web** (https://outlook.office365.com) using JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com.
 
 5. Review the access reviews mail and deny access for the guest user in the **IT-Department** team.
 
