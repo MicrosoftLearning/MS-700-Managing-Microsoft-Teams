@@ -197,10 +197,10 @@ You are an administrator for your Teams organization. You need to limit which us
 	New-AzureADGroup -DisplayName “GroupCreators” -SecurityEnabled:$true -MailEnabled:$false -MailNickName “GroupCreators”
 	```
 
-6. Replace **&lt;ObjectId&gt;** with the ObjectId from the output of the previous step and run following cmdlet to add **Lynne Robbins** to the new security group:
+6. Run following cmdlet to add **Lynne Robbins** to the new security group:
 
 	```powershell
-	Add-AzureADGroupMember -ObjectId <ObjectId> -RefObjectId (Get-AzureADUser -SearchString “Lynne Robbins”).ObjectId
+	Get-AzureADGroup -SearchString "GroupCreators" | Add-AzureADGroupMember -RefObjectId (Get-AzureADUser -SearchString “Lynne Robbins”).ObjectId
 	```
 
 7. Run following cmdlet to fetch the unified group template again and load it into the “$template” variable:
