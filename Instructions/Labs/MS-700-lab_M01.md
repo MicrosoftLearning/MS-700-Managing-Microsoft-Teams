@@ -34,7 +34,7 @@ After you complete this lab, you will be able to:
 - Understand the Teams admin center and its menus
 - Install the Teams PowerShell module and explore its cmdlets
 - Install the Skype for Business Online PowerShell module and explore its cmdlets
-- Create Office 365 groups from the M365 admin center
+- Create Microsoft 365 groups from the M365 admin center
 - Create new teams using the Teams Desktop client
 - Create new teams using the Teams web client
 
@@ -279,16 +279,16 @@ You have now successfully connected to your Teams tenant with the Skype for Busi
 
 ### Exercise 3: Create groups and teams
 
-In this exercise you will create some resources required in later tasks. These include creating an Office 365 Group from the Microsoft 365 admin center and creating a team in the Desktop client and then the web client. 
+In this exercise you will create some resources required in later tasks. These include creating a Microsoft 365 Group from the Microsoft 365 admin center and creating a team in the Desktop client and then the web client. 
 
 
-#### Task 1 - Create an Office 365 Group  
+#### Task 1 - Create a Microsoft 365 Group  
 
-In your role as Joni Sherman, you do not have the necessary permissions to access the Microsoft 365 admin center and to create resources. Therefore you need to sign in as the MOD Administrator to create the Office 365 Group. You will create the Office 365 Group named "IT-Department" and then add the pilot members serving as a basis for your future teams and licensing. 
+In your role as Joni Sherman, you do not have the necessary permissions to access the Microsoft 365 admin center and to create resources. Therefore you need to sign in as the MOD Administrator to create the Microsoft 365 Group. You will create the Microsoft 365 Group named "IT-Department" and then add the pilot members serving as a basis for your future teams and licensing. 
 
 1. Sign in to the M365 admin center ([**https://admin.microsoft.com**](https://admin.microsoft.com/)) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
 
-2. Create a new Office 365 group with the following settings:
+2. Create a new Microsoft 365 group with the following settings:
 
 	- Name: **IT-Department**
 
@@ -306,7 +306,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 3. Close the Microsoft 365 admin center.
 
-The new Office 365 Group with the names “IT-Department” was successfully created. Close the browser window and continue to the next task.
+The new Microsoft 365 Group with the name “IT-Department” was successfully created. Close the browser window and continue to the next task.
 
 
 #### Task 2 - Create a new team by using the desktop client 

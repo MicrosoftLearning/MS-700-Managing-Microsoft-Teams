@@ -34,7 +34,7 @@ After you complete this lab, you will be able to:
 - Understand the Teams admin center and it’s menus
 - Install the Teams PowerShell module and explore its cmdlets
 - Install the Skype for Business Online PowerShell module and explore its cmdlets
-- Create Office 365 groups from the M365 admin center
+- Create Microsoft 365 Groups from the M365 admin center
 - Create new teams using the Teams Desktop client
 - Create new teams using the Teams web client
  
@@ -180,7 +180,7 @@ You need to test access and review the available settings for administering Team
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-	**Note**: You should still be signed in to Microsoft 365 as **MOD Administrator**. You will sign out this user and sign in with Joni Sherman’s account, to perform this task.
+	**Note**: You should still be signed in to Office 365 as **MOD Administrator**. You will sign out this user and sign in with Joni Sherman’s account, to perform this task.
 
 2. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
 
@@ -366,12 +366,12 @@ You have now successfully connected to your Teams tenant with the Skype for Busi
 
 ### Exercise 3: Create groups and teams
 
-In this exercise you will create some resources required in later tasks. These include creating an Office 365 Group from the Microsoft 365 admin center and creating a team in the Desktop client and then the web client. 
+In this exercise you will create some resources required in later tasks. These include creating a Microsoft 365 Group from the Microsoft 365 admin center and creating a team in the Desktop client and then the web client. 
 
 
-#### **Task 1 - Create an Office 365 Group**  
+#### **Task 1 - Create a Microsoft 365 Group**  
 
-In your role as Joni Sherman, you do not have the necessary permissions to access the Microsoft 365 admin center and to create resources. Therefore you need to sign in as the MOD Administrator to create the Office 365 Group. You will create the Office 365 Group named "IT-Department" and then add the pilot members serving as a basis for your future teams and licensing. 
+In your role as Joni Sherman, you do not have the necessary permissions to access the Microsoft 365 admin center and to create resources. Therefore you need to sign in as the MOD Administrator to create the Microsoft 365 Group. You will create the Microsoft 365 Group named "IT-Department" and then add the pilot members serving as a basis for your future teams and licensing. 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -383,7 +383,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 5. Select **Add a group** in the **Groups** window to open the **New Group** pane.
 
-6. Select as group type **Office 365 (recommended)** and select **Next**.
+6. Select as group type **Microsoft 365 (recommended)** and select **Next**.
 
 7. Enter the following information to the text fields:
 
@@ -410,7 +410,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 17. Select **Save,** then **Close** two times and close the IT-Department pane with the **X**.
 
-The new Office 365 Group and Team with the name “IT-Department” was successfully created. Close the browser window and continue to the next task.
+The new Microsoft 365 Group with the name “IT-Department” was successfully created. Close the browser window and continue to the next task.
 
 
 #### **Task 2 - Create a new team by using the desktop client** 
