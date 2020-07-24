@@ -19,11 +19,11 @@ In the labs of this course you will assume the role of Joni Sherman, a System Ad
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
-- Joni Sherman (JoniS@_YourTenant_.OnMicrosoft.com) **Group coordinator / Teams admin**
-- Alex Wilber (AlexW@_YourTenant_.OnMicrosoft.com) **Regular pilot user from Canada**
-- Lynne Robbins (LynneR@_YourTenant_.OnMicrosoft.com) **Regular pilot user**
-- Allan Deyoung (AllanD@_YourTenant_.OnMicrosoft.com) **Teams communication support engineer**
-- Megan Bowen (MeganB@_YourTenant_.OnMicrosoft.com) **Regular employee**
+- Joni Sherman (JoniS@_&lt;YourTenant&gt;_.OnMicrosoft.com) **Group coordinator / Teams admin**
+- Alex Wilber (AlexW@_&lt;YourTenant&gt;_.OnMicrosoft.com) **Regular pilot user from Canada**
+- Lynne Robbins (LynneR@_&lt;YourTenant&gt;_.OnMicrosoft.com) **Regular pilot user**
+- Allan Deyoung (AllanD@_&lt;YourTenant&gt;_.OnMicrosoft.com) **Teams communication support engineer**
+- Megan Bowen (MeganB@_&lt;YourTenant&gt;_.OnMicrosoft.com) **Regular employee**
 
 ## Objectives
 
@@ -77,15 +77,15 @@ Beside two VMs, you will also be provided with a Microsoft 365 tenant with follo
 
      **Note:** Microsoft 365 sign in instructions will be provided to you by your instructor.
 	  
-- The username of the Global Administrator (MOD Administrator) is **admin@_YourTenant_.onmicrosoft.com**. 
+- The username of the Global Administrator (MOD Administrator) is **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**. 
 
-- **@_YourTenant_.onmicrosoft.com** - This is the domain associated with the Office 365 tenant that was provided by the lab hosting provider. The first part of this domain name (_YourTenant_) is the unique tenant ID provided by the lab hosting provider. The _YourTenant_ portion of the tenant ID, which is the tenant suffix ID, will be unique for each student. 
+- **@_&lt;YourTenant&gt;_.onmicrosoft.com** - This is the domain associated with the Office 365 tenant that was provided by the lab hosting provider. The first part of this domain name (_&lt;YourTenant&gt;_) is the unique tenant ID provided by the lab hosting provider. The _&lt;YourTenant&gt;_ portion of the tenant ID, which is the tenant suffix ID, will be unique for each student. 
 
-	**IMPORTANT:** This is critical because throughout this lab, you will be asked to enter the **_YourTenant_.onmicrosoft.com** domain name when signing into apps with a given username (for example, JoniS@_YourTenant_.onmicrosoft.com). When doing so, you must enter the unique tenant suffix ID that is assigned to your tenant ID in place of the **_YourTenant_**.
+	**IMPORTANT:** This is critical because throughout this lab, you will be asked to enter the **_&lt;YourTenant&gt;_.onmicrosoft.com** domain name when signing into apps with a given username (for example, JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com). When doing so, you must enter the unique tenant suffix ID that is assigned to your tenant ID in place of the **_&lt;YourTenant&gt;_**.
 
-	For example, if your Tenant Email is **admin@contosolab.onmicrosoft.com**, the unique tenant suffix ID (_YourTenant_) is **contosolab**. When signing in as Joni when entering this domain, you would replace _YourTenant_ with contosolab (for example, JoniS@contosolab.onmicrosoft.com). 
+	For example, if your Tenant Email is **admin@contosolab.onmicrosoft.com**, the unique tenant suffix ID (_&lt;YourTenant&gt;_) is **contosolab**. When signing in as Joni when entering this domain, you would replace _&lt;YourTenant&gt;_ with contosolab (for example, JoniS@contosolab.onmicrosoft.com). 
 
-- **RECOMMENDATION:** You should write down your unique tenant suffix, mentioned as _YourTenant_ in this lab and provided by your training provider. After a while, you will have this name or number memorized as you move through the labs in this course. 
+- **RECOMMENDATION:** You should write down your unique tenant suffix, mentioned as _&lt;YourTenant&gt;_ in this lab and provided by your training provider. After a while, you will have this name or number memorized as you move through the labs in this course. 
 
 - **Use the new Microsoft 365 admin center**
 Throughout the lab exercises for this course, if you navigate to the Microsoft 365 admin center, make sure the slider in the upper right corner is set to **The new admin center**. If you can read **Try the new admin center**, select the slider and activate it.   
@@ -95,7 +95,7 @@ Throughout the lab exercises for this course, if you navigate to the Microsoft 3
 
 
 ### Exercise 1: Prepare team roles and licenses
-In the first exercise you will assign required administrative roles to users, check license assignments for the Teams license and then explore the Microsoft Teams admin center. To perform these tasks, you will use default tenant global admin and the Joni Sherman (JoniS@_YourTenant_.onmicrosoft.com) account.
+In the first exercise you will assign required administrative roles to users, check license assignments for the Teams license and then explore the Microsoft Teams admin center. To perform these tasks, you will use default tenant global admin and the Joni Sherman (JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com) account.
 
 
 #### **Task 1 - Assign a Teams Admin Role to a user**  
@@ -105,7 +105,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
 2. Open **Microsoft Edge**, maximize the window and navigate to [**https://portal.office.com/**](https://portal.office.com/). 
 
-3. When the Sign in window is displayed, sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 credentials provided to you. 
+3. When the Sign in window is displayed, sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 credentials provided to you. 
 
 4. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 
@@ -186,7 +186,7 @@ You need to test access and review the available settings for administering Team
 
 3. Close your browser window and re-open **Microsoft Edge** again and navigate to [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) to open the Teams admin center.
 
-4. When the **Pick an account** window is displayed, select **Use another account**. Sign in as **JoniS@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+4. When the **Pick an account** window is displayed, select **Use another account**. Sign in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 5. The Microsoft Teams admin center **Dashboard** is displayed. If the icons from the left-side pane are minimized, hover over them to display the names of the different menus.
 
@@ -257,7 +257,7 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
 	Connect-MicrosoftTeams
 	```
 
-4. A **Sign in** dialog box will open. Sign in as **JoniS@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+4. A **Sign in** dialog box will open. Sign in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 5. To confirm the MicrosoftTeams module is loaded, enter the following cmdlet and press **Enter**:
 
@@ -326,7 +326,7 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 	$Session = New-CsOnlineSession
 	```
 
-5. When prompted to enter the user principal name, enter **JoniS@_YourTenant_.onmicrosoft.com** and press **Enter**.
+5. When prompted to enter the user principal name, enter **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and press **Enter**.
 
 6. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in**.
 
@@ -377,7 +377,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.microsoft.com**](https://admin.microsoft.com/) to access the **Microsoft 365 admin center**. 
 
-3. When the **Pick an account** window appears, sign in with **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+3. When the **Pick an account** window appears, sign in with **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. In the Microsoft 365 admin center, select **Groups** from the left-side pane and select **Groups** below.
 
@@ -394,7 +394,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 9. In the Owners field type in the Name of **Joni Sherman**, select her from the **Users** list, and then select **Next**.
 
-10. As the group email address type in **IT-Department**@_YourTenant_.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, clear the **Create a team for this group** checkbox, and then select **Next**. 
+10. As the group email address type in **IT-Department**@_&lt;YourTenant&gt;_.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, clear the **Create a team for this group** checkbox, and then select **Next**. 
 
 11. On the **Review** page, verify the settings and then select **Create group**.
 
@@ -422,7 +422,7 @@ To test the self-service capabilities of Teams, in this task, Megan Bowen will s
 
 2. Select the **Teams** icon on the task bar to start the Teams Desktop client.
 
-3. When prompted to **Enter your work, school or Microsoft account**. Sign in as **MeganB@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+3. When prompted to **Enter your work, school or Microsoft account**. Sign in as **MeganB@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. The Microsoft Teams Desktop client will start. If a **Bring your team together** window appears, or **Get the Teams mobile app**, or another message, close them with the **X** or **Try it now**.
 
@@ -452,7 +452,7 @@ In this task, Lynne Robbins will continue testing the self-service capabilities 
 
 2. Open **Microsoft Edge** from the task bar, maximize the window and navigate to [**https://teams.microsoft.com**](https://teams.microsoft.com/) to access the **Microsoft Teams web client**. 
 
-3. When the Sign in window is displayed, sign in as **LynneR@_YourTenant_.onmicrosoft.com** using the O365 credentials provided to you. 
+3. When the Sign in window is displayed, sign in as **LynneR@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 credentials provided to you. 
 
 4. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 

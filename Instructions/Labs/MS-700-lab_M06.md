@@ -49,7 +49,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **JoniS@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In the **Teams admin center,** under **Meetings** section, choose **Meeting policies**.
 
@@ -64,7 +64,7 @@ Contoso Ltd. works with several external partners and users often schedule meeti
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Meetings** section, choose **Meetings settings**.
 
@@ -79,7 +79,7 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Meetings** section, choose **Live event policies**.
 
@@ -114,7 +114,7 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane under **Locations** section, choose **Emergency addresses**.
 
@@ -137,7 +137,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Voice** section, choose **Calling policies**.
 
@@ -168,7 +168,7 @@ As Teams admin, you are responsible to create the call queue and configure diffe
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Org-wide settings** section, choose **Resource accounts**, and create a resource account with the following configuration:
 
@@ -215,7 +215,7 @@ In your role as Teams admin, you were assigned a task to create an auto attendan
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be signed in as **JoniS@_YourTenant_.onmicrosoft.com** and you are in the **Teams admin center**.
+2. You should still be signed in as **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and you are in the **Teams admin center**.
 
 3. On the left navigation pane, under **Org-wide settings**, choose **Resource accounts,** and create resource account with the following configuration:
 
@@ -290,7 +290,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
+3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 4. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
 
@@ -309,11 +309,11 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. On the taskbar at the bottom of the page, select the **Edge Browser** icon. Maximize your browser window when it opens.
 
-3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_YourTenant_.onmicrosoft.com**.
+3. Open the **Microsoft Teams Desktop client**, where you are already signed in as **MeganB@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 4. On the Microsoft Teams page, on the left navigation pane, select **Calendar**, and on the upper right side select **New meeting**.
 
-5. Create a new meeting with title **Contoso Web App Project**, and invite **Joni Sherman** and the Outlook.com address, previously used in Lab 04, that is not from _YourTenant_.onmicrosoft.com.
+5. Create a new meeting with title **Contoso Web App Project**, and invite **Joni Sherman** and the Outlook.com address, previously used in Lab 04, that is not from _&lt;YourTenant&gt;_.onmicrosoft.com.
 
 6. On the **New meeting** page, choose the current date and time.
 
@@ -321,7 +321,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 8. Open an window in your browser and go to the **Microsoft Teams** page: (https://teams.microsoft.com/)
 
-9. On the **Pick an account** page, select **JoniS@_YourTenant_.onmicrosoft.com** and sign in.
+9. On the **Pick an account** page, select **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and sign in.
 
 10. On the left navigation pane, select **Calendar**, select the meeting and then select **Join**. Note that you can join the meeting as user **Joni Sherman**.
 

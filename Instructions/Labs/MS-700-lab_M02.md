@@ -59,7 +59,7 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 	Connect-AzureAD
 	```
 
-6. A **Sign in** dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+6. A **Sign in** dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 7. To add classification descriptions for unified groups on the directory level, load the unified group template into a variable and modify it in the next steps. To load the unifed group template, run the following cmdlet:
 
@@ -114,7 +114,7 @@ Once the classification label and descriptions are created, users can now assign
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, and sign in to **Microsoft Teams** home page on following URL: https://teams.microsoft.com/ as user lynner@_YourTenant_.onmicrosoft.com with the provided credentials.
+2. Open Microsoft Edge, and sign in to **Microsoft Teams** home page on following URL: https://teams.microsoft.com/ as user lynner@_&lt;YourTenant&gt;_.onmicrosoft.com with the provided credentials.
 
 3. On the Microsoft Teams landing page choose the option to use the web app.
 
@@ -138,7 +138,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
  1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@_YourTenant_.onmicrosoft.com**).
+2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@_&lt;YourTenant&gt;_.onmicrosoft.com**).
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, choose **Azure Active Directory**.
 
@@ -146,7 +146,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 5. On the **Groups** page, configure **Expiration** so that **Group lifetime (in days)** is **90**.
 
-6. In the **Email contact for groups with no owners** field, type **JoniS@_YourTenant_.onmicrosoft.com**.
+6. In the **Email contact for groups with no owners** field, type **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 7. Apply the expiration policy you just created to **Teams Rollout** group.
  
@@ -165,7 +165,7 @@ You are an administrator for your Teams organization. You need to limit which us
 	Connect-AzureAD
 	```
  
-3. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+3. A Sign in dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. Create a new security group “GroupCreators” by running the following cmdlet:
 
@@ -213,7 +213,7 @@ You are an administrator for your Teams organization. You need to limit which us
  
 11. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@_YourTenant_.OnMicrosoft.com**.
+12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@_&lt;YourTenant&gt;_.OnMicrosoft.com**.
 
 13. Select **Join or create a team** and you won’t see the option to **Create team**.
 
@@ -228,7 +228,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge broswer, sign in to **Microsoft Azure Portal** (https://portal.azure.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge broswer, sign in to **Microsoft Azure Portal** (https://portal.azure.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, select **Azure Active Directory**.
 
@@ -262,7 +262,7 @@ You can revert the Azure AD settings changes to defaults with following steps.
 	Connect-AzureAD
 	```
 
-3. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+3. A Sign in dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. To load the unifed group template, use the following cmdlet:
 
@@ -313,7 +313,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, sign in to **Microsoft 365 security center** (https://security.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. Open Microsoft Edge, sign in to **Microsoft 365 security center** (https://security.microsoft.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In the **Microsoft 365 security center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365)**.
 
@@ -335,7 +335,7 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Office 365 Security &amp; Compliance center** (https://protection.office.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Office 365 Security &amp; Compliance center** (https://protection.office.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, under **information governance** section, choose **Retention**.
 
@@ -364,7 +364,7 @@ According to your organization compliance requirements, you need to implement ba
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft 365 compliance center** (https://compliance.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft 365 compliance center** (https://compliance.microsoft.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In **Microsoft 365 compliance center**, on the left navigation pane, select **Data loss prevention**.
 

@@ -53,7 +53,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In the **Teams admin center,** under **Planning** section, open **Network Planner**. 
 
@@ -197,7 +197,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user JoniS@_YourTenant_.onmicrosoft.com and sign in with the credentials provided to you.
+2. Sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com and sign in with the credentials provided to you.
 
 3. In **Teams admin center**, in the **Devices** section, on the **Phones** page, create a **Configuration profile** with following configuration:
 
@@ -255,7 +255,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	    $UserCredential = Get-Credential
 	    ```
 
-	- In the **Windows PowerShell Credential Request** dialog box, enter the admin@_YourTenant_.onmicrosoft.com, including and the password provided to you.
+	- In the **Windows PowerShell Credential Request** dialog box, enter the admin@_&lt;YourTenant&gt;_.onmicrosoft.com, including and the password provided to you.
 
 	- Run the following cmdlet to establish a connection to Exchange Online PowerShell:
 
@@ -272,7 +272,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 4. Create a new room mailbox named **NY-TeamsRoom1** by running the following cmdlet (remember to replace your tenant name):
 
 	```powershell
-	New-Mailbox -Name "NY-TeamsRoom1" -Alias NY-TeamsRoom1 -Room -EnableRoomMailboxAccount $true -MicrosoftOnlineServicesID NY-TeamsRoom1@_YourTenant_.onmicrosoft.com -RoomMailboxPassword (ConvertTo-SecureString -String 'pass@word1' -AsPlainText -Force)
+	New-Mailbox -Name "NY-TeamsRoom1" -Alias NY-TeamsRoom1 -Room -EnableRoomMailboxAccount $true -MicrosoftOnlineServicesID NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -RoomMailboxPassword (ConvertTo-SecureString -String 'pass@word1' -AsPlainText -Force)
 	```
 
 5. Configure the Calendar Processing features for the Teams Room. Read the following description and run the cmdlet at the end:
@@ -307,18 +307,18 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	Connect-AzureAD
 	```
 
-8. On the sign in window, enter **admin@_YourTenant_.onmicrosoft.com** and sign in with the password provided.
+8. On the sign in window, enter **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** and sign in with the password provided.
 
-9. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_YourTenant_.onmicrosoft.com** by running the following cmdlet:
+9. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** by running the following cmdlet:
 
 	```powershell
-	Set-AzureADUser -ObjectId NY-TeamsRoom1@_YourTenant_.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
+	Set-AzureADUser -ObjectId NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
 	```
 
-10. Close the PowerShell window.Open the Edge browser, navigate to the **Microsoft 365 admin center** page (**https://admin.microsoft.com**) and sign in as **admin@_YourTenant_.onmicrosoft.com**.
+10. Close the PowerShell window.Open the Edge browser, navigate to the **Microsoft 365 admin center** page (**https://admin.microsoft.com**) and sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 11. In **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
 
-12. Add **Offie 365 E5** product license to **NY-TeamsRoom1@_YourTenant_.onmicrosoft.com** account, which is final step in preparing an account for your Microsoft Teams Room service in Office 365.
+12. Add **Offie 365 E5** product license to **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account, which is final step in preparing an account for your Microsoft Teams Room service in Office 365.
 
 You have successfully created, configured and licensed a Microsoft Team Room service account, which is a prerequisite for deploying Microsoft Teams Room systems.
