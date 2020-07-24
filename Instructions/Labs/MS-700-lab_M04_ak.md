@@ -15,7 +15,7 @@ In the labs of this course, you will assume the role of Joni Sherman, a System A
 
 After you complete this lab, you will be able to:
 
-- Create a Team from an Office 365 Group
+- Create a Team from a Microsoft 365 Group
 - Create a Team by using PowerShell
 - Create a Team with dynamic membership
 - Delete and recover Teams
@@ -33,9 +33,9 @@ After you complete this lab, you will be able to:
 ### Exercise 1: Manage team resources
 
 
-#### Task 1 - Create a Team from the Office 365 Group 
+#### Task 1 - Create a Team from the Microsoft 365 Group 
 
-As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Office 365 Group, created in an earlier task of this lab, and add Teams features to it.
+As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Microsoft 365 Group, created in an earlier task of this lab, and add Teams features to it.
  
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -51,9 +51,9 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 7. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create a team** from the middle of the window.
 
-8. In the **Create your team** dialog Select **Create from…**, in the **Create a new team from something you already own** dialog select **Office 365 group**. 
+8. In the **Create your team** dialog Select **Create from…**, in the **Create a new team from something you already own** dialog select **Microsoft 365 group**. 
 
-9. In the **Which office 365 group do you want to use?** dialog select the group **“IT-Department”**, then select **Create**. Wait until the **Creating the team…** process is done.
+9. In the **Which Microsoft 365 group do you want to use?** dialog select the group **“IT-Department”**, then select **Create**. Wait until the **Creating the team…** process is done.
 
 10. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
 
@@ -63,7 +63,7 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 13. Select the **General** channel below the **IT-Department** teams.
  
-You have successfully created a new team with the Teams Desktop client, by using an existing Office 365 Group. Leave the Teams client open and continue with the next task.
+You have successfully created a new team with the Teams Desktop client, by using an existing Microsoft 365 Group. Leave the Teams client open and continue with the next task.
 
 
 #### Task 2 - Create a new team by using PowerShell
@@ -252,7 +252,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 19. Select Owners from the left-hand navigation pane and verify, that Joni is still the Owner of the group, even if she does not match the dynamic group criteria.
 
-You have successfully converted an Office 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation “Canada" is added automatically to the team. 
+You have successfully converted a Microsoft 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation “Canada" is added automatically to the team. 
 
 
 
