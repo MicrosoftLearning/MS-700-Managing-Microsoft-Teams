@@ -8,7 +8,7 @@ lab:
 # Student lab manual
 ## Lab Scenario  
 
-In the labs of this course you will assume the role of Joni Sherman, a System Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. Before starting the deployment, IT department is gathering business requirements about Teams governance as well as data security and compliance, including how the data shared in Teams be regulated according to the organization's compliance requirements. After you complete the planning process, you will configure Office 365 Groups governance, protect Teams from threats, and configure Teams to meet your organization compliance requirements.
+In the labs of this course you will assume the role of Joni Sherman, a System Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. Before starting the deployment, IT department is gathering business requirements about Teams governance as well as data security and compliance, including how the data shared in Teams be regulated according to the organization's compliance requirements. After you complete the planning process, you will configure Microsoft 365 Groups governance, protect Teams from threats, and configure Teams to meet your organization compliance requirements.
 
 ## Objectives
 
@@ -33,12 +33,12 @@ After you complete this lab, you will be able to:
 
 ### Exercise 1: Implement Governance and Lifecycle Management for Microsoft Teams
 
-Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Office 365 groups, you need to plan governance procedures for Office 365 groups, including creating and configuring Office 365 groups classification labels, creating Office 365 groups expiration policies, configuring Office 365 Group creation policy permissions ,and configuring Office 365 Groups naming policies.
+Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating and configuring Microsoft 365 groups classification labels, creating Microsoft 365 groups expiration policies, configuring Microsoft 365 Group creation policy permissions ,and configuring Microsoft 365 Groups naming policies.
 
 
 #### Task 1 - Create classification labels
 
-You need to evaluate governance of Office 365 Groups before deploying them in your organizations. One of the tasks is to add information about the group purpose. You will create classification labels in order to inform users what type of documents are stored within the group or what type of data is inside the email exchange within the group. In this task, you will create three classifications “Standard, Internal and Confidential”. For each of them, you will create appropriate classification desriptions "Standard: General communication, Internal: Company internal data, Confidential: Data that has regulatory requirements"
+You need to evaluate governance of Microsoft 365 Groups before deploying them in your organizations. One of the tasks is to add information about the group purpose. You will create classification labels in order to inform users what type of documents are stored within the group or what type of data is inside the email exchange within the group. In this task, you will create three classifications “Standard, Internal and Confidential”. For each of them, you will create appropriate classification desriptions "Standard: General communication, Internal: Company internal data, Confidential: Data that has regulatory requirements"
 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
@@ -105,7 +105,7 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
    Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
    ```
 
-In this task, you have created classifications and classification descriptions for the Office 365 Groups, that will be used as Microsoft Teams classifications.
+In this task, you have created classifications and classification descriptions for the Microsoft 365 Groups, that will be used as Microsoft Teams classifications.
  
 
 #### Task 2 - Assign classification labels
@@ -155,7 +155,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 #### Task 4 - Configure group creation policy    
 
-You are an administrator for your Teams organization. You need to limit which users are able to create Office 365 groups. You will create a security group named **GroupCreators** which only the members of the group are allowed to create Office 365 groups.
+You are an administrator for your Teams organization. You need to limit which users are able to create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group are allowed to create Microsoft 365 groups.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you and run **Windows PowerShell**.
 
@@ -224,7 +224,7 @@ In this task, you have successfully created a security group and configured Azur
 
 #### Task 5 - Configure a new naming policy  
 
-As part of your Teams planning project, you will configure the naming policy where each new Office 365 Group or Team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: CEO, Payroll and HR. 
+As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 Group or Team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: CEO, Payroll and HR. 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -247,7 +247,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 10. Since you are only testing the naming policy for evaluation, **Discard** the group naming policy.
 
-In this task, you have configured a naming policy that will block specific words to be used in an Office 365 Group name, as well as you have evaluated the options for prefix and suffix of the Office 365 Group name.
+In this task, you have configured a naming policy that will block specific words to be used in an Microsoft 365 Group name, as well as you have evaluated the options for prefix and suffix of the Microsoft 365 Group name.
 
  
 #### Task 6 – Remove the changed Azure AD settings again  
