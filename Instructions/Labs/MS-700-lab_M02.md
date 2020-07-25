@@ -97,13 +97,13 @@ You need to evaluate governance of Microsoft 365 Groups before deploying them in
 	New-AzureADDirectorySetting -DirectorySetting $Setting
 	```
 
-   **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
+     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
 
-   If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
+     If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
 
-   ```powershell
-   Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
-   ```
+     ```powershell
+     Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
+     ```
 
 In this task, you have created classifications and classification descriptions for the Microsoft 365 Groups, that will be used as Microsoft Teams classifications.
  

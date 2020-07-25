@@ -99,11 +99,11 @@ You need to evaluate governance of Microsoft 365 Groups before deploying them in
 
      **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
 
-	> If there is an existing directory settings object, you will need to use following cmdlet to update the directory setting in Azure Active Directory:
-    >
-	> ```powershell
-	>Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
-	>```
+	 If there is an existing directory settings object, you will need to use following cmdlet to update the directory setting in Azure Active Directory:
+     
+	  ```powershell
+	 Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
+	 ```
  
 14. Close the PowerShell window.
 
