@@ -1,7 +1,7 @@
 --- 
 lab: 
     title: 'Lab: Modify collaboration settings for Teams'
-    module: 'Module 05- Manage collaboration in Microsoft Teams' 
+    module: 'Module 05: Manage collaboration in Microsoft Teams' 
 ---
 
 # Lab 05: Modify collaboration settings for Teams
