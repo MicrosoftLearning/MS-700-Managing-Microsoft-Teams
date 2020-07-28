@@ -255,7 +255,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	    $UserCredential = Get-Credential
 	    ```
 
-	- In the **Windows PowerShell Credential Request** dialog box, enter the admin@_&lt;YourTenant&gt;_.onmicrosoft.com, including and the password provided to you.
+	- In the **Windows PowerShell Credential Request** dialog box, enter the **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**, including and the password provided to you.
 
 	- Run the following cmdlet to establish a connection to Exchange Online PowerShell:
 
