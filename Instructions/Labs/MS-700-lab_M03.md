@@ -242,7 +242,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 In this task, you have successfully created a configuration profiles that can be applied to Microsoft Teams devices.
  
 
-#### Task 2 - Create a Microsoft Team Room 
+#### Task 2 - Create a Microsoft Teams Room 
 
 Your organization has ordered devices for Microsoft Teams room. In the meantime, you need to ensure that all prerequisites for the equipment installation are being completed. One of the prerequisites for Microsoft Teams Room deployment is adding a device account and assigning Office 365 license for that account.
 
