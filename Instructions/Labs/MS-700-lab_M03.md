@@ -313,7 +313,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	Set-AzureADUser -ObjectId NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
 	```
 
-9. Close the PowerShell window.Open the Edge browser, navigate to the **Microsoft 365 admin center** page at:**https://admin.microsoft.com** and sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
+9. Close the PowerShell window and open the Edge browser, navigate to the **Microsoft 365 admin center** page at:**https://admin.microsoft.com** and sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 10. In the **Microsoft 365 admin center** from **Purchase services** (under **Billing**), obtain a **Meeting Room** trial license.
 
