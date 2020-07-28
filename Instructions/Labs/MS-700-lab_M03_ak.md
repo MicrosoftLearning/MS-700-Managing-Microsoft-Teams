@@ -202,43 +202,43 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 6. Enter the following information for the new configuration profile:
 
-	- **Configuration profile Name**: New York Teams Desk Phones
+	- Configuration profile Name: **New York Teams Desk Phones**
 
-	- **Description:** Configuration profile for Teams Desk Phones in New York HQ
+	- Description: **Configuration profile for Teams Desk Phones in New York HQ**
 
 7. Under **General** section, configure following settings:
 
-	- **Device lock:** On.
+	- Device lock: **On**
 
-	- **Timeout** 30 seconds
+	- Timeout: **30 seconds**
 
-	- **PIN:** 123456
+	- PIN: **123456**
 
-	- **Language:** English (United States).
+	- Language: English **(United States)**
 
-	- **Timezone**: (UTC-5:00) Eastern Time (US and Canada)
+	- Timezone: **(UTC-5:00) Eastern Time (US and Canada)**
 
-	- **Date format:** MM/DD/YYYY
+	- Date format: **MM/DD/YYYY**
 
-	- **Time format:** 12 Hours (AM/PM)
+	- Time format: **12 Hours (AM/PM)**
 
 8. Under **Device settings** configure following settings:
 
-	- **Display screen saver:** On, Timeout 1 minute.
+	- Display screen saver: **On, Timeout 1 minute**
 
-	- **Display high contrast:** On
+	- Display high contrast: **On**
 
-	- **Office hours:** 08:00-17:00
+	- Office hours: **08:00-17:00**
 
-	- **Power Saving:** On.
+	- Power Saving: **On**
 
 9. Under **Network settings**, configure following settings:
 
-	- **DHCP enabled:** On
+	- DHCP enabled: **On**
 
-	- **Logging enabled:** Off
+	- Logging enabled: **Off**
 
-	- **Device’s default admin password:** Pass@word1
+	- Device’s default admin password: **Pass@word1**
 
 10. Once you complete with the configuration profile settings, select **Save**.
 
@@ -284,19 +284,19 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 9. Configure the Calendar Processing features for the Teams Room. Read the following description and run the cmdlet at the end:
 
-	- **AutomateProcessing**: AutoAccept (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
+	- AutomateProcessing: **AutoAccept (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)**
 
-	- **AddOrganizerToSubject**: $false (The meeting organizer is not added to the subject of the meeting request.)
+	- AddOrganizerToSubject: **$false (The meeting organizer is not added to the subject of the meeting request.)**
 
-	- **DeleteComments**: $false (Keep any text in the message body of incoming meeting requests.)
+	- DeleteComments: **$false (Keep any text in the message body of incoming meeting requests.)**
 
-	- **DeleteSubject**: $false (Keep the subject of incoming meeting requests.)
+	- DeleteSubject: **$false (Keep the subject of incoming meeting requests.)**
 
-	- **RemovePrivateProperty**: $false (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)
+	- RemovePrivateProperty: **$false (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)**
 
-	- **AddAdditionalResponse**: $true (The text specified by the AdditionalResponse parameter is added to meeting requests.)
+	- AddAdditionalResponse: **$true (The text specified by the AdditionalResponse parameter is added to meeting requests.)**
 
-	- **AdditionalResponse**: "This is a Teams Meeting room" (The additional text to add to the meeting request.)
+	- AdditionalResponse: **"This is a Teams Meeting room" (The additional text to add to the meeting request.)**
 	
 	```powershell
 	Set-CalendarProcessing -Identity "NY-TeamsRoom1" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Teams Meeting room"

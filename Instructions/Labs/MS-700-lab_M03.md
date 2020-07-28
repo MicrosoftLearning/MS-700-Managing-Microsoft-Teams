@@ -65,73 +65,73 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 7. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name:**  **New York HQ site**
+	- Network site name:  **New York HQ site**
 
-	- **Description:** **New York HQ site network infrastructure**
+	- Description: **New York HQ site network infrastructure**
 
-	- **Network users:** **1000**
+	- Network users: **1000**
 
 	- In the **Network settings** section, add following configuration:
 
-		- **Subnet:** **172.16.0.0**, **Network range:** **16**
+		- Subnet: **172.16.0.0**, Network range: **16**
 
-		- **Express Route:** **On**
+		- Express Route: **On**
 
-		-  **Internet link capacity:** **1024**
+		-  Internet link capacity: **1024**
 
-		-  **PSTN egress:** **Use VoIP only**
+		-  PSTN egress: **Use VoIP only**
 
 8. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name:** **Los Angeles site**
+	- Network site name: **Los Angeles site**
 
-	- **Description:** **Los Angeles site network infrastructure**
+	- Description: **Los Angeles site network infrastructure**
 
-	- **Network users** field type: **250**
+	- Network users field type: **250**
 
 	- In the **Network settings** section, add following configuration:
 
-		- **Subnet:** **192.168.10.0**, **Network range:** **24**
+		- Subnet: **192.168.10.0**, Network range: **24**
 
-		- **ExpressRoute:** **Off**
+		- ExpressRoute: **Off**
 
-		- **Connected to WAN:** **On**
+		- Connected to WAN: **On**
 
-		-  **WAN link capacity:** **500**
+		-  WAN link capacity: **500**
 
-		- **WAN audio queue size:** **100**
+		- WAN audio queue size: **100**
 
-		-  **Video queue size:** **200**
+		-  Video queue size: **200**
 
-	   - **Internet link capacity** **500**
+	   - Internet link capacity **500**
 
-		- **PSTN egress:** **Use VoIP only**
+		- PSTN egress: **Use VoIP only**
 
 9. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name: Houston site**
+	- Network site name: **Houston site**
 
-	- **Description: Houston site network infrastructure**
+	- Description: **Houston site network infrastructure**
 
-	- **Network users: 150**
+	- Network users: **150**
 
     - In the **Network settings** section, add following configuration:
 
-	   - **Subnet:** **192.168.20.0**, **Network range:** **24**
+	   - Subnet: **192.168.20.0**, Network range: **24**
 
-	   - **ExpressRoute:** **Off**
+	   - ExpressRoute: **Off**
 
-	   -  **Connected to WAN:** **On**
+	   -  Connected to WAN: **On**
 
-	   - **WAN link capacity:** **400**
+	   - WAN link capacity: **400**
 
-	   - **WAN audio queue size:** **50**
+	   - WAN audio queue size: **50**
 
-	   - **Video queue size:** **100**
+	   - Video queue size: **100**
 
-	   - **Internet link capacity** **400**
+	   - Internet link capacity **400**
 
-	   - **PSTN egress:** **Use VoIP only**
+	   - PSTN egress: **Use VoIP only**
 
 10. Start a report for the **Contoso plan** with a name **Contoso report** and a description **Contoso network estimation report**.
 
@@ -197,47 +197,47 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com and sign in with the credentials provided to you.
+2. Sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and sign in with the credentials provided to you.
 
 3. In **Teams admin center**, in the **Devices** section, on the **Phones** page, create a **Configuration profile** with following configuration:
 
-	- **Configuration profile Name**: New York Teams Desk Phones
+	- Configuration profile Name: **New York Teams Desk Phones**
 
-	- **Description:** Configuration profile for Teams Desk Phones in New York HQ
+	- Description: **Configuration profile for Teams Desk Phones in New York HQ**
 
 4. Under **General** section, configure following settings:
 
-	- **Device lock:** On
+	- Device lock: **On**
 
-	- **Timeout** 30 seconds
+	- Timeout: **30 seconds**
 
-	- **PIN:** 123456
+	- PIN: **123456**
 
-	- **Language:** English (United States).
+	- Language: **English (United States)**
 
-	- **Timezone**: (UTC-5:00) Eastern Time (US and Canada)
+	- Timezone: **(UTC-5:00) Eastern Time (US and Canada)**
 
-	- **Date format:** MM/DD/YYYY
+	- Date format: **MM/DD/YYYY**
 
-	- **Time format:** 12 Hours (AM/PM)
+	- Time format: **12 Hours (AM/PM)**
 
 5. Under **Device settings** configure following settings:
 
-	- **Display screen saver**: On, Timeout 1 minute
+	- Display screen saver: **On, Timeout 1 minute**
 
-	- **Display high contrast:** On
+	- Display high contrast: **On**
 
-	- **Office hours:** 08:00-17:00
+	- Office hours: **08:00-17:00**
 
-	- **Power Saving:** On.
+	- Power Saving: **On**
 
 6. Under **Network settings**, configure following settings:
 
-	- **DHCP enabled:** On
+	- DHCP enabled: **On**
 
-	- **Logging enabled:** Off
+	- Logging enabled: **Off**
 
-	- **Device’s default admin password:** Pass@word1
+	- Device’s default admin password: **Pass@word1**
 
 In this task, you have successfully created a configuration profiles that can be applied to Microsoft Teams devices.
  
@@ -277,19 +277,19 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 5. Configure the Calendar Processing features for the Teams Room. Read the following description and run the cmdlet at the end:
 
-	- **AutomateProcessing**: AutoAccept (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
+	- AutomateProcessing: **AutoAccept (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)**
 
-	- **AddOrganizerToSubject**: $false (The meeting organizer is not added to the subject of the meeting request.)
+	- AddOrganizerToSubject: **$false (The meeting organizer is not added to the subject of the meeting request.)**
 
-	- **DeleteComments**: $false (Keep any text in the message body of incoming meeting requests.)
+	- DeleteComments: **$false (Keep any text in the message body of incoming meeting requests.)**
 
-	- **DeleteSubject**: $false (Keep the subject of incoming meeting requests.)
+	- DeleteSubject: **$false (Keep the subject of incoming meeting requests.)**
 
-	- **RemovePrivateProperty**: $false (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)
+	- RemovePrivateProperty: **$false (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)**
 
-	- **AddAdditionalResponse**: $true (The text specified by the AdditionalResponse parameter is added to meeting requests.)
+	- AddAdditionalResponse: **$true (The text specified by the AdditionalResponse parameter is added to meeting requests.)**
 
-	- **AdditionalResponse**: "This is a Teams Meeting room" (The additional text to add to the meeting request.)
+	- AdditionalResponse: **"This is a Teams Meeting room" (The additional text to add to the meeting request.)**
 
 	```powershell
 	Set-CalendarProcessing -Identity "NY-TeamsRoom1" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Teams Meeting room"
