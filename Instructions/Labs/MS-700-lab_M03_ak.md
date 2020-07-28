@@ -311,27 +311,35 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 11. Connect to **Azure AD PowerShell** to configure Teams Room account settings by running the following cmdlet:
 
 	```powershell
-	Connect-AzureAD
+	Connect-AzureAD -Credential $UserCredential
 	```
 
-12. On the sign in window, enter **admin@&lt;YourTenant&gt;.onmicrosoft.com** and sign in with the password provided.
-
-13. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** by running the following cmdlet:
+12. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** by running the following cmdlet:
 
 	```powershell
 	Set-AzureADUser -ObjectId NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
 	```
 
-14. Close the PowerShell window and open the Edge browser from the task bar.
+13. Close the PowerShell window and open the Edge browser from the task bar.
 
-15. Navigate to the **Microsoft 365 admin center** page by entering the following URL in the address bar: **https://admin.microsoft.com**.
+14. Navigate to the **Microsoft 365 admin center** at: **https://admin.microsoft.com**.
 
-16. When you see the Pick an account window, select **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** and sign in.
+15. When you see the Pick an account window, select **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** and sign in.
 
-17. In **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
+16. In the **Microsoft 365 admin center** from the left navigation pane, under **Billing** select **Purchase services**.
 
-18. Select the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account, and then select **Manage product licenses** tab.
+17. In the **Search** box on the right, type **Teams Room** and then hit Enter.
 
-19. On **NY-TeamsRoom1@contoso.onmicrosoft.com** page, under the **Licenses and Apps** tab, select Office 365 E5 and then select **Save changes,** which is final step in preparing an account for your Microsoft Teams Room service in Office 365
+18. In the results page, locate the **Collaboration and communication** section, and under **Meeting Room** select **Details** and then select **Get free trial**.
 
-You have successfully created, configured and licensed a Microsoft Team Room service account, which is a prerequisite for deploying Microsoft Teams Room systems.
+19. In the **Check out** page, select **Try now**, and in the **order receipt** page, select **Continue**.
+
+20. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
+
+21. Select the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account, and then select the **Manage product licenses** tab.
+
+22. In the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** page, under the **Licenses and Apps** tab, select **Meeting Room** and then select **Save changes**.
+
+23. Close all open windows.
+
+You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.

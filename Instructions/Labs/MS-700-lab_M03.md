@@ -317,8 +317,10 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 10. Close the PowerShell window.Open the Edge browser, navigate to the **Microsoft 365 admin center** page (**https://admin.microsoft.com**) and sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
-11. In **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
+11. In the **Microsoft 365 admin center** from **Purchase services** (under **Billing**), obtain a **Meeting Room** trial license.
 
-12. Add **Offie 365 E5** product license to **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account, which is final step in preparing an account for your Microsoft Teams Room service in Office 365.
+12. In the **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
 
-You have successfully created, configured and licensed a Microsoft Team Room service account, which is a prerequisite for deploying Microsoft Teams Room systems.
+13. Add **Meeting Room** product license to the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account.
+
+You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
