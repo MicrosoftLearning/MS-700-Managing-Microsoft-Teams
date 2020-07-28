@@ -177,9 +177,9 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 5. In the **Delete “IT-Department” team**, select **I understand that everything will be deleted**. and select **Delete team**.
 
-6. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
+6. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal** at: [https://portal.azure.com](https://portal.azure.com). 
 
-7. Sign in with the account of Joni Sherman by entering her UPN (JoniS@_&lt;YourTenant&gt;_.OnMicrosoft.com) and select **Sign in**. 
+7. Sign in with the account of Joni Sherman by entering her UPN (**JoniS@_&lt;YourTenant&gt;_.OnMicrosoft.com**) and select **Sign in**. 
 
 8. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -208,11 +208,11 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal** at: [https://portal.azure.com](https://portal.azure.com). 
 
 3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@m365xzzzzzz.onmicrosoft.com) and select **Next**.
+4. In the **Sign in** window, enter the UPN of **MOD Administrator** (**admin@_&lt;YourTenant&gt;_.OnMicrosoft.com**) and select **Next**.
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
