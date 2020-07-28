@@ -43,7 +43,7 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 3. If you are already signed with **Joni** in at the Teams Desktop client, you can continue with step 7. 
 
-4. If you are not signed in already, you will be asked to **Enter your work, school or Microsoft account**., which is the UPN of Joni (JoniS@_&lt;YourTenant&gt;_.OnMicrosoft.com). Enter it and select **Sign in**. 
+4. If you are not signed in already, you will be asked to **Enter your work, school or Microsoft account**., which is the UPN of Joni (**JoniS@_&lt;YourTenant&gt;_.OnMicrosoft.com**). Enter it and select **Sign in**. 
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -290,7 +290,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@_&lt;YourTenant&gt;_.onmicrosoft.com) and select **Next**.
+4. In the **Sign in** window, enter the UPN of **MOD Administrator** (**admin@_&lt;YourTenant&gt;_.onmicrosoft.com**) and select **Next**.
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -353,7 +353,7 @@ As a part of your system administrator role, you need to review access to resour
 
 3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** (admin@_&lt;YourTenant&gt;_.onmicrosoft.com) and select **Next**.
+4. In the **Sign in** window, enter the UPN of **MOD Administrator** (**admin@_&lt;YourTenant&gt;_.onmicrosoft.com**) and select **Next**.
 
 5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
@@ -400,7 +400,7 @@ As a part of your system administrator role, you need to review access to resour
 
 22. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
 
-23. In the **Sign in** window, enter the UPN of **Joni Sherman** (JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com) and select **Next**.
+23. In the **Sign in** window, enter the UPN of **Joni Sherman** (**JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**) and select **Next**.
 
 24. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 

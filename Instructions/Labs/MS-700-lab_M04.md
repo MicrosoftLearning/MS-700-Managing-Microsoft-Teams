@@ -121,11 +121,11 @@ You have successfully created a team named **CA-Office** with the members Alex W
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
 
-1. Sign in to the Teams Desktop client using JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com.
+1. Sign in to the **Teams Desktop client** using **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 2. Delete the **IT-Department** team.
 
-3. Sign in to the **Azure Portal** (https://portal.azure.com/) using JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com.
+3. Sign in to the **Azure Portal** (https://portal.azure.com/) using **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 4. Navigate to **Azure Active Directory** and **Deleted groups**.
 
@@ -140,7 +140,7 @@ You have successfully deleted and restored a via the Teams Desktop client and Az
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Sign in to the **Azure Portal** (https://portal.azure.com/) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
+1. Sign in to the **Azure Portal** (https://portal.azure.com/) using **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -173,7 +173,7 @@ In this exercise, you will test the guest access features in Office 365. To do s
 
 In this task, you will configure the guest user access for Microsoft Teams in your tenant. 
 
-1. Sign in to the Teams admin center (https://admin.teams.microsoft.com/) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
+1. Sign in to the **Teams admin center** (https://admin.teams.microsoft.com/) using **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 2. Change the **Org-wide settings** and allow **Allow guest access in Teams**.
 3. Close the Teams admin center.
 
@@ -186,7 +186,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 **Note**: You need to have a personal outlook.com account for this and the following tasks. If you don’t have an account like this, open your web browser, go to https://outlook.com and create a new account.
 
-1. Sign in to the **Azure Portal** (https://portal.azure.com) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
+1. Sign in to the **Azure Portal** (https://portal.azure.com) using **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 2. Navigate to **Azure Active Directory** and **Users**.
 
@@ -212,7 +212,7 @@ You have successfully changed the external collaboration settings, so guests can
 
 As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams. 
 
-1. Sign in to the Azure Portal (https://portal.azure.com) using admin@_&lt;YourTenant&gt;_.onmicrosoft.com.
+1. Sign in to the **Azure Portal** (https://portal.azure.com) using **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 2. Navigate to **Azure Active Directory** and **Groups**.
 
@@ -227,7 +227,7 @@ As a part of your system administrator role, you need to review access to resour
 	- **Group:** IT-Department
 	- **Reviewers:** Group owners 
 
-4. Navigate to **Outlook on the web** (https://outlook.office365.com) using JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com.
+4. Navigate to **Outlook on the web** (https://outlook.office365.com) using **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 5. Review the access reviews mail and deny access for the guest user in the **IT-Department** team.
 
