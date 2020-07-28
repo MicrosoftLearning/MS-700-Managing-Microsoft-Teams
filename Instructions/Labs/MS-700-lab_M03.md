@@ -277,19 +277,19 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 5. Configure the Calendar Processing features for the Teams Room. Read the following description and run the cmdlet at the end:
 
-	- AutomateProcessing: **AutoAccept (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)**
+	- AutomateProcessing: **AutoAccept88 (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
 
-	- AddOrganizerToSubject: **$false (The meeting organizer is not added to the subject of the meeting request.)**
+	- AddOrganizerToSubject: **$false** (The meeting organizer is not added to the subject of the meeting request.)
 
-	- DeleteComments: **$false (Keep any text in the message body of incoming meeting requests.)**
+	- DeleteComments: **$false** (Keep any text in the message body of incoming meeting requests.)
 
-	- DeleteSubject: **$false (Keep the subject of incoming meeting requests.)**
+	- DeleteSubject: **$false** (Keep the subject of incoming meeting requests.)
 
-	- RemovePrivateProperty: **$false (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)**
+	- RemovePrivateProperty: **$false** (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)
 
-	- AddAdditionalResponse: **$true (The text specified by the AdditionalResponse parameter is added to meeting requests.)**
+	- AddAdditionalResponse: **$true** (The text specified by the AdditionalResponse parameter is added to meeting requests.)
 
-	- AdditionalResponse: **"This is a Teams Meeting room" (The additional text to add to the meeting request.)**
+	- AdditionalResponse: **"This is a Teams Meeting room"** (The additional text to add to the meeting request.)
 
 	```powershell
 	Set-CalendarProcessing -Identity "NY-TeamsRoom1" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Teams Meeting room"
