@@ -328,7 +328,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 16. In the **Microsoft 365 admin center** from the left navigation pane, under **Billing** select **Purchase services**.
 
-17. In the **Search** box on the right, type **Teams Room** and then hit Enter.
+17. In the **Search** box on the right, type **Meeting Room** and then hit Enter.
 
 18. In the results page, locate the **Collaboration and communication** section, and under **Meeting Room** select **Details** and then select **Get free trial**.
 
