@@ -44,9 +44,13 @@ In the past, some users of Contoso have used a lot of stickers, gif animations a
 2. Create a new **New messaging policy** with the following settings:
 
 	- **Name:** Regular users without fun stuff
+
 	- **Description:** Policy to disable giphys, sticker and memes in conversations
+
 	- **Use Giphys in conversations:** off
+
 	- **Use Memes in conversations:** off
+	
 	- **Use Stickers in conversations:** off
 
 3. Assign the new messaging policy to **Lynne Robbins**.
@@ -65,8 +69,11 @@ As your part as system administrator of Contoso, you will create a private chann
 2. Create a new channel for the **Sales** team, using the following settings:
 
 	- **Name:** Confidential sales
+
 	- **Description:** Confidential private sales channel
+
 	- **Type:** Private
+
 	- **Owner:** Lynne Robbins
 
 3. Sign in to the Teams web client [**https://teams.microsoft.com/**](https://teams.microsoft.com/) using **LynneR@_&lt;YourTenant&gt;_.onmicrosoft.com**.
@@ -99,6 +106,8 @@ In the past, users stored data at various location, including third-party storag
 	- **Box** off
 
 	- **Google Drive** off
+
+	- **Egnyte** off
 
 3. Leave the Teams admin center open. 
 
