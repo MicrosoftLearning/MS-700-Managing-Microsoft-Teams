@@ -45,7 +45,7 @@ In this exercise, you will calculate the network requirements for Microsoft team
  
 | **Location**       | **Total number of employees**    | **WAN link capacity / audio/video queue size (Mbps)** | **Office 365 connection**  | **Internet connection** |
 |--------------------|-------------------------------|--------------|-------------------------------------------------------|----------------------------|
-| New York HQ | 1000| 1024/300/500 | ExpressRoute | Local Internet 1024 Mbps|
+| New York HQ | 1000| 1000/300/500 | ExpressRoute | Local Internet 1000 Mbps|
 | Los Angeles Office | 250 | 500/100/200  | Remote connection through HQ | Remote Internet through HQ | 
 | Houston Office     | 150 | 400/50/100   | Remote connection through HQ                          | Remote Internet through HQ |     
 
