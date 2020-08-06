@@ -53,7 +53,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In the **Teams admin center,** under **Planning** section, open **Network Planner**. 
 
@@ -65,73 +65,73 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 7. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name:**  **New York HQ site**
+	- Network site name:  **New York HQ site**
 
-	- **Description:** **New York HQ site network infrastructure**
+	- Description: **New York HQ site network infrastructure**
 
-	- **Network users:** **1000**
+	- Network users: **1000**
 
 	- In the **Network settings** section, add following configuration:
 
-		- **Subnet:** **172.16.0.0**, **Network range:** **16**
+		- Subnet: **172.16.0.0**, Network range: **16**
 
-		- **Express Route:** **On**
+		- Express Route: **On**
 
-		-  **Internet link capacity:** **1024**
+		-  Internet link capacity: **1024**
 
-		-  **PSTN egress:** **Use VoIP only**
+		-  PSTN egress: **Use VoIP only**
 
 8. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name:** **Los Angeles site**
+	- Network site name: **Los Angeles site**
 
-	- **Description:** **Los Angeles site network infrastructure**
+	- Description: **Los Angeles site network infrastructure**
 
-	- **Network users** field type: **250**
+	- Network users field type: **250**
 
 	- In the **Network settings** section, add following configuration:
 
-		- **Subnet:** **192.168.10.0**, **Network range:** **24**
+		- Subnet: **192.168.10.0**, Network range: **24**
 
-		- **ExpressRoute:** **Off**
+		- ExpressRoute: **Off**
 
-		- **Connected to WAN:** **On**
+		- Connected to WAN: **On**
 
-		-  **WAN link capacity:** **500**
+		-  WAN link capacity: **500**
 
-		- **WAN audio queue size:** **100**
+		- WAN audio queue size: **100**
 
-		-  **Video queue size:** **200**
+		-  Video queue size: **200**
 
-	   - **Internet link capacity** **500**
+	   - Internet link capacity **500**
 
-		- **PSTN egress:** **Use VoIP only**
+		- PSTN egress: **Use VoIP only**
 
 9. In **Contoso plan**, add a **Network site** with following configuration:
 
-	- **Network site name: Houston site**
+	- Network site name: **Houston site**
 
-	- **Description: Houston site network infrastructure**
+	- Description: **Houston site network infrastructure**
 
-	- **Network users: 150**
+	- Network users: **150**
 
     - In the **Network settings** section, add following configuration:
 
-	   - **Subnet:** **192.168.20.0**, **Network range:** **24**
+	   - Subnet: **192.168.20.0**, Network range: **24**
 
-	   - **ExpressRoute:** **Off**
+	   - ExpressRoute: **Off**
 
-	   -  **Connected to WAN:** **On**
+	   -  Connected to WAN: **On**
 
-	   - **WAN link capacity:** **400**
+	   - WAN link capacity: **400**
 
-	   - **WAN audio queue size:** **50**
+	   - WAN audio queue size: **50**
 
-	   - **Video queue size:** **100**
+	   - Video queue size: **100**
 
-	   - **Internet link capacity** **400**
+	   - Internet link capacity **400**
 
-	   - **PSTN egress:** **Use VoIP only**
+	   - PSTN egress: **Use VoIP only**
 
 10. Start a report for the **Contoso plan** with a name **Contoso report** and a description **Contoso network estimation report**.
 
@@ -197,52 +197,52 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user JoniS@_YourTenant_.onmicrosoft.com and sign in with the credentials provided to you.
+2. Sign in to **Microsoft Teams admin center** (https://admin.teams.microsoft.com) as user **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com** and sign in with the credentials provided to you.
 
 3. In **Teams admin center**, in the **Devices** section, on the **Phones** page, create a **Configuration profile** with following configuration:
 
-	- **Configuration profile Name**: New York Teams Desk Phones
+	- Configuration profile Name: **New York Teams Desk Phones**
 
-	- **Description:** Configuration profile for Teams Desk Phones in New York HQ
+	- Description: **Configuration profile for Teams Desk Phones in New York HQ**
 
 4. Under **General** section, configure following settings:
 
-	- **Device lock:** On
+	- Device lock: **On**
 
-	- **Timeout** 30 seconds
+	- Timeout: **30 seconds**
 
-	- **PIN:** 123456
+	- PIN: **123456**
 
-	- **Language:** English (United States).
+	- Language: **English (United States)**
 
-	- **Timezone**: (UTC-5:00) Eastern Time (US and Canada)
+	- Timezone: **(UTC-5:00) Eastern Time (US and Canada)**
 
-	- **Date format:** MM/DD/YYYY
+	- Date format: **MM/DD/YYYY**
 
-	- **Time format:** 12 Hours (AM/PM)
+	- Time format: **12 Hours (AM/PM)**
 
 5. Under **Device settings** configure following settings:
 
-	- **Display screen saver**: On, Timeout 1 minute
+	- Display screen saver: **On, Timeout 1 minute**
 
-	- **Display high contrast:** On
+	- Display high contrast: **On**
 
-	- **Office hours:** 08:00-17:00
+	- Office hours: **08:00-17:00**
 
-	- **Power Saving:** On.
+	- Power Saving: **On**
 
 6. Under **Network settings**, configure following settings:
 
-	- **DHCP enabled:** On
+	- DHCP enabled: **On**
 
-	- **Logging enabled:** Off
+	- Logging enabled: **Off**
 
-	- **Device’s default admin password:** Pass@word1
+	- Device’s default admin password: **Pass@word1**
 
 In this task, you have successfully created a configuration profiles that can be applied to Microsoft Teams devices.
  
 
-#### Task 2 - Create a Microsoft Team Room 
+#### Task 2 - Create a Microsoft Teams Room 
 
 Your organization has ordered devices for Microsoft Teams room. In the meantime, you need to ensure that all prerequisites for the equipment installation are being completed. One of the prerequisites for Microsoft Teams Room deployment is adding a device account and assigning Office 365 license for that account.
 
@@ -255,7 +255,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	    $UserCredential = Get-Credential
 	    ```
 
-	- In the **Windows PowerShell Credential Request** dialog box, enter the admin@_YourTenant_.onmicrosoft.com, including and the password provided to you.
+	- In the **Windows PowerShell Credential Request** dialog box, enter the **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**, including and the password provided to you.
 
 	- Run the following cmdlet to establish a connection to Exchange Online PowerShell:
 
@@ -272,24 +272,24 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 4. Create a new room mailbox named **NY-TeamsRoom1** by running the following cmdlet (remember to replace your tenant name):
 
 	```powershell
-	New-Mailbox -Name "NY-TeamsRoom1" -Alias NY-TeamsRoom1 -Room -EnableRoomMailboxAccount $true -MicrosoftOnlineServicesID NY-TeamsRoom1@_YourTenant_.onmicrosoft.com -RoomMailboxPassword (ConvertTo-SecureString -String 'pass@word1' -AsPlainText -Force)
+	New-Mailbox -Name "NY-TeamsRoom1" -Alias NY-TeamsRoom1 -Room -EnableRoomMailboxAccount $true -MicrosoftOnlineServicesID NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -RoomMailboxPassword (ConvertTo-SecureString -String 'pass@word1' -AsPlainText -Force)
 	```
 
 5. Configure the Calendar Processing features for the Teams Room. Read the following description and run the cmdlet at the end:
 
-	- **AutomateProcessing**: AutoAccept (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
+	- AutomateProcessing: **AutoAccept88 (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
 
-	- **AddOrganizerToSubject**: $false (The meeting organizer is not added to the subject of the meeting request.)
+	- AddOrganizerToSubject: **$false** (The meeting organizer is not added to the subject of the meeting request.)
 
-	- **DeleteComments**: $false (Keep any text in the message body of incoming meeting requests.)
+	- DeleteComments: **$false** (Keep any text in the message body of incoming meeting requests.)
 
-	- **DeleteSubject**: $false (Keep the subject of incoming meeting requests.)
+	- DeleteSubject: **$false** (Keep the subject of incoming meeting requests.)
 
-	- **RemovePrivateProperty**: $false (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)
+	- RemovePrivateProperty: **$false** (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)
 
-	- **AddAdditionalResponse**: $true (The text specified by the AdditionalResponse parameter is added to meeting requests.)
+	- AddAdditionalResponse: **$true** (The text specified by the AdditionalResponse parameter is added to meeting requests.)
 
-	- **AdditionalResponse**: "This is a Teams Meeting room" (The additional text to add to the meeting request.)
+	- AdditionalResponse: **"This is a Teams Meeting room"** (The additional text to add to the meeting request.)
 
 	```powershell
 	Set-CalendarProcessing -Identity "NY-TeamsRoom1" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Teams Meeting room"
@@ -304,21 +304,21 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 7. Connect to **Azure AD PowerShell,** to configure Teams Room account settings by running the following cmdlet:
 
 	```powershell
-	Connect-AzureAD
+	Connect-AzureAD -Credential $UserCredential
 	```
 
-8. On the sign in window, enter **admin@_YourTenant_.onmicrosoft.com** and sign in with the password provided.
-
-9. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_YourTenant_.onmicrosoft.com** by running the following cmdlet:
+8. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** by running the following cmdlet:
 
 	```powershell
-	Set-AzureADUser -ObjectId NY-TeamsRoom1@_YourTenant_.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
+	Set-AzureADUser -ObjectId NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
 	```
 
-10. Close the PowerShell window.Open the Edge browser, navigate to the **Microsoft 365 admin center** page (**https://admin.microsoft.com**) and sign in as **admin@_YourTenant_.onmicrosoft.com**.
+9. Close the PowerShell window and open the Edge browser, navigate to the **Microsoft 365 admin center** page at:**https://admin.microsoft.com** and sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
-11. In **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
+10. In the **Microsoft 365 admin center** from **Purchase services** (under **Billing**), obtain a **Meeting Room** trial license.
 
-12. Add **Offie 365 E5** product license to **NY-TeamsRoom1@_YourTenant_.onmicrosoft.com** account, which is final step in preparing an account for your Microsoft Teams Room service in Office 365.
+11. In the **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
 
-You have successfully created, configured and licensed a Microsoft Team Room service account, which is a prerequisite for deploying Microsoft Teams Room systems.
+12. Add **Meeting Room** product license to the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account.
+
+You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.

@@ -8,7 +8,7 @@ lab:
 # Student lab manual
 ## Lab Scenario  
 
-In the labs of this course you will assume the role of Joni Sherman, a System Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. Before starting the deployment, IT department is gathering business requirements about Teams governance as well as data security and compliance, including how the data shared in Teams be regulated according to the organization's compliance requirements. After you complete the planning process, you will configure Office 365 Groups governance, protect Teams from threats, and configure Teams to meet your organization compliance requirements.
+In the labs of this course you will assume the role of Joni Sherman, a System Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. Before starting the deployment, IT department is gathering business requirements about Teams governance as well as data security and compliance, including how the data shared in Teams be regulated according to the organization's compliance requirements. After you complete the planning process, you will configure Microsoft 365 Groups governance, protect Teams from threats, and configure Teams to meet your organization compliance requirements.
 
 ## Objectives
 
@@ -33,12 +33,12 @@ After you complete this lab, you will be able to:
 
 ### Exercise 1: Implement Governance and Lifecycle Management for Microsoft Teams
 
-Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Office 365 groups, you need to plan governance procedures for Office 365 groups, including creating and configuring Office 365 groups classification labels, creating Office 365 groups expiration policies, configuring Office 365 Group creation policy permissions ,and configuring Office 365 Groups naming policies.
+Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating and configuring Microsoft 365 groups classification labels, creating Microsoft 365 groups expiration policies, configuring Microsoft 365 Group creation policy permissions ,and configuring Microsoft 365 Groups naming policies.
 
 
 #### Task 1 - Create classification labels
 
-You need to evaluate governance of Office 365 Groups before deploying them in your organizations. One of the tasks is to add information about the group purpose. You will create classification labels in order to inform users what type of documents are stored within the group or what type of data is inside the email exchange within the group. In this task, you will create three classifications “Standard, Internal and Confidential”. For each of them, you will create appropriate classification desriptions "Standard: General communication, Internal: Company internal data, Confidential: Data that has regulatory requirements"
+You need to evaluate governance of Microsoft 365 Groups before deploying them in your organizations. One of the tasks is to add information about the group purpose. You will create classification labels in order to inform users what type of documents are stored within the group or what type of data is inside the email exchange within the group. In this task, you will create three classifications “Standard, Internal and Confidential”. For each of them, you will create appropriate classification desriptions "Standard: General communication, Internal: Company internal data, Confidential: Data that has regulatory requirements"
 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
@@ -59,7 +59,7 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 	Connect-AzureAD
 	```
 
-6. A **Sign in** dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+6. A **Sign in** dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 7. To add classification descriptions for unified groups on the directory level, load the unified group template into a variable and modify it in the next steps. To load the unifed group template, run the following cmdlet:
 
@@ -97,15 +97,15 @@ You need to evaluate governance of Office 365 Groups before deploying them in yo
 	New-AzureADDirectorySetting -DirectorySetting $Setting
 	```
 
-   **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
+     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
 
-   If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
+     If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
 
-   ```powershell
-   Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
-   ```
+     ```powershell
+     Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
+     ```
 
-In this task, you have created classifications and classification descriptions for the Office 365 Groups, that will be used as Microsoft Teams classifications.
+In this task, you have created classifications and classification descriptions for the Microsoft 365 Groups, that will be used as Microsoft Teams classifications.
  
 
 #### Task 2 - Assign classification labels
@@ -114,7 +114,7 @@ Once the classification label and descriptions are created, users can now assign
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, and sign in to **Microsoft Teams** home page on following URL: https://teams.microsoft.com/ as user lynner@_YourTenant_.onmicrosoft.com with the provided credentials.
+2. Open Microsoft Edge, and sign in to **Microsoft Teams** home page on following URL: https://teams.microsoft.com/ as user lynner@_&lt;YourTenant&gt;_.onmicrosoft.com with the provided credentials.
 
 3. On the Microsoft Teams landing page choose the option to use the web app.
 
@@ -138,7 +138,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
  1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@_YourTenant_.onmicrosoft.com**).
+2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@_&lt;YourTenant&gt;_.onmicrosoft.com**).
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, choose **Azure Active Directory**.
 
@@ -146,7 +146,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 
 5. On the **Groups** page, configure **Expiration** so that **Group lifetime (in days)** is **90**.
 
-6. In the **Email contact for groups with no owners** field, type **JoniS@_YourTenant_.onmicrosoft.com**.
+6. In the **Email contact for groups with no owners** field, type **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 7. Apply the expiration policy you just created to **Teams Rollout** group.
  
@@ -155,7 +155,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 #### Task 4 - Configure group creation policy    
 
-You are an administrator for your Teams organization. You need to limit which users are able to create Office 365 groups. You will create a security group named **GroupCreators** which only the members of the group are allowed to create Office 365 groups.
+You are an administrator for your Teams organization. You need to limit which users are able to create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group are allowed to create Microsoft 365 groups.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you and run **Windows PowerShell**.
 
@@ -165,7 +165,7 @@ You are an administrator for your Teams organization. You need to limit which us
 	Connect-AzureAD
 	```
  
-3. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+3. A Sign in dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. Create a new security group “GroupCreators” by running the following cmdlet:
 
@@ -213,7 +213,7 @@ You are an administrator for your Teams organization. You need to limit which us
  
 11. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@_YourTenant_.OnMicrosoft.com**.
+12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@_&lt;YourTenant&gt;_.OnMicrosoft.com**.
 
 13. Select **Join or create a team** and you won’t see the option to **Create team**.
 
@@ -224,11 +224,11 @@ In this task, you have successfully created a security group and configured Azur
 
 #### Task 5 - Configure a new naming policy  
 
-As part of your Teams planning project, you will configure the naming policy where each new Office 365 Group or Team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: CEO, Payroll and HR. 
+As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 Group or Team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: CEO, Payroll and HR. 
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge broswer, sign in to **Microsoft Azure Portal** (https://portal.azure.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge broswer, sign in to **Microsoft Azure Portal** (https://portal.azure.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In the **Microsoft Azure portal**, from the **Azure services**, select **Azure Active Directory**.
 
@@ -247,7 +247,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 10. Since you are only testing the naming policy for evaluation, **Discard** the group naming policy.
 
-In this task, you have configured a naming policy that will block specific words to be used in an Office 365 Group name, as well as you have evaluated the options for prefix and suffix of the Office 365 Group name.
+In this task, you have configured a naming policy that will block specific words to be used in an Microsoft 365 Group name, as well as you have evaluated the options for prefix and suffix of the Microsoft 365 Group name.
 
  
 #### Task 6 – Remove the changed Azure AD settings again  
@@ -262,7 +262,7 @@ You can revert the Azure AD settings changes to defaults with following steps.
 	Connect-AzureAD
 	```
 
-3. A Sign in dialog box will open. Sign in as **admin@_YourTenant_.onmicrosoft.com** using the O365 Credentials provided to you.
+3. A Sign in dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
 4. To load the unifed group template, use the following cmdlet:
 
@@ -313,7 +313,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, sign in to **Microsoft 365 security center** (https://security.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. Open Microsoft Edge, sign in to **Microsoft 365 security center** (https://security.microsoft.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In the **Microsoft 365 security center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365)**.
 
@@ -335,7 +335,7 @@ Before deploying Microsoft Teams in your organization, you will need to evaluate
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Office 365 Security &amp; Compliance center** (https://protection.office.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Office 365 Security &amp; Compliance center** (https://protection.office.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In **Office 365 Security &amp; Compliance center**, on the left navigation pane, under **information governance** section, choose **Retention**.
 
@@ -364,7 +364,7 @@ According to your organization compliance requirements, you need to implement ba
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. In Microsoft Edge, sign in to **Microsoft 365 compliance center** (https://compliance.microsoft.com) as user **admin@_YourTenant_.onmicrosoft.com**.
+2. In Microsoft Edge, sign in to **Microsoft 365 compliance center** (https://compliance.microsoft.com) as user **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
 3. In **Microsoft 365 compliance center**, on the left navigation pane, select **Data loss prevention**.
 
