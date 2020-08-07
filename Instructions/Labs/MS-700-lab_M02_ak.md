@@ -359,11 +359,11 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 5. On the **Policies** page, scroll to the **Threat protection** section and select **ATP safe attachments (Office 365)**.
 
-6. A new browser tab with the **Office 365 Security &amp; Compliance center** will open.
+6. On the **Safe attachments** page, select **Global settings** on the ribbon. 
 
-7. On the left navigation pane, select **Threat management** > **Policy**, and on the **Policy** page, select the **ATP safe attachments** tile.
+7. In the wizard, set **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams** to **On**.
 
-8. On the **ATP safe attachments** page, select the check box next to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**, and then select the **Save** button.
+8. Select the **Save** button.
 
 9. Close the Edge browser window.
 

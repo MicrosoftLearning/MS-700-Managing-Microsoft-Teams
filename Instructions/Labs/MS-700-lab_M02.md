@@ -317,9 +317,9 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 3. In the **Microsoft 365 security center**, in the left navigation pane, select **Policies**, choose **Threat Protection** section and open **ATP safe attachments (Office 365)**.
 
-4. A new browser tab with the **Office 365 Security &amp; Compliance center** will open, where in **Threat management** > **Policy,** in **ATP safe attachments** tile, select the option to **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
+4. On the **Safe attachments** page, select **Global settings** then set **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams** to **On**.
 
-5. Close the Edge browser window.
+5. Select **Save** and close the Edge browser window.
 
 In this task, you have activated ATP safe attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks block documents that contain malware.
 
