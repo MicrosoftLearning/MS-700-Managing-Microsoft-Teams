@@ -77,7 +77,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 		- Express Route: **On**
 
-		-  Internet link capacity: **1024**
+		-  Internet link capacity: **1000**
 
 		-  PSTN egress: **Use VoIP only**
 
@@ -277,7 +277,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 5. Configure the Calendar Processing features for the Teams Room. Read the following description and run the cmdlet at the end:
 
-	- AutomateProcessing: **AutoAccept88 (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
+	- AutomateProcessing: **AutoAccept** (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
 
 	- AddOrganizerToSubject: **$false** (The meeting organizer is not added to the subject of the meeting request.)
 
