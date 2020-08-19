@@ -63,12 +63,12 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 2. Check the Teams PowerShell module for the ability to create private channels:
 
 	```powershell
-	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams private preview module."} else {"Continue with the current module."}
+	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
 	```
 
-    If the output of the command is "**_Continue with the current module_**", skip steps 3-6 and continue with step 7. If the output of the command is "**_Close PowerShell and install the Teams private preview module._**", close the PowerShell window and continue with step 3.
+    If the output of the command is "**_Continue with the current module_**", skip steps 3-6 and continue with step 7. If the output of the command is "**_Close PowerShell and install the Teams public preview module._**", close the PowerShell window and continue with step 3.
 
-3.  If you need to install the Teams private preview module, first open an elevated PowerShell (Admin) window and uninstall the current PowerShell module by running the following cmdlet:
+3.  If you need to install the Teams public preview module, first open an elevated PowerShell (Admin) window and uninstall the current PowerShell module by running the following cmdlet:
 
 	```powershell
 	Uninstall-Module MicrosoftTeams
@@ -76,22 +76,22 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 		
      >**Note:** If the Uninstall-Module command fails, close the PowerShell window, open a new elevated PowerShell (Admin) window, and then repeat this step.
 
-4. Add the official testing repository:
+4. Install PowerShellGet module with the version 2.2.4.1:
 
 	```powershell
-	Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted 
-	```
+	Install-Module -Name PowerShellGet -RequiredVersion 2.2.4.1 -Force
+	``` 
 
-5. Install the Teams PowerShell private preview module from the testing repository:
+5. Install the Teams PowerShell public preview module:
 
 	```powershell
-	Install-Module MicrosoftTeams -Repository PSGalleryInt -AllowClobber -Force
+	Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.3-preview -AllowPrerelease	
 	```
 
 6. Verify that the Teams PowerShell module supports creating private channels:
 
 	```powershell
-	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams private preview module."} else {"Continue with the current module."}
+	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
 	```
 
 7. Connect to Teams in your tenant:
