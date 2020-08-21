@@ -98,67 +98,69 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Install-Module -Name PowerShellGet -RequiredVersion 2.2.4.1 -Force
 	``` 
 
-7. Then, to install the MicrosoftTeams PowerShell public preview module, run the following cmdlet:
+7. Close the PowerShell window, then reopen it by right clicking on the Windows symbol in the lower left corner (Start), and selecting **Windows PowerShell (Admin)**.
+
+8. To install the MicrosoftTeams PowerShell public preview module, run the following cmdlet:
 
 	```powershell
-	Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.3-preview -AllowPrerelease	
+	Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.3-preview -AllowPrerelease -AllowClobber	
 	```
 
-8. Verify that the Teams PowerShell module supports creating private channels by using the following cmdlet:
+9. Verify that the Teams PowerShell module now supports creating private channels by using the following cmdlet:
 
 	```powershell
 	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
 	```
 
-9. If the correct module is installed, run the following cmdlet to connect to Microsoft Teams in your tenant:  
+10. If the correct module is installed, run the following cmdlet to connect to Microsoft Teams in your tenant:  
 
 	```powershell
 	Connect-MicrosoftTeams
 	```
 
-10. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**) and then select **Next**.  
+11. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**) and then select **Next**.  
 
-11. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in**. 
+12. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in**. 
 
-12. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**: 
+13. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**: 
 
 	```powershell
 	New-Team -Displayname “CA-Office” -MailNickName “CA-Office” -Visibility Public
 	``` 
 
-13. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing **_&lt;YourTenant&gt;_** with the name of the Microsoft 365 Tenant provided to you.): 
+14. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing **_&lt;YourTenant&gt;_** with the name of the Microsoft 365 Tenant provided to you.): 
 
 	```powershell
 	Get-Team -Displayname “CA-Office” | Add-TeamUser -User AlexW@<YourTenant>.onmicrosoft.com
 	```
 
-14. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing **_&lt;YourTenant&gt;_** with the name of the Microsoft 365 Tenant provided to you.): 
+15. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing **_&lt;YourTenant&gt;_** with the name of the Microsoft 365 Tenant provided to you.): 
 
 	```powershell
 	Get-Team -Displayname “CA-Office” | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
 	```
 
-15. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
+16. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
 
 	```powershell
 	Get-Team -Displayname “CA-Office” | New-TeamChannel -DisplayName "Support”
 	``` 
 
-16. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
+17. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
 
 	```powershell
 	Get-Team -Displayname “CA-Office” | New-TeamChannel -DisplayName "Recruiting"
 	``` 
 
-17. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+18. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
 
 	```powershell
 	Get-Team -Displayname “CA-Office” | New-TeamChannel -DisplayName "Administration" -MembershipType Private
 	```
 
-18. Close the PowerShell window.
+19. Close the PowerShell window.
 
-19. Switch into the Teams Client again and, on the left side pane with all teams Joni is a member of, you should see the new **CA-Office** team.
+20. Switch into the Teams Client again and, on the left side pane with all teams Joni is a member of, you should see the new **CA-Office** team.
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
