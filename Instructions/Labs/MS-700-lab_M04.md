@@ -82,10 +82,10 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	Install-Module -Name PowerShellGet -RequiredVersion 2.2.4.1 -Force
 	``` 
 
-5. Install the Teams PowerShell public preview module:
+5. Close and then re-open the elevated PowerShell (Admin) window and then install the Teams PowerShell public preview module:
 
 	```powershell
-	Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.3-preview -AllowPrerelease	
+	Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.3-preview -AllowPrerelease -AllowClobber	
 	```
 
 6. Verify that the Teams PowerShell module supports creating private channels:
