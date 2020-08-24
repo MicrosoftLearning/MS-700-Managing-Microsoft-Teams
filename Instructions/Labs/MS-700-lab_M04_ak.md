@@ -82,7 +82,7 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
 	```
 
-    If the output of the command is "**_Close PowerShell and install the Teams public preview module_**", close the PowerShell window and continue with the next step. If the output of the command is "**_Continue with the current module_**", skip steps 5-8 and continue with step 9.
+    If the output of the command is "**_Close PowerShell and install the Teams public preview module_**", close the PowerShell window and continue with the next step. If the output of the command is "**_Continue with the current module_**", skip steps 5-9 and continue with step 10.
 
 5.  If you need to install the Teams public preview module, right click on the Windows symbol in the lower left corner (Start), select **Windows PowerShell (Admin)** and uninstall the current PowerShell module by running the following cmdlet:
 
