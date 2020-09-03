@@ -14,7 +14,6 @@ In the labs of this course you will assume the role of Joni Sherman, a System Ad
 
 After you complete this lab, you will be able to:
 
-- Create classification labels
 - Configure expiration policies
 - Restrict creation of new teams to members of a security group
 - Create naming policies
@@ -33,7 +32,7 @@ After you complete this lab, you will be able to:
 
 ### Exercise 1: Implement Governance and Lifecycle Management for Microsoft Teams
 
-Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating and configuring Microsoft 365 groups classification labels, creating Microsoft 365 groups expiration policies, configuring Microsoft 365 Group creation policy permissions ,and configuring Microsoft 365 Groups naming policies.
+Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating Microsoft 365 groups expiration policies, configuring Microsoft 365 Group creation policy permissions ,and configuring Microsoft 365 Groups naming policies.
 
 
 #### Task 1 - Create classification labels
@@ -136,7 +135,7 @@ You have successfully applied a classification to an existing team. Continue wit
 
 Based on the organization requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the group expiration policy experience, you will configure an expiration policy, that will delete the **Teams Rollout** group after 90 days.
 
- 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
 2. In Microsoft Edge, sign in to **Microsoft Azure Portal** (https://portal.azure.com) with the global admin credential (**admin@_&lt;YourTenant&gt;_.onmicrosoft.com**).
 
@@ -157,67 +156,77 @@ You have successfully created a new expiration policy and configured the **Teams
 
 You are an administrator for your Teams organization. You need to limit which users are able to create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group are allowed to create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you and run **Windows PowerShell**.
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Connect to the Azure AD in your tenant with the following cmdlet:
+2. On Client 1 VM, run the **Windows PowerShell (Admin)** and confirm the User Account Control window. 
+
+3. In the PowerShell window, run the following cmdlet to install the Azure AD Preview module:
+
+	```powershell
+	Install-Module AzureADPreview
+	```
+
+4. When you are prompted to install from the Untrusted repository, confirm by choosing **Y**.
+
+5. Run the following cmdlet to connect to Azure AD in your tenant:
 
 	```powershell
 	Connect-AzureAD
 	```
- 
-3. A Sign in dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
-4. Create a new security group “GroupCreators” by running the following cmdlet:
+6. A **Sign in** dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
+
+7. Create a new security group “GroupCreators” by running the following cmdlet:
 
 	```powershell
 	New-AzureADGroup -DisplayName “GroupCreators” -SecurityEnabled:$true -MailEnabled:$false -MailNickName “GroupCreators”
 	```
  
-5. Run following cmdlet to add **Lynne Robbins** to the new security group:
+8. Run following cmdlet to add **Lynne Robbins** to the new security group:
 
 	```powershell
 	Get-AzureADGroup -SearchString "GroupCreators" | Add-AzureADGroupMember -RefObjectId (Get-AzureADUser -SearchString “Lynne Robbins”).ObjectId
 	```
 
-6. Run following cmdlet to fetch the unified group template again and load it into the “$template” variable:
+9. Run following cmdlet to fetch the unified group template again and load it into the “$template” variable:
 
 	```powershell
 	$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
 	```
 
-7. Run following cmdlet to check if a Azure AD setting is already existing and load it, if existing. If not, create a blank Azure AD setting object and populate the “$Setting” variable:
+10. Run following cmdlet to check if a Azure AD setting is already existing and load it, if existing. If not, create a blank Azure AD setting object and populate the “$Setting” variable:
 
 	```powershell
 	if (!($Setting=Get-AzureADDirectorySetting|Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting}
 	```
  
 
-8. Run following cmdlet to modify the group creation setting for your tenant with the “EnableGroupCreation” attribute:
+11. Run following cmdlet to modify the group creation setting for your tenant with the “EnableGroupCreation” attribute:
 
 	```powershell
 	$Setting["EnableGroupCreation"] = “False”
 	```
 
-9. Run following cmdlet to add the just created security group “GroupCreators” as permitted group to create groups, by their ObjectID:
+12. Run following cmdlet to add the just created security group “GroupCreators” as permitted group to create groups, by their ObjectID:
 
 	```powershell
 	$Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString “GroupCreators”).objectid
 	```
  
 
-10. Write back the changed settings object to your Azure AD tenant, by using the following cmdlet:
+13. Write back the changed settings object to your Azure AD tenant, by using the following cmdlet:
 
 	```powershell
 	Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
 	```
  
-11. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
+14. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-12. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@_&lt;YourTenant&gt;_.OnMicrosoft.com**.
+15. In Microsoft Edge browser, sign in to **Microsoft Teams web client** (**https://teams.microsoft.com/**) as user **MeganB@_&lt;YourTenant&gt;_.OnMicrosoft.com**.
 
-13. Select **Join or create a team** and you won’t see the option to **Create team**.
+16. Select **Join or create a team** and you won’t see the option to **Create team**.
 
-14. Close all open windows.
+17. Close all open windows.
 
 In this task, you have successfully created a security group and configured Azure AD settings to restrict the creation of new groups to members of this security group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
