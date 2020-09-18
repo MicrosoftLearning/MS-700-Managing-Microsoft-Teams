@@ -196,6 +196,7 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
    ```powershell
    Get-Module
    ```
+   **Note**: To the left of the **Name** column, the version of the PowerShell module is displayed. If the version of **MicrosoftTeams** is 1.1.6 or above, please skip task 3 and task 4 of this exercise. The Skype for Business PowerShell connector is a part of Teams PowerShell module starting 1.1.6 version.
 
 4. Investigate the available cmdlets: 
 
