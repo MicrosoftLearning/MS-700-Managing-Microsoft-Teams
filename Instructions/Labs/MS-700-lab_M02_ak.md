@@ -132,8 +132,15 @@ You are an administrator for your Teams organization. You need to limit which us
 	```powershell
 	$Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString “GroupCreators”).objectid
 	```
+14. Write back the settings object to your directory. Use the following cmdlet, to create a new “Group.Unified” Azure AD configuration with the custom settings:
 
-14. Write back the changed settings object to your Azure AD tenant, by using the following cmdlet:
+	```powershell
+	New-AzureADDirectorySetting -DirectorySetting $Setting
+	```
+
+	**Note** : Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
+ 	
+	If there is an existing directory settings object, you will need to use following cmdlet to update the directory setting in Azure Active Directory:
 
 	```powershell
 	Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting

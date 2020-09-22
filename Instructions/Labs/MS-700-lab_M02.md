@@ -28,110 +28,11 @@ After you complete this lab, you will be able to:
 
 ## Instructions
 
-
-
 ### Exercise 1: Implement Governance and Lifecycle Management for Microsoft Teams
 
 Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating Microsoft 365 groups expiration policies, configuring Microsoft 365 Group creation policy permissions ,and configuring Microsoft 365 Groups naming policies.
 
-
-#### Task 1 - Create classification labels
-
-You need to evaluate governance of Microsoft 365 Groups before deploying them in your organizations. One of the tasks is to add information about the group purpose. You will create classification labels in order to inform users what type of documents are stored within the group or what type of data is inside the email exchange within the group. In this task, you will create three classifications “Standard, Internal and Confidential”. For each of them, you will create appropriate classification desriptions "Standard: General communication, Internal: Company internal data, Confidential: Data that has regulatory requirements"
-
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. On Client 1 VM, run the **Windows PowerShell (Admin)** and confirm the User Account Control window. 
-
-3. In the PowerShell window, run the following cmdlet to install the Azure AD Preview module:
-
-	```powershell
-	Install-Module AzureADPreview
-	```
-
-4. When you are prompted to install from the Untrusted repository, confirm by choosing **Y**.
-
-5. Run the following cmdlet to connect to Azure AD in your tenant:
-
-	```powershell
-	Connect-AzureAD
-	```
-
-6. A **Sign in** dialog box will open. Sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
-
-7. To add classification descriptions for unified groups on the directory level, load the unified group template into a variable and modify it in the next steps. To load the unifed group template, run the following cmdlet:
-
-	```powershell
-	$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-	```
-
-8. Check if a Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the “$Setting” variable:
-
-	```powershell
-	if (!($Setting=Get-AzureADDirectorySetting|Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
-	```
-
-9. Modify the “ClassificationList” setting from the setting object variable by running the following cmdlet:
-
-	```powershell
-	$Setting["ClassificationList"] = "Standard, Internal, Confidential"
-	```
-
-10. Assiciate meaningful descriptions to each classification, by running the following cmdlet:
-
-	```powershell
-	$Setting["ClassificationDescriptions"] = "Standard: General communication, Internal: Company internal data, Confidential: Data that has regulatory requirements"
-	```
-
-11. To verify the classifications and calssificationdescriptions values, run the following cmdlet:
-
-	```powershell
-	$Setting.Values
-	```
-
-12. As soon as the “Setting” variable attributes contain the desired values, write back the settings object to your directory. Use the following cmdlet, to create a new “Group.Unified” Azure AD configuration with the custom settings:
-
-	```powershell
-	New-AzureADDirectorySetting -DirectorySetting $Setting
-	```
-
-     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use New-AzureADDirectorySetting to create a directory settings object at the first time. 
-
-     If there’s an existing directory settings object, you will need to run the following cmdlet to update the directory setting in Azure Active Directory:
-
-     ```powershell
-     Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
-     ```
-
-In this task, you have created classifications and classification descriptions for the Microsoft 365 Groups, that will be used as Microsoft Teams classifications.
- 
-
-#### Task 2 - Assign classification labels
-
-Once the classification label and descriptions are created, users can now assign them to the teams. Furthermore, users can modify existing classifications if needed. In this task, you will assign the “Confidential" classification to to the “Sales" team.
-
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
-
-2. Open Microsoft Edge, and sign in to **Microsoft Teams** home page on following URL: https://teams.microsoft.com/ as user lynner@_&lt;YourTenant&gt;_.onmicrosoft.com with the provided credentials.
-
-3. On the Microsoft Teams landing page choose the option to use the web app.
-
-4. On the Teams overview select the option to edit the **Sales** team.
-![Edit Sales Team](media/M02-EditSalesTeam.png)
-
-5. On the lower end of the **Edit "Sales" team** window, note the red message saying **Classification must be updated to save changes**, and then change the setting to classify the **Sales** team as **Confidential**. 
-![Update Classification](media/M02-UpdateClassification.png)
-
-6. Move the cursor and hover over the icon **(i)** right next to the **Classification** dropdown menu and note the classification descriptions.
-![Classification Descriptions](media/M02-ClassificationDescriptions.png)
-
-7. Save the changes.
-
-You have successfully applied a classification to an existing team. Continue with the next task.
-
-
-#### Task 3 - Create and assign expiration policy    
+#### Task 1 - Create and assign expiration policy    
 
 Based on the organization requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the group expiration policy experience, you will configure an expiration policy, that will delete the **Teams Rollout** group after 90 days.
 
@@ -152,7 +53,7 @@ Based on the organization requirement, unneeded groups should be deleted automat
 You have successfully created a new expiration policy and configured the **Teams Rollout** team to expire after 90 days. If the team won’t have a owner after 90 days, Joni Sherman is notified about the expiration if the team.
 
 
-#### Task 4 - Configure group creation policy    
+#### Task 2 - Configure group creation policy    
 
 You are an administrator for your Teams organization. You need to limit which users are able to create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group are allowed to create Microsoft 365 groups.
 
@@ -212,13 +113,19 @@ You are an administrator for your Teams organization. You need to limit which us
 	```powershell
 	$Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString “GroupCreators”).objectid
 	```
- 
+13. Write back the settings object to your directory. Use the following cmdlet, to create a new “Group.Unified” Azure AD configuration with the custom settings:
 
-13. Write back the changed settings object to your Azure AD tenant, by using the following cmdlet:
+	```powershell
+	New-AzureADDirectorySetting -DirectorySetting $Setting
+	```
+
+	**Note** : Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
+ 	
+	If there is an existing directory settings object, you will need to use following cmdlet to update the directory setting in Azure Active Directory:
 
 	```powershell
 	Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
-	```
+	``` 
  
 14. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -231,7 +138,7 @@ You are an administrator for your Teams organization. You need to limit which us
 In this task, you have successfully created a security group and configured Azure AD settings to restrict the creation of new groups to members of this security group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
 
-#### Task 5 - Configure a new naming policy  
+#### Task 3 - Configure a new naming policy  
 
 As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 Group or Team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: CEO, Payroll and HR. 
 
@@ -259,7 +166,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 In this task, you have configured a naming policy that will block specific words to be used in an Microsoft 365 Group name, as well as you have evaluated the options for prefix and suffix of the Microsoft 365 Group name.
 
  
-#### Task 6 – Remove the changed Azure AD settings again  
+#### Task 4 – Remove the changed Azure AD settings again  
 
 You can revert the Azure AD settings changes to defaults with following steps.
 
