@@ -118,7 +118,7 @@ You are an administrator for your Teams organization. You need to limit which us
 11. Run following cmdlet to check if a Azure AD setting is already existing and load it, if existing. If not, create a blank Azure AD setting object and populate the “$Setting” variable:
 
 	```powershell
-	if (!($Setting=Get-AzureADDirectorySetting|Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting}
+	if (!($Setting=Get-AzureADDirectorySetting|Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
 	```
 
 12. Run following cmdlet to modify the group creation setting for your tenant with the “EnableGroupCreation” attribute:
