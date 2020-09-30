@@ -123,7 +123,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
 11. In the settings below the Account tab, scroll to **Roles** and select **Manage roles** below.
 
-12. When the **Manage roles** pane opens, select **Admin center access** and scroll down to select **Teams admin**.
+12. When the **Manage roles** pane opens, select **Admin center access** and scroll down to select **Teams service admin**.
 
 13. Select **Save changes** to apply the role. When **Admin roles updated** is displayed, select the arrow pointing to the left.
 
@@ -284,7 +284,7 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
 
 #### **Task 3 – Install Skype for Business PowerShell cmdlet**
 
-Since the integration of Skype for Business into Microsoft Teams is not yet completed, it is necessary to know that some configurations must be made in the Skype for Business PowerShell, such as configuring telephony features and policies. Because the Skype for Business Online PowerShell module is not available from an official repository, you need to download the executable and install it manually.
+Since the integration of Skype for Business into Microsoft Teams is still fresh, it is necessary to know that some configurations must be made in the Skype for Business PowerShell, such as configuring telephony features and policies. Because the Skype for Business Online PowerShell module is not available from an official repository, you need to download the executable and install it manually.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -314,13 +314,7 @@ In this task, you will connect and explore the available cmdlets from the Skype 
 
 	**Note**: Because the execution policy is already set to unrestricted, you don’t need to change it again.
 
-3. To load the Skype for Business Online PowerShell module that was just installed, enter the following cmdlet and press **Enter**:
-
-	```powershell
-	Import-Module SkypeOnlineConnector
-	```
-
-4. To open a new Session with your tenant, enter in the following cmdlet in the PowerShell window and press **Enter**.
+1. To open a new Session with your tenant, enter in the following cmdlet in the PowerShell window and press **Enter**.
 
 	```powershell
 	$Session = New-CsOnlineSession
@@ -379,7 +373,7 @@ In your role as Joni Sherman, you do not have the necessary permissions to acces
 
 3. When the **Pick an account** window appears, sign in with **admin@_&lt;YourTenant&gt;_.onmicrosoft.com** using the O365 Credentials provided to you.
 
-4. In the Microsoft 365 admin center, select **Groups** from the left-side pane and select **Groups** below.
+4. In the Microsoft 365 admin center, select **Groups** from the left-side pane and select **Active Groups** below.
 
 5. Select **Add a group** in the **Groups** window to open the **New Group** pane.
 
