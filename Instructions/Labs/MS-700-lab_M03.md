@@ -295,7 +295,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	Set-CalendarProcessing -Identity "NY-TeamsRoom1" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Teams Meeting room"
 	```
  
-6. Disconnect from Exchage Online and end the established session with the following cmdlet:
+6. Disconnect from Exchange Online and end the established session with the following cmdlet:
 
 	```powershell
 	Remove-PSSession $Session
