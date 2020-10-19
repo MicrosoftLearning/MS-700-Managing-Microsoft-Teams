@@ -307,18 +307,18 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 	Connect-AzureAD -Credential $UserCredential
 	```
 
-8. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** by running the following cmdlet:
+8. Disable the password expiration for the Teams Room account **NY-TeamsRoom1** by running the following cmdlet:
 
 	```powershell
-	Set-AzureADUser -ObjectId NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
+	Get-AzureADUser | Where {$_.DisplayName -eq “NY-TeamsRoom1”} | Set-AzureADUser -PasswordPolicies DisablePasswordExpiration
 	```
 
 9. Close the PowerShell window and open the Edge browser, navigate to the **Microsoft 365 admin center** page at:**https://admin.microsoft.com** and sign in as **admin@_&lt;YourTenant&gt;_.onmicrosoft.com**.
 
-10. In the **Microsoft 365 admin center** from **Purchase services** (under **Billing**), obtain a **Meeting Room** trial license.
+10. In the **Microsoft 365 admin center** from **Purchase services** (under **Billing**), obtain a **Microsoft Teams Rooms** trial license.
 
 11. In the **Microsoft 365 admin center** from **Users** section, choose **Active Users**.
 
-12. Add **Meeting Room** product license to the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account.
+12. Add **Microsoft Teams Rooms** product license to the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account.
 
 You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
