@@ -260,9 +260,9 @@ In this task, you will add a custom line of business app required for your compa
 
 19. Select **NotificationBot** and review the details.
 
-20. Select **Add**, to test the custom app.
+20. Select **Add for me**, to test the custom app.
 
-21. On the **Welcome to Notification Bot** conversation, select the dropdown menu and select **Weather**.
+21. On the **Welcome to Notification Bot** conversation, select the dropdown menu and select **Weather**, and then select **Show Notification**.
 
 22. The weather forecast for your location is being displayed.
 
