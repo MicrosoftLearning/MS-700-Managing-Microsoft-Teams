@@ -317,7 +317,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 12. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** by running the following cmdlet:
 
 	```powershell
-	Get-AzureADUser | Where {$_.DisplayName -eq “NY-TeamsRoom1”} | Set-AzureADUser -PasswordPolicies DisablePasswordExpiration
+	Get-AzureADUser -Filter "DisplayName eq 'NY-TeamsRoom1'" | Set-AzureADUser -PasswordPolicies DisablePasswordExpiration
 	```
 
 13. Close the PowerShell window and open the Edge browser from the task bar.
