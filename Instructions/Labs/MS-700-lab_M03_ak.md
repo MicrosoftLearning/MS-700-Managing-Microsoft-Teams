@@ -317,7 +317,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 12. Disable the password expiration for the Teams Room account **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** by running the following cmdlet:
 
 	```powershell
-	Set-AzureADUser -ObjectId NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -PasswordPolicies DisablePasswordExpiration
+	Get-AzureADUser | Where {$_.DisplayName -eq “NY-TeamsRoom1”} | Set-AzureADUser -PasswordPolicies DisablePasswordExpiration
 	```
 
 13. Close the PowerShell window and open the Edge browser from the task bar.
@@ -328,9 +328,9 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 16. In the **Microsoft 365 admin center** from the left navigation pane, under **Billing** select **Purchase services**.
 
-17. In the **Search** box on the right, type **Meeting Room** and then hit Enter.
+17. In the **Search** box on the right, type **Room** and then hit Enter.
 
-18. In the results page, locate the **Collaboration and communication** section, and under **Meeting Room** select **Details** and then select **Get free trial**.
+18. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Standard** select **Details** and then select **Get free trial**.
 
 19. In the **Check out** page, select **Try now**, and in the **order receipt** page, select **Continue**.
 
@@ -338,7 +338,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 21. Select the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** account, and then select the **Manage product licenses** tab.
 
-22. In the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** page, under the **Licenses and Apps** tab, select **Meeting Room** and then select **Save changes**.
+22. In the **NY-TeamsRoom1@_&lt;YourTenant&gt;_.onmicrosoft.com** page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
 
 23. Close all open windows.
 
