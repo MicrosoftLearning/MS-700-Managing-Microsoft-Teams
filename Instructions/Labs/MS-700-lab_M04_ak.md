@@ -1,284 +1,529 @@
---- 
-lab: 
-    title: 'Lab: Manage teams'
-    type: 'Answer Key' 
-    module: 'Module 04 : Deploy and manage teams' 
+---
+lab:
+    title: 'Lab 04: Manage teams'
+    type: 'Answer Key'
+    module: 'Module 4: Deploy and manage teams'
 ---
 
-# Lab 04: Manage teams 
-# Student lab answer key
-## Lab Scenario  
+# **Lab 04: Manage teams**
 
-In the labs of this course, you will assume the role of Joni Sherman, a System Administrator for Contoso Ltd. In this lab, you will perform operational tasks as a Teams administrator, such as creating and modifying teams, managing membership and recovering deleted teams. In the second half of this lab, you will configure the guest access for your tenant and review access for both, internal and external users.
- 
-## Objectives
+# **Student lab answer key**
+
+## **Lab Scenario**
+
+In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. In this lab, you will perform operational tasks as a Teams administrator, such as creating and modifying teams, managing membership, and recovering deleted teams. In the second half of this lab, you will configure the guest access for your tenant and review access for both, internal and external users.
+
+## **Objectives**
 
 After you complete this lab, you will be able to:
 
 - Create a Team from a Microsoft 365 Group
-- Create a Team by using PowerShell
-- Create a Team with dynamic membership
-- Delete and recover Teams
-- Configure guest access in Azure and Teams
-- Review Access to a resource 
 
-## Lab Setup  
+- Create a Team by using PowerShell
+
+- Create a Team by using Microsoft Graph API
+
+- Create a Team with dynamic membership
+
+- Archive and unarchive Teams
+
+- Delete and recover Teams
+
+- Configure guest access in Azure and Teams
+
+- Review Access to a resource
+
+## **Lab Setup**
 
 - **Estimated Time:** 90 minutes.
 
-## Instructions
+## **Instructions**
 
+### **Exercise 1: Manage team resources**
 
-
-### Exercise 1: Manage team resources
-
-
-#### Task 1 - Create a Team from the Microsoft 365 Group 
+#### Task 1 - Create a team from an existing Microsoft 365 Group
 
 As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Microsoft 365 Group, created in an earlier task of this lab, and add Teams features to it.
- 
+
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. After signing in, open **Teams Desktop client** from the icon in the taskbar.
+2. Select the **Teams** icon on the taskbar to start the Teams Desktop client and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.OnMicrosoft.com).
 
-3. If you are already signed with **Joni** in at the Teams Desktop client, you can continue with step 7. 
+3. The Microsoft Teams Desktop client will start. If a **Bring your team together**, or **Get the Teams mobile app** window appears, close both windows.
 
-4. If you are not signed in already, you will be asked to **Enter your work, school or Microsoft account**., which is the UPN of Joni (**JoniS@_&lt;YourTenant&gt;_.OnMicrosoft.com**). Enter it and select **Sign in**. 
+4. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create team** from the middle of the window.
 
-5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+5. In the **Create a team** dialog , select **From a group or team**.
 
-6. The Microsoft Teams Desktop client will start. If a **Bring your team together** window appears, or **Get the Teams mobile app**, close both windows.
+6. In the **Create a new team from something you already own** dialog, select **Microsoft 365 group**.
 
-7. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create a team** from the middle of the window.
+7. In the **Which Microsoft 365 group do you want to use?** dialog select the group **"IT-Department"**, then select **Create**. Wait until the **Creating the team…** process is done.
 
-8. In the **Create your team** dialog Select **Create from…**, in the **Create a new team from something you already own** dialog select **Microsoft 365 group**. 
+8. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
 
-9. In the **Which Microsoft 365 group do you want to use?** dialog select the group **“IT-Department”**, then select **Create**. Wait until the **Creating the team…** process is done.
+9. Check, if **Joni Sherman** is still listed below Owners.
 
-10. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
+10. Select **Members and guests** and check that following members are still listed: **Lynne Robbins**, **Megan Bowen**, **Allan Deyoung** and **Alex Wilber**.
 
-11. Check, if **Joni Sherman** is still listed below Owners
+11. Select the **General** channel below the **IT-Department** teams.
 
-12. Select **Members and guests** and check that following members are still listed: **Lynne Robbins**, **Megan Bowen**, **Allan Deyoung** and **Alex Wilber**.
+12. Close the Teams Desktop client.
 
-13. Select the **General** channel below the **IT-Department** teams.
- 
 You have successfully created a new team with the Teams Desktop client, by using an existing Microsoft 365 Group. Leave the Teams client open and continue with the next task.
 
+#### Task 2 - Create a team by using PowerShell
 
-#### Task 2 - Create a new team by using PowerShell
-
-In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell. 
+In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Right click on the Windows symbol in the lower left corner (Start) and select **Windows PowerShell (Admin)**.
+2. On the taskbar at the bottom of the page, right click the **Start** button and then select **Windows PowerShell**.
 
-3. Confirm the **User Account Control** dialog with **Yes**.
+3. Check if the correct version of the MicrosoftTeams module is installed, by using the following cmdlet:
 
-4. Check if the correct version of the MicrosoftTeams module is installed, by using the following cmdlet:
+   ```powershell
+   If((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
+   ```
 
-	```powershell
-	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
-	```
+   If the output of the command is "**Close PowerShell and install the Teams public preview module**", close the PowerShell window and continue with the next step. If the output of the command is "**Continue with the current module**", skip steps 5-9 and continue with step 10.
 
-    If the output of the command is "**_Close PowerShell and install the Teams public preview module_**", close the PowerShell window and continue with the next step. If the output of the command is "**_Continue with the current module_**", skip steps 5-9 and continue with step 10.
+4. If you need to install the Teams public preview module, right click on the Windows symbol in the lower left corner (Start), select **Windows PowerShell (Admin)** and confirm the elevation prompt from the UAC.
 
-5.  If you need to install the Teams public preview module, right click on the Windows symbol in the lower left corner (Start), select **Windows PowerShell (Admin)** and uninstall the current PowerShell module by running the following cmdlet:
+5. Uninstall the current Teams PowerShell module by running the following cmdlet:
 
-	```powershell
-	Uninstall-Module MicrosoftTeams
-	```
-		
-     >**Note:** If the Uninstall-Module command fails, close the PowerShell window, open a new elevated PowerShell (Admin) window, and then repeat this step.
+   ```powershell
+   Uninstall-Module MicrosoftTeams
+   ```
+
+   **Note:** If the Uninstall-Module command fails, close the PowerShell window, open a new elevated PowerShell (Admin) window, and then repeat this step.
 
 6. Next, run the following cmdlet to install PowerShellGet module with the version 2.2.4.1:
 
-	```powershell
-	Install-Module -Name PowerShellGet -RequiredVersion 2.2.4.1 -Force
-	``` 
+   ```powershell
+   Install-Module -Name PowerShellGet -RequiredVersion 2.2.4.1 -Force
+   ```
 
-7. Close the PowerShell window, then reopen it by right clicking on the Windows symbol in the lower left corner (Start), and selecting **Windows PowerShell (Admin)**.
+7. Close the PowerShell window, then reopen it by right selecting on the Windows symbol in the lower left corner (Start), and selecting **Windows PowerShell (Admin)**.
 
-8. To install the MicrosoftTeams PowerShell public preview module, run the following cmdlet:
+8. Confirm the UAC prompt for elevation with **Yes**.
 
-	```powershell
-	Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.3-preview -AllowPrerelease -AllowClobber	
-	```
+9. To install the Microsoft Teams PowerShell public preview module, run the following cmdlet and confirm with **y**:
 
-9. Verify that the Teams PowerShell module now supports creating private channels by using the following cmdlet:
+   ```powershell
+   Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.5-preview -AllowPrerelease -AllowClobber 
+   ```
 
-	```powershell
-	If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
-	```
+10. Confirm the Untrusted repository message with **y** for yes.
 
-10. If the correct module is installed, run the following cmdlet to connect to Microsoft Teams in your tenant:  
+11. After installting, import the Teams PowerShell module with the following cmdlet:
 
-	```powershell
-	Connect-MicrosoftTeams
-	```
+   ```powershell
+   Import-Module MicrosoftTeams
+   ```
 
-11. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, **JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**) and then select **Next**.  
+12. Verify that the Teams PowerShell module now supports creating private channels by using the following cmdlet:
 
-12. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in**. 
+   ```powershell
+   If((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
+   ```
 
-13. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**: 
+13. If the correct module is installed and **"Continue with the current module."** is shown, run the following cmdlet to connect to Microsoft Teams in your tenant:
 
-	```powershell
-	New-Team -Displayname “CA-Office” -MailNickName “CA-Office” -Visibility Public
-	``` 
+   ```powershell
+   Connect-MicrosoftTeams
+   ```
 
-14. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing **_&lt;YourTenant&gt;_** with the name of the Microsoft 365 Tenant provided to you.): 
+14. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and then select **Next**.
 
-	```powershell
-	Get-Team -Displayname “CA-Office” | Add-TeamUser -User AlexW@<YourTenant>.onmicrosoft.com
-	```
+15. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** O365 Credentials provided to you and then select **Sign in**.
 
-15. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing **_&lt;YourTenant&gt;_** with the name of the Microsoft 365 Tenant provided to you.): 
+16. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**:
 
-	```powershell
-	Get-Team -Displayname “CA-Office” | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
-	```
+    ```powershell
+    New-Team -Displayname "CA-Office" -MailNickName "CA-Office" -Visibility Public
+    ```
 
-16. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
+17. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
 
-	```powershell
-	Get-Team -Displayname “CA-Office” | New-TeamChannel -DisplayName "Support”
-	``` 
+    ```powershell
+    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AlexW@<YourTenant>.onmicrosoft.com
+    ```
 
-17. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
+18. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
 
-	```powershell
-	Get-Team -Displayname “CA-Office” | New-TeamChannel -DisplayName "Recruiting"
-	``` 
+    ```powershell
+    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
+    ```
 
-18. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+19. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
 
-	```powershell
-	Get-Team -Displayname “CA-Office” | New-TeamChannel -DisplayName "Administration" -MembershipType Private
-	```
+    ```powershell
+    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Support"
+    ```
 
-19. Close the PowerShell window.
+20. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
 
-20. Switch into the Teams Client again and, on the left side pane with all teams Joni is a member of, you should see the new **CA-Office** team.
+    ```powershell
+    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Recruiting"
+    ```
+
+21. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+
+    ```powershell
+    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
+    ```
+
+22. Close the PowerShell window.
+
+23. Open the Teams Desktop Client from the taskbar. On the left side pane with all teams Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+
+24. Close all browser windows and the Teams Desktop Client.
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
+#### Task 3 - Create a team by using Graph API
 
-#### Task 3 - Delete and recover teams 
-
-In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
+In this task, you will test the Graph API capabilities for certain automation plans of your organization with Teams. For this task, you will create a new team, called **Early Adopters** with minimal settings, such as Public join options, and another team with multiple existing channels, called **Tech Meetings**.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. After signing in, open **Teams Desktop client** from the icon in the taskbar, if the client is not running already.
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
 
-3. Make sure you are logged in as Joni Sherman and if not, sign in.
+3. Select the **Sign in to Graph Explorer** button in the upper left of the page and sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
-4. In the left-hand navigation pane of the Teams Desktop client, select the three dots (…) right to the IT-Department team and select **Delete the team** from the list.
+4. If you access the Graph Explorer for the first time, you will see a **Permissions requested** page. Select **Accept**.
 
-5. In the **Delete “IT-Department” team**, select **I understand that everything will be deleted**. and select **Delete team**.
+5. Select the **GET** button and select **POST** from the dropdown menu.
 
-6. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal** at: [https://portal.azure.com](https://portal.azure.com). 
+6. Do not change the **v1.0** from the box in the middle.
 
-7. Sign in with the account of Joni Sherman by entering her UPN (**JoniS@_&lt;YourTenant&gt;_.OnMicrosoft.com**) and select **Sign in**. 
+7. Enter the following to the text box next to the **Run query** button:
 
-8. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+	- [https://graph.microsoft.com/v1.0/teams](https://graph.microsoft.com/v1.0/teams)
 
-9. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**
+8. Select **Modify permissions** from the top pane.
 
-10. On the **Contoso – Overview** page, select **Groups** from the left side pane.
+9. Scroll to the right and select the **Consent** button for the permissions **Group.ReadWrite.All**.
 
-11. On the **Groups - All groups** page, select **Deleted groups** in the left side pane.
+10. Another **Permissions requested** page appears. Select **Accept**.
 
-12. Now you can see all deleted groups, including the **IT-Department** group.
+11. If you are redirected to the Microsoft Developers site, navigate back to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
 
-13. Select the checkbox left from the **IT-Department** group and select **Restore group** from the top pane. **Confirm** the **Do you want to restore deleted groups dialog** with selecting **Yes**.
+12. Select the **Request body** tab and enter the following code:
 
-14. Switch back to the **Teams Desktop client** browser and press **F5** to refresh.
+    ```json
+	{
 
-15.  The IT-Department team appears in the list of teams again. Select the three dots (…) right from the team name and select **Manage team**.
+	"template@odata.bind":"https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
 
-16. You can see the owner and all members again in the **Members** tab.
+	"displayName": "Early Adopters",
 
-You have successfully deleted and restored a via the Teams Desktop client and Azure Admin Portal.
+	"description": "The Early Adopters Workspace.",
 
+	"visibility": "Public" 
 
-#### Task 4 - Create team with dynamic membership
+	}
+	```
+
+13. Select **Run** **query** from the upper right of the page.
+
+14. After a moment, you should see a green bar below the Request body window, with a checkmark and an **Accepted** message.
+
+15. Remove the whole content of the textbox in the textbox of **Request body**, you just used to create a team and replace it with the following content:
+
+    ```json
+	{
+
+	"template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+
+	"visibility": "Public",
+
+	"displayName": "Tech Meetings",
+
+	"description": "Space for all employees participating in the champions program, who want exchange each other about the newest features.",
+
+	"channels": [
+
+	{
+
+	"displayName": "Welcome Hall",
+
+	"isFavoriteByDefault": true,
+
+	"description": "Channel for introducing yourself as a member of the tech meeting participants."
+
+	},
+
+	{
+
+	"displayName": "Tech Lunch and Dinner",
+
+	"isFavoriteByDefault": true,
+
+	
+
+	
+
+	
+
+	
+
+	"description": "When will be the next tech lunch and who has any suggestions where to meet."
+
+	},
+
+	{
+
+	"displayName": "Q&A",
+
+	"description": "Questions and answers: Teams users giving a helping hand to other users.",
+
+	"isFavoriteByDefault": true
+
+	},
+
+	{
+
+	"displayName": "Issues and Feedback 🐞",
+
+	"description": "Leave some feedback for the IT-Staff.",
+
+	"isFavoriteByDefault": false
+
+	}
+
+	],
+
+	"memberSettings": {
+
+	"allowCreateUpdateChannels": true,
+
+	"allowDeleteChannels": false,
+
+	"allowAddRemoveApps": true,
+
+	"allowCreateUpdateRemoveTabs": true,
+
+	"allowCreateUpdateRemoveConnectors": true
+
+	},
+
+	"guestSettings": {
+
+	"allowCreateUpdateChannels": true,
+
+	"allowDeleteChannels": false
+
+	},
+
+	"funSettings": {
+
+	"allowGiphy": true,
+
+	"giphyContentRating": "Moderate",
+
+	"allowStickersAndMemes": true,
+
+	"allowCustomMemes": true
+
+	},
+
+	"messagingSettings": {
+
+	"allowUserEditMessages": true,
+
+	"allowUserDeleteMessages": true,
+
+	"allowOwnerDeleteMessages": true,
+
+	"allowTeamMentions": true,
+
+	"allowChannelMentions": true
+
+	},
+
+	"discoverySettings": {
+
+	"showInTeamsSearchAndSuggestions": true
+
+	}
+
+	}
+	```
+
+16. Select **Run** **query** from the upper right of the page.
+
+17. After a moment, you should see a green bar with a checkmark and **Accepted** inside again.
+
+18. Navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) to access the Microsoft Teams web client.
+
+19. Select **Teams** and **Manage Teams** from the left-side pane and inspect the newly created teams "**Early Adopters"** and "**Tech Meetings**".
+
+You have successfully created two teams via Graph API. Your test of the Graph functionality is complete, and you can advance to the next exercise.
+
+#### Task 4 – Archive and unarchive a team
+
+After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams service admin, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
+
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
+
+3. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+4. Select **Teams** from the left-side pane and **Manage teams**.
+
+5. Select the checkmark left from the **Sales** team and select **Archive** from the top pane.
+
+6. Select the checkbox of **Make the SharePoint site read-only for team members** and select **Archive**.
+
+7. The **Status** column should now have changed to **Archived**, written in orange color. Leave the browser open and proceed.
+
+8. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+
+9. Open an Edge browser window and navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/).
+
+10. On the **Pick an account** page, select the **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+11. Select **Use the webapp instead** to open the Teams web client.
+
+12. On the left side, below the teams Megan is member or owner of, **Hidden teams** is now visible where team and channel names below are all written in italic. Select it to open the menu and select the **General** channel below the **Sales** team.
+
+13. Try to write a new conversation by selecting **New conversation** from the bottom.
+
+14. You will see a message **This team was archived, so you can’t post more messages.** The archived status is also indicated by a small box icon, left from the three dots (…) menu, right from the team name.
+
+15. Connect to the **Client 1 VM** again and use the credentials that have been provided to you.
+
+16. Select the checkbox left from **Sales** again and select **Unarchive** from the top menu. The **Status** field should change to **Active** again.
+
+17. Connect to the **Client 2 VM** again with the credentials that have been provided to you.
+
+18. The text of the **Sales** team and the **General** channel changes back to normal after a moment, but the team is hidden. Select the three dots (…) right from the Sales team and select **Show**.
+
+19. Leave the browser open and stay signed in.
+
+You have successfully archived a team and reviewed the limited functionality of archived teams. This fulfils the first requirement of testing the archiving function of teams for compliance preservation policies and rules. After this test, you have unarchived the team again, making it fully operational again. 
+
+#### Task 5 - Delete and recover teams
+
+In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
+
+1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/).
+
+3. On the **Pick an account** page, select the **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+4. In the left-hand navigation pane of the Teams web client, select the three dots (…) right from the **Sales** team and select **Delete the team** from the list.
+
+5. In the **Delete "Sales" team**, select **I understand that everything will be deleted**. and select **Delete team**.
+
+6. Leave the browser open and connect to **Client 1 VM** with the credentials that have been provided to you.
+
+7. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal** at: [https://portal.azure.com](https://portal.azure.com/).
+
+8. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+9. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+
+10. In the **Microsoft Azure portal**, below the **Azure services** section, select **More services**.
+
+11. On the **All services** page, select **Identity** from the left side navigation pane and **A****zure Active Directory** from the main window.
+
+12. On the **Contoso | Overview** page, select **Groups** from the left side pane.
+
+13. On the **Groups | All groups** page, select **Deleted groups** in the left side pane.
+
+14. Now you can see all deleted groups, including the **Sales** group.
+
+15. Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
+
+16. Connect to **Client 2 VM** again with the credentials that have been provided to you.
+
+17. Back on the **Teams web client**, press **F5** to refresh the page.
+
+18. The **Sales** team appears in the list of teams again. Select the three dots (…) right from the team name and select **Manage team**.
+
+19. You can see the owner and all members again in the **Members** tab.
+
+**Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point of this lab.
+
+You have successfully deleted a team via the Teams web client and restored it with the Azure Portal.
+
+#### Task 6 - Manage team members with dynamic membership
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal** at: [https://portal.azure.com](https://portal.azure.com). 
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal** at: [https://portal.azure.com](https://portal.azure.com/).
 
-3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
+3. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** (**admin@_&lt;YourTenant&gt;_.OnMicrosoft.com**) and select **Next**.
+4. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
 
-5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+5. Select **Groups** from the left side pane.
 
-6. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
+6. In the **Groups | All groups** window, search and select **CA-Office** group.
 
-7. Select **Groups** from the left side pane.
+7. In the **Group** settings, select **Properties** from the left-hand navigation pane.
 
-8. In the **Groups - All groups** window, search and select **CA-Office** group.
+8. In the **Membership type**, change it from **Assigned** to **Dynamic User**. Select **Add dynamic query** below **Dynamic user members**.
 
-9. In the **Group** settings, select **Properties** from the left-hand navigation pane.
+9. In the Dynamic membership rules window enter the following information to the fields:
 
-10. In the **Membership type**, change it from **Assigned** to **Dynamic User**. Select **Add dynamic query** below **Dynamic user members**.
+	- Property: **accountEnabled**
 
-11. In the Dynamic membership rules window enter the following information to the fields:
+	- Operator: **Equals**
 
-	- **Property** accountEnabled
-	- **Operator** Equals
-	- **Value** true
+	- Value: **true**
 
-12. After this select **+add expression** and enter the following information to the fields:
+10. After this select **+add expression** and enter the following information to the fields:
 
-	- **Property** usageLocation
-	- **Operator** Equals
-	- **Value** CA
+	- Property: **usageLocation**
 
-13. In the Dynamic membership rules window select **Save** in the top navigation pane.
+	- Operator: **Equals**
 
-14. In the **CA-Office– Properties** window select **Save** in the top navigation pane.
+	- Value: **CA**
 
-15. A warning message is displayed, that the membership will change according to the new dynamic membership rules. **Confirm** the message with selecting **Yes**.
+11. In the Dynamic membership rules window select **Save** in the top navigation pane.
 
-16. Select **Overview** in the left-hand navigation pane of the **CA-Office** group window.
+12. In the **CA-Office| Properties** window select **Save** in the top navigation pane.
 
-17. In the Overview window, locate **Membership processing status** field. Wait and refresh your browser, until the status says **Update complete**. It may take several minutes for the change to be processed. 
+13. A warning message is displayed, that the membership will change according to the new dynamic membership rules. Select **Yes** to confirm the message.
 
-18. Then select **Members** in the left-hand navigation pane and then select **Refresh**. Verify that **Alex Wilber** is in the list of members, but that **Allan Deyoung** has been removed from the group. 
+14. Select **Overview** in the left-hand navigation pane of the **CA-Office** group window.
 
-19. Select Owners from the left-hand navigation pane and verify, that Joni is still the Owner of the group, even if she does not match the dynamic group criteria.
+15. In the Overview window, locate **Membership processing status** field. Wait and refresh your browser, until the status says **Update complete**. It may take several minutes for the change to be processed.
 
-You have successfully converted a Microsoft 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation “Canada" is added automatically to the team. 
+16. Then select **Members** in the left-hand navigation pane and then select **Refresh**. Verify that **Alex Wilber** is in the list of members, but that **Allan Deyoung** has been removed from the group.
 
+17. Select Owners from the left-hand navigation pane and verify, that Joni is still the Owner of the group, even if she does not match the dynamic group criteria.
 
+You have successfully converted a Microsoft 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation "Canada" is added automatically to the team.
 
-### Exercise 2: Manage sharing and access
+### **Exercise 2: Manage sharing and access**
 
 In this exercise, you will test the guest access features in Office 365. To do so, you will configure guest access in Azure AD, add a new external guest user and revoke the guest access by using access reviews.
 
-
 #### Task 1 - Configure guest access in Teams
 
-In this task, you will configure the guest user access for Microsoft Teams in your tenant. 
+Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the window and navigate to [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com) to access the **Microsoft Teams admin center**. 
+2. Sign in to the **Teams admin center** [https://admin.teams.microsoft.com/](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the **Pick an account** window, select admin@_&lt;YourTenant&gt;_.onmicrosoft.com and sign in.
+3. On the **Microsoft Teams admin center** page, select the cogwheel from the lower left side pane and open the **Org-wide settings** menu. 
 
-4. On the **Microsoft Teams admin center** page, select the cogwheel from the lower left side pane and open the **Org-wide settings** menu. Select **Guest access** from the list.
+4. Select **Guest access** from the list.
 
 5. On the **Guest access** page, use the slider right from **Allow guest access in Teams** by selecting it. When it is turned to **On**, scroll down and select **Save**.
 
-You have now successfully activated guest user access in Teams for your tenant.
+6. Close all browser windows.
 
+You have now successfully activated guest access for Teams in your tenant.
 
 #### Task 2 - Configure guest access in the Azure AD (optional)
 
@@ -288,141 +533,158 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com/).
 
-3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
+3. You should be still logged in as **MOD Administrator**. If not, on the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** (**admin@_&lt;YourTenant&gt;_.onmicrosoft.com**) and select **Next**.
+4. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
 
-5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+5. Select **Users** from the left side pane.
 
-6. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
+6. In the **Users – All users** window, select **+ New guest user** from the top pane to create a new **Guest User**.
 
-7. Select **Users** from the left side pane.
+7. In the **New user** window select **Invite user** and enter the following information to the fields:
 
-8. Select **User settings** in the left side navigation pane.
+	- **Name**: your full name
 
-9. Scroll down if required and select **Manage external collaboration settings**.
+	- **Email address**: your Outlook.com email address
 
-10. In the **External collaboration settings** window make change **Guests can invite** to **Yes**. 
+	- **First name**: your First name
 
-11. Select **Save** in the top navigation pane and select **User – User Settings** from the upper left navigation. 
+	- **Last name**: your last name
 
-12. On the **Users - User settings** page, select **All users** in the left-hand navigation pane.
-
-13. In the **Users – All users** window, select **+ New guest user** from the top pane to create a new **Guest User**.
-
-14. In the New user window select **Invite user** and enter the following information to the fields:
-
-	- **Name**: *your full name*
-	- **Email address**: *your Outlook.com email address*
-	- **First name**: *your First name*
-	- **Last name**: *your last name*
 	- **Personal Message**: Hello Guest, Here is the link to access to our Contoso test organization. Best regards, Contoso admin.
 
-15. In the Groups and roles section, select **0 groups selected**. In the Groups window on the right side, select the **IT-Department** group, scroll down and return to the New user window by choosing **Select**.
-
-16. To finish the invitation process, select **Invite** from the lower left side of the window.
-
-17. You can now see a new user on the **Users – All users** page, note that the **User type** is set to **Guest**.
-
-18. Open a **New InPrivate window** in your browser and go to the **Outlook Web Portal** page by entering the following URL in the address bar: [**https://outlook.live.com/owa/**](https://outlook.live.com/owa/)
-
-19. In the top right navigation pane, select **Sign In**. 
-
-20. In the **Sign in** window, enter the **Email address** which you have created before.
-
-21. In the **Enter password** dialog box, enter the password and select **Sign in**.
-
-22. After signing in, open your **Inbox** and open the invitation Email with the topic **You're invited to the Contoso organization**.
-
-23. When you select **Get Started** from the invitation Email, a new tab with a **Review permissions** message opens. Grant your consent to **Contoso** by selecting **Accept**.
-
-24. Your personal outlook account has now been added to your test tenant of Contoso Ltd. and also to the “IT-Department” team.
-
-25. Close the InPrivate window.
-
-You have successfully changed the external collaboration settings, so guests can also invite new guests. Then you have added a personal outlook.com account as a guest to your tenant and as a member to the team “IT-Department”.
  
 
-#### Task 3 - Review access to a resource with access reviews
+8. In the Groups and roles section, select **0 groups selected**. In the Groups window on the right side, select the **IT-Department** group, scroll down and return to the New user window by choosing **Select**.
 
-As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams. 
+9. To finish the invitation process, select **Invite** from the lower left side of the window.
+
+10. You can now see a new user on the **Users – All users** page, note that the **User type** is set to **Guest**.
+
+11. Open a **New InPrivate window** in your browser and go to the **Outlook Web Portal** page by entering the following URL in the address bar: [**https://outlook.live.com/owa/**](https://outlook.live.com/owa/)
+
+12. In the top right navigation pane, select **Sign In**.
+
+13. In the **Sign in** window, enter the **Email address** which you have created before.
+
+14. In the **Enter password** dialog box, enter the password and select **Sign in**.
+
+15. After signing in, open your **Inbox** and open the invitation Email with the topic **You’re invited to the Contoso organization**.
+
+16. When you select **Get Started** from the invitation Email, a new tab with a **Review permissions** message opens. Grant your consent to **Contoso** by selecting **Accept**.
+
+17. Your personal outlook account has now been added to both your test tenant of Contoso Ltd. and to the "IT-Department" team.
+
+18. Close the InPrivate window.
+
+You have successfully changed the external collaboration settings, so guests can also invite new guests. Then you have added a personal outlook.com account as a guest to your tenant and as a member to the team "IT-Department".
+
+#### Task 3 – Test external access with sensitivity labels (optional)
+
+Even with enabled guest access sensitivity labels can deny guest access for specific teams. In this task you will try to add a guest user to an internal team. Enabling guest access for teams can take up to 24 hours. If you cannot find the guest user in step 4 you should test it again the next day.
+
+1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+
+2. Open the Microsoft Teams Desktop Client, where you are signed in as **Megan Bowen**.
+
+3. On the Teams overview select the three dots (**…**) right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
+
+4. On the **Add members to Teams Rollout** page, enter the name of the guest user you just invited.
+
+5. You will not be able to find the guest user, because guest users are restricted from this team.
+
+6. Perform the steps 3 and 4 for the **Contoso** team, where you can find and add the guest user to the **Contoso** team.
+
+7. Select **Close.**
+
+**Note:** It can take up to 24 hours after enabling, till guest access is available in teams. If you cannot add guest users to any team, return to this task at a later point of this lab.
+
+You have successfully tested the sensitivity labels setting to prevent guest access to a protected team and you can confirm, the labels are working as predicted.
+
+#### Task 4 - Review access to a resource with access reviews
+
+As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com). 
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com/).
 
-3. When you see the **Pick an account** window, select the **MOD Administrator account** to get to the Sign in window. If the is no **MOD Administrator account**, select **Use another account** to get to the Sign in window.
+3. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-4. In the **Sign in** window, enter the UPN of **MOD Administrator** (**admin@_&lt;YourTenant&gt;_.onmicrosoft.com**) and select **Next**.
+4. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
 
-5. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+5. Select **Groups** from the left-hand navigation pane.
 
-6. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
+6. In the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane.
 
-7. Select **Groups** from the left-hand navigation pane.
+7. If you see the option **Onboard now** in the middle of the Page, select it and proceed to the next step. Otherwise, skip to step 13.
 
-8. In the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane. 
+8. In the left-hand navigation pane select **Onboard**, to enable the **Access reviews** select **Onboard Now** at the bottom of the page.
 
-9. If you see the option **Onboard now** in the middle of the Page, select it and proceed to the next step. Otherwise, skip to the step 15.
+9. After this you will return to the home of the **Azure Portal**. Select the **notification Bell** above the **navigation pane**. In the notification window you will see the message that the onboarding of the Access review was successful configured.
 
-10. In the left-hand navigation pane select **Onboard**, to enable the **Access reviews** select **Onboard Now** at the bottom of the page.
+10. Close the notification window by selecting **X** in the right corner.
 
-11. After this you will return to the home of the **Azure Portal**. Select the **notification Bell** above the **navigation pane**. In the notification window you will see the message that the onboarding of the Access review was successful configured. 
+11. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
 
-12. Close the notification window by selecting **X** in the right corner.
+12. Select **Groups** from the left-hand navigation pane and on the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane again.
 
-13. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
+13. In the middle of the page select **+New access review** to create a new Access review.
 
-14. Select **Groups** from the left-hand navigation pane and on the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane again.
+14. In the Create an access review window enter the following information to the fields:
 
-15. In the middle of the page select **+New access review** to create a new Access review.
+	- Review name: **Guest access review**
 
-16. In the Create an access review window enter the following information to the fields:
+	- Description: **Reviewing guest access**
 
-	- **Review name**: Guest access review
-	- **Description**: Reviewing guest access
-	- **StartDate**: your current date 
-	- **Frequency**: One time
-	- **EndDate**: your current date + 7 days into the future
-	- **Scope**: Guest users only
-	- **Group**: IT-Department
-	- **Reviewers**: Group owners 
+	- StartDate: **your current date**
 
-17. Select **Upon completion settings** to expand the menu and set **Auto apply results to resource** to **enabled**.
+	- Frequency: **One time**
 
-18. Select **Start**. The system automatically creates an Email for the Access Reviewer.
+	- EndDate: **your current date + 7 days into the future**
 
-19. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
+	- Scope: **Guest users only**
 
-20. Close your browser window and open it again by selecting the Edge browser icon from the taskbar.
+	- Group: **IT-Department**
 
-21. In your browser, select the address bar and go to the **Outlook on the web** page by entering the following URL: [**https://outlook.office365.com**](https://outlook.office365.com)
+	- Reviewers: **Group owners**
 
-22. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
+15. Select **Upon completion settings** to expand the menu and set **Auto apply results to resource** to **enabled**.
 
-23. In the **Sign in** window, enter the UPN of **Joni Sherman** (**JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com**) and select **Next**.
+16. Select **Start**. The system automatically creates an Email for the Access Reviewer.
 
-24. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+17. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
 
-25. If a welcome screen appears, close it.
+18. Close your browser window and open it again by selecting the Edge browser icon from the taskbar.
 
-26. In the middle of the page, you will see an Email from **Microsoft Azure** with the topic **Action required: Review group access by &lt;local date + 7 days in the future&gt;**, then select this Email
+19. In your browser, select the address bar and go to the **Outlook on the web** page by entering the following URL: [**https://outlook.office365.com**](https://outlook.office365.com/)
 
-27. Select the **Start review** button in this Email.
+20. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
 
-28. An additional browser tab will open.
+21. In the **Sign in** window, enter the UPN of **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and select **Next**.
 
-29. In the Access Review Window, you can see an overview with configured settings and the configured guest user with your personal outlook.com email address.
+22. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
-30. Select your outlook.com guest and then select **Details** to review the guest statistics.
+23. If a welcome screen appears, close it.
 
-31. Select **Deny** from the available options and select **Submit**.
+24. In the middle of the page, you will see an Email from **Microsoft Azure** with the topic **Action required: Review group access by &lt;local date + 7 days in the future&gt;**, then select this Email.
 
-32. In the overview, your outlook.com guest user has now **Denied** access.
+25. Select the **Start review** button in this Email.
 
-33. Close all windows.
+26. An additional browser tab will open.
 
+27. In the Access Review Window, you can see an overview with configured settings and the configured guest user with your personal outlook.com email address.
+
+28. Select your outlook.com guest and then select **Details** to review the guest statistics.
+
+29. Select **Deny** from the available options and select **Submit**.
+
+30. In the overview, your outlook.com guest user has now **Denied** access.
+
+31. Close all windows.
 
 You have successfully created a new access review and blocked a guest user in your tenant. This is the end of lab 4. You can close all browser windows and proceed to the next lab.
+
+END OF LAB
