@@ -386,17 +386,17 @@ You are an administrator for your Teams organization. You need to limit which us
    ```
 8. Run following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
    ```powershell
-   $Settings["EnableGroupCreation"] = "False"
+   $Setting["EnableGroupCreation"] = "False"
    ```
 9. Run following cmdlet to add the just created security group "GroupCreators" as permitted group to create groups, by their ObjectID:
 
    ```powershell
-   $Settings["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
+   $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
    ```
 10. Review the changes you have just configured with the following command:
 
     ```powershell
-    $Settings.Values
+    $Setting.Values
     ```
 11. Then save the changes and apply the settings:
 
