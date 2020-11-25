@@ -722,7 +722,7 @@ According to your organization compliance requirements, you need to implement ba
 
 4. In **Microsoft 365 compliance center**, on the left navigation pane, select **Show all** from the bottom of the navigation pane and then select **Data loss prevention**.
 
-5. On the **Data loss prevention** page, select **+ Create policy (preview)**.
+5. On the **Data loss prevention** page, select **+ Create policy**.
 
 6. On the **Start with a template or create a custom policy** page, select the **Search for specific templates** search box and type: **GDPR**. The **General Data Protection Regulation (GDPR)** template will be preselected. 
 
@@ -764,21 +764,21 @@ According to your organization compliance requirements, you need to implement ba
 
 	- Select **Add** and **Save**
 
-	- Select the checkbox for and **Restrict access or encrypt the content**
+	- Select the checkbox for **Restrict access or encrypt the content**
 
 13. On the **Customize access and override settings** page, ensure that the following settings are configured, and then select **Next**:
 
 	- A checkbox is selected for: **Restrict access or encrypt the content in Microsoft 365 locations**
 
-	- Select **Block people from sharing and restrict access to shared locations**.
+	- Select **Block users from accessing shared SharePoint, OneDrive, and Teams content**.
 
-	- Select **Only people outside your organization. People inside your organization will continue to have access**.
+	- Select **Block only people outside your organization. Users inside your organization will continue to have access**.
 
-	- Select **Override the rule automatically if they report it as false** positive.
+	- Select **Override the rule automatically if they report it as false positive**.
 
 14. On the **Test or turn on the policy** page, select **Yes, turn it on right away** and select Next.
 
-15. On the Review your settings page, review your settings, select **Submit** and **Done**.
+15. On the Review your settings page, review your settings, select **Submit** then **Done**.
 
 16. Stay on the **Data loss prevention page** and leave the browser opened.
 
@@ -794,7 +794,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 3. In **Microsoft 365 compliance center**, on the left navigation pane, select **Show all** and then select **Data loss prevention**.
 
-4. On the **Data loss prevention** page, select **+ Create policy (preview)**.
+4. On the **Data loss prevention** page, select **+ Create policy**.
 
 5. Select **Custom** and **Custom policy** below **Categories** and **Templates**, to create a blank policy and select **Next**.
 
