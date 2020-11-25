@@ -834,7 +834,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 14. Below **Action**, select **+ Add an action** and **Restrict access or encrypt content in Microsoft 365 locations**.
 
-15. Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Everyone. Only the content owner, the last modifier and the site admin will continue to have access.** 
+15. Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block everyone. Only the content owner, the last modifier and the site admin will continue to have access.** 
 
 16. Below **User notification**, select the slider to **On** and select **Customize the policy tip text**.
 
@@ -850,7 +850,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 22. Select the radio button **Yes, turn it on right away** and select **Next**.
 
-23. Review the policy settings again and select **Submit** and **Done**.
+23. Review the policy settings again and select **Submit** then **Done**.
 
 24. Leave the browser open.
 
