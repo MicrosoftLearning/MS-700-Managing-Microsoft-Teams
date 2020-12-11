@@ -438,7 +438,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 8. Right-click the file **BlockedWords.csv** and select **Edit** to open **Notepad**.
 
-9. Type **CEO,Payroll,HR** into the empty quotes in the Notepad window, select **File** and **Save**. Afterwards, close the Notepad file.
+9. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, select **File** and **Save**. Afterwards, close the Notepad file.
 
 10. Back to the **Groups | Naming policy** page, under **Blocked words** section, scroll fown and below **Step 3. Upload your .csv file**, select the **folder** icon to open a file selection window.
 
