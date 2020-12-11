@@ -536,7 +536,7 @@ You can revert any changes in Azure AD unified groups settings to the defaults a
    ```
 10. Apply the settings variable to your current configuration to revert all other changes:
     ```powershell
-    Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+    Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
     ```
 11. Review your configured Azure AD tenant settings again, which are all on default again:
     ```powershell
