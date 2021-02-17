@@ -438,7 +438,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 8. Right-click the file **BlockedWords.csv** and select **Edit** to open **Notepad**.
 
-9. Type **CEO,Payroll,HR** into the empty quotes in the Notepad window, select **File** and **Save**. Afterwards, close the Notepad file.
+9. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, select **File** and **Save**. Afterwards, close the Notepad file.
 
 10. Back to the **Groups | Naming policy** page, under **Blocked words** section, scroll fown and below **Step 3. Upload your .csv file**, select the **folder** icon to open a file selection window.
 
@@ -536,7 +536,7 @@ You can revert any changes in Azure AD unified groups settings to the defaults a
    ```
 10. Apply the settings variable to your current configuration to revert all other changes:
     ```powershell
-    Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+    Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id -DirectorySetting $Setting
     ```
 11. Review your configured Azure AD tenant settings again, which are all on default again:
     ```powershell

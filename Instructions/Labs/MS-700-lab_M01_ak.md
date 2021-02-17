@@ -307,7 +307,12 @@ Because the Skype for Business Online cmdlets have been integrated into the Team
    ```powershell
    Get-Command -Module (Get-Module -Name tmp*)
    ```
-6. Close the PowerShell window.
+6. To close the remote PowerShell session, run the following cmdlet:
+
+   ```powershell
+   Remove-PSSession -Session $Session
+   ```
+7. Close the PowerShell window.
 
 You have successfully established a connection to the CsOnline endpoint in your tenant, to manage voice and policy settings that formerly required the independent Skype for Business Online module.
 
