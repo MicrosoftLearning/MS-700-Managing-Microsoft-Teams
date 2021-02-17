@@ -180,6 +180,8 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
  
 16. On the **Windows Security Alert** window, select **Allow access**. 
 
+    >**Note:** If you receive a timeout message during the connectivity test, you can select the **Settings** tab in the tool. Adjust the **Connectivity test timeout (seconds)** option to a larger value and then start the test again.
+
 17. When the tests have finished, the symbols below **Connectivity** and **Quality** will turn to green checkmarks in green circles.
 
 18. After the test is **finished**, select the **View Results** tab and review the detailed results of the tests.

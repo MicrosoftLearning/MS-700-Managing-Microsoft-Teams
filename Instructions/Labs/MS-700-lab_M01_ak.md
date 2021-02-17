@@ -136,7 +136,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
 11. In the settings below the Account tab, scroll to **Roles** and select **Manage roles** below.
 
-12. When the **Manage roles** pane opens, select **Admin center access** and scroll down to select **Teams service admin**.
+12. When the **Manage roles** pane opens, select **Admin center access** and scroll down to select **Show all by category** to reveal all avaliable roles. Select the **Teams service admin** and **Teams Device Administrator** roles.
 
 13. Select **Save changes** to apply the role. When the **Admin roles updated** message is displayed on the upper part of the pane, close the window of Joni Sherman’s account with the **X** in the upper right to go back to the **Active users** list.
 
