@@ -64,48 +64,15 @@ You have successfully created a new team with the Teams Desktop client, by using
 
 In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell.
 
-1. Open an elevated **Windows PowerShell (Admin)** window.
+1. Open a **Windows PowerShell** window.
 
-2. Check the Teams PowerShell module for the ability to create private channels:
-
-   ```powershell
-   If((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
-   ```
-   If the output of the command is "**Continue with the current module**", skip steps 3-6 and continue with step 7. If the output of the command is "**Close PowerShell and install the Teams public preview module.**", close the PowerShell window and continue with step 3.
-
-3. If you need to install the Teams public preview module, first open an elevated PowerShell (Admin) window and uninstall the current PowerShell module by running the following cmdlet:
-
-   ```powershell
-   Uninstall-Module MicrosoftTeams
-   ```
-
-   **Note:** If the Uninstall-Module command fails, close the PowerShell window, open a new elevated PowerShell (Admin) window, and then repeat this step.
-
-4. Install PowerShellGet module with the version 2.2.4.1:
-
-   ```powershell
-   Install-Module -Name PowerShellGet -RequiredVersion 2.2.4.1 -Force
-   ```
-
-5. Close and then re-open the elevated PowerShell (Admin) window and then install the Teams PowerShell public preview module:
-
-   ```powershell
-   Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.5-preview -AllowPrerelease -AllowClobber  
-   ```
-
-6. Verify that the Teams PowerShell module supports creating private channels:
-
-   ```powershell
-   If ((Get-Command New-TeamChannel -ParameterName 'MembershipType' -ErrorAction Ignore) -eq $Null) {"Close PowerShell and install the Teams public preview module."} else {"Continue with the current module."}
-   ```
-   
-7. Connect to Teams in your tenant:
+2. Connect to Teams in your tenant:
 
    ```powershell
    Connect-MicrosoftTeams
    ``` 
 
-8. Create a new team with the following settings, using the New-Team cmdlet:
+3. Create a new team with the following settings, using the New-Team cmdlet:
 
 	- Displayname: **CA-Office**
 
@@ -114,13 +81,13 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
 	- Visibility: **Public**
 
 
-9. Use the GroupId from Get-Team and Add-TeamUser to add **Alex Wilbur** and **Allan Deyoung** as members to the team.
+4. Use the GroupId from Get-Team and Add-TeamUser to add **Alex Wilbur** and **Allan Deyoung** as members to the team.
 
-10. Use the GroupId from Get-Team and New-TeamChannel to create the regular channels **"Support"** and **"Recruiting"**.
+5. Use the GroupId from Get-Team and New-TeamChannel to create the regular channels **"Support"** and **"Recruiting"**.
 
-11. Use the GroupId from Get-Team and New-TeamChannel to create the private channel **"Administration"**.
+6. Use the GroupId from Get-Team and New-TeamChannel to create the private channel **"Administration"**.
 
-12. Close the PowerShell window.
+7. Close the PowerShell window.
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
