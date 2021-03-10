@@ -107,11 +107,11 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 1. You are still connected to the **Client 1 VM**.
 
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 compliance center** at [**https://compliance.microsoft.com/**](https://compliance.microsoft.com/).
+2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 Security & Compliance center** at [**https://protection.office.com/**](https://protection.office.com/).
 
 3. On the **Pick an account** page, select the **MOD Administrator** ([admin@&lt;YourTenant&gt;.onmicrosoft.com](mailto:admin@%3cYourTenant%3e.onmicrosoft.com)) and sign in with the provided credentials.
 
-4. In the **Microsoft 365 compliance center**, on the left navigation pane, scroll down and select …**Show all** and select **Information protection** from the expanded left side navigation pane.
+4. In the **Microsoft 365 Security & Compliance center**, on the left navigation pane, scroll down and select …**Show all** and select **Information protection** from the expanded left side navigation pane.
 
 5. On the top part of the page, you can see a warning message in a yellow box that states: Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments. Select **Turn on now** to activate content processing in Office online files.
 
