@@ -42,7 +42,7 @@ After you complete this lab, you will be able to:
 
 #### Task 1 - Create a team from an existing Microsoft 365 Group
 
-As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Microsoft 365 Group, created in an earlier task of this lab, and add Teams features to it.
+As part of your pilot project for Contoso, you need to modify the **"IT-Department"** Microsoft 365 Group, created in an earlier lab, and add Teams features to it.
 
 1. Sign in to the **Teams Desktop client** using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
