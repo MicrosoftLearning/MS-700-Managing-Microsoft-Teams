@@ -42,8 +42,6 @@ After you complete this lab, you will be able to:
 
 - Install the Teams PowerShell module and explore its cmdlets
 
-- Import the Skype for Business Online PowerShell cmdlets
-
 - Create Microsoft 365 Groups from the M365 admin center
 
 - Create new teams using the Teams Desktop client
@@ -153,7 +151,7 @@ You have successfully explored several available menus from the Teams admin cent
 
 ### **Exercise 2: Explore PowerShell cmdlets for Teams**
 
-In this exercise you will install the Teams and Skype for Business Online PowerShell modules, required to manage teams, policy packages, telephony, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center also in the PowerShell with the two mentioned modules. You can script for automation and even access several settings not available in the GUI.
+In this exercise you will install the Teams PowerShell module, required to manage teams, policy packages, telephony, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center also in the PowerShell. You can script for automation and even access several settings not available in the GUI.
 
 #### **Task 1 - Install Teams PowerShell module**
 
@@ -204,30 +202,6 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
 
 When you are finished with exploring the Microsoft Teams PowerShell cmdlets, close the PowerShell window and continue to the next task.
    
-#### **Task 3 - Import former Skype for Business Online cmdlets**
-
-Because the Skype for Business Online cmdlets have been integrated into the Teams PowerShell, a separate module is no longer required, but the cmdlets still need to be loaded into the Teams PowerShell session. In this task you will connect to your voice and policy endpoint in your tenant.
-
-1. Open a regular **Windows PowerShell** window.
-
-2. Establish a session to the SfBPowerShell:
-
-   ```powershell
-   $Session = New-CsOnlineSession
-   ```
-3. Import the new session:
-
-   ```powershell
-   Import-PSSession $Session
-   ```
-4. Review the modules from the CsOnlineSession module:
-
-   ```powershell
-   Get-Command -Module (Get-Module -Name tmp*)
-   ```
-5. Close the PowerShell window.
-
-You have successfully established a connection to the CsOnline endpoint in your tenant, to manage voice and policy settings that formerly required the independent Skype for Business Online module.
 
 ### **Exercise 3: Create groups and teams**
 
