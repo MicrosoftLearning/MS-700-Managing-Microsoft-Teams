@@ -43,8 +43,6 @@ After you complete this lab, you will be able to:
 
 - Install the Teams PowerShell module and explore its cmdlets
 
-- Import the Skype for Business Online PowerShell cmdlets
-
 - Create Microsoft 365 Groups from the M365 admin center
 
 - Create new teams using the Teams Desktop client
@@ -72,6 +70,7 @@ The labs in this course will use two virtual machines:
 **Note:** Lab virtual machine sign in instructions will be provided to you by your instructor.
 
 **Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1\Admin** or **CLIENT2\admin**, depending on which machine you are on.
+
 #### **2. Review installed applications**
 
 Once you signed in to the VM, observe the start menu, and verify following applications have been installed:
