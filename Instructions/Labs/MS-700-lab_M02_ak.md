@@ -133,7 +133,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 11. Do not make any changes on the **Auto-labeling for Office apps** page and select **Next**.
 
-12. On the **Group &amp; Sites** page, select both boxes **Privacy and external user access settings** and **Device access and external sharing settings** and select **Next**.
+12. On the **Group &amp; Sites** page, select both boxes **Privacy and external user access settings** and **External sharing and Conditional Access settings** and select **Next**.
 
 13. On the **Define privacy and external user access settings**  page select the following settings and then select **Next**:
 
@@ -189,7 +189,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 30. On the **Auto-labeling for Office apps** page, do not select the slider and select **Next**.
 
-31. On the **Define protection settings for groups and sites** page, select both boxes **Privacy and external user access settings** and **Device access and external sharing settings** and select **Next**.
+31. On the **Define protection settings for groups and sites** page, select both boxes **Privacy and external user access settings** and **External sharing and Conditional Access settings** and select **Next**.
 
 32. On the **Define privacy and external user access settings** page, select the following settings and then select **Next**:
 
@@ -550,29 +550,29 @@ You have successfully reset all Azure AD tenant settings for Microsoft 365 Group
 
 In this exercise, you will increase the security level in your organization by configuring an ATP policy to ensure that no malicious content is sent through documents shared in Teams by blocking attachments that contain malware.
 
-#### Task 1 - Configure ATP for Microsoft Teams
+#### Task 1 - Configure Defender for Microsoft Teams
 
-Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring ATP policy that blocks documents that contain malware.
+Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Defender that blocks documents that contain malware.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Microsoft 365 Security center**: [**https://security.microsoft.com**](https://security.microsoft.com/).
+2. Open Microsoft Edge, maximize the browser, and navigate to the **Office 365 Security and Compliance center**: [**https://protection.office.com**](https://protection.office.com/).
 
 3. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-4. In the **Microsoft 365 Security center**, in the left navigation pane, select **Policies**.
+4. In the **Office 365 Security and Compliance center**, in the left navigation pane, expand **Threat management**, select **Policies**.
 
-5. On the **Policies** page, scroll to the **Threat protection** section and select **ATP safe attachments (Office 365)**.
+5. On the **Threat Policies** page, scroll to the **Policies** section and select **Safe Attachments**.
 
 6. On the **Safe attachments** page, select **Global settings** on the ribbon. If you cannot see **Global settings** select **…** first.
 
-7. In the wizard, set **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams** to **On**.
+7. In the wizard, set **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** to **On**.
 
 8. Select the **Save** button.
 
 9. Close the Edge browser windows.
 
-In this task, you have activated ATP safe attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks block documents that contain malware.
+In this task, you have activated Defender scanning for Office 365 for SharePoint, OneDrive, and Microsoft Teams that blocks block documents that contain malware.
 
 ### **Exercise 3: Implement compliance for Microsoft Teams**
 
@@ -598,9 +598,7 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 	- **Description**: Retention policy for Sales department that will retain channel messages for 7 years.
 
-7. On the **Decide if you want to retain content, delete it, or both** page, select **Next**.
-
-8. On the **Choose locations to apply the policy** page, configure the following settings:
+7. On the **Choose locations to apply the policy** page, configure the following settings:
 
 	- **Exchange email**: Off
 
@@ -618,17 +616,17 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 	- **Teams chats**: Off
 
-9. Select **Choose teams** right from **Teams channel messages** to open the right-side pane.
+8. Select **Edit** right from **Teams channel messages** to open the right-side pane.
 
-10. Select **Choose teams** to get the list of existing teams. 
+10. Select the checkbox left from **Sales** and select **Done**.
 
-11. Select the checkbox left from **Sales** and select **Choose &gt; Done**.
+11. Select **Next**
 
-12. Select **Next**
+12. On the **Decide if you want to retain content, delete it, or both** page, select **Next**.
 
-13. On the **Review your settings** page, review your settings and select **Create this policy**.
+13. On the **Review and finish** page, review your settings and select **Submit**.
 
-14. Leave the browser open for the next task.
+14. Select **Done**. Leave the browser open for the next task.
 
 In this this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages and chat of the **Sales** Team for **7 years after the last modification**.
 
@@ -648,15 +646,7 @@ After configuring a retain policy to protect data from deletion, you also need t
 
 	- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
 
-5. On the **Decide if you want to retain content, delete it, or both** page, select **No, just delete content that’s older than** with the following information and then select **Next**:
-
-	- **Delete items older than**: 1 days
-
-	- **Delete the content based on**: when it was created
-
- 
-
-6. On the **Choose locations to apply the policy** page, configure the following settings and select **Next**:
+5. On the **Choose locations to apply the policy** page, configure the following settings and select **Next**:
 
 	- **Exchange email**: Off
 
@@ -674,15 +664,21 @@ After configuring a retain policy to protect data from deletion, you also need t
 
 	- **Teams chats**: Off
 
-7. Select **Edit** right from **Teams channel messages** to open the right-side pane.
+5. Select **Edit** right from **Teams channel messages** to open the right-side pane.
 
-8. Select the checkbox left from **Teams Rollout** and select **Done**.
+7. Select the checkbox left from **Teams Rollout** and select **Done**.
 
 9. Select **Next**
 
-10. On the **Review your settings** page, review your settings and select **Create this policy**.
+10. On the **Decide if you want to retain content, delete it, or both** page, select **Only delete items when they reach a certian age** with the following information and then select **Next**:
 
-11. Leave the browser open for the next task.
+	- **Delete items older than**: 1 days
+
+	- **Delete the content based on**: when it was created
+
+10. On the **Review and finish** page, review your settings and select **Submit**.
+
+11. Select **Done**. Leave the browser open for the next task.
 
 You have successfully created a second retention policy for testing the deletion capabilities to clean up the "Teams Rollout" team from all conversation messages older than a day.
 
@@ -728,7 +724,7 @@ According to your organization compliance requirements, you need to implement ba
 
 7. Select **Next**
 
-8. On the **Name your policy** page, change the default values to the following and select **Next**:
+8. On the **Name your DLP policy** page, change the default values to the following and select **Next**:
 
 	- **Name**: GDPR DLP Policy
 
@@ -745,7 +741,7 @@ According to your organization compliance requirements, you need to implement ba
 	- **Teams chat and channel messages**: On
 
 	- **Microsoft Cloud App Security**: Off
-
+	
 10. On the **Define** **policy settings** page, stay with the default selection from the template **Review and customize default settings from the template** and select **Next**.
 
 11. On the **Info to protect** page, leave the default settings and select **Next**.
