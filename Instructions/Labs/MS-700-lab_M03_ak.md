@@ -322,6 +322,8 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
     ```powershell
     Connect-AzureAD
     ```
+    When you see the Sign in window, type admin@M365x451018.onmicrosoft.com and sign in with the credentials provided to you.
+
 15. Disable the password expiration for the Teams Room account **NY-TeamsRoom1** by running the following cmdlet:
 
     ```powershell
@@ -343,7 +345,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 23. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
 
-24. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Manage product licenses** tab.
+24. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
 
 25. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
 
