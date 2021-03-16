@@ -429,7 +429,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 10. In the **Microsoft Azure portal**, below the **Azure services** section, select **More services**.
 
-11. On the **All services** page, select **Identity** from the left side navigation pane and **A****zure Active Directory** from the main window.
+11. On the **All services** page, select **Identity** from the left side navigation pane and **Azure Active Directory** from the main window.
 
 12. On the **Contoso | Overview** page, select **Groups** from the left side pane.
 
@@ -519,7 +519,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 4. Select **Guest access** from the list.
 
-5. On the **Guest access** page, use the slider right from **Allow guest access in Teams** by selecting it. When it is turned to **On**, scroll down and select **Save**.
+5. On the **Guest access** page, use the drop box right of **Allow guest access in Teams** and select **On**. Scroll down and select **Save**.
 
 6. Close all browser windows.
 
@@ -553,7 +553,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 	- **Last name**: your last name
 
-	- **Personal Message**: Hello Guest, Here is the link to access to our Contoso test organization. Best regards, Contoso admin.
+	- **Personal Message**: Hello Guest, Here is the link to access our Contoso test organization. Best regards, Contoso admin.
 
  
 
@@ -633,57 +633,57 @@ As a part of your system administrator role, you need to review access to resour
 
 13. In the middle of the page select **+New access review** to create a new Access review.
 
-14. In the Create an access review window enter the following information to the fields:
+14. In the New Access Review window enter the following information to the fields:
+
+	- click the radio button beside **Select teams + Groups**
+	
+	- click **Select goroup(s)** and chose the Group: **IT-Department**
+
+	- click the radio button beside **Guest users only**
+	
+	- click **Next:Reviews**
+
+	- in the **Select Reviewers** select **Group owner(s)**
+
+	- in the **Specify recurrence of review** select **One time**, for **Duration (in days)** enter **7**, and use todays date for **Start date**  
+
+	- click **Next: Settings**
 
 	- Review name: **Guest access review**
 
 	- Description: **Reviewing guest access**
 
-	- StartDate: **your current date**
+15. Select **Create**. The system automatically creates an Email for the Access Reviewer.
 
-	- Frequency: **One time**
+16. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
 
-	- EndDate: **your current date + 7 days into the future**
+17. Close your browser window and open it again by selecting the Edge browser icon from the taskbar.
 
-	- Scope: **Guest users only**
+18. In your browser, select the address bar and go to the **Outlook on the web** page by entering the following URL: [**https://outlook.office365.com**](https://outlook.office365.com/)
 
-	- Group: **IT-Department**
+19. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
 
-	- Reviewers: **Group owners**
+20. In the **Sign in** window, enter the UPN of **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and select **Next**.
 
-15. Select **Upon completion settings** to expand the menu and set **Auto apply results to resource** to **enabled**.
+21. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
-16. Select **Start**. The system automatically creates an Email for the Access Reviewer.
+22. If a welcome screen appears, close it.
 
-17. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
+23. In the middle of the page, you will see an Email from **Microsoft Azure** with the topic **Action required: Review group access by &lt;local date + 7 days in the future&gt;**, then select this Email.
 
-18. Close your browser window and open it again by selecting the Edge browser icon from the taskbar.
+24. Select the **Start review** button in this Email.
 
-19. In your browser, select the address bar and go to the **Outlook on the web** page by entering the following URL: [**https://outlook.office365.com**](https://outlook.office365.com/)
+25. An additional browser tab will open.
 
-20. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
+26. In the Access Review Window, you can see an overview with configured settings and the configured guest user with your personal outlook.com email address.
 
-21. In the **Sign in** window, enter the UPN of **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and select **Next**.
+27. Select your outlook.com guest and then select **Details** to review the guest statistics.
 
-22. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
+28. Select **Deny** from the available options and select **Submit**.
 
-23. If a welcome screen appears, close it.
+29. In the overview, your outlook.com guest user has now **Denied** access.
 
-24. In the middle of the page, you will see an Email from **Microsoft Azure** with the topic **Action required: Review group access by &lt;local date + 7 days in the future&gt;**, then select this Email.
-
-25. Select the **Start review** button in this Email.
-
-26. An additional browser tab will open.
-
-27. In the Access Review Window, you can see an overview with configured settings and the configured guest user with your personal outlook.com email address.
-
-28. Select your outlook.com guest and then select **Details** to review the guest statistics.
-
-29. Select **Deny** from the available options and select **Submit**.
-
-30. In the overview, your outlook.com guest user has now **Denied** access.
-
-31. Close all windows.
+30. Close all windows.
 
 You have successfully created a new access review and blocked a guest user in your tenant. This is the end of lab 4. You can close all browser windows and proceed to the next lab.
 
