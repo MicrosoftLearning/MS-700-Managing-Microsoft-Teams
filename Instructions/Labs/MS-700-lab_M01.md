@@ -113,7 +113,7 @@ In this task, you will use the default global admin to login to the Microsoft 36
 
 1. Sign in to the **Microsoft 365 admin center** ([**https://admin.microsoft.com**](https://admin.microsoft.com/)) using **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Assign the role of the **Teams service admin** to **Joni Sherman**.
+2. Assign the role of the **Teams Administrator** to **Joni Sherman**.
 
 3. Assign the role of the **Teams communication support engineer** to **Allan Deyoung**.
 
@@ -137,7 +137,7 @@ You have successfully validated, that all users participating in the pilot own T
 
 #### **Task 3 - Explore Teams Admin center**
 
-You need to access and review the available settings for administering Teams in the Teams admin center. As an administrator for teams, it’s important to get to understand the different settings and policies available in the Microsoft Teams Admin Center. You will login with Joni Sherman’s account for this task, that you assigned the Teams Service Administrator role in the first task.
+You need to access and review the available settings for administering Teams in the Teams admin center. As an administrator for teams, it’s important to get to understand the different settings and policies available in the Microsoft Teams Admin Center. You will login with Joni Sherman’s account for this task, that you assigned the Teams Administrator role in the first task.
 
 1. Sign in to the **Teams admin center** [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -209,7 +209,7 @@ In this exercise, you will create some resources required in later tasks. These 
 
 #### **Task 1 - Create a Microsoft 365 Group**
 
-In real world scenarios, the Microsoft 365 Groups would already exist and your task as Teams service admin would only be to enable their Teams functionality, but for this lab you need to create them manually.
+In real world scenarios, the Microsoft 365 Groups would already exist and your task as Teams Administrator would only be to enable their Teams functionality, but for this lab you need to create them manually.
 
 You will create the new Microsoft 365 Group named "IT-Department" and then add the pilot members serving as a basis for your future teams and licensing.
 
