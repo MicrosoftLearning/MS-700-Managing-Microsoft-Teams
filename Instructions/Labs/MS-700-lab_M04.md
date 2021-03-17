@@ -242,7 +242,7 @@ You have successfully created two teams via Graph API. Your test of the Graph fu
 
 #### Task 4 – Archive and unarchive a team
 
-After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams service admin, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
+After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
 
 1. Sign in to the **Teams admin center** [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
