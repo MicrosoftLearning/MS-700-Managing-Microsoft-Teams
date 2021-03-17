@@ -43,8 +43,6 @@ After you complete this lab, you will be able to:
 
 - Install the Teams PowerShell module and explore its cmdlets
 
-- Import the Skype for Business Online PowerShell cmdlets
-
 - Create Microsoft 365 Groups from the M365 admin center
 
 - Create new teams using the Teams Desktop client
@@ -72,6 +70,7 @@ The labs in this course will use two virtual machines:
 **Note:** Lab virtual machine sign in instructions will be provided to you by your instructor.
 
 **Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1\Admin** or **CLIENT2\admin**, depending on which machine you are on.
+
 #### **2. Review installed applications**
 
 Once you signed in to the VM, observe the start menu, and verify following applications have been installed:
@@ -278,43 +277,12 @@ In this task, you will connect with the Teams PowerShell module to your tenant a
    ```powershell
    Get-Help New-Team
    ```
-1. If you receive a message to update the help libraries, type **Y** for yes.
+8. If you receive a message to update the help libraries, type **Y** for yes.
 
-8. When you are finished with exploring the Microsoft Teams PowerShell cmdlets, leave the PowerShell window open and continue to the next task.
+9. When you are finished with exploring the Microsoft Teams PowerShell cmdlets, close the PowerShell window.
 
 You have successfully used the Microsoft Teams PowerShell module to connect to Teams in your tenant and explored some available cmdlets.
-  
-#### **Task 3 - Import former Skype for Business Online cmdlets**
-
-Because the Skype for Business Online cmdlets have been integrated into the Teams PowerShell module, a separate module is no longer required, but the cmdlets still need to be in loaded into the Teams PowerShell session. In this task, you will connect to your voice and policy endpoint in your tenant.
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. You have still opened a PowerShell window, and you are still connected to the Microsoft Teams PowerShell module in context of Joni Sherman.
-
-3. Run the following cmdlet to open a new session to the SfBPowerShell endpoint and store the session data to a variable:
  
-   ```powershell
-   $Session = New-CsOnlineSession
-   ```
-4. After connecting the session, run the following cmdlet to import the new session:
-
-   ```powershell
-   Import-PSSession $Session
-   ```
-5. To view the available cmdlets from the CsOnlineSession module, run the following cmdlet:
-
-   ```powershell
-   Get-Command -Module (Get-Module -Name tmp*)
-   ```
-6. To close the remote PowerShell session, run the following cmdlet:
-
-   ```powershell
-   Remove-PSSession -Session $Session
-   ```
-7. Close the PowerShell window.
-
-You have successfully established a connection to the CsOnline endpoint in your tenant, to manage voice and policy settings that formerly required the independent Skype for Business Online module.
 
 ### **Exercise 3: Create groups and teams**
 
