@@ -26,7 +26,7 @@ After you complete this lab, you will be able to:
 
 - Reset all Azure AD settings to defaults
 
-- Activating ATP protection for SharePoint, OneDrive and Teams
+- Activating Safe Attachments protection for SharePoint, OneDrive and Teams
 
 - Create, configure and test retention policies
 
@@ -98,7 +98,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 3. Create a new sensitivity label with the following settings:
 
-    - **Name**: General
+   - **Name**: General
+
+	- **Display name**: General
 
 	- **Description for users**: General information without protection
 
@@ -113,6 +115,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 4. Create the second new sensitivity label with the following settings:
 
 	- **Name**: Internal
+
+   - **Display name**: Internal
 
 	- **Description for users**: Internal information with sharing protection
 
@@ -138,6 +142,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	- **Name**: Confidential
 
+   - **Display name**: Confidential
+   
 	- **Description for users**: Confidential information with all protection
 
 	- **Description for admins**: Confidential information with all restrictive encryption, marking, and sharing settings activated

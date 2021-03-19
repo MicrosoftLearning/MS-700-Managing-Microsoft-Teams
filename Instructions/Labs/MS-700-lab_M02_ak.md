@@ -27,7 +27,7 @@ After you complete this lab, you will be able to:
 
 - Reset all Azure AD settings to defaults
 
-- Activating ATP protection for SharePoint, OneDrive and Teams
+- Activating Safe Attachments for SharePoint, OneDrive and Teams
 
 - Create, configure and test retention policies
 
@@ -119,17 +119,19 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 7. On the **Name and create a tooltip for your label** page, enter the following information:
 
-	- **Name**: General.
+	- **Name**: General
 
-	- **Description for users**: General information without protection.
+	- **Display name**: General
 
-	- **Description for admins**: General information without encryption, marking or sharing restriction settings activated.
+	- **Description for users**: General information without protection
+
+	- **Description for admins**: General information without encryption, marking or sharing restriction settings activated
 
 8. Select **Next**.
 
 9. Select **Files &amp; emails** and **Groups &amp; Sites** on the **Scope** page and select **Next**.
 
-10. Do not make any changes on the **Files &amp; emails** page and select **Next**.
+10. Do not make any changes on the **Choose protection settings for files and emails** page and select **Next**.
 
 11. Do not make any changes on the **Auto-labeling for Office apps** page and select **Next**.
 
@@ -153,11 +155,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 18. On the **Name and create a tooltip for your label** page, enter the following information:
 
-	- **Name**: Internal.
+	- **Name**: Internal
 
-	- **Description for users**: Internal information with sharing protection.
+	- **Display name**: Internal
 
-	- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated.
+	- **Description for users**: Internal information with sharing protection
+
+	- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
 
 19. Select **Next**.
 
@@ -211,11 +215,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 38. On the **Name and create a tooltip for your label** page, enter the following information:
 
-	- **Name**: Confidential.
+	- **Name**: Confidential
 
-	- **Description for users**: Confidential information with all protection.
+	- **Display name**: Confidential
 
-	- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated.
+	- **Description for users**: Confidential information with all protection
+
+	- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
 39. Select **Next**.
 
