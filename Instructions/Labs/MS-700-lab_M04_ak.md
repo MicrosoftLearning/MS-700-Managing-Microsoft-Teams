@@ -381,7 +381,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 10. In the **Microsoft Azure portal**, below the **Azure services** section, select **More services**.
 
-11. On the **All services** page, select **Identity** from the left side navigation pane and **A****zure Active Directory** from the main window.
+11. On the **All services** page, select **Identity** from the left side navigation pane and **Azure Active Directory** from the main window.
 
 12. On the **Contoso | Overview** page, select **Groups** from the left side pane.
 
@@ -471,7 +471,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 4. Select **Guest access** from the list.
 
-5. On the **Guest access** page, use the slider right from **Allow guest access in Teams** by selecting it. When it is turned to **On**, scroll down and select **Save**.
+5. On the **Guest access** page, use the drop box right of **Allow guest access in Teams** and select **On**. Scroll down and select **Save**.
 
 6. Close all browser windows.
 
@@ -505,7 +505,7 @@ In this task, you will configure the guest user access in the Microsoft Azure Po
 
 	- **Last name**: your last name
 
-	- **Personal Message**: Hello Guest, Here is the link to access to our Contoso test organization. Best regards, Contoso admin.
+	- **Personal Message**: Hello Guest, Here is the link to access our Contoso test organization. Best regards, Contoso admin.
 
  
 
@@ -583,29 +583,31 @@ As a part of your system administrator role, you need to review access to resour
 
 12. Select **Groups** from the left-hand navigation pane and on the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane again.
 
-13. In the middle of the page select **+New access review** to create a new Access review.
+13. In the middle of the page select **+ New access review** and follow the steps below to create a new Access review.
 
-14. In the Create an access review window enter the following information to the fields:
+	- On the **Review type** section of the **New access review** page, select the radio button beside **Select teams + Groups**
+	- select **Select goroup(s)** and chose the Group: **IT-Department**
+	- select the radio button beside **Guest users only**
+	- select **Next:Reviews**
+
+14. Under the **Reviews** section, follow the steps:
+
+	- select **Group owner(s)** in the **Select reviewers** dropdown menu.
+	- In the **Specify recurrence of review**, select **One time**, for **Duration (in days)** enter **7**, and use todays date for **Start date**  
+	- select **Next:Settings**
+
+15. Under the **Settings** section, follow the steps:
+
+	- set **Auto apply results to resource** to **enabled**, and leave others settings as default. 
+	- select **Next:Review+Create**
+
+16. Under the **Review+Create** section, enter the following information to the fields:
 
 	- Review name: **Guest access review**
-
 	- Description: **Reviewing guest access**
+	- Select **Create**. 
 
-	- StartDate: **your current date**
-
-	- Frequency: **One time**
-
-	- EndDate: **your current date + 7 days into the future**
-
-	- Scope: **Guest users only**
-
-	- Group: **IT-Department**
-
-	- Reviewers: **Group owners**
-
-15. Select **Upon completion settings** to expand the menu and set **Auto apply results to resource** to **enabled**.
-
-16. Select **Start**. The system automatically creates an Email for the Access Reviewer.
+	The system automatically creates an Email for the Access Reviewer.
 
 17. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
 
