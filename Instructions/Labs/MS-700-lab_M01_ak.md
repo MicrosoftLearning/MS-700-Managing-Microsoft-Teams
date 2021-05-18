@@ -314,9 +314,11 @@ You will create the new Microsoft 365 Group named "IT-Department," and then add 
 
 7. Select **Next**.
 
-8. In the Owners field type in the Name of **Joni Sherman**, select her from the **Users** list, and then select **Next**.
+8. In the **Assign Owners** page, select **+Assign owners** then select **Joni Sherman** from the **Users** list and select **Add(1)**, and then select **Next**.
 
-9. As the group email address type in **IT-Department**@&lt;YourTenant&gt;.onmicrosoft.com, set the privacy to **Private – Only members can see group content**, clear the **Create a team for this group** checkbox, and then select **Next**.
+9. In the **Add Members** page, do not make any changes, select **Next**.
+
+10. As the group email address type in **IT-Department**@&lt;YourTenant&gt;.onmicrosoft.com, set the privacy to **Private**, clear the **Create a team for this group** checkbox, and then select **Next**.
 
 10. On the **Review** page, verify the settings and then select **Create group**.
 
@@ -328,9 +330,9 @@ You will create the new Microsoft 365 Group named "IT-Department," and then add 
 
 14. On the **Members** tab, select **View all and manage members**.
 
-15. In the new window, select **+ Add members** from the top and select the checkbox before the following users: **Alex Wilber**, **Allan Deyoung**, **Lynne Robbins**, and **Megan Bowen**.
+15. In the new window, select **+ Add members** from the top and select the checkbox before the following users: **Alex Wilber**, **Allan Deyoung**, **Lynne Robbins**, and **Megan Bowen**, then select **Add (4)**,
 
-16. Select **Save,** then **Close** two times and close the IT-Department pane with the **X**.
+16. Close the IT-Department pane with the **X**.
 
 17. Close the browser window.
 
