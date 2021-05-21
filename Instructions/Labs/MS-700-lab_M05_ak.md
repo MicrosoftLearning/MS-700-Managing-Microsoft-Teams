@@ -215,21 +215,21 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 3. In the left-hand navigation pane, select **Policy packages** to display existing policy packages.
 
-4. Review the existing policy packages. Afterwards select **Firstline worker** to edit the policy package.
+4. Review the existing policy packages. Afterwards select **Frontline worker** to edit the policy package.
 
-5. From the list of assigned policies, select **Firstline_Worker** right from **Messaging policy**.
+5. From the list of assigned policies, select **Frontline_Worker** right from **Messaging policy**.
 
 6. Select **Edit** from the upper right corner to change the policy settings.
 
 7. Select the switch right from **Send urgent messages using priority notifications** to **On** and select **Save**.
 
-8. Back on the list of assigned policies, select **Firstline_Worker** right from **Calling policy**.
+8. Back on the list of assigned policies, select **Frontline_Worker** right from **Calling policy**.
 
 9. Select the switch right from **Prevent toll bypass and send calls through the PSTN** and **Busy on busy is available when in a call** to **On** and select **Save**.
 
 10. Back on the list of assigned policies again, select **Back** to go to the Policy packages overview.
 
-11. The checkmark left from the **Firstline worker** policy package is still active. Select **Manage users** from the top pane to open the **Manage users** right-side pane.
+11. The checkmark left from the **Frontline worker** policy package is still active. Select **Manage users** from the top pane to open the **Manage users** right-side pane.
 
 12.  Type "Allan" into the search bar, select **Add** right from **Allan Deyoung** and **Apply**.
 
@@ -237,7 +237,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 14. In the line of Allan Deyoung, select **View policies**.
 
-15. Below Assigned policies you can now see the different **Firstline_Worker** policies and below **Policy package** the **Firstline worker** package.
+15. Below Assigned policies you can now see the different **Frontline_Worker** policies and below **Policy package** the **Frontline worker** package.
 
 You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
 
@@ -261,9 +261,9 @@ In this task, you will add a custom line of business app required for your compa
 
 6. Select **Apps** from the side pane.
 
-7. Scroll down the list of **Apps**, select **Upload a custom app** and **Upload for Contoso**.
+7. Scroll down the list of **Apps**, select **Upload a custom app** and **Upload for my org**.
 
-8. A file select window appears. Navigate to **Downloads** and select **Notification App.zip**.
+8. A file select window appears. Navigate to **Downloads** and select **Notification App.zip** and select **Open**.
 
 9. Go back to **Apps** from the side pane.
 
@@ -283,11 +283,11 @@ In this task, you will add a custom line of business app required for your compa
 
 17. Go back to **Apps** from the side pane.
 
-18. Scroll down and select **Built for Contoso**.
+18. Scroll down and select **Built for my org**.
 
 19. Select **NotificationBot** and review the details.
 
-20. Select **Add for me**, to test the custom app.
+20. Select **Add for team**, then select **Contoso** from the list of teams, and select **Setup bot**.
 
 21. On the **Welcome to Notification Bot** conversation, select the dropdown menu and select **Weather**, and then select **Show Notification**.
 
