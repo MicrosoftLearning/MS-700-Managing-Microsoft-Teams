@@ -81,7 +81,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 3. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
 
-4. On the Microsoft Teams page, leave the default settings and select **Join now** button.
+4. On the Microsoft Teams page, select **Computer audio** and leave the rest of the settings at the defaults and select **Join now** button.
 
 5. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (…) for **More actions**.
 
@@ -321,15 +321,15 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Music on hold: **Play default music**
 
-	- Call answering: Select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane.
+	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane.
 
 	- Routing method: **Round robin**
 
 	- Presence-based routing: **Off**
 
-	- Agents can opt out of taking calls: **On**
+	- Call agents can opt out of taking calls: **On**
 
-	- Agent alert time: **30 seconds**
+	- Call agent alert time: **30 seconds**
 
 	- Maximum calls in the queue: **50**
 
@@ -453,11 +453,11 @@ In this task you will activate the Calling Plan Add-on Trial for your tenant so 
 
 4. Open the Navigation Menu in the upper left corner and select  **Billing &gt; purchase services**.
 
-5. Scroll to the bottom of the page and select **Add-ons**.
+5. Select **Add-ons**.
 
-6. Scroll down until you see **Microsoft 365 Domestic Calling Plan Trial** and select **Details**.
+6. Scroll down until you see **Microsoft 365 Domestic Calling Plan for US and Canada Trial** (you may have to select **See more add-ons products**) and select **Details**.
 
-7. Select **Get free trial**.
+7. Select **Start free trial**.
 
 8. Select **Try now** to get 25 Calling Plans for a month.
 
@@ -513,7 +513,7 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 11. For **Quantity**  select 1.
 
-12. Select **Next**, then **Finish**.
+12. Select **Next**, **Place order**, then **Finish**.
 
 **Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab.
 
