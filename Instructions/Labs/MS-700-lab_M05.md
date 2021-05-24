@@ -164,11 +164,11 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 2. Select **Policy packages** and review the existing policy packages.
 
-3. **Edit** the **Messaging policy** of the **Firstline_Worker** package with the following setting:
+3. **Edit** the **Messaging policy** of the **Frontline_Worker** package with the following setting:
 
 	- **Send urgent messages using priority notifications**: On
 
-4. **Edit** the **Calling policy** of the **Firstline_Worker** package with the following settings:
+4. **Edit** the **Calling policy** of the **Frontline_Worker** package with the following settings:
 
 	- **Prevent toll bypass and send calls through the PSTN**: On
 
@@ -176,7 +176,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 5. Add **Allan Deyoung** to the policy package.
 
-6. Select **Users** and review the policies for **Allan Dyoung**. You should see **Firstline worker** package and the **Firstline_Worker** policies.
+6. Select **Users** and review the policies for **Allan Dyoung**. You should see **Frontline worker** package and the **Frontline_Worker** policies.
 
 You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
 
