@@ -339,7 +339,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 11. Select **Use the webapp instead** to open the Teams web client.
 
-12. On the left side, below the teams Megan is member or owner of, **Hidden teams** is now visible where team and channel names below are all written in italic. Select it to open the menu and select the **General** channel below the **Sales** team.
+12. On the left side, below the teams Lynne is member or owner of, **Hidden teams** is now visible where team and channel names below are all written in italic. Select it to open the menu and select the **General** channel below the **Sales** team. **Note:** If **Hidden teams** is not visible, click the Manage Teams icon to the right of Join or create a team, expand Archived and click Sales.
 
 13. Try to write a new conversation by selecting **New conversation** from the bottom.
 
