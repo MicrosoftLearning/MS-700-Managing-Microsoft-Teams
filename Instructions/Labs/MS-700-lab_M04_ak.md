@@ -379,25 +379,23 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 9. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
 
-10. In the **Microsoft Azure portal**, below the **Azure services** section, select **More services**.
+10. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
 
-11. On the **All services** page, select **Identity** from the left side navigation pane and **Azure Active Directory** from the main window.
+11. On the **Contoso | Overview** page, select **Groups** from the left side pane.
 
-12. On the **Contoso | Overview** page, select **Groups** from the left side pane.
+12. On the **Groups | All groups** page, select **Deleted groups** in the left side pane.
 
-13. On the **Groups | All groups** page, select **Deleted groups** in the left side pane.
+13. Now you can see all deleted groups, including the **Sales** group.
 
-14. Now you can see all deleted groups, including the **Sales** group.
+14. Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
 
-15. Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
+15. Connect to **Client 2 VM** again with the credentials that have been provided to you.
 
-16. Connect to **Client 2 VM** again with the credentials that have been provided to you.
+16. Back on the **Teams web client**, press **F5** to refresh the page.
 
-17. Back on the **Teams web client**, press **F5** to refresh the page.
+17. The **Sales** team appears in the list of teams again. Select the three dots (…) right from the team name and select **Manage team**.
 
-18. The **Sales** team appears in the list of teams again. Select the three dots (…) right from the team name and select **Manage team**.
-
-19. You can see the owner and all members again in the **Members** tab.
+18. You can see the owner and all members again in the **Members** tab.
 
 **Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point of this lab.
 
