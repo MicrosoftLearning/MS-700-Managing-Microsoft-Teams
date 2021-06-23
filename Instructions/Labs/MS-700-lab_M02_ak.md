@@ -143,17 +143,17 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	- **External users access**: Select Let Microsoft 365 group owners add people outside the organization to the group.
 
-14. On the **Define external sharing and device access settings** page select the following setting and then select **Next**.
+14. On the **Define external sharing and device access settings** page select the **Use Azure AD Conditional Access to projtect labeled SharePoint sites** checkbox then select **Allow full access from desktop apps, mobile apps, and the web** and select **Next**.
 
-	- **Unmanaged devices:** Allow full access from desktop apps, mobile apps, and the web.
+15. On the **Auto-labeling for database columns** accept the default setting and select **Next**. 
 
-15. Review your settings and select **Create label** to finish the new label creation.
+16. Review your settings and select **Create label** to finish the new label creation.
 
-16. When the **Your label was created** is displayed, select **Done**.
+17. When the **Your label was created** is displayed, select **Done**.
 
-17. You should now see your newly created label "**General**" on the **Labels** dashboard. Select **+ Create a label** again, to create another sensitivity label.
+18. You should now see your newly created label "**General**" on the **Labels** dashboard. Select **+ Create a label** again, to create another sensitivity label.
 
-18. On the **Name and create a tooltip for your label** page, enter the following information:
+19. On the **Name and create a tooltip for your label** page, enter the following information:
 
 	- **Name**: Internal
 
@@ -163,13 +163,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
 
-19. Select **Next**.
+20. Select **Next**.
 
-20. Select **Files &amp; emails** and **Groups &amp; Sites** on the **Define the scope for this label** page and select **Next.**
+21. Select **Files &amp; emails** and **Groups &amp; Sites** on the **Define the scope for this label** page and select **Next.**
 
-21. On the **Choose protection settings for files and emails** page, select both boxes **Encrypt files and emails** and **Mark the content of files** and select **Next**.
+22. On the **Choose protection settings for files and emails** page, select both boxes **Encrypt files and emails** and **Mark the content of files** and select **Next**.
 
-22. On the **Encryption** page, select **configure encryption settings** and perform the following configuration settings:
+23. On the **Encryption** page, select **configure encryption settings** and perform the following configuration settings:
 
 	- Assign permissions now or let users decide: **Assign permissions now**.
 
@@ -177,13 +177,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	- Allow offline access: **Always**.
 
-23. Select **Assign permissions** below **Assign permissions to specific users and groups**.
+24. Select **Assign permissions** below **Assign permissions to specific users and groups**.
 
-24. On the right-side pane, select **+ Add all users and groups in your organization**.
+25. On the right-side pane, select **+ Add all users and groups in your organization**.
 
-25. Select **Save** and **Next** to finish the Encryption settings.
+26. Select **Save** and **Next** to finish the Encryption settings.
 
-26. On the **Content marking** page, select the slider and the checkbox **Add a watermark**.
+27. On the **Content marking** page, select the slider and the checkbox **Add a watermark**.
 
 27. Select **Customize text** to open the right-side pane.
 
@@ -191,7 +191,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 29. Select **Save** and **Next**.
 
-30. On the **Auto-labeling for Office apps** page, do not select the slider and select **Next**.
+30. On the **Auto-labeling for files and emails** page, do not select the slider and select **Next**.
 
 31. On the **Define protection settings for groups and sites** page, select both boxes **Privacy and external user access settings** and **External sharing and Conditional Access settings** and select **Next**.
 
@@ -201,11 +201,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	- **External users access**: Leave the box unchecked.
 
-33. On the **external sharing** page, select the following setting and then select **Next**:
+33. On the **Define external sharing and device access settings** page select the **Use Azure AD Conditional Access to projtect labeled SharePoint sites** checkbox then select **Allow limited web-only access** and select **Next**.
 
-	- **Unmanaged devices:** Allow limited, web-only access.
-
-34. Select **Next**.
+34. On the **Atuo-labeling for database columns**, select **Next**.
 
 35. Review your settings and select **Create label** to finish the new label creation.
 
@@ -255,7 +253,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 51. Select **Save** and **Next**.
 
-52. On the **Auto-labeling for Office apps** page, do not select the slider and select **Next**.
+52. On the **Auto-labeling for files and emails** page, do not select the slider and select **Next**.
 
 53. On the **Define protection settings for groups and sites** page, check both boxes **Privacy and external user access settings** and **External sharing and Conditional Access settings** and select **Next**.
 
@@ -265,11 +263,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	- **External users access**: Leave the box unchecked.
 
-55. On the **external sharing** page select the following setting and then select **Next**:
+On the **Define external sharing and device access settings** page select the **Use Azure AD Conditional Access to projtect labeled SharePoint sites** checkbox then select **Allow limited, web-only access** and select **Next**.
 
-	- **Unmanaged devices:** Allow limited, web-only access.
-
-56. Select **Next**.
+55. On the **Auto-labeling for database columns** page select **Next**:
 
 57. Review your settings and select **Create label** to finish the new label creation.
 
@@ -279,7 +275,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 60. On the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish**.
 
-61. Select the checkbox left from **Select all** and select **Add** to close the right-side pane.
+61. Select the checkbox to the left of **Label** to select all of the labels, and select **Add** to close the right-side pane.
 
 62. Select **Next**.
 
@@ -727,9 +723,9 @@ According to your organization compliance requirements, you need to implement ba
 
 4. In **Microsoft 365 compliance center**, on the left navigation pane, select **Show all** from the bottom of the navigation pane and then select **Data loss prevention**.
 
-5. On the **Data loss prevention** page, select **+ Create policy**.
+5. On the **Data loss prevention** page, select the **Policies** tab, then select **+ Create policy**.
 
-6. On the **Start with a template or create a custom policy** page, select the **Search for specific templates** search box and type: **GDPR**. The **General Data Protection Regulation (GDPR)** template will be preselected. 
+6. On the **Start with a template or create a custom policy** page, select the **Search for specific templates** search box and type: **GDPR**. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR)** template from the **Templates** section.
 
 7. Select **Next**
 
@@ -781,7 +777,7 @@ According to your organization compliance requirements, you need to implement ba
 
 	- Select **Override the rule automatically if they report it as false positive**.
 
-14. On the **Test or turn on the policy** page, select **Yes, turn it on right away** and select Next.
+14. On the **Test or turn on the policy** page, select **Turn it on right away** and select Next.
 
 15. On the Review your settings page, review your settings, select **Submit** then **Done**.
 
@@ -835,7 +831,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 12. From the right-side pane, check the box left of **Credit Card Number** and select **Add**.
 
-13. Leave the high **Accuracy** of 85 to 100 unchanged and do not change the **Instance count** of 1.
+13. Leave the high **High confidence** unchanged and do not change the **Instance count** of 1.
 
 14. Below **Action**, select **+ Add an action** and **Restrict access or encrypt content in Microsoft 365 locations**.
 
@@ -853,7 +849,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 21. Review the rule settings and select **Next**.
 
-22. Select the radio button **Yes, turn it on right away** and select **Next**.
+22. Select the radio button **Turn it on right away** and select **Next**.
 
 23. Review the policy settings again and select **Submit** then **Done**.
 

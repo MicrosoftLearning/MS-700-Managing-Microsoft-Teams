@@ -339,7 +339,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 20. In the **Search** box on the right, type **Meeting Room** and then hit Enter.
 
-21. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Standard** tile, select **Details** and then select **Get free trial**.
+21. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Standard** tile, select **Details** and then select **Start free trial**.
 
 22. In the **Check out** page, select **Try now**, and in the **order receipt** page, select **Continue**.
 

@@ -78,7 +78,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
 
-3. On the Microsoft Teams page, leave the default settings and select **Join now** button.
+3. On the Microsoft Teams page, select **Computer audio**, leave the other settings at defaults and select **Join now** button.
 
 4. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (**…**) **(More actions)**.
 
