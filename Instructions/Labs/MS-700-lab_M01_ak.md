@@ -266,6 +266,11 @@ In this task, you will install and connect with the Teams PowerShell module to y
 
         If you receive a message to update the help libraries, type **Y** for yes.
 
+    4. Disconnect from the Microsoft Teams environment.  
+
+        ```powershell
+        Disconnect-MicrosoftTeams
+        ```
 6. Close the PowerShell window and continue to the next task.
 
 You have successfully used the Microsoft Teams PowerShell module to connect to Teams and explored available cmdlets.
@@ -474,7 +479,11 @@ You are an administrator for your Teams organization. You need to limit which us
     ```
 	**Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
 
-12. Close the PowerShell window.
+12. Disconnects the current session from an Azure Active Directory tenant and close the PowerShell window.
+
+    ```powershell
+    Disconnect-AzureAD
+    ```
 
 13. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
 
