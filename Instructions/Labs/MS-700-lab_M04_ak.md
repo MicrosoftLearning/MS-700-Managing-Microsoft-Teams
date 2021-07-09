@@ -671,7 +671,7 @@ You have successfully modified included policies from an existing policy package
 
 #### Task 5 - Built a flow using Power Automate in Teams
 
-In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from **Contoso** org-wide team, the flow will send a message to notify members in **Group_IT-Department_United State*** team. 
+In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from **Contoso** org-wide team, the flow will send a message to notify members in **Group_IT-Department_United State** team. 
 
 1. Connect to the **Client 1 VM** and browse to Forms web client (https://www.office.com/launch/forms) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 

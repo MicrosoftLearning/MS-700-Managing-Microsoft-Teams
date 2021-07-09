@@ -351,3 +351,5 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 26. Close all open windows.
 
 You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
+
+END OF LAB
