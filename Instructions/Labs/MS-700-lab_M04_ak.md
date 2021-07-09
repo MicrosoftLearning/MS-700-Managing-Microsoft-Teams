@@ -35,7 +35,7 @@ After you complete this lab, you will be able to:
 
 - Manage private channels
 
-- Disable third party storage providers
+- Disable third-party storage providers
 
 - Manage Policy packages
 
@@ -64,11 +64,11 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 4. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create team** from the middle of the window.
 
-5. In the **Create a team** dialog , select **From a group or team**.
+5. In the **Create a team** dialog, select **From a group or team**.
 
 6. In the **Create a new team from something you already own** dialog, select **Microsoft 365 group**.
 
-7. In the **Which Microsoft 365 group do you want to use?** dialog select the group **"IT-Department"**, then select **Create**. Wait until the **Creating the team…** process is done.
+7. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **"IT-Department"**, then select **Create**. Wait until the **Creating the team…** process is done.
 
 8. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
 
@@ -84,11 +84,11 @@ You have successfully created a new team with the Teams Desktop client, by using
 
 #### Task 2 - Create a team by using PowerShell
 
-In this task you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell.
+In this task, you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. On the taskbar at the bottom of the page, right click the **Start** button and then select **Windows PowerShell**.
+2. On the taskbar at the bottom of the page, right select the **Start** button and then select **Windows PowerShell**.
 
 3. Run the following cmdlet to connect to Microsoft Teams in your tenant:
 
@@ -677,25 +677,27 @@ You have successfully modified included policies from an existing policy package
 
 #### Task 5 - Built a flow using Power Automate in Teams
 
-In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from **Contoso** org-wide team, the flow will send a message to notify members in **Group_IT-Department_United State** team. 
+In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from the **Contoso** org-wide team, the flow will send a message to notify members in the **Group_IT-Department_United State** team. 
 
-1. Connect to the **Client 1 VM** and browse to Forms web client (https://www.office.com/launch/forms) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM**.
 
-2. Create a from
+2. Create a form
 
-	1. In the Froms web client, select **+ New Form**.
+	1. Browse to the Forms web client (https://www.office.com/launch/forms) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+	
+	2. In the Froms web client, select **+ New Form**.
 
-	2. Select on **Untitled form** and enter the following information:
+	3. Select on **Untitled form** and enter the following information:
 	
 		* Input your title here: **Submit a ticket**.
 		* Enter a description: **Please provide the information. Our member from IT-Department will contact you as soon as possible.**
 
-	2. Select **+ Add new** > **Text**.
-	3. In the question textbox, enter **What is the issue?**
+	4. Select **+ Add new** > **Text**.
+	5. In the question textbox, enter **What is the issue?**
 
 3. Install **Power Automate** in Teams. 
 
-	1. Browse to Teams web client (https://teams.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Browse to the Teams web client (https://teams.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	2. In left navigation of the Teams client, select **Apps** and search for **Power Automate**.
 
@@ -736,7 +738,7 @@ In this task, you will create an issue report system by using Power Automate in 
 	
 		*I need help to create a team for external partners.*  
 	3. Select **Submit**.
-	4. Go to the **General** channel of **Group_IT-Department_United State** team. You will see a post via Power Automate. 
+	4. Go to the **General** channel of the **Group_IT-Department_United State** team. You will see a post via Power Automate. 
 
 In this task, you have successfully created a flow from Power Automate in Teams, which notify the members in IT department when users submit a request ticket. 
 
