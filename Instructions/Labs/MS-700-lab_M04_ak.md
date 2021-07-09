@@ -1,17 +1,19 @@
 ---
 lab:
-    title: 'Lab 04: Manage teams'
+    title: 'Lab 04: Manage teams and collaboration settings for Teams'
     type: 'Answer Key'
-    module: 'Module 4: Deploy and manage teams'
+    module: 'Module 4: Manage chat, teams, channels, and apps in Microsoft Teams'
 ---
 
-# **Lab 04: Manage teams**
+# **Lab 04: Manage teams and collaboration settings for Teams**
 
 # **Student lab answer key**
 
 ## **Lab Scenario**
 
-In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. In this lab, you will perform operational tasks as a Teams administrator, such as creating and modifying teams, managing membership, and recovering deleted teams. In the second half of this lab, you will configure the guest access for your tenant and review access for both, internal and external users.
+In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. In this lab, you will perform operational tasks as a Teams administrator, such as creating and modifying teams, managing membership, and recovering deleted teams. 
+
+In managing collaboration in Microsoft Teams, you will manage chat and collaboration experiences such as team settings or private channel creation policies. Finally, you will manage settings for Teams apps such as app setup policies, Apps, bots & connectors in Microsoft Teams or publish a custom app in Microsoft Teams.
 
 ## **Objectives**
 
@@ -29,13 +31,22 @@ After you complete this lab, you will be able to:
 
 - Delete and recover Teams
 
-- Configure guest access in Azure and Teams
+- Create a messaging policy
 
-- Review Access to a resource
+- Manage private channels
+
+- Disable third party storage providers
+
+- Manage Policy packages
+
+- Edit and test default org-wide app policy
+
+- Edit and test default app permission policy
+
 
 ## **Lab Setup**
 
-- **Estimated Time:** 90 minutes.
+- **Estimated Time:** 120 minutes.
 
 ## **Instructions**
 
@@ -453,190 +464,322 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 You have successfully converted a Microsoft 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation "Canada" is added automatically to the team.
 
-### **Exercise 2: Manage sharing and access**
 
-In this exercise, you will test the guest access features in Office 365. To do so, you will configure guest access in Azure AD, add a new external guest user and revoke the guest access by using access reviews.
+### **Exercise 2: Configure channel and message policies**
 
-#### Task 1 - Configure guest access in Teams
+In this exercise you will configure policies to manage the creation of new private channels and the available tools for users in chat.
 
-Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
+#### Task 1 - Create messaging policy for giphy, memes and stickers
+
+In the past, some users of Contoso have used a lot of stickers, gif animations and similar pictures in their conversations, even with externals using other chat solutions. The new corporate guideline shall prohibit the use of graphic elements in corporate communication via Teams, because users shall not use them in conversations with external customers and clients. As a Teams service administrator, you must create a new message policy that prohibits its use and apply it to several users of your pilot project.
+
+**Note:** After creating a messaging policy, it can take up to 24 hours for the settings to be applied to the users.
+
+1. Connect to the Client 1 VM with the credentials that have been provided to you.
+
+2. Open **Microsoft Edge**, maximize the window and navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
+
+3. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+4. In the left-hand navigation pane, select the **Messaging policies**, then click on the **+ Add** at the right side of the page, to create a new messaging policy.
+
+5. In the **New messaging policy** dialog enter the following information to the fields and set the following configuration:
+
+	- **Name**: Regular users without fun stuff
+
+	- **Description**: Policy to disable giphys, stickers, and memes in conversations
+
+	- **Use Giphys in conversations**: off
+
+	- **Use Memes in conversations**: off
+
+	- **Use Stickers in conversations**: off
+
+6. Leave the rest of the settings as default. Select **Save**.
+
+7. In the Messaging policies overview, select the checkmark left to **Regular users without fun stuff**. Then select **Manage users** in the top navigation pane. If you cannot see **Manage users**, you may need to select the three dots first.
+
+8. Type in **Lynne Robbins** and select **Add**, and then select **Apply**.
+
+9. Stay in the Teams admin center and continue with the next task.
+
+In this task, you have successfully configured a new messaging policy and assigned it to Lynne Robbins. It will now take some time for the policy to take effect. Continue with the next task.
+
+#### Task 2 - Manage private channels in a team
+
+As Teams administrator of Contoso, you will create a private channel "confidential" in the sales team that only allows some people to be able to access the information.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** [https://admin.teams.microsoft.com/](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
 
-3. On the **Microsoft Teams admin center** page, select the cogwheel from the lower left side pane and open the **Org-wide settings** menu. 
+3. In the left-hand navigation pane, select **Teams** to open the menu and **Manage teams** below.
 
-4. Select **Guest access** from the list.
+4. Select the **Sales** team in the **Manage teams** overview window.
 
-5. On the **Guest access** page, use the drop box right of **Allow guest access in Teams** and select **On**. Scroll down and select **Save**.
+5. Select the **Channels** tab in the middle of the page. Select **+ Add** in the navigation pane below to get into the **Add channel** window.
 
-6. Close all browser windows.
+6. In the **Add channel** window enter the following information:
 
-You have now successfully activated guest access for Teams in your tenant.
+	- **Name:** Confidential sales
 
-#### Task 2 - Configure guest access in the Azure AD (optional)
+	- **Description:** Confidential private sales channel
 
-In this task, you will configure the guest user access in the Microsoft Azure Portal. You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
+	- **Type:** Private
 
-**Note**: You need to have a personal Outlook.com account for this and the following tasks. If you don’t have an account like this, open your web browser, go to [**https://outlook.com**](https://outlook.com/) and create a new account.
+7. Enter to the field **Channel owner** the user **Lynne Robbins** and select her as owner.
+
+8. Select **Apply** in the **Add channel** window.
+
+9. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+
+10. Open the Edge browser with the icon from the taskbar.
+
+11. In your browser, select the address bar and go to the **Teams Web Client** page by entering the following URL: [**https://teams.microsoft.com**](https://teams.microsoft.com/)
+
+12. On the **Pick an account** page, select the **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+13. On the Microsoft Teams landing page click **Use the web app instead**.
+
+14. On the team overview in the Teams web client, you should see the new private channel **Confidential sales** with a small padlock icon.
+
+In this task you learned how to create a private channel in the Microsoft Teams Admin center and how to configure and check the access.
+
+### **Exercise 3: Manage app settings**
+
+#### Task 1 - Disable third party storage providers
+
+In the past, users stored data at various locations, including third-party storage providers. Recently, the company deployed OneDrive for all users and would like to guide the users to use SharePoint and OneDrive as the primary data storage locations with Box as an alternative for all file collaborations. As the Teams admin, you are asked to deactivate all third-party storage providers except Box in Microsoft Teams to align with the direction.
+
+**Note:** After disabling the third-party storage provider, it can take up to 24 hours for the settings to be applied to the teams.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com/).
+2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
 
-3. You should be still logged in as **MOD Administrator**. If not, on the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+3. On the left-side navigation pane, select the **Org-wide settings** to open the menu, then select **Teams settings** below.
 
-4. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
+4. In the Teams settings overview go to the **Files** section. Configure the following file sharing and cloud file storage options.
 
-5. Select **Users** from the left side pane.
+	- **Citrix files:** Off
 
-6. In the **Users – All users** window, select **+ New guest user** from the top pane to create a new **Guest User**.
+	- **DropBox:** Off
 
-7. In the **New user** window select **Invite user** and enter the following information to the fields:
+	- **Box:** On
 
-	- **Name**: your full name
+	- **Google Drive:** Off
 
-	- **Email address**: your Outlook.com email address
+	- **Egnyte:** Off
 
-	- **First name**: your First name
+5. After this scroll down and select **Save**.
 
-	- **Last name**: your last name
+In this task you have learned how to enable or disable third-party storage providers for your whole tenant.
 
-	- **Personal Message**: Hello Guest, Here is the link to access our Contoso test organization. Best regards, Contoso admin.
+#### Task 2 - Edit default org-wide app policy
 
- 
+In the pilot project, the company decided that Microsoft Planner is the default app for all (existing) teams. To do this, edit the default org-wide app policy. This task may take some time to propagate throughout the tenant.
 
-8. In the Groups and roles section, select **0 groups selected**. In the Groups window on the right side, select the **IT-Department** group, scroll down and return to the New user window by choosing **Select**.
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-9. To finish the invitation process, select **Invite** from the lower left side of the window.
+2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
 
-10. You can now see a new user on the **Users – All users** page, note that the **User type** is set to **Guest**.
+3. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Setup policies**.
 
-11. Open a **New InPrivate window** in your browser and go to the **Outlook Web Portal** page by entering the following URL in the address bar: [**https://outlook.live.com/owa/**](https://outlook.live.com/owa/)
+4. In the **App setup policies** window select **Global (Org-wide default)** name to open the org-wide app policy.
 
-12. In the top right navigation pane, select **Sign In**.
+5. In the **Pinned apps** section select **+ Add apps** to open the **Add pinned apps** menu at the right side.
 
-13. In the **Sign in** window, enter the **Email address** which you have created before.
+6. Select **Global** and type in the name **Planner**, mouseover the presented name and select **Add**. After this, select **Add** to return previous window.
 
-14. In the **Enter password** dialog box, enter the password and select **Sign in**.
+7. Make sure that **Planner** is now listed in the **Pinned apps** section and select **Save**.
 
-15. After signing in, open your **Inbox** and open the invitation Email with the topic **You’re invited to the Contoso organization**.
+8. In the **App setup policies** window select **Global (Org-wide default)** and make sure there is a selected checkmark in the front of the name.
 
-16. When you select **Get Started** from the invitation Email, a new tab with a **Review permissions** message opens. Grant your consent to **Contoso** by selecting **Accept**.
+9. Then select **Manage users** in the top navigation pane to open the **Mange users** dialog. Enter the name of **Lynne Robbins** and mouseover the presented name and select **Add**. Then select **Apply**.
 
-17. Your personal outlook account has now been added to both your test tenant of Contoso Ltd. and to the "IT-Department" team.
+10. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-18. Close the InPrivate window.
+11. Open the Edge browser, select the address bar and go to the **Teams Web Client** page by entering the following URL: [**https://teams.microsoft.com**](https://teams.microsoft.com/)
 
-You have successfully changed the external collaboration settings, so guests can also invite new guests. Then you have added a personal outlook.com account as a guest to your tenant and as a member to the team "IT-Department".
+12. On the **Pick an account** window, select LynneR@&lt;YourTenant&gt;.onmicrosoft.com and sign in.
 
-#### Task 3 – Test external access with sensitivity labels (optional)
+13. On the Microsoft Teams landing page click **Use the web app instead**.
 
-Even with enabled guest access sensitivity labels can deny guest access for specific teams. In this task you will try to add a guest user to an internal team. Enabling guest access for teams can take up to 24 hours. If you cannot find the guest user in step 4 you should test it again the next day.
+14. In the left-hand navigation pane, the **Planner** app should be displayed by default below the Files **menu**.
+
+#### Task 3 - Edit default app permission policy
+
+In this task you will edit the default app permission policy and block the Google Analytics app for all tenants
+
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+
+2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
+
+3. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Permission policies**.
+
+4. In the **App permission policies** window select **+ Add** to create a new policy.
+
+5. After this the policy creation dialog appears, type in the policy name **Block Google Analytics** and expand the menu in the **Third-party app** section, and select **Block specific apps and allow all others**.
+
+6. Select **Block apps** below the Notification **Add apps that you want to block** to open the right-side menu.
+
+7. In the Add third party apps dialog, type in **Google Analytics**, mouseover the presented name and select **Add**. Repeat the same step for **Google Analytics Insights**. After this select **Block** to return to the **App permission policies** window. Select **Save**.
+
+8. In the App permission policies overview, select the checkmark left to **Block Google Analytics**. Then select **Manage users** in the top navigation pane.
+
+9. Type in **Lynne Robbins** and select **Add** by mouseover the presented name, then click **Apply**.
+
+In this task you have learned how to block the Google Analytics app for your tenant.
+
+#### Task 4 – Manage policy packages
+
+To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task you need to review the default policy packages and change a default policy package for first line workers.
+
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+
+2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
+
+3. In the left-hand navigation pane, select **Policy packages** to display existing policy packages.
+
+4. Review the existing policy packages. Afterwards select **Frontline worker** to edit the policy package.
+
+5. From the list of assigned policies, select **Frontline_Worker** right from **Messaging policy**.
+
+6. Select **Edit** from the upper right corner to change the policy settings.
+
+7. Select the switch right from **Send urgent messages using priority notifications** to **On** and select **Save**.
+
+8. Back on the list of assigned policies, select **Frontline_Worker** right from **Calling policy**.
+
+9. Select the switch right from **Prevent toll bypass and send calls through the PSTN** and **Busy on busy is available when in a call** to **On** and select **Save**.
+
+10. Back on the list of assigned policies again, select **Back** to go to the Policy packages overview.
+
+11. The checkmark left from the **Frontline worker** policy package is still active. Select **Manage users** from the top pane to open the **Manage users** right-side pane.
+
+12.  Type "Allan" into the search bar, select **Add** right from **Allan Deyoung** and **Apply**.
+
+13. Select **Users** from the left-side pane.
+
+14. In the line of Allan Deyoung, select **View policies**.
+
+15. Below Assigned policies you can now see the different **Frontline_Worker** policies and below **Policy package** the **Frontline worker** package.
+
+You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
+
+
+
+#### Task 5 - Built a flow using Power Automate in Teams
+
+In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from **Contoso** org-wide team, the flow will send a message to notify members in **Group_IT-Department_United State*** team. 
+
+1. Connect to the **Client 1 VM** and browse to Forms web client (https://www.office.com/launch/forms) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+2. Create a from
+
+	1. In the Froms web client, select **+ New Form**.
+
+	2. Select on **Untitled form** and enter the following information:
+	
+		* Input your title here: **Submit a ticket**.
+		* Enter a description: **Please provide the information. Our member from IT-Department will contact you as soon as possible.**
+
+	2. Select **+ Add new** > **Text**.
+	3. In the question textbox, enter **What is the issue?**
+
+3. Install **Power Automate** in Teams. 
+
+	1. Browse to Teams web client (https://teams.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+	2. In left navigation of the Teams client, select **Apps** and search for **Power Automate**.
+
+	3. Select **Power Automate** app, and select **Add**
+
+4. Create a flow
+
+	1. In left navigation of the Teams client, select **Power Automate**.
+
+	2. Select **Create** tab from the top menu. 
+
+	3. Select the template **Notify a team when a new Forms response is submitted** and select **Continue**
+
+	4. Enter the flow name : **Report issue**. Select **Continue**.
+
+	5. On the **Set up your flow** page, 
+	
+		* From the **The ID of the form you want to monitor** dropdown menu, select **Submit a ticket**. 
+
+		* From the **Team to notify** dropdown menu, select **IT-Department**.
+
+		* From the **Channel to notify** dropdown menu, select **General**.
+
+	6. Select **Create flow** > **Done**
+
+5. Add the form to the **General** channel of **Contoso** team.
+
+	1. Go to the **General** channel of **Contoso** team.
+	2. Add a tab by selecting **+** next to Wiki tab. 
+	3. Select **Forms** from the **Add a tab** window. 
+	4. Select **Add an existing form**, and select **Submit a ticket**.	
+	5. Select **Save**.
+
+6. Test the flow
+
+	1. In the **General** channel of **Contoso** team, select **Fill|Submit a ticket** tab. 
+	2. On the **Submit a ticket** page, enter the following to the textbox:
+	
+		*I need help to create a team for external partners.*  
+	3. Select **Submit**.
+	4. Go to the **General** channel of **Group_IT-Department_United State** team. You will see a post via Power Automate. 
+
+In this task, you have successfully created a flow from Power Automate in Teams, which notify the members in IT department when users submit a request ticket. 
+
+### **Exercise 3: Test configured policy settings**
+
+In this exercise, you will test the configured policy settings on a client with the affected user Lynne Robbins and compare the settings to the available client settings of Joni Sherman.
+
+#### Task 1 – Test the messaging policy and private channel access
+
+In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between affected user (Lynne Robbins) vs regular user(Joni Sherman).
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Microsoft Teams Desktop Client, where you are signed in as **Megan Bowen**.
+2. Select the **Edge Browser** icon from the taskbar. In your browser, go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
 
-3. On the Teams overview select the three dots (**…**) right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
+3. On the **Pick an account** page, select the **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-4. On the **Add members to Teams Rollout** page, enter the name of the guest user you just invited.
+4. On the Microsoft Teams landing page click **Use the web app instead**.
 
-5. You will not be able to find the guest user, because guest users are restricted from this team.
+5. Skip a potential welcome dialog by selecting on **x** in the right corner.
 
-6. Perform the steps 3 and 4 for the **Contoso** team, where you can find and add the guest user to the **Contoso** team.
+6. In the left-hand navigation pane, select **Chat**, then select the **Contacts** in the dropdown menu.
 
-7. Select **Close.**
+7. If there is no contact for **Joni Sherman**, then select **…** and select **Add a contact to this group**. Type in the name **Joni Sherman** and select her by mouseover the presented name. After this select **Add** to return to the **Contacts tab**.
 
-**Note:** It can take up to 24 hours after enabling, till guest access is available in teams. If you cannot add guest users to any team, return to this task at a later point of this lab.
+8. In the **Contacts** tab, select **Joni Sherman**. Note that if the **giphy**, **memes** and **stickers** icons are missing below the conversation-bar, the **messaging policy** has taken effect.
 
-You have successfully tested the sensitivity labels setting to prevent guest access to a protected team and you can confirm, the labels are working as predicted.
+9. In the left-hand navigation pane, select **Teams**.
 
-#### Task 4 - Review access to a resource with access reviews
+10. Select the **Confidential sales** channel of the **Sales** team and add a comment to confirm that you have access to the private channel.
 
-As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by using access reviews in Microsoft Teams.
+#### Task 2 – Test the app permission policy and storage providers
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+In this task, you will test the **app permission policies** configured in exercise 2 and compare the differences between affected user (Lynne Robbins) vs regular user (Joni Sherman).
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Azure Portal**: [https://portal.azure.com](https://portal.azure.com/).
+1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-3. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+2. You are still in the **Teams web client** and signed in as **Lynne Robbins**.
 
-4. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
+3. In the left-hand navigation select **Teams** and select the **IT-Department** channel **General**. Mouseover the presented name **General**, select **…** and then select **Connectors**.
 
-5. Select **Groups** from the left-hand navigation pane.
+4. In the **Connectors for "General"** window, enter **Google Analytics** into the search field.
 
-6. In the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane.
+5. If you can’t find **Google Analytics** as a search result and can’t add the app to the channel, the **app permission policy** has worked as desired.
 
-7. If you see the option **Onboard now** in the middle of the Page, select it and proceed to the next step. Otherwise, skip to step 13.
+6. In the left-hand navigation pane, select **Teams**, then select the **IT-Department** team. Select the **files** Tab on the middle of the Teams web client. Then select **+ Add cloud storage** in the navigation pane below.
 
-8. In the left-hand navigation pane select **Onboard**, to enable the **Access reviews** select **Onboard Now** at the bottom of the page.
+7. If you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
 
-9. After this you will return to the home of the **Azure Portal**. Select the **notification Bell** above the **navigation pane**. In the notification window you will see the message that the onboarding of the Access review was successful configured.
-
-10. Close the notification window by selecting **X** in the right corner.
-
-11. Select the search box on top of the window, type in **Azure Active Directory** and then select **Azure Active Directory**.
-
-12. Select **Groups** from the left-hand navigation pane and on the **Groups - All groups** window, select **Access reviews** in the left-hand navigation pane again.
-
-13. In the middle of the page select **+ New access review** and follow the steps below to create a new Access review.
-
-	- On the **Review type** section of the **New access review** page, select the radio button beside **Select teams + Groups**
-	- select **Select goroup(s)** and chose the Group: **IT-Department**
-	- select the radio button beside **Guest users only**
-	- select **Next:Reviews**
-
-14. Under the **Reviews** section, follow the steps:
-
-	- select **Group owner(s)** in the **Select reviewers** dropdown menu.
-	- In the **Specify recurrence of review**, select **One time**, for **Duration (in days)** enter **7**, and use todays date for **Start date**  
-	- select **Next:Settings**
-
-15. Under the **Settings** section, follow the steps:
-
-	- set **Auto apply results to resource** to **enabled**, and leave others settings as default. 
-	- select **Next:Review+Create**
-
-16. Under the **Review+Create** section, enter the following information to the fields:
-
-	- Review name: **Guest access review**
-	- Description: **Reviewing guest access**
-	- Select **Create**. 
-
-	The system automatically creates an Email for the Access Reviewer.
-
-17. In the browser window, select the circle with **MA** in the upper right corner, open the side pane and select **Sign out**.
-
-18. Close your browser window and open it again by selecting the Edge browser icon from the taskbar.
-
-19. In your browser, select the address bar and go to the **Outlook on the web** page by entering the following URL: [**https://outlook.office365.com**](https://outlook.office365.com/)
-
-20. When you see the **Pick an account** window, select the **Joni Sherman account** to get to the Sign in window. If there is no **Joni Sherman account**, select **Use another account** to get to the Sign in window.
-
-21. In the **Sign in** window, enter the UPN of **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and select **Next**.
-
-22. In the **Enter password** dialog box, enter the password delivered by your training provider and select **Sign in**.
-
-23. If a welcome screen appears, close it.
-
-24. In the middle of the page, you will see an Email from **Microsoft Azure** with the topic **Action required: Review group access by &lt;local date + 7 days in the future&gt;**, then select this Email.
-
-25. Select the **Start review** button in this Email.
-
-26. An additional browser tab will open.
-
-27. In the Access Review Window, you can see an overview with configured settings and the configured guest user with your personal outlook.com email address.
-
-28. Select your outlook.com guest and then select **Details** to review the guest statistics.
-
-29. Select **Deny** from the available options and select **Submit**.
-
-30. In the overview, your outlook.com guest user has now **Denied** access.
-
-31. Close all windows.
-
-You have successfully created a new access review and blocked a guest user in your tenant. This is the end of lab 4. You can close all browser windows and proceed to the next lab.
+8. Sign out of Teams and close all open windows.
 
 END OF LAB
