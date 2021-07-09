@@ -1,37 +1,33 @@
 ---
 lab:
-    title: 'Lab 05: Modify collaboration settings for Teams'
+    title: 'Lab 05: Manage Teams meetings experiences'
     type: 'Answer Key'
-    module: 'Module 5: Manage collaboration in Microsoft Teams'
+    module: 'Module 5: Manage meetings and virtual events in Microsoft Teams'
 ---
 
-# **Lab 05: Modify collaboration settings for Teams**
+# **Lab 05: - Manage Teams meetings experiences**
 
 # **Student lab answer key**
 
 ## **Lab Scenario**
 
-In managing collaboration in Microsoft Teams, you will manage chat and collaboration experiences such as team settings or private channel creation policies. Finally, you will manage settings for Teams apps such as app setup policies, Apps, bots & connectors in Microsoft Teams or publish a custom app in Microsoft Teams.
+In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. According to Contoso business requirements, Microsoft Teams will be used as an organization’s solution for conferencing and telephony. Therefore, Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide best user experience during collaboration and communication. 
 
 ## **Objectives**
 
 After you complete this lab, you will be able to:
 
-- Create a messaging policy
+- Manage meeting policies
 
-- Manage private channels
+- Configure meeting settings
 
-- Disable third party storage providers
+- Create live event policies
 
-- Create a Power Apps app
+- Create a live event
 
-- Manage Policy packages
+- Create configuration profiles for devices
 
-- Upload a tenant wide custom line of business app
-
-- Edit and test default org-wide app policy
-
-- Edit and test default app permission policy
+- Configure a new Microsoft Teams Room
 
 ## **Lab Setup**
 
@@ -39,392 +35,321 @@ After you complete this lab, you will be able to:
 
 ## **Instructions**
 
-### **Exercise 1: Configure channel and message policies**
+### **Exercise 1: Manage Live event and meetings experiences**
 
-In this exercise you will configure policies to manage the creation of new private channels and the available tools for users in chat.
+Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. First, Teams admins need to configure meeting policies and schedule initial meetings. Then, business managers want to test the Live meetings option in Microsoft Teams in order to broadcast audio and video to large audiences.
 
-#### Task 1 - Create messaging policy for giphy, memes and stickers
+#### Task 1 - Edit the default meeting policy and restrict all recording features for meetings
 
-In the past, some users of Contoso have used a lot of stickers, gif animations and similar pictures in their conversations, even with externals using other chat solutions. The new corporate guideline shall prohibit the use of graphic elements in corporate communication via Teams, because users shall not use them in conversations with external customers and clients. As a Teams service administrator, you must create a new message policy that prohibits its use and apply it to several users of your pilot project.
+As part of your pilot project for setting up the events and meetings in your organization, you need to fulfil the requirement for all meetings in teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
-**Note:** After creating a messaging policy, it can take up to 24 hours for the settings to be applied to the users.
-
-1. Connect to the Client 1 VM with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
 2. Open **Microsoft Edge**, maximize the window and navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
 
 3. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-4. In the left-hand navigation pane, select the **Messaging policies**, then click on the **+ Add** at the right side of the page, to create a new messaging policy.
+4. If a **Stay signed in?** dialog box is displayed, select the **Don’t show this again** checkbox and **Yes**.
 
-5. In the **New messaging policy** dialog enter the following information to the fields and set the following configuration:
+5. In the **Teams admin center,** on the left navigation pane, select **Meetings,** and then choose **Meeting policies**.
 
-	- **Name**: Regular users without fun stuff
+6. Select the **Global (Org-wide default)** policy to change the settings for all users.
 
-	- **Description**: Policy to disable giphys, stickers, and memes in conversations
+7. On the **Meetings policies\Global** page, review the available settings, and under **Audio &amp; Video** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
 
-	- **Use Giphys in conversations**: off
+You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
-	- **Use Memes in conversations**: off
+#### Task 2 – Test the meeting policy for restricting recording
 
-	- **Use Stickers in conversations**: off
+In this task you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-6. Leave the rest of the settings as default. Select **Save**.
+1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
 
-7. In the Messaging policies overview, select the checkmark left to **Regular users without fun stuff**. Then select **Manage users** in the top navigation pane. If you cannot see **Manage users**, you may need to select the three dots first.
+2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
 
-8. Type in **Lynne Robbins** and select **Add**, and then select **Apply**.
+3. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
 
-9. Stay in the Teams admin center and continue with the next task.
+4. On the Microsoft Teams page, select **Computer audio** and leave the rest of the settings at the defaults and select **Join now** button.
 
-In this task, you have successfully configured a new messaging policy and assigned it to Lynne Robbins. It will now take some time for the policy to take effect. Continue with the next task.
+5. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (…) for **More actions**.
 
-#### Task 2 - Manage private channels in a team
+6. Note that **Start recording** option is visible but is dimmed, not available to be selected.
 
-As Teams administrator of Contoso, you will create a private channel "confidential" in the sales team that only allows some people to be able to access the information.
+ 
+
+#### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
+
+Contoso Ltd. works with several external partners and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. On the left navigation pane, select **Meetings,** and then choose **Meetings settings**.
+
+4. On the **Meetings settings** page, below participants, use the slider to turn **Off** the option **Anonymous users can join a meeting**.
+
+5. Select **Save**.
+
+You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
+
+#### Task 4 - Create a new live event policy and restrict recording capabilities
+
+Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to management users. Only the organizer of a live event should be able to record his own meetings.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. On the left navigation pane, select **Meetings** and then select **Live event policies**.
+
+4. Select **+ Add** from the top pane, to create a new **Live event policy** with individual settings for assigned users.
+
+5. On **Live event policies\Add** page, enter the following information:
+
+	- Add live events policy: **Management Live Events**
+
+	- Description: **Recording Restriction for live events organized by managers**
+
+	- Allow scheduling: **On**
+
+	- Allow transcription for attendees: **Off**
+
+	- Who can join scheduled live events: **Everyone in the organization**
+
+	- Who can record an event: **Organizer can record**
+
+6. Select **Save**.
+
+7. Back on the **Live events policies** page, use the checkbox left of **Management Live Events** and select **Manage users** from the top pane to assign the new policy to users.
+
+8. In the right-side pane, type into the search field **Megan Bowen** and Add right from her name.
+
+9. Select **Apply** to assign the policy to the selected user.
+
+You have successfully created a custom Live event policy and assigned it to a user.
+
+#### Task 5 – Create a new live event 
+
+Contoso Ltd. Wants to broadcast video and meeting content to large online audiences using Teams live events. As a Teams admin, you need to demonstrate the functionality of live meetings to Management.
+
+1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
+
+2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
+
+3. On the left navigation pane select **Calendar**.
+
+4. In the top right select the arrow next to **new meeting** and select **live event** in the dropdown menu.
+
+5. Create a new **live event**:
+
+	- Title: Management Showcase
+
+	- Start/End: Select a time close to your current time 
+
+6. Select **Next**.
+
+7. Under **Live event permissions** select **Org-Wide**.
+
+8. Under **How will you produce your live event?** Select **Teams**.
+
+9. Select **Schedule**.
+
+10. On the next page select **Get attendee link** and send it in a chat message to Joni Sherman.
+
+11. On the left navigation pane select **Calendar**.
+
+12. Select the **live event** named **Management Showcase**.
+
+13. In the information window select **Join** to join the meeting.
+
+14. In the meeting preparation window select **Join now**.
+
+15. In the bottom pane of the meeting select **Share** and select your Desktop to share.
+
+16. In the bottom pane of the live event select **My desktop**.
+
+17. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+18. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+19. On the left navigation pane select **Chat**.
+
+20. Select the link sent to you by Megan Bowen to join the live event.
+
+21. Switch back to **Client 2 VM** and select **Send live** as Megan Bowen.
+
+22. Select **Start** to start the live event.
+
+23. In the **Are you sure you want to start the live event now?** Window select **Continue**.
+
+24. Switch back to **Client 1 VM** and wait for the live event to start.
+
+25. Switch to **Client 2 VM** and select **End**.
+
+26. In the **End live event now?** Window select **End live event**.
+
+You have successfully created a live event and shared content with your attendees.
+
+
+
+### **Exercise 2: Deploy Teams device profiles**
+
+As a Teams administrator, you will create configuration profiles to manage settings and features for Teams devices in your organization. You can create or upload configuration profiles to include settings and features you want to enable or disable and then assign a profile to a device or groups of devices.
+
+Your organization could purchase Microsoft Teams Rooms that provide complete meeting experience with HD video, audio, and content sharing in conference rooms. You will need to prepare the deployment prerequisites by define Microsoft Teams Rooms service account in Office 365.
+
+#### Task 1 - Create configuration profiles
+
+During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
-
-3. In the left-hand navigation pane, select **Teams** to open the menu and **Manage teams** below.
-
-4. Select the **Sales** team in the **Manage teams** overview window.
-
-5. Select the **Channels** tab in the middle of the page. Select **+ Add** in the navigation pane below to get into the **Add channel** window.
-
-6. In the **Add channel** window enter the following information:
-
-	- **Name:** Confidential sales
-
-	- **Description:** Confidential private sales channel
-
-	- **Type:** Private
-
-7. Enter to the field **Channel owner** the user **Lynne Robbins** and select her as owner.
-
-8. Select **Apply** in the **Add channel** window.
-
-9. Connect to the **Client 2 VM** with the credentials that have been provided to you.
-
-10. Open the Edge browser with the icon from the taskbar.
-
-11. In your browser, select the address bar and go to the **Teams Web Client** page by entering the following URL: [**https://teams.microsoft.com**](https://teams.microsoft.com/)
-
-12. On the **Pick an account** page, select the **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-13. On the Microsoft Teams landing page click **Use the web app instead**.
-
-14. On the team overview in the Teams web client, you should see the new private channel **Confidential sales** with a small padlock icon.
-
-In this task you learned how to create a private channel in the Microsoft Teams Admin center and how to configure and check the access.
-
-### **Exercise 2: Manage app settings**
-
-#### Task 1 - Disable third party storage providers
-
-In the past, users stored data at various locations, including third-party storage providers. Recently, the company deployed OneDrive for all users and would like to guide the users to use SharePoint and OneDrive as the primary data storage locations with Box as an alternative for all file collaborations. As the Teams admin, you are asked to deactivate all third-party storage providers except Box in Microsoft Teams to align with the direction.
-
-**Note:** After disabling the third-party storage provider, it can take up to 24 hours for the settings to be applied to the teams.
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
-
-3. On the left-side navigation pane, select the **Org-wide settings** to open the menu, then select **Teams settings** below.
-
-4. In the Teams settings overview go to the **Files** section. Configure the following file sharing and cloud file storage options.
-
-	- **Citrix files:** Off
-
-	- **DropBox:** Off
-
-	- **Box:** On
-
-	- **Google Drive:** Off
-
-	- **Egnyte:** Off
-
-5. After this scroll down and select **Save**.
-
-In this task you have learned how to enable or disable third-party storage providers for your whole tenant.
-
-#### Task 2 - Edit default org-wide app policy
-
-In the pilot project, the company decided that Microsoft Planner is the default app for all (existing) teams. To do this, edit the default org-wide app policy. This task may take some time to propagate throughout the tenant.
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
-
-3. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Setup policies**.
-
-4. In the **App setup policies** window select **Global (Org-wide default)** name to open the org-wide app policy.
-
-5. In the **Pinned apps** section select **+ Add apps** to open the **Add pinned apps** menu at the right side.
-
-6. Select **Global** and type in the name **Planner**, mouseover the presented name and select **Add**. After this, select **Add** to return previous window.
-
-7. Make sure that **Planner** is now listed in the **Pinned apps** section and select **Save**.
-
-8. In the **App setup policies** window select **Global (Org-wide default)** and make sure there is a selected checkmark in the front of the name.
-
-9. Then select **Manage users** in the top navigation pane to open the **Mange users** dialog. Enter the name of **Lynne Robbins** and mouseover the presented name and select **Add**. Then select **Apply**.
-
-10. Connect to the **Client 2 VM** with the credentials that have been provided to you.
-
-11. Open the Edge browser, select the address bar and go to the **Teams Web Client** page by entering the following URL: [**https://teams.microsoft.com**](https://teams.microsoft.com/)
-
-12. On the **Pick an account** window, select LynneR@&lt;YourTenant&gt;.onmicrosoft.com and sign in.
-
-13. On the Microsoft Teams landing page click **Use the web app instead**.
-
-14. In the left-hand navigation pane, the **Planner** app should be displayed by default below the Files **menu**.
-
-#### Task 3 - Edit default app permission policy
-
-In this task you will edit the default app permission policy and block the Google Analytics app for all tenants
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
-
-3. In the left-hand navigation pane, select the **Teams apps** to open the menu, then select **Permission policies**.
-
-4. In the **App permission policies** window select **+ Add** to create a new policy.
-
-5. After this the policy creation dialog appears, type in the policy name **Block Google Analytics** and expand the menu in the **Third-party app** section, and select **Block specific apps and allow all others**.
-
-6. Select **Block apps** below the Notification **Add apps that you want to block** to open the right-side menu.
-
-7. In the Add third party apps dialog, type in **Google Analytics**, mouseover the presented name and select **Add**. Repeat the same step for **Google Analytics Insights**. After this select **Block** to return to the **App permission policies** window. Select **Save**.
-
-8. In the App permission policies overview, select the checkmark left to **Block Google Analytics**. Then select **Manage users** in the top navigation pane.
-
-9. Type in **Lynne Robbins** and select **Add** by mouseover the presented name, then click **Apply**.
-
-In this task you have learned how to block the Google Analytics app for your tenant.
-
-#### Task 4 – Manage policy packages
-
-To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task you need to review the default policy packages and change a default policy package for first line workers.
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. You are still signed in as **Joni Sherman** in the **Microsoft Teams Admin center**.
-
-3. In the left-hand navigation pane, select **Policy packages** to display existing policy packages.
-
-4. Review the existing policy packages. Afterwards select **Frontline worker** to edit the policy package.
-
-5. From the list of assigned policies, select **Frontline_Worker** right from **Messaging policy**.
-
-6. Select **Edit** from the upper right corner to change the policy settings.
-
-7. Select the switch right from **Send urgent messages using priority notifications** to **On** and select **Save**.
-
-8. Back on the list of assigned policies, select **Frontline_Worker** right from **Calling policy**.
-
-9. Select the switch right from **Prevent toll bypass and send calls through the PSTN** and **Busy on busy is available when in a call** to **On** and select **Save**.
-
-10. Back on the list of assigned policies again, select **Back** to go to the Policy packages overview.
-
-11. The checkmark left from the **Frontline worker** policy package is still active. Select **Manage users** from the top pane to open the **Manage users** right-side pane.
-
-12.  Type "Allan" into the search bar, select **Add** right from **Allan Deyoung** and **Apply**.
-
-13. Select **Users** from the left-side pane.
-
-14. In the line of Allan Deyoung, select **View policies**.
-
-15. Below Assigned policies you can now see the different **Frontline_Worker** policies and below **Policy package** the **Frontline worker** package.
-
-You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
-
-#### Task 5 - Add a custom line of business app
-
-In this task, you will add a custom line of business app required for your company Contoso Ltd. for all users of your tenant. You find sample LOB app at: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp.
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. Select the **Edge Browser** icon from the taskbar. In your browser go to the following link and download the custom line of business app as zip package:
-
-	- Go to the following link: [**Notification Bot**](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/blob/master/Cross%20Vertical/NotificationBot/Manifest/Notification%20App.zip).
-
-	- Select **Download** and **Save**, to download the file to the **Downloads** folder.
-
-3. Navigate to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
-
-4. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-5. On the teams landing page, select **Use the web app instead**.
-
-6. Select **Apps** from the side pane.
-
-7. Scroll down the list of **Apps**, select **Upload a custom app** and **Upload for my org**.
-
-8. A file select window appears. Navigate to **Downloads** and select **Notification App.zip** and select **Open**.
-
-9. Go back to **Apps** from the side pane.
-
-10. Select **Built for Contoso**.
-
-11. Note the **NotificationBot** app.
-
-12. Select **Joni Shermans** picture in the upper right corner and select **Sign out**. Close the Edge browser.
-
-13. Connect to the **Client 2 VM** with the credentials that have been provided to you.
-
-14. Select the **Edge Browser** icon from the taskbar. In your browser go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
-
-15. On the **Pick an account** page, select the **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-16. On the teams landing page, select **Use the web app instead**.
-
-17. Go back to **Apps** from the side pane.
-
-18. Scroll down and select **Built for my org**.
-
-19. Select **NotificationBot** and review the details.
-
-20. Select **Add for team**, then select **Contoso** from the list of teams, and select **Setup bot**.
-
-21. On the **Welcome to Notification Bot** conversation, select the dropdown menu and select **Weather**, and then select **Show Notification**.
-
-22. The weather forecast for your location is being displayed.
-
-23. Close all browser windows.
-
-You have successfully added a custom app to your tenant with the account of Joni Sherman, who is a Teams admin in your tenant. Afterwards, you have successfully tested the app availability with a regular user.
-
-#### Task 6 - Add a custom app from Microsoft Power Apps
-
-In this task, you will need to evaluate the integration of Power Apps into Teams by creating a new app from a template and integrate it into the IT-Department team. You will choose the Out of Office template and provide a fast option for IT-Department members to activate the Out of Office function for their mailbox.
-
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
-
-2. Open Microsoft Edge, maximize the window and navigate to [**https://make.powerapps.com**](https://make.powerapps.com/) to access the **Power Apps** dashboard.
+2. Open **Microsoft Edge**, maximize the window and navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
 
 3. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-4. Select **+ Create** from the left-side menu and scroll down to **Start from template**.
+4. In **Teams admin center**, on the left navigation pane, select **Devices**, and then choose **IP Phones**.
 
-5. Select the **Out of Office** tile with **Canvas app** text below to open the creation dialog.
+5. On the **IP Phones** page, select **Configuration profiles** tab, and then select **Add**.
 
-6. Below **App name** enter the following: **MyOofApp**.
+6. Enter the following information for the new configuration profile:
 
-7. Select **Phone** below Format and **Create**.
+	- Configuration profile Name: **New York Teams Desk Phones**
 
-8. If you see a **Choose your country/region to get started** message, leave the default selection and select **Get started**.
+	- Description: **Configuration profile for Teams Desk Phones in New York HQ**
 
-9. A new tab is opened. When the **Almost there…** frame appears, select **Allow**.
+7. Under **General** section, configure following settings:
 
-10. When a **Welcome to Power Apps Studio** frame appears, select **Don’t show me this again** and **Skip**.
+	- Device lock: **On**
 
-11. When a **Preview features entering final validation** frame appears, select **Open app** to continue.
+	- Timeout: **30 seconds**
 
-12. When the app editor has loaded, select the paint bucket from the top pane and select your favorite color to change the background of the WelcomeScreen page of your app.
+	- PIN: **123456**
 
-13. Review the other app pages from the left-side pane, below **Tree view** but do not do any more changes.
+	- Language: English **(United States)**
 
-14. After reviewing the settings, select the play button (rectangle) from the upper right corner to test your app.
+	- Timezone: **(UTC-5:00) Eastern Time (US and Canada)**
 
-15. Select **Create new**, enter the following values, and select **Next**:
+	- Date format: **MM/DD/YYYY**
 
-	- **Set response start time** the next day from 08:00 am.
+	- Time format: **12 Hours (AM/PM)**
 
-	- **Set response end time** the next day until 06:00 pm.
+8. Under **Device settings** configure following settings:
 
-	- **Title (optional)** I’m out of office.
+	- Display screen saver: **On, Timeout 1 minute**
 
-16. On the **Select response type** page, select **Business** and **Next**.
+	- Display high contrast: **On**
 
-17. On the **Select email access** page, select **Intermittent** and **Next**.
+	- Office hours: **08:00-17:00**
 
-18. On the **Select alternate contacts** page, select down arrow right from **Find contacts**, select IT-Department and select **Next**.
+	- Power Saving: **On**
 
-19. Review the sample text, but do not select **Submit**. Select the **X** from the upper right corner instead.
+9. Under **Network settings**, configure following settings:
 
-20. When you see a **Did you know?** frame, select **Don’t show me this again** and **Ok**.
+	- DHCP enabled: **On**
 
-21. Select **File** from the upper left in the top pane and **Save as**.
+	- Logging enabled: **Off**
 
-22. Change the default app name to **MyOofApp** and select **Save**.
+	- Device’s default admin password: **Pass@word1**
 
-23. When you see the **All changes are saved.** message, you have successfully created a new Power App. Select **Share** to manage access to your app.
+10. Once you complete with the configuration profile settings, select **Save**.
 
-24. On the **Share MyOofApp** page enter **Everyone** to the search box and select the **Everyone in Contoso**.
+In this task, you have successfully created a configuration profiles that can be applied to Microsoft Teams devices.
 
-25. Leave the default settings and select **Share** from the lower right of the page.
+#### Task 2 - Create a Microsoft Teams Room
 
-26. Close the Edge browser and switch to Client 2 VM.
+Your organization has ordered devices for Microsoft Teams room. In the meantime, you need to ensure that all prerequisites for the equipment installation are being completed. One of the prerequisites for Microsoft Teams Room deployment is adding a device account and assigning Office 365 license for that account. Because you need to use the Exchange Online PowerShell to complete this task, you will first install the new Exchange PowerShell module.
 
-27. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-28. Select the **Edge Browser** icon from the taskbar. In your browser go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
+2. On the taskbar at the bottom of the page, right click the **Start** button and then select **Windows PowerShell (Admin)**.
 
-29. On the Pick an account page, select LynneR@&lt;YourTenant&gt;.onmicrosoft.com and sign in with the credentials provided.
+3. Confirm the **User Account Control** window with **Yes**.
 
-30. On the teams landing page, select **Use the web app instead**.
+4. Enter the following cmdlet to install the Exchange PowerShell v2:
 
-31. Select the **General** channel below **IT-Department**.
+   ```powershell
+   Install-Module ExchangeOnlineManagement
+   ```
+5. Confirm the Untrusted repository message with **y** for yes.
 
-32. Select the **+** symbol from the top pane, enter **Power** to the search box and select **Power Apps**.
+6. Close the elevated PowerShell window.
 
-33. Select **Add** to integrate Power Apps to your IT-Department team.
+7. Right-click the Start button and select **Windows PowerShell.**
 
-34. On the next **Power Apps** page, select the **MyOofApp** and select **Save**.
+8. Enter the following cmdlet to connect to Exchnage Online PowerShell:
 
-35. You have successfully pinned the **MyOofApp** to the **General** channel of your **IT-Department** team.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
+9. When you see the **Sign in** window, enter admin@&lt;YourTenant&gt;.onmicrosoft.com and sign in with the credentials provided to you.
 
-In this task, you have successfully created a Power App and integrated it into a Teams channel. All members of the IT-Department team can now use the app in the tab to plan and create an Out of Office (Oof) message for their mailboxes.
+10. Create a new room mailbox named **NY-TeamsRoom1** by running the following cmdlet (remember to replace your tenant name):
 
-### **Exercise 3: Test configured policy settings**
+    ```powershell
+    New-Mailbox -Name "NY-TeamsRoom1" -Alias NY-TeamsRoom1 -Room -EnableRoomMailboxAccount $true -MicrosoftOnlineServicesID NY-TeamsRoom1@<YourTenant>.onmicrosoft.com -RoomMailboxPassword (ConvertTo-SecureString -String 'pass@word1' -AsPlainText -Force)
+    ```
+11. Configure the Calendar Processing features for the Teams Room. Read the following description and run the cmdlet at the end:
 
-In this exercise, you will test the configured policy settings on a client with the affected user Lynne Robbins and compare the settings to the available client settings of Joni Sherman.
+	- AutomateProcessing: **AutoAccept** (Meeting organizers receive the room reservation decision directly without human intervention: free = accept; busy = decline.)
 
-#### Task 1 – Test the messaging policy and private channel access
+	- AddOrganizerToSubject: **$false** (The meeting organizer is not added to the subject of the meeting request.)
 
-In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between affected user (Lynne Robbins) vs regular user(Joni Sherman).
+	- DeleteComments: **$false** (Keep any text in the message body of incoming meeting requests.)
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+	- DeleteSubject: **$false** (Keep the subject of incoming meeting requests.)
 
-2. Select the **Edge Browser** icon from the taskbar. In your browser, go to the **Microsoft Teams web client** page by entering the following URL in the address bar: [**https://teams.microsoft.com/**](https://teams.microsoft.com/)
+	- RemovePrivateProperty: **$false** (Ensures the private flag that was sent by the meeting organizer in the original meeting request remains as specified.)
 
-3. On the **Pick an account** page, select the **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+	- AddAdditionalResponse: **$true** (The text specified by the AdditionalResponse parameter is added to meeting requests.)
 
-4. On the Microsoft Teams landing page click **Use the web app instead**.
+	- AdditionalResponse: **"This is a Teams Meeting room"** (The additional text to add to the meeting request.)
+	
+    ```powershell
+    Set-CalendarProcessing -Identity "NY-TeamsRoom1" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Teams Meeting room"
+    ```
+12. Disconnect from Exchage Online and end the established session with the following cmdlet:
 
-5. Skip a potential welcome dialog by selecting on **x** in the right corner.
+    ```powershell
+    Disconnect-ExchangeOnline
+    ```
+13. Confirm the command with **y** for yes.
 
-6. In the left-hand navigation pane, select **Chat**, then select the **Contacts** in the dropdown menu.
+14. Connect to **Azure AD PowerShell** to configure Teams Room account settings by running the following cmdlets:
 
-7. If there is no contact for **Joni Sherman**, then select **…** and select **Add a contact to this group**. Type in the name **Joni Sherman** and select her by mouseover the presented name. After this select **Add** to return to the **Contacts tab**.
+    ```powershell
+    Connect-AzureAD
+    ```
+    When you see the Sign in window, type admin@&lt;YourTenant&gt;.onmicrosoft.com and sign in with the credentials provided to you.
 
-8. In the **Contacts** tab, select **Joni Sherman**. Note that if the **giphy**, **memes** and **stickers** icons are missing below the conversation-bar, the **messaging policy** has taken effect.
+15. Disable the password expiration for the Teams Room account **NY-TeamsRoom1** by running the following cmdlet:
 
-9. In the left-hand navigation pane, select **Teams**.
+    ```powershell
+    Get-AzureADUser | Where {$_.DisplayName -eq "NY-TeamsRoom1"} | Set-AzureADUser -PasswordPolicies DisablePasswordExpiration
+    ```
+16. Close the PowerShell window.
 
-10. Select the **Confidential sales** channel of the **Sales** team and add a comment to confirm that you have access to the private channel.
+17. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
 
-#### Task 2 – Test the app permission policy and storage providers
+18. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-In this task, you will test the **app permission policies** configured in exercise 2 and compare the differences between affected user (Lynne Robbins) vs regular user (Joni Sherman).
+19. In the **Microsoft 365 admin center** from the left navigation pane, under **Billing** select **Purchase services**.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+20. In the **Search** box on the right, type **Meeting Room** and then hit Enter.
 
-2. You are still in the **Teams web client** and signed in as **Lynne Robbins**.
+21. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Standard** tile, select **Details** and then select **Start free trial**.
 
-3. In the left-hand navigation select **Teams** and select the **IT-Department** channel **General**. Mouseover the presented name **General**, select **…** and then select **Connectors**.
+22. In the **Check out** page, select **Try now**, and in the **order receipt** page, select **Continue**.
 
-4. In the **Connectors for "General"** window, enter **Google Analytics** into the search field.
+23. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
 
-5. If you can’t find **Google Analytics** as a search result and can’t add the app to the channel, the **app permission policy** has worked as desired.
+24. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
 
-6. In the left-hand navigation pane, select **Teams**, then select the **IT-Department** team. Select the **files** Tab on the middle of the Teams web client. Then select **+ Add cloud storage** in the navigation pane below.
+25. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
 
-7. If you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
+26. Close all open windows.
 
-8. Sign out of Teams and close all open windows.
+You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
 
 END OF LAB

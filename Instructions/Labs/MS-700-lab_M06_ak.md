@@ -1,29 +1,26 @@
 ---
 lab:
-    title: 'Lab 06: Manage communication in Microsoft Teams'
+    title: 'Lab 06: Manage calling in Microsoft Teams'
     type: 'Answer Key'
-    module: 'Module 6: Manage communication in Microsoft Teams'
+    module: 'Module 6: Manage calling in Microsoft Teams'
 ---
 
-# **Lab 06: - Manage communication in Microsoft Teams**
+# **Lab 06: - Manage calling in Microsoft Teams**
 
 # **Student lab answer key**
 
 ## **Lab Scenario**
 
-In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. According to Contoso business requirements, Microsoft Teams will be used as an organization’s solution for conferencing and telephony. Therefore, Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide best user experience during collaboration and communication. Furthermore, Teams admins will need to replace Contoso legacy PBX solution and configure voice features that will provide users with Teams calling capabilities.
+In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. Teams admins will need to replace Contoso legacy PBX solution and configure voice features that will provide users with Teams calling capabilities.
 
 ## **Objectives**
 
 After you complete this lab, you will be able to:
 
-- Manage meeting policies
 
-- Configure meeting settings
+- Set up a Calling Plan
 
-- Create live event policies
-
-- Create a live event
+- Order and Assign phone numbers
 
 - Configure emergency addresses
 
@@ -33,13 +30,6 @@ After you complete this lab, you will be able to:
 
 - Create resource accounts and auto attendants
 
-- Test configured meeting policies
-
-- Test configured meeting settings
-
-- Set up a Calling Plan
-
-- Order and Assign phone numbers
 
 ## **Lab Setup**
 
@@ -47,161 +37,120 @@ After you complete this lab, you will be able to:
 
 ## **Instructions**
 
-### **Exercise 1: Manage Live event and meetings experiences**
 
-Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. First, Teams admins need to configure meeting policies and schedule initial meetings. Then, business managers want to test the Live meetings option in Microsoft Teams in order to broadcast audio and video to large audiences.
+### **Exercise 1: Set up a Calling Plan (Optional)**
 
-#### Task 1 - Edit the default meeting policy and restrict all recording features for meetings
-
-As part of your pilot project for setting up the events and meetings in your organization, you need to fulfil the requirement for all meetings in teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
-
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
-
-3. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-4. If a **Stay signed in?** dialog box is displayed, select the **Don’t show this again** checkbox and **Yes**.
-
-5. In the **Teams admin center,** on the left navigation pane, select **Meetings,** and then choose **Meeting policies**.
-
-6. Select the **Global (Org-wide default)** policy to change the settings for all users.
-
-7. On the **Meetings policies\Global** page, review the available settings, and under **Audio &amp; Video** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
-
-You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
-
-#### Task 2 – Test the meeting policy for restricting recording
-
-In this task you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
-
-1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
-
-2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
-
-3. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
-
-4. On the Microsoft Teams page, select **Computer audio** and leave the rest of the settings at the defaults and select **Join now** button.
-
-5. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (…) for **More actions**.
-
-6. Note that **Start recording** option is visible but is dimmed, not available to be selected.
+In this exercise you will set up one of your users with a Calling Plan Trial. You will need to start the trial, order a phone number from Microsoft as your provider and enable your user to use this phone number when making outgoing calls.
 
  
 
-#### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
+**Note:** The availability of Calling Plans varies based on different countries and regions. Please go to the link below to check the availability of your location. The following instruction is based on the location of the United States.
 
-Contoso Ltd. works with several external partners and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
+[https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans](https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans) 
+
+ 
+
+#### Task 1 – Activate a trial Calling Plan 
+
+In this task you will activate the Calling Plan Add-on Trial for your tenant so you can assign the calling plan to your users.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
+
+3. On the **Pick an account** page, select the **MOD Administrator**(Admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+4. Open the Navigation Menu in the upper left corner and select  **Billing &gt; purchase services**.
+
+5. Select **Add-ons**.
+
+6. Scroll down until you see **Microsoft 365 Domestic Calling Plan for US and Canada Trial** (you may have to select **See more add-ons products**) and select **Details**.
+
+7. Select **Start free trial**.
+
+8. Select **Try now** to get 25 Calling Plans for a month.
+
+9. Select **Continue** to continue past the order receipt.
+
+You now have 25 Calling Plan licenses to assign to your users to test Domestic Calling Plan capabilities.
+
+#### Task 2 – Assign a Calling Plan license to a user
+
+In this task you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Microsoft 365 admin center** and signed in as **MOD Administrator** (Admin@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. Open the Navigation Menu in the upper left corner and select **Users**.
+
+4. Select **Active users**.
+
+5. Search for **Megan Bowen** and open the additional settings by selecting her name.
+
+6. Select **Licenses and Apps**.
+
+7. Under **Licenses** select **Microsoft 365 Domestic Calling Plan** by setting the checkmark in front of it.
+
+8. Select **Save Changes** to assign the license.
+
+You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
+
+#### Task 3 – Order a phone number for your user
+
+In this task you will order a phone number to a user with an assigned Calling Plan license.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+
+3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
+
+4. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
+
+5. Select **Add** in the right pane.
+
+6. Type **Phone number order** as the **Order Name**.
+
+7. Fill out the description as **Number for Megan Bowen during the Calling Plan trial**.
+
+8. In the dropdown menu of **Country or region**, select **United States**.
+
+9. For **Number Type** select **User (Subscriber)**.
+
+10. For **Location,** search **Redmond** and select **Contoso Emergency Address**.
+
+11. For **Quantity**  select 1.
+
+12. Select **Next**, **Place order**, then **Finish**.
+
+**Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab.
+
+You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call queues.
+
+#### Task 4 – Assign a phone number to your user
+
+In this Task you will assign an existing phone number to a user.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the left navigation pane, select **Meetings,** and then choose **Meetings settings**.
+3. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
 
-4. On the **Meetings settings** page, below participants, use the slider to turn **Off** the option **Anonymous users can join a meeting**.
+4. Select the phone number you want to assign and select **edit** to open the options.
 
-5. Select **Save**.
+5. Under **Assigned to** search for **Megan Bowen** and select **assign**.
 
-You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
+6. Under **Emergency Location** select **Search by the location description**.
 
-#### Task 4 - Create a new live event policy and restrict recording capabilities
+7. Search for the emergency location you created earlier.
 
-Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to management users. Only the organizer of a live event should be able to record his own meetings.
+8. Select **Apply** to assign the phone number to the user.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the left navigation pane, select **Meetings** and then select **Live event policies**.
-
-4. Select **+ Add** from the top pane, to create a new **Live event policy** with individual settings for assigned users.
-
-5. On **Live event policies\Add** page, enter the following information:
-
-	- Add live events policy: **Management Live Events**
-
-	- Description: **Recording Restriction for live events organized by managers**
-
-	- Allow scheduling: **On**
-
-	- Allow transcription for attendees: **Off**
-
-	- Who can join scheduled live events: **Everyone in the organization**
-
-	- Who can record an event: **Organizer can record**
-
-6. Select **Save**.
-
-7. Back on the **Live events policies** page, use the checkbox left of **Management Live Events** and select **Manage users** from the top pane to assign the new policy to users.
-
-8. In the right-side pane, type into the search field **Megan Bowen** and Add right from her name.
-
-9. Select **Apply** to assign the policy to the selected user.
-
-You have successfully created a custom Live event policy and assigned it to a user.
-
-#### Task 5 – Create a new live event 
-
-Contoso Ltd. Wants to broadcast video and meeting content to large online audiences using Teams live events. As a Teams admin, you need to demonstrate the functionality of live meetings to Management.
-
-1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
-
-2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
-
-3. On the left navigation pane select **Calendar**.
-
-4. In the top right select the arrow next to **new meeting** and select **live event** in the dropdown menu.
-
-5. Create a new **live event**:
-
-	- Title: Management Showcase
-
-	- Start/End: Select a time close to your current time 
-
-6. Select **Next**.
-
-7. Under **Live event permissions** select **Org-Wide**.
-
-8. Under **How will you produce your live event?** Select **Teams**.
-
-9. Select **Schedule**.
-
-10. On the next page select **Get attendee link** and send it in a chat message to Joni Sherman.
-
-11. On the left navigation pane select **Calendar**.
-
-12. Select the **live event** named **Management Showcase**.
-
-13. In the information window select **Join** to join the meeting.
-
-14. In the meeting preparation window select **Join now**.
-
-15. In the bottom pane of the meeting select **Share** and select your Desktop to share.
-
-16. In the bottom pane of the live event select **My desktop**.
-
-17. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-18. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-19. On the left navigation pane select **Chat**.
-
-20. Select the link sent to you by Megan Bowen to join the live event.
-
-21. Switch back to **Client 2 VM** and select **Send live** as Megan Bowen.
-
-22. Select **Start** to start the live event.
-
-23. In the **Are you sure you want to start the live event now?** Window select **Continue**.
-
-24. Switch back to **Client 1 VM** and wait for the live event to start.
-
-25. Switch to **Client 2 VM** and select **End**.
-
-26. In the **End live event now?** Window select **End live event**.
-
-You have successfully created a live event and shared content with your attendees.
+ 
 
 ### **Exercise 2: Manage phone system for Microsoft Teams**
 
@@ -429,116 +378,4 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 You have successfully created a resource account for the auto attendant and then created an auto attendant configuration.
 
-### **Exercise 3: Set up a Calling Plan (Optional)**
-
-In this exercise you will set up one of your users with a Calling Plan Trial. You will need to start the trial, order a phone number from Microsoft as your provider and enable your user to use this phone number when making outgoing calls.
-
- 
-
-**Note:** The availability of Calling Plans varies based on different countries and regions. Please go to the link below to check the availability of your location. The following instruction is based on the location of the United States.
-
-[https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans](https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans) 
-
- 
-
-#### Task 1 – Activate a trial Calling Plan 
-
-In this task you will activate the Calling Plan Add-on Trial for your tenant so you can assign the calling plan to your users.
-
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
-
-3. On the **Pick an account** page, select the **MOD Administrator**(Admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-4. Open the Navigation Menu in the upper left corner and select  **Billing &gt; purchase services**.
-
-5. Select **Add-ons**.
-
-6. Scroll down until you see **Microsoft 365 Domestic Calling Plan for US and Canada Trial** (you may have to select **See more add-ons products**) and select **Details**.
-
-7. Select **Start free trial**.
-
-8. Select **Try now** to get 25 Calling Plans for a month.
-
-9. Select **Continue** to continue past the order receipt.
-
-You now have 25 Calling Plan licenses to assign to your users to test Domestic Calling Plan capabilities.
-
-#### Task 2 – Assign a Calling Plan license to a user
-
-In this task you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
-
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-2. You should still be in the **Microsoft 365 admin center** and signed in as **MOD Administrator** (Admin@&lt;YourTenant&gt;.onmicrosoft.com).
-
-3. Open the Navigation Menu in the upper left corner and select **Users**.
-
-4. Select **Active users**.
-
-5. Search for **Megan Bowen** and open the additional settings by selecting her name.
-
-6. Select **Licenses and Apps**.
-
-7. Under **Licenses** select **Microsoft 365 Domestic Calling Plan** by setting the checkmark in front of it.
-
-8. Select **Save Changes** to assign the license.
-
-You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
-
-#### Task 3 – Order a phone number for your user
-
-In this task you will order a phone number to a user with an assigned Calling Plan license.
-
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-2. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
-
-4. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
-
-5. Select **Add** in the right pane.
-
-6. Type **Phone number order** as the **Order Name**.
-
-7. Fill out the description as **Number for Megan Bowen during the Calling Plan trial**.
-
-8. In the dropdown menu of **Country or region**, select **United States**.
-
-9. For **Number Type** select **User (Subscriber)**.
-
-10. For **Location,** search **Redmond** and select **Contoso Emergency Address**.
-
-11. For **Quantity**  select 1.
-
-12. Select **Next**, **Place order**, then **Finish**.
-
-**Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab.
-
-You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call queues.
-
-#### Task 4 – Assign a phone number to your user
-
-In this Task you will assign an existing phone number to a user.
-
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-3. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
-
-4. Select the phone number you want to assign and select **edit** to open the options.
-
-5. Under **Assigned to** search for **Megan Bowen** and select **assign**.
-
-6. Under **Emergency Location** select **Search by the location description**.
-
-7. Search for the emergency location you created earlier.
-
-8. Select **Apply** to assign the phone number to the user.
-
 END OF LAB
-
- 
