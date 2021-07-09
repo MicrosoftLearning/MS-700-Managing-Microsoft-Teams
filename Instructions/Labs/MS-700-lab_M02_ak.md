@@ -232,8 +232,12 @@ You need to evaluate governance for Microsoft 365 Groups before deploying them i
 	```
 	**Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
 
-8. Close the PowerShell window.
+8. Disconnects the current session from an Azure Active Directory tenant and close the PowerShell window.
 
+    ```powershell
+    Disconnect-AzureAD
+    ```
+	
 You have successfully changed your tenants Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
    
 #### Task 2 - Create sensitivity labels for Teams

@@ -136,11 +136,17 @@ In this task you will create via the Teams PowerShell a new team **"CA-Office"**
     Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
     ```
 
-12. Close the PowerShell window.
+12. Disconnect from the Microsoft Teams environment.  
 
-13. Open the Teams Desktop Client from the taskbar. On the left side pane with all teams Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+        ```powershell
+        Disconnect-MicrosoftTeams
+        ```
 
-14. Close all browser windows and the Teams Desktop Client.
+13. Close the PowerShell window.
+
+14. Open the Teams Desktop Client from the taskbar. On the left side pane with all teams Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+
+15. Close all browser windows and the Teams Desktop Client.
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
