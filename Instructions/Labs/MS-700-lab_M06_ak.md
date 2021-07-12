@@ -49,8 +49,35 @@ In this exercise you will set up one of your users with a Calling Plan Trial. Yo
 [https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans](https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans) 
 
  
+#### Task 1 - Add a new emergency address
 
-#### Task 1 – Activate a trial Calling Plan 
+In this task you will add a new emergency address "One Microsoft Way, Redmond, WA 98052, USA" for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
+
+1. Connect to the **Client 1 VM** and browse to the **Teams admin center** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+2. On the left navigation pane select **Locations** and below select **Emergency addresses**.
+
+3. Select **+ Add** from the top pane to create a new emergency address.
+
+4. On the **Location\Add location** page, enter the following information:
+
+	- Put in a name for your location: **Contoso Emergency Address**
+
+	- Add a friendly description so you know why it was created: **Emergency Address for Contoso employees.**
+
+	- Country or region: **United States**
+
+	- Address: **1 Microsoft Way, Redmond, WA 98052** 
+
+      (You can enable **Edit the address manually**, and enter the address manually)
+
+5. Acknowledge the emergency calling disclaimer.
+
+6. Select **Save**.
+
+You have successfully created an emergency address that can be used for phone numbers.
+
+#### Task 2 – Activate a trial Calling Plan 
 
 In this task you will activate the Calling Plan Add-on Trial for your tenant so you can assign the calling plan to your users.
 
@@ -74,7 +101,7 @@ In this task you will activate the Calling Plan Add-on Trial for your tenant so 
 
 You now have 25 Calling Plan licenses to assign to your users to test Domestic Calling Plan capabilities.
 
-#### Task 2 – Assign a Calling Plan license to a user
+#### Task 3 – Assign a Calling Plan license to a user
 
 In this task you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
 
@@ -96,7 +123,7 @@ In this task you will assign the calling plan license to a user to allow them to
 
 You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
 
-#### Task 3 – Order a phone number for your user
+#### Task 4 – Order a phone number for your user
 
 In this task you will order a phone number to a user with an assigned Calling Plan license.
 
@@ -118,17 +145,21 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 9. For **Number Type** select **User (Subscriber)**.
 
-10. For **Location,** search **Redmond** and select **Contoso Emergency Address**.
+10. For **Quantity**  select 1.
 
-11. For **Quantity**  select 1.
+11. For **Location,** search **Redmond** and select **Contoso Emergency Address**.
+
+	* **Note**: If you received the following message, please try another location by selecting **Add a location**. 
+
+		*We can't find any phone numbers for the address you selected.*
 
 12. Select **Next**, **Place order**, then **Finish**.
 
-**Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab.
+**Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab. 
 
 You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call queues.
 
-#### Task 4 – Assign a phone number to your user
+#### Task 5 – Assign a phone number to your user
 
 In this Task you will assign an existing phone number to a user.
 
@@ -156,37 +187,8 @@ In this Task you will assign an existing phone number to a user.
 
 Contoso organization is using legacy PBX system. With introduction of Microsoft Teams, Contoso will migrate their legacy telephony system to Microsoft Phone System. Teams admins are responsible for evaluating and testing Microsoft Teams voice functionalities.
 
-#### Task 1 - Add a new emergency address
 
-In this task you will add a new emergency address "One Microsoft Way, Redmond, WA 98052, USA" for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
-
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-3. On the left navigation pane select **Locations** and below select **Emergency addresses**.
-
-4. Select **+ Add** from the top pane to create a new emergency address.
-
-5. On the **Location\Add location** page, enter the following information:
-
-	- Put in a name for your location: **Contoso Emergency Address**
-
-	- Add a friendly description so you know why it was created: **Emergency Address for Contoso employees.**
-
-	- Country or region: **United States**
-
-	- Address: **1 Microsoft Way, Redmond, WA 98052** 
-
-      (You can enable **Edit the address manually**, and enter the address manually)
-
-6. Acknowledge the emergency calling disclaimer.
-
-7. Select **Save**.
-
-You have successfully created an emergency address that can be used for phone numbers.
-
-#### Task 2 - Create a calling policy
+#### Task 1 - Create a calling policy
 
 As part of your pilot project for calling functionalities with Microsoft Teams, you have the requirement that all pilot users receive access to the voicemail functionalities. You create and assign a new calling policy and configure the settings. However, all other users should not receive voicemail functionalities during the testing period. Therefore, you will edit the default policy to ensure that voicemail is disabled for all other users.
 
@@ -220,7 +222,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 In this task, you have disabled voicemail for all users in the organizations, and then you have created a calling policy that will enable voicemail for several users.
 
-#### Task 3 - Create a call queue
+#### Task 2 - Create a call queue
 
 Contoso Ltd. has deployed Microsoft Teams voice functionalities throughout the organization. To deploy some automation for incoming support calls, the calling queue functionalities need to be tested before being rolled out. The following settings shall be configured for customers calling in:
 
@@ -294,7 +296,7 @@ Creating the new call queue may take some time, but you have successfully create
 
 **Note:** Because this call queue shall have a custom greeting, you need to upload some wav file for demonstration purposes. In real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
 
-#### Task 4 - Create an auto attendant
+#### Task 3 - Create an auto attendant
 
 As Teams admin, you were tasked to create an auto attendant with a transcribed welcome message that will respond to customers outside of office hours. As some of your employees work in different time zones, the auto attendant informs a caller that the subscriber is currently on vacation and to call another person in the organization. Furthermore, the auto attendant informs callers about business hours.
 
