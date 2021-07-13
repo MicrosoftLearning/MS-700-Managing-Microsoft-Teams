@@ -92,9 +92,9 @@ In this task, you will create via the Teams PowerShell a new team **"CA-Office"*
 
 3. Run the following cmdlet to connect to Microsoft Teams in your tenant:
 
-   ```powershell
-   Connect-MicrosoftTeams
-   ```
+    ```powershell
+    Connect-MicrosoftTeams
+    ```
 
 4. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** O365 Credentials provided to you (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and then select **Next**.
 
@@ -138,9 +138,9 @@ In this task, you will create via the Teams PowerShell a new team **"CA-Office"*
 
 12. Disconnect from the Microsoft Teams environment.  
 
-        ```powershell
-        Disconnect-MicrosoftTeams
-        ```
+    ```powershell
+    Disconnect-MicrosoftTeams
+    ```
 
 13. Close the PowerShell window.
 
