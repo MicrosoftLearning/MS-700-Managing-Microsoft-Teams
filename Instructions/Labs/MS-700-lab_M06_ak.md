@@ -147,13 +147,25 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 10. For **Quantity**  select 1.
 
-11. For **Location,** search **Redmond** and select **Contoso Emergency Address**.
+11. In the **Search for new numbers** section, you can use one of the following approach to find new numbers:
 
-	* **Note**: If you received the following message, please try another location by selecting **Add a location**. 
+	* Search by city name
+		
+		1. Select **Search by city name**. 
+		2. Search **Redmond** and select **Contoso Emergency Address**, which is the location you just created. 
+		3. Select **Next**.
 
-		*We can't find any phone numbers for the address you selected.*
+	* Search by area code
 
-12. Select **Next**, **Place order**, then **Finish**.
+		1. Select **Search by area code**. 
+		2. Enter an area code in United States.
+		3. Select **Next**.
+
+	**Note**: If you received the following message, please try other area codes or creating another location by selecting **Add a location** and repeat task 1. 
+
+	*We can't find any phone numbers for the address you selected.*
+
+12. Once you reserved a phone number successfully, you can proceed by selecting **Place order**, then **Finish**.
 
 **Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab. 
 
