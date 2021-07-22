@@ -557,6 +557,19 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 6. Review the name of the newly created team.
 
-You have successfully tested the configured naming policy for managing the prefix and suffixes of user created teams. Continue with the next task.
+You have successfully tested naming policy for managing the prefix and suffixes of user created teams.
+
+#### Task 5 - Delete the naming policy
+
+You can remove the naming policy after the test. In the following task, you will remove the naming policy you just created. 
+
+1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
+
+2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
+
+3. On the **Groups** page, select **Naming policy**.
+
+4. One the **Groups | Naming policy** page, select **Delete policy** > **Yes.**
+
 
 END OF LAB

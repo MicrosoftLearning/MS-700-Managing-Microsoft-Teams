@@ -677,7 +677,7 @@ You have successfully modified included policies from an existing policy package
 
 #### Task 5 - Built a flow using Power Automate in Teams
 
-In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from the **Contoso** org-wide team, the flow will send a message to notify members in the **Group_IT-Department_United State** team. 
+In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from the **Contoso** org-wide team, the flow will send a message to notify members in the **IT-Department** team. 
 
 1. Connect to the **Client 1 VM**.
 
@@ -738,7 +738,7 @@ In this task, you will create an issue report system by using Power Automate in 
 	
 		*I need help to create a team for external partners.*  
 	3. Select **Submit**.
-	4. Go to the **General** channel of the **Group_IT-Department_United State** team. You will see a post via Power Automate. 
+	4. Go to the **General** channel of the **IT-Department** team. You will see a post via Power Automate. 
 
 In this task, you have successfully created a flow from Power Automate in Teams, which notify the members in IT department when users submit a request ticket. 
 
