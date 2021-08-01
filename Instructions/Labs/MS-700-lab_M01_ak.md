@@ -415,10 +415,14 @@ You are an administrator for your Teams organization. You need to limit which us
 
     3. Follow the **Add a group** wizard with the following information:
 
-    * Group type : Select **Security**.
+    * Group type : Select **Security**. Click **Next**
+    * 
     * Basics : 
     	- Name: **GroupCreators**
     	- Description: **Users who can create Microsoft 365 Groups for new teams**
+    	-  Click **Next**
+    * Finish: 
+    	- Click **Create Group**
 
     4. Back to **Active group** page, select the security group **GroupCreators** you just created. Select **Members** tab to configure the **Owners** and **Members**.
 
