@@ -45,7 +45,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
-2. In left navigation of the Azure AD admin center, select **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
+2. In left navigation of the Azure AD admin center, select **Users**> **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
 
 	* Guest user access: Guest users have limited access to properties and memberships of directory objects.
 
@@ -71,7 +71,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Teams** > **Org-wide settings**. 
+2. In left navigation of the Teams admin center, select **Org-wide settings**. 
 
 4. Select **Guest access** from the list.
 
