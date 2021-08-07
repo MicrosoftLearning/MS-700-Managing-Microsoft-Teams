@@ -63,8 +63,6 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 
 	- Put in a name for your location: **Contoso Emergency Address**
 
-	- Add a friendly description so you know why it was created: **Emergency Address for Contoso employees.**
-
 	- Country or region: **United States**
 
 	- Address: **1 Microsoft Way, Redmond, WA 98052** 
@@ -212,7 +210,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 4. Select the **Global (Org-wide default)** policy to edit the default settings.
 
-5. In **Calling policies\Global**, use the dropdown menu right to **Voicemail is available for routing inbound calls** and select **Disabled**. Then select **Save**.
+5. In **Calling policies\Global**, use the dropdown menu right to **Voicemail is available for routing inbound calls** and select **Not Enabled**. Then select **Save**.
 
 6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
 
@@ -352,7 +350,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 11. On the **Call flow** page, configure the following:
 
-	- First play a greeting message: **Type in the greeting message**
+	- First play a greeting message: Select **Add a greeting message**
 
 	- Type in : **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
 
@@ -372,7 +370,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 	- Leave **Saturday** and **Sunday** blank.
 
-	- First play a greeting message: **Type in a greeting message**
+	- First play a greeting message: **Add a greeting message**
 
 	- Type in: **Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.**
 
