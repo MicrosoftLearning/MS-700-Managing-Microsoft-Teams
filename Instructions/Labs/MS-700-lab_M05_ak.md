@@ -67,11 +67,11 @@ In this task you need to sign in to the second client and create a meeting with 
 
 2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
 
-3. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner to start a meeting.
+3. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner, and select **Start Meeting** to start a meeting.
 
 4. On the Microsoft Teams page, select **Computer audio** and leave the rest of the settings at the defaults and select **Join now** button.
 
-5. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (…) for **More actions**.
+5. Close 'Invite people to join you','No Microphone', and 'No Speakers' pop-up windows. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (…) for **More actions**.
 
 6. Note that **Start recording** option is visible but is dimmed, not available to be selected.
 
@@ -165,7 +165,7 @@ Contoso Ltd. Wants to broadcast video and meeting content to large online audien
 
 14. In the meeting preparation window select **Join now**.
 
-15. In the bottom pane of the meeting select **Share** and select your Desktop to share.
+15. Select 'Up Arrow' icon on top right corner to **Share Content**.In the bottom pane of the meeting select **Share** and select your Desktop to share.
 
 16. In the bottom pane of the live event select **My desktop**.
 
@@ -296,9 +296,9 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 	1. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
 
-	2. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
+	2. Select the @&ltNY-TeamsRoom1;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
 
-	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
+	3. In the @&ltNY-TeamsRoom1;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
 
 5. Close all open windows.
 
