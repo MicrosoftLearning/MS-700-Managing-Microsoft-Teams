@@ -293,10 +293,12 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
 
 4. Follow the **Add a group** wizard with the following information:
 
-    * Group type : Select **Microsoft 365 (recommended)**.
+    * Group type : Select **Microsoft 365 (recommended)**
+		 - Select **Next**             
     * Basics : 
     	- Name: **IT-Department**
     	- Description: **All staff of the IT-Department**
+    	- Select **Next**
     
     * Owners : 
         - Select **+ Assign owners** 
@@ -308,11 +310,13 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
         - Allan Deyoung
         - Lynne Robbins
         - Megan Bowen
-
+        - Select **Add(4)**, and then select **Next**.
+        
     * Settings : 
         - Enter **IT-Department** for Group email address. 
         - Privacy : Private
         - Uncheck **Create a team for this group**.
+        - Select **Next**
 
 5. Select **Create group** > **Close**.
 
