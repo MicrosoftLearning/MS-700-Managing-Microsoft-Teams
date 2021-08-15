@@ -742,7 +742,7 @@ In this task, you will create an issue report system by using Power Automate in 
 
 In this task, you have successfully created a flow from Power Automate in Teams, which notify the members in IT department when users submit a request ticket. 
 
-### **Exercise 3: Test configured policy settings**
+### **Exercise 4: Test configured policy settings**
 
 In this exercise, you will test the configured policy settings on a client with the affected user Lynne Robbins and compare the settings to the available client settings of Joni Sherman.
 
