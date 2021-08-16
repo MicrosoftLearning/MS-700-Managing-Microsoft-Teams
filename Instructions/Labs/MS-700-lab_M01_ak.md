@@ -117,7 +117,7 @@ Beside two VMs, you will also be provided with a Microsoft 365 tenant with follo
 
 In the first exercise you will assign required administrative roles to users and check license assignments for the Teams license. To perform these tasks, you will use default tenant global admin.
 
-#### **Task 1 - Assign Teams amin roles to users**
+#### **Task 1 - Assign Teams admin roles to users**
 
 In this task you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in context of Joni Sherman’s account.
 
