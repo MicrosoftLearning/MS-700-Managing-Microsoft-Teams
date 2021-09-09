@@ -168,27 +168,23 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 11. Review the information under **Windows operating system** and **Internet connection** sections and verify that no errors appear.
 
-12. Select the green **Install** circle below **Network connectivity and quality test**.
+12. When the installation was successful, the symbol below **Network assessment tool** will change to a green checkmark in a circle too.
 
-13. A **User Account Control** window will appear in the taskbar. Maximize it and select **Yes.**
-
-14. When the installation was successful, the symbol below **Network assessment tool** will change to a green checkmark in a circle too.
-
-15. Select the green **Start** button in the **Network Connectivity and Quality Test** section to start the tests.
+13. Select the green **Start** button in the **Network Connectivity and Quality Test** section to start the tests.
  
-16. On the **Windows Security Alert** window, select **Allow access**. 
+14. On the **Windows Security Alert** window, select **Allow access**. 
 
     >**Note:** If you receive a timeout message during the connectivity test, you can select the **Settings** tab in the tool. Adjust the **Connectivity test timeout (seconds)** option to a larger value and then start the test again.
 
-17. When the tests have finished, the symbols below **Connectivity** and **Quality** will turn to green checkmarks in green circles.
+15. When the tests have finished, the symbols below **Connectivity** and **Quality** will turn to green checkmarks in green circles.
 
-18. After the test is **finished**, select the **View Results** tab and review the detailed results of the tests.
+16. After the test is **finished**, select the **View Results** tab and review the detailed results of the tests.
 
-19. In the **View Results** tab, select **Report** file icon under **Network Connectivity** and **Network Quality** and review the testing steps and reports.
+17. In the **View Results** tab, select **Report** file icon under **Network Connectivity** and **Network Quality** and review the testing steps and reports.
 
-20. Discuss the results with the instructor.
+18. Discuss the results with the instructor.
 
-21. Close all notepad windows and the **Skype for Business and Microsoft Teams Network Testing Companion.**
+19. Close all notepad windows and the **Skype for Business and Microsoft Teams Network Testing Companion.**
 
 In this task, you have used Skype for Business and Microsoft Teams Network Testing Companion to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
 
