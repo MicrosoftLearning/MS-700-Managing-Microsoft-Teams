@@ -55,7 +55,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 6. Select the **Global (Org-wide default)** policy to change the settings for all users.
 
-7. On the **Meetings policies\Global** page, review the available settings, and under **Audio &amp; Video** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
+7. On the **Meetings policies\Global** page, review the available settings, and under **Recording and Transcription** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
 
 You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
@@ -187,7 +187,7 @@ Contoso Ltd. Wants to broadcast video and meeting content to large online audien
 
 25. Switch to **Client 2 VM** and select **End**.
 
-26. In the **End live event now?** Window select **End live event**.
+26. In the **End live event now?** Window select **Continue**.
 
 You have successfully created a live event and shared content with your attendees.
 
