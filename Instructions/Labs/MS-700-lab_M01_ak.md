@@ -287,7 +287,7 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
 
 1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the Microsoft 365 admin center, select **Groups** > **Active** **Groups**.
+2. In the Microsoft 365 admin center, select **Teams & Groups** > **Active Teams & Groups*.
 
 3. On the **Active groups** page, select **Add a group**.
 
@@ -304,15 +304,18 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
         - Select **Add(1)**, and then select **Next**.
 
     * Members : 
+        - Select **+Add Member** 
         - Alex Wilber
         - Allan Deyoung
         - Lynne Robbins
         - Megan Bowen
+        - Select **Next**
 
     * Settings : 
         - Enter **IT-Department** for Group email address. 
         - Privacy : Private
         - Uncheck **Create a team for this group**.
+        - Select **Next**
 
 5. Select **Create group** > **Close**.
 
@@ -415,15 +418,22 @@ You are an administrator for your Teams organization. You need to limit which us
 
     3. Follow the **Add a group** wizard with the following information:
 
-    * Group type : Select **Security**.
+    * Group type : Select **Security** and Click on **Next**
     * Basics : 
     	- Name: **GroupCreators**
     	- Description: **Users who can create Microsoft 365 Groups for new teams**
+    * CLick on **Next**
+    * CLick on **Create Group**
 
     4. Back to **Active group** page, select the security group **GroupCreators** you just created. Select **Members** tab to configure the **Owners** and **Members**.
+    5. Under **Members** tab, click on **View all and manage owners** 
+    6. Click on **+ Add Owners**
 
     * Owners : 
         - MOD Administrator
+        
+    7. Under **Members** tab, click on **View all and manage members** 
+    8. Click on **+ Add Members**
 
     * Members : 
         - Joni Sherman
