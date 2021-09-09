@@ -45,7 +45,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
-2. In left navigation of the Azure AD admin center, select **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
+2. In left navigation of the Azure AD admin center, select **Users** > **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
 
 	* Guest user access: Guest users have limited access to properties and memberships of directory objects.
 
@@ -71,7 +71,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Teams** > **Org-wide settings**. 
+2. In left navigation of the Teams admin center, select **Org-wide settings**. 
 
 4. Select **Guest access** from the list.
 
@@ -136,7 +136,7 @@ As a part of your system administrator role, you need to review access to resour
 
 	4. In the **Select reviewers** section, select **Group owner(s)**.
 
-	5. In the **Specify recurrence of review** section, select **Weekly** and keep rest as default. Select on **Next: Settings**.
+	5. In the **Specify recurrence of review** section, select **Weekly** for **Review Recurrence** and keep rest as default. Select on **Next: Settings**.
 
 	6. On the **Settings** tab, leave the settings as default. Select on **Next: Review+Create** > **Create**. 
 
@@ -540,7 +540,7 @@ After configuring a retain policy to protect data from deletion, you also need t
 
 9. On the **Decide if you want to retain content, delete it, or both** page, select **Only delete items when they reach a certian age** with the following information and then select **Next**:
 
-	- **Delete items older than**: 1 days
+	- Select **Delete items older than** drop down and then select **Custom**: 1 Day 
 
 	- **Delete the content based on**: when it was created
 
