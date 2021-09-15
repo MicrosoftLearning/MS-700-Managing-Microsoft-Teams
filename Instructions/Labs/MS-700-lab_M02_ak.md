@@ -45,7 +45,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
-2. In left navigation of the Azure AD admin center, select **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
+2. In left navigation of the Azure AD admin center, select **Users**> **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
 
 	* Guest user access: Guest users have limited access to properties and memberships of directory objects.
 
@@ -71,7 +71,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Teams** > **Org-wide settings**. 
+2. In left navigation of the Teams admin center, select **Org-wide settings**. 
 
 4. Select **Guest access** from the list.
 
@@ -84,7 +84,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 You have now successfully activated guest access and disallow guests to delete their sent messages for Teams in your tenant.
 
 #### Task 3 - Add a guest to a team
-In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_United States** you created from Lab 1. 
+In this task, you will add a guest user by inviting the guest to the team **Afterwork** you created from Lab 1. 
 
 You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
@@ -92,9 +92,9 @@ You will change the default settings for inviting/creating guest users and then 
 
 1. Connect to the **Client 2 VM** and browse to the **Teams web client** (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com)
 
-2. Add the guest to **Group_Afterwork_United State** team.
+2. Add the guest to **Afterwork** team.
 	
-	1. Select **Teams** > Select **...** next to the **Group_Afterwork_United State** team.
+	1. Select **Teams** > Select **...** next to the **Afterwork** team.
 
 	2. Select **Add member** and enter your outlook account. 
 
@@ -108,11 +108,11 @@ You will change the default settings for inviting/creating guest users and then 
 	
 	3. Select **Accept** and sign in to Teams web client with your outlook account. 
 
-	4. From the Teams client, select **Teams**, you will see the team **Group_Afterwork_United State**.
+	4. From the Teams client, select **Teams**, you will see the team **Afterwork**.
 
 4. Test the guest access
 
-	1. Under the team **Group_Afterwork_United State**, select **General** channel, and send the message: **Hello!**.
+	1. Under the team **Afterwork**, select **General** channel, and send the message: **Hello!**.
 
 	2. Select **...** of the message you just posted. Notice there's no **Delete** option. 
 
@@ -126,7 +126,7 @@ As a part of your system administrator role, you need to review access to resour
 
 2. Create an access review to monitor guest users.
 
-	In left navigation of the Azure AD admin center, select **Identity Governance** > **Create an access review**. Follow the wizard with the following information:
+	In left navigation of the Azure AD admin center, select **All Services** and on right pane select **Identity Governance** > **Create an access review**. Follow the wizard with the following information:
 
 	1. In **Step 1: Select what to review** section, select **Teams + Groups**.
 	
@@ -148,7 +148,7 @@ As a part of your system administrator role, you need to review access to resour
 
 	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_United States** under group name.
 
-	4. On the **Group_Afterwork_United States | Overview** page, you can see there's one users show under **Not reviewed** category. 
+	4. On the **Afterwork | Overview** page, you can see there's one users show under **Not reviewed** category. 
 
 4. Reviwew the access review and approve the guest user. 
 
@@ -394,14 +394,15 @@ After activating sensitivity labels for groups, you will now create three sensit
 	6. In the **Emails** section, select **General** in the dropdown menu **Apply this label by default to emails**. 
 
 	7. In the **Sites and Groups** section, select **General** in the dropdown menu **Apply this label by default to groups and sites**.	
+	8. Leave default settings under **Require users to apply a label to Power BI content (preview)**
 
-	8. In the **Name** section, enter the following:
+	9. In the **Name** section, enter the following:
 
 		- **Name**: All company sensitivity labels
 
 		- **Enter a description for your sensitivity label policy**: Default sensitivity labels for all users in the company.
 
-	9. Select **Submit** > **Done**.
+	10. Select **Submit** > **Done**.
 	
 In this task, you have created and published three new sensitivity labels available for all users, which can be assigned to new and existing Teams.
 

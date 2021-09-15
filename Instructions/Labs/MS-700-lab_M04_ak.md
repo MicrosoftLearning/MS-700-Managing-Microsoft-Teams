@@ -78,7 +78,7 @@ As part of your pilot project for Contoso, you need to modify the **"IT-Departme
 
 11. Select the **General** channel below the **IT-Department** teams.
 
-12. Close the Teams Desktop client.
+12. Leave the Teams Desktop client open and continue to the next task.
 
 You have successfully created a new team with the Teams Desktop client, by using an existing Microsoft 365 Group. Leave the Teams client open and continue with the next task.
 
@@ -649,7 +649,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 8. Back on the list of assigned policies, select **Frontline_Worker** right from **Calling policy**.
 
-9. Select the switch right from **Prevent toll bypass and send calls through the PSTN** and **Busy on busy is available when in a call** to **On** and select **Save**.
+9. Select the switch right from **Prevent toll bypass and send calls through the PSTN** and **Busy on busy is available when in a call** to **Enabled** and select **Save**.
 
 10. Back on the list of assigned policies again, select **Back** to go to the Policy packages overview.
 
@@ -659,7 +659,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 13. Select **Users** from the left-side pane.
 
-14. In the line of Allan Deyoung, select **View policies**.
+14. Click on Allan Deyoung, under Allan Deyoung scroll down to see **Policies** and click on **Policies** tab.
 
 15. Below Assigned policies you can now see the different **Frontline_Worker** policies and below **Policy package** the **Frontline worker** package.
 

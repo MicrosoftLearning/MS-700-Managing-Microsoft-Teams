@@ -293,10 +293,12 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
 
 4. Follow the **Add a group** wizard with the following information:
 
-    * Group type : Select **Microsoft 365 (recommended)**.
+    * Group type : Select **Microsoft 365 (recommended)**
+		 - Select **Next**             
     * Basics : 
     	- Name: **IT-Department**
     	- Description: **All staff of the IT-Department**
+    	- Select **Next**
     
     * Owners : 
         - Select **+ Assign owners** 
@@ -308,11 +310,13 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
         - Allan Deyoung
         - Lynne Robbins
         - Megan Bowen
-
+        - Select **Add(4)**, and then select **Next**.
+        
     * Settings : 
         - Enter **IT-Department** for Group email address. 
         - Privacy : Private
         - Uncheck **Create a team for this group**.
+        - Select **Next**
 
 5. Select **Create group** > **Close**.
 
@@ -332,7 +336,7 @@ To test the self-service capabilities of Teams, in this task, **Megan Bowen** wi
 
 3. When prompted to **Enter your work, school or Microsoft account**. Sign in as **Megan Bowen** (MeganB@&lt;YourTenant&gt;.onmicrosoft.com).
 
-4. In the Teams client, select **Join or create a team** from the lower left corner. 
+4. At the 'Stay signed in to all your apps' window, select **No, sign in to this app only**. In the Teams client, select **Join or create a team** from the lower left corner. 
 
 5. Select **Create team** >**From scratch** > **Public**. Enter the team name **Teams Rollout** and select **Create**.
 
@@ -356,6 +360,8 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
 2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. Select **Use the Web app instead** if prompted to download Teams Desktop app. At the 'Stay signed in to all your apps' window, select **No, sign in to this app only**. 
 
 4. Select **Join or create a team** from the lower left corner. 
 
@@ -415,10 +421,14 @@ You are an administrator for your Teams organization. You need to limit which us
 
     3. Follow the **Add a group** wizard with the following information:
 
-    * Group type : Select **Security**.
+    * Group type : Select **Security**. Click **Next**
+    * 
     * Basics : 
     	- Name: **GroupCreators**
     	- Description: **Users who can create Microsoft 365 Groups for new teams**
+    	-  Click **Next**
+    * Finish: 
+    	- Click **Create Group**
 
     4. Back to **Active group** page, select the security group **GroupCreators** you just created. Select **Members** tab to configure the **Owners** and **Members**.
 
