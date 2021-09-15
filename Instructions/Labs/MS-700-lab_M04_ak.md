@@ -229,21 +229,13 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 	"isFavoriteByDefault": true,
 
-	
-
-	
-
-	
-
-	
-
 	"description": "When will be the next tech lunch and who has any suggestions where to meet."
 
 	},
 
 	{
 
-	"displayName": "Q&A",
+	"displayName": "Q and A",
 
 	"description": "Questions and answers: Teams users giving a helping hand to other users.",
 
