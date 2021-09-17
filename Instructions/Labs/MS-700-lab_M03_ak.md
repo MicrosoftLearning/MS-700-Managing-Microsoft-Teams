@@ -17,7 +17,7 @@ Throughout the lab exercises for this course, if you navigate to the Microsoft 3
 
 ## **Lab Scenario**
 
-In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. However, there are concerns about current network infrastructure to meet the requirements for Microsoft Teams services. Therefore, you need to analyze the current network infrastructure and perform bandwidth calculations. Based on your estimation, you can provide recommendations to the networking team. Furthermore, your organization is planning to purchase and deploy multiple Teams devices. You will need to evaluate different devices profiles and configure profile settings for the devices. At the end, you will need to evaluate the process of creating Microsoft Teams room, where multiple Teams rooms will be purchased in your organization.
+In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. However, there are concerns about current network infrastructure to meet the requirements for Microsoft Teams services. Therefore, you need to analyze the current network infrastructure and perform bandwidth calculations. Based on your estimation, you can provide recommendations to the networking team. 
 
 ## **Objectives**
 
@@ -25,13 +25,11 @@ After you complete this lab, you will be able to:
 
 - Calculate the network bandwidth capacity for a Teams deployment
 
-- Work with the Network Testing Companion on a client
-
-
+- Work with the Microsoft 365 network connectivity test tool on a client
 
 ## **Lab Setup**
 
-- **Estimated Time:** 60 minutes.
+- **Estimated Time:** 30 minutes.
 
 ## **Instructions**
 
@@ -136,61 +134,29 @@ Once you generate the report, you’ll see the recommendation of your bandwidth 
 
 In this lab, you have used Network Planner to estimate the Microsoft Teams impact on the bandwidth in your network infrastructure.
 
-#### Task 2 - Use network testing companion
+#### Task 2 - Use Microsoft 365 network connectivity test tool
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
 
-2. On the taskbar at the bottom of the page, right click the **Start** button and then select **Windows PowerShell (Admin)**.
+2. Select **Sign in** at top right corner.
 
-3. Confirm the **User Account Control** window with **Yes**.
+3. Specify location and select **Run test**.
 
-4. In the PowerShell window, enter the following cmdlet to install the Network Testing Companion:
+    You can type in your location by city, state, and country or you can have it detected from the web browser. 
 
-   ```powershell
-   Install-Module -Name NetworkTestingCompanion
-   ```
-5. Type in **y** and hit **return** for the Question with the **Untrusted repository**.
+4. Select **Run** when prompted for downloading the advanced client test application.
 
-6. Enter the following cmdlet to create desktop shortcuts:
+	**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction. 
 
-   ```powershell
-   Invoke-ToolCreateShortcuts
-   ```
-7. Close the PowerShell window.
+5. Start the advanced tests client application - **Office 365 Network Onboarding Advanced Tests**.
 
-8. Open **Network Testing Companion** from the desktop shortcut and select the **Install** button, to install the Network Assessment Tool.
+6. Once the client application starts, the web page will update to show this result.
 
-9. On the **User Account Control** window, select **Yes**.
+7. Review the result under **Details** tab. 
 
-10. Wait until window **Skype for Business and Microsoft Teams Network Testing Companion** initializes with green **Start** button appears in the **Network Connectivity and Quality Test** section on the right side of the window.
-
-11. Review the information under **Windows operating system** and **Internet connection** sections and verify that no errors appear.
-
-12. Select the green **Install** circle below **Network connectivity and quality test**.
-
-13. A **User Account Control** window will appear in the taskbar. Maximize it and select **Yes.**
-
-14. When the installation was successful, the symbol below **Network assessment tool** will change to a green checkmark in a circle too.
-
-15. Select the green **Start** button in the **Network Connectivity and Quality Test** section to start the tests.
- 
-16. On the **Windows Security Alert** window, select **Allow access**. 
-
-    >**Note:** If you receive a timeout message during the connectivity test, you can select the **Settings** tab in the tool. Adjust the **Connectivity test timeout (seconds)** option to a larger value and then start the test again.
-
-17. When the tests have finished, the symbols below **Connectivity** and **Quality** will turn to green checkmarks in green circles.
-
-18. After the test is **finished**, select the **View Results** tab and review the detailed results of the tests.
-
-19. In the **View Results** tab, select **Report** file icon under **Network Connectivity** and **Network Quality** and review the testing steps and reports.
-
-20. Discuss the results with the instructor.
-
-21. Close all notepad windows and the **Skype for Business and Microsoft Teams Network Testing Companion.**
-
-In this task, you have used Skype for Business and Microsoft Teams Network Testing Companion to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
+In this task, you have used Microsoft 365 network connectivity test tool to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
 
 
 END OF LAB

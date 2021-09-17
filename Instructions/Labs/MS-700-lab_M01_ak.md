@@ -21,15 +21,17 @@ In the labs, of this course, you will assume the role of **Joni Sherman**, a Tea
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
-- Joni Sherman (JoniS@&lt;YourTenant&gt;.OnMicrosoft.com) **Group coordinator / Teams admin**
+- Joni Sherman (JoniS@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams administrator**
+
+- Patti Fernandez (PattiF@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams device administrator**
+
+- Allan Deyoung (AllanD@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams communication support engineer**
 
 - Alex Wilber (AlexW@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user from Canada**
 
 - Lynne Robbins (LynneR@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user**
 
-- Allan Deyoung (AllanD@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams communication support engineer**
-
-- Megan Bowen (MeganB@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular employee**
+- Diego Siciliani (DiegoS@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user**
 
 ## **Objectives**
 
@@ -77,7 +79,7 @@ The labs in this course will use two virtual machines:
 
 **Note:** Lab virtual machine sign in instructions will be provided to you by your instructor.
 
-**Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1\Admin** or **CLIENT2\admin**, depending on which machine you are on.
+**Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1\admin** or **CLIENT2\admin**, depending on which machine you are on.
 
 #### **2. Review installed applications**
 
@@ -125,7 +127,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
     1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-    2. Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@&lt;YourTenant&gt;.onmicrosoft.com) .
+    2. Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. Assign **Teams admin** role to **Joni Sherman**
 
@@ -135,23 +137,23 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
     3. In the settings below the Account tab, scroll to **Roles** and select **Manage roles** below.
 
-    4. On the **Manage admin roles** pane, select **Admin center access** and scroll down to select **Show all by category** to reveal all avaliable roles. 
+    4. On the **Manage admin roles** pane, select **Admin center access** and scroll down to expand **Show all by category** to reveal all avaliable roles. 
     
     5. Select **Teams Administrator** checkbox then select **Save changes**. You will see the message **Admin roles updated** on the upper part of the pane to comfirm the update. 
 
-3. Assign **Teams device admin** role to **Alex Wilber**
+3. Assign **Teams device admin** role to **Patti Fernandez**
 
-    Repeat the same steps and assign **Teams Device Administrator** role to **Alex Wilber**.
+    Repeat the same steps and assign **Teams Device Administrator** role to **Patti Fernandez**.
 
 4. Assign **Teams communication admin** role to **Allan Deyoung**
 
-    Repeat the same steps and assign **Teams communication admin** role to **Allan Deyoung**.
+    Repeat the same steps and assign **Teams communication support engineer** role to **Allan Deyoung**.
 
 You have now successfully assigned the Teams admin roles.
 
 * Teams Administrator: Joni Sherman
-* Teams Devices Administrator: Alex Wilber
-* Teams communication admin: Allan Deyoung 
+* Teams Devices Administrator: Patti Fernandez
+* Teams communication support engineer: Allan Deyoung 
 
 Proceed to the next task.
 
@@ -200,11 +202,9 @@ You will review the available settings for managing Teams in the Teams admin cen
 
     **Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials. 
 
-2. In left navigation of the Teams admin center, select **Teams** > **Manage teams**.
+2. In left navigation of the Teams admin center, select **Teams** > **Manage teams**. You will see the teams in your organization once created. 
 
-3. The **Manage teams** page show the existing teams in your organization. Note that there is an org-wide team named **Contoso** that is automatically created for new tenant with less than 5000 users.
-
-4. In left navigation of the Teams admin center, select **Teams** > **Teams policies**. You can see the default Teams policy named **Global (Org-wide default)**.
+3. In left navigation of the Teams admin center, select **Teams** > **Teams policies**. You can see the default Teams policy named **Global (Org-wide default)**.
 
 You can explore other settings to familiarize various controls in the Teams admin center.
 
@@ -239,7 +239,7 @@ In this task, you will install and connect with the Teams PowerShell module to y
         ```powershell
         Connect-MicrosoftTeams
         ```
-    2. In the Sign in window, sign in as Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+    2. In the Sign in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
         When the sign in was successful, several information about the signed in user and the tenant are displayed. 
         
@@ -278,7 +278,7 @@ You have successfully used the Microsoft Teams PowerShell module to connect to T
 
 ### **Exercise 3: Create groups and teams**
 
-In this exercise, you will create a Microsoft 365 Group from the Microsoft 365 admin center and creating a team from the Teams desktop client and the web client.
+In this exercise, you will create a Microsoft 365 group from the Microsoft 365 admin center and creating a team from the Teams desktop client and the web client.
 
 #### **Task 1 - Create a Microsoft 365 Group**
 
@@ -287,9 +287,9 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
 
 1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the Microsoft 365 admin center, select **Groups** > **Active** **Groups**.
+2. In the Microsoft 365 admin center, select **Teams & groups** > **Active teams & groups**.
 
-3. On the **Active groups** page, select **Add a group**.
+3. On the **Active teams and groups** page, select **Add a group**.
 
 4. Follow the **Add a group** wizard with the following information:
 
@@ -306,11 +306,10 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
         - Select **Add(1)**, and then select **Next**.
 
     * Members : 
-        - Alex Wilber
+        - Patti Fernandez
         - Allan Deyoung
-        - Lynne Robbins
-        - Megan Bowen
-        - Select **Add(4)**, and then select **Next**.
+        - MOD Administrator
+        - Select **Add(3)**, and then select **Next**.
         
     * Settings : 
         - Enter **IT-Department** for Group email address. 
@@ -328,24 +327,29 @@ The new Microsoft 365 Group with the name "IT-Department" was successfully creat
 
 #### **Task 2 - Create a new team by using the desktop client**
 
-To test the self-service capabilities of Teams, in this task, **Megan Bowen** will sign in to the Teams Desktop client, create a new team with the name **Teams Rollout** and add all members participating in the Teams evaluation project.
+To test the self-service capabilities of Teams, in this task, **Alex Wilber** will sign in to the Teams Desktop client, create a new team with the name **Teams Rollout** and add all members participating in the Teams evaluation project.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Select the **Teams** icon on the taskbar to start the Teams Desktop client.
+2. Select the **Teams** icon on the taskbar to start the Teams desktop client.
 
-3. When prompted to **Enter your work, school or Microsoft account**. Sign in as **Megan Bowen** (MeganB@&lt;YourTenant&gt;.onmicrosoft.com).
+3. When prompted to **Enter your work, school or Microsoft account**. Sign in as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com).
 
-4. At the 'Stay signed in to all your apps' window, select **No, sign in to this app only**. In the Teams client, select **Join or create a team** from the lower left corner. 
+    **Note**: You might need to download and install the latest Teams desktop client. Select **Update Teams** and follow the installation guideline - Select  **Download for desktop** > **Download Teams**
+    **Run**.
 
-5. Select **Create team** >**From scratch** > **Public**. Enter the team name **Teams Rollout** and select **Create**.
+
+4. In the Teams desktop client, select **Teams** from the left manu. 
+
+5. Select **Join or create a team** from the lower left corner. 
+
+5. Select **Create team** > **From scratch** > **Public**. Enter the team name **Teams Rollout** and select **Create**.
 
 6. On the **Add members to Teams Rollout** window, enter the following names and select **Add**. 
 
-    * Alex Wilber
-    * Allan Deyoung
     * Joni Sherman
     * Lynne Robbins
+    * Diego Siciliani
 
 7. Select the dropdown menu next to Joni Sherman and switch from **Member** to **Owner**. 
 
@@ -355,7 +359,7 @@ You have successfully created a new team from the Teams desktop client, added th
 
 #### **Task 3 - Create a new team by using the web client**
 
-In this task, **Lynne Robbins** will continue testing the self-service capabilities of Teams by using the Teams web client to create another team with the name **Sales**. She will also add Megan Bowen as a member.
+In this task, **Lynne Robbins** will continue testing the self-service capabilities of Teams by using the Teams web client to create another team with the name **Sales**. She will also add **Alex Wilber** as a member.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -369,13 +373,13 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 6. On the **Add members to Sales** window, enter the following names and select **Add** > **Close**.
 
-    * Megan Bowen
+    * Alex Wilber
 
 The newly created team is displayed in the list of your teams. You have successfully created a new team with the Teams web client. 
 
 
 
-### **Exercise 4: Implement governance and lifecycle management for Microsoft Teams**
+### **Exercise 4: Implement lifecycle management and governance for Microsoft Teams**
 
 Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating **Microsoft 365 groups expiration policies**, configuring **Microsoft 365 Group creation policy permissions**, configuring and test **Microsoft 365 Groups naming policies**.
 
@@ -415,99 +419,126 @@ You are an administrator for your Teams organization. You need to limit which us
 
 2. Create a security group.
 
-    1. In the Microsoft 365 admin center, select **Groups** > **Active** **Groups**.
+    1. In the Microsoft 365 admin center, select **Teams & groups** > **Active teams & groups**.
 
-    2. On the **Active groups** page, select **Add a group**.
+    2. On the **Active teams & groups** page, select **Add a group**.
 
     3. Follow the **Add a group** wizard with the following information:
 
-    * Group type : Select **Security**. Click **Next**
-    * 
-    * Basics : 
-    	- Name: **GroupCreators**
-    	- Description: **Users who can create Microsoft 365 Groups for new teams**
-    	-  Click **Next**
-    * Finish: 
-    	- Click **Create Group**
+        * Group type : Select **Security** > **Next**
+        * Basics : 
+            - Name: **GroupCreators**
+            - Description: **Users who can create Microsoft 365 Groups for new teams**
+            -  Select **Next**
+        * Finish: 
+            - Select **Create Group**
 
-    4. Back to **Active group** page, select the security group **GroupCreators** you just created. Select **Members** tab to configure the **Owners** and **Members**.
+    4. Back to **Active teams & group** page, select **Security** tab and select the security group **GroupCreators** you just created. 
+    5. Select **Members** tab to configure the **Owners** and **Members**.
 
-    * Owners : 
-        - MOD Administrator
+        * Owners : 
+            - MOD Administrator
 
-    * Members : 
-        - Joni Sherman
-        - Lynne Robbins
+        * Members : 
+            - Joni Sherman
+            - Alex Willber
 
-3. Open **Windows PowerShell** and run as Administrator.
+3. Restrict the Microsoft 365 groups creation to the security group.
 
-4. Install **Azure AD Preview module**
+    1. Open **Windows PowerShell** and run as Administrator.
 
-    In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of untrusted repository.
+    2. Install **Azure AD Preview module**
 
-    ```powershell
-    Install-Module -Name AzureADPreview
-    ```
+        In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of untrusted repository.
 
-5. Connect to your AAD tenant.
+        ```powershell
+        Install-Module -Name AzureADPreview
+        ```
 
-    Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+    3. Connect to your AAD tenant.
 
-    ```powershell
-    Connect-AzureAD
-    ```
-6. Load the Azure AD unified group template, by using the following cmdlet:
+        Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
-   ```powershell
-   $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-   ```
-7. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
+        ```powershell
+        Connect-AzureAD
+        ```
 
-   ```powershell
-   if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
-   ```
-8. Run following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
+    4. Load the Azure AD unified group template, by using the following cmdlet:
 
-   ```powershell
-   $Setting["EnableGroupCreation"] = "False"
-   ```
-9. Run following cmdlet to add the just created security group **GroupCreators** as permitted group to create groups, by their ObjectID:
+        ```powershell
+        $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
+        ```
+    5. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
 
-   ```powershell
-   $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
-   ```
-10. Review the changes you have just configured with the following command:
+        ```powershell
+        if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
+        ```
 
-    ```powershell
-    $Setting.Values
-    ```
+    6. Run following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
 
-11. Save the changes and apply the setting:
+        ```powershell
+        $Setting["EnableGroupCreation"] = "False"
+        ```
+    7. Run following cmdlet to add the just created security group **GroupCreators** as permitted group to create groups, by their ObjectID:
 
-    ```powershell
-    New-AzureADDirectorySetting -DirectorySetting $Setting
-    ```
-	**Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
+        ```powershell
+        $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
+        ```
+    8. Review the changes you have just configured with the following command:
 
-12. Disconnects the current session from an Azure Active Directory tenant and close the PowerShell window.
+        ```powershell
+        $Setting.Values
+        ```
+
+    9. Save the changes and apply the setting:
+
+        ```powershell
+        New-AzureADDirectorySetting -DirectorySetting $Setting
+        ```
+        **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
+
+4. Test the newly configured settings.
+
+    1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+
+    2. Test as **Alex Willber** from Teams desktop client, notice when select **Join or create a team**, there are options for **Create team** and **Join a team with a code**.     
+
+    3. Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, only one option **Join a team with a code** is available.
+
+        **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
+
+5. Revert the change for enabling users to create new teams.
+
+    1. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+    
+    2. Load the Azure AD unified group template, by using the following cmdlet:
+
+        ```powershell
+        $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
+        ```
+    3.	Create a blank Azure AD tenant settings object:
+
+        ```powershell
+        $Setting = $Template.CreateDirectorySetting()
+        ```
+  
+    4.	Apply the configured settings, to revert previous changes:
+         
+        ```powershell
+        Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
+        ```
+6. Disconnects the current session from an Azure Active Directory tenant and close the PowerShell window.
 
     ```powershell
     Disconnect-AzureAD
-    ```
+    ``` 
 
-13. To test the newly configured settings, connect to the **Client 2 VM** with the credentials that have been provided to you.
-
-    1. Test as **Megan Bowen** from Teams desktop client, notice when select **Join or create a team**, only one option **Join a team with a code** is available. 
-
-    2. Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, there are options for **Create team** and **Join a team with a code**.
-
-**Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
 #### Task 3 - Configure a new naming policy
 
-As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 Group or Team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute of the Owners location. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: CEO, Payroll and HR.
+As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 group or team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute of the owners' location. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: **CEO**, **Payroll**, and **HR**.
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
@@ -517,7 +548,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 4. Configure **Blocked words**
 
-    1. Under **Blocked words** tab on the **Groups | Naming policy** page, select **Download** to download a sample file. 
+    1. Under the **Blocked words** tab on the **Groups | Naming policy** page, select **Download** to download a sample file. 
     
     2. Nevigate and right-select the downloaded file **BlockedWords.csv** and select **Open with** > **Notepad**.
 
@@ -533,19 +564,19 @@ As part of your Teams planning project, you will configure the naming policy whe
 
     2. Add **Group_** string as prefix 
         
-        1. Select the checkboxes **Add prefix**. 
+        1. Select the checkbox **Add prefix**. 
         2. Select the dropdown menu of **Select the type of prefix** and choose **String**. 
-        3. Enter the following to the empty text box: **Group_**
+        3. Enter **Group_** to the text box.
 
     3. Add **Country or region** string as suffix 
         
-        1. Select the checkboxes **Add suffix**. 
+        1. Select the checkbox **Add suffix**. 
         2. Select the dropdown menu of **Select the type of suffix**, choose **String**, and enter **_** to the text box. 
         3. Select the dropdown menu of **Select the type of suffix**, choose **Attribute**, and Select **Country or region** from the dropdown menu. 
         
     4. Select **Save** to apply the new blocked words setting.
 
-In this task, you have configured a naming policy that will block specific words to be used in a Microsoft 365 Group name, as well as you have configured a new naming policy for Microsoft 365 Group and Teams names.
+In this task, you have configured a naming policy that will block specific words to be used in a Microsoft 365 group name, as well as you have configured a new naming policy for the names of Microsoft 365 groups and teams.
 
 #### Task 4 - Test the new naming policy
 
@@ -553,7 +584,11 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 **Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and browse to the **Teams web client** (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
+
+2. In the Teams desktop client, select **Teams** from the left manu. 
+
+3. Select **Join or create a team** from the lower left corner. 
 
 2. Select **Create team** > **From scratch** > **Public**.
 
@@ -563,7 +598,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 4. Select **Create** to create the new team.
 
-5. Select **Skip** to not add any additional members.
+5. Add **Lynne Robbins** to the team member.
 
 6. Review the name of the newly created team.
 
@@ -579,7 +614,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 3. On the **Groups** page, select **Naming policy**.
 
-4. One the **Groups | Naming policy** page, select **Delete policy** > **Yes.**
+4. One the **Groups | Naming policy** page, select **Delete policy** > **Yes**.
 
 
 END OF LAB

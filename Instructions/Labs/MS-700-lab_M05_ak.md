@@ -11,7 +11,9 @@ lab:
 
 ## **Lab Scenario**
 
-In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. According to Contoso business requirements, Microsoft Teams will be used as an organization’s solution for conferencing and telephony. Therefore, Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide best user experience during collaboration and communication. 
+In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide best user experience during collaboration and communication. 
+
+Furthermore, your organization is planning to purchase and deploy multiple Teams devices. You will need to evaluate different devices profiles and configure profile settings for the devices. At the end, you will need to evaluate the process of creating Microsoft Teams room, where multiple Teams’ rooms will be purchased in your organization.
 
 ## **Objectives**
 
@@ -23,7 +25,7 @@ After you complete this lab, you will be able to:
 
 - Create live event policies
 
-- Create a live event
+- Create a webinar
 
 - Create configuration profiles for devices
 
@@ -37,25 +39,21 @@ After you complete this lab, you will be able to:
 
 ### **Exercise 1: Manage Live event and meetings experiences**
 
-Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. First, Teams admins need to configure meeting policies and schedule initial meetings. Then, business managers want to test the Live meetings option in Microsoft Teams in order to broadcast audio and video to large audiences.
+Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. The Teams admin will configure meeting policies and schedule an initial webinar for testing purpose. 
 
 #### Task 1 - Edit the default meeting policy and restrict all recording features for meetings
 
 As part of your pilot project for setting up the events and meetings in your organization, you need to fulfil the requirement for all meetings in teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
+2. In left navigation of the Teams admin center, select **Meetings** > **Meeting policies**.
 
-3. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+3. Select the **Global (Org-wide default)** policy.
 
-4. If a **Stay signed in?** dialog box is displayed, select the **Don’t show this again** checkbox and **Yes**.
+4. On the **Meetings policies\Global** page, turn **Off** the **Allow cloud recording** setting under the **Recording &amp; transcription** section. 
 
-5. In the **Teams admin center,** on the left navigation pane, select **Meetings,** and then choose **Meeting policies**.
-
-6. Select the **Global (Org-wide default)** policy to change the settings for all users.
-
-7. On the **Meetings policies\Global** page, review the available settings, and under **Audio &amp; Video** section, use the slider to turn **Off** the **Allow cloud recording** setting. Select **Save**.
+5. Select **Save**.
 
 You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
@@ -63,33 +61,30 @@ You have successfully modified the Global (Org-wide default) meeting policy and 
 
 In this task you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 2 VM**  and browse to the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
+2. Select **Calendar** from the left navigation pane.
 
-3. Select **Calendar** from the left navigation pane and **Meet Now** from the upper right corner, and select **Start Meeting** to start a meeting.
+3. Select **Meet Now** > **Start meeting** from the upper right corner.
 
-4. On the Microsoft Teams page, select **Computer audio** and leave the rest of the settings at the defaults and select **Join now** button.
+4. Select **Join now** to start the meeting.
 
-5. Close 'Invite people to join you','No Microphone', and 'No Speakers' pop-up windows. On the Microsoft Team page, hover the mouse over the meeting page, and select the three dots (…) for **More actions**.
+5. In the meeting window, select … for **More actions**.
 
-6. Note that **Start recording** option is visible but is dimmed, not available to be selected.
-
+6. Notice that you can't select **Start recording**.
  
 
 #### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
 
-Contoso Ltd. works with several external partners and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
+Contoso Ltd. works with several external partners, and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account, and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. In left navigation of the Teams admin center, select **Meetings** > **Meetings settings**.
 
-3. On the left navigation pane, select **Meetings,** and then choose **Meetings settings**.
+3. On the **Meetings settings** page, turn **Off** the option **Anonymous users can join a meeting** in the participants section.
 
-4. On the **Meetings settings** page, below participants, use the slider to turn **Off** the option **Anonymous users can join a meeting**.
-
-5. Select **Save**.
+4. Select **Save**.
 
 You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
@@ -97,15 +92,13 @@ You have successfully modified the meeting settings for all users in your tenant
 
 Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to management users. Only the organizer of a live event should be able to record his own meetings.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. In left navigation of the Teams admin center, select **Meetings** > **Live event policies**.
 
-3. On the left navigation pane, select **Meetings** and then select **Live event policies**.
+3. Select **+ Add** from the top menu.
 
-4. Select **+ Add** from the top pane, to create a new **Live event policy** with individual settings for assigned users.
-
-5. On **Live event policies\Add** page, enter the following information:
+4. On the **Live event policies\Add** page, enter the following information:
 
 	- Add live events policy: **Management Live Events**
 
@@ -119,79 +112,55 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 	- Who can record an event: **Organizer can record**
 
-6. Select **Save**.
+5. Select **Save**.
 
-7. Back on the **Live events policies** page, use the checkbox left of **Management Live Events** and select **Manage users** from the top pane to assign the new policy to users.
+6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Manage users** from the top menu.
 
-8. In the right-side pane, type into the search field **Megan Bowen** and Add right from her name.
+7. In the **Manage users** pane, search and add **Lynne Robbins**.
 
-9. Select **Apply** to assign the policy to the selected user.
+8. Select **Apply** to assign the policy to the selected user.
 
 You have successfully created a custom Live event policy and assigned it to a user.
 
-#### Task 5 – Create a new live event 
+#### Task 5 – Create a webinar 
 
-Contoso Ltd. Wants to broadcast video and meeting content to large online audiences using Teams live events. As a Teams admin, you need to demonstrate the functionality of live meetings to Management.
+The IT department wants to host a company-wide meeting to answer employees' questions regarding the new reporting system. As a Teams admin, you will create a webinar allowing employees to submit their questions before the meeting. 
 
-1. Connect to the **Client 2 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
+2. On the left navigation pane select **Calendar**.
 
-3. On the left navigation pane select **Calendar**.
+4. Select the dropdown menu **New meeting** and select **Webinar**.
 
-4. In the top right select the arrow next to **new meeting** and select **live event** in the dropdown menu.
+5. Create a new **webinar**:
 
-5. Create a new **live event**:
+	- **Title**: IT Office Hours
+	- **Start/End**: Select a time close to your current time 
+	- **Presenters**: Patti Fernandez, Allan Deyoung
 
-	- Title: Management Showcase
+6. Select **View registration form** and enter the following information: 
 
-	- Start/End: Select a time close to your current time 
+	1. **Title**: IT Office Hours
+	2. Select **+ Add field** > **Custom question** > **Input**.
+	3. Enter the following to the textbox below **Custom question**:
 
-6. Select **Next**.
+		*What is your question about the new reporting system?*
+	
+	 **Start/End**: Select a time close to your current time 
+	4. Select **Save**
+	5. Select **Copy registration link** and paste it to the **General** channel of the **IT Support** team.
+		
+7. Test the meeting registration. 
 
-7. Under **Live event permissions** select **Org-Wide**.
+	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
 
-8. Under **How will you produce your live event?** Select **Teams**.
+	2. Go to the **General** channel of the **IT Support** team and select the registration link that you posted.
 
-9. Select **Schedule**.
+	3. Fill out the registration form and select **Register now**.
 
-10. On the next page select **Get attendee link** and send it in a chat message to Joni Sherman.
+	4. Go to **Outlook Web Portal** (https://outlook.live.com/owa/), and check the email with subject **You're registered for IT Office Hours**
 
-11. On the left navigation pane select **Calendar**.
-
-12. Select the **live event** named **Management Showcase**.
-
-13. In the information window select **Join** to join the meeting.
-
-14. In the meeting preparation window select **Join now**.
-
-15. Select 'Up Arrow' icon on top right corner to **Share Content**.In the bottom pane of the meeting select **Share** and select your Desktop to share.
-
-16. In the bottom pane of the live event select **My desktop**.
-
-17. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-18. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-19. On the left navigation pane select **Chat**.
-
-20. Select the link sent to you by Megan Bowen to join the live event.
-
-21. Switch back to **Client 2 VM** and select **Send live** as Megan Bowen.
-
-22. Select **Start** to start the live event.
-
-23. In the **Are you sure you want to start the live event now?** Window select **Continue**.
-
-24. Switch back to **Client 1 VM** and wait for the live event to start.
-
-25. Switch to **Client 2 VM** and select **End**.
-
-26. In the **End live event now?** Window select **End live event**.
-
-You have successfully created a live event and shared content with your attendees.
-
-
+You have successfully created a webinar with a custom registration form.
 
 ### **Exercise 2: Deploy Teams device profiles**
 
@@ -203,23 +172,19 @@ Your organization could purchase Microsoft Teams Rooms that provide complete mee
 
 During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez**  (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
+2. In **Teams admin center**, on the left navigation pane, select **IP Phones** under **Devices**.
 
-3. On the **Pick an account** page, select the **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+3. On the **IP Phones** page, select **Configuration profiles** tab, and then select **Add**.
 
-4. In **Teams admin center**, on the left navigation pane, select **Devices**, and then choose **IP Phones**.
-
-5. On the **IP Phones** page, select **Configuration profiles** tab, and then select **Add**.
-
-6. Enter the following information for the new configuration profile:
+4. Enter the following information for the new configuration profile:
 
 	- Configuration profile Name: **New York Teams Desk Phones**
 
 	- Description: **Configuration profile for Teams Desk Phones in New York HQ**
 
-7. Under **General** section, configure following settings:
+5. Under **General** section, configure following settings:
 
 	- Device lock: **On**
 
@@ -235,7 +200,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- Time format: **12 Hours (AM/PM)**
 
-8. Under **Device settings** configure following settings:
+6. Under **Device settings** configure following settings:
 
 	- Display screen saver: **On, Timeout 1 minute**
 
@@ -245,7 +210,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- Power Saving: **On**
 
-9. Under **Network settings**, configure following settings:
+7. Under **Network settings**, configure following settings:
 
 	- DHCP enabled: **On**
 
@@ -253,7 +218,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- Device’s default admin password: **Pass@word1**
 
-10. Once you complete with the configuration profile settings, select **Save**.
+8. Once you complete with the configuration profile settings, select **Save**.
 
 In this task, you have successfully created a configuration profiles that can be applied to Microsoft Teams devices.
 
@@ -267,7 +232,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 2. Create a Microsoft 365 resource account for Teams Rooms.
 	1. In left navigation of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**.
 
-	2. On the Rooms & equipment screen, click the **+ Add resource** option to add a new resource account. 
+	2. On the Rooms & equipment screen, select the **+ Add resource** option to add a new resource account. 
 
 	3. On the **Add resource** page, follow the wizard with the following information. 
 
@@ -296,9 +261,9 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 	1. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
 
-	2. Select the @&ltNY-TeamsRoom1;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
+	2. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
 
-	3. In the @&ltNY-TeamsRoom1;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
+	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
 
 5. Close all open windows.
 

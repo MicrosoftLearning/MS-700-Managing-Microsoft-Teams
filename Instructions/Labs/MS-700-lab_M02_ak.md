@@ -47,11 +47,11 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 2. In left navigation of the Azure AD admin center, select **Users**> **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
 
-	* Guest user access: Guest users have limited access to properties and memberships of directory objects.
+	* **Guest user access**: Guest users have limited access to properties and memberships of directory objects.
 
-	* Guest invite settings: Anyone in the organization can invite guest users including guests and non-admins (most inclusive).
+	* **Guest invite settings**: Anyone in the organization can invite guest users including guests and non-admins (most inclusive).
 
-	* Collaboration restrictions: Allow invitations to be sent to any domain (most inclusive)
+	* **Collaboration restrictions**: Allow invitations to be sent to any domain (most inclusive)
 
 3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
@@ -84,17 +84,17 @@ Now that you have explored the Teams admin center it is time to configure the fi
 You have now successfully activated guest access and disallow guests to delete their sent messages for Teams in your tenant.
 
 #### Task 3 - Add a guest to a team
-In this task, you will add a guest user by inviting the guest to the team **Afterwork** you created from Lab 1. 
+In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_United States** you created from Lab 1. 
 
 You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
 **Note**: You will need an Outlook.com account for this exercise. If you don’t have an outlook account like, you can create a new account from [**https://outlook.com**](https://outlook.com/).
 
-1. Connect to the **Client 2 VM** and browse to the **Teams web client** (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
-2. Add the guest to **Afterwork** team.
+2. Add the guest to **Group_Afterwork_United States** team.
 	
-	1. Select **Teams** > Select **...** next to the **Afterwork** team.
+	1. Select **Teams** > Select **...** next to the **Group_Afterwork_United States** team.
 
 	2. Select **Add member** and enter your outlook account. 
 
@@ -102,17 +102,17 @@ You will change the default settings for inviting/creating guest users and then 
 
 3. Accept the guest invite
 
-	1. Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Contoso in Microsoft Teams** from **Outlook Web Portal**(https://outlook.live.com/owa/).
+	1. Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Contoso in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
 
 	2. Select **Open Microsoft Teams** from the email. You will be redirected to the sign in page with permission consent request. 
 	
 	3. Select **Accept** and sign in to Teams web client with your outlook account. 
 
-	4. From the Teams client, select **Teams**, you will see the team **Afterwork**.
+	4. From the Teams client, select **Teams**, you will see the team **Group_Afterwork_United States**.
 
 4. Test the guest access
 
-	1. Under the team **Afterwork**, select **General** channel, and send the message: **Hello!**.
+	1. Under the team **Group_Afterwork_United States**, select **General** channel, and send the message: **Hello!**.
 
 	2. Select **...** of the message you just posted. Notice there's no **Delete** option. 
 
@@ -128,31 +128,33 @@ As a part of your system administrator role, you need to review access to resour
 
 	In left navigation of the Azure AD admin center, select **All Services** and on right pane select **Identity Governance** > **Create an access review**. Follow the wizard with the following information:
 
-	1. In **Step 1: Select what to review** section, select **Teams + Groups**.
+	1. On the **Review type** tab:
 	
-	2. In **Step 2: Select which Teams + Groups** section, select **All Microsoft 365 groups with guest users.** 
+		* In the **Select what to review** section, select **Teams + Groups**.
+		* In the **Select which Teams + Groups** section, select **All Microsoft 365 groups with guest users.** 
+		* In the **Select review scope** section, select **Guest users only**. 
+		* Select **Next: Reviews**.
 
-	3. In **Step 3: Select review scope** section, select **Guest users only**. Select on **Next: Reviews**.
+	2. On the **Reviews** tab:
+	 
+		* In the **Select reviewers** section, select **Group owner(s)**.* In the **Specify recurrence of review** section, select **Weekly** and keep rest as default. 
+		* Select on **Next: Settings**.
 
-	4. In the **Select reviewers** section, select **Group owner(s)**.
-
-	5. In the **Specify recurrence of review** section, select **Weekly** and keep rest as default. Select on **Next: Settings**.
-
-	6. On the **Settings** tab, leave the settings as default. Select on **Next: Review+Create** > **Create**. 
+	3. On the **Settings** tab, leave the settings as default. Select on **Next: Review+Create** > **Create**. 
 
 3. Review the access review dashboard from Azure AD.
 
 	1. On the **Identity Governance | Access reviews** page, you will see a access review report named **Review guest access across Microsoft 365 groups**
 
-	2. When the **Status** of the report shows as **Active**, select on the name of the report - **Review guest access across Microsoft 365 groups**.
+	2. Wait for a few minutes, when the **Status** of the report shows as **Active**, select on the name of the report - **Review guest access across Microsoft 365 groups**.
 
 	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_United States** under group name.
 
-	4. On the **Afterwork | Overview** page, you can see there's one users show under **Not reviewed** category. 
+	4. On the **Group_Afterwork_United States | Overview** page, you can see there's one users show under **Not reviewed** category. 
 
 4. Reviwew the access review and approve the guest user. 
 
-	1. Connect to the **Client 2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com)
+	1. Connect to the **Client 2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com). You can open an InPrivate window.
 
 	2. Check the email with the subject **Action required: Review group access**.
 
@@ -175,11 +177,9 @@ In this exercise, you will increase the security level in your organization by c
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that blocks documents that contain malware.
 
-
-
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **MOD Administrator**. 
 
-2. In left navigation of the Microsoft 365 Defender portal, select **Policies & rules** \> **Threat policies** \> **Policies** section \> **Safe Attachments**..
+2. In left navigation of the Microsoft 365 Defender portal, select **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section.
 
 3. On the Safe attachments page, select **Global settings**.
 
@@ -189,7 +189,6 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 
 In this task, you have activated Safe Attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks block documents that contain malware.
-
 
 
 ### **Exercise 3: Implement compliance for Microsoft Teams**
@@ -246,13 +245,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft 365 admin center, select **Information protection**.
+2. In left navigation of the Microsoft 365 compliance center, select **Information protection**.
 
 3. Select **Turn on now** next to the following warning message to activate content processing in Office online files.
 
 	*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
-4. Create the first sensitivity label - **General**
+4. Create the first sensitivity label - **General**.
 
 	Select **+ Create a label** and follow the wizard with the following information: 
 	
@@ -262,7 +261,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Description for users**: General information without protection.
 		- **Description for admins**: General information without encryption, marking or sharing restriction settings activated.
 
-	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; Sites** 
+	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; sites**. 
 
 	3. In the **Files & emails** and **Auto-labeling** sections, leave the settings as default.
 	
@@ -271,9 +270,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 		* **Privacy and external user access settings** 
 		* **External sharing and Conditional Access settings** 
 
-	5. In the **Privacy & external user access** section, select **None** and check the checkbox of **Let Microsoft 365 group owners add people outside the organization to the group**. 
+	5. In the **Privacy & external user access** section, select **None** and check the checkbox of **Let Microsoft 365 Group owners add people outside your organization to the group as guests**. 
 
-	6. In the **External sharing & device access** section
+	6. In the **External sharing & device access** section,
 	
 		* Select **Control external sharing from labeled SharePoint sites** > **Anyone**.
 
@@ -283,11 +282,11 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	8. Select **Create label** > **Done**.
 
-5. Create the second sensitivity label - **Internal**
+5. Create the second sensitivity label - **Internal**.
 
 	Select **+ Create a label** and follow the wizard with the following information: 
 	
-	1. In the **Name &description** section, enter the following information:
+	1. In the **Name & description** section, enter the following information:
 		- **Name**: Internal
 		- **Display name**: Internal
 		- **Description for users**: Internal information with sharing protection
@@ -325,7 +324,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 		* Select **Control external sharing from labeled SharePoint sites** > **Existing guests**.
 
-		* Select **Use Azure AD Conditional Access to projtect labeled SharePoint sites** >  **Allow limited web-only access**.
+		* Select **Use Azure AD Conditional Access to projtect labeled SharePoint sites** >  **Allow limited, web-only access**.
 
 	10. In the **Azure Purview assets** section, leave the settings as default. 
 
@@ -335,7 +334,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	Select **+ Create a label** and follow the wizard with the following information: 
 	
-	1. In the **Name &description** section, enter the following information:
+	1. In the **Name & description** section, enter the following information:
 		- **Name**: Confidential
 		- **Display name**: Confidential
 		- **Description for users**: Confidential information with all protection
@@ -393,8 +392,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	6. In the **Emails** section, select **General** in the dropdown menu **Apply this label by default to emails**. 
 
-	7. In the **Sites and Groups** section, select **General** in the dropdown menu **Apply this label by default to groups and sites**.	
-	8. Leave default settings under **Require users to apply a label to Power BI content (preview)**
+	7. In the **Sites and Groups** section, select **General** in the dropdown menu **Apply this label by default to groups and sites**.
+
+	8. In the **Power BI** section, select **General** in the dropdown menu **Apply this label by default to Power BI content**.	
 
 	9. In the **Name** section, enter the following:
 
@@ -404,17 +404,17 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	10. Select **Submit** > **Done**.
 	
-In this task, you have created and published three new sensitivity labels available for all users, which can be assigned to new and existing Teams.
+In this task, you have created and published three new sensitivity labels available for all users, which can be assigned to new and existing teams.
 
-#### Task 3 - Assign sensitivity labels to Teams
+#### Task 3 - Assign sensitivity labels to teams
 
-Once the sensitivity labels are created and published, users can now assign them to teams. Furthermore, users can modify assigned labels if needed. In this task, you will assign the "Internal" label to the "Teams Rollout" team.
+Once the sensitivity labels are created and published, users can now assign them to teams. Furthermore, users can modify assigned labels if needed. In this task, you will assign the **Internal** label to the **Teams Rollout** team.
 
 **Note:** It can take several minutes till the newly created sensitivity labels are available to users.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams Desktop client, where you are still signed in as **Megan Bowen**.
+2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber**.
 
 3. On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Edit team** from the dropdown list.
 
@@ -427,11 +427,11 @@ You have successfully applied a sensitivity labels to an existing team. The conf
 
 #### Task 4 – Test external access with sensitivity labels (optional)
 
-Even with enabled guest access sensitivity labels can deny guest access for specific teams. In this task you will try to add a guest user to an internal team. Enabling guest access for teams can take up to 24 hours. If you cannot find the guest user in step 4 you should test it again the next day.
+In this task you will try to add a guest user to an internal team. 
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Microsoft Teams Desktop Client, where you are signed in as **Megan Bowen**.
+2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber**.
 
 3. On the Teams overview select **…** right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
 
@@ -439,128 +439,110 @@ Even with enabled guest access sensitivity labels can deny guest access for spec
 
 5. You will not be able to find the guest user, because guest users are restricted from this team.
 
-6. Perform the steps 3 and 4 for the **Contoso** team, where you can find and add the guest user to the **Contoso** team.
-
-7. Select **Close.**
-
-**Note:** It can take up to 24 hours after enabling, till guest access is available in teams. If you cannot add guest users to any team, return to this task at a later point of this lab.
+6. Select **Close.**
 
 You have successfully tested the sensitivity labels setting to prevent guest access to a protected team and you can confirm, the labels are working as predicted.
 
 #### Task 5 - Create a new retention policy to retain content
 
-Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the "Sales" Team for 7 years after last modification.
+Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after last modification.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 compliance center** at [**https://compliance.microsoft.com/**](https://compliance.microsoft.com/).
+2. In left navigation of the Microsoft 365 compliance center, select **Policies**.
 
-3. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+3. Select **Retention** under the **Data** section. 
 
-4. In **Office 365 Compliance center**, on the left navigation pane, select **policies**, scroll down to **Data** and select **Retention**.
+4. On the **Retention** page, select **New retention policy**.
 
-5. On the **Retention** page, select **New retention policy** to open the **Create retention policy wizard.**
+5. Follow the **Create retention policy** wizard with the following information:
 
-6. On the **Name your policy** page, enter the following and select **Next**: 
+	1. In the **Name** section, enter the following information 
+		- **Name**: Sales retention policy
+		- **Description**: Retention policy for Sales department that will retain channel messages for 7 years.
 
-	- **Name**: Sales retention policy
+	2. In the **Locations** section, configure the following settings:
 
-	- **Description**: Retention policy for Sales department that will retain channel messages for 7 years.
+		- **Exchange email**: Off
+		- **SharePoint sites**: Off
+		- **OneDrive accounts**: Off
+		- **Microsoft 365 Groups**: Off
+		- **Skype for Business**: Off
+		- **Exchange public folders**: Off
+		- **Teams channel messages**: On
+		- **Teams chats**: Off
+		- **Teams private channel messages**: Off
+		- **Yammer community message**: Off
+		- **Yammer user messages**: Off
+		- Select **Edit** right from **Teams channel messages** to open the right-side pane.
+		- Select the checkbox left from **Sales** and select **Done**.
 
-7. On the **Choose locations to apply the policy** page, configure the following settings:
+	3. In the **Retention settings** section, select **Next**.
 
-	- **Exchange email**: Off
+6. In the **Finish** section, review your settings and select **Submit**.
 
-	- **SharePoint sites**: Off
-
-	- **OneDrive accounts**: Off
-
-	- **Office 365 groups**: Off
-
-	- **Skype for Business**: Off
-
-	- **Exchange public folders**: Off
-
-	- **Teams channel messages**: On
-
-	- **Teams chats**: Off
-
-8. Select **Edit** right from **Teams channel messages** to open the right-side pane.
-
-9. Select the checkbox left from **Sales** and select **Done**.
-
-10. Select **Next**
-
-11. On the **Decide if you want to retain content, delete it, or both** page, select **Next**.
-
-12. On the **Review and finish** page, review your settings and select **Submit**.
-
-13. Select **Done**. Leave the browser open for the next task.
+7. Select **Done**. Leave the browser open for the next task.
 
 In this this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages and chat of the **Sales** Team for **7 years after the last modification**.
 
 #### Task 6 - Create a new retention policy to delete content
 
-After configuring a retain policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purpose, you will set the deletion threshold to a single day and apply the retention policy to the "Teams Rollout" team, to remove all channel messages older than a day automatically.
+After configuring a retain policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purpose, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. You are still signed in to the **Microsoft 365 Compliance center**, as **MOD Administrator** in the **Information governance** section and on the **Retention** tab.
+2. In left navigation of the Microsoft 365 compliance center, select **Policies**.
 
-3. Select **New retention policy** to open the **Create retention policy wizard.**
+3. Select **Retention** under the **Data** section. 
 
-4. On the **Name your policy** page, enter the following and select **Next**: 
+4. On the **Retention** page, select **New retention policy**.
 
-	- **Name**: Teams Rollout deletion policy
-
-	- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
-
-5. On the **Choose locations to apply the policy** page, configure the following settings and select **Next**:
-
-	- **Exchange email**: Off
-
-	- **SharePoint sites**: Off
-
-	- **OneDrive accounts**: Off
-
-	- **Office 365 groups**: Off
-
-	- **Skype for Business**: Off
-
-	- **Exchange public folders**: Off
-
-	- **Teams channel messages**: On
-
-	- **Teams chats**: Off
-
-6. Select **Edit** right from **Teams channel messages** to open the right-side pane.
-
-7. Select the checkbox left from **Teams Rollout** and select **Done**.
-
-8. Select **Next**
-
-9. On the **Decide if you want to retain content, delete it, or both** page, select **Only delete items when they reach a certian age** with the following information and then select **Next**:
-
-	- **Delete items older than**: 1 days
-
-	- **Delete the content based on**: when it was created
+5. Follow the **Create retention policy** wizard with the following information:
 
 
-10. On the **Review and finish** page, review your settings and select **Submit**.
+	1. In the **Name** section, enter the following information 
+	
+		- **Name**: Teams Rollout deletion policy
+		- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
 
-11. Select **Done**. Leave the browser open for the next task.
+	2. In the **Locations** section, configure the following settings:
 
-You have successfully created a second retention policy for testing the deletion capabilities to clean up the "Teams Rollout" team from all conversation messages older than a day.
+		- **Exchange email**: Off
+		- **SharePoint sites**: Off
+		- **OneDrive accounts**: Off
+		- **Microsoft 365 Groups**: Off
+		- **Skype for Business**: Off
+		- **Exchange public folders**: Off
+		- **Teams channel messages**: On
+		- **Teams chats**: Off
+		- **Teams private channel messages**: Off
+		- **Yammer community message**: Off
+		- **Yammer user messages**: Off
+		- Select **Edit** right from **Teams channel messages** to open the right-side pane.
+		- Select the checkbox left from **Teams Rollout** and select **Done**.
+
+	3. In the **Retention settings** section, 
+		- Select **Only delete items when they reach a certian age** 
+		- Delete items older than: Select **Custom** > **1 days**
+		- Delete the content based on: **when items were created**
+		- Select **Next**.
+
+6. In the **Finish** section, review your settings and select **Submit**.
+
+7. Select **Done**. Leave the browser open for the next task.
+
+
+You have successfully created a second retention policy for testing the deletion capabilities to clean up the **Teams Rollout** team from all conversation messages older than a day.
 
 #### Task 7 – Test the retention policy for deleting content (optional)
 
-In this task you will test the retention policy for deleting content from the Teams Rollout team after a day. Before you can see the retention policy taking any effect, you must create some conversation content in the team.
+In this task you will test the retention policy for deleting content from the **Teams Rollout** team after a day. Before you can see the retention policy taking any effect, you must create some conversation content in the team.
 
 **Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policies effect.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
+2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber**.
 
 3. Select the **Teams Rollout** team and the **General** channel.
 
@@ -578,147 +560,125 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 #### Task 8 - Create a DLP policy for GDPR (PII) content from a template
 
-According to your organization compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template "General Data Protection Regulation (GDPR)," The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send email to Joni Sherman and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
+According to your organization compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template "General Data Protection Regulation (GDPR)," The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 compliance center** at [**https://compliance.microsoft.com/**](https://compliance.microsoft.com/).
+2. In left navigation of the Microsoft 365 compliance center, select **Data loss prevention**.
 
-3. On the **Pick an account** page, select the **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+3. On the **Data loss prevention** page, select the **Policies** tab, then select **+ Create policy**.
 
-4. In **Microsoft 365 compliance center**, on the left navigation pane, select **Show all** from the bottom of the navigation pane and then select **Data loss prevention**.
+4. In the **Choose the information to protect** section, 
 
-5. On the **Data loss prevention** page, select the **Policies** tab, then select **+ Create policy**.
+	1. Select the **Search for specific templates** search box and type: **GDPR**. 
+	2. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR)** template from the **Templates** section.
+	3. Select **Next**
 
-6. On the **Start with a template or create a custom policy** page, select the **Search for specific templates** search box and type: **GDPR**. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR)** template from the **Templates** section.
-
-7. Select **Next**
-
-8. On the **Name your DLP policy** page, change the default values to the following and select **Next**:
+5. In the **Name your policy** section, enter the following information:
 
 	- **Name**: GDPR DLP Policy
-
 	- **Description**: Data loss prevention policy for GDPR regulations in Teams.
 
-9. On the **Choose locations to apply the policy** page, apply the following selection and select **Next**:
+6. In the **Locations to apply the policy** section, apply the following settings and select **Next**:
 
-	- **Exchange email**: Off
-
-	- **SharePoint sites**: Off
-
-	- **OneDrive accounts**: Off
-
+	- **Exchange email**: On
+	- **SharePoint sites**: On
+	- **OneDrive accounts**: On
 	- **Teams chat and channel messages**: On
+	- **Microsoft Cloud App Security**: On
 
-	- **Microsoft Cloud App Security**: Off
+7. In the **Policy settings** section, stay with the default selection from the template - **Review and customize default settings from the template** and select **Next**.
 
-10. On the **Define** **policy settings** page, stay with the default selection from the template **Review and customize default settings from the template** and select **Next**.
+	1. In the **Info to protect** section, leave the default settings and select **Next**.
 
-11. On the **Info to protect** page, leave the default settings and select **Next**.
+	2. In the **Protection actions** section, ensure that the following settings are configured, and then select **Next**:
 
-12. On the **Protection actions** page, ensure that the following settings are configured, and then select **Next**:
-
-	- A checkbox is selected for: **Detect when a specific amount of sensitive info is being shared at one time**
-
+		- A checkbox is selected for: **Detect when a specific amount of sensitive info is being shared at one time**
 		- In the **At least __ or more instances of the same sensitive info type** box, type: **1**
+		- Select the checkbox **Send incident reports in email**
+		- Select **Choose what to include in the report and who receives it** to open the right-side pane
+		- Select **Add or remove people**, select the checkbox for **Joni Sherman**. 
+		- Select **Add** and **Save**
+		- Select the checkbox **Send alerts if any of the DLP rules match**
+		- Select the checkbox **Restrict access or encrypt the content in Microsoft locations**
 
-	- Select the checkbox for **Send incident reports in email**
+	3. In the **Customize access and override settings** section, ensure that the following settings are configured, and then select **Next**:
 
-	- Select **Choose what to include in the report and who receives it** to open the right-side pane
+		- A checkbox is selected for: **Restrict access or encrypt the content in Microsoft 365 locations**
 
-	- Select **Add or remove people**, select the checkbox for **Joni Sherman**
+		- Select **Block users from accessing shared SharePoint, OneDrive, and Teams content**.
 
-	- Select **Add** and **Save**
+		- Select **Block only people outside your organization. Users inside your organization will continue to have access**.
 
-	- Select the checkbox for **Restrict access or encrypt the content**
+		- Select **Override the rule automatically if they report it as false positive**.
 
-13. On the **Customize access and override settings** page, ensure that the following settings are configured, and then select **Next**:
+8. In the **Test or turn on the policy** section, select **Turn it on right away** and select **Next**.
 
-	- A checkbox is selected for: **Restrict access or encrypt the content in Microsoft 365 locations**
+9. On the Review your settings page, review your settings, select **Submit** then **Done**.
 
-	- Select **Block users from accessing shared SharePoint, OneDrive, and Teams content**.
+10. Stay on the **Data loss prevention page** and leave the browser opened.
 
-	- Select **Block only people outside your organization. Users inside your organization will continue to have access**.
-
-	- Select **Override the rule automatically if they report it as false positive**.
-
-14. On the **Test or turn on the policy** page, select **Turn it on right away** and select Next.
-
-15. On the Review your settings page, review your settings, select **Submit** then **Done**.
-
-16. Stay on the **Data loss prevention page** and leave the browser opened.
-
-After completing this task, you have created a DLP Policy from the template "General Data Protection Regulation (GDPR)" that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of 1 rule match and Joni Sherman will be notified if a matching occurs.
+After completing this task, you have created a DLP Policy from the template "General Data Protection Regulation (GDPR)" that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
 
 #### Task 9 - Create a DLP policy from scratch
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. You are still signed in to the **Microsoft 365 Compliance center**, as **MOD Administrator** in the **Data loss prevention** section and on the **Policies** tab.
+2. In left navigation of the Microsoft 365 compliance center, select **Data loss prevention**.
 
-3. In **Microsoft 365 compliance center**, on the left navigation pane, select **Show all** and then select **Data loss prevention**.
+3. On the **Data loss prevention** page, select the **Policies** tab, then select **+ Create policy**.
 
-4. On the **Data loss prevention** page, select **+ Create policy**.
+4. In the **Choose the information to protect** section, 
 
-5. Select **Custom** and **Custom policy** below **Categories** and **Templates**, to create a blank policy and select **Next**.
+	1. Select **Custom** under **Categories**, then select the **Custom policy** template from the **Templates** section.
+	2. Select **Next**
 
-6. On the **Name your policy** page, type the following values, and then select **Next**:
+5. In the **Name your policy** section, enter the following information:
 
 	- **Name**: Credit card data DLP Policy
-
 	- **Description**: Data loss prevention policy for credit card data in Teams.
 
-7. On the **Choose locations to apply the policy** page, apply the following selection and select **Next**:
+6. In the **Locations to apply the policy** section, apply the following settings and select **Next**:
 
-	- **Exchange email**: Off
-
-	- **SharePoint sites**: Off
-
-	- **OneDrive accounts**: Off
-
+	- **Exchange email**: On
+	- **SharePoint sites**: On
+	- **OneDrive accounts**: On
 	- **Teams chat and channel messages**: On
+	- **Microsoft Cloud App Security**: On
 
-	- **Microsoft Cloud App Security**: Off
+7. In the **Policy settings** section, stay with the default selection and select **Next**.
 
-8. Leave the radio button selection unchanged on the **Define policy settings** page and select **Next**.
+	1. In the **Advanced DLP rules** section, select **+ Create rule** and enter the following information:
+		- **Name**: Credit card numbers found
+		- **Description**: Basic rule for protecting credit card numbers form being shared in Teams.
 
-9. Select **+ Create rule** and enter the following information:
+	2. Below **Conditions**, 
+		- Select **+ Add condition** and **Content contains**.
+		- Leave the group name of **Default**, select **Add** and **Sensitive information types**.
+		- From the right-side pane, check the box left of **Credit Card Number** and select **Add**.
+		- Leave the high **High confidence** and **Instance count (1)** unchanged.
+	3. Below **Action**, 
+		- Select **+ Add an action** and **Restrict access or encrypt content in Microsoft 365 locations**.
+		- Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block everyone. Only the content owner, the last modifier and the site admin will continue to have access.** 
 
-	- **Name**: Credit card numbers found
+	4. Below **User notification**, 
+		- Select the slider to **On** and select **Customize the policy tip text**.
+		- Enter the following text to the textbox: **Credit card numbers are not allowed to be shared!**
 
-	- **Description**: Basic rule for protecting credit card numbers form being shared in Teams.
+	5. Below **Incident reports**, 
+		- Select the slider **Send an alert to admins when a rule match occurs** and select **Add or remove people**.
+		- On the **Add or remove people** page, select the checkbox left from **Joni Sherman** and select **Add**.
+		- Select **Save**.
+	
+	6. Review the rule settings and select **Next**.
 
-10. Below **Conditions**, select **+ Add condition** and **Content contains**.
+8. In the **Test or turn on the policy** section, select **Turn it on right away** and select **Next**.
 
-11. Leave the group name of **Default**, select **Add** and **Sensitive information types**.
+9. On the Review your settings page, review your settings, select **Submit** then **Done**.
 
-12. From the right-side pane, check the box left of **Credit Card Number** and select **Add**.
-
-13. Leave the high **High confidence** unchanged and do not change the **Instance count** of 1.
-
-14. Below **Action**, select **+ Add an action** and **Restrict access or encrypt content in Microsoft 365 locations**.
-
-15. Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block everyone. Only the content owner, the last modifier and the site admin will continue to have access.** 
-
-16. Below **User notification**, select the slider to **On** and select **Customize the policy tip text**.
-
-17. Enter the following text to the textbox: **Credit card numbers are not allowed to be shared!**
-
-18. Below **Incident reports**, select the slider **Send an alert to admins when a rule match occurs** and select **Add or remove people**.
-
-19. On the **Add or remove people** page, select the checkbox left from **Joni Sherman** and select **Add**.
-
-20. Select **Save**.
-
-21. Review the rule settings and select **Next**.
-
-22. Select the radio button **Turn it on right away** and select **Next**.
-
-23. Review the policy settings again and select **Submit** then **Done**.
-
-24. Leave the browser open.
+10. Leave the browser open.
 
 You have successfully created a new custom DLP policy for protecting credit card numbers from being shared via Teams conversations.
 
@@ -726,11 +686,11 @@ You have successfully created a new custom DLP policy for protecting credit card
 
 To make sure your configured DLP policies are working as expected, you need to perform some testing with your pilot users.
 
-**Note:** It can take up to 24 hours till new DLP policies take effect. If the steps does not work, continue with the lab, and perform task 6 at a later point of working through this lab.
+**Note:** It can take up to 24 hours till new DLP policies take effect. If the steps does not work, continue with the lab, and perform task at a later point of working through this lab.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams Desktop client from the taskbar, where you are still signed in as **Megan Bowen**.
+2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber**.
 
 3. In the left-hand navigation pane, select **Teams**, and then select the **General** channel below **Teams Rollout**.
 

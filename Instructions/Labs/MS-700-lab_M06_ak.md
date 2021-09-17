@@ -11,7 +11,7 @@ lab:
 
 ## **Lab Scenario**
 
-In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. Teams admins will need to replace Contoso legacy PBX solution and configure voice features that will provide users with Teams calling capabilities.
+In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. According to Contoso business requirements, Microsoft Teams will be used as an organization’s solution for conferencing and telephony. Teams admins will need to replace Contoso legacy PBX solution and configure voice features that will provide users with Teams calling capabilities.
 
 ## **Objectives**
 
@@ -111,7 +111,7 @@ In this task you will assign the calling plan license to a user to allow them to
 
 4. Select **Active users**.
 
-5. Search for **Megan Bowen** and open the additional settings by selecting her name.
+5. Search for **Lynne Robbins** and open the additional settings by selecting her name.
 
 6. Select **Licenses and Apps**.
 
@@ -137,7 +137,7 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 6. Type **Phone number order** as the **Order Name**.
 
-7. Fill out the description as **Number for Megan Bowen during the Calling Plan trial**.
+7. Fill out the description as **Number for Lynne Robbins during the Calling Plan trial**.
 
 8. In the dropdown menu of **Country or region**, select **United States**.
 
@@ -181,7 +181,7 @@ In this Task you will assign an existing phone number to a user.
 
 4. Select the phone number you want to assign and select **edit** to open the options.
 
-5. Under **Assigned to** search for **Megan Bowen** and select **assign**.
+5. Under **Assigned to** search for **Lynne Robbins** and select **assign**.
 
 6. Under **Emergency Location** select **Search by the location description**.
 
