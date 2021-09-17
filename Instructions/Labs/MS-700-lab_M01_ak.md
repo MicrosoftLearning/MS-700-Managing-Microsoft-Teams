@@ -41,7 +41,7 @@ After you complete this lab, you will be able to:
 
 - Check license assignment for users
 
-- Understand the Teams admin center and it’s menus
+- Understand the Teams admin center and its menus
 
 - Install the Teams PowerShell module and explore its cmdlets
 
@@ -67,15 +67,15 @@ After you complete this lab, you will be able to:
 
 ### **Before you start**
 
-The lab in this course have been prepared for a Microsoft Teams deployment at Contoso Ltd. Corporation. Contoso is running a Microsoft 365 cloud only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
+The labs in this course have been prepared for a Microsoft Teams deployment at Contoso Ltd. Corporation. Contoso is running a Microsoft 365 cloud only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
 
 #### **1. Sign in to the lab virtual machines**
 
 The labs in this course will use two virtual machines:
 
-- Client 1 VM : a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client 1 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
 
-- Client 2 VM : a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client 2 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
 
 **Note:** Lab virtual machine sign in instructions will be provided to you by your instructor.
 
@@ -113,7 +113,7 @@ Beside two VMs, you will also be provided with a Microsoft 365 tenant with follo
 
   Throughout the lab exercises for this course, if you navigate to the Microsoft 365 admin center, make sure the slider in the upper right corner is set to **The new admin center**. If you can read **Try the new admin center**, select the slider and activate it.  
 ‎‎  
-‎‎  **IMPORTANT:** The instructions that are provided in the lab exercises for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
+‎‎  **IMPORTANT:** The instructions that are provided in the lab exercise for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
 
 ### **Exercise 1: Prepare Teams admin roles and licenses**
 
@@ -137,9 +137,9 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
     3. In the settings below the Account tab, scroll to **Roles** and select **Manage roles** below.
 
-    4. On the **Manage admin roles** pane, select **Admin center access** and scroll down to expand **Show all by category** to reveal all avaliable roles. 
+    4. On the **Manage admin roles** pane, select **Admin center access** and scroll down to expand **Show all by category** to reveal all available roles. 
     
-    5. Select **Teams Administrator** checkbox then select **Save changes**. You will see the message **Admin roles updated** on the upper part of the pane to comfirm the update. 
+    5. Select **Teams Administrator** checkbox then select **Save changes**. You will see the message **Admin roles updated** on the upper part of the pane to confirm the update. 
 
 3. Assign **Teams device admin** role to **Patti Fernandez**
 
@@ -215,7 +215,7 @@ You have successfully explored several available menus from the Teams admin cent
 
 In this task, you will install and connect with the Teams PowerShell module to your tenant and explore the available cmdlets and functions to manage your tenant. You can install the Teams PowerShell module from the available repositories preconfigured in your Windows 10 operating system and do not need to download any executables via the browser.
 
-1. Connect to the **Client 1 VM** with the VM credential that have been provided to you.
+1. Connect to the **Client 1 VM** with the VM credential that has been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
 
@@ -258,7 +258,7 @@ In this task, you will install and connect with the Teams PowerShell module to y
         Get-Command -Module MicrosoftTeams
         ```
 
-    3. The Get-Help cmdlet is used explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
+    3. The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
 
         ```powershell
         Get-Help New-Team
@@ -293,27 +293,27 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
 
 4. Follow the **Add a group** wizard with the following information:
 
-    * Group type : Select **Microsoft 365 (recommended)**
+    * Group type: Select **Microsoft 365 (recommended)**
 		 - Select **Next**             
-    * Basics : 
+    * Basics: 
     	- Name: **IT-Department**
     	- Description: **All staff of the IT-Department**
     	- Select **Next**
     
-    * Owners : 
+    * Owners: 
         - Select **+ Assign owners** 
         - Search and select **Joni Sherman**
         - Select **Add(1)**, and then select **Next**.
 
-    * Members : 
+    * Members: 
         - Patti Fernandez
         - Allan Deyoung
         - MOD Administrator
         - Select **Add(3)**, and then select **Next**.
         
-    * Settings : 
+    * Settings: 
         - Enter **IT-Department** for Group email address. 
-        - Privacy : Private
+        - Privacy: Private
         - Uncheck **Create a team for this group**.
         - Select **Next**
 
@@ -339,7 +339,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
     **Run**.
 
 
-4. In the Teams desktop client, select **Teams** from the left manu. 
+4. In the Teams desktop client, select **Teams** from the left menu. 
 
 5. Select **Join or create a team** from the lower left corner. 
 
@@ -425,8 +425,8 @@ You are an administrator for your Teams organization. You need to limit which us
 
     3. Follow the **Add a group** wizard with the following information:
 
-        * Group type : Select **Security** > **Next**
-        * Basics : 
+        * Group type: Select **Security** > **Next**
+        * Basics: 
             - Name: **GroupCreators**
             - Description: **Users who can create Microsoft 365 Groups for new teams**
             -  Select **Next**
@@ -436,10 +436,10 @@ You are an administrator for your Teams organization. You need to limit which us
     4. Back to **Active teams & group** page, select **Security** tab and select the security group **GroupCreators** you just created. 
     5. Select **Members** tab to configure the **Owners** and **Members**.
 
-        * Owners : 
+        * Owners: 
             - MOD Administrator
 
-        * Members : 
+        * Members: 
             - Joni Sherman
             - Alex Willber
 
@@ -550,7 +550,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
     1. Under the **Blocked words** tab on the **Groups | Naming policy** page, select **Download** to download a sample file. 
     
-    2. Nevigate and right-select the downloaded file **BlockedWords.csv** and select **Open with** > **Notepad**.
+    2. Navigate and right-select the downloaded file **BlockedWords.csv** and select **Open with** > **Notepad**.
 
     3. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, and save the file. 
     
@@ -586,7 +586,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
-2. In the Teams desktop client, select **Teams** from the left manu. 
+2. In the Teams desktop client, select **Teams** from the left menu. 
 
 3. Select **Join or create a team** from the lower left corner. 
 

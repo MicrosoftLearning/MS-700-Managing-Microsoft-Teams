@@ -365,7 +365,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 7. Leave the browser open and stay signed in.
 
-You have successfully archived a team and reviewed the limited functionality of archived teams. This fulfils the first requirement of testing the archiving function of teams for compliance preservation policies and rules. After this test, you have unarchived the team again, making it fully operational again. 
+You have successfully archived a team and reviewed the limited functionality of archived teams. This fulfills the first requirement of testing the archiving function of teams for compliance preservation policies and rules. After this test, you have unarchived the team again, making it fully operational again. 
 
 #### Task 5 - Delete and recover teams
 
@@ -476,7 +476,7 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 5. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff**. Then select **Manage users** in the top navigation pane. 
 
-	**Note**: If you didn't see **Manage users**, select ... to expand the manu. 
+	**Note**: If you didn't see **Manage users**, select ... to expand the menu. 
 
 8. Search and select **add** for the following pilot users. Then select **Apply**.
 
@@ -500,7 +500,7 @@ As Teams administrator of Contoso, you will create a private channel named **con
 
 4. Add the private channel
 
-	1. Select **+ Add** from the top manu.
+	1. Select **+ Add** from the top menu.
 	2. In the **Add** window, enter the following information:
 
 		- **Name**: Confidential sales
@@ -519,7 +519,7 @@ In this task you learned how to create a private channel in the Microsoft Teams 
 
 ### **Exercise 3: Manage app settings**
 
-#### Task 1 - Disable third party storage providers
+#### Task 1 - Disable third-party storage providers
 
 In the past, users stored data at various locations, including third-party storage providers. Recently, the company deployed OneDrive for all users and would like to guide the users to use SharePoint and OneDrive as the primary data storage locations with Box as an alternative for all file collaborations. As the Teams admin, you are asked to deactivate all third-party storage providers except Box in Microsoft Teams to align with the direction.
 
@@ -637,7 +637,7 @@ In this task, you will create an issue report system by using Power Automate in 
 
 	1. Stay in the **Client 1 VM** and browse to the Forms web client (https://www.office.com/launch/forms) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 	
-	2. In the Froms web client, select **+ New Form**.
+	2. In the Forms web client, select **+ New Form**.
 
 	3. Select on **Untitled form** and enter the following information:
 	
@@ -663,7 +663,7 @@ In this task, you will create an issue report system by using Power Automate in 
 
 	3. Select the template **Notify a team when a new Forms response is submitted**.
 
-	4. Enter the flow name : **Report issue**. Select **Next**.
+	4. Enter the flow name: **Report issue**. Select **Next**.
 
 	5. On the **Set up your flow** page, 
 	

@@ -43,7 +43,7 @@ Contoso organization has deployed Microsoft 365 and is testing pilot projects on
 
 #### Task 1 - Edit the default meeting policy and restrict all recording features for meetings
 
-As part of your pilot project for setting up the events and meetings in your organization, you need to fulfil the requirement for all meetings in teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
+As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -220,7 +220,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 8. Once you complete with the configuration profile settings, select **Save**.
 
-In this task, you have successfully created a configuration profiles that can be applied to Microsoft Teams devices.
+In this task, you have successfully created a configuration profile that can be applied to Microsoft Teams devices.
 
 #### Task 2 - Create a Microsoft Teams Room
 

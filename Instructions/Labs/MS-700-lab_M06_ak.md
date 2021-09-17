@@ -145,7 +145,7 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 10. For **Quantity**  select 1.
 
-11. In the **Search for new numbers** section, you can use one of the following approach to find new numbers:
+11. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
 
 	* Search by city name
 		
@@ -352,7 +352,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 	- First play a greeting message: Select **Add a greeting message**
 
-	- Type in : **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
+	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
 
 	- Then route the call: **Redirect call**
 

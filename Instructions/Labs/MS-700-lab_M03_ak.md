@@ -13,7 +13,7 @@ lab:
 
 Throughout the lab exercises for this course, if you navigate to the Microsoft 365 admin center and are prompted with a window asking if you want to try the new Microsoft 365 admin center, always select the **Try it now** button.  
 ‎‎  
-‎**‎IMPORTANT**: The instructions that are provided in the lab exercises for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
+‎**‎IMPORTANT**: The instructions that are provided in the lab exercise for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
 
 ## **Lab Scenario**
 
@@ -72,7 +72,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- In the **Network site name** field, type **New York HQ site**.
 
-	- In the in the description field type **New York HQ site network infrastructure**.
+	- In the description field type **New York HQ site network infrastructure**.
 
 	- In the **Network users** field type **1000**.
 
@@ -90,7 +90,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- In the **Network site name** field, type **Los Angeles site**.
 
-	- In the in the description field type **Los Angeles site network infrastructure**.
+	- In the description field type **Los Angeles site network infrastructure**.
 
 	- In the **Network users** field type **250**.
 
@@ -108,7 +108,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- In the **Network site name** field, type **Houston site**.
 
-	- In the in the description field type **Houston site network infrastructure**.
+	- In the description field type **Houston site network infrastructure**.
 
 	- In the **Network users** field type **150**.
 
@@ -140,7 +140,7 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
 
-2. Select **Sign in** at top right corner.
+2. Select **Sign in** at top-right corner.
 
 3. Specify location and select **Run test**.
 

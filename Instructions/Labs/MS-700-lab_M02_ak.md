@@ -62,7 +62,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 	2. Under the **Security & privacy** tab, select **Sharing**. Make sure the checkbox is selected for **Let users add new guests to the organization**.
 
 
-You have now review guest access settings across different admin centers. You are ready to invite guest for collaboration. 
+You have now reviewed guest access settings across different admin centers. You are ready to invite guest for collaboration. 
 
 
 #### Task 2 - Configure guest access in Teams
@@ -116,7 +116,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 	2. Select **...** of the message you just posted. Notice there's no **Delete** option. 
 
-You have successfully invite a guest to a team and validate the guest access setting from previous task. 
+You have successfully invited a guest to a team and validate the guest access setting from previous task. 
 
 #### Task 4 - Create access reviews
 
@@ -144,7 +144,7 @@ As a part of your system administrator role, you need to review access to resour
 
 3. Review the access review dashboard from Azure AD.
 
-	1. On the **Identity Governance | Access reviews** page, you will see a access review report named **Review guest access across Microsoft 365 groups**
+	1. On the **Identity Governance | Access reviews** page, you will see an access review report named **Review guest access across Microsoft 365 groups**
 
 	2. Wait for a few minutes, when the **Status** of the report shows as **Active**, select on the name of the report - **Review guest access across Microsoft 365 groups**.
 
@@ -152,7 +152,7 @@ As a part of your system administrator role, you need to review access to resour
 
 	4. On the **Group_Afterwork_United States | Overview** page, you can see there's one users show under **Not reviewed** category. 
 
-4. Reviwew the access review and approve the guest user. 
+4. Review the access review and approve the guest user. 
 
 	1. Connect to the **Client 2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com). You can open an InPrivate window.
 
@@ -188,7 +188,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 5. Select **Save**.
 
 
-In this task, you have activated Safe Attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks block documents that contain malware.
+In this task, you have activated Safe Attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks documents that contain malware.
 
 
 ### **Exercise 3: Implement compliance for Microsoft Teams**
@@ -276,7 +276,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 		* Select **Control external sharing from labeled SharePoint sites** > **Anyone**.
 
-		* Select **Use Azure AD Conditional Access to projtect labeled SharePoint sites** >  **Allow full access from desktop apps, mobile apps, and the web**.
+		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** >  **Allow full access from desktop apps, mobile apps, and the web**.
 
 	7. In the **Azure Purview assets** section, leave the settings as default. 
 
@@ -324,7 +324,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 		* Select **Control external sharing from labeled SharePoint sites** > **Existing guests**.
 
-		* Select **Use Azure AD Conditional Access to projtect labeled SharePoint sites** >  **Allow limited, web-only access**.
+		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** >  **Allow limited, web-only access**.
 
 	10. In the **Azure Purview assets** section, leave the settings as default. 
 
@@ -372,7 +372,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 		* Select **Control external sharing from labeled SharePoint sites** > **Only people in your organization**.
 
-		* Select **Use Azure AD Conditional Access to projtect labeled SharePoint sites** >  **Block access**.
+		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** >  **Block access**.
 
 	10. In the **Azure Purview assets** section, leave the settings as default. 
 
@@ -422,7 +422,7 @@ Once the sensitivity labels are created and published, users can now assign them
 
 5. Select **Done** to save the changes.
 
-You have successfully applied a sensitivity labels to an existing team. The configured settings of the Internal label are now applied to the Teams Rollout team. Continue with the next task.
+You have successfully applied a sensitivity label to an existing team. The configured settings of the Internal label are now applied to the Teams Rollout team. Continue with the next task.
 
 
 #### Task 4 – Test external access with sensitivity labels (optional)
@@ -483,7 +483,7 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 7. Select **Done**. Leave the browser open for the next task.
 
-In this this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages and chat of the **Sales** Team for **7 years after the last modification**.
+In this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages and chat of the **Sales** Team for **7 years after the last modification**.
 
 #### Task 6 - Create a new retention policy to delete content
 
@@ -522,7 +522,7 @@ After configuring a retain policy to protect data from deletion, you also need t
 		- Select the checkbox left from **Teams Rollout** and select **Done**.
 
 	3. In the **Retention settings** section, 
-		- Select **Only delete items when they reach a certian age** 
+		- Select **Only delete items when they reach a certain age** 
 		- Delete items older than: Select **Custom** > **1 days**
 		- Delete the content based on: **when items were created**
 		- Select **Next**.
@@ -652,7 +652,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	1. In the **Advanced DLP rules** section, select **+ Create rule** and enter the following information:
 		- **Name**: Credit card numbers found
-		- **Description**: Basic rule for protecting credit card numbers form being shared in Teams.
+		- **Description**: Basic rule for protecting credit card numbers forms being shared in Teams.
 
 	2. Below **Conditions**, 
 		- Select **+ Add condition** and **Content contains**.
@@ -686,7 +686,7 @@ You have successfully created a new custom DLP policy for protecting credit card
 
 To make sure your configured DLP policies are working as expected, you need to perform some testing with your pilot users.
 
-**Note:** It can take up to 24 hours till new DLP policies take effect. If the steps does not work, continue with the lab, and perform task at a later point of working through this lab.
+**Note:** It can take up to 24 hours till new DLP policies take effect. If the step doesn't work, continue with the lab, and perform task at a later point of working through this lab.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
