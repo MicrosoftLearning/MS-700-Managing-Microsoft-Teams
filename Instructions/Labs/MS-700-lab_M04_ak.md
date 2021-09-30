@@ -657,7 +657,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 8. Back on the list of assigned policies, select **Frontline_Worker** right from **Calling policy**.
 
-9. Select the switch right from **Prevent toll bypass and send calls through the PSTN** and **Busy on busy is available when in a call** to **On** and select **Save**.
+9. Select the switch right from **Prevent toll bypass and send calls through the PSTN** and select **Enabled** for **Busy on busy is available when in a call** and select **Save**.
 
 10. Back on the list of assigned policies again, select **Back** to go to the Policy packages overview.
 
