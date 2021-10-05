@@ -143,9 +143,11 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 9. For **Number Type** select **User (Subscriber)**.
 
-10. For **Quantity**  select 1.
+10. For the Operator, pick Microsoft 
 
-11. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
+11. For **Quantity**  select 1.
+
+12. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
 
 	* Search by city name
 		
@@ -163,7 +165,7 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 	*We can't find any phone numbers for the address you selected.*
 
-12. Once you reserved a phone number successfully, you can proceed by selecting **Place order**, then **Finish**.
+13. Once you reserved a phone number successfully, you can proceed by selecting **Place order**, then **Finish**.
 
 **Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab. 
 
