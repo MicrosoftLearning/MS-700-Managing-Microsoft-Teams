@@ -335,7 +335,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 	2. Select the checkbox of **Make the SharePoint site read-only for team members** and select **Archive**.
 
-	3. The **Status** column should now have changed to **Archived**, written in orange color. Leave the browser open and proceed.
+	3. The **Status** column should now have changed to **Archived**, written in orange color. Leave the browser open and proceed. If you have problems with the **Sales** team - archive another team (you can undo this action in the unarchive step).
 
 4. Check the archived team
 
