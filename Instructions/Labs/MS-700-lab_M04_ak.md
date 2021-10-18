@@ -525,7 +525,7 @@ In the past, users stored data at various locations, including third-party stora
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Org-wide settings** > **Teams settings**.
+2. In left navigation of the Teams admin center, select **Teams** > **Teams settings**.
 
 3. On the **Teams settings** page, go to the **Files** section. 
 
@@ -611,9 +611,11 @@ To avoid administrative overhead with managing large numbers of policies individ
 5. Make sure **Frontline worker** policy package is checked. 
 6. Select **Manage users** from the top menu.
 7. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
-8. Select **Users** from the left-side pane.
-9. Select **Allan Deyoung**, and select **Policies** tab.
-10. Below Assigned policies, you can see the policies assigned from the **Frontline worker** policy package.
+8. Check the policy assignment.
+
+	1. Select **Users** > **Manage users** from the left-side pane.
+	2. Select **Allan Deyoung**, and select **Policies** tab.
+	3. Below Assigned policies, you can see the policies assigned from the **Frontline worker** policy package.
 
 You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
 

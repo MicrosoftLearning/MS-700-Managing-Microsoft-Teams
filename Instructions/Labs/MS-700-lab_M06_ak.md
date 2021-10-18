@@ -248,7 +248,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the left navigation pane, select **Org-wide settings**, and then choose **Resource accounts,** to create a resource account.
+3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
 
 4. On the **Resource accounts** page, select **+ Add** from the top pane.
 
@@ -314,7 +314,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the left navigation pane, select **Org-wide settings**, and then choose **Resource accounts,** to create the resource account first.
+3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create the resource account first.
 
 4. On the **Resource accounts** page, select **+ Add** from the top pane.
 

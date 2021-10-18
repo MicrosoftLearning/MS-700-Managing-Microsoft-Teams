@@ -71,15 +71,13 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Org-wide settings**. 
+2. In left navigation of the Teams admin center, select **Users** > **Guest access**.
 
-4. Select **Guest access** from the list.
+3. On the **Guest access** page, check if **Allow guest access in Teams** is enabled. If not, select **On**.
 
-5. On the **Guest access** page, check if **Allow guest access in Teams** is enabled. If not, select **On**.
+4. Under **Messaging** section, disable **Delete sent messages**
 
-6. Under **Messaging** section, disable **Delete sent messages**
-
-7. Select **Save**.
+5. Select **Save**.
 
 You have now successfully activated guest access and disallow guests to delete their sent messages for Teams in your tenant.
 
