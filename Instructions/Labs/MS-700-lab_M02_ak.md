@@ -303,11 +303,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 		* User access to content expires: **Never**.
 		* Allow offline access: **Always**.
 		* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
+		* Scroll down and click **Save** to apply the changes.
 
 	5. In the **Content marking** sections, 
 
 		* Select the slider and the checkbox **Add a watermark**.
 		* Select **Customize text** and enter the following to the **Watermark text** box: **Internal use only**
+		* Click **Save** to apply the changes.
 
 	6. In the **Auto-labeling** sections, leave the settings as default.
 	
@@ -351,11 +353,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 		* User access to content expires: **Never**.
 		* Allow offline access: **Never**.
 		* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
+		* Scroll down and click **Save** to apply the changes.
 
 	5. In the **Content marking** sections, 
 
 		* Select the slider and the checkbox **Add a watermark**.
 		* Select **Customize text** and enter the following to the **Watermark text** box: **Confidential.**
+		* Click **Save** to apply the changes.
 
 	6. In the **Auto-labeling** sections, leave the settings as default.
 	
@@ -376,7 +380,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	11. Select **Create label** > **Done**.
 
-7. Publish sensitivity labels
+7. Publish sensitivity labels, after performing each steps click **Next** (if required).
 
 	1. On the **Information protection** page, select **Publish labels** from the top menu.
 
@@ -458,8 +462,9 @@ Teams retention settings are very important for managing the lifecycle of compan
 	1. In the **Name** section, enter the following information 
 		- **Name**: Sales retention policy
 		- **Description**: Retention policy for Sales department that will retain channel messages for 7 years.
+		- select **Next**
 
-	2. In the **Locations** section, configure the following settings:
+	2. In the **Choose Locations** section, select **Static** and click **Next** then configure the following settings:
 
 		- **Exchange email**: Off
 		- **SharePoint sites**: Off
@@ -502,8 +507,9 @@ After configuring a retain policy to protect data from deletion, you also need t
 	
 		- **Name**: Teams Rollout deletion policy
 		- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
+		- Select **Next**
 
-	2. In the **Locations** section, configure the following settings:
+	2. In the **Choose Locations** section,select **Static** and click **Next** then configure the following settings:
 
 		- **Exchange email**: Off
 		- **SharePoint sites**: Off
@@ -598,7 +604,7 @@ According to your organization compliance requirements, you need to implement ba
 		- Select **Add or remove people**, select the checkbox for **Joni Sherman**. 
 		- Select **Add** and **Save**
 		- Select the checkbox **Send alerts if any of the DLP rules match**
-		- Select the checkbox **Restrict access or encrypt the content in Microsoft locations**
+		- Select the checkbox **Restrict access or encrypt the content in Microsoft 365 locations**
 
 	3. In the **Customize access and override settings** section, ensure that the following settings are configured, and then select **Next**:
 
