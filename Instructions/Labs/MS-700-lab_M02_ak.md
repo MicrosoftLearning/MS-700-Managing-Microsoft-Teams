@@ -45,7 +45,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
-2. In left navigation of the Azure AD admin center, select **Users**> **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
+2. In left navigation of the Azure AD admin center, select **Users**> **User settings** > **Manage external collaboration settings** under the External users. Review the following settings for external users at the Azure AD level:
 
 	* **Guest user access**: Guest users have limited access to properties and memberships of directory objects.
 
@@ -55,9 +55,9 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
-4. In left navigation of the Microsoft 365 admin center, select **Settings** > **Org settings**.
+4. In left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings** > **Org settings**.
 
-	1. Under the **Services** tab, select **Microsoft 365 Groups**. Make sure the checkbox is selected for **Let group owner add people outside your organization to Microsoft 365 Groups**.
+	1. Under the **Services** tab, select **Microsoft 365 Groups**. Make sure the checkbox is selected for **Let group owner add people outside your organization to Microsoft 365 Groups**. Close the **Microsoft 365 Groups** by clicking **X** button.
 
 	2. Under the **Security & privacy** tab, select **Sharing**. Make sure the checkbox is selected for **Let users add new guests to the organization**.
 
@@ -75,9 +75,9 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 3. On the **Guest access** page, check if **Allow guest access in Teams** is enabled. If not, select **On**.
 
-4. Under **Messaging** section, disable **Delete sent messages**
+4. Scroll down and under **Messaging** section, disable **Delete sent messages**
 
-5. Select **Save**.
+5. Scroll down and select **Save**.
 
 You have now successfully activated guest access and disallow guests to delete their sent messages for Teams in your tenant.
 
@@ -124,7 +124,7 @@ As a part of your system administrator role, you need to review access to resour
 
 2. Create an access review to monitor guest users.
 
-	In left navigation of the Azure AD admin center, select **All Services** and on right pane select **Identity Governance** > **Create an access review**. Follow the wizard with the following information:
+	In left navigation of the Azure AD admin center, select **All Services** and on right pane select **Identity Governance** > select the **Access Review** in the middle pane and select **+ New access review**. Follow the wizard with the following information:
 
 	1. On the **Review type** tab:
 	
@@ -251,7 +251,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 4. Create the first sensitivity label - **General**.
 
-	Select **+ Create a label** and follow the wizard with the following information: 
+	Select **+ Create a label**, follow the wizard with the following information and click **Next** after each step: 
 	
 	1. In the **Name &description** section, enter the following information:
 		- **Name**: General
@@ -259,7 +259,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Description for users**: General information without protection.
 		- **Description for admins**: General information without encryption, marking or sharing restriction settings activated.
 
-	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; sites**. 
+	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; sites**.
 
 	3. In the **Files & emails** and **Auto-labeling** sections, leave the settings as default.
 	
@@ -268,7 +268,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		* **Privacy and external user access settings** 
 		* **External sharing and Conditional Access settings** 
 
-	5. In the **Privacy & external user access** section, select **None** and check the checkbox of **Let Microsoft 365 Group owners add people outside your organization to the group as guests**. 
+	5. In the **Privacy & external user access** section, select **None** under Privacy and check the checkbox of **Let Microsoft 365 Group owners add people outside your organization to the group as guests** under External user access. 
 
 	6. In the **External sharing & device access** section,
 	
@@ -282,7 +282,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 5. Create the second sensitivity label - **Internal**.
 
-	Select **+ Create a label** and follow the wizard with the following information: 
+	Select **+ Create a label**, follow the wizard with the following information and click **Next** after each step: 
 	
 	1. In the **Name & description** section, enter the following information:
 		- **Name**: Internal
@@ -332,7 +332,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 6. Create the second sensitivity label - **Confidential**
 
-	Select **+ Create a label** and follow the wizard with the following information: 
+	Select **+ Create a label**, follow the wizard with the following information and click **Next** after each step: 
 	
 	1. In the **Name & description** section, enter the following information:
 		- **Name**: Confidential
