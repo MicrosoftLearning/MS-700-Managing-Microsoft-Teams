@@ -145,7 +145,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
     Repeat the same steps and assign **Teams Device Administrator** role to **Patti Fernandez**.
 
-4. Assign **Teams communication admin** role to **Allan Deyoung**
+4. Assign **Teams communication support engineer** role to **Allan Deyoung**
 
     Repeat the same steps and assign **Teams communication support engineer** role to **Allan Deyoung**.
 
