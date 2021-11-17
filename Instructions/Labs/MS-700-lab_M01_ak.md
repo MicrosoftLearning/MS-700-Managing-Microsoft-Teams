@@ -129,7 +129,7 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
     2. Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Assign **Teams admin** role to **Joni Sherman**
+2. To assign **Teams admin** role to **Joni Sherman**
 
     1. Select the navigation menu in the upper-left and select **Users** and **Active users** from below it.
 
@@ -139,15 +139,15 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
     4. On the **Manage admin roles** pane, select **Admin center access** and scroll down to expand **Show all by category** to reveal all available roles. 
     
-    5. Select **Teams Administrator** checkbox then select **Save changes**. You will see the message **Admin roles updated** on the upper part of the pane to confirm the update. 
+    5. Select **Teams Administrator** checkbox then select **Save changes**. You will see the message **Admin roles updated** on the upper part of the pane to confirm the update. Close the **Manage admin roles** pane by clicking the X button on the top right-side of the pane. 
 
-3. Assign **Teams device admin** role to **Patti Fernandez**
+3. To assign **Teams device admin** role to **Patti Fernandez**
 
-    Repeat the same steps and assign **Teams Device Administrator** role to **Patti Fernandez**.
+    Repeat the same steps as above, in the **Active users list**, search and select **Patti Fernandez** and assign **Teams Device Administrator** role to **Patti Fernandez**.
 
-4. Assign **Teams communication support engineer** role to **Allan Deyoung**
+4. To assign **Teams communication Support engineer** role to **Allan Deyoung**
 
-    Repeat the same steps and assign **Teams communication support engineer** role to **Allan Deyoung**.
+    Repeat the same steps as above and assign **Teams communication support engineer** role to **Allan Deyoung**.
 
 You have now successfully assigned the Teams admin roles.
 
@@ -431,8 +431,9 @@ You are an administrator for your Teams organization. You need to limit which us
             - Description: **Users who can create Microsoft 365 Groups for new teams**
             -  Select **Next**
         * Finish: 
-            - Select **Create Group**
+            - Select **Create Group** and then click **Close**
 
+    
     4. Back to **Active teams & group** page, select **Security** tab and select the security group **GroupCreators** you just created. 
     5. Select **Members** tab to configure the **Owners** and **Members**.
 
