@@ -43,7 +43,7 @@ Contoso organization has deployed Microsoft 365 and is testing pilot projects on
 
 #### Task 1 - Edit the default meeting policy and restrict all recording features for meetings
 
-As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
+As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in Teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -51,7 +51,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 3. Select the **Global (Org-wide default)** policy.
 
-4. On the **Meetings policies\Global** page, turn **Off** the **Allow cloud recording** setting under the **Recording &amp; transcription** section. 
+4. On the **Meetings policies\Global** page, turn **Off** the **Cloud recording** setting under the **Recording &amp; transcription** section. 
 
 5. Select **Save**.
 
@@ -69,9 +69,11 @@ In this task you need to sign in to the second client and create a meeting with 
 
 4. Select **Join now** to start the meeting.
 
-5. In the meeting window, select … for **More actions**.
+5. Close **Invite people to join you window** by clicking **X** on the upper right corner.
 
-6. Notice that you can't select **Start recording**.
+6. In the meeting window, select … for **More actions**.
+
+7. Notice that you can't select **Start recording**.
  
 
 #### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
@@ -94,19 +96,19 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Meetings** > **Live event policies**.
+2. In left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
 
 3. Select **+ Add** from the top menu.
 
-4. On the **Live event policies\Add** page, enter the following information:
+4. On the **Live events policies\Add** page, enter the following information:
 
 	- Add live events policy: **Management Live Events**
 
 	- Description: **Recording Restriction for live events organized by managers**
 
-	- Allow scheduling: **On**
+	- Live events scheduling: **On**
 
-	- Allow transcription for attendees: **Off**
+	- Transcription for attendees: **Off**
 
 	- Who can join scheduled live events: **Everyone in the organization**
 
@@ -146,9 +148,13 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 
 		*What is your question about the new reporting system?*
 	
-	 **Start/End**: Select a time close to your current time 
+	 **Start/End**: Select a time close to your current time
+	 
 	4. Select **Save**
-	5. Select **Copy registration link** and paste it to the **General** channel of the **IT Support** team.
+	5. Select **Copy registration link**
+	6. Close **Event details** tab and go back to **New webinar** tab
+	7. Click **Send** to finish creating the webinar
+	8. Paste the registration link you copied previously to the **General** channel of the **IT Support** team.
 		
 7. Test the meeting registration. 
 
