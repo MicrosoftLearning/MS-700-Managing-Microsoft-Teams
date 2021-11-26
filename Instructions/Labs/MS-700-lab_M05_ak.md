@@ -69,7 +69,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 4. Select **Join now** to start the meeting.
 
-5. Close **Invite people to join you window** by clicking **X** on the upper right corner.
+5. Close **Invite people to join you window** by selecting **X** on the upper right corner.
 
 6. In the meeting window, select … for **More actions**.
 
@@ -153,7 +153,7 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 	4. Select **Save**
 	5. Select **Copy registration link**
 	6. Close **Event details** tab and go back to **New webinar** tab
-	7. Click **Send** to finish creating the webinar
+	7. Select **Send** to finish creating the webinar
 	8. Paste the registration link you copied previously to the **General** channel of the **IT Support** team.
 		
 7. Test the meeting registration. 
