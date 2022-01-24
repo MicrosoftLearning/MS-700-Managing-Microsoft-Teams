@@ -69,7 +69,7 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 
       (You can enable **Edit the address manually**, and enter the address manually)
 
-5. Acknowledge the emergency calling disclaimer.
+5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Close** the page and continue to the next task. 
 
 6. Select **Save**.
 
@@ -117,7 +117,7 @@ In this task you will assign the calling plan license to a user to allow them to
 
 7. Under **Licenses** select **Microsoft 365 Domestic Calling Plan** by setting the checkmark in front of it.
 
-8. Select **Save Changes** to assign the license.
+8. Select **Save Changes** to assign the license and close all open windows.
 
 You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
 
@@ -161,7 +161,7 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 		2. Enter an area code in United States.
 		3. Select **Next**.
 
-	**Note**: If you received the following message, please try other area codes or creating another location by selecting **Add a location** and repeat task 1. 
+	**Note**: If you received the following message, please try other area codes or creating another location by selecting **Add a location** which is next to the **Search by city name**. It will navigate to the **New emergency address** pane, enter the new name for the emergency address, then in the **Country or region** select **United States** and enter the new address manually in the **Address** field by enabling the slider **Input address manually** and click **Save**. It takes back to the **Get Phone numbers** page and continue the city search with the newly created emergency address to acquire the phone number. 
 
 	*We can't find any phone numbers for the address you selected.*
 
@@ -277,6 +277,8 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 	- Call queue name: **Contoso Call Queue**
 
 	- You haven’t added any resource accounts yet: Select **Add accounts**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
+	
+	- Language: **English (United States)**
 
 	- Greeting: select **Play an audio file**, and then select **Upload file**.
 
