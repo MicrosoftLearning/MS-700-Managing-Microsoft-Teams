@@ -130,17 +130,15 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 
 1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. On the left navigation pane select **Calendar**.
+3. Select the dropdown menu **New meeting** and select **Webinar**. Scheduling page will open **Teams.Microsoft.com/Scheduling**.
 
-4. Select the dropdown menu **New meeting** and select **Webinar**.
-
-5. Create a new **webinar**:
+4. Create a new **webinar**:
 
 	- **Title**: IT Office Hours
 	- **Start/End**: Select a time close to your current time 
 	- **Presenters**: Patti Fernandez, Allan Deyoung
 
-6. Select **View registration form** and enter the following information: 
+5. Select **View registration form**, it opens a new webpage with the url **Teams.microsoft.com/registration**. Enter the following information: 
 
 	1. **Title**: IT Office Hours
 	2. Select **+ Add field** > **Custom question** > **Input**.
@@ -150,13 +148,11 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 	
 	 **Start/End**: Select a time close to your current time
 	 
-	4. Select **Save**
-	5. Select **Copy registration link**
-	6. Close **Event details** tab and go back to **New webinar** tab
-	7. Select **Send** to finish creating the webinar
-	8. Paste the registration link you copied previously to the **General** channel of the **IT Support** team.
+	4. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and close the page.
+	5. Go back to the **Teams.Microsoft.com/scheduling** window and click **Send** button to activate the Webinar registration.
+	6. Click **Teams** on the left navigation pane, Select **General** under the **IT-Support**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
 		
-7. Test the meeting registration. 
+6. Test the meeting registration. 
 
 	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
 
@@ -180,9 +176,9 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez**  (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In **Teams admin center**, on the left navigation pane, select **IP Phones** under **Devices**.
+2. In **Teams admin center**, on the left navigation pane, select **Phones** under **Teams devices**.
 
-3. On the **IP Phones** page, select **Configuration profiles** tab, and then select **Add**.
+3. On the **Phones** page, select **Configuration profiles** tab, and then select **Add**.
 
 4. Enter the following information for the new configuration profile:
 
@@ -244,7 +240,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 		* Resource type: **Room**.
 		* Name: **NY-TeamsRoom1** 
-		* Email: NY-TeamsRoom1@<YourTenant>.onmicrosoft.com
+		* Email: Enter **NY-TeamsRoom1** inside the Email text box and verify your tenant id in the domains
 
 	4. Select **Save**.
 	5. Select **Edit booking options**, keep the default settings with the following checked.
