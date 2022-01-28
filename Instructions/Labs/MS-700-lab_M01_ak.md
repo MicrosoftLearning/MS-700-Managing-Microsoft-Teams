@@ -438,9 +438,11 @@ You are an administrator for your Teams organization. You need to limit which us
     5. Select **Members** tab to configure the **Owners** and **Members**.
 
         * Owners: 
-            - MOD Administrator
+            - Select **+ Assign owners** 
+	    - MOD Administrator
 
         * Members: 
+            - Select **+ Assign Members** 
             - Joni Sherman
             - Alex Willber
 
