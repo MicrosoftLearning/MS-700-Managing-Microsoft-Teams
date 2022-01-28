@@ -604,7 +604,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 	3. Turn **On** the setting - **Send urgent messages using priority notifications** and select **Save**.
 	4. Select **Frontline_Worker** right from **Calling policy**.
 	5. Turn **On** the setting -  **Prevent toll bypass and send calls through the PSTN**.
-	6. Update **Busy on busy is available when in a call** to **Enabled**.
+	6. Update **Busy on busy when in a call** to **Enabled**.
 	7. Select **Save**.
 	8. Select **Back** to go to the Policy packages overview.
 
