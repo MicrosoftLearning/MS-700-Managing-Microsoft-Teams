@@ -84,7 +84,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- In the **Network settings** section, in the **PSTN egress** drop-down box, choose **Use VoIP only**, and then select **Save**.
 
-11. On the **Contoso plan** page, under **Network sites** tab, select **+ Add a network site**.
+11. On the **Contoso plan** page, under **Network sites** tab, select **+ Add network site**.
 
 12. On the **Network site** page, enter the following information:
 
