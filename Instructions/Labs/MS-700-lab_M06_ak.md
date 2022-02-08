@@ -386,7 +386,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 16. On the **Find people** page, select **Next**.
 
-17. On the **Resource accounts** page, select **Add accounts**. In the right-side pane, type **Contoso auto attendant**, and then select **Add** twice.
+17. On the **Resource accounts** page, select **Add**. In the right-side pane, type **Contoso auto attendant**, and then select **Add** twice.
 
 18. Select **Submit** to finish the creation of the auto attendant.
 
