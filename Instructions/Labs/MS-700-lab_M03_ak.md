@@ -60,7 +60,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 5. On the **Network plan name** page, in the **Network plan name** box, type **Contoso plan**, and in the **Description** box type **Contoso Teams Network plan**, and then select **Apply**.
 
-6. On the **Network planner** page, select **Personas** tab, and then select **Add**.
+6. On the **Network planner** page, select **Personas** tab, and then select **+ Add**.
 
 7. On the **Add persona** page, in the **Persona name** box type **New York office**, in the **Description** box type **New York office Teams users**, under the **Permissions** section, turn **On** all buttons, and then select **Apply**.
 
