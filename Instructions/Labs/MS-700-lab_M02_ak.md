@@ -129,8 +129,8 @@ As a part of your system administrator role, you need to review access to resour
 	1. On the **Review type** tab:
 	
 		* In the **Select what to review** section, select **Teams + Groups**.
-		* In the **Select which Teams + Groups** section, select **All Microsoft 365 groups with guest users.** 
-		* In the **Select review scope** section, select **Guest users only**. 
+		* In the **Select review scope** section, select **All Microsoft 365 groups with guest users.** 
+		* In the **Scope** section, select **Guest users only**. 
 		* Select **Next: Reviews**.
 
 	2. On the **Reviews** tab:
