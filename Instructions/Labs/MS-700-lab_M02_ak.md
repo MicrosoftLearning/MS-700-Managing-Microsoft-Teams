@@ -455,7 +455,7 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 3. Select **Retention** under the **Data** section. 
 
-4. On the **Retention** page, select **New retention policy**.
+4. On the **Retention** page, select **+ New retention policy**.
 
 5. Follow the **Create retention policy** wizard with the following information:
 
