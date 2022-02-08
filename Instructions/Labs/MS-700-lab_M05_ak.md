@@ -178,7 +178,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 2. In **Teams admin center**, on the left navigation pane, select **Phones** under **Teams devices**.
 
-3. On the **Phones** page, select **Configuration profiles** tab, and then select **Add**.
+3. On the **Phones** page, select **Configuration profiles** tab, and then select **+ Add**.
 
 4. Enter the following information for the new configuration profile:
 
