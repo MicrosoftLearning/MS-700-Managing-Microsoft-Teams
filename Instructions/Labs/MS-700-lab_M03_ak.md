@@ -52,7 +52,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** ([**https://admin.microsoft.com**](https://admin.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. In the **Teams admin center,** on the left-hand navigation pane, expand **Planning**, and select **Network Planner**.
 
