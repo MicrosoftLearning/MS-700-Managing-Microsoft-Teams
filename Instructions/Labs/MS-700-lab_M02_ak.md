@@ -239,24 +239,24 @@ You have successfully changed your tenants Azure AD settings and activated sensi
    
 #### Task 2 - Create sensitivity labels for Teams
 
-After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create three sensitivity labels **General**, **Internal**, and **Confidential**.  For each of them, you will create appropriate user and admin descriptions.
+After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**.  For each of them, you will create appropriate user and admin descriptions.
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft 365 compliance center, select **Information protection**.
+2. In left navigation of the Microsoft 365 compliance center, select **Information protection** and select the **Labels** tab.
 
 3. Select **Turn on now** next to the following warning message to activate content processing in Office online files.
 
 	*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
-4. Create the first sensitivity label - **General**.
+4. Update the first sensitivity label - **General**.
 
-	Select **+ Create a label**, follow the wizard with the following information and click **Next** after each step: 
+	Select the **General** label and click the **Edit label** button, follow the wizard with the following information and click **Next** after each step: 
 	
-	1. In the **Name &description** section, enter the following information:
-		- **Name**: General
+	1. In the **Name &amp; description** section, enter the following information:
+		- **Name**: Leave unchanged
 		- **Display name**: General
-		- **Description for users**: General information without protection.
+		- **Description for users**: Leave unchanged
 		- **Description for admins**: General information without encryption, marking or sharing restriction settings activated.
 
 	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; sites**.
@@ -276,9 +276,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** >  **Allow full access from desktop apps, mobile apps, and the web**.
 
-	7. In the **Azure Purview assets** section, leave the settings as default. 
+	7. In the **Schematized data assets (preview)** section, leave the settings as default. 
 
-	8. Select **Create label** > **Done**.
+	8. Click **Finish** > **Done**.
 
 5. Create the second sensitivity label - **Internal**.
 
@@ -311,7 +311,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		* Select **Customize text** and enter the following to the **Watermark text** box: **Internal use only**
 		* Click **Save** to apply the changes.
 
-	6. In the **Auto-labeling** sections, leave the settings as default.
+	6. In the **Auto-labeling** section, leave the settings as default.
 	
 	7. In the **Groups & sites** section, select both checkboxes. 
 	
@@ -326,18 +326,18 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** >  **Allow limited, web-only access**.
 
-	10. In the **Azure Purview assets** section, leave the settings as default. 
+	10. In the **Schematized data assets (preview)** section, leave the settings as default. 
 
 	11. Select **Create label** > **Done**.
 
-6. Create the second sensitivity label - **Confidential**
+6. Update the second sensitivity label - **Confidential**
 
-	Select **+ Create a label**, follow the wizard with the following information and click **Next** after each step: 
+	Select the **Confidential** label and click the **Edit label** button, follow the wizard with the following information and click **Next** after each step: 
 	
 	1. In the **Name & description** section, enter the following information:
-		- **Name**: Confidential
+		- **Name**: Leave unchanged
 		- **Display name**: Confidential
-		- **Description for users**: Confidential information with all protection
+		- **Description for users**: Leave unchanged
 		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
 	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; Sites** 
@@ -376,35 +376,35 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** >  **Block access**.
 
-	10. In the **Azure Purview assets** section, leave the settings as default. 
+	10. In the **Schematized data assets (preview)** section, leave the settings as default. 
 
-	11. Select **Create label** > **Done**.
+	11. Click **Save label** > **Done**.
 
 7. Publish sensitivity labels, after performing each steps click **Next** (if required).
 
-	1. On the **Information protection** page, select **Publish labels** from the top menu.
+	1. On the **Information protection** page, select **label policies** tab.
 
-	2. In the **Labels to publish** section, select **Choose sensitivity labels to publish**. Select all of the labels and select **Add**.
+	2. Select the **Global sensitivity label policy** and click the **Edit policy** button.
 
-	3. In the **Users and groups** section, keep the default settings. 
+	3. In the **Choose sensitivity labels to publish** window, click the **Edit** Link.
 
-	4. In the **Settings** section, keep the default settings. 
+	4. In the **Ssensitivity labels to publish** window, check all labels and click **Add**.
 
-	5. In the **Document** section, select **General** in the dropdown menu **Apply this label by default to documents**.
+	5. In the **Publish to users and groups** section, keep the default settings. 
 
-	6. In the **Emails** section, select **General** in the dropdown menu **Apply this label by default to emails**. 
+	6. In the **Policy Settings** section, keep the default settings. 
 
-	7. In the **Sites and Groups** section, select **General** in the dropdown menu **Apply this label by default to groups and sites**.
+	7. In the **Apply a default label to documents** section, select **General** in the dropdown menu **Apply this label by default to documents**.
 
-	8. In the **Power BI** section, select **General** in the dropdown menu **Apply this label by default to Power BI content**.	
+	8. In the **Apply a default label to emails** section, select **General** in the dropdown menu **Apply this label by default to emails**. 
 
-	9. In the **Name** section, enter the following:
+	9. In the **Policy settings for Sites and Groups** section, select **General** in the dropdown menu **Apply this label by default to groups and sites**.
 
-		- **Name**: All company sensitivity labels
+	10. In the **Apply a default label to Power BI content (preview)** section, select **General** in the dropdown menu **Apply this label by default to Power BI content**.	
 
-		- **Enter a description for your sensitivity label policy**: Default sensitivity labels for all users in the company.
-
-	10. Select **Submit** > **Done**.
+	11. In the **Name** section, leave unchanged
+	
+	12. Select **Submit** > **Done**.
 	
 In this task, you have created and published three new sensitivity labels available for all users, which can be assigned to new and existing teams.
 
