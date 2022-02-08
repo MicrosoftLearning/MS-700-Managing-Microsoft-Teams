@@ -133,7 +133,7 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 4. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
 
-5. Select **Add** in the right pane.
+5. Select **+ Add** in the right pane.
 
 6. Type **Phone number order** as the **Order Name**.
 
