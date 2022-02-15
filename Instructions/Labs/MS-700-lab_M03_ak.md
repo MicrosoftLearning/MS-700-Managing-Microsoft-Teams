@@ -17,7 +17,7 @@ Throughout the lab exercises for this course, if you navigate to the Microsoft 3
 
 ## **Lab Scenario**
 
-In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. However, there are concerns about current network infrastructure to meet the requirements for Microsoft Teams services. Therefore, you need to analyze the current network infrastructure and perform bandwidth calculations. Based on your estimation, you can provide recommendations to the networking team. 
+In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. However, there are concerns about the current network infrastructure to meet the requirements for Microsoft Teams services. Therefore, you need to analyze the current network infrastructure and perform bandwidth calculations. Based on your estimation, you can provide recommendations to the networking team. 
 
 ## **Objectives**
 
@@ -35,7 +35,7 @@ After you complete this lab, you will be able to:
 
 ### **Exercise 1: Calculate networking capabilities**
 
-Microsoft Teams provides users with chat, audio, video and content sharing experience in different network conditions. It includes variable codecs, where media can be negotiated in limited bandwidth environments. However, as a Teams admin, you will need to carefully plan your network bandwidth, because there are other Office 365 services and third-party apps that also need reliable network connection. Therefore, it is very important that Teams admins have tools that could help to estimate the bandwidth consumption according to specific business requirements and existing network infrastructure and provide best experience to business users.
+Microsoft Teams provides users with chat, audio, video, and content sharing experience in different network conditions. It includes variable codecs, where media can be negotiated in limited bandwidth environments. However, as a Teams admin, you will need to carefully plan your network bandwidth, because there are other Office 365 services and third-party apps that also need a reliable network connection. Therefore, Teams admins must-have tools that could help to estimate the bandwidth consumption according to specific business requirements and existing network infrastructure and provide the best experience to business users.
 
 #### Task 1 - Calculate network bandwidth capacity
 
@@ -128,9 +128,9 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 18. Under the **Reports** section, review the impact of Microsoft Teams on the Contoso network infrastructure by analyzing the report results on bandwidth needed for audio, video, screen sharing, Office 365 traffic, and PSTN.
 
-19. On the report page, select the **Switch to chart view** at upper-right hand corner to display report results in different views.
+19. On the report page, select the **Switch to chart view** at the upper-right hand corner to display report results in different views.
 
-Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impact on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
+Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impacts on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
 
 In this lab, you have used Network Planner to estimate the Microsoft Teams impact on the bandwidth in your network infrastructure.
 
@@ -140,9 +140,9 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
 
-2. Select **Sign in** at top-right corner.
+2. Select **Sign in** at the top-right corner.
 
-3. Specify location and select **Run test**.
+3. Specify the location and select **Run test**.
 
     You can type in your location by city, state, and country or you can have it detected from the web browser. 
 
