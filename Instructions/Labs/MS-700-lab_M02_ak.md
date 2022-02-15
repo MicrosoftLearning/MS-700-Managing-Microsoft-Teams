@@ -11,7 +11,7 @@ lab:
 
 ## **Lab Scenario**
 
-In the labs of this course, you will assume the role of the Global Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. Before starting the deployment, IT department is gathering business requirements about data security and compliance, including how the data shared in Teams be regulated according to the organization’s compliance requirements. After you complete the planning process, you will protect Teams from threats, and configure Teams to meet your organization compliance requirements.
+In the labs of this course, you will assume the role of the Global Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft Teams. Before starting the deployment, the IT department is gathering business requirements about data security and compliance, including how the data shared in Teams be regulated according to the organization’s compliance requirements. After you complete the planning process, you will protect Teams from threats, and configure Teams to meet your organization's compliance requirements.
 
 ## **Objectives**
 
@@ -23,7 +23,7 @@ After you complete this lab, you will be able to:
 
 - Activate, create and assign sensitivity labels
 
-- Activating Safe Attachments for SharePoint, OneDrive and Teams
+- Activating Safe Attachments for SharePoint, OneDrive, and Teams
 
 - Create, configure and test retention policies
 
@@ -55,14 +55,14 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
-4. In left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings** > **Org settings**.
+4. In the left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings** > **Org settings**.
 
 	1. Under the **Services** tab, select **Microsoft 365 Groups**. Make sure the checkbox is selected for **Let group owner add people outside your organization to Microsoft 365 Groups**. Close the **Microsoft 365 Groups** by clicking **X** button.
 
 	2. Under the **Security & privacy** tab, select **Sharing**. Make sure the checkbox is selected for **Let users add new guests to the organization**.
 
 
-You have now reviewed guest access settings across different admin centers. You are ready to invite guest for collaboration. 
+You have now reviewed guest access settings across different admin centers. You are ready to invite the guest for collaboration. 
 
 
 #### Task 2 - Configure guest access in Teams
@@ -71,7 +71,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Users** > **Guest access**.
+2. In the left navigation of the Teams admin center, select **Users** > **Guest access**.
 
 3. On the **Guest access** page, check if **Allow guest access in Teams** is enabled. If not, select **On**.
 
@@ -79,14 +79,14 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 5. Scroll down and select **Save**.
 
-You have now successfully activated guest access and disallow guests to delete their sent messages for Teams in your tenant.
+You have now successfully activated guest access and disallowed guests to delete their sent messages for Teams in your tenant.
 
 #### Task 3 - Add a guest to a team
 In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_United States** you created from Lab 1. 
 
 You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
-**Note**: You will need an Outlook.com account for this exercise. If you don’t have an outlook account like, you can create a new account from [**https://outlook.com**](https://outlook.com/).
+**Note**: You will need an Outlook.com account for this exercise. If you don’t have an outlook account, you can create a new account from [**https://outlook.com**](https://outlook.com/).
 
 1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
@@ -102,7 +102,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 	1. Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Contoso in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
 
-	2. Select **Open Microsoft Teams** from the email. You will be redirected to the sign in page with permission consent request. 
+	2. Select **Open Microsoft Teams** from the email. You will be redirected to the sign-in page with a permission consent request. 
 	
 	3. Select **Accept** and sign in to Teams web client with your outlook account. 
 
@@ -114,11 +114,11 @@ You will change the default settings for inviting/creating guest users and then 
 
 	2. Select **...** of the message you just posted. Notice there's no **Delete** option. 
 
-You have successfully invited a guest to a team and validate the guest access setting from previous task. 
+You have successfully invited a guest to a team and validated the guest access setting from the previous task. 
 
 #### Task 4 - Create access reviews
 
-As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by creating an access reviews.
+As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
@@ -144,11 +144,11 @@ As a part of your system administrator role, you need to review access to resour
 
 	1. On the **Identity Governance | Access reviews** page, you will see an access review report named **Review guest access across Microsoft 365 groups**
 
-	2. Wait for a few minutes, when the **Status** of the report shows as **Active**, select on the name of the report - **Review guest access across Microsoft 365 groups**.
+	2. Wait for a few minutes, when the **Status** of the report shows as **Active**, select the name of the report - **Review guest access across Microsoft 365 groups**.
 
-	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_United States** under group name.
+	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_United States** under the group name.
 
-	4. On the **Group_Afterwork_United States | Overview** page, you can see there's one users show under **Not reviewed** category. 
+	4. On the **Group_Afterwork_United States | Overview** page, you can see there is one user shown under **Not reviewed** category. 
 
 4. Review the access review and approve the guest user. 
 
@@ -173,7 +173,7 @@ In this exercise, you will increase the security level in your organization by c
 
 #### Task 1 - Configure Safe Attachments for Microsoft Teams
 
-Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that blocks documents that contain malware.
+Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that block documents that contain malware.
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **MOD Administrator**. 
 
@@ -181,17 +181,17 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 3. On the Safe attachments page, select **Global settings**.
 
-4. In the Global settings fly out that appears, turn on the toggle under **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams**.
+4. In the Global settings flyout that appears, turn on the toggle under **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams**.
 
 5. Select **Save**.
 
 
-In this task, you have activated Safe Attachments scanning for SharePoint, OneDrive, and Microsoft Teams that blocks documents that contain malware.
+In this task, you have activated Safe Attachments scanning for SharePoint, OneDrive, and Microsoft Teams that block documents that contain malware.
 
 
 ### **Exercise 3: Implement compliance for Microsoft Teams**
 
-Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Teams compliance features to meet organizations requirements. 
+Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Team's compliance features to meet the organization's requirements. 
 
 #### Task 1 – Activate sensitivity labels for Teams 
 
@@ -203,7 +203,7 @@ You need to evaluate governance for Microsoft 365 Groups before deploying them i
 
 3. Connect to your AAD tenant.
 
-    Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+    Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
     ```powershell
     Connect-AzureAD
@@ -227,15 +227,15 @@ You need to evaluate governance for Microsoft 365 Groups before deploying them i
 	```powershell
 	Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 	```
-	**Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
+	**Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 
-8. Disconnects the current session from an Azure Active Directory tenant and close the PowerShell window.
+8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
 
     ```powershell
     Disconnect-AzureAD
     ```
 	
-You have successfully changed your tenants Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
+You have successfully changed your tenant's Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
    
 #### Task 2 - Create sensitivity labels for Teams
 
@@ -243,11 +243,11 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft 365 compliance center, select **Information protection** and select the **Labels** tab.
+2. In the left navigation of the Microsoft 365 compliance center, select **Information protection** and select the **Labels** tab.
 
 3. Select **Turn on now** next to the following warning message to activate content processing in Office online files.
 
-	*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
+	*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
 4. Update the first sensitivity label - **General**.
 
@@ -288,7 +288,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Name**: Internal
 		- **Display name**: Internal
 		- **Description for users**: Internal information with sharing protection
-		- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
+		- **Description for admins**: Internal information with moderate encryption, marking, and sharing restriction settings activated
 
 	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; Sites** 
 
@@ -338,7 +338,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Name**: Leave unchanged
 		- **Display name**: Confidential
 		- **Description for users**: Leave unchanged
-		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
+		- **Description for admins**: Confidential information with all restrictive encryption, marking, and sharing settings activated
 
 	2. In the **Scope** section, select **Files &amp; emails** and **Groups &amp; Sites** 
 
@@ -380,7 +380,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	11. Click **Save label** > **Done**.
 
-7. Publish sensitivity labels, after performing each steps click **Next** (if required).
+7. Publish sensitivity labels, after performing each step click **Next** (if required).
 
 	1. On the **Information protection** page, select **label policies** tab.
 
@@ -429,7 +429,7 @@ You have successfully applied a sensitivity label to an existing team. The confi
 
 #### Task 4 – Test external access with sensitivity labels (optional)
 
-In this task you will try to add a guest user to an internal team. 
+In this task, you will try to add a guest user to an internal team. 
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -447,11 +447,11 @@ You have successfully tested the sensitivity labels setting to prevent guest acc
 
 #### Task 5 - Create a new retention policy to retain content
 
-Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after last modification.
+Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft 365 compliance center, select **Policies**.
+2. In the left navigation of the Microsoft 365 compliance center, select **Policies**.
 
 3. Select **Retention** under the **Data** section. 
 
@@ -490,11 +490,11 @@ In this task, you have successfully created a new retention policy named **Sales
 
 #### Task 6 - Create a new retention policy to delete content
 
-After configuring a retain policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purpose, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
+After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft 365 compliance center, select **Policies**.
+2. In the left navigation of the Microsoft 365 compliance center, select **Policies**.
 
 3. Select **Retention** under the **Data** section. 
 
@@ -540,13 +540,13 @@ You have successfully created a second retention policy for testing the deletion
 
 #### Task 7 – Test the retention policy for deleting content (optional)
 
-In this task you will test the retention policy for deleting content from the **Teams Rollout** team after a day. Before you can see the retention policy taking any effect, you must create some conversation content in the team.
+In this task, you will test the retention policy for deleting content from the **Teams Rollout** team after a day. Before you can see the retention policy taking any effect, you must create some conversation content in the team.
 
-**Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policies effect.
+**Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policy's effect.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber**.
+2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber**.
 
 3. Select the **Teams Rollout** team and the **General** channel.
 
@@ -564,11 +564,11 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 #### Task 8 - Create a DLP policy for GDPR (PII) content from a template
 
-According to your organization compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template "General Data Protection Regulation (GDPR)," The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
+According to your organization's compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template "General Data Protection Regulation (GDPR)," The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft 365 compliance center, select **Data loss prevention**.
+2. In the left navigation of the Microsoft 365 compliance center, select **Data loss prevention**.
 
 3. On the **Data loss prevention** page, select the **Policies** tab, then select **+ Create policy**.
 
@@ -665,7 +665,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 		- Leave the high **High confidence** and **Instance count (1)** unchanged.
 	3. Below **Action**, 
 		- Select **+ Add an action** and **Restrict access or encrypt content in Microsoft 365 locations**.
-		- Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block everyone. Only the content owner, the last modifier and the site admin will continue to have access.** 
+		- Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block, everyone. Only the content owner, the last modifier, and the site admin will continue to have access.** 
 
 	4. Below **User notification**, 
 		- Select the slider to **On** and select **Customize the policy tip text**.
@@ -690,7 +690,7 @@ You have successfully created a new custom DLP policy for protecting credit card
 
 To make sure your configured DLP policies are working as expected, you need to perform some testing with your pilot users.
 
-**Note:** It can take up to 24 hours till new DLP policies take effect. If the step doesn't work, continue with the lab, and perform task at a later point of working through this lab.
+**Note:** It can take up to 24 hours till new DLP policies take effect. If the step doesn't work, continue with the lab, and perform a task at a later point of working through this lab.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 

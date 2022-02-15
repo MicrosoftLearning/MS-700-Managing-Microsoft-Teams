@@ -143,11 +143,11 @@ In this task, you will create via the Teams PowerShell a new team **"CA-Office"*
 
 13. Close the PowerShell window.
 
-14. Open the Teams desktop client from the taskbar. On the left side pane with all teams Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+14. Open the Teams desktop client from the taskbar. On the left side pane with all teams, Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
 
 15. Close all browser windows and the Teams desktop client.
 
-You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
+You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in the context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
 #### Task 3 - Create a team by using Graph API
 
@@ -323,7 +323,7 @@ You have successfully created two teams via Graph API. Your test of the Graph fu
 
 #### Task 4 – Archive and unarchive a team
 
-After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
+After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task, you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
 
 1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -397,7 +397,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 	3. Select the three dots (…) right from the team name and select **Manage team**. You can see the owner and all members again in the **Members** tab.
 
-**Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point of this lab.
+**Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point in this lab.
 
 You have successfully deleted a team via the Teams web client and restored it with the Azure Portal.
 
@@ -452,15 +452,15 @@ You have successfully converted a Microsoft 365 group from static (assigned) to 
 
 ### **Exercise 2: Configure channel and message policies**
 
-In this exercise you will configure policies to manage the creation of new private channels and the available tools for users in chat.
+In this exercise, you will configure policies to manage the creation of new private channels and the available tools for users in chat.
 
-#### Task 1 - Create messaging policy for giphy, memes and stickers
+#### Task 1 - Create a messaging policy for giphy, memes, and stickers
 
 The company wants to restrict the use of graphic elements in Teams communication. As a Teams service administrator, you will create a new message policy that prohibits pilot users from using GIF files, memes, and stickers in the Teams chat and channel conversation.
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Messaging policies**.
+2. In the left navigation of the Teams admin center, select **Messaging policies**.
 
 3. Select **+ Add** from the top pane.
 
@@ -515,7 +515,7 @@ As Teams administrator of Contoso, you will create a private channel named **con
 
 	2. Select **Teams**, you should see the new private channel **Confidential sales** with a small padlock icon.
 
-In this task you learned how to create a private channel in the Microsoft Teams admin center and how to configure and check the access.
+In this task, you learned how to create a private channel in the Microsoft Teams admin center and how to configure and check the access.
 
 ### **Exercise 3: Manage app settings**
 
@@ -545,7 +545,7 @@ In the past, users stored data at various locations, including third-party stora
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
-In this task you have learned how to enable or disable third-party storage providers for your whole tenant.
+In this task, you have learned how to enable or disable third-party storage providers for your whole tenant.
 
 #### Task 2 - Edit default org-wide app policy
 
@@ -553,7 +553,7 @@ In the pilot project, the company wants to add **Tasks by Planner and To Do** as
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Teams apps** > **Setup policies**.
+2. In the left navigation of the Teams admin center, select **Teams apps** > **Setup policies**.
 
 4. On the **App setup policies** page, select **Global (Org-wide default)** to open the org-wide app policy.
 
@@ -565,15 +565,15 @@ In the pilot project, the company wants to add **Tasks by Planner and To Do** as
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
-In this task you learned how to pinned default apps from the Microsoft Teams admin center.
+In this task, you learned how to pin default apps from the Microsoft Teams admin center.
 
 #### Task 3 - Edit default app permission policy
 
-In this task you will edit the default app permission policy and block the Google Analytics app for all tenants
+In this task, you will edit the default app permission policy and block the Google Analytics app for all tenants
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Teams apps** > **Manage apps**.
+2. In the left navigation of the Teams admin center, select **Teams apps** > **Manage apps**.
 
 3. On the **Manage apps** page, type **Google** in the search box.
 
@@ -585,15 +585,15 @@ In this task you will edit the default app permission policy and block the Googl
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
-In this task you have learned how to block the Google Analytics app for your tenant.
+In this task, you have learned how to block the Google Analytics app for your tenant.
 
 #### Task 4 – Manage policy packages
 
-To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task you need to review the default policy packages and change a default policy package for first line workers.
+To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Policy packages**.
+2. In the left navigation of the Teams admin center, select **Policy packages**.
 
 3. On the **Policy packages** page, select **Frontline worker** policy package.
 
@@ -629,7 +629,7 @@ In this task, you will create an issue report system by using Power Automate in 
 
 	1. Connect to the **Client 1 VM** and browse the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**. 
 
-	2. Select **Join or create a team** from the lower left corner. 
+	2. Select **Join or create a team** from the lower-left corner. 
 
 	3. Select **Create team** >**From scratch** > **Org-wide**. 
 	
@@ -644,7 +644,7 @@ In this task, you will create an issue report system by using Power Automate in 
 	3. Select on **Untitled form** and enter the following information:
 	
 		* Input your title here: **Submit a ticket**.
-		* Enter a description: **Please provide the information. Our member from IT-Department will contact you as soon as possible.**
+		* Enter a description: **Please provide the information. Our member from IT Department will contact you as soon as possible.**
 
 	4. Select **+ Add new** > **Text**.
 	5. In the question textbox, enter **What is the issue?**
@@ -653,13 +653,13 @@ In this task, you will create an issue report system by using Power Automate in 
 
 	1. Browse to the Teams web client (https://teams.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. In left navigation of the Teams client, select **Apps** and search for **Power Automate**.
+	2. In the left navigation of the Teams client, select **Apps** and search for **Power Automate**.
 
 	3. Select **Power Automate** app, and select **Add**
 
 4. Create a flow
 
-	1. In left navigation of the Teams client, select **Power Automate**.
+	1. In the left navigation of the Teams client, select **Power Automate**.
 
 	2. Select **Create** tab from the top menu. 
 
@@ -695,7 +695,7 @@ In this task, you will create an issue report system by using Power Automate in 
 	3. Select **Submit**.
 	4. Go to the **General** channel of the **IT-Department** team. You will see a post via Power Automate. 
 
-In this task, you have successfully created a flow from Power Automate in Teams, which notify the members in IT department when users submit a request ticket. 
+In this task, you have successfully created a flow from Power Automate in Teams, which notify the members of the IT department when users submit a request ticket. 
 
 ### **Exercise 4: Test configured policy settings**
 
@@ -703,7 +703,7 @@ In this exercise, you will test the configured policy settings on a client with 
 
 #### Task 1 – Test the messaging policy and private channel access
 
-In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between affected user (Lynne Robbins) vs regular user(Joni Sherman).
+In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user(Joni Sherman).
 
 1. Connect to the **Client 2 VM** and browse the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 

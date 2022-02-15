@@ -17,7 +17,7 @@ The Microsoft World-Wide Learning team will update this training course as soon 
 
 ## **Lab Scenario**
 
-In the labs, of this course, you will assume the role of **Joni Sherman**, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. You have implemented Microsoft 365 in a virtualized lab environment already and were commissioned to conduct a pilot project to test the implementation of Microsoft Teams against Contoso Ltd. business requirements.
+In the labs, of this course, you will assume the role of **Joni Sherman**, a Teams Administrator for Contoso Ltd., and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. You have implemented Microsoft 365 in a virtualized lab environment already and were commissioned to conduct a pilot project to test the implementation of Microsoft Teams against Contoso Ltd. business requirements.
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
@@ -47,7 +47,7 @@ After you complete this lab, you will be able to:
 
 - Create Microsoft 365 Groups from the M365 admin center
 
-- Create new teams using the Teams Desktop client
+- Create new teams using the Teams desktop client
 
 - Create new teams using the Teams web client
 
@@ -67,7 +67,7 @@ After you complete this lab, you will be able to:
 
 ### **Before you start**
 
-The labs in this course have been prepared for a Microsoft Teams deployment at Contoso Ltd. Corporation. Contoso is running a Microsoft 365 cloud only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
+The labs in this course have been prepared for a Microsoft Teams deployment at Contoso Ltd. Corporation. Contoso is running a Microsoft 365 cloud-only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
 
 #### **1. Sign in to the lab virtual machines**
 
@@ -77,7 +77,7 @@ The labs in this course will use two virtual machines:
 
 - Client 2 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
 
-**Note:** Lab virtual machine sign in instructions will be provided to you by your instructor.
+**Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
 
 **Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1\admin** or **CLIENT2\admin**, depending on which machine you are on.
 
@@ -89,7 +89,7 @@ Once you signed in to the VM, observe the start menu, and verify following appli
 
 #### **3. Review Microsoft 365 tenant**
 
-Beside two VMs, you will also be provided with a Microsoft 365 tenant with following highlights:
+Besides two VMs, you will also be provided with a Microsoft 365 tenant with the following highlights:
 
 - Office 365 E5 with Enterprise Mobility + Security E5.
 
@@ -97,13 +97,13 @@ Beside two VMs, you will also be provided with a Microsoft 365 tenant with follo
 
 - One Global Administrator (MOD Administrator) and 9 standard users have been pre-created.
 
-  **Note:** Microsoft 365 sign in instructions will be provided to you by your instructor.
+  **Note:** Microsoft 365 sign-in instructions will be provided to you by your instructor.
 
 - The username of the Global Administrator (MOD Administrator) is **admin@&lt;YourTenant&gt;.onmicrosoft.com**.
 
 - **&lt;YourTenant&gt;.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (&lt;YourTenant&gt;) is the unique tenant ID provided by the lab hosting provider. The &lt;YourTenant&gt; portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
 
-  **IMPORTANT:** This is critical because throughout this lab, you will be asked to enter the **&lt;YourTenant&gt;.onmicrosoft.com** domain name when signing into apps with a given username (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com). When doing so, you must enter the unique tenant suffix ID that is assigned to your tenant ID in place of the **&lt;YourTenant&gt;**.
+  **IMPORTANT:** This is critical because, throughout this lab, you will be asked to enter the **&lt;YourTenant&gt;.onmicrosoft.com** domain name when signing into apps with a given username (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com). When doing so, you must enter the unique tenant suffix ID that is assigned to your tenant ID in place of the **&lt;YourTenant&gt;**.
 
   For example, if your Tenant Email is **admin@contosolab.onmicrosoft.com**, the unique tenant suffix ID (&lt;YourTenant&gt;) is **contosolab**. When signing in as Joni when entering this domain, you would replace &lt;YourTenant&gt; with contosolab (for example, JoniS@contosolab.onmicrosoft.com).
 
@@ -111,17 +111,17 @@ Beside two VMs, you will also be provided with a Microsoft 365 tenant with follo
 
 - **Use the new Microsoft 365 admin center** 
 
-  Throughout the lab exercises for this course, if you navigate to the Microsoft 365 admin center, make sure the slider in the upper right corner is set to **The new admin center**. If you can read **Try the new admin center**, select the slider and activate it.  
+  Throughout the lab exercises for this course, if you navigate to the Microsoft 365 admin center, make sure the slider in the upper right corner is set to **The new admin center**. If you can read **Try the new admin center**, select the slider, and activate it.  
 ‎‎  
 ‎‎  **IMPORTANT:** The instructions that are provided in the lab exercise for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
 
 ### **Exercise 1: Prepare Teams admin roles and licenses**
 
-In the first exercise you will assign required administrative roles to users and check license assignments for the Teams license. To perform these tasks, you will use default tenant global admin.
+In the first exercise, you will assign required administrative roles to users and check license assignments for the Teams license. To perform these tasks, you will use default tenant global admin.
 
 #### **Task 1 - Assign Teams admin roles to users**
 
-In this task you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in context of Joni Sherman’s account.
+In this task, you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in the context of Joni Sherman’s account.
 
 1. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**. 
 
@@ -133,13 +133,13 @@ In this task you will use the default global admin to sign in to the Microsoft 3
 
     1. Select the navigation menu in the upper-left and select **Users** and **Active users** from below it.
 
-    2. In the Active users list, search and select **Joni Sherman**, to open the right-side settings pane.
+    2. In the Active user's list, search and select **Joni Sherman**, to open the right-side settings pane.
 
     3. In the settings below the Account tab, scroll to **Roles** and select **Manage roles** below.
 
     4. On the **Manage admin roles** pane, select **Admin center access** and scroll down to expand **Show all by category** to reveal all available roles. 
     
-    5. Select **Teams Administrator** checkbox then select **Save changes**. You will see the message **Admin roles updated** on the upper part of the pane to confirm the update. Close the **Manage admin roles** pane by clicking the X button on the top right-side of the pane. 
+    5. Select **Teams Administrator** checkbox then select **Save changes**. You will see the message **Admin roles updated** on the upper part of the pane to confirm the update. Close the **Manage admin roles** pane by clicking the X button on the top right side of the pane. 
 
 3. To assign **Teams device admin** role to **Patti Fernandez**
 
@@ -159,7 +159,7 @@ Proceed to the next task.
 
 #### **Task 2 – Check license assignment of your users**
 
-In this task, you will check the license assignment of all users participating in the pilot. At the end of the task you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
+In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
@@ -183,14 +183,14 @@ In this task, you will check the license assignment of all users participating i
     
 4. You can repeat the same steps to check other users' licenses. Do not change their locations. 
 
-You have successfully validated that all users participating in the pilot own Teams licenses and are ready to start working with Teams. You have also changed the location of Alex Wilber to Canada, as a preparation for a later task. Continue with the next task. 
+You have successfully validated that all Users participating in the pilot own Teams licenses and are ready to start working with Teams. You have also changed the location of Alex Wilber to Canada, as a preparation for a later task. Continue with the next task. 
 
 You have finished the first exercise, and you can continue with the next one.
 
 
 ### **Exercise 2: Explore Teams management tools**
 
-In this exercise, you will explore Teams admin center and install the Teams PowerShell module, required to manage teams, policy packages, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center and the PowerShell. You can create scripts for automation and even access several settings not available in the GUI.
+In this exercise, you will explore the Teams admin center and install the Teams PowerShell module, required to manage teams, policy packages, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center and the PowerShell. You can create scripts for automation and even access several settings not available in the GUI.
 
 To perform these tasks, you will use Joni Sherman’s account (JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com).
 
@@ -239,9 +239,9 @@ In this task, you will install and connect with the Teams PowerShell module to y
         ```powershell
         Connect-MicrosoftTeams
         ```
-    2. In the Sign in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+    2. In the Sign-in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-        When the sign in was successful, several information about the signed in user and the tenant are displayed. 
+        When the sign-in was successful, several information about the signed-in user and the tenant are displayed. 
         
 5. Explore **Microsoft Teams PowerShell module**
 
@@ -278,7 +278,7 @@ You have successfully used the Microsoft Teams PowerShell module to connect to T
 
 ### **Exercise 3: Create groups and teams**
 
-In this exercise, you will create a Microsoft 365 group from the Microsoft 365 admin center and creating a team from the Teams desktop client and the web client.
+In this exercise, you will create a Microsoft 365 group from the Microsoft 365 admin center and create a team from the Teams desktop client and the web client.
 
 #### **Task 1 - Create a Microsoft 365 Group**
 
@@ -332,17 +332,17 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Select the **Teams** icon on the taskbar to start the Teams desktop client.
+2. Select the **Teams** icon on the taskbar to start the Teams, desktop client.
 
-3. When prompted to **Enter your work, school or Microsoft account**. Sign in as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com).
+3. When prompted to **Enter your work, school, or Microsoft account**. Sign in as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com).
 
-    **Note**: You might need to download and install the latest Teams desktop client. Select **Update Teams** and follow the installation guideline - Select  **Download for desktop** > **Download Teams**
+    **Note**: You might need to download and install the latest Teams, desktop client. Select **Update Teams** and follow the installation guideline - Select  **Download for desktop** > **Download Teams**
     **Run**.
 
 
 4. In the Teams desktop client, select **Teams** from the left menu. 
 
-5. Select **Join or create a team** from the lower left corner. 
+5. Select **Join or create a team** from the lower-left corner. 
 
 5. Select **Create team** > **From scratch** > **Public**. Enter the team name **Teams Rollout** and select **Create**.
 
@@ -356,7 +356,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 8. Select **Close**.
 
-You have successfully created a new team from the Teams desktop client, added the project team members, and you have made Joni Sherman a team owner. 
+You have successfully created a new team from the Teams desktop client added the project team members, and you have made Joni Sherman a team owner. 
 
 #### **Task 3 - Create a new team by using the web client**
 
@@ -366,9 +366,9 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. Select **Use the Web app instead** if prompted to download Teams Desktop app. At the 'Stay signed in to all your apps' window, select **No, sign in to this app only**. 
+3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the 'Stay signed in to all your apps' window, select **No, sign in to this app only**. 
 
-4. Select **Join or create a team** from the lower left corner. 
+4. Select **Join or create a team** from the lower-left corner. 
 
 5. Select **Create team** >**From scratch** > **Private**. Enter the team name **Sales** and select **Create**.
 
@@ -382,11 +382,11 @@ The newly created team is displayed in the list of your teams. You have successf
 
 ### **Exercise 4: Implement lifecycle management and governance for Microsoft Teams**
 
-Your organization has started the planning process for Microsoft 365 services adoption. You are assigned as a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating **Microsoft 365 groups expiration policies**, configuring **Microsoft 365 Group creation policy permissions**, configuring and test **Microsoft 365 Groups naming policies**.
+Your organization has started the planning process for Microsoft 365 services adoption. You are assigned a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating **Microsoft 365 groups expiration policies**, configuring **Microsoft 365 Group creation policy permissions**, configuring and testing **Microsoft 365 Groups naming policies**.
 
 #### Task 1 - Create and assign an expiration policy
 
-Based on the organization requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the expiration feature for Teams, you will configure a group expiration policy that will expire the **Teams Rollout** group after 90 days.
+Based on the organization's requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the expiration feature for Teams, you will configure a group expiration policy that will expire the **Teams Rollout** group after 90 days.
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
@@ -414,7 +414,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 #### Task 2 - Configure a group creation policy
 
-You are an administrator for your Teams organization. You need to limit which users are able to create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
+You are an administrator for your Team's organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
 1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -453,7 +453,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
     2. Install **Azure AD Preview module**
 
-        In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of untrusted repository.
+        In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
         ```powershell
         Install-Module -Name AzureADPreview
@@ -461,7 +461,7 @@ You are an administrator for your Teams organization. You need to limit which us
 
     3. Connect to your AAD tenant.
 
-        Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+        Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
         ```powershell
         Connect-AzureAD
@@ -478,12 +478,12 @@ You are an administrator for your Teams organization. You need to limit which us
         if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
         ```
 
-    6. Run following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
+    6. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
 
         ```powershell
         $Setting["EnableGroupCreation"] = "False"
         ```
-    7. Run following cmdlet to add the just created security group **GroupCreators** as permitted group to create groups, by their ObjectID:
+    7. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
 
         ```powershell
         $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
@@ -499,7 +499,7 @@ You are an administrator for your Teams organization. You need to limit which us
         ```powershell
         New-AzureADDirectorySetting -DirectorySetting $Setting
         ```
-        **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object at the first time.
+        **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 
 4. Test the newly configured settings.
 
@@ -531,7 +531,7 @@ You are an administrator for your Teams organization. You need to limit which us
         ```powershell
         Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
         ```
-6. Disconnects the current session from an Azure Active Directory tenant and close the PowerShell window.
+6. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
 
     ```powershell
     Disconnect-AzureAD
@@ -542,7 +542,7 @@ In this task, you have successfully created a new security group and configured 
 
 #### Task 3 - Configure a new naming policy
 
-As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 group or team needs to comply with the organization’s regulations on naming objects. Each group name should start with letters **Group** and end with the **Country** attribute of the owners' location. Furthermore, there is an internal regulation that forbids using following specific keywords in Teams names: **CEO**, **Payroll**, and **HR**.
+As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 group or team needs to comply with the organization’s regulations on naming objects. Each group name should start with the letters **Group** and end with the **Country** attribute of the owners' location. Furthermore, there is an internal regulation that forbids using the following specific keywords in Teams names: **CEO**, **Payroll**, and **HR**.
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
@@ -556,7 +556,7 @@ As part of your Teams planning project, you will configure the naming policy whe
     
     2. Navigate and right-select the downloaded file **BlockedWords.csv** and select **Open with** > **Notepad**.
 
-    3. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, and save the file. 
+    3. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, and saving the file. 
     
     4. Back to the **Groups | Naming policy** page, upload the saved .csv file under **3. Upload your .csv file** by selecting **Select a file** box or the folder icon.
 
@@ -572,7 +572,7 @@ As part of your Teams planning project, you will configure the naming policy whe
         2. Select the dropdown menu of **Select the type of prefix** and choose **String**. 
         3. Enter **Group_** to the text box.
 
-    3. Add **Country or region** string as suffix 
+    3. Add **Country or region** string as the suffix 
         
         1. Select the checkbox **Add suffix**. 
         2. Select the dropdown menu of **Select the type of suffix**, choose **String**, and enter **_** to the text box. 
@@ -592,7 +592,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 2. In the Teams desktop client, select **Teams** from the left menu. 
 
-3. Select **Join or create a team** from the lower left corner. 
+3. Select **Join or create a team** from the lower-left corner. 
 
 2. Select **Create team** > **From scratch** > **Public**.
 
@@ -606,7 +606,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 6. Review the name of the newly created team.
 
-You have successfully tested naming policy for managing the prefix and suffixes of user created teams.
+You have successfully tested the naming policy for managing the prefix and suffixes of user-created teams.
 
 #### Task 5 - Delete the naming policy
 

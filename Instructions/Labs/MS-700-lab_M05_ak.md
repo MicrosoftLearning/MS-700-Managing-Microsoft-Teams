@@ -11,9 +11,9 @@ lab:
 
 ## **Lab Scenario**
 
-In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide best user experience during collaboration and communication. 
+In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd., and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide the best user experience during collaboration and communication. 
 
-Furthermore, your organization is planning to purchase and deploy multiple Teams devices. You will need to evaluate different devices profiles and configure profile settings for the devices. At the end, you will need to evaluate the process of creating Microsoft Teams room, where multiple Teams’ rooms will be purchased in your organization.
+Furthermore, your organization is planning to purchase and deploy multiple Team devices. You will need to evaluate different devices profiles and configure profile settings for the devices. In the end, you will need to evaluate the process of creating Microsoft Teams room, where multiple Teams’ rooms will be purchased in your organization.
 
 ## **Objectives**
 
@@ -39,7 +39,7 @@ After you complete this lab, you will be able to:
 
 ### **Exercise 1: Manage Live event and meetings experiences**
 
-Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. The Teams admin will configure meeting policies and schedule an initial webinar for testing purpose. 
+Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. The Teams admin will configure meeting policies and schedule an initial webinar for testing purposes. 
 
 #### Task 1 - Edit the default meeting policy and restrict all recording features for meetings
 
@@ -59,7 +59,7 @@ You have successfully modified the Global (Org-wide default) meeting policy and 
 
 #### Task 2 – Test the meeting policy for restricting recording
 
-In this task you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
+In this task, you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
 1. Connect to the **Client 2 VM**  and browse to the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -69,7 +69,7 @@ In this task you need to sign in to the second client and create a meeting with 
 
 4. Select **Join now** to start the meeting.
 
-5. Close **Invite people to join you window** by selecting **X** on the upper right corner.
+5. Close **Invite people to join your window** by selecting **X** on the upper right corner.
 
 6. In the meeting window, select … for **More actions**.
 
@@ -92,11 +92,11 @@ You have successfully modified the meeting settings for all users in your tenant
 
 #### Task 4 - Create a new live event policy and restrict recording capabilities
 
-Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to management users. Only the organizer of a live event should be able to record his own meetings.
+Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to manage users. Only the organizer of a live event should be able to record his meetings.
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
+2. In the left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
 
 3. Select **+ Add** from the top menu.
 
@@ -148,7 +148,7 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 	
 	 **Start/End**: Select a time close to your current time
 	 
-	4. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and close the page.
+	4. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and closing the page.
 	5. Go back to the **Teams.Microsoft.com/scheduling** window and click **Send** button to activate the Webinar registration.
 	6. Click **Teams** on the left navigation pane, Select **General** under the **IT-Support**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
 		
@@ -168,11 +168,11 @@ You have successfully created a webinar with a custom registration form.
 
 As a Teams administrator, you will create configuration profiles to manage settings and features for Teams devices in your organization. You can create or upload configuration profiles to include settings and features you want to enable or disable and then assign a profile to a device or groups of devices.
 
-Your organization could purchase Microsoft Teams Rooms that provide complete meeting experience with HD video, audio, and content sharing in conference rooms. You will need to prepare the deployment prerequisites by define Microsoft Teams Rooms service account in Office 365.
+Your organization could purchase Microsoft Teams Rooms that provide a complete meeting experience with HD video, audio, and content sharing in conference rooms. You will need to prepare the deployment prerequisites by defining Microsoft Teams Rooms service account in Office 365.
 
 #### Task 1 - Create configuration profiles
 
-During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
+During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create a configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez**  (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
 

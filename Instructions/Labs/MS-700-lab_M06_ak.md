@@ -11,7 +11,7 @@ lab:
 
 ## **Lab Scenario**
 
-In the labs of this course you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. According to Contoso business requirements, Microsoft Teams will be used as an organization’s solution for conferencing and telephony. Teams admins will need to replace Contoso legacy PBX solution and configure voice features that will provide users with Teams calling capabilities.
+In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd., and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. According to Contoso business requirements, Microsoft Teams will be used as an organization’s solution for conferencing and telephony. Teams admins will need to replace Contoso legacy PBX solution and configure voice features that will provide users with Teams calling capabilities.
 
 ## **Objectives**
 
@@ -40,7 +40,7 @@ After you complete this lab, you will be able to:
 
 ### **Exercise 1: Set up a Calling Plan (Optional)**
 
-In this exercise you will set up one of your users with a Calling Plan Trial. You will need to start the trial, order a phone number from Microsoft as your provider and enable your user to use this phone number when making outgoing calls.
+In this exercise, you will set up one of your users with a Calling Plan Trial. You will need to start the trial, order a phone number from Microsoft as your provider and enable your user to use this phone number when making outgoing calls.
 
  
 
@@ -51,7 +51,7 @@ In this exercise you will set up one of your users with a Calling Plan Trial. Yo
  
 #### Task 1 - Add a new emergency address
 
-In this task you will add a new emergency address "One Microsoft Way, Redmond, WA 98052, USA" for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
+In this task, you will add a new emergency address "One Microsoft Way, Redmond, WA 98052, USA" for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
 
 1. Connect to the **Client 1 VM** and browse to the **Teams admin center** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -77,7 +77,7 @@ You have successfully created an emergency address that can be used for phone nu
 
 #### Task 2 – Activate a trial Calling Plan 
 
-In this task you will activate the Calling Plan Add-on Trial for your tenant so you can assign the calling plan to your users.
+In this task, you will activate the Calling Plan Add-on Trial for your tenant so you can assign the calling plan to your users.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -101,7 +101,7 @@ You now have 25 Calling Plan licenses to assign to your users to test Domestic C
 
 #### Task 3 – Assign a Calling Plan license to a user
 
-In this task you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
+In this task, you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -123,7 +123,7 @@ You have assigned the Calling Plan license to a user. With this license assigned
 
 #### Task 4 – Order a phone number for your user
 
-In this task you will order a phone number to a user with an assigned Calling Plan license.
+In this task, you will order a phone number for a user with an assigned Calling Plan license.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -161,7 +161,7 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 		2. Enter an area code in United States.
 		3. Select **Next**.
 
-	**Note**: If you received the following message, please try other area codes or creating another location by selecting **Add a location** which is next to the **Search by city name**. It will navigate to the **New emergency address** pane, enter the new name for the emergency address, then in the **Country or region** select **United States** and enter the new address manually in the **Address** field by enabling the slider **Input address manually** and click **Save**. It takes back to the **Get Phone numbers** page and continue the city search with the newly created emergency address to acquire the phone number. 
+	**Note**: If you received the following message, please try other area codes or create another location by selecting **Add a location** which is next to the **Search by city name**. It will navigate to the **New emergency address** pane, enter the new name for the emergency address, then in the **Country or region** select **United States** and enter the new address manually in the **Address** field by enabling the slider **Input address manually** and click **Save**. It takes back to the **Get Phone numbers** page and continues the city search with the newly created emergency address to acquire the phone number. 
 
 	*We can't find any phone numbers for the address you selected.*
 
@@ -169,11 +169,11 @@ In this task you will order a phone number to a user with an assigned Calling Pl
 
 **Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab. 
 
-You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call queues.
+You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call Queues.
 
 #### Task 5 – Assign a phone number to your user
 
-In this Task you will assign an existing phone number to a user.
+In this Task, you will assign an existing phone number to a user.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -197,7 +197,7 @@ In this Task you will assign an existing phone number to a user.
 
 ### **Exercise 2: Manage phone system for Microsoft Teams**
 
-Contoso organization is using legacy PBX system. With introduction of Microsoft Teams, Contoso will migrate their legacy telephony system to Microsoft Phone System. Teams admins are responsible for evaluating and testing Microsoft Teams voice functionalities.
+Contoso organization is using the legacy PBX system. With the introduction of Microsoft Teams, Contoso will migrate their legacy telephony system to Microsoft Phone System. Teams admins are responsible for evaluating and testing Microsoft Teams voice functionalities.
 
 
 #### Task 1 - Create a calling policy
@@ -308,11 +308,11 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
 
-**Note:** Because this call queue shall have a custom greeting, you need to upload some wav file for demonstration purposes. In real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
+**Note:** Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
 
 #### Task 3 - Create an auto attendant
 
-As Teams admin, you were tasked to create an auto attendant with a transcribed welcome message that will respond to customers outside of office hours. As some of your employees work in different time zones, the auto attendant informs a caller that the subscriber is currently on vacation and to call another person in the organization. Furthermore, the auto attendant informs callers about business hours.
+As Teams admin, you were tasked to create an auto attendant with a transcribed welcome message that will respond to customers outside of office hours. As some of your employees work in different time zones, the auto-attendant informs a caller that the subscriber is currently on vacation and to call another person in the organization. Furthermore, the auto-attendant informs callers about business hours.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -334,7 +334,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 7. On the left navigation pane, select **Voice** and **Auto attendants** below.
 
-8. Select **+ Add** from the top pane, to create a new auto attendant.
+8. Select **+ Add** from the top pane, to create a new auto-attendant.
 
 9. Enter the following information:
 
@@ -354,7 +354,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 11. On the **Call flow** page, configure the following:
 
-	- First play a greeting message: Select **Add a greeting message**
+	- First, play a greeting message: Select **Add a greeting message**
 
 	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
 
@@ -374,7 +374,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 	- Leave **Saturday** and **Sunday** blank.
 
-	- First play a greeting message: **Add a greeting message**
+	- First, play a greeting message: **Add a greeting message**
 
 	- Type in: **Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.**
 
