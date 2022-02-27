@@ -619,7 +619,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
 
-#### Task 5 - Built a flow using Power Automate in Teams
+#### Task 5 - Build a flow using Power Automate in Teams
 
 In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from the **IT Support** org-wide team, the flow will send a message to notify members in the **IT-Department** team. 
 
