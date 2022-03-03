@@ -74,6 +74,8 @@ In this task, you need to sign in to the second client and create a meeting with
 6. In the meeting window, select … for **More actions**.
 
 7. Notice that you can't select **Start recording**.
+
+8. End the meeting.
  
 
 #### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
@@ -130,7 +132,7 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 
 1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. Select the dropdown menu **New meeting** and select **Webinar**. Scheduling page will open **Teams.Microsoft.com/Scheduling**.
+3. In the Teams Calendar, select the dropdown menu **New meeting** and select **Webinar**. Scheduling page will open **Teams.Microsoft.com/Scheduling**.
 
 4. Create a new **webinar**:
 
@@ -146,11 +148,12 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 
 		*What is your question about the new reporting system?*
 	
-	 **Start/End**: Select a time close to your current time
+	4. **Start/End**: Select a time close to your current time
 	 
-	4. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and closing the page.
-	5. Go back to the **Teams.Microsoft.com/scheduling** window and click **Send** button to activate the Webinar registration.
-	6. Click **Teams** on the left navigation pane, Select **General** under the **IT-Support**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
+	5. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and closing the page.
+	6. Go back to the **Teams.Microsoft.com/scheduling** window and click **Send** button to activate the Webinar registration.
+	7. Click **Teams** on the left navigation pane, Select **General** under the **IT-Support**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
+	8. Sign out and close all browser windows.
 		
 6. Test the meeting registration. 
 
@@ -158,9 +161,11 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 
 	2. Go to the **General** channel of the **IT Support** team and select the registration link that you posted.
 
-	3. Fill out the registration form and select **Register now**.
+	3. Fill out the registration form using <Your outlook account> and select **Register now**.
 
 	4. Go to **Outlook Web Portal** (https://outlook.live.com/owa/), and check the email with subject **You're registered for IT Office Hours**
+	
+	5. Sign out and close all browser windows.
 
 You have successfully created a webinar with a custom registration form.
 
@@ -222,6 +227,8 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 8. Once you complete with the configuration profile settings, select **Save**.
 
+9. Sign out and close all browser windows.
+
 In this task, you have successfully created a configuration profile that can be applied to Microsoft Teams devices.
 
 #### Task 2 - Create a Microsoft Teams Room
@@ -269,7 +276,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
 
-5. Close all open windows.
+5. Sign out and close all open windows.
 
 You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
 
