@@ -53,7 +53,7 @@ In this exercise, you will set up one of your users with a Calling Plan Trial. Y
 
 In this task, you will add a new emergency address "One Microsoft Way, Redmond, WA 98052, USA" for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
 
-1. Connect to the **Client 1 VM** and browse to the **Teams admin center** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. On the left navigation pane select **Locations** and below select **Emergency addresses**.
 
@@ -72,6 +72,8 @@ In this task, you will add a new emergency address "One Microsoft Way, Redmond, 
 5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Close** the page and continue to the next task. 
 
 6. Select **Save**.
+
+7. Sign out and close the browser.
 
 You have successfully created an emergency address that can be used for phone numbers.
 
@@ -117,7 +119,7 @@ In this task, you will assign the calling plan license to a user to allow them t
 
 7. Under **Licenses** select **Microsoft 365 Domestic Calling Plan** by setting the checkmark in front of it.
 
-8. Select **Save Changes** to assign the license and close all open windows.
+8. Select **Save Changes** to assign the license and then sign out and close all open windows.
 
 You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
 
@@ -145,15 +147,16 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 10. For the Operator, pick Microsoft 
 
-11. For **Quantity**  select 1.
+11. For **Quantity**  type 1.
 
 12. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
 
 	* Search by city name
 		
 		1. Select **Search by city name**. 
-		2. Search **Redmond** and select **Contoso Emergency Address**, which is the location you just created. 
-		3. Select **Next**.
+		2. Search **Redmond** and select **Contoso Emergency Address**, which is the location you just created.
+		3. Select Area code **425**. 
+		4. Select **Next**.
 
 	* Search by area code
 
@@ -187,7 +190,7 @@ In this Task, you will assign an existing phone number to a user.
 
 6. Under **Emergency Location** select **Search by the location description**.
 
-7. Search for the emergency location you created earlier.
+7. Type **Contoso** to search for the emergency location you created earlier.
 
 8. Select **Apply** to assign the phone number to the user.
 
@@ -212,7 +215,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 4. Select the **Global (Org-wide default)** policy to edit the default settings.
 
-5. In **Calling policies\Global**, use the dropdown menu right to **Voicemail is available for routing inbound calls** and select **Not Enabled**. Then select **Save**.
+5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail is available for routing inbound calls** and select **Not Enabled**. Then select **Save**.
 
 6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
 
@@ -264,7 +267,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 6. Select **Save**.
 
-7. Download the file **Alarm03.wav** from the following link and save to **C:\Windows\Media.**
+7. Download the file **Alarm03.wav** from the following link and save to the Downloads folder.
 
    [https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav](https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav)
 
@@ -282,7 +285,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Greeting: select **Play an audio file**, and then select **Upload file**.
 
-	- In **Open** window, navigate to **C:\Windows\Media**, select **Alarm03.wav** and select **Open**.
+	- In **Open** window, navigate to the Downloads folder, select **Alarm03.wav** and select **Open**.
 
 	- Music on hold: **Play default music**
 
@@ -304,7 +307,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- When call times out: **Disconnect**
 
-11. Select **Save** to create the new call queue.
+11. Select **Submit** to create the new call queue.
 
 Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
 
