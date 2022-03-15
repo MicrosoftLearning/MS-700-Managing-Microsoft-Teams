@@ -334,19 +334,18 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 2. Select the **Teams** icon on the taskbar to start the Teams, desktop client.
 
-3. When prompted to **Enter your work, school, or Microsoft account**. Sign in as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com).
+3. When prompted to **Enter your work, school, or Microsoft account**. Sign in as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com). If you don't have the password, login to Teams Admin Center using user Admin. On the **Users > Active users** page, select the name of **Alex Wilber**. Select **Reset password** from the top, then select **Automatically create a password** and **Require this user to change their password when they first sign in** and **Reset password**. Use the password under column Password to login.
 
     **Note**: You might need to download and install the latest Teams, desktop client. Select **Update Teams** and follow the installation guideline - Select  **Download for desktop** > **Download Teams**
     **Run**.
-
 
 4. In the Teams desktop client, select **Teams** from the left menu. 
 
 5. Select **Join or create a team** from the lower-left corner. 
 
-5. Select **Create team** > **From scratch** > **Public**. Enter the team name **Teams Rollout** and select **Create**.
+6. Select **Create team** > **From scratch** > **Public**. Enter the team name **Teams Rollout** and select **Create**.
 
-6. On the **Add members to Teams Rollout** window, enter the following names and select **Add**. 
+7. On the **Add members to Teams Rollout** window, enter the following names and select **Add**. 
 
     * Joni Sherman
     * Lynne Robbins
