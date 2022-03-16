@@ -443,7 +443,7 @@ You are an administrator for your Team's organization. You need to limit which u
 	    - MOD Administrator
 
         * Members: 
-            - Select **+ Assign Members** 
+            - Select **View all and manage members** and **+ Add members** 
             - Joni Sherman
             - Alex Willber
 
