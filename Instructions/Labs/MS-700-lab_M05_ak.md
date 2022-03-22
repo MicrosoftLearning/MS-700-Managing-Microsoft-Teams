@@ -241,7 +241,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
 2. Create a Microsoft 365 resource account for Teams Rooms.
-	1. In left navigation of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**.
+	1. In left navigation of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**. If you don't find **Resources**, search for **Rooms & equipment** from the top search bar and select.
 
 	2. On the Rooms & equipment screen, select the **+ Add resource** option to add a new resource account. 
 
