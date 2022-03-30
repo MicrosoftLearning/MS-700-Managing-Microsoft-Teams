@@ -387,7 +387,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 15. On the **Holiday call settings** page, select **Next**.
 
-16. On the **Find people** page, select **Next**.
+16. On the **Dial scope** page, select **Next**.
 
 17. On the **Resource accounts** page, select **Add**. In the right-side pane, type **Contoso auto attendant**, and then select **Add** twice.
 
