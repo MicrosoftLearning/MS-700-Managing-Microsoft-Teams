@@ -306,7 +306,7 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
         - Select **Add(1)**, and then select **Next**.
 
     * Members: 
-        - Select **+ Assign Members** 
+        - Select **+ Add Members** 
         - Patti Fernandez
         - Allan Deyoung
         - MOD Administrator
