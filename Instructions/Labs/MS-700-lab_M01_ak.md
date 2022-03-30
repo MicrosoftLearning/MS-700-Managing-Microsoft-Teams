@@ -439,7 +439,7 @@ You are an administrator for your Team's organization. You need to limit which u
     5. Select **Members** tab to configure the **Owners** and **Members**.
 
         * Owners: 
-            - Select **+ Assign owners** 
+            - Select **View all and manage owners** and select **+ Add owners** 
 	    - MOD Administrator
 
         * Members: 
