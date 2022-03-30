@@ -474,9 +474,9 @@ The company wants to restrict the use of graphic elements in Teams communication
 	- **Use Stickers in conversations**: Off
 	- Leave the rest of the settings as default. Select **Save**.
 
-5. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff**. Then select **Manage users** in the top navigation pane. 
+5. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff**. Then select **Assign users** in the top navigation pane. 
 
-	**Note**: If you didn't see **Manage users**, select ... to expand the menu. 
+	**Note**: If you didn't see **Assign users**, select ... to expand the menu. 
 
 8. Search and select **add** for the following pilot users. Then select **Apply**.
 
