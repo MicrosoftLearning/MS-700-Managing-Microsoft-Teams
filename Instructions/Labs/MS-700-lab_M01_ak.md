@@ -365,6 +365,8 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
+	**Note**: The Edge browser may automatically log on Alex Wilber. If that occurs, select the profile picture of Alex, then select **Sign Out**. Once signed out, log on as Lynne Robbins.
+
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the 'Stay signed in to all your apps' window, select **No, sign in to this app only**. 
 
 4. Select **Join or create a team** from the lower-left corner. 
