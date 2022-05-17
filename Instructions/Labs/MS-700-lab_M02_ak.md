@@ -575,7 +575,7 @@ According to your organization's compliance requirements, you need to implement 
 4. In the **Choose the information to protect** section, 
 
 	1. Select the **Search for specific templates** search box and type: **GDPR**. 
-	2. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR)** template from the **Templates** section.
+	2. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR) Enhanced** template from the **Templates** section.
 	3. Select **Next**
 
 5. In the **Name your policy** section, enter the following information:
