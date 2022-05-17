@@ -412,7 +412,7 @@ In this task, you have created and published three new sensitivity labels availa
 
 Once the sensitivity labels are created and published, users can now assign them to teams. Furthermore, users can modify assigned labels if needed. In this task, you will assign the **Internal** label to the **Teams Rollout** team.
 
-**Note:** It can take several minutes till the newly created sensitivity labels are available to users.
+**Note:** It can take up to 24 hours till new sensitivity labels take effect. If the labels haven't appeared yet, continue with the lab, and perform the task at a later point in time.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
