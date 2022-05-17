@@ -612,7 +612,7 @@ According to your organization's compliance requirements, you need to implement 
 
 		- Select **Block users from accessing shared SharePoint, OneDrive, and Teams content**.
 
-		- Select **Block only people outside your organization. Users inside your organization will continue to have access**.
+		- Select **Block only people outside your organization.**.
 
 		- Select **Override the rule automatically if they report it as false positive**.
 
