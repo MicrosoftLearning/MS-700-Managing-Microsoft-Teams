@@ -75,7 +75,7 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 9. Check the team owner and members:
 
 	- Owners: **Joni Sherman**
-	- Members and guests: **Allan Deyoung** and **Alex Wilber**
+	- Members and guests: **Allan Deyoung**, **MOD Administrator**, and **Patti Fernandez**
 
 10. Leave the Teams desktop client open and continue to the next task.
 
