@@ -303,7 +303,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- When the maximum number of calls is reached: **Disconnect**
 
-	- Call time out handling: **5 minutes**
+	- Call time out handling maximum wait time: **5 minutes**
 
 	- When call times out: **Disconnect**
 
