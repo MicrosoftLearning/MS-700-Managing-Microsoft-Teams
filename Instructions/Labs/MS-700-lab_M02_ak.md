@@ -380,6 +380,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	11. Click **Save label** > **Done**.
 
+	12. On the **Choose sensitivity labels to publish** page, select **Cancel**.
+
 7. Publish sensitivity labels, after performing each step click **Next** (if required).
 
 	1. On the **Information protection** page, select **label policies** tab.
