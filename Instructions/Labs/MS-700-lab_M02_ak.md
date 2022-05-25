@@ -280,6 +280,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	8. Click **Finish** > **Done**.
 
+	9. On the **Choose sensitivity labels to publish** page, select **Cancel**.
+
 5. Create the second sensitivity label - **Internal**.
 
 	Select **+ Create a label**, follow the wizard with the following information and click **Next** after each step: 
