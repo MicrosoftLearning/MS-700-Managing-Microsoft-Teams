@@ -589,7 +589,9 @@ According to your organization's compliance requirements, you need to implement 
 	- **SharePoint sites**: On
 	- **OneDrive accounts**: On
 	- **Teams chat and channel messages**: On
-	- **Microsoft Defender for Cloud Apps**: On
+	- **Microsoft Defender for Cloud Apps**: Off
+	- **On Premises Repositories**: Off
+	- **Power BI**: Off
 
 7. In the **Policy settings** section, stay with the default selection from the template - **Review and customize default settings from the template** and select **Next**.
 
