@@ -241,7 +241,7 @@ You have successfully changed your tenant's Azure AD settings and activated sens
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**.  For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 compliance center (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview compliance portal (https://compliance.microsoft.com/) as **MOD Administrator**.
 
 2. In the left navigation of the Microsoft 365 compliance center, select **Information protection** and select the **Labels** tab.
 
