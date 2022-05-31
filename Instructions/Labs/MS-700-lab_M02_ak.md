@@ -332,6 +332,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	11. Select **Create label** > **Done**.
 
+	12. On the **Choose sensitivity labels to publish** page, select **Cancel**.
+
 6. Update the second sensitivity label - **Confidential**
 
 	Select the **Confidential** label and click the **Edit label** button, follow the wizard with the following information and click **Next** after each step: 
