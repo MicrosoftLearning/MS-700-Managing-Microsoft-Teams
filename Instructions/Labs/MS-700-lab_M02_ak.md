@@ -654,7 +654,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 7. In the **Policy settings** section, stay with the default selection and select **Next**.
 
-	1. In the **Advanced DLP rules** section, select **+ Create rule** and enter the following information:
+	1. In the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
 		- **Name**: Credit card numbers found
 		- **Description**: Basic rule for protecting credit card numbers forms being shared in Teams.
 
@@ -665,15 +665,15 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 		- Leave the high **High confidence** and **Instance count (1)** unchanged.
 	3. Below **Action**, 
 		- Select **+ Add an action** and **Restrict access or encrypt content in Microsoft 365 locations**.
-		- Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block, everyone. Only the content owner, the last modifier, and the site admin will continue to have access.** 
+		- Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block, everyone** 
 
 	4. Below **User notification**, 
 		- Select the slider to **On** and select **Customize the policy tip text**.
 		- Enter the following text to the textbox: **Credit card numbers are not allowed to be shared!**
 
 	5. Below **Incident reports**, 
-		- Select the slider **Send an alert to admins when a rule match occurs** and select **Add or remove people**.
-		- On the **Add or remove people** page, select the checkbox left from **Joni Sherman** and select **Add**.
+		- Select the slider **Send an alert to admins when a rule match occurs** and select **Add or remove users and groups**.
+		- On the **Add or remove users and groups** page, select the checkbox left from **Joni Sherman** and select **Add**.
 		- Select **Save**.
 	
 	6. Review the rule settings and select **Next**.
