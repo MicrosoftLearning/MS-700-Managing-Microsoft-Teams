@@ -146,7 +146,7 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
     You can type in your location by city, state, and country or you can have it detected from the web browser. 
 
-4. Select **Run** when prompted for downloading the advanced client test application.
+4. Select **Open file** when prompted after downloading the advanced client test application.
 
 	**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction. 
 
