@@ -69,7 +69,7 @@ In this task, you will add a new emergency address "One Microsoft Way, Redmond, 
 
       (You can enable **Edit the address manually**, and enter the address manually)
 
-5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Close** the page and continue to the next task. 
+5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Cancel** the page and continue to the next task. 
 
 6. Select **Save**.
 
