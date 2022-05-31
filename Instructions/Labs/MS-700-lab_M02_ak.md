@@ -278,7 +278,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	7. In the **Schematized data assets (preview)** section, leave the settings as default. 
 
-	8. Click **Finish** > **Done**.
+	8. Click **Save label** > **Done**.
 
 5. Create the second sensitivity label - **Internal**.
 
