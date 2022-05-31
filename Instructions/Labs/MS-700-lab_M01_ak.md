@@ -599,7 +599,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 3. Enter **Afterwork** for the **Team name**.
 
-    Below the entered name, you can see the configured prefix and suffix for new teams.
+    Below the entered name, you can see the configured prefix and suffix for new teams. If you don't see the prefix and suffix you may need to log out of the Teams client and log back in as Alex and repeat steps 1 to 5. 
 
 4. Select **Create** to create the new team.
 
