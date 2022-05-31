@@ -243,7 +243,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 1. Connect to the **Client 1 VM** and browse to Microsoft Purview compliance portal (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft 365 compliance center, select **Information protection** and select the **Labels** tab.
+2. In the left navigation of the Microsoft Purview compliance portal, select **Information protection** and select the **Labels** tab.
 
 3. Select **Turn on now** next to the following warning message to activate content processing in Office online files.
 
