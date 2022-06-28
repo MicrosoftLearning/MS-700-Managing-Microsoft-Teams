@@ -483,7 +483,7 @@ Teams retention settings are very important for managing the lifecycle of compan
 		- **Teams private channel messages**: Off
 		- **Yammer community message**: Off
 		- **Yammer user messages**: Off
-		- Select **Edit** right from **Teams channel messages** to open the right-side pane.
+		- Select **Edit** in the **Included** column (under the current *All teams* choice) for the **Teams channel messages** line to open the right-side pane.
 		- Select the checkbox left from **Sales** and select **Done**.
 
 	3. In the **Retention settings** section, select **Next**.
@@ -528,7 +528,7 @@ After configuring a retention policy to protect data from deletion, you also nee
 		- **Teams private channel messages**: Off
 		- **Yammer community message**: Off
 		- **Yammer user messages**: Off
-		- Select **Edit** right from **Teams channel messages** to open the right-side pane.
+		- Select **Edit** in the **Included** column (under the current *All teams* choice) for the **Teams channel messages** line to open the right-side pane.
 		- Select the checkbox left from **Teams Rollout** and select **Done**.
 
 	3. In the **Retention settings** section, 
