@@ -118,7 +118,7 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 5. Select **Save**.
 
-6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Manage users** from the top menu.
+6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Assign users** from the top menu.
 
 7. In the **Manage users** pane, search and add **Lynne Robbins**.
 
