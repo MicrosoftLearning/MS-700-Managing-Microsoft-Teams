@@ -1,738 +1,694 @@
----
-lab:
-    title: 'Lab 04: Manage teams and collaboration settings for Teams'
-    type: 'Answer Key'
-    module: 'Module 4: Manage chat, teams, channels, and apps in Microsoft Teams'
----
 
-# **Lab 04: Manage teams and collaboration settings for Teams**
+
+# **Lab 04: - Manage Teams meetings and calling experiences**
 
 # **Student lab answer key**
 
 ## **Lab Scenario**
 
-In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. In this lab, you will perform operational tasks as a Teams administrator, such as creating and modifying teams, managing membership, and recovering deleted teams. 
+In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd., and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide the best user experience during collaboration and communication.
 
-In managing collaboration in Microsoft Teams, you will manage chat and collaboration experiences such as team settings or private channel creation policies. Finally, you will manage settings for Teams apps such as app setup policies, Apps, bots & connectors in Microsoft Teams or publish a custom app in Microsoft Teams.
+Your organization is also planning to purchase and deploy multiple Team devices. You will need to evaluate different devices profiles and configure profile settings for the devices and the process of creating Microsoft Teams room, where multiple Teams’ rooms will be purchased in your organization. 
+
+Furthermore, you will replace Contoso legacy PBX solution and configure voice features that will provide users with Teams calling capabilities.
 
 ## **Objectives**
 
 After you complete this lab, you will be able to:
 
-- Create a Team from a Microsoft 365 Group
+- Manage meeting policies
 
-- Create a Team by using PowerShell
+- Configure meeting settings
 
-- Create a Team by using Microsoft Graph API
+- Create live event policies
 
-- Create a Team with dynamic membership
+- Create a webinar
 
-- Archive and unarchive Teams
+- Create configuration profiles for devices
 
-- Delete and recover Teams
+- Configure a new Microsoft Teams Room
 
-- Create a messaging policy
+- Set up a Calling Plan
 
-- Manage private channels
+- Order and Assign phone numbers
 
-- Disable third-party storage providers
+- Configure emergency addresses
 
-- Manage Policy packages
+- Create calling policies
 
-- Edit and test default org-wide app policy
+- Configure resource accounts and calling queues
 
-- Edit and test default app permission policy
+- Create resource accounts and auto attendants
 
+- Access and navigate through call analytics ad CQD dashoards
 
 ## **Lab Setup**
 
-- **Estimated Time:** 90 minutes.
+- **Estimated Time:** 180 minutes.
 
 ## **Instructions**
 
-### **Exercise 1: Manage team resources**
+### **Exercise 1: Manage Live event and meetings experiences**
 
-#### Task 1 - Create a team from an existing Microsoft 365 group
+Contoso organization has deployed Microsoft 365 and is testing pilot projects on collaboration and communication scenarios to meet business requirements. The Teams admin will configure meeting policies and schedule an initial webinar for testing purposes.
 
-As part of your pilot project for Contoso, you need to modify the **IT-Department** Microsoft 365 group, created in an earlier lab, and add Teams features to it.
+#### Task 1 - Edit the default meeting policy and restrict all recording features for meetings
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in Teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
-2. Select the **Teams** icon on the taskbar to start the Teams desktop client and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.OnMicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
 
-3. The Microsoft Teams desktop client will start. If a **Bring your team together**, or **Get the Teams mobile app** window appears, close both windows.
+2. In left navigation of the Teams admin center, select **Meetings** > **Meeting policies**.
 
-4. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create team** from the middle of the window.
+3. Select the **Global (Org-wide default)** policy under **Manage policies**.
 
-5. In the **Create a team** dialog, select **From a group or team**.
+4. On the **Meetings policies** page, turn **Off** the **Cloud recording** setting under the **Recording &amp; transcription** section.
 
-6. In the **Create a new team from something you already own** dialog, select **Microsoft 365 group**.
+5. Select **Save**.
 
-7. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **"IT-Department"**, then select **Create**. Wait until the **Creating the team…** process is done.
+You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
-8. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
+#### Task 2 – Test the meeting policy for restricting recording
 
-9. Check the team owner and members:
+In this task, you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-	- Owners: **Joni Sherman**
-	- Members and guests: **Allan Deyoung**, **MOD Administrator**, and **Patti Fernandez**
+1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@<YourTenant>.onmicrosoft.com).
 
-10. Leave the Teams desktop client open and continue to the next task.
+2. Select **Calendar** from the left navigation pane.
 
-You have successfully created a new team with the Teams desktop client, by using an existing Microsoft 365 group. Leave the Teams client open and continue with the next task.
+3. Select **Meet Now** > **Start meeting** from the upper right corner.
 
-#### Task 2 - Create a team by using PowerShell
+4. Select **Join now** to start the meeting.
 
-In this task, you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell.
+5. Close **Invite people to join your window** by selecting **X** on the upper right corner.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+6. In the meeting window, select … for **More actions**.
 
-2. On the taskbar at the bottom of the page, right select the **Start** button and then select **Windows PowerShell**.
+7. Notice that you can’t select **Start recording**.
 
-3. Run the following cmdlet to connect to Microsoft Teams in your tenant:
+8. End the meeting.
 
-    ```powershell
-    Connect-MicrosoftTeams
-    ```
+#### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
 
-4. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** credential provided to you (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and then select **Next**.
+Contoso Ltd. works with several external partners, and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account, and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
 
-5. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** credential provided to you and then select **Sign in**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
 
-6. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**:
+2. In left navigation of the Teams admin center, select **Meetings** > **Meetings settings**.
 
-    ```powershell
-    New-Team -Displayname "CA-Office" -MailNickName "CA-Office" -Visibility Public
-    ```
+3. On the **Meetings settings** page, turn **Off** the option **Anonymous users can join a meeting** in the participants section.
 
-7. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
+4. Select **Save**.
 
-    ```powershell
-    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AlexW@<YourTenant>.onmicrosoft.com
-    ```
+You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
-8. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
+#### Task 4 - Create a new live event policy and restrict recording capabilities
 
-    ```powershell
-    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
-    ```
+Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to manage users. Only the organizer of a live event should be able to record his meetings.
 
-9. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
 
-    ```powershell
-    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Support"
-    ```
+2. In the left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
 
-10. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
+3. Select **+Add** under **Manage Policies** tab.
 
-    ```powershell
-    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Recruiting"
-    ```
+4. On the **Live events policies\Add** page, enter the following information:
 
-11. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+	- Add live events policy Name: **Management Live Events**
 
-    ```powershell
-    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
-    ```
+	- Description: **Recording Restriction for live events organized by managers**
 
-12. Disconnect from the Microsoft Teams environment.  
+	- Live events scheduling: **On**
 
-    ```powershell
-    Disconnect-MicrosoftTeams
-    ```
+	- Transcription for attendees: **Off**
 
-13. Close the PowerShell window.
+	- Who can join scheduled live events: **Everyone in the organization**
 
-14. Open the Teams desktop client from the taskbar. On the left side pane with all teams, Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+	- Who can record an event: **Organizer can record**
 
-15. Close all browser windows and the Teams desktop client.
+5. Select **Save**.
 
-You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in the context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
+6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Assign users** from the top menu.
 
-#### Task 3 - Create a team by using Graph API
+7. In the **Manage users** pane, search and add **Lynne Robbins**.
 
-In this task, you will test the Graph API capabilities for certain automation plans of your organization with Teams. For this task, you will create a new team, called **Early Adopters** with minimal settings, such as Public join options, and another team with multiple existing channels, called **Tech Meetings**.
+8. Select **Apply** to assign the policy to the selected user.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+You have successfully created a custom Live event policy and assigned it to a user.
 
-2. Open Microsoft Edge, maximize the browser, and navigate to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
+#### Task 5 – Create a webinar
 
-3. Select the **Sign in to Graph Explorer** button in the upper left of the page and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+The IT department wants to host a company-wide meeting to answer employees’ questions regarding the new reporting system. As a Teams admin, you will create a webinar allowing employees to submit their questions before the meeting.
 
-4. If you access the Graph Explorer for the first time, you will see a **Permissions requested** page. Select **Accept**.
+1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-5. Select the **GET** button and select **POST** from the dropdown menu.
+3. In the Teams Calendar, select the dropdown menu **New meeting** and select **Webinar**. Scheduling page will open **Teams.Microsoft.com/Scheduling**.
 
-6. Do not change the **v1.0** from the box in the middle.
+4. Create a new **webinar**:
 
-7. Enter the following to the text box next to the **Run query** button:
+	- **Title**: IT Office Hours
+	- **Start/End**: Select a time close to your current time 
+	- **Presenters**: Patti Fernandez, Allan Deyoung
 
-	- [https://graph.microsoft.com/v1.0/teams](https://graph.microsoft.com/v1.0/teams)
+5. Select **View registration form**, it opens a new webpage with the url **Teams.microsoft.com/registration**. Enter the following information: 
 
-8. Select **Modify permissions** from the top pane.
+	1. **Title**: IT Office Hours
+	2. Select **+ Add field** > **Custom question** > **Input**.
+	3. Enter the following to the textbox below **Custom question**:
 
-9. Scroll to the right and select the **Consent** button for the permissions **Team.Create**.
-
-10. Another **Permissions requested** page appears. Select **Accept**.
-
-11. If you are redirected to the Microsoft Developers site, navigate back to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
-
-12. Select the **Request body** tab and enter the following code:
-
-    ```json
-	{
-
-	"template@odata.bind":"https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
-
-	"displayName": "Early Adopters",
-
-	"description": "The Early Adopters Workspace.",
-
-	"visibility": "Public" 
-
-	}
-	```
-
-13. Select **Run** **query** from the upper right of the page.
-
-14. After a moment, you should see a green bar below the Request body window, with a checkmark and an **Accepted** message.
-
-15. Remove the whole content of the textbox in the textbox of **Request body**, you just used to create a team and replace it with the following content:
-
-    ```json
-	{
-
-	"template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
-
-	"visibility": "Public",
-
-	"displayName": "Tech Meetings",
-
-	"description": "Space for all employees participating in the champions program, who want exchange each other about the newest features.",
-
-	"channels": [
-
-	{
-
-	"displayName": "Welcome Hall",
-
-	"isFavoriteByDefault": true,
-
-	"description": "Channel for introducing yourself as a member of the tech meeting participants."
-
-	},
-
-	{
-
-	"displayName": "Tech Lunch and Dinner",
-
-	"isFavoriteByDefault": true,
-
-	"description": "When will be the next tech lunch and who has any suggestions where to meet."
-
-	},
-
-	{
-
-	"displayName": "Q and A",
-
-	"description": "Questions and answers: Teams users giving a helping hand to other users.",
-
-	"isFavoriteByDefault": true
-
-	},
-
-	{
-
-	"displayName": "Issues and Feedback 🐞",
-
-	"description": "Leave some feedback for the IT-Staff.",
-
-	"isFavoriteByDefault": false
-
-	}
-
-	],
-
-	"memberSettings": {
-
-	"allowCreateUpdateChannels": true,
-
-	"allowDeleteChannels": false,
-
-	"allowAddRemoveApps": true,
-
-	"allowCreateUpdateRemoveTabs": true,
-
-	"allowCreateUpdateRemoveConnectors": true
-
-	},
-
-	"guestSettings": {
-
-	"allowCreateUpdateChannels": true,
-
-	"allowDeleteChannels": false
-
-	},
-
-	"funSettings": {
-
-	"allowGiphy": true,
-
-	"giphyContentRating": "Moderate",
-
-	"allowStickersAndMemes": true,
-
-	"allowCustomMemes": true
-
-	},
-
-	"messagingSettings": {
-
-	"allowUserEditMessages": true,
-
-	"allowUserDeleteMessages": true,
-
-	"allowOwnerDeleteMessages": true,
-
-	"allowTeamMentions": true,
-
-	"allowChannelMentions": true
-
-	},
-
-	"discoverySettings": {
-
-	"showInTeamsSearchAndSuggestions": true
-
-	}
-
-	}
-	```
-
-16. Select **Run** **query** from the upper right of the page.
-
-17. After a moment, you should see a green bar with a checkmark and **Accepted** inside again.
-
-18. Navigate to [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) to access the Microsoft Teams web client.
-
-19. Select **Teams** and **Manage Teams** from the left-side pane and inspect the newly created teams "**Early Adopters"** and "**Tech Meetings**".
-
-You have successfully created two teams via Graph API. Your test of the Graph functionality is complete, and you can advance to the next exercise.
-
-#### Task 4 – Archive and unarchive a team
-
-After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task, you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
-
-1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. Select **Teams** from the left-side pane and **Manage teams**.
-
-3. Archive the **Sales** team
-
-	1. Select the checkmark left from the **Sales** team and select **Archive** from the top pane.
-
-	2. Select the checkbox of **Make the SharePoint site read-only for team members** and select **Archive**.
-
-	3. The **Status** column should now have changed to **Archived**, written in orange color. Leave the browser open and proceed. If you have problems with the **Sales** team - archive another team (you can undo this action in the unarchive step).
-
-4. Check the archived team
-
-	1. Connect to the **Client 2 VM**  and browse to the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
-
-	2. On the left side, select **Teams** > **Manage Teams** gear icon next to **Join or create a team**.
-
-	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team shows up under the **Hidden teams** section. 
-
-	4. Select **General** channel under the **Sales** team, notice the **New conversation** option is not available. 
-
-5. Unarchive the **Sales** team
-
-	1. Connect to the **Client 1 VM** again and browse to the Teams admin center as **Joni Sherman**.
+		*What is your question about the new reporting system?*
 	
-	2. Select the checkbox left from **Sales** again and select **Unarchive** from the top menu. The **Status** field should change to **Active** again.
-
-6. Check the unarchived team
-
-	1. Connect to the **Client 2 VM**  and browse to the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
-
-	2. On the left side, select **Teams**.
-
-	3. Notice that the text of the **Sales** team and the **General** channel changes back to normal after a moment, but the team is hidden. 
-	
-	4. Select the three dots (…) right from the Sales team and select **Show**.
-
-7. Leave the browser open and stay signed in.
-
-You have successfully archived a team and reviewed the limited functionality of archived teams. This fulfills the first requirement of testing the archiving function of teams for compliance preservation policies and rules. After this test, you have unarchived the team again, making it fully operational again. 
-
-#### Task 5 - Delete and recover teams
-
-In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
-
-1. Connect to the **Client 2 VM**  and browse to the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. In the left-hand navigation pane of the Teams web client, select the three dots (…) right from the **Sales** team and select **Delete the team** from the list.
-
-3. In the **Delete the Sales team**, select **I understand that everything will be deleted**. and select **Delete team**.
-
-4. Restore group
-
-	1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
-
-	2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
-
-	3. On the **Groups | All groups** page, select **Deleted groups** in the left side pane.
-
-	4. Now you can see all deleted groups, including the **Sales** group.
-
-	5. Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
-
-5. Check the restored group.
-
-	1. Connect to **Client 2 VM** and browse to the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
-
-	2. The **Sales** team appears in the list of teams again. Press **F5** to refresh the page if needed.
-
-	3. Select the three dots (…) right from the team name and select **Manage team**. You can see the owner and all members again in the **Members** tab.
-
-**Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point in this lab.
-
-You have successfully deleted a team via the Teams web client and restored it with the Azure Portal.
-
-#### Task 6 - Manage team members with dynamic membership
-
-Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
-
-1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
-
-2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
-
-3. On the **Groups | All groups** page, search and select **CA-Office** group.
-
-4. On the **CA-Office** page, select **Properties** from the left-hand navigation pane.
-
-5. Change the **Membership type** from **Assigned** to **Dynamic User**. 
-
-6. Select **Add dynamic query** below **Dynamic user members**.
-
-7. On the **Dynamic membership rules** page, enter the following information to the fields:
-
-	- Property: **accountEnabled**
-
-	- Operator: **Equals**
-
-	- Value: **true**
-
-8. Select **+add expression** and enter the following information to the fields:
-
-	- Property: **usageLocation**
-
-	- Operator: **Equals**
-
-	- Value: **CA**
-
-9. Select **Save** twice.
-
-10. A warning message is displayed, that the membership will change according to the new dynamic membership rules. Select **Yes** to confirm the message.
-
-11. Select **Overview** in the left-hand navigation pane of the **CA-Office** group window.
-
-12. In the Overview window, locate **Membership processing status** field.
-
-	Wait and refresh your browser, until the status says **Update complete**. It may take several minutes for the change to be processed.
-
-13. Then select **Members** in the left-hand navigation pane and then select **Refresh**. Verify that **Alex Wilber** is in the list of members, but that **Allan Deyoung** has been removed from the group.
-
-14. Select Owners from the left-hand navigation pane and verify, that Joni is still the Owner of the group, even if she does not match the dynamic group criteria.
-
-You have successfully converted a Microsoft 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation "Canada" is added automatically to the team.
-
-
-### **Exercise 2: Configure channel and message policies**
-
-In this exercise, you will configure policies to manage the creation of new private channels and the available tools for users in chat.
-
-#### Task 1 - Create a messaging policy for giphy, memes, and stickers
-
-The company wants to restrict the use of graphic elements in Teams communication. As a Teams service administrator, you will create a new message policy that prohibits pilot users from using GIF files, memes, and stickers in the Teams chat and channel conversation.
-
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. In the left navigation of the Teams admin center, select **Messaging policies**.
-
-3. Select **+ Add** from the top pane.
-
-4. On the **Messaging policies \ Add** page, enter the following:
-
-	- **Name**: Regular users without fun stuff
-	- **Description**: Policy to disable giphys, stickers, and memes in conversations
-
-	- **Use Giphys in conversations**: Off
-	- **Use Memes in conversations**: Off
-	- **Use Stickers in conversations**: Off
-	- Leave the rest of the settings as default. Select **Save**.
-
-5. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff**. Then select **Assign users** in the top navigation pane. 
-
-	**Note**: If you didn't see **Assign users**, select ... to expand the menu. 
-
-8. Search and select **add** for the following pilot users. Then select **Apply**.
-
-	- **Alex Wilber**
-	- **Lynne Robbins**
-	- **Diego Siciliani**
-
-**Note**: It can take up to 24 hours for the settings to take effect.
-
-In this task, you have successfully configured a new messaging policy and assigned it to the pilot users. It will now take some time for the policy to take effect. Continue with the next task.
-
-#### Task 2 - Manage private channels in a team
-
-As Teams administrator of Contoso, you will create a private channel named **confidential** in the sales team that is only accessible for some team members.
-
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. In left navigation of the Teams admin center, select **Teams** > **Manage teams**. 
-
-3. Select the **Sales** team > **Channels** tab. 
-
-4. Add the private channel
-
-	1. Select **+ Add** from the top menu.
-	2. In the **Add** window, enter the following information:
-
-		- **Name**: Confidential sales
-		- **Description**: Confidential private sales channel
-		- **Type**: Private
-		- **Channel owner**: Lynne Robbins
-	3. Select **Apply**.
-
-5. Check the private channel
-
-	1. Connect to the **Client 2 VM** and browse to the **Teams Web Client** [(https://teams.microsoft.com)](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
-
-	2. Select **Teams**, you should see the new private channel **Confidential sales** with a small padlock icon.
-
-In this task, you learned how to create a private channel in the Microsoft Teams admin center and how to configure and check the access.
-
-### **Exercise 3: Manage app settings**
-
-#### Task 1 - Disable third-party storage providers
-
-In the past, users stored data at various locations, including third-party storage providers. Recently, the company deployed OneDrive for all users and would like to guide the users to use SharePoint and OneDrive as the primary data storage locations with Box as an alternative for all file collaborations. As the Teams admin, you are asked to deactivate all third-party storage providers except Box in Microsoft Teams to align with the direction.
-
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. In left navigation of the Teams admin center, select **Teams** > **Teams settings**.
-
-3. On the **Teams settings** page, go to the **Files** section. 
-
-4. Configure the following file sharing and cloud file storage options.
-
-	- **Citrix files:** Off
-
-	- **DropBox:** Off
-
-	- **Box:** On
-
-	- **Google Drive:** Off
-
-	- **Egnyte:** Off
-
-5. Scroll down and select **Save**.
-
-**Note**: It can take up to 24 hours for the settings to take effect.
-
-In this task, you have learned how to enable or disable third-party storage providers for your whole tenant.
-
-#### Task 2 - Edit default org-wide app policy
-
-In the pilot project, the company wants to add **Tasks by Planner and To Do** as the default app for all (existing) teams. To do this, edit the default org-wide app policy. This task may take some time to propagate throughout the tenant.
-
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. In the left navigation of the Teams admin center, select **Teams apps** > **Setup policies**.
-
-4. On the **App setup policies** page, select **Global (Org-wide default)** to open the org-wide app policy.
-
-5. in the **Pinned apps** section,  select **+ Add apps**.
-
-6. Select **Global** and search **Planner**. You will see **Tasks by Planner and To Do** app, mouseover the name and select **Add** twice.
-
-7. Make sure that **Tasks by Planner and To Do** is now listed in the **Pinned apps** section then select **Save**.
-
-**Note**: It can take up to 24 hours for the settings to take effect.
-
-In this task, you learned how to pin default apps from the Microsoft Teams admin center.
-
-#### Task 3 - Edit default app permission policy
-
-In this task, you will edit the default app permission policy and block the Google Analytics app for all tenants
-
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. In the left navigation of the Teams admin center, select **Teams apps** > **Manage apps**.
-
-3. On the **Manage apps** page, type **Google** in the search box.
-
-4. In the search result, select **Google Analytics** to highlight the app. 
-
-5. Select **Block** from the top menu. 
-
-6. Select **Block** again from the prompt window to confirm the setting. 
-
-**Note**: It can take up to 24 hours for the settings to take effect.
-
-In this task, you have learned how to block the Google Analytics app for your tenant.
-
-#### Task 4 – Manage policy packages
-
-To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
-
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-2. In the left navigation of the Teams admin center, select **Policy packages**.
-
-3. On the **Policy packages** page, select **Frontline worker** policy package.
-
-4. Update **Frontline_Worker** policy package.
-
-	1. From the list of assigned policies, select **Frontline_Worker** right from **Messaging policy**.
-	2. Select **Edit** from the upper right corner.
-	3. Turn **On** the setting - **Send urgent messages using priority notifications** and select **Save**.
-	4. Select **Frontline_Worker** right from **Calling policy**.
-	5. Turn **On** the setting -  **Prevent toll bypass and send calls through the PSTN**.
-	6. Update **Busy on busy when in a call** to **Enabled**.
-	7. Select **Save**.
-	8. Select **Back** to go to the Policy packages overview.
-
-5. Make sure **Frontline worker** policy package is checked. 
-6. Select **Manage users** from the top menu.
-7. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
-8. Check the policy assignment.
-
-	1. Select **Users** > **Manage users** from the left-side pane.
-	2. Select **Allan Deyoung**, and select **Policies** tab.
-	3. Below Assigned policies, you can see the policies assigned from the **Frontline worker** policy package.
-
-You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
-
-#### Task 5 - Build a flow using Power Automate in Teams
-
-In this task, you will create an issue report system by using Power Automate in Teams. When users fill out the form from the **IT Support** org-wide team, the flow will send a message to notify members in the **IT-Department** team. 
-
-
-
-1. Create the **IT Support** org-wide team.
-
-	1. Connect to the **Client 1 VM** and browse the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**. 
-
-	2. Select **Join or create a team** from the lower-left corner. 
-
-	3. Select **Create team** >**From scratch** > **Org-wide**. 
-	
-	4. Enter the team name **IT Support** and select **Create**.
-
-2. Create a form
-
-	1. Stay in the **Client 1 VM** and browse to the Forms web client (https://www.office.com/launch/forms) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-	
-	2. In the Forms web client, select **+ New Form**.
-
-	3. Select on **Untitled form** and enter the following information:
-	
-		* Input your title here: **Submit a ticket**.
-		* Enter a description: **Please provide the information. Our member from IT Department will contact you as soon as possible.**
-
-	4. Select **+ Add new** > **Text**.
-	5. In the question textbox, enter **What is the issue?**
+	4. **Start/End**: Select a time close to your current time
+	 
+	5. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and closing the page.
+	6. Go back to the **Teams.Microsoft.com/scheduling** window and click **Send** button to activate the Webinar registration.
+	7. Click **Teams** on the left navigation pane, Select **General** under the **IT-Support**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
+	8. Sign out and close all browser windows.
 		
-3. Install **Power Automate** in Teams. 
+6. Test the meeting registration. 
 
-	1. Browse to the Teams web client (https://teams.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
 
-	2. In the left navigation of the Teams client, select **Apps** and search for **Power Automate**.
+	2. Go to the **General** channel of the **IT Support** team and select the registration link that you posted.
 
-	3. Select **Power Automate** app, and select **Add**
+	3. Fill out the registration form using \<Your outlook account\> and select **Register now**.
 
-4. Create a flow
-
-	1. In the left navigation of the Teams client, select **Power Automate**.
-
-	2. Select **Create** tab from the top menu. 
-
-	3. Select the template **Notify a team when a new Forms response is submitted**.
-
-	4. Enter the flow name: **Report issue**. Select **Next**.
-
-	5. On the **Set up your flow** page, 
+	4. Go to **Outlook Web Portal** (https://outlook.live.com/owa/), and check the email with subject **You're registered for IT Office Hours**
 	
-		* From the **The ID of the form you want to monitor** dropdown menu, select **Submit a ticket**. 
+	5. Sign out and close all browser windows.
 
-		* From the **Team to notify** dropdown menu, select **IT-Department**.
 
-		* From the **Channel to notify** dropdown menu, select **General**.
+You have successfully created a webinar with a custom registration form.
 
-	6. Select **Create flow** > **Done**
+### **Exercise 2: Deploy Teams device profiles**
 
-5. Add the form to the **General** channel of the **IT Support** team.
+As a Teams administrator, you will create configuration profiles to manage settings and features for Teams devices in your organization. You can create or upload configuration profiles to include settings and features you want to enable or disable and then assign a profile to a device or groups of devices.
 
-	1. Go to the **General** channel of the **IT Support** team.
-	2. Add a tab by selecting **+** next to Wiki tab. 
-	3. Select **Forms** from the **Add a tab** window. 
-	4. Select **Add an existing form**, and select **Submit a ticket**.	
-	5. Select **Save**.
+Your organization could purchase Microsoft Teams Rooms that provide a complete meeting experience with HD video, audio, and content sharing in conference rooms. You will need to prepare the deployment prerequisites by defining Microsoft Teams Rooms service account in Office 365.
 
-6. Test the flow
+#### Task 1 - Create configuration profiles
 
-	1. In the **General** channel of the **IT Support** team, select **Fill|Submit a ticket** tab. 
-	2. On the **Submit a ticket** page, enter the following to the textbox:
+During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create a configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
-			*I need help to create a team for external partners.*  
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez** (PattiF@<YourTenant>.onmicrosoft.com).
+
+2. In **Teams admin center**, on the left navigation pane, select **Phones** under **Teams devices**.
+
+3. On the **Phones** page, select **Configuration profiles** tab, and then select **+ Add**.
+
+4. Enter the following information for the new configuration profile:
+
+	- Configuration profile Name: **New York Teams Desk Phones**
+
+	- Description: **Configuration profile for Teams Desk Phones in New York HQ**
+
+5. Under **General** section, configure following settings:
+
+	- Device lock: **On**
+
+	- Timeout: **30 seconds**
+
+	- PIN: **123456**
+
+	- Language: English **(United States)**
+
+	- Timezone: **(UTC-5:00) Eastern Time (US and Canada)**
+
+	- Date format: **MM/DD/YYYY**
+
+	- Time format: **12 Hours (AM/PM)**
+
+6. Under **Device settings** configure following settings:
+
+	- Display screen saver: **On, Timeout 1 minute**
+
+	- Display high contrast: **On**
+
+	- Office hours: **08:00-17:00**
+
+	- Power Saving: **On**
+
+7. Under **Network settings**, configure following settings:
+
+	- DHCP enabled: **On**
+
+	- Logging enabled: **Off**
+
+	- Device’s default admin password: **Pass@word1**
+
+8. Once you complete with the configuration profile settings, select **Save**.
+
+9. Sign out and close all browser windows.
+
+In this task, you have successfully created a configuration profile that can be applied to Microsoft Teams devices.
+
+#### Task 2 - Configure a resource account for Teams Room
+
+Your organization has ordered devices for Microsoft Teams room. In the meantime, you need to ensure that all prerequisites for the equipment installation are being completed. One of the prerequisites for Microsoft Teams Room deployment is adding a device account and assigning Office 365 license for that account.
+
+**Note:** You may choose to use the Exchange Online PowerShell to complete this task, however, you will need to first install the new Exchange PowerShell module.
+
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+
+2. Create a Microsoft 365 resource account for Teams Rooms.
+	1. In left navigation of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**. If you don't find **Resources**, search for **Rooms & equipment** from the top search bar and select.
+
+	2. On the Rooms & equipment screen, select the **+ Add resource** option to add a new resource account. 
+
+	3. On the **Add resource** page, follow the wizard with the following information. 
+
+		* Resource type: **Room**.
+		* Name: **NY-TeamsRoom1** 
+		* Email: Enter **NY-TeamsRoom1** inside the Email text box and verify your tenant id in the domains
+
+	4. Select **Save**.
+	5. Select **Edit booking options**, keep the default settings with the following checked.
+
+		* Allow repeating meetings
+		* Automatically decline meetings outside of the limits
+		* auto-accept meeting requests
 	
-	3. Select **Submit**.
-	4. Go to the **General** channel of the **IT-Department** team. You will see a post via Power Automate. 
+3. Get Microsoft Teams Rooms Standard trial licenses
 
-In this task, you have successfully created a flow from Power Automate in Teams, which notify the members of the IT department when users submit a request ticket. 
+	1. In the **Microsoft 365 admin center** from the left navigation pane, under **Billing** select **Purchase services**.
 
-### **Exercise 4: Test configured policy settings**
+	2. In the **Search** box on the right, type **Meeting Room** and then hit Enter.
 
-In this exercise, you will test the configured policy settings on a client with the affected user **Lynne Robbins** and compare the settings to the available client settings of **Joni Sherman**.
+	3. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Standard** tile, select **Details** and then select **Start free trial**.
 
-#### Task 1 – Test the messaging policy and private channel access
+	4. In the **Check out** page, select **Try now**, and in the **order receipt** page, select **Continue**.
 
-In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user(Joni Sherman).
+4. Assign the license to the Teams Rooms account.
 
-1. Connect to the **Client 2 VM** and browse the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
 
-2. In the left-hand navigation pane, select **Chat** > **New Chat** icon. 
+	2. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
 
-3. In the main pane, enter **Joni Sherman** to start the conversation. 
+	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
 
-4. Notice there's no **giphy**, **memes** and **stickers** icons.
+5. Sign out and close all open windows.
 
-#### Task 2 – Test the app permission policy and storage providers
+You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
+ 
 
-In this task, you will test the **app permission policies**.
+### **Exercise 3: Set up a Calling Plan (Optional)**
 
-1. Connect to the **Client 2 VM** and browse the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+In this exercise, you will set up one of your users with a Calling Plan Trial. You will need to start the trial, order a phone number from Microsoft as your provider and enable your user to use this phone number when making outgoing calls.
 
-3. In the left-hand navigation select **Apps**.
+**Note:** The availability of Calling Plans varies based on different countries and regions. Please go to the link below to check the availability of your location. The following instruction is based on the location of the United States.
 
-4. Search **Google** from the search box. 
+[https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans](https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
 
-5. Notice there's no **Google Analytics** in the search result. The **app permission policy** has worked as desired.
+#### Task 1 - Add a new emergency address
 
-6. In the left-hand navigation pane, select **Teams**, go to the **General** channel of the **Sales** team. 
+In this task, you will add a new emergency address “One Microsoft Way, Redmond, WA 98052, USA” for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
 
-7. Select the **files** tab and select **+ Add cloud storage** in the navigation pane below.
+1. Connect to the **Client 1 VM** and browse to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
 
-	**Note**: You can reload the tab or select ... if you didn't see the option. 
+2. On the left navigation pane select **Locations** > **Emergency addresses**.
 
-8. Notice that you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
+3. Select **+ Add** from the top pane to create a new emergency address.
 
-9. Sign out of Teams and close all open windows.
+4. On the **Emergency addresses\New emergency address** page, enter the following information:
+
+	- Put in a name for your location: **Contoso Emergency Address**
+
+	- Country or region: **United States**
+
+	- Address: **1 Microsoft Way, Redmond, WA 98052**
+
+		(You can enable **Input address manually**, and enter the address manually)
+
+5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Close** the page and continue to the next task.
+
+6. Select **Save**.
+
+7. Sign out and close the browser.
+
+You have successfully created an emergency address that can be used for phone numbers.
+
+#### Task 2 – Activate a trial Calling Plan
+
+In this task, you will activate the Calling Plan Add-on Trial for your tenant so you can assign the calling plan to your users.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
+
+3. On the **Pick an account** page, select the **MOD Administrator**(Admin@<YourTenant>.onmicrosoft.com) and sign in with the provided credentials.
+
+4. Open the Navigation Menu in the upper left corner and select **Billing &gt; purchase services**.
+
+5. Select **Add-ons**.
+
+6. Scroll down until you see **Microsoft Teams Domestic Calling Plan** (you may have to select **See more add-ons products**) and select **Details**.
+
+7. Select **Start free trial**.
+
+8. Select **Try now** to get 25 Calling Plans for a month.
+
+9. Select **Continue** to continue past the order receipt.
+
+You now have 25 Calling Plan licenses to assign to your users to test Domestic Calling Plan capabilities.
+
+#### Task 3 – Assign a Calling Plan license to a user
+
+In this task, you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Microsoft 365 admin center** and signed in as **MOD Administrator** (Admin@<YourTenant>.onmicrosoft.com).
+
+3. Open the Navigation Menu in the upper left corner and select **Users**.
+
+4. Select **Active users**.
+
+5. Search for **Lynne Robbins** and open the additional settings by selecting her name.
+
+6. Select **Licenses and apps**.
+
+7. Under **Licenses** select **Microsoft Teams Domestic Calling Plan** by setting the checkmark in front of it.
+
+8. Select **Save Changes** to assign the license and then sign out and close all open windows.
+
+You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
+
+#### Task 4 – Order a phone number for your user
+
+In this task, you will order a phone number for a user with an assigned Calling Plan license.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com) and sign in with the provided credentials.
+
+3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
+
+4. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
+
+5. Select **+ Add** in the right pane.
+
+6. Type **Phone number order** as the **Order Name**.
+
+7. Fill out the description as **Number for Lynne Robbins during the Calling Plan trial**.
+
+8. In the dropdown menu of **Country or region**, select **United States**.
+
+9. For **Number Type** select **User (Subscriber)**.
+
+10. For the Operator, pick Microsoft
+
+11. For **Quantity** type 1.
+
+12. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
+
+	- Search by city name
+
+		- Select **Search by city name**.
+
+		- Search **Redmond** and select **Contoso Emergency Address**, which is the location you just created.
+
+		- Select Area code **425**.
+
+		- Select **Next**.
+
+	- Search by area code
+
+		- Select **Search by area code**.
+
+		- Enter an area code in United States.
+
+		- Select **Next**.
+
+	**Note**: If you received the following message, please try other area codes or create another location by selecting **Add a location** which is next to the **Search by city name**. It will navigate to the **New emergency address** pane, enter the new name for the emergency address, then in the **Country or region** select **United States** and enter the new address manually in the **Address** field by enabling the slider **Input address manually** and select **Save**. It takes back to the **Get Phone numbers** page and continues the city search with the newly created emergency address to acquire the phone number.
+
+	*We can’t find any phone numbers for the address you selected.*
+
+13. Once you reserved a phone number successfully, you can proceed by selecting **Place order**, then **Finish**.
+
+**Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab.
+
+You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call Queues.
+
+#### Task 5 – Assign a phone number to your user
+
+In this Task, you will assign an existing phone number to a user.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
+
+3. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
+
+4. Select the phone number you want to assign and select **edit** to open the options.
+
+5. Under **Assigned to** search for **Lynne Robbins** and select **assign**.
+
+6. Under **Emergency Location** select **Search by the location description**.
+
+7. Type **Contoso** to search for the emergency location you created earlier.
+
+8. Select **Apply** to assign the phone number to the user.
+
+### **Exercise 4: Manage Teams Phone** 
+
+Contoso organization is using the legacy PBX system. With the introduction of Microsoft Teams, Contoso will migrate their legacy telephony system to Microsoft Teams Phone. Teams admins are responsible for evaluating and testing Microsoft Teams voice functionalities.
+
+#### Task 1 - Create a calling policy
+
+As part of your pilot project for calling functionalities with Microsoft Teams, you have the requirement that all pilot users receive access to the voicemail functionalities. You create and assign a new calling policy and configure the settings. However, all other users should not receive voicemail functionalities during the testing period. Therefore, you will edit the default policy to ensure that voicemail is disabled for all other users.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. On the left navigation pane, select **Voice**, and then **Calling policies** below.
+
+4. Select the **Global (Org-wide default)** policy to edit the default settings.
+
+5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail is available for routing inbound calls** and select **Not Enabled**. Then select **Save**.
+
+6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
+
+7. Enter the following information:
+
+	- Add new calling policy: **Voicemail enabled pilot users**
+
+	- Description: **Calling policy that allows voicemail for selected pilot users**.
+
+	- Voicemail is available for routing inbound calls: **Enabled**
+
+8. Select **Save** to create the new policy.
+
+9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Assign users** from the top pane.
+
+10. In the right-side pane, type into the search field **Megan, Alex, Joni, Lynne** and select **Add** right from their names.
+
+11. Select **Apply** to assign the policy to the selected users.
+
+In this task, you have disabled voicemail for all users in the organizations, and then you have created a calling policy that will enable voicemail for several users.
+
+#### Task 2 - Create a call queue
+
+Contoso Ltd. has deployed Microsoft Teams voice functionalities throughout the organization. To deploy some automation for incoming support calls, the calling queue functionalities need to be tested before being rolled out. The following settings shall be configured for customers calling in:
+
+1. A greeting message.
+
+2. Music while people are waiting on hold.
+
+3. Redirecting calls to call agents in mail-enabled distribution lists and security groups.
+
+As Teams admin, you are responsible for creating the call queue and configuring different parameters, such as maximum queue size, timeout, and call handling options.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
+
+4. On the **Resource accounts** page, select **+ Add** from the top pane.
+
+5. On the right pane, enter the following information:
+
+	- Display name: **Contoso Call Queue Resource Account**
+
+	- Username: **pilot_callqueue1**
+
+	- Resource Account Type: **Call queue**
+
+6. Select **Save**.
+
+7. Download the file **Alarm03.wav** from the following link and save to the Downloads folder.
+
+   [https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav](https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav)
+
+8. On the left navigation pane, select **Voice** and **Call queues**, to create a call queue.
+
+9. Select **+ Add** from the top pane.
+
+10. Enter the following information:
+
+	- Call queue name: **Contoso Call Queue**
+
+	- You haven’t added any resource accounts yet: Select **Add**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
+	
+	- Language: **English (United States)**
+
+	- Greeting: select **Play an audio file**, and then select **Upload file**.
+
+	- In **Open** window, navigate to the Downloads folder, select **Alarm03.wav** and select **Open**.
+
+	- Music on hold: **Play default music**
+
+	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane.
+
+	- Routing method: **Round robin**
+
+	- Presence-based routing: **Off**
+
+	- Call agents can opt out of taking calls: **On**
+
+	- Call agent alert time: **30 seconds**
+
+	- Maximum calls in the queue: **50**
+
+	- When the maximum number of calls is reached: **Disconnect**
+
+	- Call time out handling maximum wait time: **5 minutes**
+
+	- When call times out: **Disconnect**
+
+11. Select **Submit** to create the new call queue.
+
+Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
+
+**Note:** Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
+
+#### Task 3 - Create an auto attendant
+
+As Teams admin, you were tasked to create an auto attendant with a transcribed welcome message that will respond to customers outside of office hours. As some of your employees work in different time zones, the auto-attendant informs a caller that the subscriber is currently on vacation and to call another person in the organization. Furthermore, the auto-attendant informs callers about business hours.
+
+1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create the resource account first.
+
+4. On the **Resource accounts** page, select **+ Add** from the top pane.
+
+5. On the right pane, enter the following information:
+
+	- Display name: **Contoso Auto Attendant**
+
+	- Username: **pilot_autoattendant1**
+
+	- Resource Account Type: **Auto attendant**
+
+6. Select **Save**.
+
+7. On the left navigation pane, select **Voice** and **Auto attendants** below.
+
+8. Select **+ Add** from the top pane, to create a new auto-attendant.
+
+9. Enter the following information:
+
+	- Add a name for your auto attendant: **Contoso Auto attendant**
+
+	- Operator: **Voice app**
+
+	- Search by resource account: **Contoso Call Queue Resource Account**
+
+	- Time zone: **(UTC-08:00) Pacific Time (US &amp; Canada)**
+
+	- Language: **English (United States)**
+
+	- Enable voice inputs: **Off**
+
+10. Select **Next**.
+
+11. On the **Call flow** page, configure the following:
+
+	- First, play a greeting message: Select **Add a greeting message**
+
+	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
+
+	- Then route the call: **Redirect call**
+
+	- Redirect to: **Voice app**
+
+	- Search by resource account: **Contoso Call Queue Resource Account**
+
+12. Select **Next**.
+
+13. On the **Set business hours** page, configure the following:
+
+	- Select **Clear all hours**
+
+	- Configure working hours **Monday** to **Friday** from **08:00 AM** to **04:00 PM**
+
+	- Leave **Saturday** and **Sunday** blank.
+
+	- First, play a greeting message: **Add a greeting message**
+
+	- Type in: **Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.**
+
+	- Then route the call: **Disconnect**
+
+14. Select **Next**.
+
+15. On the **Holiday call settings** page, select **Next**.
+
+16. On the **Dial scope** page, select **Next**.
+
+17. On the **Resource accounts** page, select **Add**. In the right-side pane, type **Contoso auto attendant**, and then select **Add** twice.
+
+18. Select **Submit** to finish the creation of the auto attendant.
+
+19. Close all browser windows.
+
+You have successfully created a resource account for the auto attendant and then created an auto attendant configuration.
+
+### **Exercise 5: Explore reports for call quality in Microsoft Teams**
+
+When users experience calling problems, an organization's Teams administrator must quickly diagnose and fix the problems. The Teams client, the network, and any number of configuration issues in the Microsoft Teams admin center can disrupt an organization's users from effectively sending and receiving calls and participating in Teams meetings.
+
+In this exercise, you'll explore the monitoring and troubleshooting tools available in Teams admin center, including call analytics, and the call quality dashboard to investigate voice issues.
+
+Note: As we have not made any calls in this environment, reports will be blank and incomplete. 
+
+#### Task 1 – Explore call analytics for users, calls, and meetings
+
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@<YourTenant>.onmicrosoft.com](mailto:JoniS@<YourTenant>.onmicrosoft.com)).
+
+2. In the left-hand navigation pane, select **Users&gt;Manage users**, and then select a user.
+
+3. On the **User** page, select **Meetings &amp; calls** tab.
+
+ 
+
+4. Call analytics page displays all calls and meetings for the selected user, 
+
+By selecting a session in the list, you can view other information about a given session, including detailed media and networking statistics for call and meeting activities.
+
+#### Task 2 – Explore Call Quality Dashboard (CQD)
+
+CQD is designed to help Microsoft Teams administrators and network engineers monitor call and meeting quality at an organization-wide level. The near real-time data enables Teams admins to quickly resolve issues by drilling down to find where issues originated, and who was affected.
+
+In this task you navigate to Call Quality Dashboard
+
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@<YourTenant>.onmicrosoft.com](mailto:JoniS@<YourTenant>.onmicrosoft.com)).
+
+2. In the left-hand navigation pane, select **Call Quality Dashboard** at the bottom.
+
+3. A new browser tab with the url [**https://cqd.teams.microsoft.com/**](https://cqd.teams.microsoft.com/) will open. You will be prompted to sign-in, when you access the CQD portal for the first time.
+
+4. When you first sign into the CQD Portal, you'll see the summary reports with daily and monthly call quality trends. Call quality is classified as good, poor, or unclassified. 
+
+5. From the **Product Filter** dropdown menu, select **Microsoft Teams**. 
+
+6. Explore the data under different tabs, including Overall Call Quality, Server-Client, Client-Client, and Voice Quality SLA.
+
+In this exercise you have learnt how to access and navigate call analytics and Call Quality Dashboard.
 
 END OF LAB
+
+ 
