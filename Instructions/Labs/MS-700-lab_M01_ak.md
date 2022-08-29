@@ -540,12 +540,15 @@ You are an administrator for your Team’s organization. You need to limit which
         ```powershell
         Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
         ```
-6. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
+6. In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
     ```powershell
     Disconnect-AzureAD
     ``` 
-
+	
+7. Close the PowerShell window and continue to the next task.
+	
+	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
 #### Task 3 - Configure a new naming policy
