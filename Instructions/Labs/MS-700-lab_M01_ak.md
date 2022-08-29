@@ -16,17 +16,17 @@ In the labs, of this course, you will assume the role of Joni Sherman, a Teams A
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
-- Joni Sherman (JoniS@<YourTenant>.OnMicrosoft.com) **Teams administrator**
+- Joni Sherman (JoniS@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams administrator**
 
-- Patti Fernandez (PattiF@<YourTenant>.OnMicrosoft.com) **Teams device administrator**
+- Patti Fernandez (PattiF@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams device administrator**
 
-- Allan Deyoung (AllanD@<YourTenant>.OnMicrosoft.com) **Teams communication support engineer**
+- Allan Deyoung (AllanD@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams communication support engineer**
 
-- Alex Wilber (AlexW@<YourTenant>.OnMicrosoft.com) **Regular pilot user from Canada**
+- Alex Wilber (AlexW@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user from Canada**
 
-- Lynne Robbins (LynneR@<YourTenant>.OnMicrosoft.com) **Regular pilot user**
+- Lynne Robbins (LynneR@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user**
 
-- Diego Siciliani (DiegoS@<YourTenant>.OnMicrosoft.com) **Regular pilot user**
+- Diego Siciliani (DiegoS@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user**
 
 ## **Objectives**
 
@@ -96,13 +96,13 @@ Besides two VMs, you will also be provided with a Microsoft 365 tenant with the 
 
 - The username of the Global Administrator (MOD Administrator) is **admin@&lt;YourTenant&gt;.onmicrosoft.com**.
 
-- **&lt;YourTenant&gt;.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (<YourTenant>) is the unique tenant ID provided by the lab hosting provider. The <YourTenant> portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
+- **&lt;YourTenant&gt;.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (&lt;YourTenant&gt;) is the unique tenant ID provided by the lab hosting provider. The &lt;YourTenant&gt; portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
 
-- **IMPORTANT:** This is critical because, throughout this lab, you will be asked to enter the **&lt;YourTenant&gt;.onmicrosoft.com** domain name when signing into apps with a given username (for example, JoniS@<YourTenant>.onmicrosoft.com). When doing so, you must enter the unique tenant suffix ID that is assigned to your tenant ID in place of the **&lt;YourTenant&gt;**.
+- **IMPORTANT:** This is critical because, throughout this lab, you will be asked to enter the **&lt;YourTenant&gt;.onmicrosoft.com** domain name when signing into apps with a given username (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com). When doing so, you must enter the unique tenant suffix ID that is assigned to your tenant ID in place of the **&lt;YourTenant&gt;**.
 
-- For example, if your Tenant Email is **admin@contosolab.onmicrosoft.com**, the unique tenant suffix ID (<YourTenant>) is **contosolab**. When signing in as Joni when entering this domain, you would replace <YourTenant> with contosolab (for example, JoniS@contosolab.onmicrosoft.com).
+- For example, if your Tenant Email is **admin@contosolab.onmicrosoft.com**, the unique tenant suffix ID (&lt;YourTenant&gt;) is **contosolab**. When signing in as Joni when entering this domain, you would replace &lt;YourTenant&gt; with contosolab (for example, JoniS@contosolab.onmicrosoft.com).
 
-- **RECOMMENDATION:** You should write down your unique tenant suffix, mentioned as <YourTenant> in this lab and provided by your training provider. After a while, you will have this name or number memorized as you move through the labs in this course.
+- **RECOMMENDATION:** You should write down your unique tenant suffix, mentioned as &lt;YourTenant&gt; in this lab and provided by your training provider. After a while, you will have this name or number memorized as you move through the labs in this course.
 
 - **Use the new Microsoft 365 admin center**
 
@@ -122,7 +122,7 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-	- Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@<YourTenant>.onmicrosoft.com).
+	- Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. To assign **Teams admin** role to **Joni Sherman**
 
@@ -188,13 +188,13 @@ You have finished the first exercise, and you can continue with the next one.
 
 In this exercise, you will explore the Teams admin center and install the Teams PowerShell module, required to manage teams, policy packages, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center and the PowerShell. You can create scripts for automation and even access several settings not available in the GUI.
 
-To perform these tasks, you will use Joni Sherman’s account (JoniS@_<YourTenant>_.onmicrosoft.com).
+To perform these tasks, you will use Joni Sherman’s account (JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com).
 
 #### **Task 1 - Explore Teams admin center**
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
@@ -232,7 +232,7 @@ In this task, you will install and connect with the Teams PowerShell module to y
 
 		- Connect-MicrosoftTeams
 
-	- In the Sign-in window, sign in as the Teams admin - Joni Sherman (JoniS@<YourTenant>.onmicrosoft.com).
+	- In the Sign-in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	- When the sign-in was successful, several information about the signed-in user and the tenant are displayed.
 
@@ -270,7 +270,7 @@ In this exercise, you will create a Microsoft 365 group from the Microsoft 365 a
 
 You will create a new Microsoft 365 Group named “IT-Department,” and then add the pilot members serving as a basis for your future teams and licensing.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -337,7 +337,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 2. Select the **Teams** icon on the taskbar to start the Teams, desktop client.
 
-3. Select on **"Get Started"** and Sign in as **Alex Wilber** (AlexW@<YourTenant>.onmicrosoft.com). At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
+3. Select on **"Get Started"** and Sign in as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com). At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
 	**Note**: If you don’t have Alex's password, you can reset Alex's password with the following steps:
 	
@@ -374,7 +374,7 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@<YourTenant>.onmicrosoft.com).
+2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
@@ -406,7 +406,7 @@ Based on the organization’s requirement, unneeded groups should be deleted aut
 
 	- In the dropdown menu of **Group lifetime (in days)**, select **Custom** and enter **90** to the text box.
 
-	- In the text box right from **Email contact for groups with no owners**, enter (JoniS@<YourTenant>.onmicrosoft.com).
+	- In the text box right from **Email contact for groups with no owners**, enter (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	- Right from **Enable expiration for the Office 365 groups**, select **Selected**.
 
@@ -424,7 +424,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@<YourTenant>.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -600,7 +600,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 **Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@<YourTenant>.onmicrosoft.com)
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
 2. In the Teams desktop client, select **Teams** from the left menu.
 
@@ -636,7 +636,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@<YourTenant>.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation of the Teams admin center, select **Policy packages**.
 
@@ -684,7 +684,7 @@ In this exercise, you will configure users to explore and evaluate upcoming feat
 
 #### Task 1 - Create a custom Update policy
 
-1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** ([JoniS@<YourTenant>.onmicrosoft.com](mailto:JoniS@<YourTenant>.onmicrosoft.com))
+1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com))
 
 	**Note**: You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
