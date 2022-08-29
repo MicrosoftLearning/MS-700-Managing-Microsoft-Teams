@@ -337,7 +337,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 2. Select the **Teams** icon on the taskbar to start the Teams, desktop client.
 
-3. Select on **"Get Started"** and Sign in as **Alex Wilber** (AlexW@<YourTenant>.onmicrosoft.com).
+3. Select on **"Get Started"** and Sign in as **Alex Wilber** (AlexW@<YourTenant>.onmicrosoft.com). At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
 	**Note**: If you don’t have Alex's password, you can reset Alex's password with the following steps:
 	
