@@ -770,9 +770,9 @@ In this exercise, you will calculate the network requirements for Microsoft team
 
 | **Location**| **Total number of employees**| **WAN link capacity / audio/video queue size (Mbps)**| **Office 365 connection**| **Internet connection** |
 | - | - | - | - | - |
-| New York HQ| 1000| 1000/300/500| ExpressRoute| Local Internet 1000 Mbps |
-| Los Angeles Office| 250| 500/100/200| Remote connection through HQ| Remote Internet through HQ |
-| Houston Office| 150| 400/50/100| Remote connection through HQ| Remote Internet through HQ |
+| New York HQ| 1000 <br/><br/>(100 Specialized calling only employees)| 1000/300/500| ExpressRoute| Local Internet 1000 Mbps |
+| Los Angeles Office| 250<br/><br/>(50 Specialized calling only employees)| 500/100/200| Remote connection through HQ| Remote Internet through HQ |
+| Houston Office| 150<br/><br/>(50 Specialized calling only employees)| 400/50/100| Remote connection through HQ| Remote Internet through HQ |
 
 
 Next, you will analyze your current bandwidth usage and test your network quality and connection to Microsoft Teams. You will also need to troubleshoot potential voice quality issues.
@@ -781,81 +781,96 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. In the **Teams admin center,** on the left-hand navigation pane, expand **Planning**, and select **Network Planner**.
+3. Create a network plan
+	
+	1. On the left-hand navigation pane, expand **Planning**, and select **Network Planner**.
 
-4. On the **Network planner** page, under **Network plans** tab, select **Add**.
+	2. On the **Network planner** page, under **Network plans** tab, select **Add** and create a network plan with the following information.
 
-5. On the **Network plan name** page, in the **Network plan name** box, type **Contoso plan**, and in the **Description** box type **Contoso Teams Network plan**, and then select **Apply**.
+		- Network plan name: **Contoso plan**
+		- Description: **Contoso Teams Network plan**
+		- Select **Apply**.
 
-6. On the **Network planner** page, select **Personas** tab, and then select **+ Add**.
+4. Create a custom personas
 
-7. On the **Add persona** page, in the **Persona name** box type **New York office**, in the **Description** box type **New York office Teams users**, under the **Permissions** section, turn **On** all buttons, and then select **Apply**.
+	1. On the **Network planner** page, select **Personas** tab, and then select **+ Add**. 
 
-8. Select **+ Add** again, and on the **Add persona** page, in the **Persona name** box type **Los Angeles office**, in the **Description** box type **Los Angeles office Teams users**, under the **Permissions** section, turn **Off PSTN** button, and turn **On** all other buttons, and then select **Apply**.
+	2. On the **Add persona** page, create a custom personas with the following information.
 
-9. Select the **Networks plans** tab, then select **Contoso plan**, and under **Network sites** tab, select **+ Add network site**.
+		- Persona name: **Calling only**
+		- Description: **Specialized calling only employees**
+		- Permissions: Turn on **Audio**
+		- Select **Apply**.
 
-10. On the **Network site** page, enter the following information:
+	3. Note the default personas recommended by Microsoft.
+	
+5. Create network sites.
 
-	- In the **Network site name** field, type **New York HQ site**.
+	1. Select the **Networks plans** tab, then select **Contoso plan**.
+	2. Under **Network sites** tab, select **+ Add network site**. 
+	3. Create a network site for **New Your HQ** with the following information.
 
-	- In the description field type **New York HQ site network infrastructure**.
+		- Network site name: **New York HQ site**
+		- Description: **New York HQ site network infrastructure**
+		- Network users: **1000**
+		- Network settings - Subnet: **172.16.0.0**
+		- Network settings - Network range: **16**
+		- Turn **On** the **Express Route** button.
+		- Internet link capacity: **1000**
+		- PSTN egress: choose **Use VoIP only**
+		- Select **Save**.
 
-	- In the **Network users** field type **1000**.
+	4. Repeat the same steps to create a network site for **Los Angeles office** with the following information.
 
-	- In the **Network settings** section, in the **Subnet** box type **172.16.0.0**, and in the **Network range** box type **16**.
+		- Network site name: **Los Angeles site**
+		- Description: **Los Angeles site network infrastructure**
+		- Network users: **250**
+		- Network settings - Subnet: **192.168.10.0**
+		- Network settings - Network range: **24**
+		- Ensure **Express Route** button is **Off**.
+		- Turn **On** the **Connected to WAN** button.
+		- WAN link capacity: **500**
+		- WAN audio queue size: **100**
+		- WAN video queue size: **200**
+		- PSTN egress: choose **Use VoIP only**
+		- Select **Save**.
 
-	- In the **Network settings** section, turn **On** the **Express Route** button.
+	5. Repeat the same steps to create a network site for **Houston office** with the following information.
 
-	- In the **Network settings** section, in the **Internet link capacity** box, type **1000**.
+		- Network site name: **Houston site**
+		- Description: **Houston site network infrastructure**
+		- Network users: **150**
+		- Network settings - Subnet: **192.168.20.0**
+		- Network settings - Network range: **24**
+		- Ensure **Express Route** button is **Off**.
+		- Turn **On** the **Connected to WAN** button.
+		- WAN link capacity: **400**
+		- WAN audio queue size: **50**
+		- WAN video queue size: **100**
+		- PSTN egress: choose **Use VoIP only**
+		- Select **Save**.
 
-	- In the **Network settings** section, in the **PSTN egress** drop-down box, choose **Use VoIP only**, and then select **Save**.
+6. Create a report
+	
+	1. On the **Contoso plan** page, select **Report** tab and then select **+ Add report**.
 
-11. On the **Contoso plan** page, under **Network sites** tab, select **+ Add network site**.
+	2. Create a report with the following information.
 
-12. On the **Network site** page, enter the following information:
+		- Report name: **Contoso report**
+		- Description: **Contoso network estimation report**
+		- Under the **Calculation** section, specify the **Persona** and **Network users** with the following information.
 
-	- In the **Network site name** field, type **Los Angeles site**.
+			| **Network site**| **Persona** and **Network users**| 
+			| - | - | 
+			| New York HQ| Office Worker: 900 <br/><br/>Calling only: 100|
+			| Los Angeles Office|Office Worker: 200 <br/><br/>Calling only: 50|
+			| Houston Office|Office Worker: 100 <br/><br/>Calling only: 50|
 
-	- In the description field type **Los Angeles site network infrastructure**.
+	3. Select **Generate report**.
 
-	- In the **Network users** field type **250**.
+7. Under the **Reports** section, review the impact of Microsoft Teams on the Contoso network infrastructure by analyzing the report results on bandwidth needed for audio, video, screen sharing, Microsoft 365 traffic, and PSTN.
 
-	- In the **Network settings** section, in the **Subnet** box type **192.168.10.0**, and in the **Network range** box type **24**.
-
-	- In the **Network settings** section, ensure **ExpressRoute** button is **Off**.
-
-	- In the **Network settings** section, turn **On** the **Connected to WAN** button, then in **WAN link capacity** box type **500**, in the **WAN audio queue size** box type **100**, and in **Video queue size** box type **200**.
-
-	- In the **Network settings** section, in the **PSTN egress** drop-down box, **choose VoIP only**, and then select **Save**.
-
-13. On the **Contoso plan** page, under **Network sites** tab, select **+ Add network site**.
-
-14. On the **Network site** page, enter the following information:
-
-	- In the **Network site name** field, type **Houston site**.
-
-	- In the description field type **Houston site network infrastructure**.
-
-	- In the **Network users** field type **150**.
-
-	- In the **Network settings** section, in the **Subnet** box type **192.168.20.0**, and in the **Network range** box type **24**.
-
-	- In the **Network settings** section, ensure ExpressRoute button is **Off**.
-
-	- In the **Network settings** section, turn **On** the **Connected to WAN** button, then in **WAN link capacity** box type **400**, in the **WAN audio queue size** box type **50**, and in **Video queue size** box type **100**.
-
-	- In the **Network settings** section, in the **PSTN egress** drop-down box, **choose VoIP only**, and then select **Save**.
-
-15. On the **Contoso plan** page, select **Report** tab and then select **Start a report**.
-
-16. On the Report page, in the **Report name** field, type **Contoso report,** and in the description field, type **Contoso network estimation report**.
-
-17. Under the **Calculation** section, review the default distribution of different personas in each site, and then select **Generate report**.
-
-18. Under the **Reports** section, review the impact of Microsoft Teams on the Contoso network infrastructure by analyzing the report results on bandwidth needed for audio, video, screen sharing, Office 365 traffic, and PSTN.
-
-19. On the report page, select the **Switch to chart view** at the upper-right hand corner to display report results in different views.
+8. On the report page, select the **Chart view** at the upper-right hand corner to display report results in different views.
 
 Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impacts on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
 
