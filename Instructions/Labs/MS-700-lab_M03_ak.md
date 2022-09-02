@@ -675,7 +675,7 @@ In this task, you will test the blocked app.
 
 3. Search **Google** from the search box.
 
-4. Notice there’s no **Google Analytics** in the search result. 
+4. In the search results select **Google Analytics**. Note the lock icon and the "Request approval" button. 
 
 5. In the left-hand navigation pane, select **Teams**, go to the **General** channel of the **Sales** team.
 
