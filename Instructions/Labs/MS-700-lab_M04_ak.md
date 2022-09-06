@@ -585,7 +585,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 6. Select **Save**.
 
-7. On the left navigation pane, select **Voice** and **Auto attendants** below.
+7. On the left navigation pane, select **Voice** and then **Auto attendants** below.
 
 8. Select **+ Add** from the top pane, to create a new auto-attendant.
 
