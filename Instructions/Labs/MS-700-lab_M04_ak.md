@@ -481,7 +481,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Assign users** from the top pane.
 
-10. In the right-side pane, type into the search field **Megan, Alex, Joni, Lynne** and select **Add** right from their names.
+10. In the right-side pane, type into the search field **Megan** then select **add**. Repeat the same steps for **Alex, Joni and Lynne**.
 
 11. Select **Apply** to assign the policy to the selected users.
 
