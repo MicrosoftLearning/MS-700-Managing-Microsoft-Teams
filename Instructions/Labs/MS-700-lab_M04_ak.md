@@ -611,7 +611,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
 
-	- Then route the call: **Redirect call**
+	- Then under Call routing options select **Redirect call**
 
 	- Redirect to: **Voice app**
 
