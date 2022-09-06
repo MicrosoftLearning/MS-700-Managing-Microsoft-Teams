@@ -268,13 +268,13 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 		* Automatically decline meetings outside of the limits
 		* auto-accept meeting requests
 	
-3. Get Microsoft Teams Rooms Standard trial licenses
+3. Get Microsoft Teams Rooms Pro trial licenses
 
 	1. In the **Microsoft 365 admin center** from the left navigation pane, under **Billing** select **Purchase services**.
 
 	2. In the **Search** box on the right, type **Meeting Room** and then hit Enter.
 
-	3. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Standard** tile, select **Details** and then select **Start free trial**.
+	3. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Pro** tile, select **Details** and then select **Start free trial**.
 
 	4. In the **Check out** page, select **Try now**, and in the **order receipt** page, select **Continue**.
 
@@ -284,7 +284,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 	2. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
 
-	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Standard** and then select **Save changes**.
+	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Pro** and then select **Save changes**.
 
 5. Sign out and close all open windows.
 
@@ -319,7 +319,7 @@ In this task, you will add a new emergency address “One Microsoft Way, Redmond
 
 		(You can enable **Input address manually**, and enter the address manually)
 
-5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Close** the page and continue to the next task.
+5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Cancel** the page and continue to the next task.
 
 6. Select **Save**.
 
@@ -481,7 +481,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Assign users** from the top pane.
 
-10. In the right-side pane, type into the search field **Megan, Alex, Joni, Lynne** and select **Add** right from their names.
+10. In the right-side pane, type into the search field **Megan** then select **add**. Repeat the same steps for **Alex, Joni and Lynne**.
 
 11. Select **Apply** to assign the policy to the selected users.
 
@@ -585,7 +585,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 6. Select **Save**.
 
-7. On the left navigation pane, select **Voice** and **Auto attendants** below.
+7. On the left navigation pane, select **Voice** and then **Auto attendants** below.
 
 8. Select **+ Add** from the top pane, to create a new auto-attendant.
 
@@ -611,7 +611,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
 
-	- Then route the call: **Redirect call**
+	- Then under Call routing options select **Redirect call**
 
 	- Redirect to: **Voice app**
 
