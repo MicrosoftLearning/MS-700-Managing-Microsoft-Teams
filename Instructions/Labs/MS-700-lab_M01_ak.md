@@ -452,7 +452,7 @@ You are an administrator for your Team’s organization. You need to limit which
 		- Members: Select **View all and manage members** > **+ Add members**, and add the following users:
 
 			- Joni Sherman
-			- Alex Willber
+			- Alex Wilber
 
 5. Restrict the Microsoft 365 groups creation to the security group.
 
