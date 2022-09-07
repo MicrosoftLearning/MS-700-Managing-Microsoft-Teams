@@ -505,7 +505,7 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select **Data lifecycle management**.
+2. In the left navigation of the Microsoft Purview Portal, select **Data lifecycle management**. From the drop down select **Microsoft 365**.
 
 3. On the **Data lifecycle management** page, under **Retention** policies tab, select +New retention policy to add new Retention Policy. 
 
