@@ -162,14 +162,14 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 	 
 	5. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and closing the page.
 	6. Go back to the **Teams.Microsoft.com/scheduling** window and click **Send** button to activate the Webinar registration.
-	7. Click **Teams** on the left navigation pane, Select **General** under the **IT-Support**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
+	7. Click **Teams** on the left navigation pane, Select **General** under the **IT-Department**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
 	8. Sign out and close all browser windows.
 		
 6. Test the meeting registration. 
 
 	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
 
-	2. Go to the **General** channel of the **IT Support** team and select the registration link that you posted.
+	2. Go to the **General** channel of the **IT Department** team and select the registration link that you posted.
 
 	3. Fill out the registration form using \<Your outlook account\> and select **Register now**.
 
