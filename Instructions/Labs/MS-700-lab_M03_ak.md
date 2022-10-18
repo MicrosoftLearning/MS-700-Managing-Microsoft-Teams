@@ -611,7 +611,7 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 4. Enter the following information
 
 	- Name: **Sales team**
-	- Description: Install Adobe Acrobat Sign and pin Viva Goals.
+	- Description: **Install Adobe Acrobat Sign and pin Viva Goals**.
 	- User pinning: **On**
 	- To install apps for users:
 
