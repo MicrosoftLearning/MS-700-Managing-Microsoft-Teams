@@ -290,7 +290,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Name**: Internal
 		- **Display name**: Internal
 		- **Description for users**: Internal information with sharing protection
-		- **Description for admins**: Internal information with moderate encryption, marking, and sharing restriction settings activated
+		- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
 
 	2. In the **Scope** section, select **Items** and **Groups &amp; Sites** 
 
@@ -301,7 +301,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 	4. In the **Encryption** section, 
 
-		* Select **configure encryption settings**
+		* Select **Configure encryption settings**
 		* Assign permissions now or let users decide: **Assign permissions now**.
 		* User access to content expires: **Never**.
 		* Allow offline access: **Always**.
@@ -345,7 +345,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Name**: Leave unchanged
 		- **Display name**: Confidential
 		- **Description for users**: Leave unchanged
-		- **Description for admins**: Confidential information with all restrictive encryption, marking, and sharing settings activated
+		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
 	2. In the **Scope** section, select **Items** and **Groups &amp; Sites** 
 
@@ -356,7 +356,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 	4. In the **Encryption** section, 
 
-		* Select **configure encryption settings**
+		* Select **Configure encryption settings**
 		* Assign permissions now or let users decide: **Assign permissions now**.
 		* User access to content expires: **Never**.
 		* Allow offline access: **Never**.
