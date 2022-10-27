@@ -315,7 +315,7 @@ You will create a new Microsoft 365 Group named “IT-Department,” and then ad
 
 		- Enter **IT-Department** for Group email address.
 
-		- Privacy: Private
+		- Privacy: **Private**
 
 		- Uncheck **Create a team for this group**.
 
@@ -341,7 +341,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 	**Note**: If you don’t have Alex's password, you can reset Alex's password with the following steps:
 	
-	1. Login to Microsoft 365 Admin Center as MOD Administrator. 
+	1. Login to **Microsoft 365 Admin Center** as **MOD Administrator**. 
 	2. On the **Users &gt; Active users** page, select the name of **Alex Wilber**. 
 	3. Select **Reset password** from the top, then select **Automatically create a password** and uncheck **Require this user to change their password when they first sign in** and **Reset password**. 
 	4. Use the password under column Password to login.
