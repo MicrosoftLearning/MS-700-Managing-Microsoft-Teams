@@ -399,7 +399,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	3. In the **Choose sensitivity labels to publish** window, select the **Edit** Link.
 
-	4. In the **Ssensitivity labels to publish** window, check all labels and select **Add**.
+	4. In the **Sensitivity labels to publish** window, check all labels and select **Add**.
 
 	5. In the **Publish to users and groups** section, keep the default settings. 
 
