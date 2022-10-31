@@ -808,7 +808,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	1. Select the **Networks plans** tab, then select **Contoso plan**.
 	2. Under **Network sites** tab, select **+ Add network site**. 
-	3. Create a network site for **New Your HQ** with the following information.
+	3. Create a network site for **New York HQ** with the following information.
 
 		- Network site name: **New York HQ site**
 		- Description: **New York HQ site network infrastructure**
