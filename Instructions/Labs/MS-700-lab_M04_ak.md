@@ -395,9 +395,9 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 9. For **Number Type** select **User (Subscriber)**.
 
-10. For the Operator, pick Microsoft
+10. For the **Operator**, pick **Microsoft**.
 
-11. For **Quantity** type 1.
+11. For **Quantity** type **1**.
 
 12. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
 

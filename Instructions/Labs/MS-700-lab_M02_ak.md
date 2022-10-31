@@ -290,7 +290,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Name**: Internal
 		- **Display name**: Internal
 		- **Description for users**: Internal information with sharing protection
-		- **Description for admins**: Internal information with moderate encryption, marking, and sharing restriction settings activated
+		- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
 
 	2. In the **Scope** section, select **Items** and **Groups &amp; Sites** 
 
@@ -301,7 +301,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 	4. In the **Encryption** section, 
 
-		* Select **configure encryption settings**
+		* Select **Configure encryption settings**
 		* Assign permissions now or let users decide: **Assign permissions now**.
 		* User access to content expires: **Never**.
 		* Allow offline access: **Always**.
@@ -345,7 +345,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Name**: Leave unchanged
 		- **Display name**: Confidential
 		- **Description for users**: Leave unchanged
-		- **Description for admins**: Confidential information with all restrictive encryption, marking, and sharing settings activated
+		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
 	2. In the **Scope** section, select **Items** and **Groups &amp; Sites** 
 
@@ -356,7 +356,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 	4. In the **Encryption** section, 
 
-		* Select **configure encryption settings**
+		* Select **Configure encryption settings**
 		* Assign permissions now or let users decide: **Assign permissions now**.
 		* User access to content expires: **Never**.
 		* Allow offline access: **Never**.
@@ -399,7 +399,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	3. In the **Choose sensitivity labels to publish** window, select the **Edit** Link.
 
-	4. In the **Ssensitivity labels to publish** window, check all labels and select **Add**.
+	4. In the **Sensitivity labels to publish** window, check all labels and select **Add**.
 
 	5. In the **Publish to users and groups** section, keep the default settings. 
 
@@ -677,6 +677,10 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	- **Microsoft Defender for Cloud Apps**: On
 
+	- **On-premises repositories**: Off
+
+	- **Power BI**: Off
+
 7. In the **Policy settings** section, stay with the default selection and select **Next**.
 
 
@@ -686,27 +690,26 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	2. Below **Conditions**, 
 		- Select **+ Add condition** and **Content contains**.
-		- Leave the group name of **Default**, select **Add** and **Sensitive information types**.
+		- Leave the group name of **Default**, select **Add** and **Sensitive info types**.
 		- From the right-side pane, check the box left of **Credit Card Number** and select **Add**.
 		- Leave the high **High confidence** and **Instance count (1)** unchanged.
 
 			![Graphical user interface, application Description automatically generated](media/MS-700-lab_M02_ak_image6.png)
 
 	3. Below **Action**, 
-		- Select **+ Add an action** and **Restrict access or encrypt content in Microsoft 365 locations**.
-		- Select the checkbox of **Restrict access or encrypt content in Microsoft 365 locations** again and select **Block, everyone** 
+		- Select **+ Add an action** and **Restrict access or encrypt the content in Microsoft 365 locations**.
+		- Select the checkbox of **Restrict access or encrypt the content in Microsoft 365 locations** again and select **Block everyone** 
 
 			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image8.png)
 
 	4. Below **User notification**, 
 		- Select the slider to **On** 
-		- Select **Notify users in Office 365 service with a policy tip**.
+		- Select **Notify the user who sent, shared or last modified the content**.
 		- Select **Customize the policy tip text**.
 		- Enter the following text to the textbox: **Credit card numbers are not allowed to be shared!**
 
 	5. Below **Incident reports**, 
-		- Select the slider **Send an alert to admins when a rule match occurs** and select **Add or remove users and groups**.
-		- On the **Add or remove users and groups** page, select the checkbox left from **Joni Sherman** and select **Add**.
+		- Set the slider **Send an alert to admins when a rule match occurs** to **Off**.
 		- Select **Save**.
 	
 	6. Review the rule settings and select **Next**.

@@ -72,7 +72,7 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
 	- Owners: **Joni Sherman**
 
-	- Members and guests: **Allan Deyoung** and **Alex Wilber**
+	- Members and guests: **Allan Deyoung** , **MOD Administrator** and **Patti Fernandezr**
 
 10. Leave the Teams desktop client open and continue to the next task.
 
@@ -315,7 +315,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 17. After a moment, you should see a green bar with a checkmark and **Accepted** inside again.
 
-18. Open the Teams Desktop App. Select **Teams** and **Manage Teams** from the left-side pane and inspect the newly created teams “**Early Adopters"** and”**Tech Meetings**".
+18. Open the Teams Desktop App. Select **Teams** and manage teams from the left-side pane and inspect the newly created teams “**Early Adopters"** and”**Tech Meetings**".
 
 You have successfully created two teams via Graph API. Your test of the Graph functionality is complete, and you can advance to the next exercise.
 
@@ -611,7 +611,7 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 4. Enter the following information
 
 	- Name: **Sales team**
-	- Description: Install Adobe Acrobat Sign and pin Viva Goals.
+	- Description: **Install Adobe Acrobat Sign and pin Viva Goals**.
 	- User pinning: **On**
 	- To install apps for users:
 
