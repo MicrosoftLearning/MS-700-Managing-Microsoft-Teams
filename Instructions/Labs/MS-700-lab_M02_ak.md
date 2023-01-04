@@ -110,7 +110,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 4. Test the guest access
 
-	- Under the team **Group_Afterwork_United States**, select **General** channel, and send the message: **Hello!**.
+	- Under the team **Group_Afterwork_United States**, select **General** channel, select **New conversation** and send the message: **Hello!**.
 
 	- Select **…** of the message you just posted. Notice there’s no **Delete** option.
 
@@ -180,7 +180,7 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 3. On the Safe attachments page, select **Global settings**.
 
-4. In the Global settings flyout that appears, turn on the toggle under **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams**.
+4. In the Global settings flyout that appears, **Turn On** the toggle under **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams**.
 
 5. Select **Save**.
 
