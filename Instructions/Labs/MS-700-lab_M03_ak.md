@@ -102,16 +102,16 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
     New-Team -Displayname "CA-Office" -MailNickName "CA-Office" -Visibility Public
     ```
 
-7. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
+7. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.):
 
     ```powershell
-    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AlexW@&lt;YourTenant&gt;.onmicrosoft.com
+    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AlexW@<YourTenant>.OnMicrosoft.com
     ```
 
-8. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
+8. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.):
 
     ```powershell
-    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AllanD@&lt;YourTenant&gt;.onmicrosoft.com
+    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
     ```
 
 9. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
@@ -339,9 +339,9 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. Select Teams and then select on gear icon(Manage Teams) next to **Join or create a team.**
+	2. Select Teams and then select the gear icon(Manage Teams) next to **Join or create a team.**
 
-	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team . under the **Hidden teams** section. 
+	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team under the **Hidden teams** section. 
 
 	4. Select **General** channel under the **Sales** team, notice the **New conversation** option is not available.
 
