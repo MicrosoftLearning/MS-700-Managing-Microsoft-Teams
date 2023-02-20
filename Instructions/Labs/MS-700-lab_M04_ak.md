@@ -170,9 +170,13 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 7. Publish the Registration site and share the link:
 
 	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and **Publish** to activate the Webinar registration site.
+
 	2. Copy the **Share link**, close the **All set and ready to share** window and the **IT Office Hours | Microsoft Teams** tab.
+
 	3. On the **Calendar | Microsoft Teams** tab, click **Teams**. 
+	
 	4. On the left navigation pane, select **General** under the **IT-Department**. Select **New Conversation** and paste the copied registration link in the new conversation text box and select send.
+
 	5. Sign out and close all browser windows.
 		
 8. Test the meeting registration. 
