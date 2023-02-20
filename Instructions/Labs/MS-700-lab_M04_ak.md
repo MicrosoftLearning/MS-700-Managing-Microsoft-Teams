@@ -169,7 +169,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 7. Publish the Registration site and share the link:
 
-	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and **Publish** to activate the Webinar registration site.
+	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and then selet **Publish** to activate the Webinar registration site.
 
 	2. Copy the **Share link**, close the **All set and ready to share** window and the **IT Office Hours | Microsoft Teams** tab.
 
@@ -187,7 +187,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 	3. On the registration page select **Register**, verify that the MOD Administrator's name and email have been entered, select the **Microsoft Event Terms and Conditions** check box, and then select **Register**.
 
-	4. Open a new browser tab and browse to **[MOD Administrator's mail (https://outlook.office.com/mail/)](https://outlook.office.com/mail/)**, and view the email with subject: **You're registered for IT Office Hours**.
+	4. Open a new browser tab and browse to **[MOD Administrator's mail (https://outlook.office.com/mail/)](https://outlook.office.com/mail/)** and view the email with subject: **You're registered for IT Office Hours**.
 	
 	5. Sign out and close all browser windows.
 
