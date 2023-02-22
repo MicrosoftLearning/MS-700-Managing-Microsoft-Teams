@@ -106,7 +106,7 @@ You have successfully modified the meeting settings for all users in your tenant
 
 Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to manage users. Only the organizer of a live event should be able to record his meetings.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **[Microsoft Teams admin center (https://admin.teams.microsoft.com)](https://admin.teams.microsoft.com)** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
 
@@ -142,38 +142,52 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. In the Teams Calendar, select the dropdown menu **New meeting** and select **Webinar**. Scheduling page will open **Teams.Microsoft.com/Scheduling**.
+2. In the Teams Calendar, select the dropdown menu **New meeting** and select **Webinar**. The **New webinar | Microsoft Teams** tab will open.
 
-4. Create a new **webinar**:
+3. Enter the **Basic info** and then select **Save and send invites**:
 
-	- **Title**: IT Office Hours
+	- **webinar title**: IT Office Hours
 	- **Start/End**: Select a time close to your current time 
+	- **Give your webinar a description**: Company-wide meeting to answer questions regarding the new reporting system.
 	- **Presenters**: Patti Fernandez, Allan Deyoung
+	- **Co-organizers**: Diego Siciliani
+	- **Event access**: Private
 
-5. Select **View registration form**, it opens a new webpage with the url **Teams.microsoft.com/registration**. Enter the following information: 
+	**Note**: When you save the event, invites will be sent to presenters and co-organizers automatically. 
 
-	1. **Title**: IT Office Hours
-	2. Select **+ Add field** > **Custom question** > **Input**.
-	3. Enter the following to the textbox below **Custom question**:
+4. Review the **Meeting options**, the **Presenter bios** and **Theming**. 
+
+5. Complete the Registration site configuration. On the **IT Office Hours | Microsoft Teams** tab, at the left, expand **Registration** and select **Configuration**. Enter the following information and then select **Save**: 
+
+	- **Capacity**: 1000
+	- Under **Form** select **+ Add field** > **Custom question** > **Text input** and enter the following in the textbox below **Custom question**:
 
 		*What is your question about the new reporting system?*
+		 
+
+6. Preview the registration site by selecting **View draft**. The preview of the registration page opens in a new tab. After reviewing the site, close the tab.
+
+7. Publish the Registration site and share the link:
+
+	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and then selet **Publish** to activate the Webinar registration site.
+
+	2. Copy the **Share link**, close the **All set and ready to share** window and the **IT Office Hours | Microsoft Teams** tab.
+
+	3. On the **Calendar | Microsoft Teams** tab, click **Teams**. 
 	
-	4. **Start/End**: Select a time close to your current time
-	 
-	5. Select **Save** and select **Copy registration link**. Preview the invitation by clicking the **View in browser** and closing the page.
-	6. Go back to the **Teams.Microsoft.com/scheduling** window and click **Send** button to activate the Webinar registration.
-	7. Click **Teams** on the left navigation pane, Select **General** under the **IT-Department**. Click the **New Conversation** and paste the copied registration link in the new conversation text box and click send.
-	8. Sign out and close all browser windows.
+	4. On the left navigation pane, select **General** under the **IT-Department**. Select **New Conversation** and paste the copied registration link in the new conversation text box and select send.
+
+	5. Sign out and close all browser windows.
 		
-6. Test the meeting registration. 
+8. Test the meeting registration. 
 
 	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
 
 	2. Go to the **General** channel of the **IT Department** team and select the registration link that you posted.
 
-	3. Fill out the registration form using \<Your outlook account\> and select **Register now**.
+	3. On the registration page select **Register**, verify that the MOD Administrator's name and email have been entered, select the **Microsoft Event Terms and Conditions** check box, and then select **Register**.
 
-	4. Go to **Outlook Web Portal** (https://outlook.live.com/owa/), and check the email with subject **You're registered for IT Office Hours**
+	4. Open a new browser tab and browse to **[MOD Administrator's mail (https://outlook.office.com/mail/)](https://outlook.office.com/mail/)** and view the email with subject: **You're registered for IT Office Hours**.
 	
 	5. Sign out and close all browser windows.
 

@@ -608,7 +608,12 @@ According to your organization’s compliance requirements, you need to implemen
 
 	- **Teams chat and channel messages**: On
 
-	- **Microsoft Defender for Cloud Apps**: On
+	- **Microsoft Defender for Cloud Apps**: Off
+
+	- **On-premises repositories**: Off
+
+	- **Power BI (preview)**: Off
+
 
 7. In the **Policy settings** section, stay with the default selection from the template - **Review and customize default settings from the template** and select **Next**.
 
@@ -628,11 +633,8 @@ According to your organization’s compliance requirements, you need to implemen
 	3. In the **Customize access and override settings** section, ensure that the following settings are configured, and then select **Next**:
 
 		- A checkbox is selected for: **Restrict access or encrypt the content in Microsoft 365 locations**
-
 		- Select **Block users from receiving email or accessing shared SharePoint, OneDrive, and Teams content**.
-
 		- Select **Block only people outside your organization.**.
-
 		- Select **Override the rule automatically if they report it as false positive**.
 
 8. In the **Test or turn on the policy** section, select **Turn it on right away** and select **Next**.
