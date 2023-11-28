@@ -62,7 +62,7 @@ As part of your pilot project for setting up the events and meetings in your org
 
 3. Select the **Global (Org-wide default)** policy under **Manage policies**.
 
-4. On the **Meetings policies** page, turn **Off** the **Cloud recording** setting under the **Recording &amp; transcription** section.
+4. On the **Meetings policies** page, turn **Off** the **Meeting recording** setting under the **Recording & transcription** section.
 
 5. Select **Save**.
 

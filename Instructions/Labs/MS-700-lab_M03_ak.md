@@ -379,9 +379,9 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 	1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-	2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
+	2. On the left navigation pane, select **Identity* > **Groups**.
 
-	3. On the **Groups | All groups** page, select **Deleted groups** in the left side pane.
+	3. On the **Groups** page, select **Deleted groups** in the left side pane.
 
 	4. Now you can see all deleted groups, including the **Sales** group.
 
@@ -405,7 +405,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
+2. On the left navigation pane, select **Identity** > **Groups**.
 
 3. On the **Groups | All groups** page, search and select **CA-Office** group.
 

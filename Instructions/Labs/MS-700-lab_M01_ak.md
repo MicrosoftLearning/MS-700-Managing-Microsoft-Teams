@@ -401,7 +401,7 @@ Based on the organization’s requirement, unneeded groups should be deleted aut
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
+2. On the left navigation pane, select **Identity** > **Groups**.
 
 3. On the **Groups** page, select **Expiration**.
 
@@ -560,7 +560,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
 
-2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
+2. On the left navigation pane, select **Identity** > **Groups**.
 
 3. On the **Groups** page, select **Naming policy**.
 
@@ -629,7 +629,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
+2. On the left navigation pane, select **Identity** > **Groups**.
 
 3. On the **Groups** page, select **Naming policy**.
 

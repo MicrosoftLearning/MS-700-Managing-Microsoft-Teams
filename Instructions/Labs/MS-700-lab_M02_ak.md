@@ -46,7 +46,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-2. In left navigation of the Azure AD admin center, select **Users**> **User settings** > **Manage external collaboration settings** under the External users. Review the following settings for external users at the Azure AD level:
+2. In left navigation of the Azure AD admin center, select **Identity** > **Users**> **User settings** > **Manage external collaboration settings** under the External users. Review the following settings for external users at the Azure AD level:
 
 	- **Guest user access**: Guest users have limited access to properties and memberships of directory objects.
 
@@ -124,7 +124,7 @@ As a part of your system administrator role, you need to review access to resour
 
 2. Create an access review to monitor guest users.
 
-	In left navigation of the Azure AD admin center, select **All Services** and on right pane select **Identity Governance** > select the **Access Review** in the middle pane and select **+ New access review**. Follow the wizard with the following information:
+	In left navigation of the Entra admin center, select **Identity** and select **Identity Governance** > and select **Access Reviews** and select **+ New access review**. Follow the wizard with the following information:
 
 	1. On the **Review type** tab:
 	
@@ -248,7 +248,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 4. Update the first sensitivity label - **General**.
 
-	Select the **General** label and select the **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
+	Select the **General** label and select the **...** button then select the **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
 	1. In the **Name &amp; description** section, enter the following information:
 		- **Name**: Leave unchanged
@@ -284,7 +284,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 5. Create the second sensitivity label - **Internal**.
 
-	Select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
+	Select **Infromation Protection** on the left hand side navigation panel then select the **Labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
 	
 	1. In the **Name & description** section, enter the following information:
 		- **Name**: Internal
@@ -339,7 +339,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 6. Update the second sensitivity label - **Confidential**
 
-	Select the **Confidential** label and select the **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
+	Select the **Infromation protection** button on the left hand side navigation panel then select the **Lables** button then select the  **Confidential** label and select the **...** button then select **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
 	1. In the **Name & description** section, enter the following information:
 		- **Name**: Leave unchanged
@@ -463,7 +463,7 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 2. In the left navigation of the Microsoft Purview Portal, select **Data lifecycle management**.
 
-3. On the **Data lifecycle management** page, under **Retention policies** tab, select **+ New retention policy** to create a new retention policy. 
+3. On the **Data lifecycle management** page, select the **Microsoft 365** button and select the **Retention policies** tab, select **+ New retention policy** to create a new retention policy. 
 
 4. Follow the **Create retention policy** wizard with the following information:
 
