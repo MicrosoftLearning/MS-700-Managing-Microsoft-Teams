@@ -281,18 +281,8 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 		* Allow repeating meetings
 		* Automatically decline meetings outside of the limits
 		* auto-accept meeting requests
-	
-3. Get Microsoft Teams Rooms Pro trial licenses
 
-	1. In the **Microsoft 365 admin center** from the left navigation pane, under **Billing** select **Purchase services**.
-
-	2. In the **Search** box on the right, type **Meeting Room** and then hit **Enter**.
-
-	3. In the results page, locate the **Collaboration and communication** section, and under **Microsoft Teams Rooms Pro** tile, select **Details** and then select **Start free trial**.
-
-	4. In the **Check out** page, select **Try now**, and in the **order receipt** page, select **Continue**.
-
-4. Assign the license to the Teams Rooms account.
+3. Assign the license to the Teams Rooms account.
 
 	1. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
 
@@ -300,7 +290,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Pro** and then select **Save changes**.
 
-5. Sign out and close all open windows.
+4. Sign out and close all open windows.
 
 You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
  
@@ -341,31 +331,7 @@ In this task, you will add a new emergency address “One Microsoft Way, Redmond
 
 You have successfully created an emergency address that can be used for phone numbers.
 
-#### Task 2 – Activate a trial Calling Plan
-
-In this task, you will activate the Calling Plan Add-on Trial for your tenant so you can assign the calling plan to your users.
-
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
-
-2. Open **Microsoft Edge**, maximize the window and navigate to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
-
-3. On the **Pick an account** page, select the **MOD Administrator**(Admin@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
-
-4. Open the Navigation Menu in the upper left corner and select **Billing &gt; purchase services**.
-
-5. Select **Add-ons**.
-
-6. Scroll down until you see **Microsoft Teams Domestic Calling Plan** (you may have to select **See more add-ons products**) and select **Details**.
-
-7. Select **Start free trial**.
-
-8. Select **Try now** to get 25 Calling Plans for a month.
-
-9. Select **Continue** to continue past the order receipt.
-
-You now have 25 Calling Plan licenses to assign to your users to test Domestic Calling Plan capabilities.
-
-#### Task 3 – Assign a Calling Plan license to a user
+#### Task 2 – Assign a Calling Plan license to a user
 
 In this task, you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
 
@@ -387,7 +353,7 @@ In this task, you will assign the calling plan license to a user to allow them t
 
 You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
 
-#### Task 4 – Order a phone number for your user
+#### Task 3 – Order a phone number for your user
 
 In this task, you will order a phone number for a user with an assigned Calling Plan license.
 
@@ -443,7 +409,7 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call Queues.
 
-#### Task 5 – Assign a phone number to your user
+#### Task 4 – Assign a phone number to your user
 
 In this Task, you will assign an existing phone number to a user.
 
