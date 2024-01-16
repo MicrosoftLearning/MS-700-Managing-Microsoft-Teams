@@ -647,30 +647,36 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 	![Table Description automatically generated](media/MS-700-lab_M03_ak_image7.png)
 
-4. Update Messaging policy in **Frontline worker** policy package.
+4. Check the box next to **Frontline Worker (Default)** and select **Manage Users** from the navigation ribbon.
+   
+5. Search **“Joni”** and select **Add** from the drop down. Then select **Apply** at the bottom.
+   
+6. On the left Navigation, select **Users** and then **Manage Users**.
+   
+7. From the list of users select **Joni Sherman**.
+   
+8. Navigate to the **Policies Tab** and Select **Frontline_Worker** next to **Messaging Policies**.
 
-	1. Select **Frontline_Worker** right from **Messaging policy**.
-	2. Select **Edit** from the upper right corner.
-	3. Turn **On** the setting - **Send urgent messages using priority notifications** and select **Save**. 
+9. Turn on the setting - **Send urgent messages using priotiy notification** and select **Save**, if this setting is not already turned on.
 
-5. Update Calling policy in **Frontline worker** policy package.
+10. Update Calling policy in **Frontline worker** policy package.
 
 	1. Back to **Policy packages** page.
 	2. Select **Frontline worker (default)** from the list again. 
 	3. Select **Frontline_worker** right from **Calling policy**.
 	4. Turn **On** the setting - **Prevent toll bypass and send calls through the PSTN**.
-	5. Update **Busy on busy when in a call** to **Enabled**.
+	5. Update **Busy on busy when in a call** to **On**.
 	6. Select **Save**.
 
-6. Navigate to **Policy Packages** from the left navigation pane.
+11. Navigate to **Policy Packages** from the left navigation pane.
 
-7. Make sure **Frontline worker** policy package is checked.
+12. Make sure **Frontline worker** policy package is checked.
 
-8. Select **Manage users** from the top menu.
+13. Select **Manage users** from the top menu.
 
-7. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
+14. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
 
-8. Check the policy assignment.
+15. Check the policy assignment.
 
 	1. Select **Users** > **Manage users** from the left-side pane.
 
