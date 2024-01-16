@@ -175,7 +175,7 @@ In this task, you will check the license assignment of all users participating i
 
 3. Check **Alex Wilber’s** licenses
 
-	- On the same tab, under **Licenses** section, verify that **Enterprise Mobility + Security E5** and **Office 365 E5** are both selected.
+	- On the same tab, under **Licenses** section, verify that **Microsoft 365 E5 ** is selected.
 
 	- Select **Apps** to expand All licenses.
 
