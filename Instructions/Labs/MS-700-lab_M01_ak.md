@@ -278,14 +278,9 @@ You will create a new Microsoft 365 Group named “IT-Department,” and then ad
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
-3. On the **Active teams and groups** page, select **Add a group**.
+3. On the **Active teams and groups** page, select **+ Add a Microsoft 365 group**.
 
 4. Follow the **Add a group** wizard with the following information:
-
-	- Group type: Select **Microsoft 365 (recommended)**
-
-		- Select **Next**  
-
 
 	- Basics:
 
