@@ -320,7 +320,7 @@ You will create a new Microsoft 365 Group named “IT-Department,” and then ad
 
 		- Select **Next**
 
-5. Select **Create group** > **Close**.
+5. Select **+ Add a Microsoft 365 group**. > **Cancel**. When prompte to close, select **Yes**.
 
 6. Wait a moment and select **Refresh** until the group is visible. You will see there is no Teams icon in the **Teams status** column.
 
