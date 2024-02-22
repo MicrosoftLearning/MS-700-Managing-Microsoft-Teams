@@ -397,9 +397,9 @@ Based on the organization’s requirement, unneeded groups should be deleted aut
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-2. On the left navigation pane, select **Identity** > **Groups**.
+2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
 
-3. On the **Groups** page, select **Expiration**.
+3. On the **Groups | All groups** page, select **Expiration**.
 
 4. On the **Groups | Expiration** page, configure the following settings:
 
@@ -427,22 +427,26 @@ You are an administrator for your Team’s organization. You need to limit which
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
-3. On the **Active teams and groups** page, select **Add a group**.
+3. On the **Active teams and groups** page.
 
 4. Create a security group. 
 
-	Follow the **Add a group** wizard with the following information:
-
-	- Group type: Select **Security** > **Next**
+	- Navigate to the **Security groups** tab.
+        - Select the **+ Add a security group** button.
+          
+- Fill out the following information:
 	- Basics:
 
 		- Name: **GroupCreators**
 		- Description: **Users who can create Microsoft 365 Groups for new teams**
 		- Select **Next**
+    
+       - Settings:
+                - Select **Next**
 
 	- Finish: Select **Create Group** and then select **Close**
 
-	- Back to **Active teams &amp; group** page, select **Security** tab and Select on the security group **GroupCreators** you just created.
+	- Back to **Active teams &amp; group** page, select **Security groups** tab and Select on the security group **GroupCreators** you just created.
 
 	- Select **Members** tab to configure the **Owners** and **Members**.
 
