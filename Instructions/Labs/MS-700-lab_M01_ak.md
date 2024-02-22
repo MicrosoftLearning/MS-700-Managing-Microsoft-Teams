@@ -377,7 +377,7 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
-4. Select **Join or create a team** from the lower-left corner.
+4. Select **+** from the upper-left corner.
 
 5. Select **Create team** >**From scratch** > **Private**. Enter the team name **Sales** and select **Create**.
 
