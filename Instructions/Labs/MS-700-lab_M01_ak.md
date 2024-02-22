@@ -217,7 +217,8 @@ In this task, you will install and connect with the Teams PowerShell module to y
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**.
+	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the passwrod for 
+          **Client 1VM**
 
 	- Confirm the **User Account Control** window with **Yes**.
 
