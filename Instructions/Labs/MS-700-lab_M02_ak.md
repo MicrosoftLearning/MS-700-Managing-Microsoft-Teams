@@ -82,7 +82,7 @@ You have now successfully activated guest access and disallowed guests to delete
 
 #### Task 3 - Add a guest to a team
 
-In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_United States** you created from Lab 1.
+In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_** you created from Lab 1.
 
 You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
@@ -90,9 +90,9 @@ You will change the default settings for inviting/creating guest users and then 
 
 1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
-2. Add the guest to **Group_Afterwork_United States** team.
+2. Add the guest to **Group_Afterwork_** team.
 
-	- Select **Teams** > Select **…** next to the **Group_Afterwork_United States** team.
+	- Select **Teams** > Select **…** next to the **Group_Afterwork_** team.
 
 	- Select **Add member** and enter your outlook account.
 
@@ -106,7 +106,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 	- Select **Accept** and sign in to Teams web client with your outlook account.
 
-	- From the Teams client, select **Teams**, you will see the team **Group_Afterwork_United States**.
+	- From the Teams client, select **Teams**, you will see the team **Group_Afterwork_**.
 
 4. Test the guest access
 
