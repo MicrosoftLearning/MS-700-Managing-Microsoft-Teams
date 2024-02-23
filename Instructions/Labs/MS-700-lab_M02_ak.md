@@ -46,7 +46,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-2. In left navigation of the Azure AD admin center, select **Identity** > **Users**> **User settings** > **Manage external collaboration settings** under the External users. Review the following settings for external users at the Azure AD level:
+2. In left navigation of the Azure AD admin center, select **Identity** > **Users**> **User settings** > **Manage external collaboration settings** under the External users. Review and ensure the following settings for external users at the Azure AD level:
 
 	- **Guest user access**: Guest users have limited access to properties and memberships of directory objects.
 
