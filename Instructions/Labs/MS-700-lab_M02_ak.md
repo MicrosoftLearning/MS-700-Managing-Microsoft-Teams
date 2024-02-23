@@ -72,7 +72,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 2. In the left navigation of the Teams admin center, select **Users** > **Guest access**.
 
-3. On the **Guest access** page, check if **Allow guest access in Teams** is enabled. If not, select **On**.
+3. On the **Guest access** page, check if **Guest Access** is enabled. If not, select **On**.
 
 4. Scroll down and under **Messaging** section, disable **Delete sent messages**
 
