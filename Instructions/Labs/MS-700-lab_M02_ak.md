@@ -129,13 +129,14 @@ As a part of your system administrator role, you need to review access to resour
 	1. On the **Review type** tab:
 	
 		* In the **Select what to review** section, select **Teams + Groups**.
-		* In the **Select review scope** section, select **All Microsoft 365 groups with guest users.** 
-		* In the **Scope** section, select **Guest users only**. 
+		* In the **Review scope** section, select **All Microsoft 365 groups with guest users.** 
+		* In the **Scope** section, ensure **Guest users only** is selected.
+		* In the **Scope** section, ensure
 		* Select **Next: Reviews**.
 
 	2. On the **Reviews** tab:
 	 
-		* In the **Select reviewers** section, select **Group owner(s)**.* In the **Specify recurrence of review** section, select **Weekly** and keep rest as default. 
+		* In the **Select reviewers** section, select **Group owner(s)**.* In the **Review recurrence** section, select **Weekly** and keep rest as default. 
 		* Select on **Next: Settings**.
 
 	3. On the **Settings** tab, leave the settings as default. Select on **Next: Review+Create** > **Create**. 
@@ -146,9 +147,9 @@ As a part of your system administrator role, you need to review access to resour
 
 	2. Wait for a few minutes, when the **Status** of the report shows as **Active**, select the name of the report - **Review guest access across Microsoft 365 groups**.
 
-	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_United States** under the group name.
+	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_** under the group name.
 
-	4. On the **Group_Afterwork_United States | Overview** page, you can see there is one user shown under **Not reviewed** category. 
+	4. On the **Access review details | Overview** page, you can see there is one user shown under **Not reviewed** category. 
 
 4. Review the access review and approve the guest user. 
 
@@ -254,35 +255,40 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Name**: Leave unchanged
 		- **Display name**: General
 		- **Description for users**: Leave unchanged
-		- **Description for admins**: General information without encryption, marking or sharing restriction settings activated.
+		- **Description for admins**: General information without encryption, marking or sharing restriction settings activated. Then seelct **Next**.
 
 	2. In the **Scope** section, select **Items** and **Groups &amp; sites**.
 
 	3. In the **Items** and **Auto-labeling** sections, leave the settings as default.
-	
-	4. In the **Groups & sites** section, select both checkboxes. 
-	
+
+        4. In the **Groups & sites**, leave the settings as default. The select **Next**.
+
+. 	5. Under the **Choose protection settings for labeled items** page, leave the boxes unchecked and select **Next**.
+
+	6. Under the **Auto-labeling for files an emails** page, leave the boxes unchecked and select **Next**. 
+ 
+	7. In the **Groups & sites** section, under the paged called **Define protection settings for groups and sites**,  select both checkboxes. 
+ 
 		* **Privacy and external user access settings** 
 		* **External sharing and Conditional Access settings** 
-
-	5. In the **Privacy & external user access** section,
-	
+  
+	8. In the **Privacy & external user access** section,
+ 
 		* Select **None** under Privacy section.
 		* Check the checkbox of **Let Microsoft 365 Group owners add people outside your organization to the group as guests** under External user access section. 
-
-	6. In the **External sharing & conditional access** section,
-	
+  
+	9. In the **External sharing & conditional access** section,
 		* Select **Control external sharing from labeled SharePoint sites** and select **Anyone**.
-
+  
 		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select  **Allow full access from desktop apps, mobile apps, and the web**.
+  
+	10. In the **Schematized data assets (preview)** section, leave the settings as default and select **Next**.
+ 
+	11. Select **Save label** > **Done**.
+ 
+	12. On the **Choose sensitivity labels to publish** page, select **Cancel**.
 
-	7. In the **Schematized data assets (preview)** section, leave the settings as default and select **Next**.
-
-	8. Select **Save label** > **Done**.
-
-	9. On the **Choose sensitivity labels to publish** page, select **Cancel**.
-
-5. Create the second sensitivity label - **Internal**.
+6. Create the second sensitivity label - **Internal**.
 
 	Select **Infromation Protection** on the left hand side navigation panel then select the **Labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -337,7 +343,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	12. On the **Choose sensitivity labels to publish** page, select **Cancel**.
 
-6. Update the second sensitivity label - **Confidential**
+7. Update the second sensitivity label - **Confidential**
 
 	Select the **Infromation protection** button on the left hand side navigation panel then select the **Lables** button then select the  **Confidential** label and select the **...** button then select **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -391,7 +397,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	12. On the **Choose sensitivity labels to publish** page, select **Cancel**.
 
 
-7. Publish sensitivity labels, after performing each step select **Next** (if required).
+8. Publish sensitivity labels, after performing each step select **Next** (if required).
 
 	1. On the **Information protection** page, select **label policies** tab.
 
