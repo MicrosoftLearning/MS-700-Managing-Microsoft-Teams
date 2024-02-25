@@ -315,7 +315,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 17. After a moment, you should see a green bar with a checkmark and **Accepted** inside again.
 
-18. Open the Teams Desktop App. Select **Teams** and manage teams from the left-side pane and inspect the newly created teams “**Early Adopters"** and”**Tech Meetings**".
+18. Open the Teams Desktop App. Select **Teams** from the left-side pane and inspect the newly created teams “**Early Adopters"** and”**Tech Meetings**".
 
 You have successfully created two teams via Graph API. Your test of the Graph functionality is complete, and you can advance to the next exercise.
 
@@ -339,7 +339,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. Select Teams and then select the gear icon(Manage Teams) next to **Join or create a team.**
+	2. Select Teams and then select the **...**, then seelct **Manage teams**.
 
 	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team under the **Hidden teams** section. 
 
@@ -405,7 +405,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
 
-2. On the left navigation pane, select **Identity** > **Groups**.
+2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
 
 3. On the **Groups | All groups** page, search and select **CA-Office** group.
 
@@ -439,7 +439,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 12. In the Overview window, locate **Dynamic rule processing status** field.
 
-	Wait and refresh your browser, until the status says **Update complete**. It may take several minutes for the change to be processed.
+	Wait and refresh your browser, until the status says **Succeeded**. It may take several minutes for the change to be processed.
 
 13. Then select **Members** in the left-hand navigation pane and then select **Refresh**. Verify that **Alex Wilber** is in the list of members, but that **Allan Deyoung** has been removed from the group.
 
@@ -457,7 +457,7 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select **Messaging policies**. 
+2. In the left navigation of the Teams admin center, select *Messaging** from the left side navigation, then select **Messaging policies**. 
 
 3. Select **+Add** under **Manage Policies** tab and enter the following
 
@@ -475,9 +475,9 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 4. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff**. Then select **Assign users** 
 
-	**Note**: If you didn’t see **Assign users**, select … to expand the menu.
+	**Note**: If you didn’t see **Assign users**, select **Manage users** to expand the menu.
 
-5. Search and select **add** for the following pilot users. Then select **Apply**.
+5. Search and select **add** for the following pilot users. Then select **Apply** and **Confirm** when prompted.
 
 	- **Alex Wilber**
 
@@ -565,11 +565,11 @@ In this task, you will block the Google Analytics app for all tenants
 
 	![Graphical user interface, application Description automatically generated](media/MS-700-lab_M03_ak_image5.png)
 
-4. In the search result, select **Google Analytics** to highlight the app.
+4. In the search result, select **Google Analytics** to open.
 
-5. Select **Block** from the top menu.
+5. Select **Actions** from the top right of the screen.
 
-6. Select **Block** again from the prompt window to confirm the setting.
+6. Select **Block app**.
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
@@ -592,9 +592,9 @@ In the pilot project, the company wants to add **Tasks by Planner and To Do** as
 
 4. In the **Pinned apps** section, select **Add apps**.
 
-5. From the **Add installed apps** page, select **Global** and search **Planner**. You will see **Tasks by Planner and To Do** app, mouseover the name and select **Add** twice.
+5. From the **Add installed apps** page, type in the search box **Tasks by Planner and To Do** app, mouseover the name and select **Add** twice.
 
-6. Make sure that **Tasks by Planner and To Do** is now listed in the **Pinned apps** section then select **Save**.
+6. Make sure that **Tasks by Planner and To Do** is now listed in the **Pinned apps** section then select **Save** and **Confirm**.
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
@@ -675,16 +675,21 @@ In this task, you will test the blocked app.
 
 3. Search **Google** from the search box.
 
-4. In the search results select **Google Analytics**. Note the lock icon and the "Request approval" button. 
+4. In the search results select **Google Analytics**. Note the lock icon and the "Request " button. 
 
 5. In the left-hand navigation pane, select **Teams**, go to the **General** channel of the **Sales** team.
 
 6. Select the **files** tab and select **+ Add cloud storage** in the navigation pane below.
 
-	**Note**: You can reload the tab or select … if you didn’t see the option.
+	**Note**: You can reload the tab or select … if you didn’t see the option. This option is only for classic Teams.
+   
+   - For the new lient version of Teams, do the following:
+      	- Select the **files** tab
+      	- Select the **Share** icon
+      	- Select **Copy link**
 
-7. Notice that you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
+8. Notice that you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
 
-8. Sign out of Teams and close all open windows.
+9. Sign out of Teams and close all open windows.
 
 END OF LAB
