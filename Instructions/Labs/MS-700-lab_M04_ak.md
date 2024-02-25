@@ -62,9 +62,9 @@ As part of your pilot project for setting up the events and meetings in your org
 
 3. Select the **Global (Org-wide default)** policy under **Manage policies**.
 
-4. On the **Meetings policies** page, turn **Off** the **Meeting recording** setting under the **Recording & transcription** section.
+4. Turn **Off** the **Meeting recording** setting under the **Recording & transcription** section.
 
-5. Select **Save**.
+5. Select **Save** and **Confirm**.
 
 You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
@@ -80,7 +80,7 @@ In this task, you need to sign in to the second client and create a meeting with
 
 4. Select **Join now** to start the meeting.
 
-5. Close **Invite people to join your window** by selecting **X** on the upper right corner.
+5. Close **Invite people to join your window** by selecting **X** on the upper right corner, if prompted.
 
 6. In the meeting window, select … for **More actions**.
 
@@ -98,7 +98,7 @@ Contoso Ltd. works with several external partners, and users often schedule meet
 
 3. On the **Meetings settings** page, turn **Off** the option **Anonymous users can join a meeting** in the participants section.
 
-4. Select **Save**.
+4. Select **Save** and **Confirm**.
 
 You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
@@ -128,11 +128,11 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 5. Select **Save**.
 
-6. Back on the **Live events policies** page, select **Management Live Events** policy and under **Manage Users** select **Assign users** from the top menu.
+6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Manage Users** select **Assign users** from the top menu.
 
 7. In the **Manage users** pane, search and add **Lynne Robbins**.
 
-8. Select **Apply** to assign the policy to the selected user.
+8. Select **Apply** then **Confirm** to assign the policy to the selected user.
 
 You have successfully created a custom Live event policy and assigned it to a user.
 
@@ -151,11 +151,11 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 	- **Give your webinar a description**: Company-wide meeting to answer questions regarding the new reporting system.
 	- **Presenters**: Patti Fernandez, Allan Deyoung
 	- **Co-organizers**: Diego Siciliani
-	- **Event access**: Private
+	- **Event access**: Your organization
 
 	**Note**: When you save the event, invites will be sent to presenters and co-organizers automatically. 
 
-4. Review the **Meeting options**, the **Presenter bios** and **Theming**. 
+4. Review the **Meeting options**, the **Presenter bios** and **Theming**, by selecting the options on the left hand side navigation. Press **Save** if prompte first.
 
 5. Complete the Registration site configuration. On the **IT Office Hours | Microsoft Teams** tab, at the left, expand **Registration** and select **Configuration**. Enter the following information and then select **Save**: 
 
@@ -173,9 +173,9 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 	2. Copy the **Share link**, close the **All set and ready to share** window and the **IT Office Hours | Microsoft Teams** tab.
 
-	3. On the **Calendar | Microsoft Teams** tab, click **Teams**. 
+	3. Navigate back to **Teams** on the left hand side navigation. 
 	
-	4. On the left navigation pane, select **General** under the **IT-Department**. Select **New Conversation** and paste the copied registration link in the new conversation text box and select send.
+	4. On the left navigation pane, select **General** under the **IT-Department**. Select **Start a post** and paste the copied registration link in the new conversation text box and select send.
 
 	5. Sign out and close all browser windows.
 		
@@ -445,7 +445,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 4. Select the **Global (Org-wide default)** policy to edit the default settings.
 
-5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail is available for routing inbound calls** and select **Not Enabled**. Then select **Save**.
+5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail is available for inbound calls** and select **Off**. Then select **Save** and **Confirm**.
 
 6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
 
@@ -455,15 +455,15 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 	- Description: **Calling policy that allows voicemail for selected pilot users**.
 
-	- Voicemail is available for routing inbound calls: **Enabled**
+	- Voicemail is available for inbound calls: **On**
 
 8. Select **Save** to create the new policy.
 
-9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Assign users** from the top pane.
+9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Manage Users** then **Assign users** from the top pane.
 
 10. In the right-side pane, type into the search field **Megan** then select **add**. Repeat the same steps for **Alex, Joni and Lynne**.
 
-11. Select **Apply** to assign the policy to the selected users.
+11. Select **Apply** to assign the policy to the selected users, then **Confirm**.
 
 In this task, you have disabled voicemail for all users in the organizations, and then you have created a calling policy that will enable voicemail for several users.
 
@@ -511,15 +511,15 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- You haven’t added any resource accounts yet: Select **Add**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
 	
-	- Language: **English (United States)**
+	- Language: **English (United States)**, then select **Next**.
 
 	- Greeting: select **Play an audio file**, and then select **Upload file**.
 
 	- In **Open** window, navigate to the Downloads folder, select **Alarm03.wav** and select **Open**.
 
-	- Music on hold: **Play default music**
+	- Music on hold: **Play default music**, then select **Next**.
 
-	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane.
+	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane. Select **Next**.
 
 	- Routing method: **Round robin**
 
@@ -527,13 +527,13 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Call agents can opt out of taking calls: **On**
 
-	- Call agent alert time: **30 seconds**
+	- Call agent alert time: **30 seconds**, seelct **Next**.
 
-	- Maximum calls in the queue: **50**
+	- Under the **Exception handling** page, expand **Call overflow** and et Maximum calls in the queue: **50**
 
 	- When the maximum number of calls is reached: **Disconnect**
 
-	- Call time out handling maximum wait time: **5 minutes**
+	-  Expand **Call timeout** and set Maximum wait time: **5 minutes**
 
 	- When call times out: **Disconnect**
 
@@ -599,19 +599,17 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 12. Select **Next**.
 
-13. On the **Set business hours** page, configure the following:
-
-	- Select **Clear all hours**
+13. On the **Busines and after hours** page, configure the following:
 
 	- Configure working hours **Monday** to **Friday** from **08:00 AM** to **04:00 PM**
 
 	- Leave **Saturday** and **Sunday** blank.
 
-	- First, play a greeting message: **Add a greeting message**
+	- Greeting options: **Add a greeting message**
 
 	- Type in: **Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.**
 
-	- Then route the call: **Disconnect**
+	- Call routing options: **Disconnect**
 
 14. Select **Next**.
 
@@ -657,9 +655,9 @@ In this task you navigate to Call Quality Dashboard
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
 
-2. In the left-hand navigation pane, select **Call Quality Dashboard** at the bottom.
+2. In the left-hand navigation pane, select **Analytics & reports** then **Call Quality Dashboard**.
 
-3. A new browser tab with the url [**https://cqd.teams.microsoft.com/**](https://cqd.teams.microsoft.com/) will open. You will be prompted to sign-in, when you access the CQD portal for the first time.
+3. A new browser tab with the url [**https://cqd.teams.microsoft.com/**](https://cqd.teams.microsoft.com/) will open. You will be prompted to sign-in, when you access the CQD portal for the first time. Note: If there is an error when the new browser tab opens, simply  type in the browser: https://cqd.teams.microsoft.com/.
 
 4. When you first sign into the CQD Portal, you'll see the summary reports with daily and monthly call quality trends. Call quality is classified as good, poor, or unclassified. 
 
