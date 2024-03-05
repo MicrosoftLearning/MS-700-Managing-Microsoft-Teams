@@ -377,7 +377,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 4. Restore group
 
-	1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
+	1.Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
 
 	2. On the left navigation pane, select **Identity* > **Groups**.
 
@@ -403,7 +403,7 @@ You have successfully deleted a team via the Teams web client and restored it wi
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**.
+1. Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
 
 2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
 
