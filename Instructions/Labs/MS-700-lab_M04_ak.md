@@ -507,7 +507,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 10. Enter the following information:
 
-	- Call queue name: **Contoso Call Queue**
+	- Call queue name: **Contoso Call Queue Resource Account**
 
 	- You haven’t added any resource accounts yet: Select **Add**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
 	
