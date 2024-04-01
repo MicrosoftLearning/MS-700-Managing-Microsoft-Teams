@@ -774,14 +774,14 @@ To make sure your configured DLP policies are working as expected, you need to p
 10. You should still be logged in to the **Microsoft Purview Portal**. If not, open Microsoft Edge, maximize the browser, and navigate to the **Microsoft Purview Portal**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com/).
 
 
-Please note steps 11 - 13 should be considered optional as the **Reports** page has now been deprecated.
-
-11. Select **Reports** from the left-hand navigation pane and scroll down to **Organizational data**.
-
-12. Below **DLP Policy Matches** and **DLP Incidents**, you can now see the DLP policy matches. Select **DLP Policy Matches** to open the detailed view.
-
-13. On the **DLP Policy Matches** page, inspect the rule matches.
-
+11. Note this step is an explantional step and not designed for users to complete in this lab. This step is meant to explain how to see the **DLP Policy Matches**. Previously, you would have been able to see it via the **Reports** page which has now been deprecated.
+    
+In order to see the **DLP Policy Matches** users must perform the following:
+- Enable org sutmization upon logging into the tenant by running *Enable-organizationcustomization*. This takes about 2-3 hour to replicate through the tenant.
+-  Run *Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true* to enable audit logging.
+- The audit logging takes about 24hours to show as enabled a well.
+    	**Note:** This explanation may require users to have the SPE5 tenant.
+    
 You have successfully tested your DLP policy to block sharing of credit card information via Teams chat and channel conversations.
 
 ### **Exercise 4: Prepare network deployment**
