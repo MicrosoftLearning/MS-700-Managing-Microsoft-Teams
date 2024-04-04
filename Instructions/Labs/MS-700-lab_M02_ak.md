@@ -211,6 +211,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 	
     Connect-MgGraph
     
+
 4. Fetch the current group settings for the Azure AD organization.
    
    
@@ -221,6 +222,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 
 
      $Setting = Get-MgDirectorySetting -Id (Get-MgDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
+
 
 
 5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
@@ -235,6 +237,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
     $Setting["EnableMIPLabels"] = "True"
     
     
+
 6. To verify the new configuration, run the following cmdlet:
    
 
@@ -257,6 +260,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 When using Microsoft Graph PowerShell enter the following cdmlet:
 
  	Set-MgDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+
 
 8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
 
