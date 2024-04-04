@@ -213,30 +213,48 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
     
 4. Fetch the current group settings for the Azure AD organization
 
-   ```powershell
    $Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
-   ```
+   
+When using Microsoft Graph PowerShell enter the following cdmlet:
+
+   $Setting = Get-MgDirectorySetting -Id (Get-MgDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
+
 
 5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
-    ```powershell
+    
     $Setting["EnableMIPLabels"] = "True"
-    ```
+   
+When using Microsoft Graph PowerShell enter the following cdmlet:
+
+    $Setting["EnableMIPLabels"] = "True"
+    
 6. To verify the new configuration, run the following cmdlet:
-    ```powershell
+
     $Setting.Values
-    ```
+
+When using Microsoft Graph PowerShell enter the following cdmlet:
+
+    $Setting.Values
+
+
 7. Then save the changes and apply the settings:
 
-	```powershell
+
 	Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
-	```
-	**Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
+
+**Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
+   
+When using Microsoft Graph PowerShell enter the following cdmlet:
+
+ 	Set-MgDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 
 8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
 
-    ```powershell
-    Disconnect-AzureAD
-    ```
+        Disconnect-AzureAD
+
+When using Microsoft Graph PowerShell enter the following cdmlet: 
+
+	Disconnect-MgGraph
 
 You have successfully changed your tenant’s Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
 
