@@ -195,6 +195,8 @@ Before deploying Microsoft Teams in your organization, you need to evaluate Micr
 
 You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity labels for Teams in Azure AD, for being able to assign labels to teams.
 
+Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task.
+
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
