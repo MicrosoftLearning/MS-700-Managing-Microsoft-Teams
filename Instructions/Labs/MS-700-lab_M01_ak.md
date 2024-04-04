@@ -213,6 +213,9 @@ You have successfully explored several available menus from the Teams admin cent
 
 In this task, you will install and connect with the Teams PowerShell module to your tenant and explore the available cmdlets and functions to manage your tenant. You can install the Teams PowerShell module from the available repositories preconfigured in your Windows 10 operating system and do not need to download any executables via the browser.
 
+Please note: Micrsoft PowerShell is son to be deprecated and Microoft Graph Powershell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands willl be provided to complete this task.
+The Micrsoft Graph PowerShell commands will be provided soon.
+
 1. Connect to the **Client 1 VM** with the VM credential that has been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
