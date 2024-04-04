@@ -470,13 +470,11 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
 
 2. Install **Azure AD Preview module**
 
-        In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
+In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
-        ```powershell
    
-        Install-Module -Name AzureADPreview
+        ```Install-Module -Name AzureADPreview```
    
-        ```
 	
 When using Microsoft Graph PowerShell enter the following cdmlet:
  
