@@ -211,8 +211,9 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 	
     Connect-MgGraph
     
-4. Fetch the current group settings for the Azure AD organization
-
+4. Fetch the current group settings for the Azure AD organization.
+   
+   
      $Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
    
    
@@ -226,6 +227,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
    
     
     $Setting["EnableMIPLabels"] = "True"
+   
    
 When using Microsoft Graph PowerShell enter the following cdmlet:
 
