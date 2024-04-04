@@ -213,13 +213,13 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
     
 4. Fetch the current group settings for the Azure AD organization
 
-   $Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
+     $Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
    
    
 When using Microsoft Graph PowerShell enter the following cdmlet:
 
 
-   $Setting = Get-MgDirectorySetting -Id (Get-MgDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
+     $Setting = Get-MgDirectorySetting -Id (Get-MgDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
 
 
 5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
