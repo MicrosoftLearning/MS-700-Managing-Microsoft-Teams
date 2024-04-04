@@ -215,24 +215,32 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 
    $Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
    
+   
 When using Microsoft Graph PowerShell enter the following cdmlet:
+
 
    $Setting = Get-MgDirectorySetting -Id (Get-MgDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
 
 
 5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
+   
     
     $Setting["EnableMIPLabels"] = "True"
    
 When using Microsoft Graph PowerShell enter the following cdmlet:
 
+
     $Setting["EnableMIPLabels"] = "True"
     
+    
 6. To verify the new configuration, run the following cmdlet:
+   
 
     $Setting.Values
+   
 
 When using Microsoft Graph PowerShell enter the following cdmlet:
+
 
     $Setting.Values
 
