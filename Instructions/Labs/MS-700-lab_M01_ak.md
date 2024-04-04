@@ -608,7 +608,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
            $Setting = $Template.CreateDirectorySetting()
         ```
 	
- 15.	Apply the configured settings, to revert previous changes:
+15. Apply the configured settings, to revert previous changes:
          
         ```powershell
         Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
@@ -620,7 +620,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
            Set-MgDirectorySetting -Id (Get-MgDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
         ```
  
-16. In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
+16.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
     ```powershell
     Disconnect-AzureAD
