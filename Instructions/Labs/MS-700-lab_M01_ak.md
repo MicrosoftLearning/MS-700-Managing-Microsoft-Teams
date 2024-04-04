@@ -569,7 +569,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
           New-MgDirectorySetting -DirectorySetting $Setting
         ```
 
-7. Test the newly configured settings.
+10. Test the newly configured settings.
 
     1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -580,11 +580,11 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
         **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 
-8. Revert the change for enabling users to create new teams.
+11. Revert the change for enabling users to create new teams.
 
- 1. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+12 . Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
- 2. Load the Azure AD unified group template, by using the following cmdlet:
+13 . Load the Azure AD unified group template, by using the following cmdlet:
 
         ```powershell
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
@@ -596,7 +596,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
           $Template = Get-MgDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
         ```
  
-  3.	Create a blank Azure AD tenant settings object:
+14.	Create a blank Azure AD tenant settings object:
 
         ```powershell
         $Setting = $Template.CreateDirectorySetting()
@@ -607,8 +607,8 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 	```powershell
            $Setting = $Template.CreateDirectorySetting()
         ```
-  
-4.	Apply the configured settings, to revert previous changes:
+	
+ 15.	Apply the configured settings, to revert previous changes:
          
         ```powershell
         Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
@@ -620,7 +620,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
            Set-MgDirectorySetting -Id (Get-MgDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
         ```
  
-9. In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
+16. In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
     ```powershell
     Disconnect-AzureAD
@@ -632,7 +632,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
           Disconnect-MgGraph
         ```
 	
-10. Close the PowerShell window and continue to the next task.
+17. Close the PowerShell window and continue to the next task.
 	
 	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
