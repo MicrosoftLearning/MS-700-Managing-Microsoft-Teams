@@ -213,8 +213,9 @@ You have successfully explored several available menus from the Teams admin cent
 
 In this task, you will install and connect with the Teams PowerShell module to your tenant and explore the available cmdlets and functions to manage your tenant. You can install the Teams PowerShell module from the available repositories preconfigured in your Windows 10 operating system and do not need to download any executables via the browser.
 
-Please note: Micrsofot PowerShell is soon to be deprecated and Microsoft Graph Powershell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands willl be provided to complete this task.
-The Micrsoft Graph PowerShell commands for this task will be provided soon.
+Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph Powershell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands willl be provided to complete this task.
+
+The Microsoft Graph PowerShell commands for this task will be provided soon.
 
 1. Connect to the **Client 1 VM** with the VM credential that has been provided to you.
 
@@ -462,7 +463,7 @@ You are an administrator for your Team’s organization. You need to limit which
 
 5. Restrict the Microsoft 365 groups creation to the security group.
    
-Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph Powershell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands can be provided to complete this task.
+Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task.
 
 
     1. Open **Windows PowerShell** and run as Administrator.
