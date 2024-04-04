@@ -203,11 +203,14 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
 
 3. Connect to your AAD tenant.
 
-    Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
-
-    ```powershell
+Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+  
     Connect-AzureAD
-    ```
+   
+When using Microsoft Graph PowerShell enter the following cdmlet:
+	
+    Connect-MgGraph
+    
 4. Fetch the current group settings for the Azure AD organization
 
    ```powershell
