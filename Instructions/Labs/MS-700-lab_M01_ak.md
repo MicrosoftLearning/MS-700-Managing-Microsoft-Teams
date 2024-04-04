@@ -500,9 +500,9 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 	
 When using Microsoft Graph PowerShell enter the following cdmlet:
  
- 	```powershell
+ 	
          $Template = Get-MgDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-        ```
+       
 	
 5. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
 
@@ -582,51 +582,51 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
     
 13 . Load the Azure AD unified group template, by using the following cmdlet:
 
-        ```powershell
+     
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-        ```
+   
         
      When using Microsoft Graph PowerShell enter the following cdmlet:
  
-	```powershell
+	
           $Template = Get-MgDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-        ```
+     
  
 14.	Create a blank Azure AD tenant settings object:
 
-        ```powershell
+      
         $Setting = $Template.CreateDirectorySetting()
-        ```
+  
 
   When using Microsoft Graph PowerShell enter the following cdmlet:
  
-	```powershell
+	
            $Setting = $Template.CreateDirectorySetting()
-        ```
+       
 	
 15. Apply the configured settings, to revert previous changes:
          
-        ```powershell
+        
         Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
-        ```
+       
 
  When using Microsoft Graph PowerShell enter the following cdmlet:
  
-	```powershell
+	
            Set-MgDirectorySetting -Id (Get-MgDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
-        ```
+       
  
 16.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
-    ```powershell
+   
     Disconnect-AzureAD
-    ```
+    
 
    When using Microsoft Graph PowerShell enter the following cdmlet:
  
-	```powershell
+	
           Disconnect-MgGraph
-        ```
+      
 	
 17. Close the PowerShell window and continue to the next task.
 	
