@@ -586,7 +586,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
    
         
-     When using Microsoft Graph PowerShell enter the following cdmlet:
+When using Microsoft Graph PowerShell enter the following cdmlet:
  
 	
           $Template = Get-MgDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
