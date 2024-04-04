@@ -215,7 +215,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 4. Fetch the current group settings for the Azure AD organization.
    
    
-     $Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
+     	$Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
    
    
 When using Microsoft Graph PowerShell enter the following cdmlet:
@@ -228,7 +228,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
    
     
-    $Setting["EnableMIPLabels"] = "True"
+    	$Setting["EnableMIPLabels"] = "True"
    
    
 When using Microsoft Graph PowerShell enter the following cdmlet:
@@ -241,7 +241,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 6. To verify the new configuration, run the following cmdlet:
    
 
-    $Setting.Values
+    	$Setting.Values
    
 
 When using Microsoft Graph PowerShell enter the following cdmlet:
@@ -253,7 +253,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 7. Then save the changes and apply the settings:
 
 
-	Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+		Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 
 **Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
    
@@ -264,7 +264,7 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
 
 8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
 
-        Disconnect-AzureAD
+        	Disconnect-AzureAD
 
 When using Microsoft Graph PowerShell enter the following cdmlet: 
 
