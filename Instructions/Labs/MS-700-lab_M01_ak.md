@@ -476,7 +476,7 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
 When using Microsoft Graph PowerShell enter the following cdmlet:
  
  	
-        Install-Module AzureADPreview
+        Install-Module Microsoft.Graph
  
 
 3. Connect to your AAD tenant.
