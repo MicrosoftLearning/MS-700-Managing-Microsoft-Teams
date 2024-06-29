@@ -378,20 +378,20 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	Select the **Information protection** button on the left hand side navigation panel then select the **Lables** button then select the  **Confidential** label and select the **...** button then select **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
-	1. In the **Name & description** section, enter the following information:
+	a. In the **Name & description** section, enter the following information:
 		- **Name**: Leave unchanged
 		- **Display name**: Confidential
 		- **Description for users**: Leave unchanged
 		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
-	2. In the **Scope** section, under the **Define the scope for thislabel** page select **Items** and **Groups &amp; Sites** 
+	b. In the **Scope** section, under the **Define the scope for thislabel** page select **Items** and **Groups &amp; Sites** 
 
-	3. In the **Items** section, select both checkboxes.
+	c. In the **Items** section, select both checkboxes.
 
 		* **Contnet Access**
 		* **Apply content marking**
 	
-	4. In the **Encryption** section, 
+	d. In the **Encryption** section, 
 
 		* Select **Configure encryption settings**
 		* Assign permissions now or let users decide: **Assign permissions now**.
@@ -400,60 +400,60 @@ After activating sensitivity labels for groups, you will now create three sensit
 		* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
 		* Scroll down and select **Save** to apply the changes.
 
-	5. In the **Content marking** page, 
+	e. In the **Content marking** page, 
 
 		* Select the slider and the checkbox **Add a watermark**.
 		* Select **Customize text** and enter the following to the **Watermark text** box: **Confidential.**
 		* Click **Save** to apply the changes.
 
-	6. In the **Auto-labeling for files and emails** page, leave the settings as default.
+	f. In the **Auto-labeling for files and emails** page, leave the settings as default.
 	
-	7. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select both checkboxes. 
+	g. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select both checkboxes. 
 	
 		* **Privacy and external user access settings** 
 		* **External sharing and Conditional Access settings** 
 
-	8. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
+	h. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
 
-	9. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
+	i. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
 	
 		* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
 		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select **Block access**.
 
-	10. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** page,  leave the settings as default. 
+	j. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** page,  leave the settings as default. 
 
-	11. Click **Save label** > **Done**.
+	k. Click **Save label** > **Done**.
 
 
 14. Publish sensitivity labels, after performing each step select **Next** (if required).
 
-	1. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, and select **label policies**.
+	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, and select **label policies**.
 
-	2. Select the **Global sensitivity label policy** and select the **Edit policy** button when the right side page pops up.
+	b. Select the **Global sensitivity label policy** and select the **Edit policy** button when the right side page pops up.
 
-	3. In the **Choose sensitivity labels to publish** page, select the **Edit** Link under the **Sensitivity lables to publish** section.
+	c. In the **Choose sensitivity labels to publish** page, select the **Edit** Link under the **Sensitivity lables to publish** section.
 
-	4. In the **Sensitivity labels to publish** window, check all labels and select **Add**.
+	d. In the **Sensitivity labels to publish** window, check all labels and select **Add**.
 
- 	5. In the **Assign admin units** page, leave as is.
+ 	e. In the **Assign admin units** page, leave as is.
 
-	6. In the **Publish to users and groups** page, keep the default settings. 
+	f. In the **Publish to users and groups** page, keep the default settings. 
 
-	7. In the **Policy Settings** page, keep the default settings. 
+	g. In the **Policy Settings** page, keep the default settings. 
 
-	8. In the **Default settings for documents** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to documents**.
+	h. In the **Default settings for documents** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to documents**.
 
-	9. In the **Default setting for emails** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to emails**.
+	i. In the **Default setting for emails** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to emails**.
 
- 	10. In the **Default setting for meetings an calendar events** page, leave as is.
+ 	j. In the **Default setting for meetings an calendar events** page, leave as is.
       
-	11. In the **Default settings for sites and groups** page, select **Internal** in the dropdown menu under **Apply a default label to sites and groups**.
+	k. In the **Default settings for sites and groups** page, select **Internal** in the dropdown menu under **Apply a default label to sites and groups**.
 
-	12. In the **Default settings for Fabric and Power BI content** page, select **General/All Employess (unrestricted)** in the dropdown menu under **Apply a default label to Fabric and Power BI content**.	
+	l. In the **Default settings for Fabric and Power BI content** page, select **General/All Employess (unrestricted)** in the dropdown menu under **Apply a default label to Fabric and Power BI content**.	
 
-	13. In the **Name your policy** page, leave unchanged
+	m. In the **Name your policy** page, leave unchanged
 	
-	14. Select **Submit** > **Done**.
+	n. Select **Submit** > **Done**.
 
 In this task, you have created and published three new sensitivity labels available for all users, which can be assigned to new and existing teams.
 
