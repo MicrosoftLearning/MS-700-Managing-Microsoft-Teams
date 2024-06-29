@@ -388,23 +388,23 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	c. In the **Items** section, select both checkboxes.
 
-	* **Privacy and external user access settings** 
-	* **External sharing and Conditional Access settings** 
+	* **Content Access** 
+	* **Apply content marking** 
 	
 	d. In the **Encryption** section, 
 
-		* Select **Configure encryption settings**
-		* Assign permissions now or let users decide: **Assign permissions now**.
-		* User access to content expires: **Never**.
-		* Allow offline access: **Never**.
-		* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
-		* Scroll down and select **Save** to apply the changes.
+	* Select **Configure encryption settings**
+	* Assign permissions now or let users decide: **Assign permissions now**
+	* User access to content expires: **Never**
+	* Allow offline access: **Never**
+	* Select **Assign permissions**, and select **+ Add all users and groups in your organization**
+	* Scroll down and select **Save** to apply the changes	
+ 
 
 	e. In the **Content marking** page, 
-
-		* Select the slider and the checkbox **Add a watermark**.
-		* Select **Customize text** and enter the following to the **Watermark text** box: **Confidential.**
-		* Click **Save** to apply the changes.
+ 	
+  	**Privacy and external user access settings** 
+	**External sharing and Conditional Access settings** 
 
 	f. In the **Auto-labeling for files and emails** page, leave the settings as default.
 	
