@@ -388,8 +388,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	c. In the **Items** section, select both checkboxes.
 
-		* **Contnet Access**
-		* **Apply content marking**
+	* **Privacy and external user access settings** 
+	* **External sharing and Conditional Access settings** 
 	
 	d. In the **Encryption** section, 
 
