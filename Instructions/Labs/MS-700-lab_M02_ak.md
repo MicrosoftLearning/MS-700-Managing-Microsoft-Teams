@@ -409,15 +409,16 @@ After activating sensitivity labels for groups, you will now create three sensit
 	f. In the **Auto-labeling for files and emails** page, leave the settings as default.
 	
 	g. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select both checkboxes. 
-	* **Privacy and external user access settings** 
-	* **External sharing and Conditional Access settings**
+	* Select the slider and the checkbox **Add a watermark** 
+	* Select **Customize text** and enter the following to the **Watermark text** box: **Confidential.**
+	* Click **Save** to apply the changes 
+
 
 	h. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
 
 	i. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
-	
-		* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
-		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select **Block access**.
+	* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
+	* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select **Block access**
 
 	j. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** page,  leave the settings as default. 
 
