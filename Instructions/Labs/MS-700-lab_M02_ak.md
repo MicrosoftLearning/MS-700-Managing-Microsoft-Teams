@@ -409,9 +409,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 	f. In the **Auto-labeling for files and emails** page, leave the settings as default.
 	
 	g. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select both checkboxes. 
-	
-		* **Privacy and external user access settings** 
-		* **External sharing and Conditional Access settings** 
+	* **Privacy and external user access settings** 
+	* **External sharing and Conditional Access settings**
 
 	h. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
 
