@@ -420,7 +420,6 @@ After activating sensitivity labels for groups, you will now create three sensit
 	9. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
 	
 		* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
-
 		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select **Block access**.
 
 	10. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** page,  leave the settings as default. 
