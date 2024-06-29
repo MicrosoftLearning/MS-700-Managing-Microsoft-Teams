@@ -367,16 +367,15 @@ After activating sensitivity labels for groups, you will now create three sensit
 9. In the **External sharing & device access** section
 	
 		* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**.
-
 		* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access**.
 
-	10. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** leave the settings as default. 
+10. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** leave the settings as default. 
 
-	11. Select **Create label** > **Done**.
+11. Select **Create label** > **Done**.
 
-	12. On the **Publish label**  pop-out page, select **Cancel**.
+12. On the **Publish label**  pop-out page, select **Cancel**.
 
-7. Update the second sensitivity label - **Confidential**
+13. Update the second sensitivity label - **Confidential**
 
 	Select the **Information protection** button on the left hand side navigation panel then select the **Lables** button then select the  **Confidential** label and select the **...** button then select **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -427,7 +426,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	11. Click **Save label** > **Done**.
 
 
-8. Publish sensitivity labels, after performing each step select **Next** (if required).
+14. Publish sensitivity labels, after performing each step select **Next** (if required).
 
 	1. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, and select **label policies**.
 
