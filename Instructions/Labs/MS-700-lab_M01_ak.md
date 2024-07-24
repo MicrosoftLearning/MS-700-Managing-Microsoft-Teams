@@ -215,7 +215,7 @@ In this task, you will install and connect with the Teams PowerShell module to y
 
 Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
 
-The Microsoft Graph PowerShell commands for this task will be provided soon.
+The Microsoft Graph PowerShell commands for this task are provided after the Microsoft PowerShell commands.
 
 1. Connect to the **Client 1 VM** with the VM credential that has been provided to you.
 
@@ -230,7 +230,8 @@ The Microsoft Graph PowerShell commands for this task will be provided soon.
 
 	- In the PowerShell window, enter the following cmdlet and press **Enter:**
 
-		- Install-Module -Name MicrosoftTeams
+		- Microsoft PowerShell: Install-Module -Name MicrosoftTeams
+		- Microsoft Graph PowerShell: Install-Module -Name Microsoft.Graph and Install-Module -Name Microsoft.Graph.Beta
 
 	- Enter **Y** and press **Enter** twice to confirm the installation of the NuGet provider and Untrusted repository.
 
@@ -238,7 +239,8 @@ The Microsoft Graph PowerShell commands for this task will be provided soon.
 
 	- Enter the following cmdlet in the PowerShell window and press **Enter**:
 
-		- Connect-MicrosoftTeams
+		- Microsoft PowerShell: Connect-MicrosoftTeams
+		- Microsoft Graph PowerShell: Connect-MgGraph
 
 	- In the Sign-in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -248,13 +250,15 @@ The Microsoft Graph PowerShell commands for this task will be provided soon.
 
 	- To confirm the MicrosoftTeams module is loaded correctly, enter the following cmdlet and press **Enter** to view all available PowerShell modules:
 
-		```Get-Module```
+		- Microsoft PowerShell - ```Get-Module```
+		-Microsoft Graph PowerShell - ```Get-Module -Name Microsoft.Graph -ListAvailable``` or ```Get-Module -Name MicrosoftTeams```
 
 		**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
 
 	- To get an overview of the available Teams PowerShell cmdlets from the MicrosoftTeams module, enter the following cmdlet and then press **Enter**:
 
-		```Get-Command -Module MicrosoftTeams```
+		-Microsoft PowerShell - ```Get-Command -Module MicrosoftTeams```
+   		-Microsoft Graph PowerShell - ```Get-Command -Module Microsoft.Graph.Teams```
 
 	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
 
@@ -264,7 +268,8 @@ The Microsoft Graph PowerShell commands for this task will be provided soon.
 
 	- Disconnect from the Microsoft Teams environment.
 
-		```Disconnect-MicrosoftTeams```
+		- Microsoft PowerShell - ```Disconnect-MicrosoftTeams```
+		-Microsoft Graph PowerShell - ```Disconnect-MgGraph```
 
 6. Close the PowerShell window and continue to the next task.
 
@@ -324,8 +329,8 @@ You will create a new Microsoft 365 Group named “IT-Department,” and then ad
 
 		- Select **Next**
 
-5. Select **+ Add a Microsoft 365 group**. > **Cancel**. When prompte to close, select **Yes**.
-
+5. Press the **Create Group** button, then press **Close**.
+   
 6. Wait a moment and select **Refresh** until the group is visible. You will see there is no Teams icon in the **Teams status** column.
 
 7. Select the **IT-Department** group to review the settings and members.
@@ -353,9 +358,9 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 4. In the Teams desktop client, select **Teams** from the left menu.
 
-5. Select **Join or create a team** from the lower-left corner.
+5. Select **+** in the upper left hand corner to create and join teams and channels.
 
-6. Select **Create team** > **From scratch** > **Public**. Enter the team name **Teams Rollout** and select **Create**.
+6. Select **Create team** > Enter the team name **Teams Rollout** > **Public**. Select  **Create**.
 
 7. On the **Add members to Teams Rollout** window, enter the following names and select **Add**.
 
@@ -364,6 +369,8 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 	- Lynne Robbins
 
 	- Diego Siciliani
+
+8. Select **Teams** from left ahnd corner and click the **...** button next to **Teams Rollout** > **Manage Team**.
 
 8. Select the dropdown menu next to Joni Sherman and switch from **Member** to **Owner**.
 
@@ -381,9 +388,9 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
-4. Select **+** from the upper-left corner.
+4. Select **Teams** from the upper-left corner.
 
-5. Select **Create team** >**From scratch** > **Private**. Enter the team name **Sales** and select **Create**.
+5. Select **Create team** >Enter the team name **Sales** > **Private**. Select **Create**.
 
 6. On the **Add members to Sales** window, enter the following names and select **Add** > **Close**.
 
@@ -461,111 +468,58 @@ You are an administrator for your Team’s organization. You need to limit which
 			- Joni Sherman
 			- Alex Wilber
 
-5. Restrict the Microsoft 365 groups creation to the security group.
+Restrict the Microsoft 365 groups creation to the security group.
    
 Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
 
+Please note: The Microsoft Graph PowerShell commands for this task needs to be added. Please proceed to use the Microsoft PowerShell commands below. 
 
- 1. Open **Windows PowerShell** and run as Administrator.
+5. Open **Windows PowerShell** and run as Administrator.
 
-2. Install **Azure AD Preview module**
+6. Install **Azure AD Preview module**
 	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
         Install-Module -Name AzureADPreview
    	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
- 	
-        Install-Module Microsoft.Graph
- 
-
-3. Connect to your AAD tenant.
+7. Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
        
         Connect-AzureAD
-      
 	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
- 	
-        Connect-MgGraph
-    
-	
-4. Load the Azure AD unified group template, by using the following cmdlet:
+8. Load the Azure AD unified group template, by using the following cmdlet:
 
        
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-       
 	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
- 	
-         $Template = Get-MgDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-       
-	
-5. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
+9. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
 
        
         if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
-    
-	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
- 	
-          if(!($Setting = Get-MgDirectorySettingTemplate | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
-        
 
-6. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
+10. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
 
         
         $Setting["EnableGroupCreation"] = "False"
-      
 	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
- 	
-          $Setting["EnableGroupCreation"] = "False"
-      
-	
- 7. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
+ 11. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
 
        
         $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
        
-	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
-	
-          $Setting["GroupCreationAllowedGroupId"] = (Get-MgGroup -SearchString $GroupName).id
-       
-	
- 8. Review the changes you have just configured with the following command:
+ 12. Review the changes you have just configured with the following command:
 
         
         $Setting.Values
-       
-	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
-	
-           $Setting.Values
-       
 
-9. Save the changes and apply the setting:
+13. Save the changes and apply the setting:
 
         
         New-AzureADDirectorySetting -DirectorySetting $Setting
        
     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 	
-When using Microsoft Graph PowerShell enter the following cdmlet:
- 
-	
-          New-MgDirectorySetting -DirectorySetting $Setting
-      
-
-10. Test the newly configured settings.
+14. Test the newly configured settings.
 
     1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -576,59 +530,31 @@ When using Microsoft Graph PowerShell enter the following cdmlet:
         **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 
-11. Revert the change for enabling users to create new teams.
+15. Revert the change for enabling users to create new teams.
 
-12 . Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+16 . Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
-13 . Load the Azure AD unified group template, by using the following cmdlet:
+17 . Load the Azure AD unified group template, by using the following cmdlet:
 
      
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-   
-        
-When using Microsoft Graph PowerShell enter the following cdmlet:
  
-	
-          $Template = Get-MgDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
-     
- 
-14.	Create a blank Azure AD tenant settings object:
+18.	Create a blank Azure AD tenant settings object:
 
       
         $Setting = $Template.CreateDirectorySetting()
-  
-
-  When using Microsoft Graph PowerShell enter the following cdmlet:
- 
 	
-           $Setting = $Template.CreateDirectorySetting()
-       
-	
-15. Apply the configured settings, to revert previous changes:
+19. Apply the configured settings, to revert previous changes:
          
         
         Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
-       
-
- When using Microsoft Graph PowerShell enter the following cdmlet:
  
-	
-           Set-MgDirectorySetting -Id (Get-MgDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
-       
- 
-16.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
+20.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
    
     Disconnect-AzureAD
-    
-
-   When using Microsoft Graph PowerShell enter the following cdmlet:
- 
 	
-          Disconnect-MgGraph
-      
-	
-17. Close the PowerShell window and continue to the next task.
+21. Close the PowerShell window and continue to the next task.
 	
 	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
@@ -686,19 +612,17 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 2. In the Teams desktop client, select **Teams** from the left menu.
 
-3. Select **Join or create a team** from the lower-left corner.
+3. Select **+** in the upper left hand corenre to create and join teams and channels.
 
-4. Select **Create team** > **From scratch** > **Public**.
-
-5. Enter **Afterwork** for the **Team name**.
-
+4. Select **Create team** >Enter **Afterwork** for the **Team name** > **Public**.
+   
 	Below the entered name, you can see the configured prefix and suffix for new teams.
 
-6. Select **Create** to create the new team.
+5. Select **Create** to create the new team.
 
-7. Add **Lynne Robbins** to the team member.
+6. Add **Lynne Robbins** to the team member.
 
-8. Review the name of the newly created team.
+7. Review the name of the newly created team.
 
 You have successfully tested the naming policy for managing the prefix and suffixes of user-created teams.
 
