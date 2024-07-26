@@ -195,7 +195,7 @@ Before deploying Microsoft Teams in your organization, you need to evaluate Micr
 
 You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Azure AD, for being able to assign labels to teams.
 
-Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
+Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, Microsoft Graph PowerShell commands will be provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands.  For now, please proceed with using PowerShell commands.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -207,68 +207,28 @@ Enter the following cmdlet in the PowerShell window and press **Enter**. In the 
   
     Connect-AzureAD
    
-When using Microsoft Graph PowerShell enter the following cdmlet:
-	
-    Connect-MgGraph
-    
-
 4. Fetch the current group settings for the Azure AD organization.
-   
    
      	$Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
    
-   
-When using Microsoft Graph PowerShell enter the following cdmlet:
-
-
-     $Setting = Get-MgDirectorySetting -Id (Get-MgDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
-
-
-
 5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
-   
     
     	$Setting["EnableMIPlabels"] = "True"
    
-   
-When using Microsoft Graph PowerShell enter the following cdmlet:
-
-
-    $Setting["EnableMIPlabels"] = "True"
-    
-    
-
 6. To verify the new configuration, run the following cmdlet:
    
 
     	$Setting.Values
-   
-
-When using Microsoft Graph PowerShell enter the following cdmlet:
-
-
-    $Setting.Values
-
 
 7. Then save the changes and apply the settings:
-
 
 		Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 
 **Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
-   
-When using Microsoft Graph PowerShell enter the following cdmlet:
-
- 	Set-MgDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
-
 
 8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
 
         	Disconnect-AzureAD
-
-When using Microsoft Graph PowerShell enter the following cdmlet: 
-
-	Disconnect-MgGraph
 
 You have successfully changed your tenant’s Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
 
@@ -278,21 +238,57 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview compliance portal, select **Information protection** and select the **labels** tab.
+2. Open up **Windows PowerShell** and **Run as Adminstrator**
 
-3. Select **Turn on now** next to the following warning message to activate content processing in Office online files.
+3. Open a PowerShell prompt on your computer and run the following commands to prepare to run the cmdlets. 
 
-	*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
+        	Install-Module Microsoft.Graph -Scope CurrentUser
+		Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 
-4. Update the first sensitivity label - **General**.
+4. Connect to your tenant as **MOD Administrator**. When you sign in, a pop up screen will appear. Ensure you select the checkbox **Consent on behalf of your organization** and then press **Accept** . 
+
+        	Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+   
+5. Fetch the current group settings for the Microsoft Entra organization and display the current group settings.
+
+        	$grpUnifiedSetting = Get-MgBetaDirectorySetting -Search DisplayName:"Group.Unified"
+   
+6. Apply the new settings.
+
+        	$params = @{
+     Values = @(
+ 	    @{
+ 		    Name = "EnableMIPLabels"
+ 		    Value = "True"
+ 	    }
+     )
+}
+
+Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
+
+7. Verify that the new value is present.
+
+        	$Setting = Get-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id
+		$Setting.Values
+
+8. Connect to the Client 1 VM and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as MOD Administrator.
+   
+9. In the left navigation of the Microsoft Purview compliance portal, select Information protection and select the labels tab.
+
+10. Select Turn on now next to the following warning message to activate content processing in Office online files.
+
+Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more
+
+11. Update the first sensitivity label - **General**.
 
 	Select the **General** label and select the **...** button then select the **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
 	a. In the **Name &amp; description** section, enter the following information:
-		- **Name**: Leave unchanged
-		- **Display name**: General
-		- **Description for users**: Leave unchanged
-		- **Description for admins**: General information without encryption, marking or sharing restriction settings activated. Then select **Next**.
+		- **Name** : Leave unchanged
+		- **Display name** : General
+		- **Description for users** : Leave unchanged
+		- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
+    		Then select **Next**.
 
 	b. In the **Scope** section, select **Items** and **Groups &amp; sites**. Then select **Next**.
 
@@ -300,32 +296,26 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	d. In the **Items** section and **Auto-labeling for files and emails** page, leave the settings as default.
 
-  	 e. In the **Groups & sites** section, under the paged called **Define protection settings for groups and sites**,  select both checkboxes. 
- 
-	* **Privacy and external user access settings** 
-	* **External sharing and Conditional Access settings** 
- 
-	f. In the **Groups & sites** section, under the paged called **Define protection settings for groups and sites**,  select both checkboxes. 
+	e. In the **Groups & sites** section, under the paged called **Define protection settings for groups and sites**,  select both checkboxes. 
  
 	* **Privacy and external user access settings** 
 	* **External sharing and Conditional Access settings** 
   
-	g. In the **Privacy & external user access** section,
+	f. In the **Privacy & external user access** section,
  
 	* Select **None** under Privacy section.
 	* Check the checkbox of **Let Microsoft 365 Group owners add people outside your organization to the group as guests** under External user access section. 
   
-	h. In the **External sharing & conditional access** section,
+	g. In the **External sharing & conditional access** section,
 		* Select **Control external sharing from labeled SharePoint sites** and select **Anyone**.
   
-	* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select  **Allow full access from desktop apps, mobile apps, and the web**.
+	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow full access from desktop apps, mobile apps, and the web**.
   
-	i. In the **Schematized data assets (preview)** section, leave the settings as default and select **Next**.
+	h. In the **Schematized data assets (preview)** section, leave the settings as default and select **Next**.
  
-	j. Select **Save label** > **Done**.
- 
+	i. Select **Save label** > **Done**.
 
-5. Create the second sensitivity label - **Internal**.
+12. Create the second sensitivity label - **Internal**.
 
 	Select **Information Protection** on the left hand side navigation panel then select the **labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -337,10 +327,10 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	b. In the **Scope** section,  under the **Define the scope for this label** page, select **Items** and **Groups &amp; Sites**. Leave the marked checkboxes as is.
 
-	c. In the **Items** section under the page **Choose protection for labeled items** page, select the **Apply or remove encryption** and **Apply content marking** checkboxes.  
+	c. In the **Items** section under the page **Choose protection for labeled items** page, select the **Control access** and **Apply content marking** checkboxes.  
 
-	d. In the **Encryption** page:
-		* Select **Configure encryption settings**
+	d. In the **Acces control** page:
+		* Select **Configure access control settings**
 		* Assign permissions now or let users decide: **Assign permissions now**.
 		* User access to content expires: **Never**.
 		* Allow offline access: **Always**.
@@ -355,26 +345,26 @@ After activating sensitivity labels for groups, you will now create three sensit
 * Click **Save** to apply the changes.
 		
 
-6. In the **Auto-labeling** section, leave the settings as default.
+13. In the **Auto-labeling** section, leave the settings as default.
 	
-7. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
+14. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
 	
 	* **Privacy and external user access settings** 
 	* **External sharing and Conditional Access settings** 
 
-8. In the **Privacy & external user access** section, select **None**. 
+15. In the **Privacy & external user access** section, select **None**. 
 
-9. In the **External sharing & device access** section
+16. In the **External sharing & device access** section
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
 	* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access** 
 
-10. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** leave the settings as default. 
+17. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** leave the settings as default. 
 
-11. Select **Create label** > **Done**.
+18. Select **Create label** > **Done**.
 
-12. On the **Publish label**  pop-out page, select **Cancel**.
+19. On the **Publish label**  pop-out page, select **Cancel**.
 
-13. Update the second sensitivity label - **Confidential**
+20. Update the second sensitivity label - **Confidential**
 
 	Select the **Information protection** button on the left hand side navigation panel then select the **Lables** button then select the  **Confidential** label and select the **...** button then select **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -388,12 +378,12 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	c. In the **Items** section, select both checkboxes.
 
-	* **Content Access** 
+	* **Control Access** 
 	* **Apply content marking** 
 	
-	d. In the **Encryption** section, 
+	d. In the **Access control** section, 
 
-	* Select **Configure encryption settings**
+	* Select **Configure access control settings**
 	* Assign permissions now or let users decide: **Assign permissions now**
 	* User access to content expires: **Never**
 	* Allow offline access: **Never**
@@ -424,7 +414,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	k. Click **Save label** > **Done**.
 
 
-15. Publish sensitivity labels, after performing each step select **Next** (if required).
+21. Publish sensitivity labels, after performing each step select **Next** (if required).
 
 	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, and select **label policies**.
 
@@ -629,11 +619,9 @@ According to your organization’s compliance requirements, you need to implemen
 
 4. In the **Statrt with a template or create a custom policy** page,
 
-	1. Select the **Search for specific templates** search box and type: **GDPR**.
+	a. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR) Enhanced** template from the **Templates** section.
 
-	2. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR) Enhanced** template from the **Templates** section.
-
-	3. Select **Next**
+	b. Select **Next**
 
 5. In the **Name your DLP policy** page, enter the following information:
 
@@ -654,6 +642,8 @@ According to your organization’s compliance requirements, you need to implemen
 	- **Teams chat and channel messages**: Select checkbox
 
  	- **Devices**: Select checkbox
+
+	- **Instances**: Unselect checkbox
 
 	- **On-premises repositories**: Unselect checkbox
 
@@ -685,8 +675,9 @@ According to your organization’s compliance requirements, you need to implemen
 9. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
 
 10. On the Review your settings page, review your settings, select **Submit** then **Done**.
+Note: After pressing Submit you may receive an error which reads "Client error: to block only people outside your organization, you must select the conditions "content is shared with people outside my organization:" Press **OK** to ignore and navigate back to the Data Loss Prevention page by selecting **Cancel** and select **Confirm**.
 
-11. Stay on the **Data loss prevention page** and leave the browser opened.
+12. Stay on the **Data loss prevention page** and leave the browser opened. Press the **Refresh** button.
 
 After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
 
