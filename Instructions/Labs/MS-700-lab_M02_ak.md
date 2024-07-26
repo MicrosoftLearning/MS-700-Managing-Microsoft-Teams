@@ -255,14 +255,7 @@ After activating sensitivity labels for groups, you will now create three sensit
    
 6. Apply the new settings.
 
-        	$params = @{
-     Values = @(
- 	    @{
- 		    Name = "EnableMIPLabels"
- 		    Value = "True"
- 	    }
-     )
-}
+        	$params = @{ Values = @( @{ Name = "EnableMIPLabels" Value = "True" } ) }
 
 Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
 
