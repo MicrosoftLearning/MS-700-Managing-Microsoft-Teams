@@ -261,12 +261,10 @@ After activating sensitivity labels for groups, you will now create three sensit
  		Name = "EnableMIPLabels"
  		Value = "True"
  	    	}
-     	)
-	}
+     		)
+		}
 
-Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
-
-Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
+		Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
 
 7. Verify that the new value is present.
 
