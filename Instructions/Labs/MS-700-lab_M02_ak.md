@@ -58,7 +58,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 4. In the left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings** > **Org settings**.
 
-	- Under the **Services** tab, select **Microsoft 365 Groups**. Make sure the checkbox is selected for **Let group owner add people outside your organization to Microsoft 365 Groups**. Close the **Microsoft 365 Groups** page by selecting **X** button.
+	- Under the **Services** tab, select **Microsoft 365 Groups**. Make sure the checkbox is selected for **Let group owners add people outside your organization to Microsoft 365 Groups as guests**. Close the **Microsoft 365 Groups** page by selecting **X** button.
 
 	- Under the **Security &amp; privacy** tab, select **Sharing**. Make sure the checkbox is selected for **Let users add new guests to the organization**.
 
@@ -110,7 +110,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 4. Test the guest access
 
-	- Under the team **Group_Afterwork_United States**, select **General** channel, select **New conversation** and send the message: **Hello!**.
+	- Under the team **Group_Afterwork_United States**, select **General** channel, select **Start a post** and send the message: **Hello!**.
 
 	- Select **…** of the message you just posted. Notice there’s no **Delete** option.
 
@@ -213,7 +213,7 @@ Enter the following cmdlet in the PowerShell window and press **Enter**. In the 
    
 5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
     
-    	$Setting["EnableMIPlabels"] = "True"
+    	$Setting["EnableMIPLabels"] = "True"
    
 6. To verify the new configuration, run the following cmdlet:
    
@@ -273,11 +273,11 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 8. Connect to the Client 1 VM and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as MOD Administrator.
    
-9. In the left navigation of the Microsoft Purview compliance portal, select Information protection and select the labels tab.
+9. In the left navigation of the Microsoft Purview compliance portal, select **Information protection** and select the **Labels** tab.
 
-10. Select Turn on now next to the following warning message to activate content processing in Office online files.
+10. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
 
-Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more
+*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
 11. Update the first sensitivity label - **General**.
 
@@ -292,14 +292,14 @@ Your organization has not turned on the ability to process content in Office onl
 
 	b. In the **Scope** section, select **Items** and **Groups &amp; sites**. Then select **Next**.
 
-	c. Under the **Choose protection settings for labeled items** page, leave the boxes unchecked and select **Next**.
+	c. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unchecked and select **Next**.
 
 	d. In the **Items** section and **Auto-labeling for files and emails** page, leave the settings as default.
 
 	e. In the **Groups & sites** section, under the paged called **Define protection settings for groups and sites**,  select both checkboxes. 
  
-	* **Privacy and external user access settings** 
-	* **External sharing and Conditional Access settings** 
+	* **Privacy and external user access** 
+	* **External sharing and Conditional Access** 
   
 	f. In the **Privacy & external user access** section,
  
@@ -327,7 +327,7 @@ Your organization has not turned on the ability to process content in Office onl
 
 	b. In the **Scope** section,  under the **Define the scope for this label** page, select **Items** and **Groups &amp; Sites**. Leave the marked checkboxes as is.
 
-	c. In the **Items** section under the page **Choose protection for labeled items** page, select the **Control access** and **Apply content marking** checkboxes.  
+	c. In the **Items** section under the page **Choose protection settings for the types of items you selected** page, select the **Control access** and **Apply content marking** checkboxes.  
 
 	d. In the **Acces control** page:
 		* Select **Configure access control settings**
@@ -349,14 +349,14 @@ Your organization has not turned on the ability to process content in Office onl
 	
 14. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
 	
-	* **Privacy and external user access settings** 
-	* **External sharing and Conditional Access settings** 
+	* **Privacy and external user access** 
+	* **External sharing and Conditional Access** 
 
 15. In the **Privacy & external user access** section, select **None**. 
 
 16. In the **External sharing & device access** section
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
-	* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access** 
+	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access** 
 
 17. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** leave the settings as default. 
 
@@ -399,15 +399,15 @@ Your organization has not turned on the ability to process content in Office onl
 	f. In the **Auto-labeling for files and emails** page, leave the settings as default.
 	
 	g. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select both checkboxes. 
-	**Privacy and external user access settings** 
-	**External sharing and Conditional Access settings** 
+	**Privacy and external user access** and 
+	**External sharing and Conditional Access** 
 
 
 	h. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
 
 	i. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
 	* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
-	* Select **Use Azure AD Conditional Access to protect labeled SharePoint sites** and select **Block access**
+	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select **Block access**
 
 	j. In the **Schematized data assets (preview)** section, under the **Auto-labeling for schematized data assets (preview)** page,  leave the settings as default. 
 
@@ -416,7 +416,7 @@ Your organization has not turned on the ability to process content in Office onl
 
 21. Publish sensitivity labels, after performing each step select **Next** (if required).
 
-	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, and select **label policies**.
+	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, and select **Label policies**.
 
 	b. Select the **Global sensitivity label policy** and select the **Edit policy** button when the right side page pops up.
 
@@ -505,16 +505,16 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 	3. In the **Choose the type of retention policy to create** section, select **Static** and select **Next** then configure the following settings:
 
-		- **Exchange email**: Off
-		- **SharePoint sites**: Off
+		- **Exchange mailboxes**: Off
+		- **SharePoint classic and communication sites**: Off
 		- **OneDrive accounts**: Off
-		- **Microsoft 365 Groups**: Off
+		- **Microsoft 365 Group mailboxes & sites**: Off
 		- **Skype for Business**: Off
 		- **Exchange public folders**: Off
 		- **Teams channel messages**: On
-		- **Teams chats**: Off
+		- **Teams chats and Copilot interactions**: Off
 		- **Teams private channel messages**: Off
-		- **Yammer community message**: Off
+		- **Yammer community messages**: Off
 		- **Yammer user messages**: Off
 		- Select **Edit** in the **Included** column (under the current *All teams* choice) for the **Teams channel messages** line to open the right-side pane.
 		- Select the checkbox left from **Sales** and select **Done**.
@@ -538,7 +538,7 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 2. In the left navigation of the Microsoft Purview Portal, select **Data lifecycle management**. From the drop down select **Microsoft 365**.
 
-3. On the **Data lifecycle management** page, under **Retention** policies tab, select +New retention policy to add new Retention Policy. 
+3. On the **Data lifecycle management** page, under **Retention policies** tab, select +New retention policy to add new Retention Policy. 
 
 4. Follow the **Create retention policy** wizard with the following information:
 
@@ -758,7 +758,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 	6. Review the rule settings and select **Next**.
 
 		
-8. In the **Policy Mode** page, select **Turn the policyon immediately** and select **Next**.
+8. In the **Policy Mode** page, select **Turn the policy on immediately** and select **Next**.
 
 9. On the **Review and finish** page, review your settings, select **Submit** then **Done**.
 

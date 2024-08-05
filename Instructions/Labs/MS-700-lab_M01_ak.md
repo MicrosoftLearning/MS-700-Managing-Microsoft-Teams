@@ -74,7 +74,7 @@ The labs in this course will use two virtual machines:
 
 **Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
 
-**Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1* or** CLIENT2*, depending on which machine you are on.
+**Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1 or CLIENT2**, depending on which machine you are on.
 
 #### **2. Review installed applications**
 
@@ -151,7 +151,7 @@ You have now successfully assigned the Teams admin roles.
 
 - Teams Administrator: Joni Sherman
 
-- Teams Devices Administrator: Patti Fernandez
+- Teams Device Administrator: Patti Fernandez
 
 - Teams communication support engineer: Allan Deyoung
 

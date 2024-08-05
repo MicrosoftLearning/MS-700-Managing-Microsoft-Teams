@@ -60,11 +60,9 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
 4. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create team** from the middle of the window.
 
-5. In the **Create a team** dialog, select **From a group or team**.
+5. In the **Create a team** dialog, select **More create team options** and then **From group**.
 
-6. In the **Create a new team from something you already own** dialog, select **Microsoft 365 group**.
-
-7. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”**, then select **Create**. Wait until the **Creating the team…** process is done.
+6. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”**. Wait until the **Creating the team…** process is done.
 
 8. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
 
@@ -72,7 +70,7 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
 	- Owners: **Joni Sherman**
 
-	- Members and guests: **Allan Deyoung** , **MOD Administrator** and **Patti Fernandezr**
+	- Members and guests: **Allan Deyoung** , **MOD Administrator** and **Patti Fernandez**
 
 10. Leave the Teams desktop client open and continue to the next task.
 
@@ -325,7 +323,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Select **Teams** from the left-side pane and **Manage teams**.
+2. Select **Teams** from the left-side pane and select the **...** icon next to Teams and click on **Your teams and channels**.
 
 3. Archive the **Sales** team
 
@@ -339,7 +337,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. Select Teams and then select the **...**, then seelct **Manage teams**.
+	2. Select Teams and then select the **...**, then select **Your teams and channels**.
 
 	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team under the **Hidden teams** section. 
 
@@ -567,9 +565,7 @@ In this task, you will block the Google Analytics app for all tenants
 
 4. In the search result, select **Google Analytics** to open.
 
-5. Select **Actions** from the top right of the screen.
-
-6. Select **Block app**.
+5. Select the slider which reads **Allowed** in the center of the screen. Notice it'll change to **Blocked**.
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
