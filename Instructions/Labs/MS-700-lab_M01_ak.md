@@ -502,12 +502,12 @@ Please note: The Microsoft Graph PowerShell commands for this task needs to be a
         
         $Setting["EnableGroupCreation"] = "False"
 	
- 11. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
+11. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
 
        
         $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
        
- 12. Review the changes you have just configured with the following command:
+12. Review the changes you have just configured with the following command:
 
         
         $Setting.Values
@@ -532,9 +532,9 @@ Please note: The Microsoft Graph PowerShell commands for this task needs to be a
 
 15. Revert the change for enabling users to create new teams.
 
-16 . Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+16. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
-17 . Load the Azure AD unified group template, by using the following cmdlet:
+17. Load the Azure AD unified group template, by using the following cmdlet:
 
      
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
