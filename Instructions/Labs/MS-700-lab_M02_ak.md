@@ -131,7 +131,6 @@ As a part of your system administrator role, you need to review access to resour
 		* In the **Select what to review** section, select **Teams + Groups**.
 		* In the **Review scope** section, select **All Microsoft 365 groups with guest users.** 
 		* In the **Scope** section, ensure **Guest users only** is selected.
-		* In the **Scope** section, ensure
 		* Select **Next: Reviews**.
 
 	2. On the **Reviews** tab:
@@ -273,7 +272,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 8. Connect to the Client 1 VM and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as MOD Administrator.
    
-9. In the left navigation of the Microsoft Purview compliance portal, select **Information protection** and select the **Labels** tab.
+9. In the left navigation of the Microsoft Purview compliance portal, select **Solutions**, **Information Protection** and then select **Sensitivity labels** from the menu.
 
 10. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
 
@@ -290,7 +289,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
     		Then select **Next**.
 
-	b. In the **Scope** section, select **Items** and **Groups &amp; sites**. Then select **Next**.
+	b. In the **Scope** section, select **Files &amp; other data assets** and **Groups &amp; sites**. Then select **Next**.
 
 	c. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unchecked and select **Next**.
 
@@ -416,7 +415,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 21. Publish sensitivity labels, after performing each step select **Next** (if required).
 
-	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, and select **Label policies**.
+	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, select **Policies** and then **Publishing policies**.
 
 	b. Select the **Global sensitivity label policy** and select the **Edit policy** button when the right side page pops up.
 
@@ -490,13 +489,13 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal(https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select **Data lifecycle management**.
+2. In the left navigation of the Microsoft Purview Portal, select **Solutions** and then **Data lifecycle management**.
 
-3. On the **Data lifecycle management** dropdown, select the **Microsoft 365** button and select the **Retention policies** tab, select **+ New retention policy** to create a new retention policy. 
+3. On the **Data lifecycle management** page, select **Policies**, then **Retention policies**, and select **+ New retention policy** to create a new retention policy. 
 
 4. Follow the **Create retention policy** wizard with the following information:
 
-	1. In the **Nam your retention policy** page, enter the following information 
+	1. In the **Name your retention policy** page, enter the following information 
 		- **Name**: Sales retention policy
 		- **Description**: Retention policy for Sales department that will retain channel messages for 7 years.
 		- select **Next**
@@ -536,9 +535,9 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select **Data lifecycle management**. From the drop down select **Microsoft 365**.
+2. In the left navigation of the Microsoft Purview Portal, select **Solutions**, **Data lifecycle management**.
 
-3. On the **Data lifecycle management** page, under **Retention policies** tab, select +New retention policy to add new Retention Policy. 
+3. On the **Data lifecycle management** page, under **Policies** and then **Retention policies**, select **+New retention policy** to add a new retention policy. 
 
 4. Follow the **Create retention policy** wizard with the following information:
 
@@ -615,7 +614,7 @@ According to your organization’s compliance requirements, you need to implemen
 
 2. In the left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 
-3. On the **Data loss prevention** dropdown, select the **Policies**, then select **+ Create policy**.
+3. On the **Data loss prevention** page, select the **Policies**, then select **+ Create policy**.
 
 4. In the **Statrt with a template or create a custom policy** page,
 
@@ -689,7 +688,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 2. In left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 
-3. On the **Data loss prevention** dropdown, select  **Policies**, then select **+ Create policy**.
+3. On the **Data loss prevention** page, select  **Policies**, then select **+ Create policy**.
 
 4. In the **Start with a template or create a custom policy** section,
 
@@ -721,7 +720,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	- **On-premises repositories**:  Unselect checkbox
 
-	- **Power BI workspaces**:   Unselect checkbox 
+	- **Fabric and Power BI workspaces**:   Unselect checkbox 
 
 7. In the **Define policy settings** section, stay with the default selection and select **Next**.
 
@@ -740,7 +739,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	3. Below **Action**, 
 		- Select **+ Add an action** and **Restrict access or encrypt the content in Microsoft 365 locations**.
-		- Select the checkbox of **Restrict access or encrypt the content in Microsoft 365 locations** again and select **Block everyone** 
+		- In the **Restrict access or encrypt the content in Microsoft 365 locations** section select **Block everyone** 
 
 			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image8.png)
 

@@ -455,7 +455,7 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select *Messaging** from the left side navigation, then select **Messaging policies**. 
+2. In the left navigation of the Teams admin center, select **Messaging** from the left side navigation, then select **Messaging policies**. 
 
 3. Select **+Add** under **Manage Policies** tab and enter the following
 

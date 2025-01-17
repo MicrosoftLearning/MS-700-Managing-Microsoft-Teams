@@ -445,7 +445,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 4. Select the **Global (Org-wide default)** policy to edit the default settings.
 
-5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail is available for inbound calls** and select **Off**. Then select **Save** and **Confirm**.
+5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail for inbound calls** and select **Off**. Then select **Save** and **Confirm**.
 
 6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
 
@@ -455,7 +455,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 	- Description: **Calling policy that allows voicemail for selected pilot users**.
 
-	- Voicemail is available for inbound calls: **On**
+	- Voicemail for inbound calls: **On**
 
 8. Select **Save** to create the new policy.
 
@@ -527,7 +527,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Call agents can opt out of taking calls: **On**
 
-	- Call agent alert time: **30 seconds**, seelct **Next**.
+	- Call agent alert time: **30 seconds**, select **Next**.
 
 	- Under the **Exception handling** page, expand **Call overflow** and et Maximum calls in the queue: **50**
 
