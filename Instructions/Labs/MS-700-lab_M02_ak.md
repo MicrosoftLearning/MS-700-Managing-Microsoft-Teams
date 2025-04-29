@@ -202,9 +202,9 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
 
 3. Connect to your AAD tenant.
 
-Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+    Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
   
-    Connect-AzureAD
+     	Connect-AzureAD
    
 4. Fetch the current group settings for the Azure AD organization.
    
@@ -223,7 +223,7 @@ Enter the following cmdlet in the PowerShell window and press **Enter**. In the 
 
 		Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 
-**Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
+    **Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 
 8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
 
@@ -276,7 +276,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 10. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
 
-*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
+    *Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
 11. Update the first sensitivity label - **General**.
 
@@ -339,9 +339,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	e. In the **Content marking** sections,
 
-* Select the slider under the **Content marking** header and the checkbox **Add a watermark**.
-* Select  the * Add a footer** checkbox  then ***Customize text** and enter the following to the **Watermark text** box: **Internal use only**
-* Click **Save** to apply the changes.
+    * Select the slider under the **Content marking** header and the checkbox **Add a watermark**.
+    * Select  the * Add a footer** checkbox  then ***Customize text** and enter the following to the **Watermark text** box: **Internal use only**
+    * Click **Save** to apply the changes.
 		
 
 13. In the **Auto-labeling** section, leave the settings as default.
