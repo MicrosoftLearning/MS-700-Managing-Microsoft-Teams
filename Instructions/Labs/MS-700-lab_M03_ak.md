@@ -58,11 +58,11 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
 3. The Microsoft Teams desktop client will start. If a **Bring your team together**, or **Get the Teams mobile app** window appears, close both windows.
 
-4. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create team** from the middle of the window.
+4. In the left-hand navigation pane, select **Teams**, select **+**, and then select **Create team** .
 
 5. In the **Create a team** dialog, select **More create team options** and then **From group**.
 
-6. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”**. Wait until the **Creating the team…** process is done.
+6. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”** by presing **Add Team**. Wait until the **Creating the team…** process is done.
 
 8. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
 
@@ -321,7 +321,7 @@ You have successfully created two teams via Graph API. Your test of the Graph fu
 
 After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task, you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
 
-1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browser to the **Teams desktop client**:  as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. Select **Teams** from the left-side pane and select the **...** icon next to Teams and click on **Your teams and channels**.
 
@@ -337,7 +337,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. Select Teams and then select the **...**, then select **Your teams and channels**.
+	2. Select Teams and then select  **Teams and channels**.
 
 	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team under the **Hidden teams** section. 
 
@@ -565,7 +565,7 @@ In this task, you will block the Google Analytics app for all tenants
 
 4. In the search result, select **Google Analytics** to open.
 
-5. Select the slider which reads **Allowed** in the center of the screen. Notice it'll change to **Blocked**.
+5. Select **Actions** dropwdown at the top left of the screen and select **Block app** .
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
@@ -588,9 +588,9 @@ In the pilot project, the company wants to add **Tasks by Planner and To Do** as
 
 4. In the **Pinned apps** section, select **Add apps**.
 
-5. From the **Add installed apps** page, type in the search box **Tasks by Planner and To Do** app, mouseover the name and select **Add** twice.
+5. From the **Add installed apps** page, type in the search box **Planner** app, mouseover the name and select **Add** twice.
 
-6. Make sure that **Tasks by Planner and To Do** is now listed in the **Pinned apps** section then select **Save** and **Confirm**.
+6. Make sure that **Planner** is now listed in the **Pinned apps** section then select **Save** and **Confirm**.
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
@@ -673,19 +673,12 @@ In this task, you will test the blocked app.
 
 4. In the search results select **Google Analytics**. Note the lock icon and the "Request " button. 
 
-5. In the left-hand navigation pane, select **Teams**, go to the **General** channel of the **Sales** team.
+5. In the left-hand navigation pane, select **Chat**, go to the **sales** channel of the **Sales** team.
 
-6. Select the **files** tab and select **+ Add cloud storage** in the navigation pane below.
+6. Select the **files** tab and select **...** in the ribbon.
 
-	**Note**: You can reload the tab or select … if you didn’t see the option. This option is only for classic Teams.
-   
-   - For the new lient version of Teams, do the following:
-      	- Select the **files** tab
-      	- Select the **Share** icon
-      	- Select **Copy link**
+7. Select **Add shortcut to OneDrive**
 
-8. Notice that you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
-
-9. Sign out of Teams and close all open windows.
+8. Sign out of Teams and close all open windows.
 
 END OF LAB
