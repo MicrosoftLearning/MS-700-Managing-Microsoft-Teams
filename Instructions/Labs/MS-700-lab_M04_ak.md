@@ -155,7 +155,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 	**Note**: When you save the event, invites will be sent to presenters and co-organizers automatically. 
 
-4. Review the **Meeting options**, the **Presenter bios** and **Theming**, by selecting the options on the left hand side navigation. Press **Save** if prompte first.
+4. Review the **Meeting options** by selecting the options on the left hand side navigation. Press **Save** if prompted first.
 
 5. Complete the Registration site configuration. On the **IT Office Hours | Microsoft Teams** tab, at the left, expand **Registration** and select **Configuration**. Enter the following information and then select **Save**: 
 
@@ -248,7 +248,7 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- Logging enabled: **Off**
 
-	- Device’s default admin password: **Pass@word1**
+	- Device’s admin password: **Pass@word1**
 
 8. Once you complete with the configuration profile settings, select **Save**.
 
@@ -361,7 +361,7 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 2. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
 
-3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
+3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/), as Joni Sherman.
 
 4. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
 
@@ -387,7 +387,7 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 		- Search **Redmond** and select **Contoso Emergency Address**, which is the location you just created.
 
-		- Select Area code **425**.
+		- Select Area code available.
 
 		- Select **Next**.
 
@@ -471,11 +471,11 @@ In this task, you have disabled voicemail for all users in the organizations, an
 
 Contoso Ltd. has deployed Microsoft Teams voice functionalities throughout the organization. To deploy some automation for incoming support calls, the calling queue functionalities need to be tested before being rolled out. The following settings shall be configured for customers calling in:
 
-1. A greeting message.
+- A greeting message.
 
-2. Music while people are waiting on hold.
+- Music while people are waiting on hold.
 
-3. Redirecting calls to call agents in mail-enabled distribution lists and security groups.
+- Redirecting calls to call agents in mail-enabled distribution lists and security groups.
 
 As Teams admin, you are responsible for creating the call queue and configuring different parameters, such as maximum queue size, timeout, and call handling options.
 
