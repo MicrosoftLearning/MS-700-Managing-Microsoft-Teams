@@ -353,9 +353,9 @@ In this task, you will assign the calling plan license to a user to allow them t
 
 You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
 
-#### Task 3 – Order a phone number for your user
+#### Task 3 – Order a phone number for your user (Instructional steps only - do not complete)
 
-In this task, you will order a phone number for a user with an assigned Calling Plan license.
+In this task, you will learn how to order a phone number for a user with an assigned Calling Plan license. Please note, that you can no longer order a phone number without a business justification so the set of steps below are meant to educate. Please do not follow these steps within your lab environments. These steps are designed to educate the user on how to execute the task.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
@@ -409,9 +409,9 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call Queues.
 
-#### Task 4 – Assign a phone number to your user
+#### Task 4 – Assign a phone number to your user (Instructional steps only - do not complete)
 
-In this Task, you will assign an existing phone number to a user.
+In this Task, you will learn how to assign an existing phone number to a user. Please note, that you can no longer order a phone number without a business justification so the set of steps below are meant to educate. Please do not follow these steps within your lab environments. These steps are designed to educate the user on how to execute the task.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
