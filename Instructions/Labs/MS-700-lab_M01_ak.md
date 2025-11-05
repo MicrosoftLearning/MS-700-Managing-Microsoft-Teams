@@ -475,8 +475,9 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 5. Install **Azure AD Preview module**
 	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
-     Microsoft Powershell command:  Install-Module -Name AzureADPreview
-     Microsoft Graph Powershell command: Install-Module Microsoft.Graph.Beta
+   -  Microsoft Powershell command:  Install-Module -Name AzureADPreview
+     
+   - Microsoft Graph Powershell command: Install-Module Microsoft.Graph.Beta
    	
 6 . Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
