@@ -475,48 +475,70 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 5. Install **Azure AD Preview module**
 	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
-   -	Microsoft Powershell command:  Install-Module -Name AzureADPreview
-   - Microsoft Graph Powershell command: Install-Module Microsoft.Graph.Beta
+     Microsoft Powershell command:  Install-Module -Name AzureADPreview
+     Microsoft Graph Powershell command: Install-Module Microsoft.Graph.Beta
    	
-7. Connect to your AAD tenant.
+6 . Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
        
-        Connect-AzureAD
+        Microsoft Powershell command: Connect-AzureAD
+		Microsoft Graph Powershell command: Connect-MgGraph
 	
-8. Load the Azure AD unified group template, by using the following cmdlet:
+7. Load the Azure AD unified group template, by using the following cmdlet:
 
        
-        $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
+   Microsoft Powershell command:   $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
+   Microsoft Graph Powershell command: $Template = Get-MgDirectorySettingTemplate | Where-Object {$_.DisplayName -eq "Group.Unified"}
 	
-9. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
+8. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
 
        
-        if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
+      Microsoft Powershell command:  if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
 
-10. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
+    Microsoft Graph Powershell command:
+    
+# Retrieve existing settings
+$Setting = Get-MgDirectorySetting | Where-Object {$_.TemplateId -eq $Template.Id}
+
+# If no setting exists, create one from the template
+if (-not $Setting) {
+    $Setting = New-MgDirectorySetting -TemplateId $Template.Id
+}
+
+
+9. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
 
         
-        $Setting["EnableGroupCreation"] = "False"
+        Microsoft Powershell command: $Setting["EnableGroupCreation"] = "False"
+   		 Microsoft Graph Powershell command: Update-MgDirectorySetting -DirectorySettingId $Setting.Id -Values @{ "EnableGroupCreation" = "False" }
 	
-11. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
+10. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
 
        
-        $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
+        Microsoft Powershell command: $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
+    	Microsoft Graph Powershell command: 
+# Get the group ID for "GroupCreators"
+$Group = Get-MgGroup -Filter "displayName eq 'GroupCreators'"
+
+# Update the directory setting with that group ID
+Update-MgDirectorySetting -DirectorySettingId $Setting.Id -Values @{ "GroupCreationAllowedGroupId" = $Group.Id 
+
        
-12. Review the changes you have just configured with the following command:
+11. Review the changes you have just configured with the following command:
 
         
-        $Setting.Values
+      Microsoft Powershell command and Microsoft Graph Powershell command:  $Setting.Values
 
-13. Save the changes and apply the setting:
+12. Save the changes and apply the setting:
 
         
-        New-AzureADDirectorySetting -DirectorySetting $Setting
+        Microsoft Powershell command: New-AzureADDirectorySetting -DirectorySetting $Setting
+    	Mirosoft Graph Powershell command: New-MgDirectorySetting -TemplateId $Setting.TemplateId
        
     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 	
-14. Test the newly configured settings.
+13. Test the newly configured settings.
 
     1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -528,29 +550,40 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
         **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 
-15. Revert the change for enabling users to create new teams.
+14. Revert the change for enabling users to create new teams.
 
-16. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+15. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
-17. Load the Azure AD unified group template, by using the following cmdlet:
+16. Load the Azure AD unified group template, by using the following cmdlet:
 
      
-        $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
+       Microsoft Powershell command: $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
+    	Microsoft Graph Powershell command: $Template = Get-MgDirectorySettingTemplate | Where-Object {$_.DisplayName -eq "Group.Unified"}
  
-18.	Create a blank Azure AD tenant settings object:
+17.	Create a blank Azure AD tenant settings object:
 
       
-        $Setting = $Template.CreateDirectorySetting()
+       Microsoft Powershell command: $Setting = $Template.CreateDirectorySetting()
+   		Microsoft Graph Powershell command: $Setting = New-MgDirectorySetting -TemplateId $Template.Id
 	
-19. Apply the configured settings, to revert previous changes:
+18. Apply the configured settings, to revert previous changes:
          
         
-        Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
+        Microsoft Powershell command: Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
+    	Microsoft Graph Powershell command:
+    	
+# Get the existing Group.Unified setting
+$ExistingSetting = Get-MgDirectorySetting | Where-Object {$_.DisplayName -eq "Group.Unified"}
+
+# Update the setting with new values
+Update-MgDirectorySetting -DirectorySettingId $ExistingSetting.Id -Values $Setting.Values
+
  
-20.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
+19.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
    
-    Disconnect-AzureAD
+    Microsoft Powershell command:Disconnect-AzureAD
+	Microsoft Graph Powershell: Disconnect-MgGraph
 	
 20. Close the PowerShell window and continue to the next task.
 	
