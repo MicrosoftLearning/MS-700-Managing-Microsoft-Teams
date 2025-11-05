@@ -476,9 +476,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
 -  Microsoft Powershell command:
-  
-```powershell
-Install-Module -Name AzureADPreview
+`Install-Module -Name AzureADPreview`
 
  
 - Microsoft Graph Powershell command:
