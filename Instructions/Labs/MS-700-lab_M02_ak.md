@@ -603,27 +603,29 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com/) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
+2. In the left navigation of the Microsoft Purview Portal, select  **Data loss prevention** under **Solutions**.
 
 3. On the **Data loss prevention** page, select the **Policies**, then select **+ Create policy**.
 
-4. In the **Start with a template or create a custom policy** page,
+4. In the **Choose what type of data to protect** page, keep the default selection and press **Next**.
+   
+5. In the **Start with a template or create a custom policy** page,
 
 	a. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR) Enhanced** template from the **Templates** section.
 
 	b. Select **Next**
 
-5. In the **Name your DLP policy** page, enter the following information:
+6. In the **Name your DLP policy** page, enter the following information:
 
 	- **Name**: GDPR DLP Policy
 
 	- **Description**: Data loss prevention policy for GDPR regulations in Teams.
 
-6. In the **Assign admin units** page, leave settings as is.
+7. In the **Assign admin units** page, leave settings as is.
    
-7. In the **Choose where to apply the policy** page, apply the following settings and select **Next**:
+8. In the **Choose where to apply the policy** page, apply the following settings and select **Next**:
 
 	- **Exchange email**: Select checkbox
 
@@ -640,7 +642,7 @@ According to your organization’s compliance requirements, you need to implemen
 	- **Fabric and Power BI workspaces**: Unselect checkbox
 
 
-8. In the **Define policy settings** page, stay with the default selection from the template - **Review and customize default settings from the template** and select **Next**.
+9. In the **Define policy settings** page, stay with the default selection from the template - **Review and customize default settings from the template** and select **Next**.
 
 	1. In the **Info to protect** page, leave the default settings and select **Next**.
 
@@ -662,9 +664,9 @@ According to your organization’s compliance requirements, you need to implemen
 		- Select **Block only people outside your organization.**.
 		- Select **Override the rule automatically if they report it as false positive**.
 
-9. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
+10. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
 
-10. On the Review your settings page, review your settings, select **Submit** then **Done**.
+11. On the Review your settings page, review your settings, select **Submit** then **Done**.
 Note: After pressing Submit you may receive an error which reads "Client error: to block only people outside your organization, you must select the conditions "content is shared with people outside my organization:" Press **OK** to ignore and navigate back to the Data Loss Prevention page by selecting **Cancel** and select **Confirm**.
 
 12. Stay on the **Data loss prevention page** and leave the browser opened. Press the **Refresh** button.
