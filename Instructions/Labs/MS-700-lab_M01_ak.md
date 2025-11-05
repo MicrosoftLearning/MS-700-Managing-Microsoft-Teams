@@ -468,54 +468,55 @@ Restrict the Microsoft 365 groups creation to the security group.
    
 Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
 
-Please note: The Microsoft Graph PowerShell commands for this task needs to be added. Please proceed to use the Microsoft PowerShell commands below. 
+Please note: The Microsoft Graph PowerShell commands for this task has been added. You can ue either commands forthe steps listed below. 
 
 4. Open **Windows PowerShell** and run as Administrator.
 
 5. Install **Azure AD Preview module**
 	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
-        Install-Module -Name AzureADPreview
+   -	Microsoft Powershell command:  Install-Module -Name AzureADPreview
+   - Microsoft Graph Powershell command: Install-Module Microsoft.Graph.Beta
    	
-6. Connect to your AAD tenant.
+7. Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
        
         Connect-AzureAD
 	
-7. Load the Azure AD unified group template, by using the following cmdlet:
+8. Load the Azure AD unified group template, by using the following cmdlet:
 
        
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
 	
-8. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
+9. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
 
        
         if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
 
-9. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
+10. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
 
         
         $Setting["EnableGroupCreation"] = "False"
 	
-10. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
+11. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
 
        
         $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
        
-11. Review the changes you have just configured with the following command:
+12. Review the changes you have just configured with the following command:
 
         
         $Setting.Values
 
-12. Save the changes and apply the setting:
+13. Save the changes and apply the setting:
 
         
         New-AzureADDirectorySetting -DirectorySetting $Setting
        
     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 	
-13. Test the newly configured settings.
+14. Test the newly configured settings.
 
     1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -527,26 +528,26 @@ Please note: The Microsoft Graph PowerShell commands for this task needs to be a
         **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 
-14. Revert the change for enabling users to create new teams.
+15. Revert the change for enabling users to create new teams.
 
-15. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+16. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
-16. Load the Azure AD unified group template, by using the following cmdlet:
+17. Load the Azure AD unified group template, by using the following cmdlet:
 
      
         $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
  
-17.	Create a blank Azure AD tenant settings object:
+18.	Create a blank Azure AD tenant settings object:
 
       
         $Setting = $Template.CreateDirectorySetting()
 	
-18. Apply the configured settings, to revert previous changes:
+19. Apply the configured settings, to revert previous changes:
          
         
         Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
  
-19.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
+20.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
    
     Disconnect-AzureAD
