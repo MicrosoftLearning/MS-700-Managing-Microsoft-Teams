@@ -590,11 +590,7 @@ Update-MgDirectorySetting -DirectorySettingId $ExistingSetting.Id -Values $Setti
  
 19.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 
--  Microsoft Powershell command:
-```Disconnect-AzureAD```
-     
-- Microsoft Graph Powershell:
-```Disconnect-MgGraph```
+
 	
 20. Close the PowerShell window and continue to the next task.
 	
