@@ -477,16 +477,13 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 
 -  Microsoft Powershell command:
   ```Install-Module -Name AzureADPreview```
-
  
 - Microsoft Graph Powershell command:
-  
 ```Install-Module Microsoft.Graph.Beta```
    	
 6 . Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
-	  
-	  
+	   
 -  Microsoft Powershell command:
  ```Connect-AzureAD```
 
@@ -494,18 +491,18 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 ```Connect-MgGraph```
 	
 7. Load the Azure AD unified group template, by using the following cmdlet:
-
-       
+          
 -	Microsoft Powershell command:
+  
   ```$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}```
   
 -	Microsoft Graph Powershell command:
   ```$Template = Get-MgDirectorySettingTemplate | Where-Object {$_.DisplayName -eq "Group.Unified"}```
 	
 8. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
-
-       
+   
 - Microsoft Powershell command:
+  
   ```if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}```
 
 - Microsoft Graph Powershell command:
