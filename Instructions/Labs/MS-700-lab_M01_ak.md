@@ -434,9 +434,9 @@ You are an administrator for your Team’s organization. You need to limit which
 
 1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
-1. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
+2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
-1. On the **Active teams and groups** page,  create a security group. 
+3. On the **Active teams and groups** page,  create a security group. 
 
 	- Navigate to the **Security groups** tab.
         - Select the **+ Add a security group** button.
@@ -470,9 +470,9 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
 
 Please note: The Microsoft Graph PowerShell commands for this task has been added. You can ue either commands forthe steps listed below. 
 
-1. Open **Windows PowerShell** and run as Administrator.
+4. Open **Windows PowerShell** and run as Administrator.
 
-1. Install **Azure AD Preview module**
+5. Install **Azure AD Preview module**
 	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
 -  Microsoft Powershell command:
@@ -481,7 +481,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 - Microsoft Graph Powershell command:
 ```Install-Module Microsoft.Graph.Beta```
 
-1 . Connect to your AAD tenant.
+5. Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 	   
 -  Microsoft Powershell command:
@@ -490,7 +490,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 - Microsoft Graph Powershell command:
 ```Connect-MgGraph```
 	
-1. Load the Azure AD unified group template, by using the following cmdlet:
+6. Load the Azure AD unified group template, by using the following cmdlet:
           
 -	Microsoft Powershell command:
   ```$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}```
@@ -498,7 +498,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 -	Microsoft Graph Powershell command:
   ```$Template = Get-MgDirectorySettingTemplate | Where-Object {$_.DisplayName -eq "Group.Unified"}```
 	
-1. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
+7. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
    
 - Microsoft Powershell command:
    ```if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}```
@@ -506,7 +506,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 - Microsoft Graph Powershell command:
   ```$Setting = Get-MgDirectorySetting | Where-Object {$_.TemplateId -eq $Template.Id}; if (-not $Setting) { $Setting = New-MgDirectorySetting -TemplateId $Template.Id }```
 
-1. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
+8. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
 
 -  Microsoft Powershell command:
   ```$Setting["EnableGroupCreation"] = "False"```
@@ -514,7 +514,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 -  Microsoft Graph Powershell command:
   ```Update-MgDirectorySetting -DirectorySettingId $Setting.Id -Values @{ "EnableGroupCreation" = "False" }```
 	
-1. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
+9. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
 
 -  Microsoft Powershell command:
   ```$Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid```
@@ -523,12 +523,12 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
   ```Group = Get-MgGroup -Filter "displayName eq 'GroupCreators'"; Update-MgDirectorySetting -DirectorySettingId $Setting.Id -Values @{ "GroupCreationAllowedGroupId" = $Group.Id }```
 
        
-1. Review the changes you have just configured with the following command:
+10. Review the changes you have just configured with the following command:
 
 - Microsoft Powershell command and Microsoft Graph Powershell command:
 ```$Setting.Values```
 
-1. Save the changes and apply the setting:
+11. Save the changes and apply the setting:
 
 -  Microsoft Powershell command:
   ```New-AzureADDirectorySetting -DirectorySetting $Setting```
@@ -538,7 +538,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
        
     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 	
-1. Test the newly configured settings.
+12. Test the newly configured settings.
 
     1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -550,11 +550,11 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
         **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 
-1. Revert the change for enabling users to create new teams.
+13. Revert the change for enabling users to create new teams.
 
-1. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+14. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
-1. Load the Azure AD unified group template, by using the following cmdlet:
+15. Load the Azure AD unified group template, by using the following cmdlet:
 
 - Microsoft Powershell command:
   ```$Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}```
@@ -562,7 +562,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 - Microsoft Graph Powershell command:
   ```$Template = Get-MgDirectorySettingTemplate | Where-Object {$_.DisplayName -eq "Group.Unified"}```
  
-1.	Create a blank Azure AD tenant settings object:
+16.	Create a blank Azure AD tenant settings object:
 
 -  Microsoft Powershell command:
   ```$Setting = $Template.CreateDirectorySetting()```
@@ -570,7 +570,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 - 	Microsoft Graph Powershell command:
   ```$Setting = New-MgDirectorySetting -TemplateId $Template.Id```
 	
-1. Apply the configured settings, to revert previous changes:
+17. Apply the configured settings, to revert previous changes:
 
 -  Microsoft Powershell command:
    ```Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting```
@@ -579,7 +579,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 ```$ExistingSetting = Get-MgDirectorySetting | Where-Object {$_.DisplayName -eq "Group.Unified"} Update-MgDirectorySetting -DirectorySettingId $ExistingSetting.Id -Values $Setting.Values```
 
  
-1.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
+18.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
 -  Microsoft Powershell command:
 ```Disconnect-AzureAD```
      
@@ -587,7 +587,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
 ```Disconnect-MgGraph```
 
 	
-1. Close the PowerShell window and continue to the next task.
+20. Close the PowerShell window and continue to the next task.
 	
 	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
