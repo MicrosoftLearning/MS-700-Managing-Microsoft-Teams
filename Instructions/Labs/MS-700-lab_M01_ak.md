@@ -504,10 +504,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
    ```if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}```
 
 - Microsoft Graph Powershell command:
-  ```Setting = Get-MgDirectorySetting | Where-Object {$_.TemplateId -eq $Template.Id}
-if (-not $Setting) {
-    $Setting = New-MgDirectorySetting -TemplateId $Template.Id
-}```
+  ```$Setting = Get-MgDirectorySetting | Where-Object {$_.TemplateId -eq $Template.Id}; if (-not $Setting) { $Setting = New-MgDirectorySetting -TemplateId $Template.Id }```
 
 9. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
 
@@ -523,8 +520,7 @@ if (-not $Setting) {
   ```$Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid```
          
 - Microsoft Graph Powershell command:
-  ```$Group = Get-MgGroup -Filter "displayName eq 'GroupCreators'"
-```Update-MgDirectorySetting -DirectorySettingId $Setting.Id -Values @{ "GroupCreationAllowedGroupId" = $Group.Id```
+  ```Group = Get-MgGroup -Filter "displayName eq 'GroupCreators'"; Update-MgDirectorySetting -DirectorySettingId $Setting.Id -Values @{ "GroupCreationAllowedGroupId" = $Group.Id }```
 
        
 11. Review the changes you have just configured with the following command:
