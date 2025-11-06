@@ -504,8 +504,7 @@ Please note: The Microsoft Graph PowerShell commands for this task has been adde
    ```if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}```
 
 - Microsoft Graph Powershell command:
-  ```$Setting = Get-MgDirectorySetting | Where-Object {$_.TemplateId -eq $Template.Id}
-```if (-not $Setting) {
+  ```$Setting = Get-MgDirectorySetting | Where-Object {$_.TemplateId -eq $Template.Id} if (-not $Setting) {
     $Setting = New-MgDirectorySetting -TemplateId $Template.Id
   }```
 
