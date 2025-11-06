@@ -2,7 +2,7 @@
 
 # **Lab 01: Manage Microsoft Teams**
 
-# **Student lab answer key**
+# **Student lab answer key**.
 
 ## **Microsoft 365 user interface**
 
