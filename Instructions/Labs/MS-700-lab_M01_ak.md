@@ -1,6 +1,6 @@
 
 
-# **Lab 01: Manage Microsoft Teams**
+# **Lab 01: Manage collaboration and communiction with Microsoft Teams**
 
 # **Student lab answer key**
 
