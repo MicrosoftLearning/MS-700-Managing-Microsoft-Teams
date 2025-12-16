@@ -1,4 +1,4 @@
-# MS-700: Managing Microsoft Teams
+# MS-700: Manage collaboration and communication with Microsoft Teams. 
 
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
 - **Are you an MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
