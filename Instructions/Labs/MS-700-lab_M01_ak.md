@@ -1,4 +1,16 @@
-
+---
+lab:
+  title: '**Lab 01: Manage collaboration and communiction with Microsoft Teams**'
+  description: Given the dynamic nature of Microsoft cloud tools, you may experience
+    user interface (UI) changes that were made following the development of this training
+    content. This will manifest itself in UI changes that do not match up with the
+    detailed instructions presented in this lab manual.
+  duration: 100 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft Teams
+---
 
 # **Lab 01: Manage collaboration and communiction with Microsoft Teams**
 
