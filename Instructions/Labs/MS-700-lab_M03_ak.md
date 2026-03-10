@@ -1,4 +1,14 @@
-
+---
+lab:
+  title: '**Lab 03: Manage teams, collaboration and app settings for Teams**'
+  description: In the labs of this course, you will assume the role of Joni Sherman,
+    a Teams Administrator for Contoso Ltd. In this lab, you will perform operational
+    tasks as a Teams administrator, such as creating and modifying teams, managing
+    membership, and recovering deleted teams.
+  duration: 110 minutes
+  level: 300
+  islab: true
+---
 
 # **Lab 03: Manage teams, collaboration and app settings for Teams**
 
