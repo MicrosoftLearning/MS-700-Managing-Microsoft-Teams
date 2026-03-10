@@ -1,4 +1,21 @@
-
+---
+lab:
+  title: '**Lab 02: Prepare the environment for a Microsoft Teams deployment**'
+  description: In the labs of this course, you will assume the role of the Global
+    Administrator for Contoso Ltd. Your organization is planning to deploy Microsoft
+    Teams. Before starting the deployment, the IT department is gathering business
+    requirements about data security and compliance, including how the data shared
+    in Teams be regulated according to the organization’s compliance requirements.
+    Also there are concerns about the current network infrastructure to meet the requirements
+    for Microsoft Teams services. Therefore, you need to analyze the current network
+    infrastructure and perform bandwidth calculations. Based on your estimation, you
+    can provide recommendations to the networking team.
+  duration: 120 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft Teams
+---
 
 # **Lab 02: Prepare the environment for a Microsoft Teams deployment**
 
