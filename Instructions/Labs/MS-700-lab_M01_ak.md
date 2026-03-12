@@ -1,4 +1,15 @@
-
+---
+lab:
+  title: 'Lab 01: Manage collaboration and communiction with Microsoft Teams'
+  description: In this task, you will install and connect with the Teams PowerShell module to your tenant and explore the available cmdlets and functions to manage your tenant. You can install the Teams PowerShell module from the available repositories preconfigured in your Windows 10 operating system and do not need to download any executables via the browser.
+  duration: 100 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Teams
+    - Windows
+    - Windows 10
+---
 
 # **Lab 01: Manage collaboration and communiction with Microsoft Teams**
 
