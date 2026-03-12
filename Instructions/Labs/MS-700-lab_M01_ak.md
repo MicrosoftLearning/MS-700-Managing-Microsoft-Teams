@@ -1,4 +1,13 @@
-
+---
+lab:
+  title: 'Lab 01: Manage collaboration and communiction with Microsoft Teams'
+  description: These labs walk you through administering a Microsoft Teams pilot by assigning roles and licenses, using the Teams and Microsoft 365 admin centers and PowerShell to manage teams and groups, enabling preview features, and applying governance best practices such as naming, expiration, and creation policies.
+  duration: 100 minutes
+  level: 100-200
+  islab: true
+  primarytopics:
+    - Microsoft Teams
+---
 
 # **Lab 01: Manage collaboration and communiction with Microsoft Teams**
 
