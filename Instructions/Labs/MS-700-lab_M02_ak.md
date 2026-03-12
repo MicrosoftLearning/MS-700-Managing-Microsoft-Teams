@@ -1,12 +1,11 @@
 ---
 lab:
-  title: '**Lab 02: Prepare the environment for a Microsoft Teams deployment**'
-  description: You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Azure AD, for being able to assign labels to teams.
+  title: 'Lab 02: Prepare the environment for a Microsoft Teams deployment'
+  description: These labs focus on preparing for a Microsoft Teams deployment by evaluating security and compliance requirements, analyzing the existing network infrastructure, performing bandwidth calculations, and recommending network readiness improvements.
   duration: 120 minutes
-  level: 300
+  level: 100-200
   islab: true
   primarytopics:
-    - Azure
     - Microsoft 365
     - Microsoft Teams
 ---
