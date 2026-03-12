@@ -1,9 +1,9 @@
 ---
 lab:
-  title: '**Lab 04: - Manage Teams meetings and calling experiences**'
+  title: 'Lab 04: - Manage Teams meetings and calling experiences'
   description: In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd., and her pilot team that shall evaluate the capabilities of Microsoft Teams in a testing environment. Teams admins need to configure conferencing functionalities, such as meetings and live event features that will provide the best user experience during collaboration and communication.
   duration: 180 minutes
-  level: 300
+  level: 100-200
   islab: true
   primarytopics:
     - Microsoft Teams
