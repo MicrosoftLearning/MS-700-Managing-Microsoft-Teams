@@ -3,7 +3,7 @@ lab:
   title: 'Lab 03: Manage teams, collaboration and app settings for Teams'
   description: In this exercise, you will configure policies to manage the creation of new private channels and the available tools for users in chat.
   duration: 110 minutes
-  level: 300
+  level: 100-200
   islab: true
 ---
 
