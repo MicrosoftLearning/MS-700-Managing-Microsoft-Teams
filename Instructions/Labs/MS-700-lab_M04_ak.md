@@ -512,7 +512,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 8. On the left navigation pane, select **Voice** and **Call queues**, to create a call queue.
 
-9. Select **+ Add** from the top pane.
+9. Select **+ Add** from the top pane. On the pop up window click **Classic setup**.
 
 10. Enter the following information:
 
@@ -576,7 +576,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 7. On the left navigation pane, select **Voice** and then **Auto attendants** below.
 
-8. Select **+ Add** from the top pane, to create a new auto-attendant.
+8. Select **+ Add** from the top pane, to create a new auto-attendant. On the pop up window select **Classic setup**.
 
 9. Enter the following information:
 
