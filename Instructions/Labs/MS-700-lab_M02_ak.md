@@ -286,18 +286,18 @@ After activating sensitivity labels for groups, you will now create three sensit
 
     *Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
-12. Update the first sensitivity label - **General**.
+12. Select  **General** > **+Create label in group**.
 
-	Select the **General** label and select the **...** button then select the **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
-	
-	a. In the **Name &amp; description** section, enter the following information:
-		- **Name** : Leave unchanged
+13. Enter the following:
+   
+	a. In the **Provide basic etails for this label** section, enter the following information:
+		- **Name** : General
 		- **Display name** : General
-		- **Description for users** : Leave unchanged
+		- **Description for users** : General information with sharing protection
 		- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
     		Then select **Next**.
 
-	b. In the **Scope** section, select **Files &amp; other data assets** and **Groups &amp; sites**. Then select **Next**.
+	b. In the **Define the Scope for this label** section, leave the selections as is. Then select **Next**.
 
 	c. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unchecked and select **Next**.
 
@@ -320,7 +320,7 @@ After activating sensitivity labels for groups, you will now create three sensit
  
 	h. Select **Save label** > **Done**.
 
-13. Create the second sensitivity label - **Internal**.
+14. Create the second sensitivity label - **Internal**.
 
 	Select **Information Protection** on the left hand side navigation panel then select the **Sensitivity labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -351,29 +351,27 @@ After activating sensitivity labels for groups, you will now create three sensit
     * Click **Save** to apply the changes.
 		
 
-14. In the **Auto-labeling** section, leave the settings as default.
+15. In the **Auto-labeling** section, leave the settings as default.
 	
-15. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
+16. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
 	
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
 
-16. In the **Privacy & external user access** section, select **None**. 
+17. In the **Privacy & external user access** section, select **None**. 
 
-17. In the **External sharing & device access** section
+18. In the **External sharing & device access** section
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access** 
 
-18. Select **Create label** > **Done**.
+19. Select **Create label** > **Done**.
 
-19. On the **Publish label**  pop-out page, select **Cancel**.
+20. On the **Publish label**  pop-out page, select **Cancel**.
 
-20. Update the second sensitivity label - **Confidential**
-
-	Select the **Information protection** button on the left hand side navigation panel then select the **Lables** button then select the  **Confidential** label and select the **...** button then select **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
+21. Update the second sensitivity label -  select **Confidential** > select **+ Create label in group**.
 	
 	a. In the **Name & description** section, enter the following information:
-		- **Name**: Leave unchanged
+		- **Name**: Confidential
 		- **Display name**: Confidential
 		- **Description for users**: Leave unchanged
 		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
@@ -619,11 +617,11 @@ According to your organization’s compliance requirements, you need to implemen
 
 3. On the **Data loss prevention** page, select the **Policies**, then select **+ Create policy**.
 
-4. In the **Choose what type of data to protect** page, keep the default selection and press **Next**.
+4. In the **What info do you want to protect** page, press **Enterprise applications & devices**.
    
 5. In the **Start with a template or create a custom policy** page,
 
-	a. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR) Enhanced** template from the **Templates** section.
+	a. Select **Privacy** under **Categories**, then select the **GDPR Enhanced** template from the **Templates** section.
 
 	b. Select **Next**
 
@@ -652,36 +650,18 @@ According to your organization’s compliance requirements, you need to implemen
 	- **Fabric and Power BI workspaces**: Unselect checkbox
 
 
-9. In the **Define policy settings** page, stay with the default selection from the template - **Review and customize default settings from the template** and select **Next**.
+9. In the **Define policy settings** page, stay with the default selection from the template - **Create or customize advanced DLP rules** and select **Next**.
 
-	1. In the **Info to protect** page, leave the default settings and select **Next**.
+	1. In the **Customize advanced DLP rules** page, leave the default settings and select **Next**.
 
-	2. In the **Protection actions** page, ensure that the following settings are configured, and then select **Next**:
+	2. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
 
-		- A checkbox is selected for: **Detect when a specific amount of sensitive info is being shared at one time**
-		- In the **At least __ or more instances of the same sensitive info type** box, type: **1**
-		- Select the checkbox **Send incident reports in email**
-		- Select **Choose what to include in the report and who receives it** to open the right-side pane
-		- Select **Add or remove people**, select the checkbox for **Joni Sherman**. 
-		- Select **Add** and **Save**
-		- Select the checkbox **Send alerts if any of the DLP rules match**
-		- Select the checkbox **Restrict access or encrypt the content in Microsoft 365 locations**
+	3. On the Review your settings page, review your settings, select **Submit** then **Done**.
+	Note: After pressing Submit you may receive an error which reads "Client error: to block only people outside your organization, you must select the conditions "content is shared 	with people outside my organization:" Press **OK** to ignore and navigate back to the Data Loss Prevention page by selecting **Cancel** and select **Confirm**.
 
-	3. In the **Customize access and override settings** page, ensure that the following settings are configured, and then select **Next**:
+	4. Stay on the **Data loss prevention page** and leave the browser opened. Press the **Refresh** button.
 
-		- A checkbox is selected for: **Restrict access or encrypt the content in Microsoft 365 locations**
-		- Select **Block users from receiving email or accessing shared SharePoint, OneDrive, and Teams content**.
-		- Select **Block only people outside your organization.**.
-		- Select **Override the rule automatically if they report it as false positive**.
-
-10. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
-
-11. On the Review your settings page, review your settings, select **Submit** then **Done**.
-Note: After pressing Submit you may receive an error which reads "Client error: to block only people outside your organization, you must select the conditions "content is shared with people outside my organization:" Press **OK** to ignore and navigate back to the Data Loss Prevention page by selecting **Cancel** and select **Confirm**.
-
-12. Stay on the **Data loss prevention page** and leave the browser opened. Press the **Refresh** button.
-
-After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
+	After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
 
 #### Task 9 - Create a DLP policy from scratch
 
