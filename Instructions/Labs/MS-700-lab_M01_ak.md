@@ -497,7 +497,7 @@ Please note: The Microsoft Graph PowerShell commands WILL BE ADDED IN THENEAR FU
  ```Connect-AzureAD```
 
 - Microsoft Graph Powershell command:
-```Connect-MgGraph```
+```Connect-MgGraph -scope Groups.Read.All```
 	
 7. Load the Azure AD unified group template, by using the following cmdlet:
           
