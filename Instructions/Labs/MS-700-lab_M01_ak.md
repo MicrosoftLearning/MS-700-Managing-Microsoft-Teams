@@ -206,7 +206,7 @@ To perform these tasks, you will use Joni Sherman’s account (JoniS@_&lt;YourTe
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM**, browse to Teams admin center (https://admin.teams.microsoft.com) and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
@@ -230,8 +230,7 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the passwrod for 
-          **Client 1VM**
+	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the password for **Client 1VM**
 
 	- Confirm the **User Account Control** window with **Yes**.
 
