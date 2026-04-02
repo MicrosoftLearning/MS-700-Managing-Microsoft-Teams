@@ -392,11 +392,11 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, this app only**.
+3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the **Stay signed in ?** window, select **No**.
 
-4. Select **Teams** from the navigation menu to the left.
+4. In the left navigation pane, select the ellipsis (…) next to **Teams and channels**, and then select **Your teams and channels**
 
-5. Select **+** at the top left >  **Create team** >Enter the team name **Sales** > Enter anything you want for **Description** > Select Team type to **Private** > Enter **Sales** in Name the first channel. Select **Create**.
+5. Select **Create team** > Enter **Sales** for **Team name** > Enter anything you want for **Description** > Select Team type to **Private** > Enter **Sales** for **First channel name**. Select **Create**.
 
 6. On the **Add members to Sales** window, enter the following names and select **Add** > **Close**.
 
