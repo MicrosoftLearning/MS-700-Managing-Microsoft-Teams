@@ -130,7 +130,7 @@ In the first exercise, you will assign required administrative roles to users an
 
 In this task, you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in the context of Joni Sherman’s account.
 
-1. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Browse to the Microsoft 365 admin center (https://admin.microsoft.com/) and sign in as a **MOD Administrator**.
 
 	- Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -138,7 +138,7 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 2. To assign **Teams admin** role to **Joni Sherman**
 
-	- Select the navigation menu in the upper-left and select **Users** and **Active users** from below it.
+	- Select the navigation menu in the upper-left, expand **Users** and select **Active users**.
 
 	- In the Active user’s list, search and select **Joni Sherman**, to open the right-side settings pane.
 
