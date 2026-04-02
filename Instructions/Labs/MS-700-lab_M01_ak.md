@@ -230,7 +230,7 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the password for **Client 1VM**
+	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the password for **Client 1VM**.
 
 	- Confirm the **User Account Control** window with **Yes**.
 
