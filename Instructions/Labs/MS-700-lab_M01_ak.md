@@ -366,9 +366,9 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 	**Note**: You might need to download and install the latest Teams, desktop client. If so, select **Update Teams** and follow the installation guideline - Select **Download for desktop** > **Download Teams** **Run**.
 
-4. In the Teams desktop client, select **Teams** from the left menu.
+4. In the Teams desktop client, select **Teams and channels** from the left menu.
 
-5. Select **Create team** > **From Scratch** > Enter the team name **Teams Rollout** > Enter anything you want for **Description** > Set Team type to**Public** > Type **Teams Rollout** for Name the first channel. Select  **Create**.
+5. Select **Create team** > Enter the team name **Teams Rollout** > Enter anything you want for **Description** > Set Team type to**Public** > Type **Teams Rollout** for ** First channel name**. Select  **Create**.
 
 6. On the **Add members to Teams Rollout** window, enter the following names and select **Add**.
 
@@ -378,9 +378,9 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 	- Diego Siciliani
 
-7. Select **Teams** from left ahnd corner and click the **...** button next to **Teams Rollout** > **Manage Team**.
+7. In the left navigation pane, expand **Teams and channels**. Next to **Teams Rollout**, select the ellipsis (…), and then select **Manage team**.
 
-8. Select the **Members** tab and select the dropdown for **Members an guests** and scroll to Joni Sherman and switch from **Member** to **Owner**.
+8. Select the **Members** tab, under **Members an guests**, locate Joni Sherman and change the role from **Member** to **Owner**.
 
 You have successfully created a new team from the Teams desktop client added the project team members, and you have made Joni Sherman a team owner.
 
