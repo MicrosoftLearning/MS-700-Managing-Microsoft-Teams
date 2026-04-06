@@ -589,7 +589,7 @@ As part of your Teams planning project, you will configure the naming policy whe
     
     2. Navigate and right-select the downloaded file **BlockedWords.csv** and select **Open with** > **Notepad**.
 
-    3. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, and saving the file. 
+    3. Type *CEO,Payroll,HR* replacing the empty quotes in the Notepad window, and saving the file. 
     
     4. Back to the **Groups | Naming policy** page, upload the saved .csv file under **3. Upload your .csv file** by selecting **Select a file** box or the folder icon.
 
@@ -628,7 +628,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 3. Select **Create team** in the upper left hand corner to create and join teams and channels.
 
-4. Select **Create team** >Enter **Afterwork** for the **Team name** > Enter anything you want for **Description** > set Team type to **Public** > Enter **Afterwork** for Name the first channel.
+4. Select **Create team** >Enter **Afterwork** for the **Team name** > Enter anything you want for **Description** > set Team type to **Public** > Enter *Afterwork* for Name the first channel.
    
 	Below the entered name, you can see the configured prefix and suffix for new teams.
 
@@ -648,7 +648,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 2. On the main page under **Contoso**, select **View groups** > **All Groups**.
 
-3. Navigate to the **Group naming policy** tab.
+3. Navigate to the **Naming policy** tab.
 
 5. Select **Delete policy** at the top ribbon > **Yes**.
 
@@ -672,7 +672,7 @@ To avoid administrative overhead with managing large numbers of policies individ
    
 7. From the list of users select **Joni Sherman**.
    
-8. Navigate to the **Policies Tab** and Select **Frontline_Worker** next to **Messaging Policies**.
+8. Navigate to the **Policies Tab** and Select **Frontline_Worker** next to **Messaging Policy**.
 
 9. Turn on the setting - **Send urgent messages using priotiy notifications** and select **Save**, if this setting is not already turned on.
 
@@ -684,7 +684,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 	2. Select **Frontline worker (default)** from the list again. 
 	3. Select **Frontline_worker** right from **Calling policy**.
 	4. Turn **On** the setting - **Prevent toll bypass and send calls through the PSTN**.
-	5. Update **Busy on busy when in a call** to **On**.
+	5. Update **Busy on busy during calls** to **On**.
 	6. Select **Save**.
     	7. Select **Confirm**.
 
