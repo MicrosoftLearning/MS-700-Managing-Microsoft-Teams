@@ -465,7 +465,7 @@ You are an administrator for your Team’s organization. You need to limit which
 
 	- Select **Members** tab to configure the **Owners** and **Members**.
 
-		- Owners: Select **View all and manage owners** and select **+ Add owners.** Select **MOD Administrator**.
+		- Owners: Select **View all and manage owners** and select **+ Add owners.** Select and add **MOD Administrator**.
 
 		- Members: Select **View all and manage members** > **+ Add members**, and add the following users:
 
