@@ -650,7 +650,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 3. Navigate to the **Naming policy** tab.
 
-5. Select **Delete policy** at the top ribbon > **Yes**.
+4. Select **Delete policy** at the top ribbon > **Yes**.
 
 #### Task 6 – Manage policy packages
 
@@ -678,7 +678,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 10. Press **Confirm**.
 
-12. Update Calling policy in **Frontline worker** policy package.
+11. Update Calling policy in **Frontline worker** policy package.
 
 	1. Back to **Policy packages** page.
 	2. Select **Frontline worker (default)** from the list again. 
@@ -686,17 +686,17 @@ To avoid administrative overhead with managing large numbers of policies individ
 	4. Turn **On** the setting - **Prevent toll bypass and send calls through the PSTN**.
 	5. Update **Busy on busy during calls** to **On**.
 	6. Select **Save**.
-    	7. Select **Confirm**.
+    7. Select **Confirm**.
 
-13. Navigate to **Policy Packages** from the left navigation pane.
+12. Navigate to **Policy Packages** from the left navigation pane.
 
-14. Make sure **Frontline worker** policy package is checked.
+13. Make sure **Frontline worker** policy package is checked.
 
-15. Select **Manage users** from the top menu.
+14. Select **Manage users** from the top menu.
 
-16. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
+15. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
 
-17. Check the policy assignment.
+16. Check the policy assignment.
 
 	1. Select **Users** > **Manage users** from the left-side pane.
 
@@ -715,17 +715,19 @@ In this exercise, you will configure users to explore and evaluate upcoming feat
 
 1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com))
 
-	**Note**: You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
+	>[!NOTE]
+	> You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
+	
 
 2. In left navigation of the Teams admin center, select **Teams** > **Teams update policies**. 
 
-3. Select **...** > **+ Add**
+3. Select **+ Add**.
 
 4. Enter the following information:
 
 	- Name: **Enable Preview features**
 	- Description: **Enable Teams public preview**
-	- Show preview features: select **On for everyone** 
+	- Show Teams preview features: select **On for everyone** 
 	- Select **Apply** 
 
 You now completed creating a custom **Teams Update policy.**
@@ -749,4 +751,3 @@ Now you need to assign the custom Update policy to specific users because it doe
 
 5. Select **Apply** then **Confirm** to assign the custom update policy created in task 1.
 
-END OF LAB
