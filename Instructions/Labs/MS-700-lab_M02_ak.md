@@ -132,11 +132,13 @@ You have successfully invited a guest to a team and validated the guest access s
 
 As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**. 
+1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/) as **MOD Administrator**. 
 
 2. Create an access review to monitor guest users.
 
-	In search bar at the top of the Entra admin center, type and seelct **Identity Governance** > and select **Access Reviews** and select **+ New access review**. Follow the wizard with the following information:
+	In the search bar at the top of the Entra admin center, type **Identity Governance** and select it from the results. Select **Access Reviews**, then select **+ New access review**. On the **Create an access review** page, under **Choose an Access Review template**, select **Select** under **Resource review**.
+	
+	Follow the wizard with the following information:
 
 	1. On the **Review type** tab:
 	
@@ -152,7 +154,7 @@ As a part of your system administrator role, you need to review access to resour
 
 	3. On the **Settings** tab, leave the settings as default. Select on **Next: Review+Create** > **Create**. 
 
-3. Review the access review dashboard from Azure AD.
+3. Review the access review dashboard from Microsoft Entra ID.
 
 	1. On the **Identity Governance | Access reviews** page, you will see an access review report named **Review guest access across Microsoft 365 groups**
 
@@ -168,13 +170,15 @@ As a part of your system administrator role, you need to review access to resour
 
 	2. Check the email with the subject **Action required: Review group access**.
 
-	3. Select **Start review >** in the content of the email. 
+	3. Select **Start review >** in the content of the email.
 
-	4. From the **My Access** (Https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
+	4. On the **Pick an account** page select **Alex Wilber** account
 
-	5. On the **Review guest access across Microsoft 365 groups** page, select the guest account and select **Approve**. 
+	5. From the **My Access** (Https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
+
+	6. On the **Review guest access across Microsoft 365 groups** page, select the guest account and select **Approve**. 
 	
-	6. From the **Approve continued access** window, enter **Approved.** to the textbox, and select **Submit**
+	7. From the **Approve continued access** window, enter **Approved.** to the textbox, and select **Submit**
 
 You have successfully created an access review and approved a guest user in your tenant.
 
