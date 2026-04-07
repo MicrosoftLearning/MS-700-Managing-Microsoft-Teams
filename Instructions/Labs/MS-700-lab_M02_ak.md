@@ -206,44 +206,53 @@ In this task, you have activated Safe Attachments scanning for SharePoint, OneDr
 
 Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Team’s compliance features to meet the organization’s requirements.
 
-#### Task 1 – Activate sensitivity lables for Teams
+#### Task 1 – Activate sensitivity labels for Teams
 
-You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Azure AD, for being able to assign labels to teams.
+You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Microsoft Entra ID, for being able to assign labels to teams.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-3. Connect to your AAD tenant.
+3. Install the **Microsoft Graph Beta** module if not already installed. Enter `Y` and press **Enter** to confirm installation from an untrusted repository.
+```powershell
+   Install-Module Microsoft.Graph.Beta
+```
+4. Connect to your Microsoft Entra ID tenant.
 
-    Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
-  
-     	Connect-AzureAD
+Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+```powershell
+   Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+```
+
+5. Load the existing directory setting for unified groups:
    
-4. Fetch the current group settings for the Azure AD organization.
+```powershell
+   $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq (Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }).Id }
+```
    
-     	$Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
-   
-5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
-    
-    	$Setting["EnableMIPLabels"] = "True"
-   
-6. To verify the new configuration, run the following cmdlet:
-   
+6. Enable Microsoft Information Protection (MIP) label support in your configuration:
+```powershell
+   $params = @{
+       Values = @(
+           @{ Name = "EnableMIPLabels"; Value = "True" }
+       )
+   }
+   Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+```
 
-    	$Setting.Values
+7. To verify the new configuration, run the following cmdlet:
+```powershell
+   (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+```
+Verify that **EnableMIPLabels** is now **True**.
 
-7. Then save the changes and apply the settings:
+8. Disconnect the current session from Microsoft Graph and close the PowerShell window:
+```powershell
+   Disconnect-MgGraph
+```
 
-		Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
-
-    **Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
-
-8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
-
-        	Disconnect-AzureAD
-
-You have successfully changed your tenant’s Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
+You have successfully activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
 
 #### Task 2 - Configure sensitivity labels for Teams
 
