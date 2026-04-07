@@ -291,7 +291,7 @@ In this exercise, you will create a Microsoft 365 group from the Microsoft 365 a
 
 You will create a new Microsoft 365 Group named “IT-Department,” and then add the pilot members serving as a basis for your future teams and licensing.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (<https://admin.microsoft.com/>) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -412,7 +412,7 @@ Your organization has started the planning process for Microsoft 365 services ad
 
 Based on the organization’s requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the expiration feature for Teams, you will configure a group expiration policy that will expire the **Teams Rollout** group after 90 days.
 
-1. Connect to the Client1 VM and browse to Entra admin center `https://entra.microsoft.com/` as **MOD Administrator**.
+1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**.
 
 2. On the main page under Contoso, select  **View Groups** > **All groups**.
 
@@ -656,7 +656,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (<https://admin.teams.microsoft.com>) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation of the Teams admin center, select **Policy packages**.
 
