@@ -132,7 +132,7 @@ You have successfully invited a guest to a team and validated the guest access s
 
 As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
-1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/) as **MOD Administrator**. 
+1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**. 
 
 2. Create an access review to monitor guest users.
 
@@ -258,25 +258,27 @@ You have successfully activated sensitivity labels for Microsoft 365 Groups and 
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (<https://compliance.microsoft.com/>) as **MOD Administrator**.
 
-2. Open up **Windows PowerShell** and **Run as Adminstrator**
+2. Open up **Windows PowerShell** and **Run as Administrator**
 
-3. Open a PowerShell prompt on your computer and run the following commands to prepare to run the cmdlets. 
+3. Open a PowerShell prompt on your computer and run the following commands one at a time to install the required modules.
+```powershell
+    Install-Module Microsoft.Graph -Scope CurrentUser
+    Install-Module Microsoft.Graph.Beta -Scope CurrentUser
+```
 
-        	Install-Module Microsoft.Graph -Scope CurrentUser
-		Install-Module Microsoft.Graph.Beta -Scope CurrentUser
-
-5. Connect to your tenant as **MOD Administrator**. When you sign in, a pop up screen will appear. Ensure you select the checkbox **Consent on behalf of your organization** and then press **Accept** . 
-
-        	Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+4. Connect to your tenant as **MOD Administrator**. A sign-in dialog appears with an account picker. Select **MOD Administrator** account and select **Continue**. If a permissions consent dialog appears, select the **Consent on behalf of your organization** checkbox, then select **Accept**.
+```powershell
+    Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+```
    
-6. Fetch the current group settings for the Microsoft Entra organization and display the current group settings.
-
+5. Fetch the current group settings for the Microsoft Entra organization and display the current group settings.
+```powershell
         	$grpUnifiedSetting = Get-MgBetaDirectorySetting -Search DisplayName:"Group.Unified"
-   
-7. Apply the new settings.
-
+```
+6. Apply the new settings.
+```powershell
         	$params = @{
      		Values = @(
  	    	@{
@@ -287,23 +289,24 @@ After activating sensitivity labels for groups, you will now create three sensit
 		}
 
 		Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
-
-8. Verify that the new value is present.
-
+```
+7. Verify that the new value is present.
+```powershell
         	$Setting = Get-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id
 		$Setting.Values
+```
+8. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (<https://purview.microsoft.com/>) as MOD Administrator.
 
-9. Connect to the Client 1 VM and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as MOD Administrator.
    
-10. In the left navigation of the Microsoft Purview compliance portal, select **Solutions**, **Information Protection** and then select **Sensitivity labels** from the menu.
+9. In the left navigation of the Microsoft Purview compliance portal, select **Solutions**, **Information Protection** and then select **Sensitivity labels** from the menu.
 
-11. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
+10. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
 
     *Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
-12. Select  **General** > **+Create label in group**.
+11. Select  **General** > **+Create label in group**.
 
-13. Enter the following:
+12. Enter the following:
    
 	a. In the **Provide basic etails for this label** section, enter the following information:
 		- **Name** : General
@@ -335,7 +338,7 @@ After activating sensitivity labels for groups, you will now create three sensit
  
 	h. Select **Save label** > **Done**.
 
-14. Create the second sensitivity label - **Internal**.
+13. Create the second sensitivity label - **Internal**.
 
 	Select **Information Protection** on the left hand side navigation panel then select the **Sensitivity labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -366,14 +369,14 @@ After activating sensitivity labels for groups, you will now create three sensit
     * Click **Save** to apply the changes.
 		
 
-15. In the **Auto-labeling** section, leave the settings as default.
+14. In the **Auto-labeling** section, leave the settings as default.
 	
-16. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
+15. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
 	
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
 
-17. In the **Privacy & external user access** section, select **None**. 
+16. In the **Privacy & external user access** section, select **None**. 
 
 18. In the **External sharing & device access** section
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
