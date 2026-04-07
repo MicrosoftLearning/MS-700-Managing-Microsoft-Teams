@@ -130,7 +130,7 @@ In the first exercise, you will assign required administrative roles to users an
 
 In this task, you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in the context of Joni Sherman’s account.
 
-1. Browse to the Microsoft 365 admin center (https://admin.microsoft.com/) and sign in as a **MOD Administrator**.
+1. Browse to the Microsoft 365 admin center (<https://admin.microsoft.com/>) and sign in as a **MOD Administrator**.
 
 	- Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -170,7 +170,7 @@ Proceed to the next task.
 
 In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (<https://admin.microsoft.com/>) as **MOD Administrator**.
 
 2. Update **Alex Wilber’s** location to **Canada**
 
@@ -206,7 +206,7 @@ To perform these tasks, you will use Joni Sherman’s account (JoniS@_&lt;YourTe
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM**, browse to Teams admin center (https://admin.teams.microsoft.com) and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM**, browse to Teams admin center (<https://admin.teams.microsoft.com>) and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
@@ -440,7 +440,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (<https://admin.microsoft.com/>) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -577,7 +577,7 @@ In this task, you created a security group and configured directory settings to 
 
 As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 group or team needs to comply with the organization’s regulations on naming objects. Each group name should start with the letters **Group** and end with the **Country** attribute of the owners’ location. Furthermore, there is an internal regulation that forbids using the following specific keywords in Teams names: **CEO**, **Payroll**, and **HR**.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**. 
+1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**. 
 
 2. On the main page under **Contoso**, select **View groups** > **All Groups**.
 
@@ -622,7 +622,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 **Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (<https://teams.microsoft.com/>) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
 2. In the Teams desktop client, select **Teams and channels** from the left menu > **...** > **Your Teams and channels**.
 
@@ -644,7 +644,7 @@ You have successfully tested the naming policy for managing the prefix and suffi
 
 You can remove the naming policy after the test. In the following task, you will remove the naming policy you just created.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
+1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**.
 
 2. On the main page under **Contoso**, select **View groups** > **All Groups**.
 
