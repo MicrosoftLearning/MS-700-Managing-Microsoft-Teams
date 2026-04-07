@@ -54,7 +54,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 #### Task 1 - Review guest access settings (optional)
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
+1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**.
 
 2. On the main page under **Contoso**, select **View users** > **User settings** > **Manage external collaboration settings** under the External users. Review and ensure the following settings for external users at the Azure AD level:
 
@@ -80,13 +80,13 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select **Users** > **Guest access**.
+2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
 3. On the **Guest access** page, check if **Guest Access** is enabled. If not, select **On**.
 
 4. Scroll down and under **Messaging** section, disable **Delete sent messages**
 
-5. Scroll down and select **Save**.
+5. Select **Save**.
 
 You have now successfully activated guest access and disallowed guests to delete their sent messages for Teams in your tenant.
 
@@ -102,25 +102,27 @@ You will change the default settings for inviting/creating guest users and then 
 
 2. Add the guest to **Group_Afterwork_** team.
 
-	- Select **Teams** > Select **…** next to the **Group_Afterwork_** team.
+	- Expand **Teams and channels** > Select **…** next to the **Group_Afterwork_** team.
 
 	- Select **Add member** and enter your outlook account.
 
-	- You will see a message **add &lt;Your outlook account&gt; as a guest**. Select the message and select **Add**.
+	- Type your Outlook email address in the **Type a name or email** box. When the guest account appears in the list, select it, and then select **Add**
+
 
 3. Accept the guest invite
 
-	- Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Contoso in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
+	- Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Group_Afterwork_ in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
 
 	- Select **Open Microsoft Teams** from the email. You will be redirected to the sign-in page with a permission consent request.
 
 	- Select **Accept** and sign in to Teams web client with your outlook account.
 
-	- From the Teams client, select **Teams**, you will see the team **Group_Afterwork_**.
+	- From the Teams client, under **Teams and channels**, you will see the team **Group_Afterwork_**.
 
 4. Test the guest access
 
-	- Under the team **Group_Afterwork_United States**, select **General** channel, select **Start a post** and send the message: **Hello!**.
+	- Under the team **Group_Afterwork_**, select the **Afterwork** channel.
+	 Select **Post in channel**, enter **Hello!** in the text box, and then select **Post**.
 
 	- Select **…** of the message you just posted. Notice there’s no **Delete** option.
 
