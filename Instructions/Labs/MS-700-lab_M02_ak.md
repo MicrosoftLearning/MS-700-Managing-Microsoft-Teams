@@ -425,9 +425,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 	* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select **Block access**
 
-	j. Select **Create label**.
+	k. Select **Create label**.
 
-	k. In the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
+	l. In the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
 
 22. Publish sensitivity labels, after performing each step select **Next** (if required).
