@@ -385,7 +385,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 21. If you created a new label, in the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
-22. Update the second sensitivity label - select **Confidential**, then select the **…** menu and select **Create label in group**.
+22. Update the second sensitivity label - select **Confidential**, then select the ellipsis (⋮) menu and select **Create label in group**.
 	
 	a. In the **Label details** section, enter the following information, then select **Next**:
 	- **Name**: Confidential
@@ -430,33 +430,33 @@ After activating sensitivity labels for groups, you will now create three sensit
 	l. In the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
 
-22. Publish sensitivity labels, after performing each step select **Next** (if required).
+23. Publish sensitivity labels, after performing each step, select **Next** (if required).
 
-	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, select **Policies** and then **Label publishing policies**.
+	a. In the left navigation pane, select **Information Protection** > **Policies** > **Label publishing policies**.
 
-	b. Select the **Global sensitivity label policy** and select the **Edit policy** button when the right side page pops up.
+	b. Select the **Global sensitivity label policy** checkbox, then select the ellipsis (⋮) menu and select **Edit policy**.
 
-	c. In the **Choose sensitivity labels to publish** page, select the **Edit** Link under the **Sensitivity labels to publish** section.
+	c. On the **Choose sensitivity labels to publish** page, select the **Edit** link under the **Sensitivity labels to publish** section.
 
-	d. In the **Sensitivity labels to publish** window, check all labels and select **Add**.
+	d. On the **Sensitivity labels to publish** window, select all labels and select **Add**.
 
- 	e. In the **Assign admin units** page, leave as is.
+ 	e. On the **Assign admin units** page, keep the default settings.
 
-	f. In the **Publish to users and groups** page, keep the default settings. 
+	f. On the **Publish to users and groups** page, keep the default settings. 
 
-	g. In the **Policy Settings** page, keep the default settings. 
+	g. On the **Policy Settings** page, keep the default settings. 
 
-	h. In the **Default settings for documents** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to documents**.
+	h. On the **Default settings for documents** page, under **Apply a default label to documents**, select **General/All Employees (unrestricted)** from the dropdown.
 
-	i. In the **Default setting for emails** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to emails**.
+	i. On the **Default settings for emails** page, under **Apply a default label to emails**, select **General/All Employees (unrestricted)** from the dropdown.
 
- 	j. In the **Default setting for meetings an calendar events** page, leave as is.
+ 	j. On the **Default settings for meetings and calendar events** page, leave the default settings.
       
-	k. In the **Default settings for sites and groups** page, select **Internal** in the dropdown menu under **Apply a default label to sites and groups**.
+	k. On the **Default settings for sites and groups** page, under **Apply a default label to sites and groups**, select **Internal** from the dropdown.
 
-	l. In the **Default settings for Fabric and Power BI content** page, select **General/All Employess (unrestricted)** in the dropdown menu under **Apply a default label to Fabric and Power BI content**.	
+	l. On the **Default settings for Fabric and Power BI content** page, under **Apply a default label to Fabric and Power BI content**, select **General/All Employees (unrestricted)** from the dropdown.
 
-	m. In the **Name your policy** page, leave unchanged
+	m. On the **Name your policy** page, leave the default settings.
 	
 	n. Select **Submit** > **Done**.
 
