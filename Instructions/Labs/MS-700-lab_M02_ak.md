@@ -310,134 +310,124 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 13. Enter the following:
    
-	a. On the **Provide basic details for this label** page, enter the following information:
+	a. On the **Provide basic details for this label** page, enter the following information, then select **Next**:
 	- **Name** : General
 	- **Display name** : General
 	- **Description for users** : General information with sharing protection
 	- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
-    
-	b. Select **Next**.
 
-	c. On the **Define the scope for this label** page, leave the default selections and select **Next**.
+	b. On the **Define the scope for this label** page, leave the default selections and select **Next**.
 
-	d. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unselected and select **Next**.
+	c. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unselected and select **Next**.
 
-	e. In the **Items** section, on the **Auto-labeling for files and emails** page, leave the settings as default and select **Next**.
+	d. In the **Items** section, on the **Auto-labeling for files and emails** page, leave the settings as default and select **Next**.
 
-	f. On the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes: 
+	e. On the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**: 
  
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
-    
-	g. Select **Next**.
 
-	h. In the **Privacy & external user access** section, under **Define privacy and external user access settings** page, confirm the following settings:
+	f. In the **Privacy & external user access** section, under **Define privacy and external user access settings** page, confirm the following settings, then select **Next**.
  
 	* Under **Privacy**, select **None**.
 	* Under **External user access**, select the checkbox **Let Microsoft 365 group owners add people outside your organization to the group as guests**
 
-	i. Select **Next**.
-  
-	j. In the **External sharing & conditional access** section, under **Define external sharing and conditional access settings** page, configure the following settings:
+	g. In the **External sharing & conditional access** section, under **Define external sharing and conditional access settings** page, configure the following settings, then select **Next**:
 	* Select **Control external sharing from labeled SharePoint sites** checkbox and select **Anyone**.
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow full access from desktop apps, mobile apps, and the web**.
+    
+	h. Select **Create label** > **Done**.
 
-	k. Select **Next**.
- 
-	l. Select **Create label** > **Done**.
+14. Configure the **Internal** sensitivity label.
 
-14. Create the second sensitivity label - **Internal**.
-
-	Select **Information Protection** on the left hand side navigation panel then select the **Sensitivity labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
+	In the left navigation pane, select **Information Protection** > **Sensitivity labels**. If the **Internal** label exists, select it and then select **Edit label**. Otherwise, select **+ Create** > **Label**.
 	
-	a. In the **label details** section, under the **Provide basic details for this label** page, enter the following information:
-		- **Name**: Internal
-		- **Display name**: Internal
-		- **Description for users**: Internal information with sharing protection
-		- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
+	a. In the **Label details** section, under the **Provide basic details for this label** page, enter the following information, then select **Next**:
+	- **Name**: Internal
+	- **Display name**: Internal
+	- **Description for users**: Internal information with sharing protection
+	- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
+    
+	b. In the **Scope** section,  under the **Define the scope for this label** page, leave the marked checkboxes selected, then select **Next**.
 
-	b. In the **Scope** section,  under the **Define the scope for this label** page, leave the marked checkboxes as is.
+	c. In the **Items** section, under the **Choose protection settings for the types of items you selected** page, select the **Control access** and **Apply content marking** checkboxes, then select **Next**.
 
-	c. In the **Items** section under the page **Choose protection settings for the types of items you selected** page, select the **Control access** and **Apply content marking** checkboxes.  
-
-	d. In the **Access control** page:
-		* Select **Configure access control settings**
-		* Assign permissions now or let users decide: **Assign permissions now**.
-		* User access to content expires: **Never**.
-		* Allow offline access: **Always**.
-		* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
-		* Scroll down and select **Save** to apply the changes.
+	d. In **Access control**, configure the following, then select **Next**:
+	* Select **Configure access control settings**
+	* Assign permissions now or let users decide?: **Assign permissions now**.
+	* User access to content expires: **Never**.
+	* Allow offline access: **Always**.
+	* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
+	* Scroll down and select **Save** to apply the changes.
 		
+	e. In the **Content marking** section, configure the following and select **Next**:
 
-	e. In the **Content marking** sections,
+    * Enable the **Content marking** toggle.
+	* Select the **Add a watermark** checkbox, then select **Customize text** and enter **Internal use only** in the **Watermark text** field, then select **Save**.
+    * Select the **Add a footer** checkbox,then select **Customize text** and enter **Internal use only** in the **Footer text** field, then select **Save**.
 
-    * Select the slider under the **Content marking** header and the checkbox **Add a watermark**, then ***Customize text** and enter the following to the **Watermark text** box: 
-    **Internal use only**
-    * Select  the * Add a footer** checkbox  then ***Customize text** and enter the following to the **Footer text** box: **Internal use only**
-    * Click **Save** to apply the changes.
-		
+15. In the **Teams meetings & chats** section, leave the settings as default and select **Next**.
 
-15. In the **Auto-labeling** section, leave the settings as default.
+16. In the **Auto-labeling for files and emails** section, leave the settings as default.
 	
-16. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
+17. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**:
 	
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
 
-17. In the **Privacy & external user access** section, select **None**. 
+18. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **None**, then select **Next**.
 
-18. In the **External sharing & device access** section
+19. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page, configure the following, then select **Next**:
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access** 
 
-19. Select **Create label** > **Done**.
+20. Select **Create label** or **Save label**, then select **Done**.
 
-20. On the **Publish label**  pop-out page, select **Cancel**.
+21. If you created a new label, in the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
-21. Update the second sensitivity label -  select **Confidential** > select **+ Create label in group**.
+22. Update the second sensitivity label - select **Confidential**, then select the **…** menu and select **Create label in group**.
 	
-	a. In the **Name & description** section, enter the following information:
-		- **Name**: Confidential
-		- **Display name**: Confidential
-		- **Description for users**: Leave unchanged
-		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
+	a. In the **Label details** section, enter the following information, then select **Next**:
+	- **Name**: Confidential
+	- **Display name**: Confidential
+	- **Description for users**: Leave unchanged
+	- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
-	b. In the **Scope** section, under the **Define the scope for this label** page select  **Groups &amp; Sites** 
+	b. In the **Scope** section, under the **Define the scope for this label** page, select  **Groups & Sites**, then select **Next**.
 
-	c. In the **Items** section, select both checkboxes.
-
-	* **Control Access** 
-	* **Apply content marking** 
+	c. In the **Items** section under the **Choose protection settings for the types of items you selected** page, select the **Control access** and **Apply content marking** checkboxes, then select **Next**.
 	
-	d. In the **Access control** section, 
+	d. In **Access control**, configure the following, then select **Next**:
 
 	* Select **Configure access control settings**
-	* Assign permissions now or let users decide: **Assign permissions now**
+	* Assign permissions now or let users decide?: **Assign permissions now**
 	* User access to content expires: **Never**
 	* Allow offline access: **Never**
 	* Select **Assign permissions**, and select **+ Add all users and groups in your organization**
 	* Scroll down and select **Save** to apply the changes	
  
+	e. In the **Content marking** section, configure the following and select **Next**:
+	* Enable the **Content marking** toggle.
+	* Select the **Add a watermark** checkbox, then select **Customize text** and enter **Confidential** in the **Watermark text** field, then select **Save**.
 
-	e. In the **Content marking** page, 
-	* Select the slider and the checkbox **Add a watermark** 
-	* Select **Customize text** and enter the following to the **Watermark text** box: **Confidential.**
-	* Click **Save** to apply the changes 
+	f. In the **Teams meetings & chats** section, leave the settings as default and select **Next**.
 
-	f. In the **Auto-labeling for files and emails** page, leave the settings as default.
+	g. In the **Auto-labeling for files and emails** section, leave the settings as default and select **Next**.
 	
-	g. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select both checkboxes. 
-	**Privacy and external user access** and 
-	**External sharing and Conditional Access** 
+	h. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**:
 
+	* **Privacy and external user access**  
+	* **External sharing and Conditional Access**
 
-	h. In the **Define privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
+	i. In the **Define privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**, then select **Next**.
 
-	i. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
+	j. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page, configure the following, then select **Next**:
 	* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select **Block access**
 
-	j. Click **Save label** > **Done**.
+	j. Select **Create label**.
+
+	k. In the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
 
 22. Publish sensitivity labels, after performing each step select **Next** (if required).
@@ -446,7 +436,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	b. Select the **Global sensitivity label policy** and select the **Edit policy** button when the right side page pops up.
 
-	c. In the **Choose sensitivity labels to publish** page, select the **Edit** Link under the **Sensitivity lables to publish** section.
+	c. In the **Choose sensitivity labels to publish** page, select the **Edit** Link under the **Sensitivity labels to publish** section.
 
 	d. In the **Sensitivity labels to publish** window, check all labels and select **Add**.
 
