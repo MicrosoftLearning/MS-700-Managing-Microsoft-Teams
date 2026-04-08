@@ -295,50 +295,58 @@ After activating sensitivity labels for groups, you will now create three sensit
         	$Setting = Get-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id
 		$Setting.Values
 ```
-8. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (<https://purview.microsoft.com/>) as MOD Administrator.
 
-   
-9. In the left navigation of the Microsoft Purview compliance portal, select **Solutions**, **Information Protection** and then select **Sensitivity labels** from the menu.
+8. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as MOD Administrator.
 
-10. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
+9. If the **Welcome to the new Microsoft Purview portal** screen appears, select **Get started**.
+
+10. In the left navigation of the Microsoft Purview portal, select **Solutions** > **Information Protection** and then select **Sensitivity labels** from the menu.
+
+11. If the following warning message appears, select **Turn on now** to activate content processing in Office online files:
 
     *Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
-11. Select  **General** > **+Create label in group**.
+12. Select  **General** > **+ Create label in group**.
 
-12. Enter the following:
+13. Enter the following:
    
-	a. In the **Provide basic etails for this label** section, enter the following information:
-		- **Name** : General
-		- **Display name** : General
-		- **Description for users** : General information with sharing protection
-		- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
-    		Then select **Next**.
+	a. On the **Provide basic details for this label** page, enter the following information:
+	- **Name** : General
+	- **Display name** : General
+	- **Description for users** : General information with sharing protection
+	- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
+    
+	b. Select **Next**.
 
-	b. In the **Define the Scope for this label** section, leave the selections as is. Then select **Next**.
+	c. On the **Define the scope for this label** page, leave the default selections and select **Next**.
 
-	c. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unchecked and select **Next**.
+	d. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unselected and select **Next**.
 
-	d. In the **Items** section and **Auto-labeling for files and emails** page, leave the settings as default.
+	e. In the **Items** section, on the **Auto-labeling for files and emails** page, leave the settings as default and select **Next**.
 
-	e. In the **Groups & sites** section, under the paged called **Define protection settings for groups and sites**,  select both checkboxes. 
+	f. On the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes: 
  
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
-  
-	f. In the **Define privacy & external user access** section,
- 
-	* Select **None** under Privacy section.
-	* Check the checkbox of **Let Microsoft 365 Group owners add people outside your organization to the group as guests** under External user access section. 
-  
-	g. In the **External sharing & conditional access** section,
-		* Select **Control external sharing from labeled SharePoint sites** and select **Anyone**.
-  
-	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow full access from desktop apps, mobile apps, and the web**.
- 
-	h. Select **Save label** > **Done**.
+    
+	g. Select **Next**.
 
-13. Create the second sensitivity label - **Internal**.
+	h. In the **Privacy & external user access** section, under **Define privacy and external user access settings** page, confirm the following settings:
+ 
+	* Under **Privacy**, select **None**.
+	* Under **External user access**, select the checkbox **Let Microsoft 365 group owners add people outside your organization to the group as guests**
+
+	i. Select **Next**.
+  
+	j. In the **External sharing & conditional access** section, under **Define external sharing and conditional access settings** page, configure the following settings:
+	* Select **Control external sharing from labeled SharePoint sites** checkbox and select **Anyone**.
+	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow full access from desktop apps, mobile apps, and the web**.
+
+	k. Select **Next**.
+ 
+	l. Select **Create label** > **Done**.
+
+14. Create the second sensitivity label - **Internal**.
 
 	Select **Information Protection** on the left hand side navigation panel then select the **Sensitivity labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
 	
@@ -369,14 +377,14 @@ After activating sensitivity labels for groups, you will now create three sensit
     * Click **Save** to apply the changes.
 		
 
-14. In the **Auto-labeling** section, leave the settings as default.
+15. In the **Auto-labeling** section, leave the settings as default.
 	
-15. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
+16. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
 	
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
 
-16. In the **Privacy & external user access** section, select **None**. 
+17. In the **Privacy & external user access** section, select **None**. 
 
 18. In the **External sharing & device access** section
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
@@ -432,7 +440,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	j. Click **Save label** > **Done**.
 
 
-21. Publish sensitivity labels, after performing each step select **Next** (if required).
+22. Publish sensitivity labels, after performing each step select **Next** (if required).
 
 	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, select **Policies** and then **Label publishing policies**.
 
