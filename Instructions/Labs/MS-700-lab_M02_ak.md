@@ -779,11 +779,11 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber**.
 
-3. In the left-hand navigation pane, select **Teams**, and then select the **General** channel below **Teams Rollout**.
+3. In the left sidebar, under **Teams and channels**, expand the **Teams Rollout** team, then select the **Teams Rollout** channel.
 
-4. Select **Start a post** from the main window.
+4. Select **Post in channel** from the main window.
 
-5. Enter the following lines to the textbox:
+5. In the textbox, enter the following lines:
 
 	- MasterCard: 5105105105105100
 
@@ -791,15 +791,15 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 	- Visa: 4012888888881881
 
-6. Select **Post** to the right from the lower-right corner below the text box to send the message.
+6. Select **Post**.
 
-7. After a moment, you should see a text in red above your new conversation message that states, “**This message was blocked.**” **Select What can I do?** To see the reason why this message was blocked.
+7. After a moment, a red message appears above the conversation stating **This message was blocked.** Select **What can I do?** to review the blocked message details.
 
-8. Select **Report** to notify the admin about this DLP policy violation. Now you can see a different message above your conversation entry, that states **Blocked.** **You’ve reported this to your admin.**
+8. Select **Report** to notify the admin about the DLP policy violation. A message appears above the conversation stating **Blocked. You've reported this to your admin.**
 
 9. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-10. You should still be logged in to the **Microsoft Purview Portal**. If not, open Microsoft Edge, maximize the browser, and navigate to the **Microsoft Purview Portal**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com/).
+10. On the **Client 1 VM**, verify you are still signed in to the **Microsoft Purview Portal**. If not, open Microsoft Edge and navigate to `https://purview.microsoft.com`.
 
 
 11. Note this step is an optional step and not designed for users to complete in this lab. This step is meant to explain how to see the **DLP Policy Matches**. Previously, you would have been able to see it via the **Reports** page which has now been deprecated.
