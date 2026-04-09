@@ -632,27 +632,26 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select  **Data loss prevention** under **Solutions**.
+2. In the left navigation of the Microsoft Purview Portal, under **Solutions**, select **Data loss prevention**.
 
-3. On the **Data loss prevention** page, select the **Policies**, then select **+ Create policy**.
+3. On the **Data loss prevention** page, select **Policies**, then select **+ Create policy**.
 
-4. In the **What info do you want to protect** page, press **Enterprise applications & devices**.
+4. On the **What info do you want to protect** page, select **Enterprise applications & devices**.
    
-5. In the **Start with a template or create a custom policy** page,
+5. On the **Start with a template or create a custom policy** page, configure the following and select **Next**:
 
-	a. Select **Privacy** under **Categories**, then select the **GDPR Enhanced** template from the **Templates** section.
+	a. In the **Select location** dropdown, select **European Union**.
 
-	b. Select **Next**
+	b. Under **Categories**, select **Privacy**, then in the **Regulations** list, select **GDPR Enhanced**
 
-6. In the **Name your DLP policy** page, enter the following information:
+6. On the **Name your DLP policy** page, enter the following information and select **Next**:
 
 	- **Name**: GDPR DLP Policy
-
 	- **Description**: Data loss prevention policy for GDPR regulations in Teams.
 
-7. In the **Assign admin units** page, leave settings as is.
+7. On the **Assign admin units** page, leave the default settings and select **Next**.
    
 8. In the **Choose where to apply the policy** page, apply the following settings and select **Next**:
 
@@ -663,24 +662,26 @@ According to your organization’s compliance requirements, you need to implemen
 	- **OneDrive accounts**:Select checkbox
 
 	- **Teams chat and channel messages**: Select checkbox
-
- 	- **Devices**: Select checkbox
+    
+	- **Devices**: Select checkbox
 
 	- **On-premises repositories**: Unselect checkbox
 
 	- **Fabric and Power BI workspaces**: Unselect checkbox
 
 
-9. In the **Define policy settings** page, stay with the default selection from the template - **Create or customize advanced DLP rules** and select **Next**.
+9. On the **Define policy settings** page, leave the default selection **Create or customize advanced DLP rules** and select **Next**.
 
-	1. In the **Customize advanced DLP rules** page, leave the default settings and select **Next**.
+	1. On the **Customize advanced DLP rules** page, leave the default settings and select **Next**.
 
 	2. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
 
-	3. On the Review your settings page, review your settings, select **Submit** then **Done**.
-	Note: After pressing Submit you may receive an error which reads "Client error: to block only people outside your organization, you must select the conditions "content is shared 	with people outside my organization:" Press **OK** to ignore and navigate back to the Data Loss Prevention page by selecting **Cancel** and select **Confirm**.
+	3. On the **Review and finish**  page, review your settings, select **Submit** then **Done**.
 
-	4. Stay on the **Data loss prevention page** and leave the browser opened. Press the **Refresh** button.
+	 > [!NOTE]
+	 > After you select **Submit**, you may receive the following error: *"Client error: to block only people outside your organization, you must select the conditions 'content is shared with people outside my organization'."* Select **OK** to dismiss the message, then select **Cancel** to return to the **Data Loss Prevention** page and select **Confirm**.
+
+	4. On the **Data loss prevention** page, select **Refresh**. Leave the browser open.
 
 	After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
 
