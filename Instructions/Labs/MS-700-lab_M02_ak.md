@@ -624,7 +624,7 @@ In this task, you will test the retention policy for deleting content from the *
 
 7. Post additional content in the **Teams Rollout** channel to create more content for the retention policy to act on.
 
-8. Return after 24 hours and verify that the conversation message in the **Teams Rollout** channel have been deleted automatically.
+8. Return after 24 hours and verify that the content in the **Teams Rollout** channel has been deleted automatically.
 
 You have added a conversation message to a team, which is deleted by the deletion retention policy after 24 hours.
 
