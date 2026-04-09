@@ -612,17 +612,19 @@ In this task, you will test the retention policy for deleting content from the *
 
 2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber**.
 
-3. Select the **Teams Rollout** team and the **Teams Rollout** channel.
+3. In the left sidebar, under **Teams and channels**, select the **Teams Rollout** team, then select the **Teams Rollout** channel.
 
-4. Select **Start a post** from the lower end of the main window.
+4. Select **Post in channel** from the lower end of the main window.
 
 5. Write the following text to the text box:
 
-- Hello world!
+- **Hello world!**
 
-6. Leave the client open and add other content to the team, as you like.
+6. Select **Post**.
 
-7. Come back after 24 hours to see, the content has been deleted automatically.
+7. Leave the client open and add other content to the team, as you like.
+
+8. Return after 24 hours and verify that the conversation message in the **Teams Rollout** channel have been deleted automatically.
 
 You have added a conversation message to a team, which is deleted by the deletion retention policy after 24 hours.
 
