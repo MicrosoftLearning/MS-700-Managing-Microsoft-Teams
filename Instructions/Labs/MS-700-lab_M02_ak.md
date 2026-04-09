@@ -622,7 +622,7 @@ In this task, you will test the retention policy for deleting content from the *
 
 6. Select **Post**.
 
-7. Leave the client open and add other content to the team, as you like.
+7. Post additional content in the **Teams Rollout** channel to create more content for the retention policy to act on.
 
 8. Return after 24 hours and verify that the conversation message in the **Teams Rollout** channel have been deleted automatically.
 
