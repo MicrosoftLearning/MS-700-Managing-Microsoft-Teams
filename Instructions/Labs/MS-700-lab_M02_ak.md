@@ -296,7 +296,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		$Setting.Values
 ```
 
-8. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as MOD Administrator.
+8. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 9. If the **Welcome to the new Microsoft Purview portal** screen appears, select **Get started**.
 
@@ -504,7 +504,7 @@ You have successfully tested the sensitivity labels setting to prevent guest acc
 
 Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal(https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions** and then **Data lifecycle management**.
 
@@ -512,14 +512,15 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 4. Follow the **Create retention policy** wizard with the following information:
 
-	1. In the **Name your retention policy** page, enter the following information 
+	1. In the **Name your retention policy** page, enter the following information and select **Next**:
 		- **Name**: Sales retention policy
 		- **Description**: Retention policy for Sales department that will retain channel messages for 7 years.
-		- select **Next**
 
-	2. Under the **Policy Scope** page, leave the settings as default. 
+	2. Under the **Policy Scope** page, leave the settings as default and select **Next**.
 
-	3. In the **Choose the type of retention policy to create** section, select **Static** and select **Next** then configure the following settings:
+	3. On the **Choose the type of retention policy to create** page, select **Static** and select **Next**.
+
+	4. On the **Choose where to apply the policy** page, configure the following settings and select **Next**:
 
 		- **Exchange mailboxes**: Off
 		- **SharePoint classic and communication sites**: Off
@@ -537,10 +538,13 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image3.png)
 
-	4. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page, leave as is and select **Next**.
+	5. On the **Decide if you want to retain content, delete it, or both** page, verify the following settings and select **Next**:
+        - Select **Retain items for a specific period**
+        - Retain items for a specific period: **7 years**
+        - Start the retention period based on: **When items were created**
+        - At the end of the retention period: **Delete items automatically**
 
-
-5. In the ** Review and Finish** page, review your settings and select **Submit**.
+5. In the **Review and Finish** page, review your settings and select **Submit**.
 
 6. Select **Done**. Leave the browser open for the next task.
 
