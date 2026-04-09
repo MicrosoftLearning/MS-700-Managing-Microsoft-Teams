@@ -472,11 +472,11 @@ Once the sensitivity labels are created and published, users can now assign them
 
 2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber**.
 
-3. For Microsoft Teams Classic: On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Edit team** from the dropdown list.
+3. In the left sidebar, under **Teams and channels**, select the **…** (three dots) next to the **Teams Rollout** team, then select **Manage team** from the context menu.
 
-4. For the new Microsoft Teams: On the Teams overview select the **Teams and channels** on the right side next to the Team "**Teams Rollout,"** then select **Manage team** from the dropdown list, Thern navigate to the**Settings** tab then select **Edit**.
+4. Navigate to the **Settings** tab, then select **Edit**.
 
-5. On the **Edit “Teams Rollout” team details** window, select the dropdown menu below Sensitivity and select **Internal**.
+5. On the **Edit “Teams Rollout team details** window, select the dropdown menu below Sensitivity and select **Internal**.
 
 6. Select **Done** to save the changes.
 
