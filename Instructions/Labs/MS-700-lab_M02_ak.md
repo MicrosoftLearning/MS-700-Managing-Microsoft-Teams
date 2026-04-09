@@ -689,27 +689,27 @@ According to your organization’s compliance requirements, you need to implemen
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
+2. In the left navigation of the Microsoft Purview Portal, under **Solutions**, select **Data loss prevention**.
 
 3. On the **Data loss prevention** page, select  **Policies**, then select **+ Create policy**.
 
-4. In the **Start with a template or create a custom policy** section,
+4. On the **What info do you want to protect** page, select **Enterprise applications & devices**.
 
-	1. Select **Custom** under **Categories**, then select the **Custom policy** template from the **Templates** section.
+5. On the **Start with a template or create a custom policy** page, configure the following and select **Next**:
 
-	2. Select **Next**
+	1. Select **Custom** under **Categories**, then in the **Regulations** list select **Custom policy**.
 
-5. In the **Name your policy** section, enter the following information:
+6. In the **Name your policy** section, enter the following information and select **Next**:
 
 	- **Name**: Credit card data DLP Policy
 
 	- **Description**: Data loss prevention policy for credit card data in Teams.
 
-6. In the **Assign admin units** page, leave settings as is.
+7. In the **Assign admin units** page, leave the default settings and select **Next**.
 
-7. In the **Choose where to apply the policy** section, apply the following settings and select **Next**:
+8. In the **Choose where to apply the policy** section, apply the following settings and select **Next**:
 
 	- **Exchange email**: Select checkbox
 
@@ -721,20 +721,19 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	- **Devices**:  Select checkbox
 
-	- **Instances** :  Select checkbox
+	- **Instances**:  Unselect checkbox
 
 	- **On-premises repositories**:  Unselect checkbox
 
 	- **Fabric and Power BI workspaces**:   Unselect checkbox 
 
-7. In the **Define policy settings** section, stay with the default selection and select **Next**.
+9. On the **Define policy settings** page, leave the default selection **Create or customize advanced DLP rules** and select **Next**.
 
-
-	1. In the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
+	1. On the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
 		- **Name**: Credit card numbers found
 		- **Description**: Basic rule for protecting credit card numbers forms being shared in Teams.
 
-	2. Below **Conditions**, 
+	2. In the **Conditions** section:
 		- Select **+ Add condition** and **Content contains**.
 		- Leave the group name of **Default**, select **Add** and **Sensitive info types**.
 		- From the right-side pane, check the box left of **Credit Card Number** and select **Add**.
@@ -742,31 +741,31 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 			![Graphical user interface, application Description automatically generated](media/MS-700-lab_M02_ak_image6.png)
 
-	3. Below **Action**, 
+	3. In the **Actions** section:
 		- Select **+ Add an action** and **Restrict access or encrypt the content in Microsoft 365 locations**.
 		- In the **Restrict access or encrypt the content in Microsoft 365 locations** section select **Block everyone** 
 
 			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image8.png)
 
-	4. Below **User notification**, 
-		- Select the slider to **On**
+	4. In the **User notifications** section:
+		- Set the **User notification** toggle to **On**.
 		- select **Notify users in Office 365 service with a policy tip**.
 		- Select **Notify the user who sent, shared or last modified the content**.
 		- Select **Customize the policy tip text**.
-		- Enter the following text to the textbox: **Credit card numbers are not allowed to be shared!**
+		- In the textbox, enter the following text: **Credit card numbers are not allowed to be shared!**
 
-	5. Below **Incident reports**, 
-		- Set the slider **Send an alert to admins when a rule match occurs** to **Off**.
-		- Select **Save**.
+	5. In the **Incident reports** section:
+        - Set the **Send an alert to admins when a rule match occurs** toggle to **Off**.
+        - Select **Save**.
 	
-	6. Review the rule settings and select **Next**.
+	6. On the **Customize advanced DLP rules** page, verify the **Credit card numbers found** rule displays with a status of **On**, then select **Next**.
 
 		
-8. In the **Policy Mode** page, select **Turn the policy on immediately** and select **Next**.
+10. On the **Policy Mode** page, select **Turn the policy on immediately** and select **Next**.
 
-9. On the **Review and finish** page, review your settings, select **Submit** then **Done**.
+11. On the **Review and finish** page, review the settings, select **Submit**, and then select **Done**.
 
-10. Leave the browser open.
+12. Leave the browser open.
 
 You have successfully created a new custom DLP policy for protecting credit card numbers from being shared via Teams conversations.
 
