@@ -490,9 +490,9 @@ In this task, you will try to add a guest user to an internal team.
 
 2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber**.
 
-3. On the Teams overview select **…** right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
+3. In the left sidebar, under **Teams and channels**, select the **…** (three dots) next to the **Teams Rollout** team, then select **Add member** from the context menu.
 
-4. On the **Add members to Teams Rollout** page, enter the name of the guest user you just invited.
+4. On the **Add members to Teams Rollout** page, enter the name or email address of the guest user you invited in Exercise 1, Task 3.
 
 5. You will not be able to find the guest user, because guest users are restricted from this team.
 
