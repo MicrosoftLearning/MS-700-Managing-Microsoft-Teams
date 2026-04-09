@@ -554,24 +554,24 @@ In this task, you have successfully created a new retention policy named **Sales
 
 After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select **Solutions**, **Data lifecycle management**.
+2. In the left navigation of the Microsoft Purview Portal, select **Solutions** > **Data lifecycle management**.
 
-3. On the **Data lifecycle management** page, under **Policies** and then **Retention policies**, select **+New retention policy** to add a new retention policy. 
+3. On the **Data lifecycle management** page, select **Policies**, then **Retention policies**, and select **+ New retention policy** to create a new retention policy.
 
 4. Follow the **Create retention policy** wizard with the following information:
 
-
-	1. In the **Name** section, enter the following information 
+	1. In the **Name your retention policy** page, enter the following information and select **Next**:
 	
-		- **Name**: Teams Rollout deletion policy
-		- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
-		- Select **Next**
+	- **Name**: Teams Rollout deletion policy
+	- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
+	
+	2. Under the **Policy Scope** page, leave the settings as default and select **Next**. 
 
-	2. Under the **Policy Scope** page, leave the settings as default. 
+	3. On the **Choose the type of retention policy to create** page, select **Static** and select **Next**.
 
-	3. In the **Type** section, under the **Choose the type of retention policy to create** page, select **Static** and select **Next** then configure the following settings:
+	4. On the **Choose where to apply the policy** page, configure the following settings and select **Next**:
 
 		- **Exchange email**: Off
 		- **SharePoint classic and communication sites**: Off
@@ -589,17 +589,16 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 			![Picture 4](media/MS-700-lab_M02_ak_image4.png)
 
-	3. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page,  
+	5. On the **Decide if you want to retain content, delete it, or both** page, verify the following settings and select **Next**:
 		- Select **Only delete items when they reach a certain age** 
 		- Delete items older than: Select **Custom** > **1 days**
-		- Delete the content based on: **when items were created**
-		- Select **Next**.
+		- Delete the content based on: **When items were created**
 		
 			![Picture 5](media/MS-700-lab_M02_ak_image5.png)
 
-6. In the **Review and Finish** section, review your settings and select **Submit**.
+5. In the **Review and Finish** page, review your settings and select **Submit**.
 
-7. Select **Done**. Leave the browser open for the next task.
+6. Select **Done**. Leave the browser open for the next task.
 
 You have successfully created a second retention policy for testing the deletion capabilities to clean up the **Teams Rollout** team from all conversation messages older than a day.
 
