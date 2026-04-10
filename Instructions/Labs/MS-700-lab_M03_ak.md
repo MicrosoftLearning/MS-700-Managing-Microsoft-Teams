@@ -65,19 +65,19 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
 3. The Microsoft Teams desktop client will start. If a **Bring your team together**, or **Get the Teams mobile app** window appears, close both windows.
 
-4. In the left-hand navigation pane, select **Teams**, select **+**, and then select **Create team** .
+4. In the left-hand navigation pane, select **Chat**, select **…** next to **Teams and channels**, select **Your teams and channels**, and then select **Create team**.
 
-5. In the **Create a team** dialog, select **More create team options** and then **From group**.
+5. In the **Create a team** dialog, select **More create team options** and then select **From group**.
 
-6. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”** by presing **Add Team**. Wait until the **Creating the team…** process is done.
+6. In the **Which Microsoft 365 group do you want to use?** dialog, on the **IT-Department** card, select **Add team**. Wait until the **Creating the team…** process completes.
 
 8. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
 
-9. Check the team owner and members:
+9. On the **Members** tab, verify the following:
 
-	- Owners: **Joni Sherman**
+    - **Owners (1)**: Joni Sherman
 
-	- Members and guests: **Allan Deyoung** , **MOD Administrator** and **Patti Fernandez**
+    - **Members and guests (3)**: Allan Deyoung, MOD Administrator, and Patti Fernandez
 
 10. Leave the Teams desktop client open and continue to the next task.
 
