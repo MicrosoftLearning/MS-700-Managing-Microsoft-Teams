@@ -950,24 +950,22 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
 
-2. Select **Sign in** at the top-right corner.
+2. In the upper-right corner, select **Sign in**.
 
-3. Specify the location and select **Add your location**.
+3. Select **Add your location** and specify the location.
 
-    You can type in your location by city, state, and country or you can have it detected from the web browser. Then press **Run test**.
+     You can enter your location by city, state, and country, or have it detected from the web browser. Select **Run test**.
 
 4. Select **Open file** when prompted after downloading the advanced client test application.
 
-	**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction. 
+	> [!NOTE]
+	> The application requires .NET Core installed. Select **Download it now** to download **Microsoft Windows Desktop Runtime x64**, and then follow the installation instructions.
 
-5. Start the advanced tests client application - **Office 365 Network Onboarding Advanced Tests**.
+5. Start the advanced tests client application, **Office 365 Network Onboarding Advanced Tests**. When testing is complete, the results will be available in the browser window from where you launched this program.
 
-	- Download the application
-	- Navigate to downloads folder and run the client application
+6. After the client application completes testing, the web page updates to show the **Network connectivity test results for your location**.
 
-6. Once the client application starts, the web page will update to show this result.
-
-7. Review the result under **Details** tab.
+7. Review the results under the **Details** tab.
 
 In this task, you have used Microsoft 365 network connectivity test tool to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
 
