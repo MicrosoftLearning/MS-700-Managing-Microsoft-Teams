@@ -773,7 +773,7 @@ You have successfully created a new custom DLP policy for protecting credit card
 
 To make sure your configured DLP policies are working as expected, you need to perform some testing with your pilot users.
 
-**Note:** It can take up to 24 hours till new DLP policies take effect. If the step doesn’t work, continue with the lab, and perform a task at a later point of working through this lab.
+**Note:** It can take up to 24 hours for new DLP policies take effect. If this step does not work, continue with the lab and complete this task later as you progress through the lab.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -801,14 +801,33 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 10. On the **Client 1 VM**, verify you are still signed in to the **Microsoft Purview Portal**. If not, open Microsoft Edge and navigate to `https://purview.microsoft.com`.
 
-
 11. Note this step is an optional step and not designed for users to complete in this lab. This step is meant to explain how to see the **DLP Policy Matches**. Previously, you would have been able to see it via the **Reports** page which has now been deprecated.
     
 In order to see the **DLP Policy Matches** users must perform the following:
-- Enable org customization upon logging into the tenant by running *Enable-organizationcustomization*. This takes about 2-3 hour to replicate through the tenant.
--  Run *Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true* to enable audit logging.
-- The audit logging takes about 24hours to show as enabled a well.
-    	**Note:** This explanation may require users to have the SPE5 tenant.
+
+- Open Windows PowerShell as Administrator and install the Exchange Online module if not already installed:
+
+	```powershell
+	Install-Module ExchangeOnlineManagement
+	```
+
+- Connect to Exchange Online by running the following command. When prompted, sign in with the **MOD Administrator** credentials.
+
+	```powershell
+	Connect-ExchangeOnline
+	```
+- Enable org customization by running the following command. This takes about 2–3 hours to replicate through the tenant.
+
+   ```powershell
+  Enable-OrganizationCustomization
+   ```
+- Enable audit logging by running the following command. This takes about 24 hours to show as enabled.
+
+  ```powershell
+  Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+  ```
+  > [!Note]
+  > This explanation may require users to have the SPE5 tenant.
     
 You have successfully tested your DLP policy to block sharing of credit card information via Teams chat and channel conversations.
 
