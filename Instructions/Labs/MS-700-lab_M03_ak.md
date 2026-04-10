@@ -159,27 +159,27 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
 
-3. Select the **Sign in to Graph Explorer** button in the left of the page and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+3. In the upper-right corner of the page, select the user icon, and then select **Sign in to Graph Explorer**. Sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-4. If you access the Graph Explorer for the first time, you will see a **Permissions requested** page. Select **Accept**.
+4. If a **Permissions requested** page appears, select **Accept**.
 
-5. Select the **GET** button and select **POST** from the dropdown menu.
+5. In the HTTP request method dropdown, select **GET** and change it to **POST**.
 
-6. Do not change the **v1.0** from the box in the middle.
+6. In the API version dropdown, leave **v1.0** selected.
 
-7. Enter the following to the text box before the **Run query** button:
+7. In the URL text box, replace the existing URL with the following:
 
 	- [https://graph.microsoft.com/v1.0/teams](https://graph.microsoft.com/v1.0/teams)
 
-8. Select **Modify permissions (Preview)** from the top pane.
+8. Below the URL text box, select the **Modify Permissions** tab.
 
 	![Graphical user interface, text, application, email Description automatically generated](media/MS-700-lab_M03_ak_image1.png)
 
-9. Scroll to the right and select the **Consent** button for the permissions **Team.Create**.
+9. In the **Team.Create** row, select **Consent**.
 
-10. Another **Permissions requested** page appears. Select **Accept**.
+10. On the **Permissions requested** page, select **Accept**.
 
-11. If you are redirected to the Microsoft Developers site, navigate back to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
+11. If you are redirected away from Graph Explorer, navigate back to [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer).
 
 12. Select the **Request body** tab and enter the following code:
 
@@ -199,7 +199,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 13. Select **Run** **query** from the upper right of the page.
 
-14. After a moment, you should see a green bar below the Request body window, with a checkmark and an **Accepted** message.
+14. Verify that a green **Accepted** status bar appears below the request body.
 
 15. Remove the whole content of the textbox in the textbox of **Request body**, you just used to create a team and replace it with the following content:
 
@@ -318,7 +318,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 16. Select **Run** **query** from the upper right of the page.
 
-17. After a moment, you should see a green bar with a checkmark and **Accepted** inside again.
+17. Verify that a green **Accepted** status bar appears below the request body.
 
 18. Open the Teams Desktop App. Select **Teams** from the left-side pane and inspect the newly created teams “**Early Adopters"** and”**Tech Meetings**".
 
