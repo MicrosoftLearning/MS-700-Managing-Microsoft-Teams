@@ -852,90 +852,87 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. Create a network plan
-	
-	1. On the left-hand navigation pane, expand **Planning**, and select **Network Planner**.
+3. Create a network plan.
 
-	2. On the **Network planner** page, under **Network plans** tab, select **Add** and create a network plan with the following information.
+	1. In the left navigation pane, expand **Planning**, and then select **Network Planner**.
+
+	2. On the **Network planner** page, under the **Network plans** tab, select **Add**.
+
+	3. Create a network plan with the following information, then select **Apply**:
 
 		- Network plan name: **Contoso plan**
 		- Description: **Contoso Teams Network plan**
-		- Select **Apply**.
 
-4. Create a custom personas
+4. Create a custom persona.
 
-	1. On the **Network planner** page, select **Personas** tab, and then select **+ Add**. 
+	1. On the **Network planner** page, select the **Personas** tab, and then select **+ Add**.
 
-	2. On the **Add persona** page, create a custom personas with the following information.
+	2. On the **Add persona** pane, enter the following information and select **Apply**:
 
 		- Persona name: **Calling only**
 		- Description: **Specialized calling only employees**
 		- Permissions: Turn on **Audio**
-		- Select **Apply**.
-
-	3. Note the default personas recommended by Microsoft.
+		
+	3. Review the default personas recommended by Microsoft.
 	
 5. Create network sites.
 
 	1. Select the **Networks plans** tab, then select **Contoso plan**.
-	2. Under **Network sites** tab, select **+ Add network site**. 
-	3. Create a network site for **New York HQ** with the following information.
+	2. Under **Network sites** tab, select **Add a network site**. 
+	3. Create a network site for **New York HQ** with the following information, and then select **Save**:
 
 		- Network site name: **New York HQ site**
 		- Description: **New York HQ site network infrastructure**
 		- Network users: **1000**
 		- Network settings - Subnet: **172.16.0.0**
 		- Network settings - Network range: **16**
-		- Turn **On** the **Express Route** button.
+		- Turn **On** the **Express Route** toogle.
 		- Internet link capacity: **1000**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- PSTN egress: select **Use VoIP only**
 
-	4. Repeat the same steps to create a network site for **Los Angeles office** with the following information.
+	4. Repeat the same steps to create a network site for **Los Angeles office** with the following information, and then select **Save**:
 
 		- Network site name: **Los Angeles site**
 		- Description: **Los Angeles site network infrastructure**
 		- Network users: **250**
 		- Network settings - Subnet: **192.168.10.0**
 		- Network settings - Network range: **24**
-		- Ensure **Express Route** button is **Off**.
-		- Turn **On** the **Connected to WAN** button.
+		- Ensure **Express Route** toogle is **Off**.
+		- Turn **On** the **Connected to WAN** toogle.
 		- WAN link capacity: **500**
 		- WAN audio queue size: **100**
 		- WAN video queue size: **200**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- PSTN egress: select **Use VoIP only**
 
-	5. Repeat the same steps to create a network site for **Houston office** with the following information.
+	5. Repeat the same steps to create a network site for **Houston office** with the following information, and then select **Save**:
 
 		- Network site name: **Houston site**
 		- Description: **Houston site network infrastructure**
 		- Network users: **150**
 		- Network settings - Subnet: **192.168.20.0**
 		- Network settings - Network range: **24**
-		- Ensure **Express Route** button is **Off**.
-		- Turn **On** the **Connected to WAN** button.
+		- Ensure **Express Route** toogle is **Off**.
+		- Turn **On** the **Connected to WAN** toogle.
 		- WAN link capacity: **400**
 		- WAN audio queue size: **50**
 		- WAN video queue size: **100**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- PSTN egress: select **Use VoIP only**
 
-6. Create a report
+6. Create a report.
 	
-	1. On the **Contoso plan** page, select **Report** tab and then select **Start a report**.
+	1. On the **Contoso plan** page, select the **Report** tab, and then select **Start a report**.
 
-	2. Create a report with the following information.
+	2. Create a report with the following information:
 
 		- Report name: **Contoso report**
 		- Description: **Contoso network estimation report**
-		- Under the **Calculation** section, specify the **Persona** and **Network users** with the following information.
+		- In the **Calculation** section, specify the **Persona** and **Network users** with the following information:
 
-			| **Network site**| **Persona** and **Network users**| 
-			| - | - | 
-			| New York HQ| Office Worker: 900 <br/><br/>Calling only: 100|
-			| Los Angeles Office|Office Worker: 200 <br/><br/>Calling only: 50|
-			| Houston Office|Office Worker: 100 <br/><br/>Calling only: 50|
+			| **Network site**| **Persona** and **Network users**|
+			| - | - |
+			| New York HQ site| Office Worker: 900 <br/><br/>Calling only: 100|
+			| Los Angeles site| Office Worker: 200 <br/><br/>Calling only: 50|
+			| Houston site| Office Worker: 100 <br/><br/>Calling only: 50|
 
 	3. Select **Generate report**.
 
