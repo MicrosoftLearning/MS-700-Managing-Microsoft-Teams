@@ -320,7 +320,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 17. Verify that a green **Accepted** status bar appears below the request body.
 
-18. Open the Teams Desktop App. Select **Teams** from the left-side pane and inspect the newly created teams “**Early Adopters"** and”**Tech Meetings**".
+18. On the taskbar, select the **Teams** icon. In the left pane under **Teams and channels**, verify that the **Early Adopters** and **Tech Meetings** teams appear.
 
 You have successfully created two teams via Graph API. Your test of the Graph functionality is complete, and you can advance to the next exercise.
 
