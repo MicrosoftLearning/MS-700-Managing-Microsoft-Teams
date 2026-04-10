@@ -969,6 +969,4 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 In this task, you have used Microsoft 365 network connectivity test tool to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
 
-END OF LAB
-
  
