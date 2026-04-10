@@ -89,7 +89,7 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. On the taskbar at the bottom of the page, right select the **Start** button and then select **Windows PowerShell**.
+2. On the taskbar, right-select the **Start** button and then select **Windows PowerShell**.
 
 3. Run the following cmdlet to connect to Microsoft Teams in your tenant:
 
@@ -101,19 +101,19 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
 
 5. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** credential provided to you and then select **Sign in**.
 
-6. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**:
+6. Run the following cmdlet to create the new team **CA-Office**:
 
     ```powershell
     New-Team -Displayname "CA-Office" -MailNickName "CA-Office" -Visibility Public
     ```
 
-7. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.):
+7. Run the following cmdlet to add **Alex Wilber** to the team. Replace `<YourTenant>` with your tenant name:
 
     ```powershell
     Get-Team -Displayname "CA-Office" | Add-TeamUser -User AlexW@<YourTenant>.OnMicrosoft.com
     ```
 
-8. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.):
+8. Run the following cmdlet to add **Allan Deyoung** to the team. Replace `<YourTenant>` with your tenant name:
 
     ```powershell
     Get-Team -Displayname "CA-Office" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
@@ -145,7 +145,7 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
 
 13. Close the PowerShell window.
 
-14. Open the Teams desktop client from the taskbar. On the left side pane with all teams, Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+14. On the taskbar, select the **Teams** icon. In the left pane under **Teams and channels**, verify the **CA-Office** team appears with the private channel **Administration** listed below it.
 
 15. Close all browser windows and the Teams desktop client.
 
