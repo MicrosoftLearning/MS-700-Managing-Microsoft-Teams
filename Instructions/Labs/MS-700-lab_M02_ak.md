@@ -132,7 +132,7 @@ You have successfully invited a guest to a team and validated the guest access s
 
 As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
-1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**. 
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**. 
 
 2. Create an access review to monitor guest users.
 
@@ -174,7 +174,7 @@ As a part of your system administrator role, you need to review access to resour
 
 	4. On the **Pick an account** page select **Alex Wilber** account
 
-	5. From the **My Access** (Https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
+	5. From the **My Access** (https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
 
 	6. On the **Review guest access across Microsoft 365 groups** page, select the guest account and select **Approve**. 
 	
@@ -258,7 +258,7 @@ You have successfully activated sensitivity labels for Microsoft 365 Groups and 
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (<https://compliance.microsoft.com/>) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
 
 2. Open up **Windows PowerShell** and **Run as Administrator**
 
