@@ -617,35 +617,38 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 
 #### Task 2 - Create a custom app setup policy
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (**https://admin.teams.microsoft.com**) as **Joni Sherman** ([**JoniS@&lt;YourTenant&gt;.onmicrosoft.com**](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Microsoft Teams admin center, go to **Teams apps** > **Setup policies**.
+2. In the left-hand navigation pane of the Teams admin center, select **Teams apps** > **Setup policies**.
 
-3. Select **+** **Add**. 
+3. Select **+ Add**. 
 
-4. Enter the following information
+4. On the **Add** page, configure the following settings:
 
 	- Name: **Sales team**
 	- Description: **Install Adobe Acrobat Sign and pin Viva Goals**.
 	- User pinning: **On**
 	- To install apps for users:
 
-		1. Under **Installed apps**, select **Add apps**.
-		2. In the **Add installed apps** pane, search for the apps you want to automatically install for users when they start Teams. 
+		1. Under **Pinned apps**, select **Add apps**.
+
+		2. In the **Add pinned apps** pane, search for the apps you want to automatically install for users when they start Teams. 
 		
-			In this exercise search for **Adobe**, choose **Adobe Acrobat Sign** and select **Add** to add to the **Apps to add** list. 
+		3. In the **Add pinned apps** pane, in the search box, type **Adobe**, and then next to **Adobe Acrobat Sign**, select **Select**.
 			
-			You can now select **Add** to finish adding the app under **Installed apps list.**
+		4. Select **Add** to add the app to the **Pinned apps** list.
 
 	- To pin apps:
 
-		1. Under **Pinned apps**, select **Add apps**.
+		1. Under **Pinned apps**, select **+ Add apps**.
 
-		2. In the **Add pinned apps** pane, search for **Viva Goals** and then select **Add**. 
+		2. In the **Add pinned apps** pane, in the search box, type **Viva Goals**, and then next to **Viva Goals**, select **Select**. 
 
-		3. Select **Save.**  
+		3. Select **Add**. 
 
 5. Select **Save.**
+
+6. In the **User pinning** dialog, select **Save**.
 
 You have now created a new custom app set up policy.
 
