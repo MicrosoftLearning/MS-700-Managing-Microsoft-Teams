@@ -507,31 +507,27 @@ As Teams administrator of Contoso, you will create a private channel named **con
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Teams** > **Manage teams**.
+2. In the left-hand navigation pane of the Teams admin center, select **Teams** > **Manage teams**.
 
-3. Select the **Sales** team > **Channels** tab.
+3. Select the **Sales** team.
 
-4. Add the private channel
+4. On the **Channels** tab, select **+ Add** and enter the following information:
 
-	1. Select **+ Add** from the top menu.
+    - **Name**: Confidential sales
 
-	2. In the **Add** window, enter the following information:
+    - **Description**: Confidential private sales channel
 
-		- **Name**: Confidential sales
+    - **Type**: Private
 
-		- **Description**: Confidential private sales channel
+    - **Channel owner**: Lynne Robbins
 
-		- **Type**: Private
+5. Select **Apply**.
 
-		- **Channel owner**: Lynne Robbins
-
-3. Select **Apply**.
-
-5. Check the private channel
+6. Check the private channel
 
 	1. Connect to the **Client 2 VM** and browse to the **Teams Web Client** [(https://teams.microsoft.com)](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. Select **Teams**, you should see the new private channel **Confidential sales** with a small padlock icon.
+	2. In the left-hand navigation pane, under **Teams and channels**, expand the **Sales** team. Confirm the **Confidential sales** private channel appears with a lock icon.
 
 In this task, you learned how to create a private channel in the Microsoft Teams admin center and how to configure and check the access.
 
