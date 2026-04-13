@@ -414,17 +414,17 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 1. Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
 
-2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
+2. In the left-hand navigation pane, select **Entra ID** > **Groups** > **All groups**.
 
 3. On the **Groups | All groups** page, search and select **CA-Office** group.
 
-4. On the **CA-Office** page, select **Properties** from the left-hand navigation pane.
+4. On the **CA-Office** page, in the left-hand navigation pane, select **Properties**.
 
 5. Change the **Membership type** from **Assigned** to **Dynamic User**.
 
-6. Select **Add dynamic query** below **Dynamic user members**.
+6. Below **Dynamic user members**, select **Add dynamic query**.
 
-7. On the **Dynamic membership rules** page, enter the following information to the fields:
+7. On the **Dynamic membership rules** page, on the **Configure Rules** tab, configure the first rule with the following values:
 
 	- Property: **accountEnabled**
 
@@ -432,7 +432,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 	- Value: **true**
 
-8. Select **+add expression** and enter the following information to the fields:
+8. Select **+ Add expression** and configure the second rule with the following values:
 
 	- Property: **usageLocation**
 
@@ -440,19 +440,19 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 	- Value: **CA**
 
-9. Select **Save** twice.
+9. On the **Dynamic membership rules** page, select **Save**.
 
-	A warning message is displayed, that the membership will change according to the new dynamic membership rules. Select **Yes** to confirm the message.
+10. On the **CA-Office | Properties** page, select **Save**. A warning dialog about membership changes appears. Select **Yes**.
 
-11. Select **Overview** in the left-hand navigation pane of the **CA-Office** group window.
+11. In the left-hand navigation pane of the **CA-Office** group, select **Overview**.
 
-12. In the Overview window, locate **Dynamic rule processing status** field.
+12. In the Overview window, locate **Dynamic rule processing status** card.
 
-	Wait and refresh your browser, until the status says **Succeeded**. It may take several minutes for the change to be processed.
+	Wait and refresh your browser, until the status shows **Succeeded**. It may take several minutes for the change to be processed.
 
-13. Then select **Members** in the left-hand navigation pane and then select **Refresh**. Verify that **Alex Wilber** is in the list of members, but that **Allan Deyoung** has been removed from the group.
+13. In the left-hand navigation pane, select **Members**, and then select **Refresh**. Verify that **Alex Wilber** is in the list of members and that **Allan Deyoung** has been removed from the group.
 
-14. Select Owners from the left-hand navigation pane and verify, that Joni is still the Owner of the group, even if she does not match the dynamic group criteria.
+14. In the left-hand navigation pane, select **Owners**. Verify that **Joni Sherman** is still listed as the owner of the group, even though she does not match the dynamic group criteria.
 
 You have successfully converted a Microsoft 365 group from static (assigned) to dynamic membership. This membership is controlled by the usageLocation of the user and if the account is enabled. Any user with the usageLocation “Canada” is added automatically to the team.
 
