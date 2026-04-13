@@ -588,7 +588,7 @@ In this task, you have learned how to block the Google Analytics app for your te
 
 ### **Exercise 4: Create and manage app setup policies**
 
-As a Teams administrator you need to highlight the apps that are most important for your users and also showcase apps that users in your organization need, including apps built by third-parties or by parties or by developers in your organization.
+As a Teams administrator, you need to highlight the most important apps for your users and showcase apps that your organization needs, including apps built by third parties or by developers in your organization.
 
 #### Task 1 - Edit default org-wide app policy
 
@@ -596,17 +596,22 @@ In the pilot project, the company wants to add **Tasks by Planner and To Do** as
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select **Teams apps** > **Setup policies**.
+2. In the left-hand navigation pane of the Teams admin center, select **Teams apps** > **Setup policies**.
 
-3. On the **App setup policies** page, Under **Manage Policies,** select on **Global (Org-wide default)** to open the org-wide app policy.
+3. On the **App setup policies** page, on the **Manage policies** tab, select **Global (Org-wide default)** to open the org-wide app policy.
 
-4. In the **Pinned apps** section, select **Add apps**.
+4. In the **Pinned apps** section, select **+ Add apps**.
 
-5. From the **Add installed apps** page, type in the search box **Planner** app, mouseover the name and select **Add** twice.
+5. In the **Add pinned apps** pane, in the search box, type **Planner**, and then next to **Planner**, select **Select**.
 
-6. Make sure that **Planner** is now listed in the **Pinned apps** section then select **Save** and **Confirm**.
+6. Select **Add**.
 
-**Note**: It can take up to 24 hours for the settings to take effect.
+7. In the **Pinned apps** section, confirm that **Planner** is listed, and then select **Save**.
+
+8. In the confirmation dialog, select **Confirm**.
+
+> [!NOTE]
+> It can take up to 24 hours for the settings to take effect.
 
 In this task, you learned how to pin default apps from the Microsoft Teams admin center.
 
