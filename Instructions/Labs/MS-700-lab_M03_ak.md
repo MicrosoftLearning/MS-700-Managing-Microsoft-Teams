@@ -539,11 +539,11 @@ In the past, users stored data at various locations, including third-party stora
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Teams** > **Teams settings**.
+2. In the left-hand navigation pane of the Teams admin center, select **Teams** > **Teams settings**.
 
-3. On the **Teams settings** page, go to the **Files** section.
+3. On the **Teams settings** page, scroll down to the **Files** section.
 
-4. Configure the following file sharing and cloud file storage options.
+4. In the **Files** section, configure the following storage options:
 
 	- **Citrix files:** Off
 
@@ -555,29 +555,33 @@ In the past, users stored data at various locations, including third-party stora
 
 	- **Egnyte:** Off
 
-5. Scroll down and select **Save**.
+5. Select **Save**.
 
-**Note**: It can take up to 24 hours for the settings to take effect.
+6. In the **Changes might take some time to take effect** dialog, select **Confirm**.
+
+> [!NOTE]
+> It can take up to 24 hours for the settings to take effect.
 
 In this task, you have learned how to enable or disable third-party storage providers for your whole tenant.
 
 #### Task 2 - Block an app at organizational level
 
-In this task, you will block the Google Analytics app for all tenants
+In this task, you will block the Google Analytics Insights app for all tenants
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select **Teams apps** > **Manage apps**.
+2. In the left-hand navigation pane of the Teams admin center, select **Teams apps** > **Manage apps**.
 
 3. On the **Manage apps** page, type **Google** in the search box. 
 
 	![Graphical user interface, application Description automatically generated](media/MS-700-lab_M03_ak_image5.png)
 
-4. In the search result, select **Google Analytics** to open.
+4. In the search results, select **Google Analytics Insights** to open the app detail page.
 
-5. Select **Actions** dropwdown at the top left of the screen and select **Block app** .
+5. On the **Google Analytics Insights** detail page, select **Actions** > **Block app**.
 
-**Note**: It can take up to 24 hours for the settings to take effect.
+> [!NOTE]
+> It can take up to 24 hours for the settings to take effect.
 
 In this task, you have learned how to block the Google Analytics app for your tenant.
 
