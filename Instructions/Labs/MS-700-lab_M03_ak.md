@@ -671,17 +671,17 @@ In this exercise, you will test the configured policy settings on a client with 
 
 #### Task 1 – Test the messaging policy and private channel access
 
-In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user(Joni Sherman).
+In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user (Joni Sherman).
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse to (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left-hand navigation pane, select **Chat** > **New Chat** icon.
+2. In the left-hand navigation pane, select **Chat** > **New message** icon.
 
 	![Graphical user interface, application Description automatically generated with medium confidence](media/MS-700-lab_M03_ak_image8.png)
 
-3. In the main pane, enter **Joni Sherman** to start the conversation.
+3. In the **To** field, enter **Joni Sherman**, and then select **Joni Sherman** from the results.
 
-4. Notice there’s no **giphy**, **memes** and **stickers** icons.
+4. Select the **Emoji, GIFs and Stickers** icon in the message compose area, and confirm that only **Emojis** are available — the **GIFs** and **Stickers** tabs are not present.
 
 #### Task 2 – Test blocked app and storage providers
 
