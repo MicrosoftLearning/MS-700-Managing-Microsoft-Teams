@@ -466,9 +466,9 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select **Messaging** from the left side navigation, then select **Messaging policies**. 
+2. In the left-hand navigation pane of the Teams admin center, select **Messaging** > **Messaging policies**.
 
-3. Select **+Add** under **Manage Policies** tab and enter the following
+3. On the **Manage policies** tab, select **+ Add** and configure the following:
 
 	- **Name**: Regular users without fun stuff
 
@@ -480,21 +480,24 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 	- **Stickers in conversations**: Off
 
-	- Leave the rest of the settings as default. Select **Save**.
+	- Leave the rest of the settings as default. 
 
-4. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff**. Then select **Assign users** 
+4. Select **Save**.	
 
-	**Note**: If you didn’t see **Assign users**, select **Manage users** to expand the menu.
+5. On the **Messaging policies** page, select the checkbox to the left of **Regular users without fun stuff**, and then select **Manage users** > **Assign users**.
+	
+6. In the **Manage users** pane, search for and select **Add** for each of the following users:
 
-5. Search and select **add** for the following pilot users. Then select **Apply** and **Confirm** when prompted.
+    - **Alex Wilber**
 
-	- **Alex Wilber**
+    - **Lynne Robbins**
 
-	- **Lynne Robbins**
+    - **Diego Siciliani**
 
-	- **Diego Siciliani**
+7. Select **Apply**, and then select **Confirm**.
 
-**Note**: It can take up to 24 hours for the settings to take effect.
+> [!NOTE]
+> It can take up to 24 hours for the settings to take effect.
 
 In this task, you have successfully configured a new messaging policy and assigned it to the pilot users. It will now take some time for the policy to take effect. Continue with the next task.
 
