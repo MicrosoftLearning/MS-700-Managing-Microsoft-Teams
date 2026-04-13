@@ -67,9 +67,9 @@ As part of your pilot project for setting up the events and meetings in your org
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Meetings** > **Meeting policies**.
+2. In the left-hand navigation pane of the Teams admin center, select **Meetings** > **Meeting policies**.
 
-3. Select the **Global (Org-wide default)** policy under **Manage policies**.
+3. On the **Manage policies** tab, select **Global (Org-wide default)**.
 
 4. Turn **Off** the **Meeting recording** setting under the **Recording & transcription** section.
 
