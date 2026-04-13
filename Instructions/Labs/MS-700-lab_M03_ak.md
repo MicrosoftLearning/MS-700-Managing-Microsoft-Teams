@@ -328,43 +328,46 @@ You have successfully created two teams via Graph API. Your test of the Graph fu
 
 After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task, you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
 
-1. Connect to the **Client 1 VM** and browser to the **Teams desktop client**:  as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Select **Teams** from the left-side pane and select the **...** icon next to Teams and click on **Your teams and channels**.
+2. In the left navigation of the Teams admin center, select **Teams** > **Manage teams**.
 
 3. Archive the **Sales** team
 
-	1. Select the checkmark left from the **Sales** team and select **Archive** from the top pane.
+	1. In the **Manage teams** list, select the checkbox to the left of the **Sales** team, and then select **Archive** from the top pane.
 
 	2. Select the checkbox of **Make the SharePoint site read-only for team members** and select **Archive**.
 
-	3. The **Status** column should now have changed to **Archived**, written in orange color. Leave the browser open and proceed. If you have problems with the **Sales** team - archive another team (you can undo this action in the unarchive step).
+	3. In the **Status** column, confirm the **Sales** team now shows **Archived** in orange. Leave the browser open.
+
+    > [!NOTE]
+    > If the **Sales** team is not available, archive a different team instead. You can undo this in the unarchive step.
 
 4. Check the archived team
 
 	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. Select Teams and then select  **Teams and channels**.
+	2. In the left-side pane, next to **Teams and channels**, select the **...** icon, and then select **Your teams and channels**.
 
-	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team under the **Hidden teams** section. 
+	3. In the **Your teams and channels** page, select **3 more** and filter by **Archived Teams**. The **Sales** team appears with an archive icon. 
 
-	4. Select **General** channel under the **Sales** team, notice the **New conversation** option is not available.
+	4. Select the **Sales** team, and then select the **Sales** channel. At the bottom of the conversation pane, confirm the **Post in channel** option is not available.
 
 5. Unarchive the **Sales** team
 
 	1. Connect to the **Client 1 VM** again and browse to the Teams admin center as **Joni Sherman**.
 
-	2. Select the checkbox left from **Sales** again and select **Unarchive** from the top menu. The **Status** field should change to **Active** again.
+	2. In the **Manage teams** list, select the checkbox to the left of the **Sales** team, and then select **Unarchive** from the top pane. The **Status** column changes to **Active**.
 
 6. Check the unarchived team
 
 	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. On the left side, select **Teams**.
+	2. In the left-hand navigation pane, next to **Teams and channels**, select the **...** icon, and then select **Your teams and channels**.
 
-	3. Notice that the text of the **Sales** team and the **General** channel changes back to normal after a moment, but the team is hidden.
+	3. In the **Your teams and channels** page, confirm the **Sales** team displays as **Active** with no archive icon.
 
-	4. Select the three dots (…) right from the Sales team and select **Show**.
+	4. On the **Sales** team row, select **Show**.
 
 7. Leave the browser open and stay signed in.
 
@@ -376,31 +379,32 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left-hand navigation pane of the Teams web client, select the three dots (…) right from the **Sales** team and select **Delete the team** from the list.
+2. In the left-hand navigation pane, under **Teams and channels**, select **...** next to **Sales**, and then select **Delete team**.
 
-3. In the **Delete the Sales team**, select **I understand that everything will be deleted**. and select **Delete team**.
+3. In the **Delete the Sales team** dialog, select the **I understand that everything will be deleted** checkbox, and then select **Delete team**.
 
 4. Restore group
 
-	1.Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
+	1.Connect to the **Client 1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
 
-	2. On the left navigation pane, select **Identity* > **Groups**.
+	2. In the left-hand navigation pane, select **Entra ID** > **Groups**.
 
 	3. On the **Groups** page, select **Deleted groups** in the left side pane.
 
 	4. Now you can see all deleted groups, including the **Sales** group.
 
-	5. Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
+	5. Select the checkbox to the left of **Sales**, and then select **Restore group** from the top pane. In the **Do you want to restore deleted groups?** dialog, select **Yes**.
 
-5. Check the restored group.
+5. Check the restored group
 
 	1. Connect to **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. The **Sales** team appears in the list of teams again. Press **F5** to refresh the page if needed.
+	2. Confirm the **Sales** team appears in the list of teams. If the team does not appear, press **F5** to refresh the page.
 
-	3. Select the three dots (…) right from the team name and select **Manage team**. You can see the owner and all members again in the **Members** tab.
+	3. Next to the **Sales** team, select **...**, and then select **Manage team**. On the **Members** tab, confirm the owner and all members are present.
 
-**Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point in this lab.
+> [!NOTE]
+> The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point in this lab.
 
 You have successfully deleted a team via the Teams web client and restored it with the Azure Portal.
 
