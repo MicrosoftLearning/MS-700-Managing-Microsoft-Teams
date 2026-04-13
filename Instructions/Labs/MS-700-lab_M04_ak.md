@@ -65,7 +65,7 @@ Contoso organization has deployed Microsoft 365 and is testing pilot projects on
 
 As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in Teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left-hand navigation pane of the Teams admin center, select **Meetings** > **Meeting policies**.
 
@@ -81,21 +81,21 @@ You have successfully modified the Global (Org-wide default) meeting policy and 
 
 In this task, you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. Select **Calendar** from the left navigation pane.
 
-3. Select **Meet Now** > **Start meeting** from the upper right corner.
+3. In the upper-right corner, select **Meet now**, and then in the **Start a meeting now** dialog, select **Start meeting**.
 
 4. Select **Join now** to start the meeting.
 
-5. Close **Invite people to join your window** by selecting **X** on the upper right corner, if prompted.
+5. If prompted, select **X** to close the **Invite people to join you** window.
 
-6. In the meeting window, select … for **More actions**.
+6. In the meeting window, select **More**.
 
-7. Notice that you can’t select **Start recording**.
+7. Select **Record and transcribe**, and then confirm that **Start recording** is unavailable.
 
-8. End the meeting.
+8. Select **Leave** to end the meeting.
 
 #### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
 
