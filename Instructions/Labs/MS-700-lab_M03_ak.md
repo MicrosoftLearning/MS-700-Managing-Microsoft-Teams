@@ -654,15 +654,15 @@ You have now created a new custom app set up policy.
 
 #### Task 3 - Assign a custom app setup policy to users
 
-1. In the left-hand navigation pane on the **Microsoft Teams admin center**, go to **Teams apps** > **Setup policies**.
+1. In the left-hand navigation pane of the Teams admin center, select **Teams apps** > **Setup policies**.
 
-2. Select **Sales team** app setup policy.
+2. Select the **Sales team** app setup policy.
 
-3. Select **Assign users**.
+3. Select **Manage users** > **Assign users**.
 
 4. In the **Manage users** pane, search for **Alex Wilber**, and then select **Add**.
 
-5. Select **Apply**.
+5. Select **Apply**, and then select **Confirm**.
 
  
 ### **Exercise 5: Test configured policy settings**
