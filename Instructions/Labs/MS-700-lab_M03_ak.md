@@ -687,20 +687,18 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 In this task, you will test the blocked app.
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse to (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left-hand navigation select **Apps**.
 
-3. Search **Google** from the search box.
+3. In the search box, type **Google**.
 
-4. In the search results select **Google Analytics**. Note the lock icon and the "Request " button. 
+4. In the search results, confirm that the **Google Analytics Insights** app shows a **Request** button instead of an **Add** button.
 
-5. In the left-hand navigation pane, select **Chat**, go to the **sales** channel of the **Sales** team.
+5. In the left-hand navigation pane, select **Chat**, and then under **Teams and channels**, expand the **Sales** team and select the **Sales** channel.
 
-6. Select the **files** tab and select **...** in the ribbon.
+6. Select the **Shared** tab, and then select **...** in the toolbar.
 
-7. Select **Add shortcut to OneDrive**
+7. Select **Add shortcut to OneDrive**.
 
 8. Sign out of Teams and close all open windows.
-
-END OF LAB
