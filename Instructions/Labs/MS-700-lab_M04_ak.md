@@ -123,7 +123,7 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 4. On the **Live events policies\Add** page, enter the following information:
 
-	- Add live events policy Name: **Management Live Events**
+	- Name: **Management Live Events**
 
 	- Description: **Recording Restriction for live events organized by managers**
 
