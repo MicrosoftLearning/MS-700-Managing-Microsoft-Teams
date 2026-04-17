@@ -137,11 +137,11 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 5. Select **Save**.
 
-6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Manage Users** select **Assign users** from the top menu.
+6. Back on the **Live events policies** page, select the **Management Live Events** policy, and then select **Manage Users** > **Assign users** from the top menu.
 
 7. In the **Manage users** pane, search and add **Lynne Robbins**.
 
-8. Select **Apply** then **Confirm** to assign the policy to the selected user.
+8. Select **Apply**, and then select **Confirm** to assign the policy to the selected user.
 
 You have successfully created a custom Live event policy and assigned it to a user.
 
@@ -149,54 +149,57 @@ You have successfully created a custom Live event policy and assigned it to a us
 
 The IT department wants to host a company-wide meeting to answer employees’ questions regarding the new reporting system. As a Teams admin, you will create a webinar allowing employees to submit their questions before the meeting.
 
-1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the Teams Calendar, select the dropdown menu **New meeting** and select **Webinar**. The **New webinar | Microsoft Teams** tab will open.
+2. In the **Calendar**, select the **New** dropdown, and then under **Organization templates**, select **Webinar**.
 
-3. Enter the **Basic info** and then select **Save and send invites**:
+3. On the **Details** page, enter the following information and then select **Save and send invites**:
 
-	- **webinar title**: IT Office Hours
-	- **Start/End**: Select a time close to your current time 
-	- **Give your webinar a description**: Company-wide meeting to answer questions regarding the new reporting system.
-	- **Presenters**: Patti Fernandez, Allan Deyoung
-	- **Co-organizers**: Diego Siciliani
+	- **Title**: IT Office Hours
+	- **Start date/End date**: Select a time close to your current time 
+	- **Description**: Company-wide meeting to answer questions regarding the new reporting system.
+	- **Presenters from your org**: Search for and add **Patti Fernandez** and **Allan Deyoung**
+	- **Co-organizers**: Search for and add **Diego Siciliani**
 	- **Event access**: Your organization
 
-	**Note**: When you save the event, invites will be sent to presenters and co-organizers automatically. 
+	> [!NOTE]
+    > When you save the event, Teams sends invites to presenters and co-organizers automatically.
 
-4. Review the **Meeting options** by selecting the options on the left hand side navigation. Press **Save** if prompted first.
+4. In the top navigation bar, select **Meeting options** and review the available settings. If prompted, select **Save** first.
 
-5. Complete the Registration site configuration. On the **IT Office Hours | Microsoft Teams** tab, at the left, expand **Registration** and select **Configuration**. Enter the following information and then select **Save**: 
+5. In the left navigation pane, under **Registration**, select **Configuration**. Enter the following information and then select **Save**:
 
-	- **Capacity**: 1000
-	- Under **Form** select **+ Add field** > **Custom question** > **Text input** and enter the following in the textbox below **Custom question**:
+    - **Event capacity**: 1000
+    - In the **Form** section, select **+ Add field** > **Custom question** > **Text input** and enter the following in the **Custom question** textbox:
 
-		*What is your question about the new reporting system?*
+        `What is your question about the new reporting system?`
 		 
 
-6. Preview the registration site by selecting **View draft**. The preview of the registration page opens in a new tab. After reviewing the site, close the tab.
+6. In the upper-right corner, select **View draft** to preview the registration site. The registration page preview opens in a new tab. If prompted, select **Sign in with your school or work account** and select the **Joni Sherman** account. Review the site and then close the tab.
 
 7. Publish the Registration site and share the link:
 
-	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and then selet **Publish** to activate the Webinar registration site.
+	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and then select **Publish** to activate the Webinar registration site.
 
-	2. Copy the **Share link**, close the **All set and ready to share** window and the **IT Office Hours | Microsoft Teams** tab.
+	2. Copy the **Share link**, and then close the **All set and ready to share** dialog.
 
-	3. Navigate back to **Teams** on the left hand side navigation. 
+	3. In the left navigation pane, select **Chat**. Under **Teams and channels**, expand **IT-Department** and select the **General** channel.
 	
-	4. On the left navigation pane, select **General** under the **IT-Department**. Select **Start a post** and paste the copied registration link in the new conversation text box and select send.
+	4. Select **Post in channel**, paste the copied registration link in the text box, and then select **Post**.
 
 	5. Sign out and close all browser windows.
 		
 8. Test the meeting registration. 
 
-	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
+	1. Stay in the **Client 1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com/) as **MOD Administrator**.
 
-	2. Go to the **General** channel of the **IT Department** team and select the registration link that you posted.
+	2. In the **General** channel of the **IT-Department** team, select the registration link posted earlier.
 
-	3. On the registration page select **Register**, verify that the MOD Administrator's name and email have been entered, select the **Microsoft Event Terms and Conditions** check box, and then select **Register**.
+	3. On the registration page select **Register**.
+	
+	4. Verify that the MOD Administrator's name and email are populated, select the **I have read and agree to the Microsoft Event Terms and Conditions** check box, and then select **Register**.
 
-	4. Open a new browser tab and browse to **[MOD Administrator's mail (https://outlook.office.com/mail/)](https://outlook.office.com/mail/)** and view the email with subject: **You're registered for IT Office Hours**.
+	5. Open a new browser tab and browse to **Outlook** (https://outlook.office.com/mail/) as **MOD Administrator**. Verify that an email with the subject **You've registered for IT Office Hours** appears in the inbox.
 	
 	5. Sign out and close all browser windows.
 
