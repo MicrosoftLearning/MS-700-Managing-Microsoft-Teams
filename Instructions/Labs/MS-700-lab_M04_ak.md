@@ -101,9 +101,9 @@ In this task, you need to sign in to the second client and create a meeting with
 
 Contoso Ltd. works with several external partners, and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account, and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In left navigation of the Teams admin center, select **Meetings** > **Meetings settings**.
+2. In the left navigation pane of the Teams admin center, select **Meetings** > **Meeting settings**.
 
 3. On the **Meetings settings** page, turn **Off** the option **Anonymous users can join a meeting** in the participants section.
 
@@ -115,9 +115,9 @@ You have successfully modified the meeting settings for all users in your tenant
 
 Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to manage users. Only the organizer of a live event should be able to record his meetings.
 
-1. Connect to the **Client 1 VM** and browse to the **[Microsoft Teams admin center (https://admin.teams.microsoft.com)](https://admin.teams.microsoft.com)** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
+2. In the left navigation pane of the Teams admin center, select **Meetings** > **Live events policies**.
 
 3. Select **+Add** under **Manage Policies** tab.
 
@@ -133,7 +133,7 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 	- Who can join scheduled live events: **Everyone in the organization**
 
-	- Who can record an event: **Organizer can record**
+	- Record an event: **Organizer can record**
 
 5. Select **Save**.
 
