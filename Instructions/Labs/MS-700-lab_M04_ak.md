@@ -467,29 +467,29 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 3. On the left navigation pane, select **Voice** > **Calling policies**.
 
-4. Select the **Global (Org-wide default)** policy to edit the default settings.
+4. On the **Calling policies** page, select **Global (Org-wide default)**.
 
-5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail for inbound calls** and select **Off**. Then select **Save** and **Confirm**.
+5. On the **Edit policy details** page, set **Voicemail for inbound calls** to **Off**, and then select **Save** and **Confirm**.
 
-6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
+6. On the **Calling policies** page, on the **Manage policies** tab, select **+ Add** to create a new policy.
 
-7. Enter the following information:
+7. On the **Add policy details** page, enter and select the following information:
 
-	- Add new calling policy: **Voicemail enabled pilot users**
+    - Name: **Voicemail enabled pilot users**
 
-	- Description: **Calling policy that allows voicemail for selected pilot users**.
+    - Description: **Calling policy that allows voicemail for selected pilot users**
 
-	- Voicemail for inbound calls: **On**
+    - Voicemail for inbound calls: **On**
 
 8. Select **Save** to create the new policy.
 
-9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Manage Users** then **Assign users** from the top pane.
+9. On the **Calling policies** page, select the checkbox next to **Voicemail enabled pilot users**, and then select **Manage users** > **Assign users**.
 
-10. In the right-side pane, type into the search field **Megan** then select **add**. Repeat the same steps for **Alex, Joni and Lynne**.
+10. In the **Manage users** pane, search for `Megan` and select **Add**. Repeat for **Alex**, **Joni**, and **Lynne**.
 
-11. Select **Apply** to assign the policy to the selected users, then **Confirm**.
+11. Select **Apply** to assign the policy to the selected users, then select **Confirm**.
 
-In this task, you have disabled voicemail for all users in the organizations, and then you have created a calling policy that will enable voicemail for several users.
+You have disabled voicemail for all users in the organization and created a calling policy that enables voicemail for the pilot users.
 
 #### Task 2 - Create a call queue
 
