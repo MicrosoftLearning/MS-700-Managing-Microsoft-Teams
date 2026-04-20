@@ -493,7 +493,7 @@ You have disabled voicemail for all users in the organization and created a call
 
 #### Task 2 - Create a call queue
 
-Contoso Ltd. has deployed Microsoft Teams voice functionalities throughout the organization. To deploy some automation for incoming support calls, the calling queue functionalities need to be tested before being rolled out. The following settings shall be configured for customers calling in:
+Contoso Ltd. has deployed Microsoft Teams voice functionalities throughout the organization. To automate incoming support calls, the call queue functionality needs to be tested before rollout. Configure the following settings for incoming callers:
 
 - A greeting message.
 
@@ -507,43 +507,52 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
+3. On the left navigation pane, select **Voice** > **Resource accounts**.
 
-4. On the **Resource accounts** page, select **+ Add** from the top pane.
+4. On the **Resource accounts** page, select **+ Add**.
 
-5. On the right pane, enter the following information:
+5. On the **Add resource account** pane, enter and select the following information:
 
 	- Display name: **Contoso Call Queue Resource Account**
 
-	- Username: **pilot_callqueue1**
+	- Username: enter **pilot_callqueue1** and verify your tenant domain is selected in the **Domains** dropdown
 
 	- Resource Account Type: **Call queue**
 
 6. Select **Save**.
 
+> [!NOTE]
+> If the error *You don't have the required permissions to create/manage resource accounts* appears, open the **Microsoft 365 admin center** (https://admin.microsoft.com) as **MOD Administrator**. Select **Users** > **Active users**, and then select **Joni Sherman**. Select **Manage roles**, assign the **User Administrator** role, and then select **Save changes**. Sign out of the Teams admin center and sign back in as **Joni Sherman** before retrying.
+
 7. Download the file **Alarm03.wav** from the following link and save to the Downloads folder.
 
    [https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav](https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav)
 
-8. On the left navigation pane, select **Voice** and **Call queues**, to create a call queue.
+8. In the **Teams admin center**, on the left navigation pane, select **Voice** > **Call queues**.
 
-9. Select **+ Add** from the top pane. On the pop up window click **Classic setup**.
+9. Select **+ Add**. In the pop-up window, select **Classic setup**.
 
-10. Enter the following information:
+10. On the **Add a call queue** page, enter the following information:
 
 	- Call queue name: **Contoso Call Queue Resource Account**
 
-	- You haven’t added any resource accounts yet: Select **Add**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
+	- Under **Resource accounts**, select **Add**. In the **Add accounts** pane, search for `Contoso`, select **Add** next to **Contoso Call Queue Resource Account**, select **Add** to confirm, and then select **Save**
 	
-	- Language: **English (United States)**, then select **Next**.
+	- Language: **English (United States)**
 
-	- Greeting: select **Play an audio file**, and then select **Upload file**.
+	- Select **Next**
 
-	- In **Open** window, navigate to the Downloads folder, select **Alarm03.wav** and select **Open**.
+	- Greeting: select **Play an audio file**, and then select **Upload file**
 
-	- Music on hold: **Play default music**, then select **Next**.
+	- In the **Open** window, navigate to the Downloads folder, select **Alarm03.wav**, and then select **Open**
 
-	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane. Select **Next**.
+	- Music on hold: **Play default music**
+
+	- Select **Next**
+
+	- Call answering: Select **Choose users and groups**, then select **Add groups**. In the **Add call agents** pane, search for `Sales`, select **Add** next to **Sales**, and then select **Add** at the bottom of the pane.
+
+	- Select **Next**
 
 	- Routing method: **Round robin**
 
@@ -551,13 +560,19 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Call agents can opt out of taking calls: **On**
 
-	- Call agent alert time: **30 seconds**, select **Next**.
+	- Call agent alert time: **30 seconds**
+	
+	- Select **Next**
 
-	- Under the **Exception handling** page, expand **Call overflow** and et Maximum calls in the queue: **50**
+	- Enable callback: **Off**
+
+	- Select **Next**
+
+	- Under the **Exception handling** page, expand **Call overflow** and set **Maximum calls in the queue** to **50**.
 
 	- When the maximum number of calls is reached: **Disconnect**
 
-	-  Expand **Call timeout** and set Maximum wait time: **5 minutes**
+	- Expand **Call timeout** and set **Maximum wait time**: **5 minutes**
 
 	- When call times out: **Disconnect**
 
@@ -565,7 +580,8 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
 
-**Note:** Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
+> [!NOTE]
+> Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
 
 #### Task 3 - Create an auto attendant
 
