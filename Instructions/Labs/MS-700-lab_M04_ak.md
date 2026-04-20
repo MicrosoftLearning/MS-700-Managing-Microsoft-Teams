@@ -517,12 +517,12 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Username: enter **pilot_callqueue1** and verify your tenant domain is selected in the **Domains** dropdown
 
-	- Resource Account Type: **Call queue**
+	- Resource account Type: **Call queue**
 
 6. Select **Save**.
 
-> [!NOTE]
-> If the error *You don't have the required permissions to create/manage resource accounts* appears, open the **Microsoft 365 admin center** (https://admin.microsoft.com) as **MOD Administrator**. Select **Users** > **Active users**, and then select **Joni Sherman**. Select **Manage roles**, assign the **User Administrator** role, and then select **Save changes**. Sign out of the Teams admin center and sign back in as **Joni Sherman** before retrying.
+   > [!NOTE]
+   > If the error *You don't have the required permissions to create/manage resource accounts* appears, open the **Microsoft 365 admin center** (https://admin.microsoft.com) as **MOD Administrator**. Select **Users** > **Active users**, and then select **Joni Sherman**. Select **Manage roles**, assign the **User Administrator** role, and then select **Save changes**. Sign out of the Teams admin center and sign back in as **Joni Sherman** before retrying.
 
 7. Download the file **Alarm03.wav** from the following link and save to the Downloads folder.
 
@@ -530,11 +530,11 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 8. In the **Teams admin center**, on the left navigation pane, select **Voice** > **Call queues**.
 
-9. Select **+ Add**. In the pop-up window, select **Classic setup**.
+9. Select **+ Add**. In the **Set up Call Queue** dialog, select **Classic setup**.
 
 10. On the **Add a call queue** page, enter the following information:
 
-	- Call queue name: **Contoso Call Queue Resource Account**
+	- Add a name for  your call queue: **Contoso Call Queue Resource Account**
 
 	- Under **Resource accounts**, select **Add**. In the **Add accounts** pane, search for `Contoso`, select **Add** next to **Contoso Call Queue Resource Account**, select **Add** to confirm, and then select **Save**
 	
@@ -580,8 +580,8 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
 
-> [!NOTE]
-> Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
+   > [!NOTE]
+   > Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
 
 #### Task 3 - Create an auto attendant
 
@@ -591,31 +591,31 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create the resource account first.
+3. On the left navigation pane, select **Voice** > **Resource accounts**.
 
-4. On the **Resource accounts** page, select **+ Add** from the top pane.
+4. On the **Resource accounts** page, select **+ Add**.
 
-5. On the right pane, enter the following information:
+5. On the **Add resource account** pane, enter and select the following information:
 
 	- Display name: **Contoso Auto Attendant**
 
-	- Username: **pilot_autoattendant1**
+	- Username: **pilot_autoattendant1** and verify your tenant domain is selected in the **Domains** dropdown
 
-	- Resource Account Type: **Auto attendant**
+	- Resource account Type: **Auto attendant**
 
 6. Select **Save**.
 
-7. On the left navigation pane, select **Voice** and then **Auto attendants** below.
+7. On the left navigation pane, select **Voice** > **Auto attendants**.
 
-8. Select **+ Add** from the top pane, to create a new auto-attendant. On the pop up window select **Classic setup**.
+8. Select **+ Add**. In the **Set up Auto attendant** dialog, select **Classic setup**.
 
-9. Enter the following information:
+9. Enter and select the following information:
 
 	- Add a name for your auto attendant: **Contoso Auto attendant**
 
 	- Operator: **Voice app**
 
-	- Search by resource account: **Contoso Call Queue Resource Account**
+	- Search by auto attendant or call : **Contoso Call Queue Resource Account**
 
 	- Time zone: **(UTC-08:00) Pacific Time (US &amp; Canada)**
 
@@ -627,37 +627,37 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 11. On the **Call flow** page, configure the following:
 
-	- First, play a greeting message: Select **Add a greeting message**
+    - Under **Greeting options**, select **Add a greeting message**
 
-	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
+    - In the text box, enter `Welcome. The person you called is currently on vacation, your call will be redirected to an operator.`
 
-	- Then under Call routing options select **Redirect call**
+    - Under **Call routing options**, select **Redirect call**
 
-	- Redirect to: **Voice app**
+    - Redirect to: **Voice app**
 
-	- Search by resource account: **Contoso Call Queue Resource Account**
+    - Search by auto attendant or call queue: **Contoso Call Queue Resource Account**
 
 12. Select **Next**.
 
-13. On the **Busines and after hours** page, configure the following:
+13. On the **After-hours call flow** page, configure the following:
 
-	- Configure working hours **Monday** to **Friday** from **08:00 AM** to **04:00 PM**
+    - Under **Set business hours**, set **Monday** to **Friday** from **08:00 AM** to **04:00 PM**
 
-	- Leave **Saturday** and **Sunday** blank.
+    - Leave **Saturday** and **Sunday** unchecked
 
-	- Greeting options: **Add a greeting message**
+    - Under **Greeting options**, select **Add a greeting message**
 
-	- Type in: **Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.**
+    - In the text box, enter `Thank you for your call, our business hours are Monday to Friday, 08:00 AM to 04:00 PM.`
 
-	- Call routing options: **Disconnect**
+    - Under **Call routing options**, select **Disconnect**
 
 14. Select **Next**.
 
-15. On the **Holiday call settings** page, select **Next**.
+15. On the **Holiday call flow** page, select **Next**.
 
 16. On the **Dial scope** page, select **Next**.
 
-17. On the **Resource accounts** page, select **Add**. In the right-side pane, type **Contoso auto attendant**, and then select **Add** twice.
+17. On the **Resource accounts** page, select **Add**. In the **Add accounts** pane, search for `Contoso Auto Attendant`, select **Add** next to **Contoso Auto Attendant**, and then select **Save**.
 
 18. Select **Submit** to finish the creation of the auto attendant.
 
