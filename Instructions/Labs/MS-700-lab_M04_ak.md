@@ -441,15 +441,15 @@ In this task, you will learn how to assign an existing phone number to a user. P
 
 1. Connect to the **Client 1 VM** and browse to the **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
+2. On the left navigation pane, select **Voice** > **Phone numbers**.
 
-4. Select the phone number you want to assign and select **edit** to open the options.
+4. Select the phone number you want to assign, and then select **Edit**.
 
-5. Under **Assigned to** search for **Lynne Robbins** and select **assign**.
+5. In the **Assigned to** field, search for **Lynne Robbins** and select **Assign**.
 
-6. Under **Emergency Location** select **Search by the location description**.
+6. In the **Emergency Location** field, select **Search by the location description**.
 
-7. Type **Contoso** to search for the emergency location you created earlier.
+7. Search for `Contoso` to find the emergency location you created earlier.
 
 8. Select **Apply** to assign the phone number to the user.
 
@@ -465,7 +465,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. On the left navigation pane, select **Voice**, and then **Calling policies** below.
+3. On the left navigation pane, select **Voice** > **Calling policies**.
 
 4. Select the **Global (Org-wide default)** policy to edit the default settings.
 
