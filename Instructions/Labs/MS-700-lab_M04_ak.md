@@ -381,35 +381,35 @@ You have assigned the Calling Plan license to a user. With this license assigned
 
 In this task, you will learn how to order a phone number for a user with an assigned Calling Plan license. Please note, that you can no longer order a phone number without a business justification so the set of steps below are meant to educate. Please do not follow these steps within your lab environments. These steps are designed to educate the user on how to execute the task.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the **Microsoft Teams client** sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and sign in with the provided credentials.
+2. In the left navigation pane, select **Voice** > **Phone numbers**.
 
-3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/), as Joni Sherman.
+3. On the **Numbers** tab, select **+ Add**.
 
-4. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
+4. In the **Order Name** field, enter `Phone number order`.
 
-5. Select **+ Add** in the right pane.
+5. In the **Description** field, enter `Number for Lynne Robbins during the Calling Plan trial`.
 
-6. Type **Phone number order** as the **Order Name**.
+6. In the **Country or region** dropdown, select **United States**.
 
-7. Fill out the description as **Number for Lynne Robbins during the Calling Plan trial**.
+7. In the **Verification required** section, select **Provide now**.
+   > [!NOTE]
+   > Phone number acquisition is blocked until baseline KYC information is provided and all verification steps are completed. In a lab environment, you cannot complete this verification. The remaining steps describe the process after KYC verification is approved.
 
-8. In the dropdown menu of **Country or region**, select **United States**.
+8. For **Number Type** select **User (Subscriber)**.
 
-9. For **Number Type** select **User (Subscriber)**.
+9. For the **Operator**, select **Microsoft**.
 
-10. For the **Operator**, pick **Microsoft**.
+10. For **Quantity** type **1**.
 
-11. For **Quantity** type **1**.
-
-12. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
+11. In the **Search for new numbers** section, you can use one of the following approaches to find new numbers:
 
 	- Search by city name
 
 		- Select **Search by city name**.
 
-		- Search **Redmond** and select **Contoso Emergency Address**, which is the location you just created.
+		- Search **Redmond** and select **Contoso Emergency Address**
 
 		- Select Area code available.
 
@@ -423,25 +423,25 @@ In this task, you will learn how to order a phone number for a user with an assi
 
 		- Select **Next**.
 
-	**Note**: If you received the following message, please try other area codes or create another location by selecting **Add a location** which is next to the **Search by city name**. It will navigate to the **New emergency address** pane, enter the new name for the emergency address, then in the **Country or region** select **United States** and enter the new address manually in the **Address** field by enabling the slider **Input address manually** and select **Save**. It takes back to the **Get Phone numbers** page and continues the city search with the newly created emergency address to acquire the phone number.
+	> [!NOTE]
+    > If the following message appears, try a different area code or create another location by selecting **Add a location** next to **Search by city name**. On the **New emergency address** pane, enter a name for the emergency address. In the **Country or region** dropdown, select **United States**. In the **Address** field, enable **Input address manually**, enter the new address, and then select **Save**. The **Get phone numbers** page displays again so you can continue the city search with the new emergency address.
+    >
+	> **Message**: *We can’t find any phone numbers for the address you selected.*
 
-	*We can’t find any phone numbers for the address you selected.*
+12. Once you reserved a phone number successfully, you can proceed by selecting **Place order**, then **Finish**.
 
-13. Once you reserved a phone number successfully, you can proceed by selecting **Place order**, then **Finish**.
-
-**Note:** It might take some time for the phone numbers to show up. You can check your order from the **Order history** tab.
+    > [!NOTE]
+    > It may take some time for the phone numbers to appear. You can check the status on the **Order history** tab.
 
 You just ordered a phone number for a User in Microsoft Teams. This is the same process you use to order numbers for all other Microsoft Teams services such as Call Queues.
 
 #### Task 4 – Assign a phone number to your user (Instructional steps only - do not complete)
 
-In this Task, you will learn how to assign an existing phone number to a user. Please note, that you can no longer order a phone number without a business justification so the set of steps below are meant to educate. Please do not follow these steps within your lab environments. These steps are designed to educate the user on how to execute the task.
+In this task, you will learn how to assign an existing phone number to a user. Please note, that you can no longer order a phone number without a business justification so the set of steps below are meant to educate. Please do not follow these steps within your lab environments. These steps are designed to educate the user on how to execute the task.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to the **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
-
-3. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
+2. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
 
 4. Select the phone number you want to assign and select **edit** to open the options.
 
