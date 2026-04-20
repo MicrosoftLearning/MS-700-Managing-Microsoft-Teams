@@ -199,7 +199,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 	
 	4. Verify that the MOD Administrator's name and email are populated, select the **I have read and agree to the Microsoft Event Terms and Conditions** check box, and then select **Register**.
 
-	5. Open a new browser tab and browse to **Outlook** (https://outlook.office.com/mail/) as **MOD Administrator**. Verify that an email with the subject **You've registered for IT Office Hours** appears in the inbox.
+	5. Open a new browser tab and browse to **Outlook** (https://outlook.office.com/mail/) as **MOD Administrator**. Verify that an email with the subject **You're registered for IT Office Hours** appears in the inbox.
 	
 	5. Sign out and close all browser windows.
 
@@ -208,7 +208,7 @@ You have successfully created a webinar with a custom registration form.
 
 ### **Exercise 2: Deploy Teams device profiles**
 
-As a Teams administrator, you will create configuration profiles to manage settings and features for Teams devices in your organization. You can create or upload configuration profiles to include settings and features you want to enable or disable and then assign a profile to a device or groups of devices.
+As a Teams administrator, you will create configuration profiles to manage settings and features for Teams devices in your organization. You can create or upload configuration profiles to include settings and features you want to enable or disable, and then assign a profile to a device or groups of devices.
 
 Your organization could purchase Microsoft Teams Rooms that provide a complete meeting experience with HD video, audio, and content sharing in conference rooms. You will need to prepare the deployment prerequisites by defining Microsoft Teams Rooms service account in Office 365.
 
