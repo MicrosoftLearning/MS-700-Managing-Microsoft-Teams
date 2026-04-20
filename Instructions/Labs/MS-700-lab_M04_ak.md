@@ -216,9 +216,9 @@ Your organization could purchase Microsoft Teams Rooms that provide a complete m
 
 During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create a configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez** (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez** (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In **Teams admin center**, on the left navigation pane, select **Phones** under **Teams devices**.
+2. In the **Teams admin center**, on the left navigation pane, under **Teams devices**, select **Phones**.
 
 3. On the **Phones** page, select **Configuration profiles** tab, and then select **+ Add**.
 
@@ -228,75 +228,81 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- Description: **Configuration profile for Teams Desk Phones in New York HQ**
 
-5. Under **General** section, configure following settings:
+5. Under the **General** section, configure the following settings:
 
-	- Device lock: **On**
+	- Set device lock: **On**
 
 	- Timeout: **30 seconds**
 
-	- PIN: **123456**
+	- Device lock PIN: **123456**
 
 	- Language: English **(United States)**
 
-	- Timezone: **(UTC-5:00) Eastern Time (US and Canada)**
+	- Timezone: **(UTC-5:00) Eastern Time (US & Canada)**
 
 	- Date format: **MM/DD/YYYY**
 
 	- Time format: **12 Hours (AM/PM)**
 
-6. Under **Device settings** configure following settings:
+6. Under **Device settings**, configure the following settings:
 
-	- Display screen saver: **On, Timeout 1 minute**
+	- Display screen saver: **On (Recommended)**
+
+	- Display screen saver Timeout: **1 minute**
 
 	- Display high contrast: **On**
 
-	- Office hours: **08:00-17:00**
+	- Office hours: **Set Office Hours**, start time **08:00**, end time **17:00**
 
 	- Power Saving: **On**
 
-7. Under **Network settings**, configure following settings:
+7. Under **Network settings**, configure the following settings:
 
 	- DHCP enabled: **On**
 
 	- Logging enabled: **Off**
 
-	- Device’s admin password: **Pass@word1**
+	- Device's admin password: **Set Device admin password**, enter `Pass@word1`
 
-8. Once you complete with the configuration profile settings, select **Save**.
+8. Select **Review changes**.
 
-9. Sign out and close all browser windows.
+9. Review the configured settings and select **Save changes**.
 
-In this task, you have successfully created a configuration profile that can be applied to Microsoft Teams devices.
+10. Sign out and close all browser windows.
+
+You have sucessfully created a configuration profile that can be applied to Microsoft Teams devices.
 
 #### Task 2 - Configure a resource account for Teams Room
 
 Your organization has ordered devices for Microsoft Teams room. In the meantime, you need to ensure that all prerequisites for the equipment installation are being completed. One of the prerequisites for Microsoft Teams Room deployment is adding a device account and assigning Office 365 license for that account.
 
-**Note:** You may choose to use the Exchange Online PowerShell to complete this task, however, you will need to first install the new Exchange PowerShell module.
+> [!NOTE]
+> You can also use Exchange Online PowerShell to complete this task. You need to install the Exchange Online PowerShell module first.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to **Microsoft 365 admin center** (https://admin.microsoft.com/) as **MOD Administrator**.
 
 2. Create a Microsoft 365 resource account for Teams Rooms.
-	1. In left navigation of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**. If you don't find **Resources**, search for **Rooms & equipment** from the top search bar and select.
+	1. In the left navigation pane of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**. If **Resources** is not visible, in the top search bar, search for `Rooms & equipment` and select the result.
 
-	2. On the Rooms & equipment screen, select the **+ Add resource** option to add a new resource account. 
+	2. On the **Rooms & equipment** page, select **+ Add resource**.
 
-	3. On the **Add resource** page, follow the wizard with the following information. 
+	3. In the **Add resource** pane, select and enter the following information: 
 
-		* Resource type: **Room**.
+		* Resource type: **Room**
 		* Name: **NY-TeamsRoom1** 
-		* Email: Enter **NY-TeamsRoom1** inside the Email text box and verify your tenant id in the domains
+		* Email: enter **NY-TeamsRoom1** and verify your tenant domain is selected in the **Domains** dropdown
 
 	4. Select **Save**.
-	5. Select **Edit booking options**, keep the default settings with the following checked.
+	
+	5. Select **Edit booking options**, verify the following options are selected, and then select **Save changes**:
 
-		* Allow repeating meetings
-		* Automatically decline meetings outside of the limits
-		* auto-accept meeting requests
+        * **Allow repeating meetings**
+        * **Automatically decline meetings outside of the limits**
+        * **Auto-accept meeting requests**
 
 3. Assign the license to the Teams Rooms account.
 
-	1. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
+	1. In the left navigation pane of the **Microsoft 365 admin center**, select **Users** > **Active users**.
 
 	2. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
 
