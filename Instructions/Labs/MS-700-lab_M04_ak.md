@@ -363,21 +363,17 @@ You have successfully created an emergency address that can be used for phone nu
 
 In this task, you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to **Microsoft 365 admin center** (https://admin.microsoft.com/) as **MOD Administrator** (Admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. You should still be in the **Microsoft 365 admin center** and signed in as **MOD Administrator** (Admin@&lt;YourTenant&gt;.onmicrosoft.com).
+2. In the left navigation pane of the **Microsoft 365 admin center**, select **Users** > **Active users**.
 
-3. Open the Navigation Menu in the upper left corner and select **Users**.
+3. On the **Active users** page, search for and select **Lynne Robbins**.
 
-4. Select **Active users**.
+4. Select **Licenses and apps**.
 
-5. Search for **Lynne Robbins** and open the additional settings by selecting her name.
+5. Under **Licenses**, select the **Microsoft Teams Domestic Calling Plan** checkbox.
 
-6. Select **Licenses and apps**.
-
-7. Under **Licenses** select **Microsoft Teams Domestic Calling Plan** by setting the checkmark in front of it.
-
-8. Select **Save Changes** to assign the license and then sign out and close all open windows.
+6. Select **Save Changes** to assign the license, sign out, and close all browser windows.
 
 You have assigned the Calling Plan license to a user. With this license assigned your users can use the Calling Plan features and receive a phone number.
 
