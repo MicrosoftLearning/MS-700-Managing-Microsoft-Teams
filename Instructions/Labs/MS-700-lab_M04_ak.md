@@ -317,7 +317,8 @@ You have successfully created, configured, and licensed a Microsoft Teams Room s
 
 In this exercise, you will set up one of your users with a Calling Plan Trial. You will need to start the trial, order a phone number from Microsoft as your provider and enable your user to use this phone number when making outgoing calls.
 
-**Note:** The availability of Calling Plans varies based on different countries and regions. Please go to the link below to check the availability of your location. The following instruction is based on the location of the United States.
+> [!NOTE]
+> Calling Plan availability varies by country and region. Check the link below to verify availability for your location. These instructions are based on the United States.
 
 [https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans](https://docs.microsoft.com/en-us/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
 
@@ -325,23 +326,32 @@ In this exercise, you will set up one of your users with a Calling Plan Trial. Y
 
 In this task, you will add a new emergency address “One Microsoft Way, Redmond, WA 98052, USA” for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
 
-1. Connect to the **Client 1 VM** and browse to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. On the left navigation pane select **Locations** > **Emergency addresses**.
+2. On the left navigation pane, select **Locations** > **Emergency addresses**.
 
 3. Select **+ Add** from the top pane to create a new emergency address.
 
 4. On the **Emergency addresses\New emergency address** page, enter the following information:
 
-	- Put in a name for your location: **Contoso Emergency Address**
+	- Enter a name for your emergency address: **Contoso Emergency Address**
 
 	- Country or region: **United States**
 
 	- Address: **1 Microsoft Way, Redmond, WA 98052**
 
-		(You can enable **Input address manually**, and enter the address manually)
+	> [!NOTE]
+    > If the address is not recognized, enable **Input address manually** and enter the address fields individually:
+    > - **Street number**: `1`
+    > - **Street name**: `Microsoft Way`
+    > - **City**: `Redmond`
+    > - **State**: Washington
+    > - **Zip code**: `98052`
+    > - **Latitude**: `47.6394`
+    > - **Longitude**: `-122.1282`
+    > - **Organization name**: `Contoso`
 
-5. Acknowledge the emergency calling disclaimer. An information page opens, either **Print** or **Cancel** the page and continue to the next task.
+5. Acknowledge the emergency calling disclaimer. If an information page opens, select **Print** or **Cancel** to dismiss it.
 
 6. Select **Save**.
 
