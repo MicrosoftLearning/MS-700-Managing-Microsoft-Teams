@@ -81,7 +81,7 @@ You have successfully modified the Global (Org-wide default) meeting policy and 
 
 In this task, you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-1. Connect to the **Client 2 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. Select **Calendar** from the left navigation pane.
 
@@ -149,7 +149,7 @@ You have successfully created a custom Live event policy and assigned it to a us
 
 The IT department wants to host a company-wide meeting to answer employees’ questions regarding the new reporting system. As a Teams admin, you will create a webinar allowing employees to submit their questions before the meeting.
 
-1. Connect to the **Client 1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com/) as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the **Calendar**, select the **New** dropdown, and then under **Organization templates**, select **Webinar**.
 
@@ -671,19 +671,18 @@ When users experience calling problems, an organization's Teams administrator mu
 
 In this exercise, you'll explore the monitoring and troubleshooting tools available in Teams admin center, including call analytics, and the call quality dashboard to investigate voice issues.
 
-Note: As we have not made any calls in this environment, reports will be blank and incomplete. 
+> [!NOTE]
+> Because no calls have been made in this environment, reports will be blank and incomplete.
 
 #### Task 1 – Explore call analytics for users, calls, and meetings
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
 
-2. In the left-hand navigation pane, select **Users&gt;Manage users**, and then select a user.
+2. In the left navigation pane, select **Users** > **Manage users**, and then select a user.
 
-3. On the **User** page, select **Meetings &amp; calls** tab.
+3. On the user's page, select the **Meetings & calls** tab.
 
- 
-
-4. Call analytics page displays all calls and meetings for the selected user, 
+4. The **Meetings & calls** tab displays all calls and meetings for the selected user.
 
 By selecting a session in the list, you can view other information about a given session, including detailed media and networking statistics for call and meeting activities.
 
@@ -693,19 +692,22 @@ CQD is designed to help Microsoft Teams administrators and network engineers mon
 
 In this task you navigate to Call Quality Dashboard
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to **Teams admin center** ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
 
-2. In the left-hand navigation pane, select **Analytics & reports** then **Call Quality Dashboard**.
+2. In the left navigation pane, select **Analytics & reports** > **Call Quality Dashboard**.
 
-3. A new browser tab with the url [**https://cqd.teams.microsoft.com/**](https://cqd.teams.microsoft.com/) will open. You will be prompted to sign-in, when you access the CQD portal for the first time. Note: If there is an error when the new browser tab opens, simply  type in the browser: https://cqd.teams.microsoft.com/.
+3. A new browser tab opens with the **Call Quality Dashboard** portal ([https://cqd.teams.microsoft.com/](https://cqd.teams.microsoft.com/)). If prompted, sign in with the **Joni Sherman** account.
 
-4. When you first sign into the CQD Portal, you'll see the summary reports with daily and monthly call quality trends. Call quality is classified as good, poor, or unclassified. 
+   > [!NOTE]
+   > If an error occurs when the tab opens, enter `https://cqd.teams.microsoft.com/` directly in the browser address bar.
 
-5. From the **Product Filter** dropdown menu, select **Microsoft Teams**. 
+4. The **Call Quality Dashboard** displays summary reports with daily and monthly call quality trends. Call quality is classified as good, poor, or unclassified.
 
-6. Explore the data under different tabs, including Overall Call Quality, Server-Client, Client-Client, and Voice Quality SLA.
+5. In the **Product Filter** dropdown, select **Microsoft Teams**.
 
-In this exercise you have learnt how to access and navigate call analytics and Call Quality Dashboard.
+6. Review the data under the **Overall Call Quality**, **Server-Client**, **Client-Client**, and **Voice Quality SLA** tabs.
+
+You have successfully accessed and navigated call analytics and the Call Quality Dashboard.
 
 END OF LAB
 
