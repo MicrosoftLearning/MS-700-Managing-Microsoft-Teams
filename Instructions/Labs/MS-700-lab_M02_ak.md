@@ -80,13 +80,13 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. In the left navigation of the Teams admin center, select **Users** > **Guest access**.
+2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
 3. On the **Guest access** page, check if **Guest Access** is enabled. If not, select **On**.
 
 4. Scroll down and under **Messaging** section, disable **Delete sent messages**
 
-5. Scroll down and select **Save**.
+5. Select **Save**.
 
 You have now successfully activated guest access and disallowed guests to delete their sent messages for Teams in your tenant.
 
@@ -102,25 +102,27 @@ You will change the default settings for inviting/creating guest users and then 
 
 2. Add the guest to **Group_Afterwork_** team.
 
-	- Select **Teams** > Select **…** next to the **Group_Afterwork_** team.
+	- Expand **Teams and channels** > Select **…** next to the **Group_Afterwork_** team.
 
 	- Select **Add member** and enter your outlook account.
 
-	- You will see a message **add &lt;Your outlook account&gt; as a guest**. Select the message and select **Add**.
+	- Type your Outlook email address in the **Type a name or email** box. When the guest account appears in the list, select it, and then select **Add**
+
 
 3. Accept the guest invite
 
-	- Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Contoso in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
+	- Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Group_Afterwork_ in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
 
 	- Select **Open Microsoft Teams** from the email. You will be redirected to the sign-in page with a permission consent request.
 
 	- Select **Accept** and sign in to Teams web client with your outlook account.
 
-	- From the Teams client, select **Teams**, you will see the team **Group_Afterwork_**.
+	- From the Teams client, under **Teams and channels**, you will see the team **Group_Afterwork_**.
 
 4. Test the guest access
 
-	- Under the team **Group_Afterwork_United States**, select **General** channel, select **Start a post** and send the message: **Hello!**.
+	- Under the team **Group_Afterwork_**, select the **Afterwork** channel.
+	 Select **Post in channel**, enter **Hello!** in the text box, and then select **Post**.
 
 	- Select **…** of the message you just posted. Notice there’s no **Delete** option.
 
@@ -134,7 +136,9 @@ As a part of your system administrator role, you need to review access to resour
 
 2. Create an access review to monitor guest users.
 
-	In search bar at the top of the Entra admin center, type and seelct **Identity Governance** > and select **Access Reviews** and select **+ New access review**. Follow the wizard with the following information:
+	In the search bar at the top of the Entra admin center, type **Identity Governance** and select it from the results. Select **Access Reviews**, then select **+ New access review**. On the **Create an access review** page, under **Choose an Access Review template**, select **Select** under **Resource review**.
+	
+	Follow the wizard with the following information:
 
 	1. On the **Review type** tab:
 	
@@ -150,7 +154,7 @@ As a part of your system administrator role, you need to review access to resour
 
 	3. On the **Settings** tab, leave the settings as default. Select on **Next: Review+Create** > **Create**. 
 
-3. Review the access review dashboard from Azure AD.
+3. Review the access review dashboard from Microsoft Entra ID.
 
 	1. On the **Identity Governance | Access reviews** page, you will see an access review report named **Review guest access across Microsoft 365 groups**
 
@@ -166,13 +170,15 @@ As a part of your system administrator role, you need to review access to resour
 
 	2. Check the email with the subject **Action required: Review group access**.
 
-	3. Select **Start review >** in the content of the email. 
+	3. Select **Start review >** in the content of the email.
 
-	4. From the **My Access** (Https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
+	4. On the **Pick an account** page select **Alex Wilber** account
 
-	5. On the **Review guest access across Microsoft 365 groups** page, select the guest account and select **Approve**. 
+	5. From the **My Access** (https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
+
+	6. On the **Review guest access across Microsoft 365 groups** page, select the guest account and select **Approve**. 
 	
-	6. From the **Approve continued access** window, enter **Approved.** to the textbox, and select **Submit**
+	7. From the **Approve continued access** window, enter **Approved.** to the textbox, and select **Submit**
 
 You have successfully created an access review and approved a guest user in your tenant.
 
@@ -200,68 +206,79 @@ In this task, you have activated Safe Attachments scanning for SharePoint, OneDr
 
 Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Team’s compliance features to meet the organization’s requirements.
 
-#### Task 1 – Activate sensitivity lables for Teams
+#### Task 1 – Activate sensitivity labels for Teams
 
-You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Azure AD, for being able to assign labels to teams.
+You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Microsoft Entra ID, for being able to assign labels to teams.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-3. Connect to your AAD tenant.
+3. Install the **Microsoft Graph Beta** module if not already installed. Enter `Y` and press **Enter** to confirm installation from an untrusted repository.
+```powershell
+   Install-Module Microsoft.Graph.Beta
+```
+4. Connect to your Microsoft Entra ID tenant.
 
-    Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
-  
-     	Connect-AzureAD
+Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+```powershell
+   Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+```
+
+5. Load the existing directory setting for unified groups:
    
-4. Fetch the current group settings for the Azure AD organization.
+```powershell
+   $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq (Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }).Id }
+```
    
-     	$Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
-   
-5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
-    
-    	$Setting["EnableMIPLabels"] = "True"
-   
-6. To verify the new configuration, run the following cmdlet:
-   
+6. Enable Microsoft Information Protection (MIP) label support in your configuration:
+```powershell
+   $params = @{
+       Values = @(
+           @{ Name = "EnableMIPLabels"; Value = "True" }
+       )
+   }
+   Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+```
 
-    	$Setting.Values
+7. To verify the new configuration, run the following cmdlet:
+```powershell
+   (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+```
+Verify that **EnableMIPLabels** is now **True**.
 
-7. Then save the changes and apply the settings:
+8. Disconnect the current session from Microsoft Graph and close the PowerShell window:
+```powershell
+   Disconnect-MgGraph
+```
 
-		Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
-
-    **Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
-
-8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
-
-        	Disconnect-AzureAD
-
-You have successfully changed your tenant’s Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
+You have successfully activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
 
 #### Task 2 - Configure sensitivity labels for Teams
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
 
-2. Open up **Windows PowerShell** and **Run as Adminstrator**
+2. Open up **Windows PowerShell** and **Run as Administrator**
 
-3. Open a PowerShell prompt on your computer and run the following commands to prepare to run the cmdlets. 
+3. Open a PowerShell prompt on your computer and run the following commands one at a time to install the required modules.
+```powershell
+    Install-Module Microsoft.Graph -Scope CurrentUser
+    Install-Module Microsoft.Graph.Beta -Scope CurrentUser
+```
 
-        	Install-Module Microsoft.Graph -Scope CurrentUser
-		Install-Module Microsoft.Graph.Beta -Scope CurrentUser
-
-5. Connect to your tenant as **MOD Administrator**. When you sign in, a pop up screen will appear. Ensure you select the checkbox **Consent on behalf of your organization** and then press **Accept** . 
-
-        	Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+4. Connect to your tenant as **MOD Administrator**. A sign-in dialog appears with an account picker. Select **MOD Administrator** account and select **Continue**. If a permissions consent dialog appears, select the **Consent on behalf of your organization** checkbox, then select **Accept**.
+```powershell
+    Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+```
    
-6. Fetch the current group settings for the Microsoft Entra organization and display the current group settings.
-
+5. Fetch the current group settings for the Microsoft Entra organization and display the current group settings.
+```powershell
         	$grpUnifiedSetting = Get-MgBetaDirectorySetting -Search DisplayName:"Group.Unified"
-   
-7. Apply the new settings.
-
+```
+6. Apply the new settings.
+```powershell
         	$params = @{
      		Values = @(
  	    	@{
@@ -272,175 +289,174 @@ After activating sensitivity labels for groups, you will now create three sensit
 		}
 
 		Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
-
-8. Verify that the new value is present.
-
+```
+7. Verify that the new value is present.
+```powershell
         	$Setting = Get-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id
 		$Setting.Values
+```
 
-9. Connect to the Client 1 VM and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as MOD Administrator.
-   
-10. In the left navigation of the Microsoft Purview compliance portal, select **Solutions**, **Information Protection** and then select **Sensitivity labels** from the menu.
+8. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-11. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
+9. If the **Welcome to the new Microsoft Purview portal** screen appears, select **Get started**.
+
+10. In the left navigation of the Microsoft Purview portal, select **Solutions** > **Information Protection** and then select **Sensitivity labels** from the menu.
+
+11. If the following warning message appears, select **Turn on now** to activate content processing in Office online files:
 
     *Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
-12. Select  **General** > **+Create label in group**.
+12. Select  **General** > **+ Create label in group**.
 
 13. Enter the following:
    
-	a. In the **Provide basic etails for this label** section, enter the following information:
-		- **Name** : General
-		- **Display name** : General
-		- **Description for users** : General information with sharing protection
-		- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
-    		Then select **Next**.
+	a. On the **Provide basic details for this label** page, enter the following information, then select **Next**:
+	- **Name** : General
+	- **Display name** : General
+	- **Description for users** : General information with sharing protection
+	- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
 
-	b. In the **Define the Scope for this label** section, leave the selections as is. Then select **Next**.
+	b. On the **Define the scope for this label** page, leave the default selections and select **Next**.
 
-	c. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unchecked and select **Next**.
+	c. Under the **Choose protection settings for the types of items you selected** page, leave the boxes unselected and select **Next**.
 
-	d. In the **Items** section and **Auto-labeling for files and emails** page, leave the settings as default.
+	d. In the **Items** section, on the **Auto-labeling for files and emails** page, leave the settings as default and select **Next**.
 
-	e. In the **Groups & sites** section, under the paged called **Define protection settings for groups and sites**,  select both checkboxes. 
+	e. On the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**: 
  
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
-  
-	f. In the **Define privacy & external user access** section,
+
+	f. In the **Privacy & external user access** section, under **Define privacy and external user access settings** page, confirm the following settings, then select **Next**.
  
-	* Select **None** under Privacy section.
-	* Check the checkbox of **Let Microsoft 365 Group owners add people outside your organization to the group as guests** under External user access section. 
-  
-	g. In the **External sharing & conditional access** section,
-		* Select **Control external sharing from labeled SharePoint sites** and select **Anyone**.
-  
+	* Under **Privacy**, select **None**.
+	* Under **External user access**, select the checkbox **Let Microsoft 365 group owners add people outside your organization to the group as guests**
+
+	g. In the **External sharing & conditional access** section, under **Define external sharing and conditional access settings** page, configure the following settings, then select **Next**:
+	* Select **Control external sharing from labeled SharePoint sites** checkbox and select **Anyone**.
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow full access from desktop apps, mobile apps, and the web**.
- 
-	h. Select **Save label** > **Done**.
+    
+	h. Select **Create label** > **Done**.
 
-14. Create the second sensitivity label - **Internal**.
+14. Configure the **Internal** sensitivity label.
 
-	Select **Information Protection** on the left hand side navigation panel then select the **Sensitivity labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
+	In the left navigation pane, select **Information Protection** > **Sensitivity labels**. If the **Internal** label exists, select it and then select **Edit label**. Otherwise, select **+ Create** > **Label**.
 	
-	a. In the **label details** section, under the **Provide basic details for this label** page, enter the following information:
-		- **Name**: Internal
-		- **Display name**: Internal
-		- **Description for users**: Internal information with sharing protection
-		- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
+	a. In the **Label details** section, under the **Provide basic details for this label** page, enter the following information, then select **Next**:
+	- **Name**: Internal
+	- **Display name**: Internal
+	- **Description for users**: Internal information with sharing protection
+	- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
+    
+	b. In the **Scope** section,  under the **Define the scope for this label** page, leave the marked checkboxes selected, then select **Next**.
 
-	b. In the **Scope** section,  under the **Define the scope for this label** page, leave the marked checkboxes as is.
+	c. In the **Items** section, under the **Choose protection settings for the types of items you selected** page, select the **Control access** and **Apply content marking** checkboxes, then select **Next**.
 
-	c. In the **Items** section under the page **Choose protection settings for the types of items you selected** page, select the **Control access** and **Apply content marking** checkboxes.  
-
-	d. In the **Access control** page:
-		* Select **Configure access control settings**
-		* Assign permissions now or let users decide: **Assign permissions now**.
-		* User access to content expires: **Never**.
-		* Allow offline access: **Always**.
-		* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
-		* Scroll down and select **Save** to apply the changes.
+	d. In **Access control**, configure the following, then select **Next**:
+	* Select **Configure access control settings**
+	* Assign permissions now or let users decide?: **Assign permissions now**.
+	* User access to content expires: **Never**.
+	* Allow offline access: **Always**.
+	* Select **Assign permissions**, and select **+ Add all users and groups in your organization**.
+	* Scroll down and select **Save** to apply the changes.
 		
+	e. In the **Content marking** section, configure the following and select **Next**:
 
-	e. In the **Content marking** sections,
+    * Enable the **Content marking** toggle.
+	* Select the **Add a watermark** checkbox, then select **Customize text** and enter **Internal use only** in the **Watermark text** field, then select **Save**.
+    * Select the **Add a footer** checkbox,then select **Customize text** and enter **Internal use only** in the **Footer text** field, then select **Save**.
 
-    * Select the slider under the **Content marking** header and the checkbox **Add a watermark**, then ***Customize text** and enter the following to the **Watermark text** box: 
-    **Internal use only**
-    * Select  the * Add a footer** checkbox  then ***Customize text** and enter the following to the **Footer text** box: **Internal use only**
-    * Click **Save** to apply the changes.
-		
+15. In the **Teams meetings & chats** section, leave the settings as default and select **Next**.
 
-15. In the **Auto-labeling** section, leave the settings as default.
+16. In the **Auto-labeling for files and emails** section, leave the settings as default.
 	
-16. In the **Groups & sites** section, under the **Define protection settings for groups and sites**, select both checkboxes. 
+17. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**:
 	
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
 
-17. In the **Privacy & external user access** section, select **None**. 
+18. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **None**, then select **Next**.
 
-18. In the **External sharing & device access** section
+19. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page, configure the following, then select **Next**:
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access** 
 
-19. Select **Create label** > **Done**.
+20. Select **Create label** or **Save label**, then select **Done**.
 
-20. On the **Publish label**  pop-out page, select **Cancel**.
+21. If you created a new label, in the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
-21. Update the second sensitivity label -  select **Confidential** > select **+ Create label in group**.
+22. Update the second sensitivity label - select **Confidential**, then select the ellipsis (⋮) menu and select **Create label in group**.
 	
-	a. In the **Name & description** section, enter the following information:
-		- **Name**: Confidential
-		- **Display name**: Confidential
-		- **Description for users**: Leave unchanged
-		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
+	a. In the **Label details** section, enter the following information, then select **Next**:
+	- **Name**: Confidential
+	- **Display name**: Confidential
+	- **Description for users**: Leave unchanged
+	- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
-	b. In the **Scope** section, under the **Define the scope for this label** page select  **Groups &amp; Sites** 
+	b. In the **Scope** section, under the **Define the scope for this label** page, select  **Groups & Sites**, then select **Next**.
 
-	c. In the **Items** section, select both checkboxes.
-
-	* **Control Access** 
-	* **Apply content marking** 
+	c. In the **Items** section under the **Choose protection settings for the types of items you selected** page, select the **Control access** and **Apply content marking** checkboxes, then select **Next**.
 	
-	d. In the **Access control** section, 
+	d. In **Access control**, configure the following, then select **Next**:
 
 	* Select **Configure access control settings**
-	* Assign permissions now or let users decide: **Assign permissions now**
+	* Assign permissions now or let users decide?: **Assign permissions now**
 	* User access to content expires: **Never**
 	* Allow offline access: **Never**
 	* Select **Assign permissions**, and select **+ Add all users and groups in your organization**
 	* Scroll down and select **Save** to apply the changes	
  
+	e. In the **Content marking** section, configure the following and select **Next**:
+	* Enable the **Content marking** toggle.
+	* Select the **Add a watermark** checkbox, then select **Customize text** and enter **Confidential** in the **Watermark text** field, then select **Save**.
 
-	e. In the **Content marking** page, 
-	* Select the slider and the checkbox **Add a watermark** 
-	* Select **Customize text** and enter the following to the **Watermark text** box: **Confidential.**
-	* Click **Save** to apply the changes 
+	f. In the **Teams meetings & chats** section, leave the settings as default and select **Next**.
 
-	f. In the **Auto-labeling for files and emails** page, leave the settings as default.
+	g. In the **Auto-labeling for files and emails** section, leave the settings as default and select **Next**.
 	
-	g. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select both checkboxes. 
-	**Privacy and external user access** and 
-	**External sharing and Conditional Access** 
+	h. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**:
 
+	* **Privacy and external user access**  
+	* **External sharing and Conditional Access**
 
-	h. In the **Define privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
+	i. In the **Define privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**, then select **Next**.
 
-	i. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
+	j. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page, configure the following, then select **Next**:
 	* Select **Control external sharing from labeled SharePoint sites** and select **Only people in your organization**.
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select **Block access**
 
-	j. Click **Save label** > **Done**.
+	k. Select **Create label**.
+
+	l. In the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
 
-21. Publish sensitivity labels, after performing each step select **Next** (if required).
+23. Publish sensitivity labels, after performing each step, select **Next** (if required).
 
-	a. Navigate back to  **Information protection** dropdown menu item on the left hand side of the page, select **Policies** and then **Label publishing policies**.
+	a. In the left navigation pane, select **Information Protection** > **Policies** > **Label publishing policies**.
 
-	b. Select the **Global sensitivity label policy** and select the **Edit policy** button when the right side page pops up.
+	b. Select the **Global sensitivity label policy** checkbox, then select the ellipsis (⋮) menu and select **Edit policy**.
 
-	c. In the **Choose sensitivity labels to publish** page, select the **Edit** Link under the **Sensitivity lables to publish** section.
+	c. On the **Choose sensitivity labels to publish** page, select the **Edit** link under the **Sensitivity labels to publish** section.
 
-	d. In the **Sensitivity labels to publish** window, check all labels and select **Add**.
+	d. On the **Sensitivity labels to publish** window, select all labels and select **Add**.
 
- 	e. In the **Assign admin units** page, leave as is.
+ 	e. On the **Assign admin units** page, keep the default settings.
 
-	f. In the **Publish to users and groups** page, keep the default settings. 
+	f. On the **Publish to users and groups** page, keep the default settings. 
 
-	g. In the **Policy Settings** page, keep the default settings. 
+	g. On the **Policy Settings** page, keep the default settings. 
 
-	h. In the **Default settings for documents** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to documents**.
+	h. On the **Default settings for documents** page, under **Apply a default label to documents**, select **General/All Employees (unrestricted)** from the dropdown.
 
-	i. In the **Default setting for emails** page, select **General/All Employees (unrestricted)** in the dropdown menu under **Apply a default label to emails**.
+	i. On the **Default settings for emails** page, under **Apply a default label to emails**, select **General/All Employees (unrestricted)** from the dropdown.
 
- 	j. In the **Default setting for meetings an calendar events** page, leave as is.
+ 	j. On the **Default settings for meetings and calendar events** page, leave the default settings.
       
-	k. In the **Default settings for sites and groups** page, select **Internal** in the dropdown menu under **Apply a default label to sites and groups**.
+	k. On the **Default settings for sites and groups** page, under **Apply a default label to sites and groups**, select **Internal** from the dropdown.
 
-	l. In the **Default settings for Fabric and Power BI content** page, select **General/All Employess (unrestricted)** in the dropdown menu under **Apply a default label to Fabric and Power BI content**.	
+	l. On the **Default settings for Fabric and Power BI content** page, under **Apply a default label to Fabric and Power BI content**, select **General/All Employees (unrestricted)** from the dropdown.
 
-	m. In the **Name your policy** page, leave unchanged
+	m. On the **Name your policy** page, leave the default settings.
 	
 	n. Select **Submit** > **Done**.
 
@@ -456,11 +472,11 @@ Once the sensitivity labels are created and published, users can now assign them
 
 2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber**.
 
-3. For Microsoft Teams Classic: On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Edit team** from the dropdown list.
+3. In the left sidebar, under **Teams and channels**, select the **…** (three dots) next to the **Teams Rollout** team, then select **Manage team** from the context menu.
 
-4. For the new Microsoft Teams: On the Teams overview select the **Teams and channels** on the right side next to the Team "**Teams Rollout,"** then select **Manage team** from the dropdown list, Thern navigate to the**Settings** tab then select **Edit**.
+4. Navigate to the **Settings** tab, then select **Edit**.
 
-5. On the **Edit “Teams Rollout” team details** window, select the dropdown menu below Sensitivity and select **Internal**.
+5. On the **Edit “Teams Rollout team details** window, select the dropdown menu below Sensitivity and select **Internal**.
 
 6. Select **Done** to save the changes.
 
@@ -474,9 +490,9 @@ In this task, you will try to add a guest user to an internal team.
 
 2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber**.
 
-3. On the Teams overview select **…** right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
+3. In the left sidebar, under **Teams and channels**, select the **…** (three dots) next to the **Teams Rollout** team, then select **Add member** from the context menu.
 
-4. On the **Add members to Teams Rollout** page, enter the name of the guest user you just invited.
+4. On the **Add members to Teams Rollout** page, enter the name or email address of the guest user you invited in Exercise 1, Task 3.
 
 5. You will not be able to find the guest user, because guest users are restricted from this team.
 
@@ -488,7 +504,7 @@ You have successfully tested the sensitivity labels setting to prevent guest acc
 
 Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal(https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions** and then **Data lifecycle management**.
 
@@ -496,14 +512,15 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 4. Follow the **Create retention policy** wizard with the following information:
 
-	1. In the **Name your retention policy** page, enter the following information 
+	1. In the **Name your retention policy** page, enter the following information and select **Next**:
 		- **Name**: Sales retention policy
 		- **Description**: Retention policy for Sales department that will retain channel messages for 7 years.
-		- select **Next**
 
-	2. Under the **Policy Scope** page, leave the settings as default. 
+	2. Under the **Policy Scope** page, leave the settings as default and select **Next**.
 
-	3. In the **Choose the type of retention policy to create** section, select **Static** and select **Next** then configure the following settings:
+	3. On the **Choose the type of retention policy to create** page, select **Static** and select **Next**.
+
+	4. On the **Choose where to apply the policy** page, configure the following settings and select **Next**:
 
 		- **Exchange mailboxes**: Off
 		- **SharePoint classic and communication sites**: Off
@@ -521,10 +538,13 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image3.png)
 
-	4. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page, leave as is and select **Next**.
+	5. On the **Decide if you want to retain content, delete it, or both** page, verify the following settings and select **Next**:
+        - Select **Retain items for a specific period**
+        - Retain items for a specific period: **7 years**
+        - Start the retention period based on: **When items were created**
+        - At the end of the retention period: **Delete items automatically**
 
-
-5. In the ** Review and Finish** page, review your settings and select **Submit**.
+5. In the **Review and Finish** page, review your settings and select **Submit**.
 
 6. Select **Done**. Leave the browser open for the next task.
 
@@ -534,24 +554,24 @@ In this task, you have successfully created a new retention policy named **Sales
 
 After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select **Solutions**, **Data lifecycle management**.
+2. In the left navigation of the Microsoft Purview Portal, select **Solutions** > **Data lifecycle management**.
 
-3. On the **Data lifecycle management** page, under **Policies** and then **Retention policies**, select **+New retention policy** to add a new retention policy. 
+3. On the **Data lifecycle management** page, select **Policies**, then **Retention policies**, and select **+ New retention policy** to create a new retention policy.
 
 4. Follow the **Create retention policy** wizard with the following information:
 
-
-	1. In the **Name** section, enter the following information 
+	1. In the **Name your retention policy** page, enter the following information and select **Next**:
 	
-		- **Name**: Teams Rollout deletion policy
-		- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
-		- Select **Next**
+	- **Name**: Teams Rollout deletion policy
+	- **Description**: Retention policy for the Teams Rollout team to delete messages older than a day.
+	
+	2. Under the **Policy Scope** page, leave the settings as default and select **Next**. 
 
-	2. Under the **Policy Scope** page, leave the settings as default. 
+	3. On the **Choose the type of retention policy to create** page, select **Static** and select **Next**.
 
-	3. In the **Type** section, under the **Choose the type of retention policy to create** page, select **Static** and select **Next** then configure the following settings:
+	4. On the **Choose where to apply the policy** page, configure the following settings and select **Next**:
 
 		- **Exchange email**: Off
 		- **SharePoint classic and communication sites**: Off
@@ -569,17 +589,16 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 			![Picture 4](media/MS-700-lab_M02_ak_image4.png)
 
-	3. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page,  
+	5. On the **Decide if you want to retain content, delete it, or both** page, verify the following settings and select **Next**:
 		- Select **Only delete items when they reach a certain age** 
 		- Delete items older than: Select **Custom** > **1 days**
-		- Delete the content based on: **when items were created**
-		- Select **Next**.
+		- Delete the content based on: **When items were created**
 		
 			![Picture 5](media/MS-700-lab_M02_ak_image5.png)
 
-6. In the **Review and Finish** section, review your settings and select **Submit**.
+5. In the **Review and Finish** page, review your settings and select **Submit**.
 
-7. Select **Done**. Leave the browser open for the next task.
+6. Select **Done**. Leave the browser open for the next task.
 
 You have successfully created a second retention policy for testing the deletion capabilities to clean up the **Teams Rollout** team from all conversation messages older than a day.
 
@@ -593,17 +612,19 @@ In this task, you will test the retention policy for deleting content from the *
 
 2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber**.
 
-3. Select the **Teams Rollout** team and the **Teams Rollout** channel.
+3. In the left sidebar, under **Teams and channels**, select the **Teams Rollout** team, then select the **Teams Rollout** channel.
 
-4. Select **Start a post** from the lower end of the main window.
+4. Select **Post in channel** from the lower end of the main window.
 
 5. Write the following text to the text box:
 
-- Hello world!
+- **Hello world!**
 
-6. Leave the client open and add other content to the team, as you like.
+6. Select **Post**.
 
-7. Come back after 24 hours to see, the content has been deleted automatically.
+7. Post additional content in the **Teams Rollout** channel to create more content for the retention policy to act on.
+
+8. Return after 24 hours and verify that the content in the **Teams Rollout** channel has been deleted automatically.
 
 You have added a conversation message to a team, which is deleted by the deletion retention policy after 24 hours.
 
@@ -611,27 +632,26 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-2. In the left navigation of the Microsoft Purview Portal, select  **Data loss prevention** under **Solutions**.
+2. In the left navigation of the Microsoft Purview Portal, under **Solutions**, select **Data loss prevention**.
 
-3. On the **Data loss prevention** page, select the **Policies**, then select **+ Create policy**.
+3. On the **Data loss prevention** page, select **Policies**, then select **+ Create policy**.
 
-4. In the **What info do you want to protect** page, press **Enterprise applications & devices**.
+4. On the **What info do you want to protect** page, select **Enterprise applications & devices**.
    
-5. In the **Start with a template or create a custom policy** page,
+5. On the **Start with a template or create a custom policy** page, configure the following and select **Next**:
 
-	a. Select **Privacy** under **Categories**, then select the **GDPR Enhanced** template from the **Templates** section.
+	a. In the **Select location** dropdown, select **European Union**.
 
-	b. Select **Next**
+	b. Under **Categories**, select **Privacy**, then in the **Regulations** list, select **GDPR Enhanced**
 
-6. In the **Name your DLP policy** page, enter the following information:
+6. On the **Name your DLP policy** page, enter the following information and select **Next**:
 
 	- **Name**: GDPR DLP Policy
-
 	- **Description**: Data loss prevention policy for GDPR regulations in Teams.
 
-7. In the **Assign admin units** page, leave settings as is.
+7. On the **Assign admin units** page, leave the default settings and select **Next**.
    
 8. In the **Choose where to apply the policy** page, apply the following settings and select **Next**:
 
@@ -642,24 +662,26 @@ According to your organization’s compliance requirements, you need to implemen
 	- **OneDrive accounts**:Select checkbox
 
 	- **Teams chat and channel messages**: Select checkbox
-
- 	- **Devices**: Select checkbox
+    
+	- **Devices**: Select checkbox
 
 	- **On-premises repositories**: Unselect checkbox
 
 	- **Fabric and Power BI workspaces**: Unselect checkbox
 
 
-9. In the **Define policy settings** page, stay with the default selection from the template - **Create or customize advanced DLP rules** and select **Next**.
+9. On the **Define policy settings** page, leave the default selection **Create or customize advanced DLP rules** and select **Next**.
 
-	1. In the **Customize advanced DLP rules** page, leave the default settings and select **Next**.
+	1. On the **Customize advanced DLP rules** page, leave the default settings and select **Next**.
 
 	2. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
 
-	3. On the Review your settings page, review your settings, select **Submit** then **Done**.
-	Note: After pressing Submit you may receive an error which reads "Client error: to block only people outside your organization, you must select the conditions "content is shared 	with people outside my organization:" Press **OK** to ignore and navigate back to the Data Loss Prevention page by selecting **Cancel** and select **Confirm**.
+	3. On the **Review and finish**  page, review your settings, select **Submit** then **Done**.
 
-	4. Stay on the **Data loss prevention page** and leave the browser opened. Press the **Refresh** button.
+	 > [!NOTE]
+	 > After you select **Submit**, you may receive the following error: *"Client error: to block only people outside your organization, you must select the conditions 'content is shared with people outside my organization'."* Select **OK** to dismiss the message, then select **Cancel** to return to the **Data Loss Prevention** page and select **Confirm**.
+
+	4. On the **Data loss prevention** page, select **Refresh**. Leave the browser open.
 
 	After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
 
@@ -667,27 +689,27 @@ According to your organization’s compliance requirements, you need to implemen
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-2. In left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
+2. In the left navigation of the Microsoft Purview Portal, under **Solutions**, select **Data loss prevention**.
 
 3. On the **Data loss prevention** page, select  **Policies**, then select **+ Create policy**.
 
-4. In the **Start with a template or create a custom policy** section,
+4. On the **What info do you want to protect** page, select **Enterprise applications & devices**.
 
-	1. Select **Custom** under **Categories**, then select the **Custom policy** template from the **Templates** section.
+5. On the **Start with a template or create a custom policy** page, configure the following and select **Next**:
 
-	2. Select **Next**
+	1. Select **Custom** under **Categories**, then in the **Regulations** list select **Custom policy**.
 
-5. In the **Name your policy** section, enter the following information:
+6. In the **Name your policy** section, enter the following information and select **Next**:
 
 	- **Name**: Credit card data DLP Policy
 
 	- **Description**: Data loss prevention policy for credit card data in Teams.
 
-6. In the **Assign admin units** page, leave settings as is.
+7. In the **Assign admin units** page, leave the default settings and select **Next**.
 
-7. In the **Choose where to apply the policy** section, apply the following settings and select **Next**:
+8. In the **Choose where to apply the policy** section, apply the following settings and select **Next**:
 
 	- **Exchange email**: Select checkbox
 
@@ -699,20 +721,19 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	- **Devices**:  Select checkbox
 
-	- **Instances** :  Select checkbox
+	- **Instances**:  Unselect checkbox
 
 	- **On-premises repositories**:  Unselect checkbox
 
 	- **Fabric and Power BI workspaces**:   Unselect checkbox 
 
-7. In the **Define policy settings** section, stay with the default selection and select **Next**.
+9. On the **Define policy settings** page, leave the default selection **Create or customize advanced DLP rules** and select **Next**.
 
-
-	1. In the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
+	1. On the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
 		- **Name**: Credit card numbers found
 		- **Description**: Basic rule for protecting credit card numbers forms being shared in Teams.
 
-	2. Below **Conditions**, 
+	2. In the **Conditions** section:
 		- Select **+ Add condition** and **Content contains**.
 		- Leave the group name of **Default**, select **Add** and **Sensitive info types**.
 		- From the right-side pane, check the box left of **Credit Card Number** and select **Add**.
@@ -720,31 +741,31 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 			![Graphical user interface, application Description automatically generated](media/MS-700-lab_M02_ak_image6.png)
 
-	3. Below **Action**, 
+	3. In the **Actions** section:
 		- Select **+ Add an action** and **Restrict access or encrypt the content in Microsoft 365 locations**.
 		- In the **Restrict access or encrypt the content in Microsoft 365 locations** section select **Block everyone** 
 
 			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image8.png)
 
-	4. Below **User notification**, 
-		- Select the slider to **On**
+	4. In the **User notifications** section:
+		- Set the **User notification** toggle to **On**.
 		- select **Notify users in Office 365 service with a policy tip**.
 		- Select **Notify the user who sent, shared or last modified the content**.
 		- Select **Customize the policy tip text**.
-		- Enter the following text to the textbox: **Credit card numbers are not allowed to be shared!**
+		- In the textbox, enter the following text: **Credit card numbers are not allowed to be shared!**
 
-	5. Below **Incident reports**, 
-		- Set the slider **Send an alert to admins when a rule match occurs** to **Off**.
-		- Select **Save**.
+	5. In the **Incident reports** section:
+        - Set the **Send an alert to admins when a rule match occurs** toggle to **Off**.
+        - Select **Save**.
 	
-	6. Review the rule settings and select **Next**.
+	6. On the **Customize advanced DLP rules** page, verify the **Credit card numbers found** rule displays with a status of **On**, then select **Next**.
 
 		
-8. In the **Policy Mode** page, select **Turn the policy on immediately** and select **Next**.
+10. On the **Policy Mode** page, select **Turn the policy on immediately** and select **Next**.
 
-9. On the **Review and finish** page, review your settings, select **Submit** then **Done**.
+11. On the **Review and finish** page, review the settings, select **Submit**, and then select **Done**.
 
-10. Leave the browser open.
+12. Leave the browser open.
 
 You have successfully created a new custom DLP policy for protecting credit card numbers from being shared via Teams conversations.
 
@@ -752,17 +773,17 @@ You have successfully created a new custom DLP policy for protecting credit card
 
 To make sure your configured DLP policies are working as expected, you need to perform some testing with your pilot users.
 
-**Note:** It can take up to 24 hours till new DLP policies take effect. If the step doesn’t work, continue with the lab, and perform a task at a later point of working through this lab.
+**Note:** It can take up to 24 hours for new DLP policies take effect. If this step does not work, continue with the lab and complete this task later as you progress through the lab.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
 2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber**.
 
-3. In the left-hand navigation pane, select **Teams**, and then select the **General** channel below **Teams Rollout**.
+3. In the left sidebar, under **Teams and channels**, expand the **Teams Rollout** team, then select the **Teams Rollout** channel.
 
-4. Select **Start a post** from the main window.
+4. Select **Post in channel** from the main window.
 
-5. Enter the following lines to the textbox:
+5. In the textbox, enter the following lines:
 
 	- MasterCard: 5105105105105100
 
@@ -770,24 +791,43 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 	- Visa: 4012888888881881
 
-6. Select **Post** to the right from the lower-right corner below the text box to send the message.
+6. Select **Post**.
 
-7. After a moment, you should see a text in red above your new conversation message that states, “**This message was blocked.**” **Select What can I do?** To see the reason why this message was blocked.
+7. After a moment, a red message appears above the conversation stating **This message was blocked.** Select **What can I do?** to review the blocked message details.
 
-8. Select **Report** to notify the admin about this DLP policy violation. Now you can see a different message above your conversation entry, that states **Blocked.** **You’ve reported this to your admin.**
+8. Select **Report** to notify the admin about the DLP policy violation. A message appears above the conversation stating **Blocked. You've reported this to your admin.**
 
 9. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-10. You should still be logged in to the **Microsoft Purview Portal**. If not, open Microsoft Edge, maximize the browser, and navigate to the **Microsoft Purview Portal**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com/).
-
+10. On the **Client 1 VM**, verify you are still signed in to the **Microsoft Purview Portal**. If not, open Microsoft Edge and navigate to `https://purview.microsoft.com`.
 
 11. Note this step is an optional step and not designed for users to complete in this lab. This step is meant to explain how to see the **DLP Policy Matches**. Previously, you would have been able to see it via the **Reports** page which has now been deprecated.
     
 In order to see the **DLP Policy Matches** users must perform the following:
-- Enable org customization upon logging into the tenant by running *Enable-organizationcustomization*. This takes about 2-3 hour to replicate through the tenant.
--  Run *Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true* to enable audit logging.
-- The audit logging takes about 24hours to show as enabled a well.
-    	**Note:** This explanation may require users to have the SPE5 tenant.
+
+- Open Windows PowerShell as Administrator and install the Exchange Online module if not already installed:
+
+	```powershell
+	Install-Module ExchangeOnlineManagement
+	```
+
+- Connect to Exchange Online by running the following command. When prompted, sign in with the **MOD Administrator** credentials.
+
+	```powershell
+	Connect-ExchangeOnline
+	```
+- Enable org customization by running the following command. This takes about 2–3 hours to replicate through the tenant.
+
+   ```powershell
+  Enable-OrganizationCustomization
+   ```
+- Enable audit logging by running the following command. This takes about 24 hours to show as enabled.
+
+  ```powershell
+  Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+  ```
+  > [!Note]
+  > This explanation may require users to have the SPE5 tenant.
     
 You have successfully tested your DLP policy to block sharing of credit card information via Teams chat and channel conversations.
 
@@ -812,90 +852,87 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-3. Create a network plan
-	
-	1. On the left-hand navigation pane, expand **Planning**, and select **Network Planner**.
+3. Create a network plan.
 
-	2. On the **Network planner** page, under **Network plans** tab, select **Add** and create a network plan with the following information.
+	1. In the left navigation pane, expand **Planning**, and then select **Network Planner**.
+
+	2. On the **Network planner** page, under the **Network plans** tab, select **Add**.
+
+	3. Create a network plan with the following information, then select **Apply**:
 
 		- Network plan name: **Contoso plan**
 		- Description: **Contoso Teams Network plan**
-		- Select **Apply**.
 
-4. Create a custom personas
+4. Create a custom persona.
 
-	1. On the **Network planner** page, select **Personas** tab, and then select **+ Add**. 
+	1. On the **Network planner** page, select the **Personas** tab, and then select **+ Add**.
 
-	2. On the **Add persona** page, create a custom personas with the following information.
+	2. On the **Add persona** pane, enter the following information and select **Apply**:
 
 		- Persona name: **Calling only**
 		- Description: **Specialized calling only employees**
 		- Permissions: Turn on **Audio**
-		- Select **Apply**.
-
-	3. Note the default personas recommended by Microsoft.
+		
+	3. Review the default personas recommended by Microsoft.
 	
 5. Create network sites.
 
 	1. Select the **Networks plans** tab, then select **Contoso plan**.
-	2. Under **Network sites** tab, select **+ Add network site**. 
-	3. Create a network site for **New York HQ** with the following information.
+	2. Under **Network sites** tab, select **Add a network site**. 
+	3. Create a network site for **New York HQ** with the following information, and then select **Save**:
 
 		- Network site name: **New York HQ site**
 		- Description: **New York HQ site network infrastructure**
 		- Network users: **1000**
 		- Network settings - Subnet: **172.16.0.0**
 		- Network settings - Network range: **16**
-		- Turn **On** the **Express Route** button.
+		- Turn **On** the **Express Route** toogle.
 		- Internet link capacity: **1000**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- PSTN egress: select **Use VoIP only**
 
-	4. Repeat the same steps to create a network site for **Los Angeles office** with the following information.
+	4. Repeat the same steps to create a network site for **Los Angeles office** with the following information, and then select **Save**:
 
 		- Network site name: **Los Angeles site**
 		- Description: **Los Angeles site network infrastructure**
 		- Network users: **250**
 		- Network settings - Subnet: **192.168.10.0**
 		- Network settings - Network range: **24**
-		- Ensure **Express Route** button is **Off**.
-		- Turn **On** the **Connected to WAN** button.
+		- Ensure **Express Route** toogle is **Off**.
+		- Turn **On** the **Connected to WAN** toogle.
 		- WAN link capacity: **500**
 		- WAN audio queue size: **100**
 		- WAN video queue size: **200**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- PSTN egress: select **Use VoIP only**
 
-	5. Repeat the same steps to create a network site for **Houston office** with the following information.
+	5. Repeat the same steps to create a network site for **Houston office** with the following information, and then select **Save**:
 
 		- Network site name: **Houston site**
 		- Description: **Houston site network infrastructure**
 		- Network users: **150**
 		- Network settings - Subnet: **192.168.20.0**
 		- Network settings - Network range: **24**
-		- Ensure **Express Route** button is **Off**.
-		- Turn **On** the **Connected to WAN** button.
+		- Ensure **Express Route** toogle is **Off**.
+		- Turn **On** the **Connected to WAN** toogle.
 		- WAN link capacity: **400**
 		- WAN audio queue size: **50**
 		- WAN video queue size: **100**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- PSTN egress: select **Use VoIP only**
 
-6. Create a report
+6. Create a report.
 	
-	1. On the **Contoso plan** page, select **Report** tab and then select **Start a report**.
+	1. On the **Contoso plan** page, select the **Report** tab, and then select **Start a report**.
 
-	2. Create a report with the following information.
+	2. Create a report with the following information:
 
 		- Report name: **Contoso report**
 		- Description: **Contoso network estimation report**
-		- Under the **Calculation** section, specify the **Persona** and **Network users** with the following information.
+		- In the **Calculation** section, specify the **Persona** and **Network users** with the following information:
 
-			| **Network site**| **Persona** and **Network users**| 
-			| - | - | 
-			| New York HQ| Office Worker: 900 <br/><br/>Calling only: 100|
-			| Los Angeles Office|Office Worker: 200 <br/><br/>Calling only: 50|
-			| Houston Office|Office Worker: 100 <br/><br/>Calling only: 50|
+			| **Network site**| **Persona** and **Network users**|
+			| - | - |
+			| New York HQ site| Office Worker: 900 <br/><br/>Calling only: 100|
+			| Los Angeles site| Office Worker: 200 <br/><br/>Calling only: 50|
+			| Houston site| Office Worker: 100 <br/><br/>Calling only: 50|
 
 	3. Select **Generate report**.
 
@@ -913,27 +950,23 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
 
-2. Select **Sign in** at the top-right corner.
+2. In the upper-right corner, select **Sign in**.
 
-3. Specify the location and select **Add your location**.
+3. Select **Add your location** and specify the location.
 
-    You can type in your location by city, state, and country or you can have it detected from the web browser. Then press **Run test**.
+     You can enter your location by city, state, and country, or have it detected from the web browser. Select **Run test**.
 
 4. Select **Open file** when prompted after downloading the advanced client test application.
 
-	**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction. 
+	> [!NOTE]
+	> The application requires .NET Core installed. Select **Download it now** to download **Microsoft Windows Desktop Runtime x64**, and then follow the installation instructions.
 
-5. Start the advanced tests client application - **Office 365 Network Onboarding Advanced Tests**.
+5. Start the advanced tests client application, **Office 365 Network Onboarding Advanced Tests**. When testing is complete, the results will be available in the browser window from where you launched this program.
 
-	- Download the application
-	- Navigate to downloads folder and run the client application
+6. After the client application completes testing, the web page updates to show the **Network connectivity test results for your location**.
 
-6. Once the client application starts, the web page will update to show this result.
-
-7. Review the result under **Details** tab.
+7. Review the results under the **Details** tab.
 
 In this task, you have used Microsoft 365 network connectivity test tool to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
-
-END OF LAB
 
  
