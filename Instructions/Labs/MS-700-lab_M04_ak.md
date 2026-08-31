@@ -65,7 +65,7 @@ Contoso organization has deployed Microsoft 365 and is testing pilot projects on
 
 As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in Teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left-hand navigation pane of the Teams admin center, select **Meetings** > **Meeting policies**.
 
@@ -81,7 +81,7 @@ You have successfully modified the Global (Org-wide default) meeting policy and 
 
 In this task, you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-1. Connect to the **Client 2 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT2 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. Select **Calendar** from the left navigation pane.
 
@@ -101,7 +101,7 @@ In this task, you need to sign in to the second client and create a meeting with
 
 Contoso Ltd. works with several external partners, and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account, and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation pane of the Teams admin center, select **Meetings** > **Meeting settings**.
 
@@ -115,7 +115,7 @@ You have successfully modified the meeting settings for all users in your tenant
 
 Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to manage users. Only the organizer of a live event should be able to record his meetings.
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation pane of the Teams admin center, select **Meetings** > **Live events policies**.
 
@@ -149,7 +149,7 @@ You have successfully created a custom Live event policy and assigned it to a us
 
 The IT department wants to host a company-wide meeting to answer employees’ questions regarding the new reporting system. As a Teams admin, you will create a webinar allowing employees to submit their questions before the meeting.
 
-1. Connect to the **Client 1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the **Calendar**, select the **New** dropdown, and then under **Organization templates**, select **Webinar**.
 
@@ -191,7 +191,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 		
 8. Test the meeting registration. 
 
-	1. Stay in the **Client 1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com/) as **MOD Administrator**.
+	1. Stay in the **CLIENT1 VM** and browse to **Microsoft Teams web client** (https://teams.microsoft.com/) as **MOD Administrator**.
 
 	2. In the **General** channel of the **IT-Department** team, select the registration link posted earlier.
 
@@ -216,7 +216,7 @@ Your organization could purchase Microsoft Teams Rooms that provide a complete m
 
 During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create a configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez** (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez** (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the **Teams admin center**, on the left navigation pane, under **Teams devices**, select **Phones**.
 
@@ -279,7 +279,7 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 > [!NOTE]
 > You can also use Exchange Online PowerShell to complete this task. You need to install the Exchange Online PowerShell module first.
 
-1. Connect to the **Client 1 VM** and browse to **Microsoft 365 admin center** (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to **Microsoft 365 admin center** (https://admin.microsoft.com/) as **MOD Administrator**.
 
 2. Create a Microsoft 365 resource account for Teams Rooms.
 	1. In the left navigation pane of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**. If **Resources** is not visible, in the top search bar, search for `Rooms & equipment` and select the result.
@@ -326,7 +326,7 @@ In this exercise, you will set up one of your users with a Calling Plan Trial. Y
 
 In this task, you will add a new emergency address “One Microsoft Way, Redmond, WA 98052, USA” for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. On the left navigation pane, select **Locations** > **Emergency addresses**.
 
@@ -363,7 +363,7 @@ You have successfully created an emergency address that can be used for phone nu
 
 In this task, you will assign the calling plan license to a user to allow them to make domestic calls via the public switched telephone network.
 
-1. Connect to the **Client 1 VM** and browse to **Microsoft 365 admin center** (https://admin.microsoft.com/) as **MOD Administrator** (Admin@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Microsoft 365 admin center** (https://admin.microsoft.com/) as **MOD Administrator** (Admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation pane of the **Microsoft 365 admin center**, select **Users** > **Active users**.
 
@@ -381,7 +381,7 @@ You have assigned the Calling Plan license to a user. With this license assigned
 
 In this task, you will learn how to order a phone number for a user with an assigned Calling Plan license. Please note, that you can no longer order a phone number without a business justification so the set of steps below are meant to educate. Please do not follow these steps within your lab environments. These steps are designed to educate the user on how to execute the task.
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** (https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation pane, select **Voice** > **Phone numbers**.
 
@@ -439,7 +439,7 @@ You just ordered a phone number for a User in Microsoft Teams. This is the same 
 
 In this task, you will learn how to assign an existing phone number to a user. Please note, that you can no longer order a phone number without a business justification so the set of steps below are meant to educate. Please do not follow these steps within your lab environments. These steps are designed to educate the user on how to execute the task.
 
-1. Connect to the **Client 1 VM** and browse to the **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to the **Teams admin center** (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. On the left navigation pane, select **Voice** > **Phone numbers**.
 
@@ -461,7 +461,7 @@ Contoso organization is using the legacy PBX system. With the introduction of Mi
 
 As part of your pilot project for calling functionalities with Microsoft Teams, you have the requirement that all pilot users receive access to the voicemail functionalities. You create and assign a new calling policy and configure the settings. However, all other users should not receive voicemail functionalities during the testing period. Therefore, you will edit the default policy to ensure that voicemail is disabled for all other users.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **CLIENT1 VM** and sign in with the Credentials that have been provided to you.
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -503,7 +503,7 @@ Contoso Ltd. has deployed Microsoft Teams voice functionalities throughout the o
 
 As Teams admin, you are responsible for creating the call queue and configuring different parameters, such as maximum queue size, timeout, and call handling options.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **CLIENT1 VM** and sign in with the Credentials that have been provided to you.
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -587,7 +587,7 @@ Creating the new call queue may take some time, but you have successfully create
 
 As Teams admin, you were tasked to create an auto attendant with a transcribed welcome message that will respond to customers outside of office hours. As some of your employees work in different time zones, the auto-attendant informs a caller that the subscriber is currently on vacation and to call another person in the organization. Furthermore, the auto-attendant informs callers about business hours.
 
-1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
+1. Connect to the **CLIENT1 VM** and sign in with the Credentials that have been provided to you.
 
 2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -676,7 +676,7 @@ In this exercise, you'll explore the monitoring and troubleshooting tools availa
 
 #### Task 1 – Explore call analytics for users, calls, and meetings
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
 
 2. In the left navigation pane, select **Users** > **Manage users**, and then select a user.
 
@@ -692,7 +692,7 @@ CQD is designed to help Microsoft Teams administrators and network engineers mon
 
 In this task you navigate to Call Quality Dashboard
 
-1. Connect to the **Client 1 VM** and browse to **Teams admin center** ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **CLIENT1 VM** and browse to **Teams admin center** ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
 
 2. In the left navigation pane, select **Analytics & reports** > **Call Quality Dashboard**.
 

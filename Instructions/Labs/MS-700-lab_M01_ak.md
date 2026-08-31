@@ -77,9 +77,9 @@ The labs in this course have been prepared for a Microsoft Teams deployment at C
 
 The labs in this course will use two virtual machines:
 
-- Client 1 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client1 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
 
-- Client 2 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client2 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
 
 **Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
 
@@ -91,7 +91,7 @@ Once you signed in to the VM, observe the start menu, and verify following appli
 
 - Microsoft Teams
 
-#### **3. Review Microsoft 365 tenant**
+#### **3. Review the Microsoft 365 tenant**
 
 Besides two VMs, you will also be provided with a Microsoft 365 tenant with the following highlights:
 
@@ -132,7 +132,7 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 1. Browse to the Microsoft 365 admin center (https://admin.microsoft.com/) and sign in as a **MOD Administrator**.
 
-	- Connect to the **Client 1 VM** with the credentials that have been provided to you.
+	- Connect to the **CLIENT1 VM** with the credentials that have been provided to you.
 
 	- Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -156,7 +156,7 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- Repeat the same steps as above and assign **Teams communication support engineer** role to **Allan Deyoung**.
 
-You have now successfully assigned the Teams admin roles.
+You have now successfully assigned the Teams admin roles:
 
 - Teams Administrator: Joni Sherman
 
@@ -170,7 +170,7 @@ Proceed to the next task.
 
 In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
 2. Update **Alex Wilber’s** location to **Canada**
 
@@ -206,7 +206,7 @@ To perform these tasks, you will use Joni Sherman’s account (JoniS@_&lt;YourTe
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM**, browse to Teams admin center (https://admin.teams.microsoft.com) and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM**, browse to Teams admin center (https://admin.teams.microsoft.com) and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
@@ -226,60 +226,81 @@ In this task, you will install and connect with the Teams PowerShell module to y
 
 The Microsoft Graph PowerShell commands for this task are provided after the Microsoft PowerShell commands.
 
-1. Connect to the **Client 1 VM** with the VM credential that has been provided to you.
+1. Connect to the **CLIENT1 VM** with the VM credential that has been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the password for **Client 1VM**.
+	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the password for **CLIENT1 VM**.
 
 	- Confirm the **User Account Control** window with **Yes**.
 
-3. Install **Microsoft Teams PowerShell module**
+3. Install **Microsoft Teams PowerShell module** and **Microsoft Graph PowerShell module**:
 
-	- In the PowerShell window, enter the following cmdlet and press **Enter:**
+	- In the PowerShell window, enter the following cmdlets and press **Enter** after each:
 
-		- Microsoft PowerShell: Install-Module -Name MicrosoftTeams
-		- Microsoft Graph PowerShell: Install-Module -Name Microsoft.Graph and Install-Module -Name Microsoft.Graph.Beta
+		- Microsoft Teams PowerShell: ```Install-Module -Name MicrosoftTeams```
+   
+		- Microsoft Graph PowerShell: ```Install-Module -Name Microsoft.Graph```
+   
+  		- Microsoft Graph Beta PowerShell: ```Install-Module -Name Microsoft.Graph.Beta```
+   
 
-	- Enter **Y** and press **Enter** twice to confirm the installation of the NuGet provider and Untrusted repository.
+	- Enter **Y** and press **Enter** to confirm the installation of the NuGet provider (if needed) and the Untrusted repository.
 
-4. Connect to your tenant.
+    **Note**: Installing all Microsoft Graph (and Graph beta) sub modules in PowerShell 5.1 takes a very long time and will appear to "stall"; please wait for the prompt to return before continuing to the next step.
+
+5. Connect to your tenant.
 
 	- Enter the following cmdlet in the PowerShell window and press **Enter**:
 
-		- Microsoft PowerShell: Connect-MicrosoftTeams
-		- Microsoft Graph PowerShell: Connect-MgGraph
+		- Microsoft Teams PowerShell: ```Connect-MicrosoftTeams```
+
+       or:
+   
+		- Microsoft Graph PowerShell: ```Connect-MgGraph```
 
 	- In the Sign-in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	- When the sign-in was successful, several information about the signed-in user and the tenant are displayed.
+	- When the sign-in is successful, information about the signed-in user and the tenant are displayed.
 
-5. Explore **Microsoft Teams PowerShell module**
+6. Explore **Microsoft Teams PowerShell module**
 
-	- To confirm the MicrosoftTeams module is loaded correctly, enter the following cmdlet and press **Enter** to view all available PowerShell modules:
+	- To confirm the Microsoft Teams module is loaded correctly, enter the following cmdlet and press **Enter** to view all available PowerShell modules: ```Get-Module```
+   
+       - To see only Microsoft Teams PowerShell: ```Get-Module -Name MicrosoftTeams```
+	
+	   - To see all Microsoft Graph PowerShell sub modules: ```Get-Module -Name Microsoft.Graph -ListAvailable```
 
-		- Microsoft PowerShell - ```Get-Module```
-		-Microsoft Graph PowerShell - ```Get-Module -Name Microsoft.Graph -ListAvailable``` or ```Get-Module -Name MicrosoftTeams```
+	   **Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
 
-		**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
+	- To get an overview of the available Teams PowerShell cmdlets from the Microsoft Teams module, enter the following cmdlet and then press **Enter**:
 
-	- To get an overview of the available Teams PowerShell cmdlets from the MicrosoftTeams module, enter the following cmdlet and then press **Enter**:
+		- Microsoft Teams PowerShell: ```Get-Command -Module MicrosoftTeams```
 
-		-Microsoft PowerShell - ```Get-Command -Module MicrosoftTeams```
-   		-Microsoft Graph PowerShell - ```Get-Command -Module Microsoft.Graph.Teams```
+        or:
+   
+   		- Microsoft Graph PowerShell: ```Get-Command -Module Microsoft.Graph.Teams```
+   
 
 	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
+        
+		- Microsoft Teams PowerShell: ```Get-Help New-Team```
 
-		```Get-Help New-Team```
+        or:
+   
+   		- Microsoft Graph PowerShell: ```Get-Help New-MgTeam```
 
 		**Note**: If you receive a message to update the help libraries, type **Y** for yes.
 
 	- Disconnect from the Microsoft Teams environment.
 
-		- Microsoft PowerShell - ```Disconnect-MicrosoftTeams```
-		-Microsoft Graph PowerShell - ```Disconnect-MgGraph```
+		- Microsoft Teams PowerShell - ```Disconnect-MicrosoftTeams```
 
-6. Close the PowerShell window and continue to the next task.
+        or:
+
+		- Microsoft Graph PowerShell - ```Disconnect-MgGraph```
+
+7. Close the PowerShell window and continue to the next task.
 
 You have successfully used the Microsoft Teams PowerShell module to connect to Teams and explored available cmdlets.
 
@@ -291,7 +312,7 @@ In this exercise, you will create a Microsoft 365 group from the Microsoft 365 a
 
 You will create a new Microsoft 365 Group named “IT-Department”, and then add the pilot members serving as a basis for your future teams and licensing.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -319,11 +340,11 @@ You will create a new Microsoft 365 Group named “IT-Department”, and then ad
 
 		- Select **+ Add Members**, and add the following users:
 
-			- Patti Fernandez
-
 			- Allan Deyoung
 
 			- MOD Administrator
+  
+   			- Patti Fernandez
 
 		- Select **Add(3)**, and then select **Next**.
 
@@ -351,7 +372,7 @@ The new Microsoft 365 Group with the name “IT-Department” was successfully c
 
 To test the self-service capabilities of Teams, in this task, **Alex Wilber** will sign in to the Teams Desktop client, create a new team with the name **Teams Rollout** and add all members participating in the Teams evaluation project.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Select the **Teams** icon on the taskbar to start the Teams, desktop client.
 
@@ -368,15 +389,15 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 4. In the Teams desktop client, select **Teams and channels** from the left menu.
 
-5. Select **Create team** > Enter the team name **Teams Rollout** > Enter anything you want for **Description** > Set Team type to**Public** > Type **Teams Rollout** for ** First channel name**. Select  **Create**.
+5. Select **Create team** > Enter the team name **Teams Rollout** > Enter anything you want for **Description** > Set Team type to **Public** > Type **Teams Rollout** for **First channel name**. Select  **Create**.
 
 6. On the **Add members to Teams Rollout** window, enter the following names and select **Add**.
+
+	- Diego Siciliani
 
 	- Joni Sherman
 
 	- Lynne Robbins
-
-	- Diego Siciliani
 
 7. In the left navigation pane, expand **Teams and channels**. Next to **Teams Rollout**, select the ellipsis (…), and then select **Manage team**.
 
@@ -388,13 +409,13 @@ You have successfully created a new team from the Teams desktop client added the
 
 In this task, **Lynne Robbins** will continue testing the self-service capabilities of Teams by using the Teams web client to create another team with the name **Sales**. She will also add **Alex Wilber** as a member.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the **Stay signed in ?** window, select **No**.
 
-4. In the left navigation pane, select the ellipsis (…) next to **Teams and channels**, and then select **Your teams and channels**
+4. In the left navigation pane, select the ellipsis (**…**) next to **Teams and channels**, and then select **Your teams and channels**
 
 5. Select **Create team** > Enter **Sales** for **Team name** > Enter anything you want for **Description** > Select Team type to **Private** > Enter **Sales** for **First channel name**. Select **Create**.
 
@@ -412,7 +433,7 @@ Your organization has started the planning process for Microsoft 365 services ad
 
 Based on the organization’s requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the expiration feature for Teams, you will configure a group expiration policy that will expire the **Teams Rollout** group after 90 days.
 
-1. Connect to the Client1 VM and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Entra admin center (<https://entra.microsoft.com/>) as **MOD Administrator**.
 
 2. On the main page under Contoso, select  **View Groups** > **All groups**.
 
@@ -440,7 +461,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -469,8 +490,9 @@ You are an administrator for your Team’s organization. You need to limit which
 
 		- Members: Select **View all and manage members** > **+ Add members**, and add the following users:
 
-			- Joni Sherman
 			- Alex Wilber
+			- Joni Sherman
+
 
 Restrict the Microsoft 365 groups creation to the security group.
    
@@ -478,98 +500,108 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
 
 4. Open **Windows PowerShell** and run as Administrator.
 
-5. Install the **Microsoft Graph Beta** module. Enter `Y` and press **Enter**
+5. If you did not install the **Microsoft Graph Beta** module earlier, do so now. Run the following cmdlet and enter `Y` and press **Enter**
    to confirm installation from an untrusted repository.
 
-```powershell
-    Install-Module Microsoft.Graph.Beta
-```
+   ```powershell
+   Install-Module Microsoft.Graph.Beta
+   ```
 
-6. Connect to Microsoft Graph with the required scopes. Sign in as
-   **MOD Administrator**(admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
-```powershell
-    Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
-```
+6. Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+
+   ```powershell
+       Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
+   ```
 	
 7. Load the unified group directory setting template:
-```powershell
-   $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
-```  
 
-8. Check whether a directory setting already exists for this template. If not,
-    create one:
-```powershell
-    $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
-    if (-not $Setting) {
-        $Setting = New-MgBetaDirectorySetting -TemplateId $Template.Id
-    }
-```
+   ```powershell
+       $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
+   ```  
 
-9. Configure the group creation restriction and assign the **GroupCreators**
-    group as the only permitted group:
-```powershell
-    $params = @{
-        Values = @(
-            @{ Name = "EnableGroupCreation"; Value = "false" }
-            @{ Name = "GroupCreationAllowedGroupId"; Value = (Get-MgGroup -Filter "displayName eq 'GroupCreators'").Id }
-        )
-    }
-    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
-```
+8. Check whether a directory setting already exists for this template. If not, create one:
+
+   ```powershell
+       $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
+       if (-not $Setting) {
+           $Setting = New-MgBetaDirectorySetting -TemplateId $Template.Id
+       }
+   ```
+
+9. Configure the group creation restriction and assign the **GroupCreators** group as the only permitted group:
+
+   ```powershell
+       $params = @{
+           Values = @(
+               @{ Name = "EnableGroupCreation"; Value = "false" }
+               @{ Name = "GroupCreationAllowedGroupId"; Value = (Get-MgGroup -Filter "displayName eq 'GroupCreators'").Id }
+           )
+       }
+       Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+   ```
 	
 10. Review the applied settings and confirm the values are correct:
-```powershell
-    (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
-```
-Verify that the output shows:
--  **EnableGroupCreation** → false
--  **GroupCreationAllowedGroupId** → populated with a GUID
+
+   ```powershell
+   (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+   ```
+   
+   Verify that the output shows:
+   
+    -  **EnableGroupCreation** → false
+    -  **GroupCreationAllowedGroupId** → populated with a GUID
 
 11. Test the newly configured settings.
 
-    1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+    1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
     2. Test as **Alex Willber** from Teams desktop client, navigate to **Teams and channels** > **...** > **Your Teams and channels** > Select the dropdown button next to **Create team** and notice that both **Create team** and **Join team** options appear.
 
     3. Test as **Lynne Robbins** from Teams web client, follow the same steps as the steps above, notice only one option **Join team** is available.
 
         > [!NOTE]
-		> When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
+		> If you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 Revert the change for enabling users to create new teams.
 
-12. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+11. Connect to the **CLIENT1 VM** where you have **Windows PowerShell** opened.  
     
-13. Load the existing directory setting:
+12. Load the existing directory setting:
 
-```powershell
-    $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
-```  
+   ```powershell
+   $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
+   ```  
  
-14.	Reset group creation to allow all users:
+13.	Reset group creation to allow all users:
 
-```powershell
-$params = @{
-        Values = @(
-            @{ Name = "EnableGroupCreation"; Value = "true" }
-            @{ Name = "GroupCreationAllowedGroupId"; Value = "" }
-        )
-    }
-    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
-```  
-15. Verify the revert was applied:
-```powershell
-(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
-```  
+   ```powershell
+   $params = @{
+           Values = @(
+               @{ Name = "EnableGroupCreation"; Value = "true" }
+               @{ Name = "GroupCreationAllowedGroupId"; Value = "" }
+           )
+   }
+   Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+   ```
 
-Verify that **EnableGroupCreation** is now **true** and **GroupCreationAllowedGroupId** is empty.
+14. Verify the reverted settings were applied:
 
-16. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
-```powershell
-Disconnect-MgGraph
-```
+   ```powershell
+   (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+   ```  
+
+   Verify that the output now shows:
+   
+   -  **EnableGroupCreation** → true
+   -  **GroupCreationAllowedGroupId** → is empty.
+
+15. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
+
+   ```powershell
+   Disconnect-MgGraph
+   ```
 	
-17. Close the PowerShell window and continue to the next task.
+16. Close the PowerShell window and continue to the next task.
 
 In this task, you created a security group and configured directory settings to restrict the creation of new Microsoft 365 groups to members of that group only. You tested the restriction with two users and then reverted the configuration.
 
@@ -577,7 +609,7 @@ In this task, you created a security group and configured directory settings to 
 
 As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 group or team needs to comply with the organization’s regulations on naming objects. Each group name should start with the letters **Group** and end with the **Country** attribute of the owners’ location. Furthermore, there is an internal regulation that forbids using the following specific keywords in Teams names: **CEO**, **Payroll**, and **HR**.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**. 
+1. Connect to the **CLIENT1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**. 
 
 2. On the main page under **Contoso**, select **View groups** > **All Groups**.
 
@@ -589,7 +621,7 @@ As part of your Teams planning project, you will configure the naming policy whe
     
     2. Navigate and right-select the downloaded file **BlockedWords.csv** and select **Open with** > **Notepad**.
 
-    3. Type *CEO,Payroll,HR* replacing the empty quotes in the Notepad window, and saving the file. 
+    3. Type **CEO,Payroll,HR** (replacing the empty quotes in the Notepad window), and save the file. 
     
     4. Back to the **Groups | Naming policy** page, upload the saved .csv file under **3. Upload your .csv file** by selecting **Select a file** box or the folder icon.
 
@@ -608,7 +640,7 @@ As part of your Teams planning project, you will configure the naming policy whe
     3. Add **Country or region** string as the suffix 
         
         1. Select the dropdown menu of **Select the type of suffix**, choose **String**, and enter **_** to the text box. 
-	2. Select the checkbox **Add suffix**. 
+	    2. Select the checkbox **Add suffix**. 
         3. Select the dropdown menu of **Select another suffix**, choose **Attribute**, and Select **Country or region** from the dropdown menu. 
         
     4. Select **Save** to apply the new blocked words setting.
@@ -622,7 +654,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 **Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **CLIENT2 VM** and open the **Teams desktop client** as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
 2. In the Teams desktop client, select **Teams and channels** from the left menu > **...** > **Your Teams and channels**.
 
@@ -644,7 +676,7 @@ You have successfully tested the naming policy for managing the prefix and suffi
 
 You can remove the naming policy after the test. In the following task, you will remove the naming policy you just created.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
 
 2. On the main page under **Contoso**, select **View groups** > **All Groups**.
 
@@ -656,7 +688,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation of the Teams admin center, select **Policy packages**.
 
@@ -682,7 +714,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 	1. Back to **Policy packages** page.
 	2. Select **Frontline worker (default)** from the list again. 
-	3. Select **Frontline_worker** right from **Calling policy**.
+	3. Select **Frontline_worker** to the right of **Calling policy**.
 	4. Turn **On** the setting - **Prevent toll bypass and send calls through the PSTN**.
 	5. Update **Busy on busy during calls** to **On**.
 	6. Select **Save**.
@@ -694,7 +726,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 14. Select **Manage users** from the top menu.
 
-15. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
+15. Type **Allan** into the search box, select **Add** to the right of **Allan Deyoung** and **Apply**.
 
 16. Check the policy assignment.
 
@@ -702,7 +734,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 	2. Select **Allan Deyoung** and select **Policies** tab.
 
-	3. You can see the **Frontline worker (Direct)** under policy package section.
+	3. You can see the **Frontline worker (Direct)** under the policy package section.
 
 You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
  
